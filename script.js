@@ -5,7 +5,7 @@ urlParams = new URLSearchParams(window.location.search);
 var filter_obj = JSON.parse(urlParams.get("filter")) ?? {};
 
 $.ajax({
-'url': "/block_data.json",
+'url': "block_data.json",
 'dataType': "json",
 'success': function (data) {
     block_data = data;
