@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table to json converter</title>
+    <style>
+        
+        textarea {
+            width: 800px;
+            height: 500px;
+        }
+    </style>
+    <script>
+        function convert() {
+            text = document.getElementById("input").value;
+        
+            if(document.getElementById("int").checked) {
+
+                text = text.replace(/^/gm, '"');
+                text = text.replace(/\t/gm, '": ');
+                text = text.replace(/$/gm, ',');
+                
+            } else {
+                
+                text = text.replace(/^/gm, '"');
+                text = text.replace(/\t/gm, '": "');
+                text = text.replace(/$/gm, '",');
+             
+            }
+            text = text.replace(/^""(: ,|: "",)$/gm, '},');
+            text = text.replace(/(: ,|: "",)$/gm, ': {');
+
+            text = text.replace(/,\n(?!")/gm, '\n');
+
+            text = text.substr(0, text.length-1);
+
+            document.getElementById("output").value = text;
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Table to json thingy</h1>
+    <code>If you copy and pase a 2-column table from google sheets, excel or similar, this will crudely attempt to parse this to JSON key:value pairs in order to more conveniently create block property lists.</code>
+    <pre>Relies on columns being separated by tab characters (&Tab;), and rows being separated with newlines.</pre>
+    <code>Also supports nested tables for properties with different values for different variants when using some fancier formatting that I can't be arsed to explain in this paragraph.</code>
+    <textarea onkeyup="convert();" id="input"></textarea>
+    <input type="checkbox" id="int" oninput="convert();">Int?</input>
+    <textarea id="output"></textarea>
+</body>
+</html>
