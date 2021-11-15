@@ -11,9 +11,9 @@
     </style>
     <script>
         function convert() {
-            text = document.getElementById("input").value;
+            text = document.getElementById("input1").value;
         
-            if(document.getElementById("int").checked) {
+            if(document.getElementById("int1").checked) {
 
                 text = text.replace(/^/gm, '"');
                 text = text.replace(/\t/gm, '": ');
@@ -33,9 +33,9 @@
 
             text = text.substr(0, text.length-1);
 
-            document.getElementById("output").value = text;
+            document.getElementById("output1").value = text;
         }
-    </script>
+        </script>
 
 </head>
 <body>
@@ -43,8 +43,26 @@
     <code>If you copy and pase a 2-column table from google sheets, excel or similar, this will crudely attempt to parse this to JSON key:value pairs in order to more conveniently create block property lists.</code>
     <pre>Relies on columns being separated by tab characters (&Tab;), and rows being separated with newlines.</pre>
     <code>Also supports nested tables for properties with different values for different variants when using some fancier formatting that I can't be arsed to explain in this paragraph.</code>
-    <textarea onkeyup="convert();" id="input"></textarea>
-    <input type="checkbox" id="int" oninput="convert();">Int?</input>
-    <textarea id="output"></textarea>
+    <textarea onkeyup="convert();" id="input1"></textarea>
+    <input type="checkbox" id="int1" oninput="convert();">Int?</input>
+    <textarea id="output1"></textarea>
+    
+    
+    <script>
+        function convertReverseTable() {
+            text = document.getElementById("input2").value;
+            var output = "";
+            text.split('\n').forEach(row => {
+                columns = row.split('\t');
+                value = columns.shift();
+                for(let i in columns){
+                    if(columns[i]!='') output += `"${columns[i]}" \t"${value}"\n`;
+                };
+            });
+            document.getElementById("output2").value = output.substr(0, output.length-2);
+        }
+    </script>
+    <textarea onkeyup="convertReverseTable();" id="input2"></textarea>
+    <textarea id="output2"></textarea>
 </body>
 </html>

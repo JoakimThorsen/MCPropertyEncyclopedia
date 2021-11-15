@@ -27,19 +27,23 @@ li {
     text-decoration: none;
     color: black;
     cursor: pointer;
+    margin: 0 auto;
+    height: 100%;
     /* cursor: progress; */
 }
 .table-header:hover {
     text-decoration: none;
     color: #555;
 }
-
+.justify-start {
+    margin-right: auto;
+}
 .dropdown-option {
     display: flex !important;
     justify-content: space-between;
 }
 
-.glyphicon {
+.icons {
     align-self: center;
 }
 

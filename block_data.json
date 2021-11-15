@@ -17,7 +17,7 @@
         "With Haste": "#f9ddb8",
         
         "!default": "#FCE8B2",
-        "!numeric": "#EEE"
+        "!numeric": "#D0EBFB"
     },
     "block_list": [
         "Activator Rail",
@@ -1342,7 +1342,7 @@
             }
         },
         "instant_mineable": {
-            "property_name": "Instant Mineable",
+            "property_name": "Instant-Mineable",
             "default": "Unspecified",
             "entries": {
                 "Azalea": "Yes",
@@ -1632,8 +1632,8 @@
                 "End Portal Frame": 1,
                 "Amethyst Cluster": {
                     "Small Amethyst Bud": 1,
-                    "Large Amethyst Bud": 4,
                     "Medium Amethyst Bud": 2,
+                    "Large Amethyst Bud": 4,
                     "Amethyst Cluster": 5
                 },
                 "Soul Campfire": {
@@ -1677,10 +1677,10 @@
                     "When touched": 9
                 },
                 "Respawn Anchor": {
-                    "Fully charged": 15,
                     "1⁄2 charged": 7,
                     "1⁄4 charged": 3,
-                    "3⁄4 charged": 11
+                    "3⁄4 charged": 11,
+                    "Fully charged": 15
                 },
                 "Sea Pickle": {
                     "Single, when in water": 6,
@@ -1702,14 +1702,290 @@
                     "Soul Fire": 10
                 },
                 "Candles": {
-                    "Four candlesticks, when lit": 12,
-                    "Three candlesticks, when lit": 9,
-                    "Two candlesticks, when lit": 6,
+                    "Not lit": "No",
                     "One candlestick, when lit": 3,
-                    "Not lit": "No"
+                    "Two candlesticks, when lit": 6,
+                    "Three candlesticks, when lit": 9,
+                    "Four candlesticks, when lit": 12
                 }
             }
+        },
+        "height": {
+            "property_name": "Height",
+            "default": 16,
+            "entries": {
+                "Amethyst Cluster": {
+                    "Amethyst Cluster": 7,
+                    "Amethyst Cluster Sideways": 13,
+                    "Large Amethyst": 5,
+                    "Large Amethyst Sideways": 13,
+                    "Medium Amethyst": 4,
+                    "Medium Amethyst Sideways": 13,
+                    "Small Amethyst": 3,
+                    "Small Amethyst Sideways": 12
+                },
+                "Anvil": {
+                    "Anvil": 16,
+                    "Anvil Bottom Part": 4,
+                    "Anvil Inside14": 14,
+                    "Anvil Inside12": 12,
+                    "Anvil Inside10": 10,
+                    "Anvil Inside8": 8,
+                    "Anvil Inside6": 6
+                },
+                "Azalea": {
+                    "Azalea": 16,
+                    "Azalea Inside": 8
+                },
+                "Brewing Stand": {
+                    "Brewing Stand Bottom Part": 2,
+                    "Top Of Brewing Stand": 14
+                },
+                "Beds": {
+                    "Bed": 9,
+                    "Bed Inside": 3
+                },
+                "Bell": {
+                    "Bell": 16,
+                    "Bell Inside14": 14,
+                    "Bell Inside12": 12,
+                    "Bell Inside10": 10,
+                    "Bell Inside8": 8,
+                    "Bell Inside6": 6,
+                    "Bell Lower Rim": 6,
+                    "Bell Top Of Main Part": 13,
+                    "Top Of Bell": 15
+                },
+                "Big Dripleaf": {
+                    "Big Dripleaf Partical ": 13,
+                    "Big Dripleaf Unstable": 15
+                },
+                "Cauldron": {
+                    "Cauldron": 16,
+                    "Cauldron Inside12": 12,
+                    "Cauldron Inside8": 8,
+                    "Cauldron Inside3": 3,
+                    "Inside Of Cauldron": 4
+                },
+                "Cake": {
+                    "Cake": 8,
+                    "Candle On Cake": 14
+                },
+                "Composter": {
+                    "Composter": 16,
+                    "Inside Composter": 2,
+                    "Composter Inside14": 14,
+                    "Composter Inside12": 12,
+                    "Composter Inside10": 10,
+                    "Composter Inside8": 8,
+                    "Composter Inside6": 6,
+                    "Composter Inside4": 4
+                },
+                "Daylight Sensor": {
+                    "Daylight Sensor": 6,
+                    "Daylight Sensor Inside4": 4,
+                    "Daylight Sensor Inside2": 2
+                },
+                "Enchantment Table": {
+                    "Enchantment Table": 12,
+                    "Enchantment Table Inside8": 8,
+                    "Enchantment Table Inside4": 4
+                },
+                "End Portal Frame": {
+                    "End Portal Frame W/O Eyes": 13,
+                    "End Portal With Eye": 16
+                },
+                "End Rod": {
+                    "End Rod": 16,
+                    "End Rod Inside": 8,
+                    "End Rod Sideways": 10
+                },
+                "Grindstone": {
+                    "Grindstone": 16,
+                    "On Side Main Part": 11,
+                    "Sideways Leg": 10,
+                    "Upside Down Main Part": 12,
+                    "Upside Lower Leg": 9,
+                    "Top Of Leg": 13,
+                    "Top On Its Side": 14
+                },
+                "Hopper": {
+                    "Hopper": 16,
+                    "Hopper Inside14": 14,
+                    "Hopper Inside12": 12,
+                    "Hopper Inside10": 10,
+                    "Hopper Inside8": 8,
+                    "Hopper Inside6": 6,
+                    "Hopper Inside4": 4,
+                    "Hopper Inside2": 2,
+                    "Inside Of Hopper": 11
+                },
+                "Lanern": {
+                    "Lantern": 16,
+                    "Lantern ": 9,
+                    "Floor Lantern Inside7": 9,
+                    "Floor Lantern Inside9": 7,
+                    "Lantern Inside10": 10,
+                    "Lantern Inside8": 8,
+                    "Lantern Inside6": 6,
+                    "Lantern Inside4": 4,
+                    "Lantern Inside2": 2,
+                    "Lantern Lower Part": 7
+                },
+                "Lectern": {
+                    "Lectern": 14,
+                    "Lectern Bottom Part": 2,
+                    "Lectern Inside14": 14,
+                    "Lectern Inside12": 12,
+                    "Lectern Inside10": 10,
+                    "Lectern Inside8": 8,
+                    "Lectern Inside6": 6,
+                    "Lectern Inside4": 4
+                },
+                "Piston": {
+                    "Piston": 16,
+                    "Piston Arm": 4,
+                    "Piston Base": 12,
+                    "Piston Base Inside8": 8,
+                    "Piston Base Inside4": 4,
+                    "Piston Head": 10
+                },
+                "Heads": {
+                    "On Ground": 8,
+                    "On Wall": 12
+                },
+                "Sea Pickle": {
+                    "Sea Pickle 1-3": 6,
+                    "Sea Pickle 4": 7
+                },
+                "Snow": {
+                    "1 Layer": "Not Applicable",
+                    "2 Layers": 2,
+                    "3 Layers": 4,
+                    "4 Layers": 6,
+                    "5 Layers": 8,
+                    "6 Layers": 10,
+                    "7 Layers": 12,
+                    "8 Layers": 14
+                },
+                "Soul Sand": {
+                    "Soul Sand Top": 14,
+                    "Soul Sand Inside12": 12,
+                    "Soul Sand Inside10": 10,
+                    "Soul Sand Inside8": 8,
+                    "Soul Sand Inside6": 6,
+                    "Soul Sand Inside4": 4,
+                    "Soul Sand Inside2": 2
+                },
+                "Fences": {
+                    "Fences": 24,
+                    "Top Slice": 8
+                },
+                "Fence Gates": {
+                    "Gate": 24,
+                    "Top Slice": 8,
+                    "Open": "Not Applicable"
+                },
+                "Shulker Box": {
+                    "Open Shulker Boxes": 24,
+                    "Closed Shulker Boxes": 24,
+                    "Top Slice": 8
+                },
+                "Walls": {
+                    "Wall": 24,
+                    "Top Slice": 8
+                },
+                "Stairs": {
+                    "Bottom Part": 8,
+                    "Top Part": 16
+                },
+                "Slabs": {
+                    "Bottom": 8,
+                    "Top": 16
+                },
+                "Trapdoors": {
+                    "Bottom": 3,
+                    "Top": 16
+                },
+                "Cactus": 15,
+                "Campfire": 7,
+                "Candle 1-4": 6,
+                "Carpets": 1,
+                "Chest": 14,
+                "Chorus Plant": 13,
+                "Cocoa": 12,
+                "Conduit": 11,
+                "Pointed Dripstone": 11,
+                "Ender Chest": 14,
+                "Farmland": 15,
+                "Flower Pot": 6,
+                "Grass Path": 15,
+                "Honey": 15,
+                "Lily Pad": 1.5,
+                "Redstone Comparator": 2,
+                "Redstone Repeater": 2,
+                "Chain": 9.5,
+                "Stonecutter": 9,
+                "Turtle Egg": 7,
+                "Bamboo": {
+                    "Bamboo": 16,
+                    "Shoot": "Not Applicable"
+                },
+                "Bubble Column": "Not Applicable",
+                "Lava": "Not Applicable",
+                "Water": "Not Applicable",
+                "Activator Rail": "Not Applicable",
+                "Powered Rail": "Not Applicable",
+                "Redstone Dust": "Not Applicable",
+                "Redstone Torch": "Not Applicable",
+                "Coral Fans": "Not Applicable",
+                "Corals": "Not Applicable",
+                "Detector Rail": "Not Applicable",
+                "Rail": "Not Applicable",
+                "Powder Snow": "Not Applicable",
+                "Air": "Not Applicable",
+                "Banners": "Not Applicable",
+                "Signs": "Not Applicable",
+                "End Gateway": "Not Applicable",
+                "End Portal": "Not Applicable",
+                "Light Block": "Not Applicable",
+                "Nether Portal": "Not Applicable",
+                "Beetroots": "Not Applicable",
+                "Carrots": "Not Applicable",
+                "Cave Vines": "Not Applicable",
+                "Dead Bush": "Not Applicable",
+                "Fern": "Not Applicable",
+                "Fire": "Not Applicable",
+                "Flowers": "Not Applicable",
+                "Fungi": "Not Applicable",
+                "Grass": "Not Applicable",
+                "Kelp": "Not Applicable",
+                "Melon Stem": "Not Applicable",
+                "Mushrooms": "Not Applicable",
+                "Nether Sprouts": "Not Applicable",
+                "Nether Wart": "Not Applicable",
+                "Potatoes": "Not Applicable",
+                "Pumpkin Stem": "Not Applicable",
+                "Roots": "Not Applicable",
+                "Saplings": "Not Applicable",
+                "Seagrass": "Not Applicable",
+                "Small Dripleaf": "Not Applicable",
+                "Spore Blossom": "Not Applicable",
+                "Structure Void": "Not Applicable",
+                "Sugar Cane": "Not Applicable",
+                "Torch": "Not Applicable",
+                "Tripwire": "Not Applicable",
+                "Tripwire Hook": "Not Applicable",
+                "Twisting Vines": "Not Applicable",
+                "Weeping Vines": "Not Applicable",
+                "Wheat Crops": "Not Applicable",
+                "Hanging Roots": "Not Applicable",
+                "Vines": "Not Applicable",
+                "Lever": "Not Applicable",
+                "Buttons": "Not Applicable",
+                "Glow Lichen": "Not Applicable",
+                "Pressure Plates": "Not Applicable"
+            }
         }
-        
     }
 }
