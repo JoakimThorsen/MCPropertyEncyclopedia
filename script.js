@@ -129,9 +129,9 @@ function display_headers() {
         var property = $(this).attr("property");
         var reversed = $(this).attr("reversed") == 'true';
 
-        console.log($(this));
-        if(sort_arr.some(e => e.property === "property")) {
+        if(sort_arr.some(e => e.property === property)) {
             if(sort_arr.filter(e => e.property === property)[0].reversed !== reversed) {
+                console.log("flip");
                 // If already sorted in the opposite order, reverse the sorting
                 sort_arr[sort_arr.findIndex(e => e.property === property)].reversed = reversed;
                 $(this).siblings('a').removeClass('active');
@@ -140,6 +140,7 @@ function display_headers() {
                 $(this).parents('.dropdown').find('.sorted').toggleClass('display-none');
                 $(this).parents('.dropdown').find('.sorted-reverse').toggleClass('display-none');
             } else {
+                console.log("yeet");
                 // If already sorted in the same order, remove it
                 sort_arr.splice(sort_arr.findIndex(e => e.property === property), 1);
                 $(this).removeClass('active');
@@ -148,6 +149,7 @@ function display_headers() {
                 $(this).parents('.dropdown').find('.sorted-reverse').addClass('display-none');
             }
         } else {
+            console.log("add");
             // If not sorted, sort according to selection
             sort_arr.push({"property":property,"reversed":reversed});
             $(this).addClass('active');
