@@ -35,12 +35,30 @@ li {
     text-decoration: none;
     color: #555;
 }
+
 .justify-start {
     margin-right: auto;
 }
 .dropdown-option {
     display: flex !important;
     justify-content: space-between;
+    padding: 3px 15px !important;
+}
+.dropdown-option>span, .icons {
+    margin-left: 10px;
+}
+
+.sprite {
+    display: inline-block;
+    vertical-align: text-top;
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    background-image:url(BlockCSS.png);
+}
+.display-none {
+    display: none !important;
 }
 
 .icons {
@@ -74,7 +92,7 @@ td .nested-table {
     white-space: nowrap;
 }
 
-.btn {
+.expand-btn {
     color: #333;
     background-color: #abdbf8;
     border-color: #aaa;

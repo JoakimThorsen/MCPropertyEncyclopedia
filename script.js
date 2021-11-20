@@ -36,24 +36,46 @@ function display_headers() {
     
 
     // Table headers
-    $('#output_table').children('thead').children('tr').append(`<th><div class=\" dropdown\"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">Blocks<span class="icons">
+    $('#output_table').children('thead').children('tr').append(`<th></th><th><div class=\" dropdown\"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">Blocks<span class="icons">
+    <i class="fas fa-sort-amount-down-alt" style="${sort_arr.some(e => e.property === "block") && !sort_arr.filter(e => e.property === "block")[0].reversed ? 'display:inline-block':'display:none'}"></i>
+    <i class="fas fa-sort-amount-up" style="${sort_arr.some(e => e.property === "block") && sort_arr.filter(e => e.property === "block")[0].reversed ? 'display:inline-block':'display:none'}"></i>
     <span class="glyphicon glyphicon-triangle-bottom"></span>
-    <span class="glyphicon glyphicon-sort-by-attributes" style="${sort_arr.some(e => e.property === "blocks") && !sort_arr.filter(e => e.property === "blocks")[0].reversed ? 'display:inline-block':'display:none'}"></span>
-    <span class="glyphicon glyphicon-sort-by-attributes-alt" style="${sort_arr.some(e => e.property === "blocks") && sort_arr.filter(e => e.property === "blocks")[0].reversed ? 'display:inline-block':'display:none'}"></span>
-    </span></a><ul class="dropdown-menu"><li><a class="dropdown-option" property="block">Toggle sorting</a></li></ul></div></th>`);
+    </span></a><ul class="dropdown-menu"><li><a property="block">Toggle sorting</a></li></ul></div></th>`);
     Object.keys(block_data.properties).forEach(property => {
         append_data = "";
         
+        var sorted = 0;
+        if(sort_arr.some(e => e.property === property)) {
+            if(sort_arr.filter(e => e.property === property)[0].reversed) {
+                sorted = -1;
+            } else {
+                sorted = 1;
+            }
+        }
         append_data = `<th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">
                 ${block_data.properties[property].property_name}
                 <span class="icons">
+                <i class="fas fa-sort-amount-down-alt${sorted == 1 ? '':' display-none'} sorted"></i>
+                <i class="fas fa-sort-amount-up${sorted == -1 ? '':' display-none'} sorted-reverse"></i>
                 <span class="glyphicon glyphicon-triangle-bottom"></span>
-                <span class="glyphicon glyphicon-sort-by-attributes" style="${sort_arr.some(e => e.property === property) && !sort_arr.filter(e => e.property === property)[0].reversed ? 'display:inline-block':'display:none'}"></span>
-                <span class="glyphicon glyphicon-sort-by-attributes-alt" style="${sort_arr.some(e => e.property === property) && sort_arr.filter(e => e.property === property)[0].reversed ? 'display:inline-block':'display:none'}"></span>
-                </span></a><ul class="dropdown-menu"><li><a class="dropdown-option" property="${property}">Toggle sorting</a></li><li role="separator" class="divider"></li>`;
+                </span></a><ul class="dropdown-menu">
+                <li>
+                <div class="text-center">
+                <span class="btn-group dropdown-btn-group" role="group">
+                    <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == 1 ? ' active' : ''}" property="${property}" reversed="false">
+                        <i class="fas fa-sort-amount-down-alt"></i>
+                    </a>
+                    <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == -1 ? ' active' : ''}" property="${property}" reversed="true">
+                        <i class="fas fa-sort-amount-up"></i>
+                    </a>
+                </span>
+                </div>
+                </li>`;
 
-        value_list[property].sort().sort((a, b) => (a - b)).forEach(option => {
-            append_data += `<li><a role="button" class="dropdown-option" property="${property}" value="${option}">${option}<span class="glyphicon glyphicon-ok" style="${filter_obj[property] !== undefined && filter_obj[property].includes(option) ? 'display:none':'display:inline-block'}"></span></a></li>`
+        value_list[property].sort().reverse().sort((a, b) => (a - b)).forEach(option => {
+            append_data += `<li><a role="button" class="dropdown-option modify-filter" property="${property}" value="${option}">${option}
+                    <span class="glyphicon glyphicon-ok" style="${filter_obj[property] !== undefined && filter_obj[property].includes(option) ? 'display:none':'display:inline-block'}">
+                    </span></a></li>`
         });
         append_data += `</ul></div></th>`;
         
@@ -68,35 +90,29 @@ function display_headers() {
         //         <ul class="dropdown-menu">
         //             <li><a class="dropdown-option" property="e.g. hardness">Toggle sorting</a></li>
         //             <li role="separator" class="divider"></li>
-        //             <li><a class="dropdown-option" property="e.g. hardness" value="1">1</a></li>
-        //             <li><a class="dropdown-option" property="e.g. hardness" value="2">2</a></li>
-        //             <li><a class="dropdown-option" property="e.g. hardness" value="3">3</a></li>
-        //             <li><a class="dropdown-option" property="e.g. hardness" value="4">4</a></li>
+        //             <li><a class="dropdown-option modify-filter" property="e.g. hardness" value="1">1</a></li>
+        //             <li><a class="dropdown-option modify-filter" property="e.g. hardness" value="2">2</a></li>
+        //             <li><a class="dropdown-option modify-filter" property="e.g. hardness" value="3">3</a></li>
+        //             <li><a class="dropdown-option modify-filter" property="e.g. hardness" value="4">4</a></li>
         //         </ul>
         //     </div>
         // </th>
     });
-
-    $('.dropdown-option').click(function (e) {
     
+    $('.modify-filter').click(function (e) {
         e.stopPropagation();
-        if($(this).attr("value")!=undefined) {
-            modify_filter($(this).attr("property"), $(this).attr("value"),$(this));
-        } else {
-            modify_sort($(this).attr("property"), $(this));
-        }
-        display_results();
-    });
-
-    function modify_filter(property, value, jQuerythis) {
-        jQuerythis.children().attr('style', function(_, attr){
+        
+        var property = $(this).attr("property");
+        var value = $(this).attr("value");
+        
+        $(this).children().attr('style', function(_, attr){
             return attr == 'display:none' ? 'display:inline-block' : 'display:none';
         });
-
+        
         // Convert to double if applicable
         value = (value*1 == value) ? value*1 : value;
         if(!Object.keys(filter_obj).includes(property)) { filter_obj[property] = []; }
-
+        
         if(filter_obj[property].includes(value)) {
             filter_obj[property].splice(filter_obj[property].indexOf(value), 1);
         } else {
@@ -104,26 +120,47 @@ function display_headers() {
         }
         if(filter_obj[property].length == 0) { delete filter_obj[property]; }
         window.history.pushState("", "", window.location.origin + window.location.pathname + "?filter=" + JSON.stringify(filter_obj) + "&sort=" + JSON.stringify(sort_arr));
-    }
+        display_results();
+    });
 
-    function modify_sort(property, jQuerythis) {
+    $('.modify-sorting').click(function (e) {
+        e.stopPropagation();
 
-        if(sort_arr.some(e => e.property === property)) {
-            if(!sort_arr.filter(e => e.property === property)[0].reversed) {
-                // If already filtered normally: reverse it
-                sort_arr[sort_arr.findIndex(e => e.property === property)].reversed = true;
+        var property = $(this).attr("property");
+        var reversed = $(this).attr("reversed") == 'true';
+
+        console.log($(this));
+        if(sort_arr.some(e => e.property === "property")) {
+            if(sort_arr.filter(e => e.property === property)[0].reversed !== reversed) {
+                // If already sorted in the opposite order, reverse the sorting
+                sort_arr[sort_arr.findIndex(e => e.property === property)].reversed = reversed;
+                $(this).siblings('a').removeClass('active');
+                $(this).addClass('active');
+
+                $(this).parents('.dropdown').find('.sorted').toggleClass('display-none');
+                $(this).parents('.dropdown').find('.sorted-reverse').toggleClass('display-none');
             } else {
-                // If already filtered reverse: remove it
+                // If already sorted in the same order, remove it
                 sort_arr.splice(sort_arr.findIndex(e => e.property === property), 1);
+                $(this).removeClass('active');
+
+                $(this).parents('.dropdown').find('.sorted').addClass('display-none');
+                $(this).parents('.dropdown').find('.sorted-reverse').addClass('display-none');
             }
         } else {
-            sort_arr.push({"property":property,"reversed":false});
+            // If not sorted, sort according to selection
+            sort_arr.push({"property":property,"reversed":reversed});
+            $(this).addClass('active');
+            $(this).parent('.dropdown');
+
+            $(this).parents('.dropdown').find(reversed ? '.sorted-reverse' : '.sorted').removeClass('display-none');
         }
         window.history.pushState("", "", window.location.origin + window.location.pathname + "?filter=" + JSON.stringify(filter_obj) + "&sort=" + JSON.stringify(sort_arr));
+        
         // slightly lazy:
-        display_headers();
+        // display_headers();
         display_results();
-    }
+    });
 }
 
 function display_results() {
@@ -197,7 +234,6 @@ function display_results() {
     }
 
     function sort_properties(data, sort_properties) {
-        console.log(sort_properties);
         if(!sort_properties.length) {
             return data;
         }
@@ -274,9 +310,11 @@ function display_results() {
     // Table outputting
     output_data.forEach(entry => {
         var append_string = "<tr>";
+        var sprite = block_data.sprites[entry.block];
+        append_string += `<td><span class="sprite" style="background-position:${sprite[0]}px ${sprite[1]}px"></span></td>`;
         for(var [property_name, value] of Object.entries(entry)) {
             if(typeof(value) == 'object') {
-                append_string += "<td class=\"nested-cell\">" + nested_table(value); + "</td>";
+                append_string += `<td class="nested-cell">${nested_table(value)}</td>`;
             } else {
                 append_string += formatted_cell(value ?? block_data.properties[property_name].default);
             }
@@ -296,7 +334,7 @@ function display_results() {
 
     function nested_table(entry) {
         if(Object.values(entry).length > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2) {
-            return_data = "<button class=\"btn collapse in\" type=\"button\" data-toggle=\"collapse-next\">Expand</button>\n<table class=\"table table-bordered table-hover nested-table collapse\"><tbody>";
+            return_data = "<button class=\"btn expand-btn\" type=\"button\" data-toggle=\"collapse-next\">Expand</button>\n<table class=\"table table-bordered table-hover nested-table collapse\"><tbody>";
         } else {
             return_data = "<table class=\"table table-bordered table-hover nested-table\"><tbody>";
         }
