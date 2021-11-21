@@ -2,6 +2,7 @@
 var block_data;
 var value_list = {};
 urlParams = new URLSearchParams(window.location.search);
+var selection_arr = [];
 var filter_obj = JSON.parse(urlParams.get("filter")) ?? {};
 var sort_arr = JSON.parse(urlParams.get("sort")) ?? [];
 
@@ -10,18 +11,36 @@ $.ajax({
 'dataType': "json",
 'success': function (data) {
     block_data = data;
-    display_headers();
-    display_results();
+    display_selection()
+    display_full_table();
 }});
 
-function display_headers() {
+function display_selection() {
+    if(selection_arr.length == 0) {
+        for(let [property_name, value] of Object.entries(block_data.properties)) {
+            if(value.default_selection ?? true) {
+                selection_arr.push(property_name);
+            }
+        }
+    }
+    Object.keys(block_data.properties).forEach(property =>{
+        $('#selection').append(`<label class="select-option"><input class="select-checkbox" type="checkbox" name="${property}"${selection_arr.includes(property) ? ' checked' : ''}>${block_data.properties[property].property_name}</label>`);
+    })
+    $('.select-option').click(function() {
+        selection_arr = $('.select-checkbox:checked').map(function() { return this.name; }).get().join().split(',');
+        update_window_history();
+        display_full_table();
+    });
+}
+
+function display_full_table() {
     
     $('#output_table').find('thead>tr>th').remove();
     
     // Add all unique values to a list of possible values for each property (recursively so for objects)
-    Object.keys(block_data.properties).forEach(property => {
+    Object.keys(block_data.properties).filter(e => selection_arr.includes(e)).forEach(property => {
         value_list[property] = [];
-        value_list[property].push(block_data.properties[property].default);
+        value_list[property].push(block_data.properties[property].default_value);
         add_value(value_list[property], block_data.properties[property].entries);
     });
     function add_value(list, property) {
@@ -37,11 +56,22 @@ function display_headers() {
 
     // Table headers
     $('#output_table').children('thead').children('tr').append(`<th></th><th><div class=\" dropdown\"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">Blocks<span class="icons">
-    <i class="fas fa-sort-amount-down-alt" style="${sort_arr.some(e => e.property === "block") && !sort_arr.filter(e => e.property === "block")[0].reversed ? 'display:inline-block':'display:none'}"></i>
-    <i class="fas fa-sort-amount-up" style="${sort_arr.some(e => e.property === "block") && sort_arr.filter(e => e.property === "block")[0].reversed ? 'display:inline-block':'display:none'}"></i>
+    <i class="fas fa-sort-amount-down-alt${sort_arr.some(e => e.property === "block") && !sort_arr.filter(e => e.property === "block")[0].reversed ? '':' display-none'} sorted"></i>
+    <i class="fas fa-sort-amount-up${sort_arr.some(e => e.property === "block") && sort_arr.filter(e => e.property === "block")[0].reversed ? '':' display-none'} sorted-reverse"></i>
     <span class="glyphicon glyphicon-triangle-bottom"></span>
-    </span></a><ul class="dropdown-menu"><li><a property="block">Toggle sorting</a></li></ul></div></th>`);
-    Object.keys(block_data.properties).forEach(property => {
+    </span></a><ul class="dropdown-menu"><li>
+    <div class="text-center">
+    <span class="btn-group dropdown-btn-group" role="group">
+        <a role="button" class="btn dropdown-btn btn-default modify-sorting${(sort_arr.some(e => e.property === "block") && !sort_arr.filter(e => e.property === "block")[0].reversed) ? ' active' : ''}" property="block" reversed="false">
+            <i class="fas fa-sort-amount-down-alt"></i>
+        </a>
+        <a role="button" class="btn dropdown-btn btn-default modify-sorting${(sort_arr.some(e => e.property === "block") && sort_arr.filter(e => e.property === "block")[0].reversed) ? ' active' : ''}" property="block" reversed="true">
+            <i class="fas fa-sort-amount-up"></i>
+        </a>
+    </span>
+    </div>
+    </li></ul></div></th>`);
+    Object.keys(block_data.properties).filter(e => selection_arr.includes(e)).forEach(property => {
         append_data = "";
         
         var sorted = 0;
@@ -99,6 +129,8 @@ function display_headers() {
         // </th>
     });
     
+    display_results();
+
     $('.modify-filter').click(function (e) {
         e.stopPropagation();
         
@@ -119,7 +151,7 @@ function display_headers() {
             filter_obj[property].push(value);
         }
         if(filter_obj[property].length == 0) { delete filter_obj[property]; }
-        window.history.pushState("", "", window.location.origin + window.location.pathname + "?filter=" + JSON.stringify(filter_obj) + "&sort=" + JSON.stringify(sort_arr));
+        update_window_history();
         display_results();
     });
 
@@ -131,7 +163,6 @@ function display_headers() {
 
         if(sort_arr.some(e => e.property === property)) {
             if(sort_arr.filter(e => e.property === property)[0].reversed !== reversed) {
-                console.log("flip");
                 // If already sorted in the opposite order, reverse the sorting
                 sort_arr[sort_arr.findIndex(e => e.property === property)].reversed = reversed;
                 $(this).siblings('a').removeClass('active');
@@ -140,7 +171,6 @@ function display_headers() {
                 $(this).parents('.dropdown').find('.sorted').toggleClass('display-none');
                 $(this).parents('.dropdown').find('.sorted-reverse').toggleClass('display-none');
             } else {
-                console.log("yeet");
                 // If already sorted in the same order, remove it
                 sort_arr.splice(sort_arr.findIndex(e => e.property === property), 1);
                 $(this).removeClass('active');
@@ -149,7 +179,6 @@ function display_headers() {
                 $(this).parents('.dropdown').find('.sorted-reverse').addClass('display-none');
             }
         } else {
-            console.log("add");
             // If not sorted, sort according to selection
             sort_arr.push({"property":property,"reversed":reversed});
             $(this).addClass('active');
@@ -157,10 +186,7 @@ function display_headers() {
 
             $(this).parents('.dropdown').find(reversed ? '.sorted-reverse' : '.sorted').removeClass('display-none');
         }
-        window.history.pushState("", "", window.location.origin + window.location.pathname + "?filter=" + JSON.stringify(filter_obj) + "&sort=" + JSON.stringify(sort_arr));
-        
-        // slightly lazy:
-        // display_headers();
+        update_window_history();
         display_results();
     });
 }
@@ -175,8 +201,7 @@ function display_results() {
     block_data.block_list.forEach(entry => {
         var block = {"block": entry};
         var filtered = false;
-        for(var [property_id, property] of Object.entries(block_data.properties)) {
-
+        for(var [property_id, property] of Object.entries(block_data.properties).filter(([e, _]) => selection_arr.includes(e))) {
             if(typeof property.entries[entry] == 'object' & Object.keys(filter_obj).includes(property_id)) {
                 block[property_id] = {};
                 Object.keys(property.entries[entry])
@@ -191,11 +216,11 @@ function display_results() {
                     break;
                 }
             // These could maybe be combined?
-            } else if ((filter_obj[property_id] || []).includes((property.entries[entry] ?? property.default))){
+            } else if ((filter_obj[property_id] || []).includes((property.entries[entry] ?? property.default_value))){
                 filtered = true;
                 break;
             } else {
-                block[property_id] = property.entries[entry] ?? property.default;
+                block[property_id] = property.entries[entry] ?? property.default_value;
             }
         }
         if(!filtered) {
@@ -316,9 +341,9 @@ function display_results() {
         append_string += `<td><span class="sprite" style="background-position:${sprite[0]}px ${sprite[1]}px"></span></td>`;
         for(var [property_name, value] of Object.entries(entry)) {
             if(typeof(value) == 'object') {
-                append_string += `<td class="nested-cell">${nested_table(value)}</td>`;
+                append_string += `<td class="nested-cell">${nested_table(value, property_name)}</td>`;
             } else {
-                append_string += formatted_cell(value ?? block_data.properties[property_name].default);
+                append_string += formatted_cell(value ?? block_data.properties[property_name].default_value, property_name);
             }
         };
         append_string += "</tr>";
@@ -334,7 +359,7 @@ function display_results() {
         $target.toggle(); // No toggle animation/delay
     });
 
-    function nested_table(entry) {
+    function nested_table(entry, property_name) {
         if(Object.values(entry).length > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2) {
             return_data = "<button class=\"btn expand-btn\" type=\"button\" data-toggle=\"collapse-next\">Expand</button>\n<table class=\"table table-bordered table-hover nested-table collapse\"><tbody>";
         } else {
@@ -342,23 +367,29 @@ function display_results() {
         }
         
         Object.keys(entry).forEach(key=> {
-            return_data += "<tr><td>" + key + "</td>" + formatted_cell(entry[key]) + "</tr>";
+            return_data += "<tr><td>" + key + "</td>" + formatted_cell(entry[key], property_name) + "</tr>";
         });
         return_data += "</tbody></table>";
         return return_data;
     }
 
-    function formatted_cell(value) {
+    function formatted_cell(value, property_name) {
         let color;
         if(value*1==value){ 
             // color = block_data.conditional_formatting["!numeric"];
-            function scale (number, inMin, inMax, outMin, outMax) {
-                return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+            function scale (number, inMax, outMin, outMax) {
+                return (number) * (outMax - outMin) / (inMax) + outMin;
             }
             // not the greatest solution...
             value = value*1;
-            
-            color = `rgb(${scale(value, 1, 16, 81, 208)},${scale(value, 1, 16, 122, 235)},${scale(value, 1, 16, 198, 251)})!important`
+            let max = block_data.properties[property_name].max ?? 17;
+            let colorA = [152,110,208];
+            let colorB = [164,221,255];
+            if(value < max) {
+                color = `rgb(${scale(value, max, colorA[0], colorB[0])},${scale(value, max, colorA[1], colorB[1])},${scale(value, max, colorA[2], colorB[2])})!important`
+            } else {
+                color = `rgb(${colorB[0]}, ${colorB[1]}, ${colorB[2]})`;
+            }
         }
         else if(value in block_data.conditional_formatting){
             color = block_data.conditional_formatting[value]; 
@@ -367,4 +398,13 @@ function display_results() {
     }
 
     
+}
+
+function update_window_history() {
+    var url = '';
+    if(filter_obj.length > 0) url += "&filter=" + JSON.stringify(filter_obj);
+    if(sort_arr.length > 0) url += "&sort=" + JSON.stringify(sort_arr);
+    if(selection_arr.length > 0) url += "&selection=" + JSON.stringify(selection_arr);
+    url = window.location.origin + window.location.pathname + '?' + url.substr(1);
+    window.history.pushState("", "", url);
 }

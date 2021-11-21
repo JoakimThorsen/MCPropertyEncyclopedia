@@ -41,9 +41,16 @@
         <li>Entry values as arrays as well as objects and doubles/strings??</li>
         <li>Visually indicate what columns are being filtered/sorted. (Half done, sorting is visualized)</li>
         <li><del><i>Fix sorting ui to be less shit.</i></del></li>
+        <li><del><i>Add support for only displaying selected properties</i></del></li>
+        <li>Add some way to reorder said properties.</li>
         <!-- <li></li> -->
     </ul>
 
+    <button class="btn" type="button" onclick="filter_obj = {}; update_window_history();display_full_table();">Reset filters</button>
+    <button class="btn" type="button" onclick="sort_arr = []; update_window_history();display_full_table();">Reset sorting</button>
+    <div id="selection">
+
+    </div>
 
     <div class="results">
         <table class="table table-bordered table-hover text-left" id="output_table">

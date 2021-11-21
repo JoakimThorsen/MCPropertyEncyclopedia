@@ -520,12 +520,14 @@
     "properties": {
         "opacity": { 
             "property_name": "Opaque",
-            "default": "Yes",
+            "default_value": "Yes",
+            "default_selection": true,
             "entries": {
                 "Activator Rail": "No",
                 "Air": "No",
                 "Amethyst Cluster": "No",
                 "Anvil": "No",
+                "Azalea": "No",
                 "Bamboo": "No",
                 "Banners": "No",
                 "Barrier": "No",
@@ -660,7 +662,8 @@
         },
         "collision": { 
             "property_name": "Has Collision",
-            "default": "Yes",
+            "default_value": "Yes",
+            "default_selection": true,
             "entries": {
                 "Activator Rail": "No",
                 "Air": "No",
@@ -806,10 +809,16 @@
         },
         "movable": {
             "property_name": "Movable",
-            "default": "Yes",
+            "default_value": "Yes",
+            "default_selection": true,
             "entries":{
                 "Air": "Not Applicable",
                 "Amethyst Cluster": "Breaks",
+                "Anvil": {
+                    "Block": "No",
+                    "Falling block": "Yes"
+                },
+                "Azalea": "Breaks",
                 "Bamboo": "Breaks",
                 "Banners": "No",
                 "Barrel": "No",
@@ -924,10 +933,12 @@
         },
         "sticky": {
             "property_name": "Sticky",
-            "default": "Yes",
+            "default_value": "Yes",
+            "default_selection": true,
             "entries":{
                 "Air": "No",
                 "Amethyst Cluster": "No",
+                "Azalea": "No",
                 "Bamboo": "No",
                 "Banners": "No",
                 "Barrel": "No",
@@ -1042,7 +1053,9 @@
         },
         "blast_resistance": { 
             "property_name": "Blast Resistance",
-            "default": "Undefined",
+            "default_value": "Undefined",
+            "max": 10,
+            "default_selection": true,
             "entries": {
                 "Activator Rail": 0.7,
                 "Air": 0,
@@ -1316,7 +1329,8 @@
         },
         "hardness": {
             "property_name": "Hardness",
-            "default": "Unspecified",
+            "default_value": "Unspecified",
+            "default_selection": true,
             "entries":{
                 "Azalea": 0,
                 "Beetroots": 0,
@@ -1592,7 +1606,8 @@
         },
         "instant_mineable": {
             "property_name": "Instant-Mineable",
-            "default": "Unspecified",
+            "default_value": "Unspecified",
+            "default_selection": true,
             "entries": {
                 "Azalea": "Yes",
                 "Beetroots": "Yes",
@@ -1857,7 +1872,8 @@
         },
         "luminosity": {
             "property_name": "Luminosity",
-            "default": "No",
+            "default_value": "No",
+            "default_selection": true,
             "entries": {
                 "Light Block": "0–15",
                 "Beacon": 15,
@@ -1961,7 +1977,8 @@
         },
         "height": {
             "property_name": "Height",
-            "default": 16,
+            "default_value": 16,
+            "default_selection": true,
             "entries": {
                 "Amethyst Cluster": {
                     "Amethyst Cluster": 7,
@@ -2137,7 +2154,7 @@
                 },
                 "Shulker Box": {
                     "Open Shulker Boxes": 24,
-                    "Closed Shulker Boxes": 24,
+                    "Closed Shulker Boxes": 16,
                     "Top Slice": 8
                 },
                 "Walls": {
@@ -2234,6 +2251,166 @@
                 "Buttons": "Not Applicable",
                 "Glow Lichen": "Not Applicable",
                 "Pressure Plates": "Not Applicable"
+            }
+        },
+        "instrument": {
+            "property_name": "Note Block Instrument",
+            "default_value": "Harp / Piano",
+            "default_selection": false,
+            "entries": {
+                "Banner": "Bass (String Bass)",
+                "Barrel": "Bass (String Bass)",
+                "Bee Nest": "Bass (String Bass)",
+                "Beehive": "Bass (String Bass)",
+                "Bookshelf": "Bass (String Bass)",
+                "Cartography Table": "Bass (String Bass)",
+                "Chest": "Bass (String Bass)",
+                "Composter": "Bass (String Bass)",
+                "Crafting Table": "Bass (String Bass)",
+                "Daylight Detector": "Bass (String Bass)",
+                "Fence Gate": "Bass (String Bass)",
+                "Fletching Table": "Bass (String Bass)",
+                "Hyphae": "Bass (String Bass)",
+                "Jukebox": "Bass (String Bass)",
+                "Lectern": "Bass (String Bass)",
+                "Logs": "Bass (String Bass)",
+                "Loom": "Bass (String Bass)",
+                "Campfire": "Bass (String Bass)",
+                "Mushroom Blocks": "Bass (String Bass)",
+                "Note Block": "Bass (String Bass)",
+                "Planks": "Bass (String Bass)",
+                "Sign": "Bass (String Bass)",
+                "Smithing Table": "Bass (String Bass)",
+                "Stems": "Bass (String Bass)",
+                "Trapped Chest": "Bass (String Bass)",
+                "Wood": "Bass (String Bass)",
+            
+                "Concrete Powder":"Snare Drum",
+                "Gravel":"Snare Drum",
+                "Sand":"Snare Drum",
+                "Red Sand":"Snare Drum",
+            
+                "Beacon": "Clicks and Sticks (Hihat)",
+                "Conduit": "Clicks and Sticks (Hihat)",
+                "Glass": "Clicks and Sticks (Hihat)",
+                "Glass Pane": "Clicks and Sticks (Hihat)",
+                "Sea Lantern": "Clicks and Sticks (Hihat)",
+                "Stained Glass": "Clicks and Sticks (Hihat)",
+                "Stained Glass Pane": "Clicks and Sticks (Hihat)",
+                "Tinted Glass": "Clicks and Sticks (Hihat)",
+            
+                "Stone": "Bass Drum (Kick)",
+                "Granite": "Bass Drum (Kick)",
+                "Andesite": "Bass Drum (Kick)",
+                "Diorite": "Bass Drum (Kick)",
+                "Cobblestone": "Bass Drum (Kick)",
+                "Tuff": "Bass Drum (Kick)",
+                "Calcite": "Bass Drum (Kick)",
+                "Dripstone Block": "Bass Drum (Kick)",
+                "Pointed Dripstone": "Bass Drum (Kick)",
+                "Bedrock": "Bass Drum (Kick)",
+                "Ore": "Bass Drum (Kick)",
+                "Dropper": "Bass Drum (Kick)",
+                "Dispenser": "Bass Drum (Kick)",
+                "Sandstone": "Bass Drum (Kick)",
+                "Red Sandstone": "Bass Drum (Kick)",
+                "Bricks": "Bass Drum (Kick)",
+                "Spawner": "Bass Drum (Kick)",
+                "Furnace": "Bass Drum (Kick)",
+                "Netherrack": "Bass Drum (Kick)",
+                "Stone Bricks": "Bass Drum (Kick)",
+                "Nether Bricks": "Bass Drum (Kick)",
+                "Enchanting Table": "Bass Drum (Kick)",
+                "End Portal Frame": "Bass Drum (Kick)",
+                "End Stone": "Bass Drum (Kick)",
+                "Ender Chest": "Bass Drum (Kick)",
+                "Quartz Block": "Bass Drum (Kick)",
+                "Terracotta": "Bass Drum (Kick)",
+                "Prismarine": "Bass Drum (Kick)",
+                "Block of Coal": "Bass Drum (Kick)",
+                "Block of Raw Iron": "Bass Drum (Kick)",
+                "Block of Raw Copper": "Bass Drum (Kick)",
+                "Block of Raw Gold": "Bass Drum (Kick)",
+                "Purpur Block": "Bass Drum (Kick)",
+                "End Stone Bricks": "Bass Drum (Kick)",
+                "Magma Block": "Bass Drum (Kick)",
+                "Red Nether Bricks": "Bass Drum (Kick)",
+                "Observer": "Bass Drum (Kick)",
+                "Glazed Terracotta": "Bass Drum (Kick)",
+                "Concrete": "Bass Drum (Kick)",
+                "Coral Block": "Bass Drum (Kick)",
+                "Smoker": "Bass Drum (Kick)",
+                "Blast Furnace": "Bass Drum (Kick)",
+                "Stonecutter": "Bass Drum (Kick)",
+                "Basalt": "Bass Drum (Kick)",
+                "Nylium": "Bass Drum (Kick)",
+                "Obsidian": "Bass Drum (Kick)",
+                "Crying Obsidian": "Bass Drum (Kick)",
+                "Respawn Anchor": "Bass Drum (Kick)",
+                "Blackstone": "Bass Drum (Kick)",
+                "Gilded Blackstone": "Bass Drum (Kick)",
+                "Deepslate": "Bass Drum (Kick)",
+                "Cobbled Deepslate": "Bass Drum (Kick)",
+                "Walls": "Bass Drum (Kick)",
+            
+                "Block of Gold": "Bells (Glockenspiel)",
+            
+                "Clay": "Flute",
+                "Honeycomb Block‌": "Flute",
+            
+                "Packed Ice": "Chimes",
+            
+                "Wool": "Guitar",
+            
+                "Bone Block": "Xylophone",
+            
+                "Block of Iron": "Iron Xylophone (Vibraphone)",
+            
+                "Soul Sand": "Cow Bell",
+            
+                "Pumpkin": "Didgeridoo",
+            
+                "Block of Emerald": "\"Bit\" (Square wave)",
+            
+                "Hay Bale": "Banjo",
+                "Glowstone": "\"Pling\" (Electric piano)",
+            
+            
+                "Corals": {
+                    "Alive": "Harp / Piano",
+                    "Dead": "Bass Drum (Kick)"
+                },
+                "Coral Fans": {
+                    "Alive": "Harp / Piano",
+                    "Dead": "Bass Drum (Kick)"
+                },
+                "Doors": {
+                    "Wooden": "Bass (String Bass)",
+                    "Iron": "Harp / piano"
+                },
+                "Fences": {
+                    "Wooden": "Bass (String Bass)",
+                    "Nether Brick": "Bass Drum (Kick)"
+                },
+                "Pressure Plate": {
+                    "Wooden": "Bass (String Bass)",
+                    "Stone": "Bass Drum (Kick)",
+                    "Weighted": "Harp / piano"
+                },
+                "Stairs": {
+                    "Wooden": "Bass (String Bass)",
+                    "Stone": "Bass Drum (Kick)",
+                    "Copper": "Harp / piano"
+                },
+                "Slabs": {
+                    "Wooden": "Bass (String Bass)",
+                    "Stone": "Bass Drum (Kick)",
+                    "Copper": "Harp / piano"
+                },
+                "Trapdoors": {
+                    "Wooden": "Bass (String Bass)",
+                    "Iron": "Harp / piano"
+                }
             }
         }
     }

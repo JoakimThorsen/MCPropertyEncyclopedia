@@ -3,6 +3,9 @@
 }
 body  { padding-top: 70px; }
 
+.select-option {
+    margin: 5px 4px;
+}
 .results {
     display: flex;
     align-items: center;
