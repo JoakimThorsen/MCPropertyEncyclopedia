@@ -2,9 +2,9 @@
 var block_data;
 var value_list = {};
 urlParams = new URLSearchParams(window.location.search);
-var selection_arr = [];
 var filter_obj = JSON.parse(urlParams.get("filter")) ?? {};
 var sort_arr = JSON.parse(urlParams.get("sort")) ?? [];
+var selection_arr = JSON.parse(urlParams.get("selection")) ?? [];
 
 $.ajax({
 'url': "block_data.json",
@@ -16,6 +16,7 @@ $.ajax({
 }});
 
 function display_selection() {
+    $('#selection').children().remove();
     if(selection_arr.length == 0) {
         for(let [property_name, value] of Object.entries(block_data.properties)) {
             if(value.default_selection ?? true) {

@@ -815,8 +815,8 @@
                 "Air": "Not Applicable",
                 "Amethyst Cluster": "Breaks",
                 "Anvil": {
-                    "Block": "No",
-                    "Falling block": "Yes"
+                    "Normally": "No",
+                    "When Falling": "Yes"
                 },
                 "Azalea": "Breaks",
                 "Bamboo": "Breaks",
@@ -894,7 +894,10 @@
                 "Nether Wart": "Breaks",
                 "Obsidian": "No",
                 "Piston": "No",
-                "Pointed Dripstone": "Breaks",
+                "Pointed Dripstone": {
+                    "Normally": "Breaks",
+                    "When Falling": "Yes"
+                },
                 "Potatoes": "Breaks",
                 "Pressure Plates": "Breaks",
                 "Pumpkin": "Breaks",
