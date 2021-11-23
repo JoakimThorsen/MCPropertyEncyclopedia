@@ -18,12 +18,36 @@
 <body>
 
 <div class="text-center">
-    <h1 class="text-center" style="font-size: 40px;">Block property thingy</h1>
-    <h4 class="text-center">Whoop de doo</h4>
-    <h4 class="text-center">TODO:</h4>
-    <button class="btn" type="button" data-toggle="collapse-next">Expand</button>
+    <h1 class="text-center" style="font-size: 40px;">Minecraft Block Property Encyclopedia</h1>
+    <h4>Actively being made by @JoaBro#6761, info is accurate as of <span title="No, info on older versions probably won't be added, sorry" style="text-decoration: underline; cursor: help;"></span>1.17.1.</span><br>This is an open source project: Check out the <a href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia">Github Page</a>.<br>Any suggestions and/or pull requests are of course welcome</h4>
+    <div class="btn-group">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            Property Selection <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="selection">
+            
+        </ul>
+    </div>
+
+    <div class="reset-buttons">
+        <button class="btn" type="button" onclick="selection_arr = []; update_window_history();display_selection(); display_headers_and_table();">Reset selection</button>
+        <button class="btn" type="button" onclick="sort_arr = []; update_window_history(); display_headers_and_table();">Reset sorting</button>
+        <button class="btn" type="button" onclick="filter_obj = {}; update_window_history(); display_headers_and_table();">Reset filters</button>
+    </div>
+    <div class="results">
+        <table class="table table-bordered table-hover text-left" id="output_table">
+            <thead>
+                <tr></tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    <h4>TODO:</h4>
+    <button class="btn btn-default" type="button" data-toggle="collapse-next">Expand</button>
     <ul class="collapse">
-        <li><del><i>Compile into a final output object before gathering value options/printing.</i></del></li>
+    <li><del><i>Compile into a final output object before gathering value options/printing.</i></del></li>
         <li><del><i>Make blacklist object of "unwanted" properties</i></del></li>
         <li><del><i>Add and retrieve said list from GET</i></del></li>
         <li><del><i>Filter based on object</i></del></li>
@@ -45,23 +69,5 @@
         <li>Add some way to reorder said properties.</li>
         <!-- <li></li> -->
     </ul>
-
-    <button class="btn" type="button" onclick="filter_obj = {}; update_window_history();display_full_table();">Reset filters</button>
-    <button class="btn" type="button" onclick="sort_arr = []; update_window_history();display_full_table();">Reset sorting</button>
-    <button class="btn" type="button" onclick="selection_arr = []; update_window_history();display_selection();display_full_table();">Reset selection</button>
-    <div id="selection">
-
-    </div>
-
-    <div class="results">
-        <table class="table table-bordered table-hover text-left" id="output_table">
-            <thead>
-                <tr></tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
-    </div>
 </div>
 </body>

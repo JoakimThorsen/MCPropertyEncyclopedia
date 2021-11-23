@@ -45,10 +45,29 @@ li {
 .dropdown-option {
     display: flex !important;
     justify-content: space-between;
-    padding: 3px 15px !important;
 }
 .dropdown-option>span, .icons {
     margin-left: 10px;
+}
+.modify-filter {   
+    padding: 3px 15px !important;
+}
+.select-option {
+    font-size: 14px;
+    padding: 6px 16px !important;
+    margin: 0px;
+}
+#selection {
+    padding: 0;
+}
+#selection:last-child {
+    margin-bottom: 5px;
+}
+.selected {
+    background-color: #B7E1CD;
+}
+.selected:hover {
+    background-color: #AED6C3 !important;
 }
 
 .sprite {
@@ -97,8 +116,12 @@ td .nested-table {
 
 .expand-btn {
     color: #333;
-    background-color: #abdbf8;
+    background-color: #A3D6FC;
     border-color: #aaa;
+}
+
+.reset-buttons {
+    margin: 3px;
 }
 
 

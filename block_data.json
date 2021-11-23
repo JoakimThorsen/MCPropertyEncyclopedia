@@ -1333,7 +1333,7 @@
         "hardness": {
             "property_name": "Hardness",
             "default_value": "Unspecified",
-            "default_selection": true,
+            "default_selection": false,
             "entries":{
                 "Azalea": 0,
                 "Beetroots": 0,

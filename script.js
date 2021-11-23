@@ -12,7 +12,7 @@ $.ajax({
 'success': function (data) {
     block_data = data;
     display_selection()
-    display_full_table();
+    display_headers_and_table();
 }});
 
 function display_selection() {
@@ -25,16 +25,29 @@ function display_selection() {
         }
     }
     Object.keys(block_data.properties).forEach(property =>{
-        $('#selection').append(`<label class="select-option"><input class="select-checkbox" type="checkbox" name="${property}"${selection_arr.includes(property) ? ' checked' : ''}>${block_data.properties[property].property_name}</label>`);
-    })
-    $('.select-option').click(function() {
-        selection_arr = $('.select-checkbox:checked').map(function() { return this.name; }).get().join().split(',');
+        selected = selection_arr.includes(property)
+        $('#selection').append(`<li><a role="button" class="dropdown-option select-option${selected ? ' selected':''}" property="${property}">${block_data.properties[property].property_name}
+                <span class="glyphicon glyphicon-ok" style="${selected ? 'display:inline-block':'display:none'}">
+                </span></a></li>`);
+    });
+    $('.select-option').click(function(e) {
+        e.stopPropagation()
+        var value = $(this).attr("property");
+        if(selection_arr.includes(value)) {
+            selection_arr.splice(selection_arr.indexOf(value), 1);
+        } else {
+            selection_arr.push(value);
+        }
+        $(this).children().attr('style', function(_, attr){
+            return attr == 'display:none' ? 'display:inline-block' : 'display:none';
+        });
+        $(this).toggleClass('selected');
         update_window_history();
-        display_full_table();
+        display_headers_and_table();
     });
 }
 
-function display_full_table() {
+function display_headers_and_table() {
     
     $('#output_table').find('thead>tr>th').remove();
     
@@ -183,7 +196,6 @@ function display_full_table() {
             // If not sorted, sort according to selection
             sort_arr.push({"property":property,"reversed":reversed});
             $(this).addClass('active');
-            $(this).parent('.dropdown');
 
             $(this).parents('.dropdown').find(reversed ? '.sorted-reverse' : '.sorted').removeClass('display-none');
         }
