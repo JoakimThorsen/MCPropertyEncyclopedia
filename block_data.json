@@ -2411,6 +2411,7 @@
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
+                               "Bubble Column": "Yes",
                                "Barrier": "Yes",
                                "Bedrock": "Yes",
                                "Command Blocks": "Yes",
@@ -2437,6 +2438,7 @@
         	        "default_value": "No",
         	        "default_selection": false,
         	        "entries":{
+                               "Bubble Column": "Yes",
                                "Barrier": "Yes",
                                "Bedrock": "Yes",
                                "Command Blocks": "Yes",
