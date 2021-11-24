@@ -2261,7 +2261,7 @@
             "default_value": "No",
             "default_selection": false,
             "entries":{
-			    "Activator Rail": "Yes"
+			    "Activator Rail": "Yes",
                 "Air": "Yes",
 				"Azalea": "Yes",
 				"Big Dripleaf": "Yes",
