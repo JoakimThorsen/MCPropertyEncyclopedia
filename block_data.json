@@ -68,7 +68,7 @@
 		"Cake",
 		"Calcite",
 		"Campfire",
-		"Candle",
+		"Candles",
 		"Carpets",
 		"Carrots",
 		"Cartography Table",
@@ -317,7 +317,7 @@
 		"Cake": [-192, -1216],
 		"Calcite": [-160, 0],
 		"Campfire": [0, -800],
-		"Candle": [-208, -32],
+		"Candles": [-208, -32],
 		"Carpets": [-224, -720],
 		"Carrots": [-320, -1136],
 		"Cartography Table": [-144, -672],
@@ -518,8 +518,8 @@
 		"Wool": [-240, -720]
 	},
 	"properties": {
-		"opacity": { 
-			"property_name": "Opaque",
+		"conductivity": { 
+			"property_name": "Conductive",
 			"default_value": "Yes",
 			"default_selection": true,
 			"entries": {
@@ -542,7 +542,7 @@
 				"Cactus": "No",
 				"Cake": "No",
 				"Campfire": "No",
-				"Candle": "No",
+				"Candles": "No",
 				"Carpets": "No",
 				"Carrots": "No",
 				"Cauldron": "No",
@@ -686,7 +686,7 @@
 				"Cactus": "Yes",
 				"Cake": "Yes",
 				"Campfire": "Yes",
-				"Candle": "Yes",
+				"Candles": "Yes",
 				"Carpets": "Yes",
 				"Carrots": "No",
 				"Cauldron": "Yes",
@@ -825,7 +825,7 @@
 				"Barrier": "No",
 				"Beacon": "No",
 				"Bedrock": "No",
-				"beds": "Breaks",
+				"Beds": "Breaks",
 				"Bee Nest": "No",
 				"Beehive": "No",
 				"Beetroots": "Breaks",
@@ -920,7 +920,7 @@
 				"Spawner": "No",
 				"Spore Blossom": "Breaks",
 				"Structure Block": "No",
-				"Structure Void‌": "Breaks",
+				"Structure Void": "Breaks",
 				"Sugar Cane": "Breaks",
 				"Torch": "Breaks",
 				"Trapped Chest": "No",
@@ -948,7 +948,7 @@
 				"Barrier": "No",
 				"Beacon": "No",
 				"Bedrock": "No",
-				"beds": "No",
+				"Beds": "No",
 				"Bee Nest": "No",
 				"Beehive": "No",
 				"Beetroots": "No",
@@ -1040,7 +1040,7 @@
 				"Spawner": "No",
 				"Spore Blossom": "No",
 				"Structure Block": "No",
-				"Structure Void‌": "No",
+				"Structure Void": "No",
 				"Sugar Cane": "No",
 				"Torch": "No",
 				"Trapped Chest": "No",
@@ -1108,7 +1108,7 @@
 				"Cake": 0.5,
 				"Calcite": 0.75,
 				"Campfire": 2,
-				"Candle": 0.1,
+				"Candles": 0.1,
 				"Carpets": 0.1,
 				"Carrots": 0,
 				"Cartography Table": 2.5,
@@ -1383,7 +1383,7 @@
 				"Weeping Vines": 0,
 				"Wheat Crops": 0,
 				"Big Dripleaf": 0.1,
-				"Candle": 0.1,
+				"Candles": 0.1,
 				"Carpets": 0.1,
 				"Hanging Roots": 0.1,
 				"Moss Block": 0.1,
@@ -1660,7 +1660,7 @@
 				"Weeping Vines": "Yes",
 				"Wheat Crops": "Yes",
 				"Big Dripleaf": "Yes",
-				"Candle": "Yes",
+				"Candles": "Yes",
 				"Carpets": "Yes",
 				"Hanging Roots": "Yes",
 				"Moss Block": "Yes",
@@ -1904,12 +1904,9 @@
 					"Large Amethyst Bud": 4,
 					"Amethyst Cluster": 5
 				},
-				"Soul Campfire": {
-					"Normally": "No",
-					"When Lit": 10
-				},
 				"Campfire": {
 					"Normally": "No",
+					"Soul Campfire When Lit": 10,
 					"When Lit": 15
 				},
 				"Blast Furnace": {
@@ -2006,6 +2003,10 @@
 					"Azalea": 16,
 					"Azalea Inside": 8
 				},
+				"Bamboo": {
+					"Bamboo": 16,
+					"Shoot": "Not Applicable"
+				},
 				"Brewing Stand": {
 					"Brewing Stand Bottom Part": 2,
 					"Top Of Brewing Stand": 14
@@ -2050,15 +2051,15 @@
 					"Composter Inside6": 6,
 					"Composter Inside4": 4
 				},
-				"Daylight Sensor": {
-					"Daylight Sensor": 6,
-					"Daylight Sensor Inside4": 4,
-					"Daylight Sensor Inside2": 2
+				"Daylight Detector": {
+					"Daylight Detector": 6,
+					"Daylight Detector Inside4": 4,
+					"Daylight Detector Inside2": 2
 				},
-				"Enchantment Table": {
-					"Enchantment Table": 12,
-					"Enchantment Table Inside8": 8,
-					"Enchantment Table Inside4": 4
+				"Enchanting Table": {
+					"Enchanting Table": 12,
+					"Enchanting Table Inside8": 8,
+					"Enchanting Table Inside4": 4
 				},
 				"End Portal Frame": {
 					"End Portal Frame W/O Eyes": 13,
@@ -2089,9 +2090,9 @@
 					"Hopper Inside2": 2,
 					"Inside Of Hopper": 11
 				},
-				"Lanern": {
-					"Lantern": 16,
-					"Lantern ": 9,
+				"Lantern": {
+					"Hanging Lantern": 16,
+					"Floor Lantern": 9,
 					"Floor Lantern Inside7": 9,
 					"Floor Lantern Inside9": 7,
 					"Lantern Inside10": 10,
@@ -2178,7 +2179,7 @@
 				},
 				"Cactus": 15,
 				"Campfire": 7,
-				"Candle 1-4": 6,
+				"Candles": 6,
 				"Carpets": 1,
 				"Chest": 14,
 				"Chorus Plant": 13,
@@ -2189,17 +2190,14 @@
 				"Ender Chest": 14,
 				"Farmland": 15,
 				"Flower Pot": 6,
-				"Honey": 15,
+				"Honey Block": 15,
 				"Lily Pad": 1.5,
+				"Moss Carpet": 1,
 				"Redstone Comparator": 2,
 				"Redstone Repeater": 2,
 				"Chain": 9.5,
 				"Stonecutter": 9,
 				"Turtle Egg": 7,
-				"Bamboo": {
-					"Bamboo": 16,
-					"Shoot": "Not Applicable"
-				},
 				"Bubble Column": "Not Applicable",
 				"Lava": "Not Applicable",
 				"Water": "Not Applicable",
@@ -2268,7 +2266,7 @@
 				"Bubble Column": "Yes",
 				"Beetroots": "Yes",
 				"Buttons": "Yes",
-				"Candle": "Yes",
+				"Candles": "Yes",
 				"Carpets": "Yes",
 				"Carrots": "Yes",
 				"Cave Vines": "Yes",
@@ -2347,7 +2345,7 @@
 				"Amethyst Cluster": "Yes",
 				"Big Dripleaf": "Yes",
 				"Campfire": "Yes",
-				"Candle": "Yes",
+				"Candles": "Yes",
 				"Chain": "Yes",
 				"Chest": "Yes",
 				"Conduit": "Yes",
@@ -2387,7 +2385,7 @@
 			"default_value": "Harp / Piano",
 			"default_selection": false,
 			"entries": {
-				"Banner": "Bass (String Bass)",
+				"Banners": "Bass (String Bass)",
 				"Barrel": "Bass (String Bass)",
 				"Bee Nest": "Bass (String Bass)",
 				"Beehive": "Bass (String Bass)",
@@ -2397,7 +2395,7 @@
 				"Composter": "Bass (String Bass)",
 				"Crafting Table": "Bass (String Bass)",
 				"Daylight Detector": "Bass (String Bass)",
-				"Fence Gate": "Bass (String Bass)",
+				"Fence Gates": "Bass (String Bass)",
 				"Fletching Table": "Bass (String Bass)",
 				"Hyphae": "Bass (String Bass)",
 				"Jukebox": "Bass (String Bass)",
@@ -2408,7 +2406,7 @@
 				"Mushroom Blocks": "Bass (String Bass)",
 				"Note Block": "Bass (String Bass)",
 				"Planks": "Bass (String Bass)",
-				"Sign": "Bass (String Bass)",
+				"Signs": "Bass (String Bass)",
 				"Smithing Table": "Bass (String Bass)",
 				"Stems": "Bass (String Bass)",
 				"Trapped Chest": "Bass (String Bass)",
@@ -2425,7 +2423,7 @@
 				"Glass Pane": "Clicks and Sticks (Hihat)",
 				"Sea Lantern": "Clicks and Sticks (Hihat)",
 				"Stained Glass": "Clicks and Sticks (Hihat)",
-				"Stained Glass Pane": "Clicks and Sticks (Hihat)",
+				"Stained Glass Panes": "Clicks and Sticks (Hihat)",
 				"Tinted Glass": "Clicks and Sticks (Hihat)",
 			
 				"Stone": "Bass Drum (Kick)",
@@ -2438,7 +2436,16 @@
 				"Dripstone Block": "Bass Drum (Kick)",
 				"Pointed Dripstone": "Bass Drum (Kick)",
 				"Bedrock": "Bass Drum (Kick)",
-				"Ore": "Bass Drum (Kick)",
+				"Coal Ore": "Bass Drum (Kick)",
+				"Copper Ore": "Bass Drum (Kick)",
+				"Diamond Ore": "Bass Drum (Kick)",
+				"Emerald Ore": "Bass Drum (Kick)",
+				"Gold Ore": "Bass Drum (Kick)",
+				"Iron Ore": "Bass Drum (Kick)",
+				"Lapis Lazuli Ore": "Bass Drum (Kick)",
+				"Nether Gold Ore": "Bass Drum (Kick)",
+				"Nether Quartz Ore": "Bass Drum (Kick)",
+				"Redstone Ore": "Bass Drum (Kick)",
 				"Dropper": "Bass Drum (Kick)",
 				"Dispenser": "Bass Drum (Kick)",
 				"Sandstone": "Bass Drum (Kick)",
@@ -2453,7 +2460,7 @@
 				"End Portal Frame": "Bass Drum (Kick)",
 				"End Stone": "Bass Drum (Kick)",
 				"Ender Chest": "Bass Drum (Kick)",
-				"Quartz Block": "Bass Drum (Kick)",
+				"Block of Quartz": "Bass Drum (Kick)",
 				"Terracotta": "Bass Drum (Kick)",
 				"Prismarine": "Bass Drum (Kick)",
 				"Block of Coal": "Bass Drum (Kick)",
@@ -2463,11 +2470,10 @@
 				"Purpur Block": "Bass Drum (Kick)",
 				"End Stone Bricks": "Bass Drum (Kick)",
 				"Magma Block": "Bass Drum (Kick)",
-				"Red Nether Bricks": "Bass Drum (Kick)",
 				"Observer": "Bass Drum (Kick)",
 				"Glazed Terracotta": "Bass Drum (Kick)",
 				"Concrete": "Bass Drum (Kick)",
-				"Coral Block": "Bass Drum (Kick)",
+				"Coral Blocks": "Bass Drum (Kick)",
 				"Smoker": "Bass Drum (Kick)",
 				"Blast Furnace": "Bass Drum (Kick)",
 				"Stonecutter": "Bass Drum (Kick)",
@@ -2485,7 +2491,7 @@
 				"Block of Gold": "Bells (Glockenspiel)",
 			
 				"Clay": "Flute",
-				"Honeycomb Block‌": "Flute",
+				"Honeycomb Block": "Flute",
 			
 				"Packed Ice": "Chimes",
 			
@@ -2521,7 +2527,7 @@
 					"Wooden": "Bass (String Bass)",
 					"Nether Brick": "Bass Drum (Kick)"
 				},
-				"Pressure Plate": {
+				"Pressure Plates": {
 					"Wooden": "Bass (String Bass)",
 					"Stone": "Bass Drum (Kick)",
 					"Weighted": "Harp / piano"
