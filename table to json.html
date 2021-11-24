@@ -5,8 +5,8 @@
     <style>
         
         textarea {
-            width: 800px;
-            height: 500px;
+            width: 600px;
+            height: 350px;
         }
     </style>
     <script>
@@ -53,10 +53,10 @@
             text = document.getElementById("input2").value;
             var output = "";
             text.split('\n').forEach(row => {
-                columns = row.split('\t');
+                columns = row.split(/, |\t/);
                 value = columns.shift();
                 for(let i in columns){
-                    if(columns[i]!='') output += `"${columns[i]}": "${value}"\n`;
+                    if(columns[i]!='') output += `"${columns[i]}": "${value}",\n`;
                 };
             });
             document.getElementById("output2").value = output.substr(0, output.length-2);

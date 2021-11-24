@@ -807,6 +807,35 @@
 				"Wheat Crops": "No"
 			}
 		},
+		"affects_movement": { 
+			"property_name": "Affects Movement",
+			"default_value": "No",
+			"default_selection": false,
+			"entries": {
+				"Blue Ice": "Yes",
+				"Bubble Column": "Yes",
+				"Cave Vines": "Yes",
+				"Cobweb": "Yes",
+				"Frosted Ice": "Yes",
+				"Honey Block": "Yes",
+				"Ice": "Yes",
+				"Ladders": "Yes",
+				"Lava": "Yes",
+				"Packed Ice": "Yes",
+				"Powdered Snow": "Yes",
+				"Slime Block": "Yes",
+				"Soul Sand": "Yes",
+				"Soul Soil": {
+					"Normally": "No",
+					"With Soul Speed": "Yes"
+				},
+				"Sweet Berry Bush": "Yes",
+				"Twisting Vines": "Yes",
+				"Vines": "Yes",
+				"Warped Vines": "Yes",
+				"Water": "Yes"
+			}
+		},
 		"movable": {
 			"property_name": "Movable",
 			"default_value": "Yes",
@@ -2537,23 +2566,23 @@
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
-      		               "Cactus": "Yes",
-                               "Clay": "Yes",
-                               "Dirt": "Yes",
-                               "Flowers": {
+				"Cactus": "Yes",
+				"Clay": "Yes",
+				"Dirt": "Yes",
+				"Flowers": {
 					"Small": "Yes",
 					"Tall": "No"
 				},
-                               "Fungi": "Yes",
-                               "Gravel": "Yes",
-                               "Nylium": "Yes",
-                               "Melon": "Yes",
-                               "Mushrooms": "Yes",
-                               "Pumpkin": "Yes",
-                               "Red Sand": "Yes",
-                               "Roots": "Yes",
-                               "Sand": "Yes",
-                               "TNT": "Yes"
+				"Fungi": "Yes",
+				"Gravel": "Yes",
+				"Nylium": "Yes",
+				"Melon": "Yes",
+				"Mushrooms": "Yes",
+				"Pumpkin": "Yes",
+				"Red Sand": "Yes",
+				"Roots": "Yes",
+				"Sand": "Yes",
+				"TNT": "Yes"
 			}
 		},
 		"dragon_immune": {
@@ -2561,48 +2590,48 @@
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
-                               "Bubble Column": "Yes",
-                               "Barrier": "Yes",
-                               "Bedrock": "Yes",
-                               "Command Blocks": "Yes",
-                               "Crying Obsidian": "Yes",
-                               "End Gateway": "Yes",
-                               "End Portal": "Yes",
-                               "End Portal Frame": "Yes",
-                               "End Stone": "Yes",
-                               "Iron Bars": "Yes",
-                               "Jigsaw Block": "Yes",
-                               "Lava": "Yes",
-                               "Obsidian": "Yes",
-                               "Piston": {
+				"Bubble Column": "Yes",
+				"Barrier": "Yes",
+				"Bedrock": "Yes",
+				"Command Blocks": "Yes",
+				"Crying Obsidian": "Yes",
+				"End Gateway": "Yes",
+				"End Portal": "Yes",
+				"End Portal Frame": "Yes",
+				"End Stone": "Yes",
+				"Iron Bars": "Yes",
+				"Jigsaw Block": "Yes",
+				"Lava": "Yes",
+				"Obsidian": "Yes",
+				"Piston": {
 					"While Moving": "Yes",
 					"Still": "No"
 				},
-                               "Respawn Anchor": "Yes",
-                               "Structure Block": "Yes",
-                               "Water": "Yes"
+				"Respawn Anchor": "Yes",
+				"Structure Block": "Yes",
+				"Water": "Yes"
 			}
 		},
 		"wither_immune": {
 			"property_name": "Wither immune",
-        	        "default_value": "No",
-        	        "default_selection": false,
-        	        "entries":{
-                               "Bubble Column": "Yes",
-                               "Barrier": "Yes",
-                               "Bedrock": "Yes",
-                               "Command Blocks": "Yes",
-                               "End Gateway": "Yes",
-                               "End Portal": "Yes",
-                               "End Portal Frame": "Yes",
-                               "Jigsaw Block": "Yes",
-                               "Lava": "Yes",
-                               "Piston": {
+			"default_value": "No",
+			"default_selection": false,
+			"entries": {
+				"Bubble Column": "Yes",
+				"Barrier": "Yes",
+				"Bedrock": "Yes",
+				"Command Blocks": "Yes",
+				"End Gateway": "Yes",
+				"End Portal": "Yes",
+				"End Portal Frame": "Yes",
+				"Jigsaw Block": "Yes",
+				"Lava": "Yes",
+				"Piston": {
 					"While Moving": "Yes",
 					"Still": "No"
 				},
-                               "Structure Block": "Yes",
-                               "Water": "Yes"
+				"Structure Block": "Yes",
+				"Water": "Yes"
 			}
 		},
 		"instrument": {
