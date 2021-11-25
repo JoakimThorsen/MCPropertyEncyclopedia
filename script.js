@@ -47,6 +47,7 @@ function display_selection() {
     });
 }
 
+// This functions only handles headers, but calls display_results()
 function display_headers_and_table() {
     
     $('#output_table').find('thead>tr>th').remove();
@@ -204,36 +205,44 @@ function display_headers_and_table() {
     });
 }
 
+// Displays all the table data
 function display_results() {
     $('#output_table').find('tbody>tr').remove();
     
     // Table data
     output_data = [];
 
-    // Filtering
+    // Filtering and "pivoting" (from block_data to output_data)
     block_data.block_list.forEach(entry => {
         var block = {"block": entry};
         var filtered = false;
         for(var [property_id, property] of Object.entries(block_data.properties).filter(([e, _]) => selection_arr.includes(e))) {
-            if(typeof property.entries[entry] == 'object' & Object.keys(filter_obj).includes(property_id)) {
-                block[property_id] = {};
-                Object.keys(property.entries[entry])
-                    .filter(variant => !filter_obj[property_id].includes(property.entries[entry][variant]))
-                    .forEach(variant => {
-                        block[property_id][variant] = property.entries[entry][variant];
-                    });
-                
-                // These could maybe be combined?
-                if(Object.keys(block[property_id]).length == 0) { 
+            var selected_element = property.entries[entry];
+
+            if(typeof selected_element == 'object' & Object.keys(filter_obj).includes(property_id)) {
+                if(Array.isArray(selected_element)) {
+                    block[property_id] = [];
+                    selected_element.filter(value => !filter_obj[property_id].includes(value))
+                            .forEach(element => {
+                                block[property_id].push(element);
+                            });
+                } else {
+                    block[property_id] = {};
+                    Object.keys(selected_element).filter(variant => !filter_obj[property_id].includes(selected_element[variant]))
+                            .forEach(variant => {
+                                block[property_id][variant] = selected_element[variant];
+                            });    
+                }
+
+                if((block[property_id].length || Object.keys(block[property_id]).length) == 0) { 
                     filtered = true;
                     break;
                 }
-            // These could maybe be combined?
-            } else if ((filter_obj[property_id] || []).includes((property.entries[entry] ?? property.default_value))){
+            } else if ((filter_obj[property_id] || []).includes(selected_element ?? property.default_value)){
                 filtered = true;
                 break;
             } else {
-                block[property_id] = property.entries[entry] ?? property.default_value;
+                block[property_id] = selected_element ?? property.default_value;
             }
         }
         if(!filtered) {
@@ -291,10 +300,19 @@ function display_results() {
                 split_elements.forEach(val => {
                     let picked_element = val[property];
                     if (typeof picked_element == 'object') {
-                        for(let [ key, value ] of Object.entries(picked_element)) {
-                            let val_copy = deepCopy(val);
-                            val_copy[property] = { [key]: value };
-                            split_element_next.push(val_copy);
+                        if(Array.isArray(picked_element)) {
+                            picked_element.forEach(value => {
+                                let val_copy = deepCopy(val);
+                                val_copy[property] = [value];
+                                split_element_next.push(val_copy);
+                            });
+
+                        } else {
+                            for(let [ key, value ] of Object.entries(picked_element)) {
+                                let val_copy = deepCopy(val);
+                                val_copy[property] = { [key]: value };
+                                split_element_next.push(val_copy);
+                            }
                         }
                     } else {
                         split_element_next.push(deepCopy(val));
@@ -340,9 +358,6 @@ function display_results() {
             });
         });
 
-        // sort().sort((a, b) => a - b) should deal with both strings and ints.
-
-        // batch, and run recursive_sort() on each batch
         return split_data;
     }
     output_data = sort_properties(output_data, sort_arr);
@@ -373,15 +388,20 @@ function display_results() {
     });
 
     function nested_table(entry, property_name) {
-        if(Object.values(entry).length > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2) {
+        if((entry.length || Object.values(entry).length) > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2) {
             return_data = "<button class=\"btn expand-btn\" type=\"button\" data-toggle=\"collapse-next\">Expand</button>\n<table class=\"table table-bordered table-hover nested-table collapse\"><tbody>";
         } else {
             return_data = "<table class=\"table table-bordered table-hover nested-table\"><tbody>";
         }
-        
-        Object.keys(entry).forEach(key=> {
-            return_data += "<tr><td>" + key + "</td>" + formatted_cell(entry[key], property_name) + "</tr>";
-        });
+        if(Array.isArray(entry)) {
+            entry.forEach(value => {
+                return_data += "<tr>" + formatted_cell(value, property_name) + "</tr>";
+            });
+        } else {
+            Object.keys(entry).forEach(key => {
+                return_data += "<tr><td>" + key + "</td>" + formatted_cell(entry[key], property_name) + "</tr>";
+            });
+        }
         return_data += "</tbody></table>";
         return return_data;
     }

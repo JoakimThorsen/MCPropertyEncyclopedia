@@ -2004,8 +2004,8 @@
 				}
 			}
 		},
-		"height": {
-			"property_name": "Height",
+		"height_all": {
+			"property_name": "Height (All)",
 			"default_value": 16,
 			"default_selection": true,
 			"entries": {
