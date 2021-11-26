@@ -2634,6 +2634,117 @@
 				"Water": "Yes"
 			}
 		},
+		"flammable": {
+			"property_name": "Flammable",
+			"default_value": "No",
+			"default_selection": false,
+			"entries":{
+				"Azalea": "Yes",
+				"Bamboo": "Yes",
+				"Bee Nest": "Yes",
+				"Beehive": "Yes",
+				"Big Dripleaf": "Yes",
+				"Block of Coal": "Yes",
+				"Bookshelf": "Yes",
+				"Carpets": "Yes",
+				"Cave Vines": "Yes",
+				"Composter": "Yes",
+				"Dead Bush": "Yes",
+				"Dried Kelp Block": "Yes",
+				"Fence Gates": "Yes",
+				"Fences": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Crimson<br>Nether Brick<br>Warped": "No"
+				},
+				"Fern": "Yes",
+				"Flowers": "Yes",
+				"Glow Lichen": "Yes",
+				"Grass": "Yes",
+				"Hanging Roots": "Yes",
+				"Hay Bale": "Yes",
+				"Leaves": "Yes",
+				"Lectern": "Yes",
+				"Logs": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Crimson<br>Warped": "No"
+				},
+				"Planks": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Crimson<br>Warped": "No"
+				},
+				"Scaffolding": "Yes",
+				"Slabs": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Other": "No"
+				},
+				"Small Dripleaf": "Yes",
+				"Spore Blossom": "Yes",
+				"Stairs": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Other": "No"
+				},
+				"Sweet Berry Bush": "Yes",
+				"Target": "Yes",
+				"TNT": "Yes",
+				"Vines": "Yes",
+				"Wood": "Yes",
+				"Wool": "Yes"
+			}
+		},
+		"catche_fire_from_lava": {
+			"property_name": "Catches fire from lava",
+			"default_value": "No",
+			"default_selection": false,
+			"entries":{
+				"Azalea": "Yes",
+				"Bamboo": "Yes",
+				"Bee Nest": "Yes",
+				"Beehive": "Yes",
+				"Big Dripleaf": "Yes",
+				"Bookshelf": "Yes",
+				"Carpets": "Yes",
+				"Cave Vines": "Yes",
+				"Composter": "Yes",
+				"Dead Bush": "Yes",
+				"Fence Gates": "Yes",
+				"Fences": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Crimson<br>Nether Brick<br>Warped": "No"
+				},
+				"Fern": "Yes",
+				"Flowers": {
+					"Small": "No",
+					"Tall": "Yes"
+				},
+				"Glow Lichen": "Yes",
+				"Grass": "Yes",
+				"Hanging Roots": "Yes",
+				"Leaves": "Yes",
+				"Lectern": "Yes",
+				"Logs": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Crimson<br>Warped": "No"
+				},
+				"Planks": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Crimson<br>Warped": "No"
+				},
+				"Slabs": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Other": "No"
+				},
+				"Small Dripleaf": "Yes",
+				"Spore Blossom": "Yes",
+				"Stairs": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Other": "No"
+				},
+				"TNT": "Yes",
+				"Vines": "Yes",
+				"Wood": "Yes",
+				"Wool": "Yes"
+			}
+		},
 		"instrument": {
 			"property_name": "Note Block Instrument",
 			"default_value": "Harp / Piano",
