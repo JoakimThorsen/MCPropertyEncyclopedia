@@ -2634,8 +2634,8 @@
 				"Water": "Yes"
 			}
 		},
-		"comparator_updater": {
-			"property_name": "Comparator Updater",
+		"updates_comparator": {
+			"property_name": "Updates Comparator",
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
@@ -2659,7 +2659,7 @@
 				"Lectern": "Yes",
 				"Respawn Anchor": "Yes",
 				"Shulker Box": "Yes",
-				"Smoker": "Yes",
+				"Smoker": "Yes"
 			}
 		},
 		"instrument": {
