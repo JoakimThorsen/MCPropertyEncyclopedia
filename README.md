@@ -1,6 +1,3 @@
 # The Minecraft Block Property Encyclopedia
 Made by JoaBro.
-url will likely be https://JoakimThorsen.github.io/MCPropertyEncyclopedia unless I'm dumb
-
-# Note
-This is nowhere near done.
+this fork is simply for T727 to make pull requests.
