@@ -411,7 +411,7 @@ function display_results() {
         if(value*1==value){ 
             // color = block_data.conditional_formatting["!numeric"];
             function scale (number, inMax, outMin, outMax) {
-                return (number) * (outMax - outMin) / (inMax) + outMin;
+                return Math.round((number) * (outMax - outMin) / (inMax) + outMin);
             }
             // not the greatest solution...
             value = value*1;
