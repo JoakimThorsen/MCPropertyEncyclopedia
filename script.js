@@ -390,7 +390,6 @@ function display_results() {
     output_data.forEach(entry => {
         var append_string = "<tr>";
         var sprite = data.sprites[entry[page]];
-        console.log(entry, sprite);
         append_string += `<td><span class="sprite" style="background-position:${sprite[0]}px ${sprite[1]}px"></span></td>`;
         for(var [property_name, value] of Object.entries(entry)) {
             if(typeof(value) == 'object') {
