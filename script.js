@@ -1,32 +1,54 @@
 
-var block_data;
+var data;
 var value_list = {};
 urlParams = new URLSearchParams(window.location.search);
 var filter_obj = JSON.parse(urlParams.get("filter")) ?? {};
 var sort_arr = JSON.parse(urlParams.get("sort")) ?? [];
 var selection_arr = JSON.parse(urlParams.get("selection")) ?? [];
+var page;
+var entry_header;
 
-$.ajax({
-'url': "block_data.json",
-'dataType': "json",
-'success': function (data) {
-    block_data = data;
-    display_selection()
-    display_headers_and_table();
-}});
+function load_data(filename) {
+    page = document.body.dataset.page;
+    switch(page) {
+        case "block":
+            document.documentElement.style.setProperty('--sprite-url', 'url(BlockCSS.png)');
+            entry_header = "Blocks";
+
+        case "entity":
+            document.documentElement.style.setProperty('--sprite-url', 'url(EntityCSS.png)');
+            entry_header = "Entities";
+
+        case "item":
+            document.documentElement.style.setProperty('--sprite-url', 'url(ItemCSS.png)');
+            entry_header = "Items";
+        
+    }
+
+    $.ajax({
+        'url': filename,
+        'dataType': "json",
+        'success': function (d) {
+            data = d;
+            display_selection()
+            display_headers_and_table();
+        }
+    });
+}
+
 
 function display_selection() {
     $('#selection').children().remove();
     if(selection_arr.length == 0) {
-        for(let [property_name, value] of Object.entries(block_data.properties)) {
+        for(let [property_name, value] of Object.entries(data.properties)) {
             if(value.default_selection ?? true) {
                 selection_arr.push(property_name);
             }
         }
     }
-    Object.keys(block_data.properties).forEach(property =>{
+    Object.keys(data.properties).forEach(property =>{
         selected = selection_arr.includes(property)
-        $('#selection').append(`<li><a role="button" class="dropdown-option select-option${selected ? ' selected':''}" property="${property}">${block_data.properties[property].property_name}
+        $('#selection').append(`<li><a role="button" class="dropdown-option select-option${selected ? ' selected':''}" property="${property}">${data.properties[property].property_name}
                 <span class="glyphicon glyphicon-ok" style="${selected ? 'display:inline-block':'display:none'}">
                 </span></a></li>`);
     });
@@ -53,10 +75,10 @@ function display_headers_and_table() {
     $('#output_table').find('thead>tr>th').remove();
     
     // Add all unique values to a list of possible values for each property (recursively so for objects)
-    Object.keys(block_data.properties).filter(e => selection_arr.includes(e)).forEach(property => {
+    Object.keys(data.properties).filter(e => selection_arr.includes(e)).forEach(property => {
         value_list[property] = [];
-        value_list[property].push(block_data.properties[property].default_value);
-        add_value(value_list[property], block_data.properties[property].entries);
+        value_list[property].push(data.properties[property].default_value);
+        add_value(value_list[property], data.properties[property].entries);
     });
     function add_value(list, property) {
         Object.values(property).forEach(entry => {
@@ -70,23 +92,23 @@ function display_headers_and_table() {
     
 
     // Table headers
-    $('#output_table').children('thead').children('tr').append(`<th></th><th><div class=\" dropdown\"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">Blocks<span class="icons">
-    <i class="fas fa-sort-amount-down-alt${sort_arr.some(e => e.property === "block") && !sort_arr.filter(e => e.property === "block")[0].reversed ? '':' display-none'} sorted"></i>
-    <i class="fas fa-sort-amount-up${sort_arr.some(e => e.property === "block") && sort_arr.filter(e => e.property === "block")[0].reversed ? '':' display-none'} sorted-reverse"></i>
+    $('#output_table').children('thead').children('tr').append(`<th></th><th><div class=\" dropdown\"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">${entry_header}<span class="icons">
+    <i class="fas fa-sort-amount-down-alt${sort_arr.some(e => e.property === page) && !sort_arr.filter(e => e.property === page)[0].reversed ? '':' display-none'} sorted"></i>
+    <i class="fas fa-sort-amount-up${sort_arr.some(e => e.property === page) && sort_arr.filter(e => e.property === page)[0].reversed ? '':' display-none'} sorted-reverse"></i>
     <span class="glyphicon glyphicon-triangle-bottom"></span>
     </span></a><ul class="dropdown-menu"><li>
     <div class="text-center">
     <span class="btn-group dropdown-btn-group" role="group">
-        <a role="button" class="btn dropdown-btn btn-default modify-sorting${(sort_arr.some(e => e.property === "block") && !sort_arr.filter(e => e.property === "block")[0].reversed) ? ' active' : ''}" property="block" reversed="false">
+        <a role="button" class="btn dropdown-btn btn-default modify-sorting${(sort_arr.some(e => e.property === page) && !sort_arr.filter(e => e.property === page)[0].reversed) ? ' active' : ''}" property=page reversed="false">
             <i class="fas fa-sort-amount-down-alt"></i>
         </a>
-        <a role="button" class="btn dropdown-btn btn-default modify-sorting${(sort_arr.some(e => e.property === "block") && sort_arr.filter(e => e.property === "block")[0].reversed) ? ' active' : ''}" property="block" reversed="true">
+        <a role="button" class="btn dropdown-btn btn-default modify-sorting${(sort_arr.some(e => e.property === page) && sort_arr.filter(e => e.property === page)[0].reversed) ? ' active' : ''}" property=page reversed="true">
             <i class="fas fa-sort-amount-up"></i>
         </a>
     </span>
     </div>
     </li></ul></div></th>`);
-    Object.keys(block_data.properties).filter(e => selection_arr.includes(e)).forEach(property => {
+    Object.keys(data.properties).filter(e => selection_arr.includes(e)).forEach(property => {
         append_data = "";
         
         var sorted = 0;
@@ -98,7 +120,7 @@ function display_headers_and_table() {
             }
         }
         append_data = `<th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">
-                ${block_data.properties[property].property_name}
+                ${data.properties[property].property_name}
                 <span class="icons">
                 <i class="fas fa-sort-amount-down-alt${sorted == 1 ? '':' display-none'} sorted"></i>
                 <i class="fas fa-sort-amount-up${sorted == -1 ? '':' display-none'} sorted-reverse"></i>
@@ -212,29 +234,29 @@ function display_results() {
     // Table data
     output_data = [];
 
-    // Filtering and "pivoting" (from block_data to output_data)
-    block_data.block_list.forEach(entry => {
-        var block = {"block": entry};
+    // Filtering and "pivoting" (from data to output_data)
+    data.key_list.forEach(entry => {
+        var output_entry = {[page]: entry};
         var filtered = false;
-        for(var [property_id, property] of Object.entries(block_data.properties).filter(([e, _]) => selection_arr.includes(e))) {
+        for(var [property_id, property] of Object.entries(data.properties).filter(([e, _]) => selection_arr.includes(e))) {
             var selected_element = property.entries[entry];
 
             if(typeof selected_element == 'object' & Object.keys(filter_obj).includes(property_id)) {
                 if(Array.isArray(selected_element)) {
-                    block[property_id] = [];
+                    output_entry[property_id] = [];
                     selected_element.filter(value => !filter_obj[property_id].includes(value))
                             .forEach(element => {
-                                block[property_id].push(element);
+                                output_entry[property_id].push(element);
                             });
                 } else {
-                    block[property_id] = {};
+                    output_entry[property_id] = {};
                     Object.keys(selected_element).filter(variant => !filter_obj[property_id].includes(selected_element[variant]))
                             .forEach(variant => {
-                                block[property_id][variant] = selected_element[variant];
+                                output_entry[property_id][variant] = selected_element[variant];
                             });    
                 }
 
-                if((block[property_id].length || Object.keys(block[property_id]).length) == 0) { 
+                if((output_entry[property_id].length || Object.keys(output_entry[property_id]).length) == 0) { 
                     filtered = true;
                     break;
                 }
@@ -242,11 +264,11 @@ function display_results() {
                 filtered = true;
                 break;
             } else {
-                block[property_id] = selected_element ?? property.default_value;
+                output_entry[property_id] = selected_element ?? property.default_value;
             }
         }
         if(!filtered) {
-            output_data.push(block);
+            output_data.push(output_entry);
         }
     })
 
@@ -365,13 +387,14 @@ function display_results() {
     // Table outputting
     output_data.forEach(entry => {
         var append_string = "<tr>";
-        var sprite = block_data.sprites[entry.block];
+        var sprite = data.sprites[entry[page]];
+        console.log(entry, sprite);
         append_string += `<td><span class="sprite" style="background-position:${sprite[0]}px ${sprite[1]}px"></span></td>`;
         for(var [property_name, value] of Object.entries(entry)) {
             if(typeof(value) == 'object') {
                 append_string += `<td class="nested-cell">${nested_table(value, property_name)}</td>`;
             } else {
-                append_string += formatted_cell(value ?? block_data.properties[property_name].default_value, property_name);
+                append_string += formatted_cell(value ?? data.properties[property_name].default_value, property_name);
             }
         };
         append_string += "</tr>";
@@ -410,12 +433,13 @@ function display_results() {
         let color;
         if(value*1==value){ 
             // color = block_data.conditional_formatting["!numeric"];
+
+            // Minimum in value is assumed to be 0
             function scale (number, inMax, outMin, outMax) {
-                return Math.round((number) * (outMax - outMin) / (inMax) + outMin);
+                return Math.round(100*((number) * (outMax - outMin) / (inMax) + outMin)) / 100;
             }
-            // not the greatest solution...
             value = value*1;
-            let max = block_data.properties[property_name].max ?? 17;
+            let max = data.properties[property_name].max ?? 17;
             let colorA = [152,110,208];
             let colorB = [164,221,255];
             if(value < max) {
@@ -424,8 +448,8 @@ function display_results() {
                 color = `rgb(${colorB[0]}, ${colorB[1]}, ${colorB[2]})`;
             }
         }
-        else if(value in block_data.conditional_formatting){
-            color = block_data.conditional_formatting[value]; 
+        else if(value in data.conditional_formatting){
+            color = data.conditional_formatting[value]; 
         }
         return "<td" + (color ? " style=\"background-color: " + color + "\">" : ">") + value + "</td>"; 
     }

@@ -3,6 +3,10 @@
 }
 body  { padding-top: 70px; }
 
+h2 {
+    font-size: 18px;
+}
+
 .select-option {
     margin: 5px 4px;
 }
@@ -70,6 +74,10 @@ li {
     background-color: #AED6C3 !important;
 }
 
+:root {
+    --sprite-url: url(BlockCSS.png);
+}
+
 .sprite {
     display: inline-block;
     vertical-align: text-top;
@@ -77,7 +85,7 @@ li {
     width: 16px;
     background-repeat: no-repeat;
     image-rendering: pixelated;
-    background-image:url(BlockCSS.png);
+    background-image: var(--sprite-url);
 }
 .display-none {
     display: none !important;

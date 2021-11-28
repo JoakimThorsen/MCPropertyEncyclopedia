@@ -20,7 +20,7 @@
 		"!default": "#FCE8B2",
 		"!numeric": "#D0EBFB"
 	},
-	"block_list": [
+	"key_list": [
 		"Activator Rail",
 		"Air",
 		"Amethyst Cluster",
