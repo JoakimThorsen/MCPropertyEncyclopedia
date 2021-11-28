@@ -1,7 +1,28 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }
-body  { padding-top: 70px; }
+body  { 
+    padding: 70px 0;
+    /* The image used */
+    background: url("assets/blockpropertythingy.png") no-repeat center center fixed; 
+    background-size: cover;
+}
+
+h1, h2 {
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+a {
+    color: #6bb4f3;
+}
+a:hover {
+    color: #4795d9;
+}
 
 .select-option {
     margin: 5px 4px;
@@ -15,6 +36,8 @@ body  { padding-top: 70px; }
     width: fit-content;
     align-items: center;
     margin: auto;
+    background-color: white;
+    filter: drop-shadow(0px 0px 4px gray);
 }
 #output_table>*>*>td, #output_table>*>*>*>*>*>*>td {
     padding: 4px 6px;
@@ -70,6 +93,10 @@ li {
     background-color: #AED6C3 !important;
 }
 
+:root {
+    --sprite-url: url(BlockCSS.png);
+}
+
 .sprite {
     display: inline-block;
     vertical-align: text-top;
@@ -77,7 +104,7 @@ li {
     width: 16px;
     background-repeat: no-repeat;
     image-rendering: pixelated;
-    background-image:url(BlockCSS.png);
+    background-image: var(--sprite-url);
 }
 .display-none {
     display: none !important;

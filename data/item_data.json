@@ -1,0 +1,17 @@
+{
+	"conditional_formatting": {
+		"Yes": "#B7E1CD",
+
+		"No": "#F4C7C3",
+		
+		"Not Applicable": "#CCC",
+
+		"!default": "#FCE8B2"
+	},
+	"key_list": [
+	],
+	"sprites": {
+	},
+	"properties": {
+	}
+}
