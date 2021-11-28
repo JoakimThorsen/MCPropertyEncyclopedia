@@ -14,10 +14,12 @@ function load_data(filename) {
         case "block":
             document.documentElement.style.setProperty('--sprite-url', 'url(BlockCSS.png)');
             entry_header = "Blocks";
+            break;
 
         case "entity":
             document.documentElement.style.setProperty('--sprite-url', 'url(EntityCSS.png)');
             entry_header = "Entities";
+            break;
 
         case "item":
             document.documentElement.style.setProperty('--sprite-url', 'url(ItemCSS.png)');
