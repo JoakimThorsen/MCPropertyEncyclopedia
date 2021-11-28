@@ -2,7 +2,7 @@
 	"conditional_formatting": {
 		"Yes": "cf-yes",
 		"Visually transparent": "cf-yes",
-    "Yes (unless in peaceful)": "cf-yes",
+		"Yes (Unless In Peaceful)": "cf-yes",
 
 		"No": "cf-no",
 		
