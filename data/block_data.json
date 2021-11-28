@@ -2,6 +2,7 @@
 	"conditional_formatting": {
 		"Yes": "#B7E1CD",
 		"Visually transparent": "#B7E1CD",
+		"Yes (unless in peaceful)": "#B7E1CD",
 
 		"No": "#F4C7C3",
 		
@@ -3029,6 +3030,35 @@
 				"Respawn Anchor": "Yes",
 				"Shulker Box": "Yes",
 				"Smoker": "Yes"
+			}
+		},
+		"survival_available": {
+			"property_name": "Survival available",
+			"default_value": "Yes",
+			"default_selection": false,
+			"entries":{
+				"Barrier": "No",
+				"Beacon": "Yes (unless in peaceful)",
+				"Bedrock": "unobtainable",
+				"Budding Amethyst": "unobtainable",
+				"Command Blocks": "No",
+				"Crying Obsidian": "Yes (unless in peaceful)",
+				"End Gateway": "unobtainable",
+				"End Portal Frame": "unobtainable",
+				"End Portal": "unobtainable",
+				"Heads": {
+					"Mob skulls": "Yes",
+					"Player heads": "No",
+				},
+				"Infested Blocks": "Yes (unless in peaceful)",
+				"Jigsaw Block": "No",
+				"Light Block": "No",
+				"Respawn Anchor": "Yes (unless in peaceful)",
+				"Shulker Box": "Yes (unless in peaceful)",
+				"Spawner": "unobtainable",
+				"Spore Blossom": "unobtainable",
+				"Structure Block": "No",
+				"Structure Void": "No",
 			}
 		},
 		"instrument": {
