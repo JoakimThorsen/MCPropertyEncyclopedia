@@ -32,6 +32,17 @@ a:hover {
     align-items: center;
 }
 
+/* Conditional formatting: */
+.cf-yes { background-color: #B7E1CD;}
+.cf-no { background-color: #F4C7C3;}
+.cf-neutral { background-color: #FCE8B2;}
+.cf-neutral-no { background-color: #F9D9B8;}
+
+.cf-invalid { background-color: #CCC;}
+
+/* .cf-numeric { background-color: #D0EBFB;} */
+
+
 #output_table {
     width: fit-content;
     align-items: center;
