@@ -1,25 +1,23 @@
 {
 	"conditional_formatting": {
-		"Yes": "#B7E1CD",
-		"Visually transparent": "#B7E1CD",
-		"Yes (unless in peaceful)": "#B7E1CD",
+		"Yes": "cf-yes",
+		"Visually transparent": "cf-yes",
+    "Yes (unless in peaceful)": "cf-yes",
 
-		"No": "#F4C7C3",
+		"No": "cf-no",
 		
-		"Not Applicable": "#CCC",
-		"∞": "#CCC",
-		"Unbreakable": "#CCC",
+		"Breaks": "cf-neutral",
+		"Fluid": "cf-neutral",
+		"Partially": "cf-neutral",
+		"With Gold": "cf-neutral",
+		"Inherent": "cf-neutral",
+    "Unobtainable": "cf-neutral"
 		
-		"Breaks": "#FCE8B2",
-		"Fluid": "#FCE8B2",
-		"Partially": "#FCE8B2",
-		"With Gold": "#FCE8B2",
-		"Inherent": "#FCE8B2",
-
-		"With Haste": "#F9D9B8",
+		"With Haste": "cf-neutral-no",
 		
-		"!default": "#FCE8B2",
-		"!numeric": "#D0EBFB"
+		"Not Applicable": "cf-invalid",
+		"∞": "cf-invalid",
+		"Unbreakable": "cf-invalid"
 	},
 	"key_list": [
 		"Activator Rail",
@@ -522,7 +520,7 @@
 	"properties": {
 		"variants": {
 			"property_name": "Variants",
-			"default_value": "Undefined",
+			"default_value": null,
 			"default_selection": true,
 			"entries": {
 				"Activator Rail": "Activator Rail",
@@ -887,11 +885,8 @@
 					"Single": "No",
 					"Double": "Yes"
 				},
-				"Slime Block": "Visually transparent",
 				"Small Dripleaf": "No",
 				"Snow": "No",
-				"Soul Sand": "No",
-				"Spawner": "Visually transparent",
 				"Spore Blossom": "No",
 				"Stained Glass": "No",
 				"Stained Glass Panes": "No",
@@ -951,7 +946,7 @@
 				"Chest": "Yes",
 				"Chorus Flower": "Yes",
 				"Chorus Plant": "Yes",
-				"Cobweb": "Yes",
+				"Cobweb": "No",
 				"Cocoa": "Yes",
 				"Composter": "Yes",
 				"Conduit": "Yes",
@@ -1013,7 +1008,10 @@
 				"Piston": "Yes",
 				"Pointed Dripstone": "Yes",
 				"Potatoes": "No",
-				"Powder Snow": "No",
+				"Powder Snow": {
+					"Top, with leather boots": "Yes",
+					"Sides and Bottom": "No"
+				},
 				"Powered Rail": "No",
 				"Pressure Plates": "No",
 				"Pumpkin Stem": "No",
@@ -1024,7 +1022,10 @@
 				"Redstone Torch": "No",
 				"Roots": "No",
 				"Saplings": "No",
-				"Scaffolding": "Yes",
+				"Scaffolding": {
+					"Top": "Yes",
+					"Sides and Bottom": "No"
+				},
 				"Sea Lantern": "Yes",
 				"Sea Pickle": "Yes",
 				"Seagrass": "No",
@@ -1121,8 +1122,8 @@
 				"Buttons": "Breaks",
 				"Cactus": "Breaks",
 				"Cake": "Breaks",
+				"Candles": "No",
 				"Campfire": "No",
-				"Carpets": "Breaks",
 				"Carrots": "Breaks",
 				"Cave Vines": "Breaks",
 				"Chest": "No",
@@ -1130,6 +1131,7 @@
 				"Chorus Plant": "Breaks",
 				"Cobweb": "Breaks",
 				"Cocoa": "Breaks",
+				"Conduit": "No",
 				"Command Blocks": "No",
 				"Crying Obsidian": "No",
 				"Daylight Detector": "No",
@@ -1178,7 +1180,10 @@
 				"Nether Sprouts": "Breaks",
 				"Nether Wart": "Breaks",
 				"Obsidian": "No",
-				"Piston": "No",
+				"Piston": {
+					"Extended": "No",
+					"Retracted": "Yes"
+				},
 				"Pointed Dripstone": {
 					"Normally": "Breaks",
 					"When Falling": "Yes"
@@ -1227,6 +1232,7 @@
 			"entries":{
 				"Air": "No",
 				"Amethyst Cluster": "No",
+				"Anvil": "No",
 				"Azalea": "No",
 				"Bamboo": "No",
 				"Banners": "No",
@@ -1245,6 +1251,7 @@
 				"Buttons": "No",
 				"Cactus": "No",
 				"Cake": "No",
+				"Candles": "No",
 				"Campfire": "No",
 				"Carpets": "No",
 				"Carrots": "No",
@@ -1302,7 +1309,10 @@
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Obsidian": "No",
-				"Piston": "No",
+				"Piston": {
+					"Extended": "No",
+					"Retracted": "Yes"
+				},
 				"Pointed Dripstone": "No",
 				"Potatoes": "No",
 				"Pressure Plates": "No",
@@ -1320,6 +1330,7 @@
 				"Seagrass": "No",
 				"Shulker Box": "No",
 				"Signs": "No",
+				"Slime Block": "Partially",
 				"Small Dripleaf": "No",
 				"Smoker": "No",
 				"Snow": "No",
@@ -1343,7 +1354,7 @@
 		},
 		"blast_resistance": { 
 			"property_name": "Blast Resistance",
-			"default_value": "Undefined",
+			"default_value": null,
 			"max": 10,
 			"default_selection": true,
 			"entries": {
@@ -1619,7 +1630,7 @@
 		},
 		"hardness": {
 			"property_name": "Hardness",
-			"default_value": "Unspecified",
+			"default_value": null,
 			"default_selection": false,
 			"entries":{
 				"Azalea": 0,
@@ -1896,7 +1907,7 @@
 		},
 		"instant_mineable": {
 			"property_name": "Instant-Mineable",
-			"default_value": "Unspecified",
+			"default_value": null,
 			"default_selection": true,
 			"entries": {
 				"Azalea": "Yes",
@@ -1953,7 +1964,7 @@
 				"Moss Block": "Yes",
 				"Moss Carpet": "Yes",
 				"Snow": "Yes",
-				"Beds": "Yes",
+				"Beds": "No",
 				"Cocoa": "Yes",
 				"Daylight Detector": "Yes",
 				"Glow Lichen": "Yes",
@@ -2464,6 +2475,10 @@
 					"Bottom": 3,
 					"Top": 16
 				},
+				"Powder Snow": {
+					"Top, with leather boots": 16,
+					"Sides and Bottom": "Not Applicable"
+				},
 				"Cactus": 15,
 				"Campfire": 7,
 				"Candles": 6,
@@ -2496,7 +2511,6 @@
 				"Corals": "Not Applicable",
 				"Detector Rail": "Not Applicable",
 				"Rail": "Not Applicable",
-				"Powder Snow": "Not Applicable",
 				"Air": "Not Applicable",
 				"Banners": "Not Applicable",
 				"Signs": "Not Applicable",
@@ -2599,7 +2613,6 @@
 				"Diorite": "Yes",
 				"Dirt": "Yes",
 				"Dispenser": "Yes",
-				"Doors": "Yes",
 				"Dried Kelp Block": "Yes",
 				"Dripstone Block": "Yes",
 				"Dropper": "Yes",
@@ -2647,8 +2660,8 @@
 				"Obsidian": "Yes",
 				"Packed Ice": "Yes",
 				"Piston": {
-					"Retracted": "Yes",
-					"Extended": "No"
+					"Extended": "No",
+					"Retracted": "Yes"
 				},
 				"Planks": "Yes",
 				"Podzol": "Yes",
@@ -3038,25 +3051,25 @@
 			"default_selection": false,
 			"entries":{
 				"Barrier": "No",
-				"Beacon": "Yes (unless in peaceful)",
-				"Bedrock": "unobtainable",
-				"Budding Amethyst": "unobtainable",
+				"Beacon": "Yes (Unless In Peaceful)",
+				"Bedrock": "Unobtainable",
+				"Budding Amethyst": "Unobtainable",
 				"Command Blocks": "No",
-				"Crying Obsidian": "Yes (unless in peaceful)",
-				"End Gateway": "unobtainable",
-				"End Portal Frame": "unobtainable",
-				"End Portal": "unobtainable",
+				"Crying Obsidian": "Yes (Unless In Peaceful)",
+				"End Gateway": "Unobtainable",
+				"End Portal Frame": "Unobtainable",
+				"End Portal": "Unobtainable",
 				"Heads": {
 					"Mob skulls": "Yes",
 					"Player heads": "No",
 				},
-				"Infested Blocks": "Yes (unless in peaceful)",
+				"Infested Blocks": "Yes (Unless In Peaceful)",
 				"Jigsaw Block": "No",
 				"Light Block": "No",
-				"Respawn Anchor": "Yes (unless in peaceful)",
-				"Shulker Box": "Yes (unless in peaceful)",
-				"Spawner": "unobtainable",
-				"Spore Blossom": "unobtainable",
+				"Respawn Anchor": "Yes (Unless In Peaceful)",
+				"Shulker Box": "Yes (Unless In Peaceful)",
+				"Spawner": "Unobtainable",
+				"Spore Blossom": "Unobtainable",
 				"Structure Block": "No",
 				"Structure Void": "No",
 			}
