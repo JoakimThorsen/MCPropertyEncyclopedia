@@ -11,7 +11,7 @@
 		"Partially": "cf-neutral",
 		"With Gold": "cf-neutral",
 		"Inherent": "cf-neutral",
-    "Unobtainable": "cf-neutral"
+		"Unobtainable": "cf-neutral",
 		
 		"With Haste": "cf-neutral-no",
 		
@@ -3061,7 +3061,7 @@
 				"End Portal": "Unobtainable",
 				"Heads": {
 					"Mob skulls": "Yes",
-					"Player heads": "No",
+					"Player heads": "No"
 				},
 				"Infested Blocks": "Yes (Unless In Peaceful)",
 				"Jigsaw Block": "No",
@@ -3071,7 +3071,7 @@
 				"Spawner": "Unobtainable",
 				"Spore Blossom": "Unobtainable",
 				"Structure Block": "No",
-				"Structure Void": "No",
+				"Structure Void": "No"
 			}
 		},
 		"instrument": {
