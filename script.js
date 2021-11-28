@@ -12,17 +12,17 @@ function load_data(filename) {
     page = document.body.dataset.page;
     switch(page) {
         case "block":
-            document.documentElement.style.setProperty('--sprite-url', 'url(BlockCSS.png)');
+            document.documentElement.style.setProperty('--sprite-url', 'url(assets/BlockCSS.png)');
             entry_header = "Blocks";
             break;
 
         case "entity":
-            document.documentElement.style.setProperty('--sprite-url', 'url(EntityCSS.png)');
+            document.documentElement.style.setProperty('--sprite-url', 'url(assets/EntityCSS.png)');
             entry_header = "Entities";
             break;
 
         case "item":
-            document.documentElement.style.setProperty('--sprite-url', 'url(ItemCSS.png)');
+            document.documentElement.style.setProperty('--sprite-url', 'url(assets/ItemCSS.png)');
             entry_header = "Items";
         
     }

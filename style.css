@@ -4,7 +4,7 @@
 body  { 
     padding: 70px 0;
     /* The image used */
-    background: url("blockpropertythingy.png") no-repeat center center fixed; 
+    background: url("assets/blockpropertythingy.png") no-repeat center center fixed; 
     background-size: cover;
 }
 
@@ -37,7 +37,7 @@ a:hover {
     align-items: center;
     margin: auto;
     background-color: white;
-    filter: drop-shadow(0px 0px 6px gray);
+    filter: drop-shadow(0px 0px 4px gray);
 }
 #output_table>*>*>td, #output_table>*>*>*>*>*>*>td {
     padding: 4px 6px;
