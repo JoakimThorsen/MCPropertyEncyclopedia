@@ -2791,7 +2791,7 @@
 		},
 		"waterloggable": {
 			"property_name": "Waterloggable",
-			"default_value": "Yes",
+			"default_value": "No",
 			"default_selection": false,
 			"entries":{
 				"Activator Rail": "Yes",
