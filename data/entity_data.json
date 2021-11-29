@@ -1,12 +1,10 @@
 {
 	"conditional_formatting": {
-		"Yes": "#B7E1CD",
+		"Yes": "cf-yes",
 
-		"No": "#F4C7C3",
+		"No": "cf-no",
 		
-		"Not Applicable": "#CCC",
-
-		"!default": "#FCE8B2"
+		"Not Applicable": "cf-invalid"
 	},
 	"key_list": [
 		"Area Effect Cloud",
