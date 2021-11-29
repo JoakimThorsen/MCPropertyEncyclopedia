@@ -286,14 +286,6 @@ function display_results() {
         }
     })
 
-    // function filterBy(list, criteria) {
-    //     return list.filter(candidate =>
-    //         Object.keys(criteria).every(key =>
-    //             !criteria[key].includes(candidate[key])
-    //         )
-    //     );
-    // }    
-    
     // output_data = filterBy(output_data, filter_obj);
 
     function deepCopy(obj) {
@@ -402,7 +394,7 @@ function display_results() {
     output_data.forEach(entry => {
         var append_string = "<tr>";
         var sprite = data.sprites[entry[page]];
-        append_string += `<td><span class="sprite" style="background-position:${sprite[0]}px ${sprite[1]}px"></span></td>`;
+        append_string += `<td><span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span></td>`;
         for(var [property_name, value] of Object.entries(entry)) {
             if(typeof(value) == 'object') {
                 append_string += `<td class="nested-cell">${nested_table(value, property_name)}</td>`;
