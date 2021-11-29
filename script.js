@@ -7,9 +7,7 @@ var filter_obj = JSON.parse(urlParams.get("filter")) ?? {};
 var sort_arr = JSON.parse(urlParams.get("sort")) ?? [];
 var selection_arr = JSON.parse(urlParams.get("selection")) ?? [];
 
-var page;
-var entry_header;
-var exportable_list
+var page, entry_header, exportable_list;
 
 function load_data(filename) {
     page = document.body.dataset.page;
@@ -97,11 +95,11 @@ function display_headers_and_table() {
         });
     }
     
-
+    
     // Table headers
-    $('#output_table').children('thead').children('tr').append(`<th></th><th><div class=\" dropdown\"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">${entry_header}<span class="icons">
-    <i class="fas fa-sort-amount-down-alt${sort_arr.some(e => e.property === page) && !sort_arr.filter(e => e.property === page)[0].reversed ? '':' display-none'} sorted"></i>
-    <i class="fas fa-sort-amount-up${sort_arr.some(e => e.property === page) && sort_arr.filter(e => e.property === page)[0].reversed ? '':' display-none'} sorted-reverse"></i>
+    $('#output_table').children('thead').children('tr').append(`<th></th><th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">${entry_header}<span class="icons">
+        <i class="fas fa-sort-amount-down-alt${sort_arr.some(e => e.property === page) && !sort_arr.filter(e => e.property === page)[0].reversed ? '':' display-none'} sorted"></i>
+        <i class="fas fa-sort-amount-up${sort_arr.some(e => e.property === page) && sort_arr.filter(e => e.property === page)[0].reversed ? '':' display-none'} sorted-reverse"></i>
     <span class="glyphicon glyphicon-triangle-bottom"></span>
     </span></a><ul class="dropdown-menu"><li>
     <div class="text-center">
@@ -118,6 +116,17 @@ function display_headers_and_table() {
     </a>
     </div>
     </li></ul></div></th>`);
+
+    $('.export-csv').click(function (e) {
+        var encodedUri = encodeURI("data:text/csv;charset=utf-8," + exportable_list.join('\n'));
+        var link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", page+"list.csv");
+        document.body.appendChild(link); // Required for FF
+
+        link.click();
+    });
+    
     Object.keys(data.properties).filter(e => selection_arr.includes(e)).forEach(property => {
         append_data = "";
         
@@ -153,7 +162,11 @@ function display_headers_and_table() {
                 </li>`;
 
         value_list[property].sort().reverse().sort((a, b) => (a - b)).forEach(option => {
-            append_data += `<li><a role="button" class="dropdown-option modify-filter" property="${property}" value="${option}">${option}
+            var color = formatting_color(option, property, true);
+            append_data += `<li>
+                    <a role="button" class="dropdown-option modify-filter" property="${property}" value="${option}">
+                    <span class="dot ${color ? color : 'display-none'}"></span>
+                    <span class="justify-start">${option}</span>
                     <span class="glyphicon glyphicon-ok${filter_obj[property] !== undefined && filter_obj[property].includes(option) ? ' display-none':''}">
                     </span></a></li>`
         });
@@ -170,7 +183,7 @@ function display_headers_and_table() {
         var property = $(this).attr("property");
         var value = $(this).attr("value");
         
-        $(this).children().toggleClass("display-none")
+        $(this).children().last().toggleClass("display-none")
         
         // Convert to double if applicable
         value = (value*1 == value) ? value*1 : value;
@@ -227,7 +240,6 @@ function display_headers_and_table() {
 
     $('.toggle-select-all').click(function (e) {
         e.stopPropagation();
-        page = $(this);
 
         var property = $(this).attr("property");
 
@@ -242,15 +254,7 @@ function display_headers_and_table() {
         update_window_history();
         display_results();
     });
-    $('.export-csv').click(function (e) {
-        var encodedUri = encodeURI("data:text/csv;charset=utf-8," + exportable_list.join('\n'));
-        var link = document.createElement("a");
-        link.setAttribute("href", encodedUri);
-        link.setAttribute("download", page+"list.csv");
-        document.body.appendChild(link); // Required for FF
-
-        link.click();
-    });
+    
 }
 
 // Displays all the table data
@@ -300,6 +304,9 @@ function display_results() {
 
     // For exporting as CSV:
     exportable_list = output_data.map(entry => entry[page] );
+
+    // // For top left entry count:
+    // $('#entry_count').html(output_data.length.toString());
 
     function deepCopy(obj) {
         if(Array.isArray(obj)) {
@@ -412,7 +419,7 @@ function display_results() {
             if(typeof(value) == 'object') {
                 append_string += `<td class="nested-cell">${nested_table(value, property_name)}</td>`;
             } else {
-                append_string += formatted_cell(value ?? data.properties[property_name].default_value, property_name);
+                append_string += `<td ${formatting_color(value ?? data.properties[property_name].default_value, property_name)}>${value}</td>`;
             }
         };
         append_string += "</tr>";
@@ -436,47 +443,56 @@ function display_results() {
         }
         if(Array.isArray(entry)) {
             entry.forEach(value => {
-                return_data += "<tr>" + formatted_cell(value, property_name) + "</tr>";
+                return_data += `<tr><td ${formatting_color(value, property_name)}>${value}</td></tr>`;
             });
         } else {
             Object.keys(entry).forEach(key => {
-                return_data += "<tr><td>" + key + "</td>" + formatted_cell(entry[key], property_name) + "</tr>";
+                return_data += `<tr><td>${key}</td><td ${formatting_color(entry[key], property_name)}>${entry[key]}</td></tr>`;
             });
         }
         return_data += "</tbody></table>";
         return return_data;
     }
 
-    function formatted_cell(value, property_name) {
-        let color = "";
-        if(value*1==value){ 
-            // color = block_data.conditional_formatting["!numeric"];
+}
+function formatting_color(value, property_name, class_exists = false) {
+    let color = "";
+    if(value*1==value){
+        // color = block_data.conditional_formatting["!numeric"];
 
-            // Minimum in value is assumed to be 0
-            function scale (number, inMax, outMin, outMax) {
-                return Math.round(100*((number) * (outMax - outMin) / (inMax) + outMin)) / 100;
-            }
-            value = value*1;
-            let max = data.properties[property_name].max ?? 17;
-            let colorA = [152,110,208];
-            let colorB = [164,221,255];
-            if(value < max) {
-                color = `style="background-color: rgb(${scale(value, max, colorA[0], colorB[0])},${scale(value, max, colorA[1], colorB[1])},${scale(value, max, colorA[2], colorB[2])})!important"`
-            } else {
-                color = `style="background-color: rgb(${colorB[0]}, ${colorB[1]}, ${colorB[2]})"`;
-            }
-        } else if(value in data.conditional_formatting) {
-            color = `class="${data.conditional_formatting[value]}"`; 
+        // Minimum in value is assumed to be 0
+        function scale(number, inMax, outMin, outMax) {
+            return Math.round(100*((number) * (outMax - outMin) / (inMax) + outMin)) / 100;
         }
-        return `<td ${color}>${value}</td>`; 
+        value = value*1;
+        let max = data.properties[property_name].max ?? 17;
+        let colorA = [152,110,208];
+        let colorB = [164,221,255];
+        if(value < max) {
+            color = `style="background-color: rgb(${scale(value, max, colorA[0], colorB[0])},${scale(value, max, colorA[1], colorB[1])},${scale(value, max, colorA[2], colorB[2])})!important"`
+        } else {
+            color = `style="background-color: rgb(${colorB[0]}, ${colorB[1]}, ${colorB[2]})"`;
+        }
+        if(class_exists) {
+            color = '"' + color;
+        }
+
+    } else if(value in data.conditional_formatting) {
+        color = data.conditional_formatting[value];
+        if(!class_exists) {
+            color = `class="${color}"`;
+        }
     }
+    return color;
 }
 
 function update_window_history() {
-    var url = '';
+    var url = "";
     if(Object.keys(filter_obj).length > 0) url += "&filter=" + JSON.stringify(filter_obj);
     if(sort_arr.length > 0) url += "&sort=" + JSON.stringify(sort_arr);
     if(selection_arr.length > 0) url += "&selection=" + JSON.stringify(selection_arr);
+
     url = window.location.origin + window.location.pathname + '?' + url.substr(1);
+
     window.history.pushState("", "", url);
 }

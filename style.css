@@ -36,12 +36,12 @@ a:hover {
 }
 
 /* Conditional formatting: */
-.cf-yes { background-color: #B7E1CD;}
-.cf-no { background-color: #F4C7C3;}
-.cf-neutral { background-color: #FCE8B2;}
-.cf-neutral-no { background-color: #F9D9B8;}
+.cf-yes { background-color: #B7E1CD !important;}
+.cf-no { background-color: #F4C7C3 !important;}
+.cf-neutral { background-color: #FCE8B2 !important;}
+.cf-neutral-no { background-color: #F9D9B8 !important;}
 
-.cf-invalid { background-color: #CCC;}
+.cf-invalid { background-color: #CCC !important;}
 
 /* .cf-numeric { background-color: #D0EBFB;} */
 
@@ -68,6 +68,7 @@ li {
     color: black;
     cursor: pointer;
     margin: 0 auto;
+    padding: 6px 8px;
     height: 100%;
     /* cursor: progress; */
 }
@@ -83,7 +84,7 @@ li {
     display: flex !important;
     justify-content: space-between;
 }
-.dropdown-option>span, .icons {
+.dropdown-option>.glyphicon-ok, .icons {
     margin-left: 10px;
 }
 .modify-filter {   
@@ -105,6 +106,15 @@ li {
 }
 .selected:hover {
     background-color: #AED6C3 !important;
+}
+
+.dot {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -2px;
+    margin-right: 3px;
 }
 
 .sprite {
@@ -142,8 +152,8 @@ li {
 th {
     background-color: #f5f5f5;
     border-bottom-width: 0 !important;
-    box-shadow: inset 0 0px 0 #AAA,
-    inset 0 -1px 0 #AAA;
+    box-shadow: inset 0 -1px 0 #AAA;
+    padding: 2px 0 !important;
     position: sticky;
     top: 0;
     /* z-index: 2; */
