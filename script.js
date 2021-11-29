@@ -1,12 +1,15 @@
 
 var data;
 var value_list = {};
+
 urlParams = new URLSearchParams(window.location.search);
 var filter_obj = JSON.parse(urlParams.get("filter")) ?? {};
 var sort_arr = JSON.parse(urlParams.get("sort")) ?? [];
 var selection_arr = JSON.parse(urlParams.get("selection")) ?? [];
+
 var page;
 var entry_header;
+var exportable_list
 
 function load_data(filename) {
     page = document.body.dataset.page;
@@ -109,10 +112,10 @@ function display_headers_and_table() {
         <a role="button" class="btn dropdown-btn btn-default modify-sorting${(sort_arr.some(e => e.property === page) && sort_arr.filter(e => e.property === page)[0].reversed) ? ' active' : ''}" property=${page} reversed="true">
             <i class="fas fa-sort-amount-up"></i>
         </a>
-        <a role="button" class="btn dropdown-btn btn-default toggle-select-all" property="${page}">
-            <i class="far fa-check-square"></i>
-        </a>
     </span>
+    <a role="button" class="btn dropdown-btn btn-default export-csv">
+        <i class="fas fa-file-export"></i>Export CSV
+    </a>
     </div>
     </li></ul></div></th>`);
     Object.keys(data.properties).filter(e => selection_arr.includes(e)).forEach(property => {
@@ -239,6 +242,15 @@ function display_headers_and_table() {
         update_window_history();
         display_results();
     });
+    $('.export-csv').click(function (e) {
+        var encodedUri = encodeURI("data:text/csv;charset=utf-8," + exportable_list.join('\n'));
+        var link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", page+"list.csv");
+        document.body.appendChild(link); // Required for FF
+
+        link.click();
+    });
 }
 
 // Displays all the table data
@@ -286,7 +298,8 @@ function display_results() {
         }
     })
 
-    // output_data = filterBy(output_data, filter_obj);
+    // For exporting as CSV:
+    exportable_list = output_data.map(entry => entry[page] );
 
     function deepCopy(obj) {
         if(Array.isArray(obj)) {
