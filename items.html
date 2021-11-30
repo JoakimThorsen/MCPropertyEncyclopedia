@@ -2,7 +2,8 @@
 <html lang="no" dir="ltr">
 <head>
 <meta charset="utf-8">
-<title>Item Property Thingy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Item property thingy</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 <script src="https://kit.fontawesome.com/92330e144e.js" crossorigin="anonymous"></script>
@@ -17,23 +18,57 @@
 </head>
 <body data-page="item" onload="load_data('data/item_data.json')">
 
-<div class="text-center">
-    <h1 class="text-center" style="font-size: 40px;">Minecraft Item Property Encyclopedia</h1>
-    <h2>Actively being made by @JoaBro#6761, info is accurate as of 1.17.1.<br>This is an open source project: Check out the <a href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia">Github Page</a>.<br>Any suggestions and/or pull requests are of course welcome</h2>
-    <div class="btn-group">
-        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-            Property Selection <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" id="selection">
-            
-        </ul>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </div>
 
-    <div class="reset-buttons">
-        <button class="btn" type="button" onclick="selection_arr = []; update_window_history();display_selection(); display_headers_and_table();">Reset selection</button>
-        <button class="btn" type="button" onclick="sort_arr = []; update_window_history(); display_headers_and_table();">Reset sorting</button>
-        <button class="btn" type="button" onclick="filter_obj = {}; update_window_history(); display_headers_and_table();">Reset filters</button>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a class="navbar-item" href="index.html">Items</a></li>
+          <li role="separator" class="vertical-divider hidden-xs"></li>
+          <li><a class="navbar-item" href="entities.html">Entities</a></li>
+          <li role="separator" class="vertical-divider hidden-xs"></li>
+          <li><a class="navbar-item" href="items.html">Items</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li role="separator" class="horizontal-divider visible-xs"></li>
+            <li><a class="navbar-item" href="">About</a></li>
+            <li role="separator" class="vertical-divider hidden-xs"></li>
+          <li><a class="navbar-item" href="">Contributing</a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid text-center" id="main-body">
+  <div class="col-md-2 col-lg-3"></div>
+  <div class="col-md-8 col-lg-6">
+    <h1 class="text-center" style="font-size: 40px;">Minecraft Item Property Encyclopedia</h1>
+    <h2 class="display-none">Actively being made by @JoaBro#6761, info is accurate as of 1.17.1.<br>This is an open source project: Check out the <a href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia">Github Page</a>.<br>Any suggestions and/or pull requests are of course welcome</h2>
+    <div class="btn-group">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+          Property Selection <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" id="selection">
+          
+      </ul>
+      </div>
+      <div class="reset-buttons">
+      <button class="btn" type="button" onclick="selection_arr = []; update_window_history();display_selection(); display_headers_and_table();">Reset selection</button>
+      <button class="btn" type="button" onclick="sort_arr = []; update_window_history(); display_headers_and_table();">Reset sorting</button>
+      <button class="btn" type="button" onclick="filter_obj = {}; update_window_history(); display_headers_and_table();">Reset filters</button>
+      </div> 
     </div>
+  <div class="col-md-2 col-lg-3"></div>
+  <div class="col-sm-12">
     <div class="results">
         <table class="table table-bordered table-hover text-left" id="output_table">
             <thead>
@@ -44,5 +79,6 @@
             </tbody>
         </table>
     </div>
+  </div>
 </div>
 </body>
