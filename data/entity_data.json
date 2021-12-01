@@ -895,7 +895,7 @@
 		"Enderman": 40,
 		"Endermite": 8,
 		"Evoker": 24,
-		"Evoker Fangs": ,
+		"Evoker Fangs": "Not Applicable",
 		"Experience Orb": 5,
 		"Eye of Ender": "Not Applicable",
 		"Falling Block": "Not Applicable",
@@ -963,7 +963,7 @@
 			"Medium (2)": 4,
 			"Big (4)": 16
 		},
-		"Small Fireball": ,
+		"Small Fireball": "Not Applicable",
 		"Snow Golem": 4,
 		"Snowball": "Not Applicable",
 		"Spectral Arrow": "Not Applicable",
