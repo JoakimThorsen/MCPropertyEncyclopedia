@@ -867,8 +867,8 @@
 		},
 	"properties": {
 		"health": {
-			"property_name": "Health": ,
-			"default_value": "Undefined": ,
+			"property_name": "Health",
+			"default_value": "Undefined",
 			"default_selection": true,
 			"entries": {
 		"Area Effect Cloud": "Not Applicable",
@@ -878,7 +878,7 @@
 		"Bat": 6,
 		"Bee": 10,
 		"Blaze": 20,
-		"Boat": ,
+		"Boat": "Not Applicable",
 		"Cat": 10,
 		"Cave Spider": 12,
 		"Chicken": 4,
@@ -890,7 +890,7 @@
 		"Dragon Fireball": "Not Applicable",
 		"Drowned": 20,
 		"Elder Guardian": 80,
-		"End Crystal": ,
+		"End Crystal": "Not Applicable",
 		"Ender Dragon": 200,
 		"Enderman": 40,
 		"Endermite": 8,
@@ -947,7 +947,7 @@
 		"Piglin Brute": 50,
 		"Pillager": 24,
 		"Polar Bear": 30,
-		"Primed TNT": ,
+		"Primed TNT": "Not Applicable",
 		"Pufferfish": 3,
 		"Rabbit": 3,
 		"Ravager": 100,
@@ -997,9 +997,9 @@
 		"Zombie Villager": 20,
 		"Zombified Piglin": 20,
 		"Player": 20,
-		"Fishing Bobber": "Not Applicable"
-		
+		"Fishing Bobber": "Not Applicable"	
+				}
 			}
 		}
-	}
+        }
 }
