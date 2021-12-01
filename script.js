@@ -144,7 +144,7 @@ function display_headers_and_table() {
                 <i class="fas fa-sort-amount-down-alt${sorted == 1 ? '':' display-none'} sorted"></i>
                 <i class="fas fa-sort-amount-up${sorted == -1 ? '':' display-none'} sorted-reverse"></i>
                 <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </span></a><ul class="dropdown-menu">
+                </span></a><ul class="dropdown-menu scrollable">
                 <li>
                 <div class="text-center">
                 <span class="btn-group dropdown-btn-group" role="group">

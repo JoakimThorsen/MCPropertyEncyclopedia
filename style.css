@@ -131,6 +131,10 @@ li {
 .justify-start {
     margin-right: auto;
 }
+.scrollable {
+    max-height: 60vh;
+    overflow-y: auto;
+}
 .dropdown-option {
     display: flex !important;
     justify-content: space-between;
