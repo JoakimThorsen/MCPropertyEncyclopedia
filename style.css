@@ -33,6 +33,12 @@ body  {
     font-weight: 500;
     font-size: 20px;
 }
+.navbar-disabled {
+    color: lightsteelblue !important;
+    text-shadow: 1px 1px 5px black;
+    font-weight: 500;
+    font-size: 20px;
+}
 .vertical-divider {
     height: 40px;
     width: 2px;
@@ -45,12 +51,13 @@ body  {
     margin: 9px 0;
     overflow: hidden;
     background-color: white;
+    box-shadow: 2px 2px 2px black;
 }
 
 
 h1, h2 {
     color: white;
-    text-shadow: 1px 1px 5px black;
+    text-shadow: 2px 2px 2px black;
 }
 
 h2 {
@@ -236,5 +243,16 @@ td .nested-table {
 .reset-buttons {
     margin: 3px;
 }
+.row{clear:both}
 
+.column{
+    width: 50%;
+    float: left;
+}
+.light-hyperlink {
+    color: lightskyblue !important;
+    text-shadow: 2px 2px 2px black;
+    font-weight: 500;
+    font-size: 30px;
+}
 
