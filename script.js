@@ -366,15 +366,22 @@ function display_results() {
                     split(val, [], property);
 
                     function split(row, path, property) {
+                        // console.log(JSON.stringify(row),JSON.stringify(path),JSON.stringify(property));
+                        // console.log(JSON.stringify(property));
                         var row_copy = deepCopy(row);
                         
-                        if (typeof pointer[property] == 'object') {
-                            var pointer = row_copy;
-                            path.forEach(key => {
-                                pointer = pointer[key];
-                            });
+                        var pointer = row_copy;
+                        path.forEach(key => {
+                            // console.log(pointer,key);
+                            pointer = pointer[key];
+                        });
 
+                        if (typeof pointer[property] == 'object') {
                             if(Array.isArray(pointer[property])) {
+                                // pointer[property].forEach(value => {
+                                //     pointer[property] = [value];
+                                //     split(row_copy, path.concat(property), value);
+                                // });
                                 var pointer_copy = deepCopy(pointer);
                                 for (let i = 0; i < pointer_copy[property].length; i++) {
                                     pointer[property] = [ pointer_copy[property][i] ];
@@ -382,6 +389,7 @@ function display_results() {
                                 }
                                 
                             } else {
+                                // console.log(JSON.stringify(pointer[property]));
                                 for(let [ key, value ] of Object.entries(pointer[property])) {
                                     pointer[property] = { [key]: value };
                                     split(row_copy, path.concat(property), key);
@@ -394,7 +402,7 @@ function display_results() {
                 });
                 split_elements = split_element_next;
             });
-            split_data.push(split_elements);
+            split_data.push(...split_elements);
         }); 
 
         console.log(split_data);
