@@ -366,22 +366,15 @@ function display_results() {
                     split(val, [], property);
 
                     function split(row, path, property) {
-                        // console.log(JSON.stringify(row),JSON.stringify(path),JSON.stringify(property));
-                        // console.log(JSON.stringify(property));
                         var row_copy = deepCopy(row);
                         
                         var pointer = row_copy;
                         path.forEach(key => {
-                            // console.log(pointer,key);
                             pointer = pointer[key];
                         });
 
                         if (typeof pointer[property] == 'object') {
                             if(Array.isArray(pointer[property])) {
-                                // pointer[property].forEach(value => {
-                                //     pointer[property] = [value];
-                                //     split(row_copy, path.concat(property), value);
-                                // });
                                 var pointer_copy = deepCopy(pointer);
                                 for (let i = 0; i < pointer_copy[property].length; i++) {
                                     pointer[property] = [ pointer_copy[property][i] ];
@@ -389,7 +382,6 @@ function display_results() {
                                 }
                                 
                             } else {
-                                // console.log(JSON.stringify(pointer[property]));
                                 for(let [ key, value ] of Object.entries(pointer[property])) {
                                     pointer[property] = { [key]: value };
                                     split(row_copy, path.concat(property), key);
@@ -455,18 +447,22 @@ function display_results() {
         $('#output_table').children('tbody').append(append_string);
     });
     
-    function get_data_cell(entry, property_name) {
+    function get_data_cell(entry, property_name, top_level = true) {
         var return_data;
         if(typeof(entry) == 'object' && entry != null) {
-            return_data = `<td class="nested-cell"><table class=\"table table-bordered table-hover nested-table\"><tbody>`;
+            if(top_level && ((entry.length || Object.values(entry).length) > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2)) {
+                return_data = `<td class="nested-cell"><button class="btn expand-btn" type="button" data-toggle="collapse-next">Expand</button>\n<table class="table table-bordered table-hover nested-table collapse"><tbody>`;
+            } else {
+                return_data = `<td class="nested-cell"><table class="table table-bordered table-hover nested-table"><tbody>`;
+            }
             
             if(Array.isArray(entry)) {
                 entry.forEach(value => {
-                    return_data += `<tr>${get_data_cell(value, property_name)}</tr>`;
+                    return_data += `<tr>${get_data_cell(value, property_name, false)}</tr>`;
                 });
             } else {
                 Object.keys(entry).forEach(key => {
-                    return_data += `<tr><td>${key}</td>${get_data_cell(entry[key], property_name)}</tr>`;
+                    return_data += `<tr><td>${key}</td>${get_data_cell(entry[key], property_name, false)}</tr>`;
                 });
             }
             return_data += "</tbody></table></td>";
