@@ -270,42 +270,58 @@ function display_results() {
         var filtered = false;
         for(var [property_id, property] of Object.entries(data.properties).filter(([e, _]) => selection_arr.includes(e))) {
             var selected_element = property.entries[entry];
+            
+            function pivot_element(input_element) {
+                if(typeof input_element == 'object') {
+                    if(Array.isArray(input_element)) {
+                        var output_arr = [];
 
-            if(typeof selected_element == 'object' & Object.keys(filter_obj).includes(property_id)) {
-                if(Array.isArray(selected_element)) {
-                    output_entry[property_id] = [];
-                    selected_element.filter(value => !filter_obj[property_id].includes(value))
-                            .forEach(element => {
-                                output_entry[property_id].push(element);
-                            });
+                        input_element.forEach(element => {
+                            var value = pivot_element(element);
+                            if(value != undefined) {
+                                output_arr.push(value);
+                            }
+                        });
+                        if(output_arr.length == 0) {
+                            return;
+                        }
+                        return output_arr;
+                    } else {
+                        var output_obj = {};
+                        Object.keys(input_element).forEach(variant => {
+                            var value = pivot_element(input_element[variant]);
+                            if(value != undefined) {
+                                output_obj[variant] = pivot_element(input_element[variant]);
+                            }
+                        });
+                        if(Object.keys(output_obj).length == 0) { 
+                            return;
+                        }
+                        return output_obj;
+                    }
+                } else if ((filter_obj[property_id] || []).includes(input_element ?? property.default_value)){
+                    return;
                 } else {
-                    output_entry[property_id] = {};
-                    Object.keys(selected_element).filter(variant => !filter_obj[property_id].includes(selected_element[variant]))
-                            .forEach(variant => {
-                                output_entry[property_id][variant] = selected_element[variant];
-                            });    
+                    return input_element ?? property.default_value;
                 }
-
-                if((output_entry[property_id].length || Object.keys(output_entry[property_id]).length) == 0) { 
-                    filtered = true;
-                    break;
-                }
-            } else if ((filter_obj[property_id] || []).includes(selected_element ?? property.default_value)){
-                filtered = true;
-                break;
-            } else {
-                output_entry[property_id] = selected_element ?? property.default_value;
             }
+            
+            output_entry[property_id] = pivot_element(selected_element);
+            
+            if(output_entry[property_id] == undefined) {
+                filtered = true;
+            }
+
         }
         if(!filtered) {
             output_data.push(output_entry);
         }
-    })
+    });
 
     // For exporting as CSV:
     exportable_list = output_data.map(entry => entry[page] );
 
-    // // For top left entry count:
+    // // For entry count:
     // $('#entry_count').html(output_data.length.toString());
 
     function deepCopy(obj) {
@@ -346,32 +362,42 @@ function display_results() {
                 
                 // Loop trough all currently split elements
                 split_elements.forEach(val => {
-                    let picked_element = val[property];
-                    if (typeof picked_element == 'object') {
-                        if(Array.isArray(picked_element)) {
-                            picked_element.forEach(value => {
-                                let val_copy = deepCopy(val);
-                                val_copy[property] = [value];
-                                split_element_next.push(val_copy);
-                            });
+                    
+                    split(val, [], property);
 
-                        } else {
-                            for(let [ key, value ] of Object.entries(picked_element)) {
-                                let val_copy = deepCopy(val);
-                                val_copy[property] = { [key]: value };
-                                split_element_next.push(val_copy);
+                    function split(row, path, property) {
+                        var row_copy = deepCopy(row);
+                        
+                        var pointer = row_copy;
+                        path.forEach(key => {
+                            pointer = pointer[key];
+                        });
+
+                        if (typeof pointer[property] == 'object') {
+                            if(Array.isArray(pointer[property])) {
+                                var pointer_copy = deepCopy(pointer);
+                                for (let i = 0; i < pointer_copy[property].length; i++) {
+                                    pointer[property] = [ pointer_copy[property][i] ];
+                                    split(row_copy, path.concat(property), i);
+                                }
+                                
+                            } else {
+                                for(let [ key, value ] of Object.entries(pointer[property])) {
+                                    pointer[property] = { [key]: value };
+                                    split(row_copy, path.concat(property), key);
+                                }
                             }
+                        } else {
+                            split_element_next.push(row_copy);
                         }
-                    } else {
-                        split_element_next.push(deepCopy(val));
                     }
                 });
-                
                 split_elements = split_element_next;
             });
-            
-            split_data = split_data.concat(split_elements);
+            split_data.push(...split_elements);
         }); 
+
+        console.log(split_data);
 
         // Sort 
         sort_properties.reverse().forEach(property_entry => {
@@ -381,17 +407,16 @@ function display_results() {
                 let val_0 = (reversed ? b:a)[property];
                 let val_1 = (reversed ? a:b)[property];
                 
-                if (typeof val_0 == 'object') {
-                    for (let prop in val_0) {
-                        val_0 = val_0[prop];
-                        break;
-                    }
-                }
+                val_0 = get_value(val_0);
+                val_1 = get_value(val_1);
                 
-                if (typeof val_1 == 'object') {
-                    for (let prop in val_1) {
-                        val_1 = val_1[prop];
-                        break;
+                function get_value(value) {
+                    if (typeof value == 'object') {
+                        for (let prop in value) {
+                            return get_value(value[prop]);
+                        }
+                    } else {
+                        return value;
                     }
                 }
                 
@@ -416,16 +441,38 @@ function display_results() {
         var sprite = data.sprites[entry[page]];
         append_string += `<td><span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span></td>`;
         for(var [property_name, value] of Object.entries(entry)) {
-            if(typeof(value) == 'object') {
-                append_string += `<td class="nested-cell">${nested_table(value, property_name)}</td>`;
-            } else {
-                append_string += `<td ${formatting_color(value ?? data.properties[property_name].default_value, property_name)}>${value}</td>`;
-            }
+            append_string += get_data_cell(value, property_name);
         };
         append_string += "</tr>";
         $('#output_table').children('tbody').append(append_string);
     });
     
+    function get_data_cell(entry, property_name, top_level = true) {
+        var return_data;
+        if(typeof(entry) == 'object' && entry != null) {
+            if(top_level && ((entry.length || Object.values(entry).length) > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2)) {
+                return_data = `<td class="nested-cell"><button class="btn expand-btn" type="button" data-toggle="collapse-next">Expand</button>\n<table class="table table-bordered table-hover nested-table collapse"><tbody>`;
+            } else {
+                return_data = `<td class="nested-cell"><table class="table table-bordered table-hover nested-table"><tbody>`;
+            }
+            
+            if(Array.isArray(entry)) {
+                entry.forEach(value => {
+                    return_data += `<tr>${get_data_cell(value, property_name, false)}</tr>`;
+                });
+            } else {
+                Object.keys(entry).forEach(key => {
+                    return_data += `<tr><td>${key}</td>${get_data_cell(entry[key], property_name, false)}</tr>`;
+                });
+            }
+            return_data += "</tbody></table></td>";
+
+        } else {
+            return_data = `<td ${formatting_color(entry, property_name)}>${entry}</td>`;
+        }
+        return return_data;
+    }
+
     // Toggle functionality of 'Expand' buttons
     $('body').off('click.collapse-next.data-api');
     $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (_e) {
@@ -434,25 +481,6 @@ function display_results() {
         // $target.toggle("toggle"); // With toggle animation/delay
         $target.toggle(); // No toggle animation/delay
     });
-
-    function nested_table(entry, property_name) {
-        if((entry.length || Object.values(entry).length) > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2) {
-            return_data = "<button class=\"btn expand-btn\" type=\"button\" data-toggle=\"collapse-next\">Expand</button>\n<table class=\"table table-bordered table-hover nested-table collapse\"><tbody>";
-        } else {
-            return_data = "<table class=\"table table-bordered table-hover nested-table\"><tbody>";
-        }
-        if(Array.isArray(entry)) {
-            entry.forEach(value => {
-                return_data += `<tr><td ${formatting_color(value, property_name)}>${value}</td></tr>`;
-            });
-        } else {
-            Object.keys(entry).forEach(key => {
-                return_data += `<tr><td>${key}</td><td ${formatting_color(entry[key], property_name)}>${entry[key]}</td></tr>`;
-            });
-        }
-        return_data += "</tbody></table>";
-        return return_data;
-    }
 
 }
 function formatting_color(value, property_name, class_exists = false) {
