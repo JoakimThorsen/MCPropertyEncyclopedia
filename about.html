@@ -1,23 +1,19 @@
-<!DOCTYPE html>
-<html lang="no" dir="ltr">
-<head>
+<html dir="ltr" lang="no"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Block property thingy</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-<script src="https://kit.fontawesome.com/92330e144e.js" crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.min.js" integrity="sha512-bkRnY+Yd8OOKaLeSQ4ywl+eeJKIbJ5TtBvyWwM2OnsV1qeIZb2yi7E4h2P6XVcAMz3ldrTKAXk/lC5vvZnDkZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 
-</style>
-</head>
-<body data-page="block" onload="load_data('data/block_data.json')">
 
+</head>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -32,7 +28,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a class="navbar-item navbar-disabled">Blocks</a></li>
+          <li><a class="navbar-item" href="index.html">Blocks</a></li>
           <li role="separator" class="vertical-divider hidden-xs"></li>
           <li><a class="navbar-item" href="entities.html">Entities</a></li>
           <li role="separator" class="vertical-divider hidden-xs"></li>
@@ -40,7 +36,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li role="separator" class="horizontal-divider visible-xs"></li>
-            <li><a class="navbar-item" href="about.html">About</a></li>
+            <li><a class="navbar-item navbar-disabled">About</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -49,34 +45,41 @@
 <div class="container-fluid text-center" id="main-body">
   <div class="col-md-2 col-lg-3"></div>
   <div class="col-md-8 col-lg-6">
-    <h1 class="text-center" style="font-size: 40px;">Minecraft Block Property Encyclopedia</h1>
-    <h2 class="display-none">Actively being made by @JoaBro#6761, info is accurate as of 1.17.1.<br>This is an open source project: Check out the <a href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia">Github Page</a>.<br>Any suggestions and/or pull requests are of course welcome</h2>
-    <div class="btn-group">
-      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-          Property Selection <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" id="selection">
-          
-      </ul>
-      </div>
-      <div class="reset-buttons">
-      <button class="btn" type="button" onclick="selection_arr = []; update_window_history();display_selection(); display_headers_and_table();">Reset selection</button>
-      <button class="btn" type="button" onclick="sort_arr = []; update_window_history(); display_headers_and_table();">Reset sorting</button>
-      <button class="btn" type="button" onclick="filter_obj = {}; update_window_history(); display_headers_and_table();">Reset filters</button>
-      </div> 
-    </div>
-  <div class="col-md-2 col-lg-3"></div>
-  <div class="col-sm-12">
-    <div class="results">
-        <table class="table table-bordered table-hover text-left" id="output_table">
-            <thead>
-                <tr></tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
-    </div>
-  </div>
+    <h1  >About</h1>
+    <hr><br><br>
+<p>The Minecraft Property Encyclopedia is an open source project that is actively being made by a team of contributers.</p><br>
+<p>The information in this encyclopedia is accurate as of Minecraft Java Edition version 1.18.</p><br>
+<p>You can check out the <a class="lighter-hyperlink" href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia">Github Page</a> for info about contributing to this project.<br>For contact and further information be sure to visit the designated channel in the <a class="lighter-hyperlink" href="https://discord.gg/99VW52r">MelonTech discord server</a>.</p>
+<br>
+
+<h1  >Contributions</h1>
+<hr>
+<p  >Joabro | Founder &amp; Lead developer</p>
+<br><br>
+
+<div class="col-lg-6">
+    <h1>Contributers</h1>
+    <hr>
+    <ul class="text-left written-list" style="font-size: 30px;">
+        <li>1190an</li>
+        <li>12th Dimensional Duck</li>
+        <li>CommandLeo</li>
+        <li>Firigion</li>
+        <li>Jjl21</li>
+        <li>Joabro</li>
+        <li>T727</li>
+    </ul>
 </div>
-</body>
+<div class="col-lg-6"><h1>Sources</h1>
+<hr>
+    <ul class="text-left written-list" style="font-size: 30px;">
+        <li><a class="lighter-hyperlink" href="https://docs.google.com/spreadsheets/d/18_m_ylcYiE_gmxKCBgpu-qkj767kfn_T88hS4GdTqh0/">Block sizes sheet by RaysWorks</a></li>
+        <li><a class="lighter-hyperlink" href="https://docs.google.com/spreadsheets/d/1r3oqFGO5m61uS3Zd7r0x4TY51O7ReDXEV9OPK6zrASk">Items sheet by CommandLeo</a></li>
+        <li><a class="lighter-hyperlink" href="https://calm-notify-385.notion.site/Observer-updates-87452836e91b4216a50ad90710f7da0f">Observer updates sheet by Firigion</a></li>
+        <li><a class="lighter-hyperlink" href="https://minecraft.fandom.com/wiki">The minecraft wiki</a></li>
+        <li><a class="lighter-hyperlink" href="https://github.com/PrismarineJS/minecraft-data/">PrismarineJS</a></li>
+        <li>Code digging by some of the contributers&nbsp;:]</li>
+    </ul>
+</div>
+
+</body></html>
