@@ -2521,7 +2521,7 @@
 			}
 		},
 		"height_external": {
-			"property_name": "Heights (External)",
+			"property_name": "Height (External)",
 			"default_value": "16",
 			"default_selection": true,
 			"entries": {
