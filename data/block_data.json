@@ -2276,7 +2276,7 @@
 		"height_all": {
 			"property_name": "Height (All)",
 			"default_value": 16,
-			"default_selection": true,
+			"default_selection": false,
 			"entries": {
 				"Amethyst Cluster": {
 					"Bottom": {
@@ -2331,11 +2331,11 @@
 					"Connected Top": 16
 				},
 				"Cocoa": 12,
-				"Comparator": 2,
 				"Composter": [2, 4, 6, 8, 10, 12, 14, 16],
 				"Conduit": 11,
 				"Daylight Detector": [2, 4, 6],
 				"Dirt Path": 15,
+				"Doors": 16,
 				"Dragon Egg": 16,
 				"Enchanting Table": [4, 8, 12],
 				"End Portal Frame": {
@@ -2380,7 +2380,6 @@
 					"Pointing Sideways": [6, 8, 10, 11, 12, 14, 16]
 				},
 				"Iron Bars": 16,
-				"Iron Door": 16,
 				"Ladder": 16,
 				"Lantern": {
 					"Floor": {
@@ -2422,7 +2421,6 @@
 				},
 				"Redstone Comparator": 2,
 				"Redstone Repeater": 2,
-				"Repeater": 2,
 				"Scaffolding": 16,
 				"Sea Pickle": {
 					"1-2 Pickles": 6,
@@ -2448,9 +2446,7 @@
 					"7 Layers": [4, 8, 12],
 					"8 Layers": [2, 4, 6, 8, 10, 12, 14]
 				},
-				"Soul Sand": {
-					"Internal": [2, 4, 6, 8, 10, 12, 14]
-				},
+				"Soul Sand": [2, 4, 6, 8, 10, 12, 14],
 				"Stairs": [8, 16],
 				"Stonecutter": 9,
 				"Trapdoors": {
@@ -2594,7 +2590,6 @@
 					"Connected Top": 16
 				},
 				"Cocoa": 12,
-				"Comparator": 2,
 				"Composter": {
 					"Top": 16,
 					"Inside": 2
@@ -2602,6 +2597,7 @@
 				"Conduit": 11,
 				"Daylight Detector": 2,
 				"Dirt Path": 15,
+				"Doors": 16,
 				"Dragon Egg": 16,
 				"Enchanting Table": 12,
 				"End Portal Frame": {
@@ -2615,9 +2611,11 @@
 				"Ender Chest": 14,
 				"Farmland": 15,
 				"Fence Gates": {
-					"Top": 24,
-					"Vertically Offset": 8,
-					"Open": "Not Applicable"
+					"Open": "Not Applicable",
+					"Closed": {
+						"Top": 24,
+						"Vertically Offset": 8
+					}
 				},
 				"Fences": {
 					"Fences": 24,
@@ -2651,7 +2649,6 @@
 					"Inside": 11
 				},
 				"Iron Bars": 16,
-				"Iron Door": 16,
 				"Ladder": 16,
 				"Lantern": {
 					"Floor": {
@@ -2677,7 +2674,7 @@
 					"Retracted": 16,
 					"Base": {
 						"Upwards": 12,
-						"Downwards": 16
+						"Downwards & Horizontal": 16
 					},
 					"Head": {
 						"Upwards": 16,
@@ -2703,7 +2700,6 @@
 				},
 				"Redstone Comparator": 2,
 				"Redstone Repeater": 2,
-				"Repeater": 2,
 				"Scaffolding": 16,
 				"Sea Pickle": {
 					"Sea Pickle 1-3": 6,
@@ -2783,6 +2779,631 @@
 				"Redstone Torch": "Not Applicable",
 				"Roots": "Not Applicable",
 				"Saplings": "Not Applicable",
+				"Seagrass": "Not Applicable",
+				"Signs": "Not Applicable",
+				"Small Dripleaf": "Not Applicable",
+				"Spore Blossom": "Not Applicable",
+				"Structure Void": "Not Applicable",
+				"Sugar Cane": "Not Applicable",
+				"Sweet Berry Bush": "Not Applicable",
+				"Torch": "Not Applicable",
+				"Tripwire Hook": "Not Applicable",
+				"Tripwire": "Not Applicable",
+				"Twisting Vines": "Not Applicable",
+				"Vines": "Not Applicable",
+				"Water": "Not Applicable",
+				"Weeping Vines": "Not Applicable",
+				"Wheat Crops": "Not Applicable"
+			}
+		},
+		"width_all": {
+			"property_name": "Width (All)",
+			"default_value": "16",
+			"default_selection": false,
+			"entries": {
+				"Amethyst Cluster": {
+					"Back": 16,
+					"Front": {
+						"Cluster": 7,
+						"Large Bud": 5,
+						"Medium Bud": 4,
+						"Small Bud": 3
+					},
+					"Side & Vertical": {
+						"Cluster": 13,
+						"Large Bud": 13,
+						"Medium Bud": 13,
+						"Small Bud": 12
+					}
+				},
+				"Anvil": {
+					"Side": [2, 3, 4, 6, 8, 10, 12, 13, 14, 16],
+					"Face": [3, 4, 6, 8, 10, 12, 13, 14]
+				},
+				"Azalea": [2, 4, 6, 8, 10, 12, 14, 16],
+				"Bamboo": "Locational",
+				"Bell": {
+					"Floor": {
+						"Face": [8, 12],
+						"Side": 16
+					},
+					"Ceiling": [5, 7, 8, 9, 11, 12],
+					"Wall": { 
+						"Attached Faces": [4, 5, 8, 11, 12, 16],
+						"Unattached Faces": [4, 5, 8, 11, 12, 13],
+						"Sides": [5, 7, 8, 9, 11, 12]
+					}
+				},
+				"Big Dripleaf": {
+					"Full Tilt": "Not Applicable",
+					"Partial, Unstable & No Tilt": 16
+				},
+				"Brewing Stand": [7, 9, 15],
+				"Cactus": 15,
+				"Cake": {
+					"Candle On Cake": 9,
+					"North": 15,
+					"East": 15,
+					"South": 15,
+					"West": {
+						"1 Slices": 3,
+						"2 Slice": 5,
+						"3 Slices": 7,
+						"4 Slices": 9,
+						"5 Slices": 11,
+						"6 Slices": 13,
+						"7 Slices": 15
+					}
+				},
+				"Campfire": 16,
+				"Candle": { 
+					"North": {
+						"1 Candle": 9,
+						"2&3 Candles": 10,
+						"4 Candles": 11
+					},
+					"East": {
+						"1 Candle": 9,
+						"3 Candles": 10,
+						"2&4 Candles": 11
+					},
+					"South": {
+						"1&2 Candles": 9,
+						"4 Candles": 10,
+						"3 Candles": 11
+					},
+					"West": {
+						"1 Candle": 9,
+						"2-4 Candles": 11
+					}
+				},
+				"Cauldron": [2, 4, 6, 8, 10, 12, 14, 16],
+				"Chain": {
+					"End": 16,
+					"Side": 9.5
+				},
+				"Chest": 15,
+				"Chorus Plant": {
+					"Main Body": 13,
+					"Connected Front": 16,
+					"Connected Back (Internal)": 3
+				},
+				"Stairs": { 
+					"Thin Part": 8,
+					"Wide Part": 16,
+					"Side": 16
+				},
+				"Cocoa": {
+					"Back": 16,
+					"Front": {
+						"Age 0": 5,
+						"Age 1": 7,
+						"Age 2": 9
+					},
+					"Side": {
+						"Age 0": 10,
+						"Age 1": 11,
+						"Age 2": 12
+					}
+				},
+				"Comparator": 16,
+				"Conduit": 11,
+				"Cut Copper Slab": 16,
+				"Daylight Detector": 16,
+				"Dirt Path": 16,
+				"Dragon Egg": 15,
+				"Enchanting Table": 16,
+				"End Portal Frame": 16,
+				"End Rod": {
+					"End": 16,
+					"Side": [8, 10]
+				},
+				"Ender Chest": 15,
+				"Farmland": 16,
+				"Fence Gates": {
+					"Open": "Not Applicable",
+					"Closed": {
+						"Face": 10,
+						"Side": 16
+					}
+				},
+				"Fences": { 
+					"Middle": 10,
+					"Connected Front": 16,
+					"Connected Back (Internal)": 10
+				},
+				"Flower Pot": 11,
+				"Glass Panes": {
+					"Main Body": 9,
+					"Connected Front": 16,
+					"Connected Back (Internal)": 7
+				},
+				"Grindstone": {
+					"Floor & Ceiling": {
+						"Face": [4, 5, 6, 8, 10, 11, 12, 14],
+						"Side": [4, 8, 12, 14]
+					},
+					"Wall": {
+						"Front": [4, 7, 8, 12, 13, 16],
+						"Back": [3, 4, 8, 9, 12, 16],
+						"Side": [4, 8, 12, 14]
+					}
+				},
+				"Heads": {
+					"Floor": [8, 12],
+					"Wall": {
+						"Front": 8,
+						"Side": [8, 12],
+						"Back": 16
+					}
+				},
+				"Honey Block": 15,
+				"Hopper": {
+					"Downwards": [2, 4, 6, 8, 10, 12, 14, 16],
+					"Sideways": {
+						"Side": [2, 4, 6, 8, 10, 12, 14, 16],
+						"Front & Back": [2, 4, 8, 12, 14, 16]
+					}
+				},
+				"Iron Bars": [7, 9, 16],
+				"Iron Door": {
+					"Back": 3,
+					"Sides & Front": 16
+				},
+				"Ladder": {
+					"Front": 3,
+					"Sides & Back": 16
+				},
+				"Lantern": [6, 10, 11],
+				"Lectern": [4, 8, 12, 16],
+				"Lightning Rod": {
+					"End": 16,
+					"Side": [8, 10]
+				},
+				"Lily Pad": 15,
+				"Moss Carpet": 16,
+				"Piston": {
+					"Retracted": 16,
+					"Base":{
+						"Back": [8, 12, 16],
+						"Front": [4, 8, 12],
+						"Side": [4, 8, 12, 16],
+						"Vertical": 16
+					},
+					"Head": {
+						"Horizontal": [4, 8, 12, 16, 20],
+						"Vertical": [6, 10, 16]
+					}
+				},
+				"Pointed Dripstone": "Locational",
+				"Repeater": 16,
+				"Sea Pickle": {
+					"Sea Pickle 1": [8, 10],
+					"Sea Pickle 2": 13,
+					"Sea Pickle 3": [4, 6, 8, 10, 12, 14],
+					"Sea Pickle 4": 14
+				},
+				"Shulker Box": 16,
+				"Snow": {
+					"1 Layer": "Not Applicable",
+					"2-8 Layers": 16
+				},
+				"Soul Sand": 16,
+				"Stonecutter": 16,
+				"Trapped Chest": 15,
+				"Turtle Egg": { 
+					"1 Egg": {
+						"North & West": 13,
+						"East & South": 12
+					},
+					"2-4 Eggs": 15
+				},
+				"Walls": {
+					"Middle Column": 12,
+					"Connected Front": 16,
+					"Connected Back (Unless Columnless)(Internal)": 4,
+					"Connected Side": [5, 11]
+				},
+				"Beds": {
+					"Sides": [3, 13, 16],
+					"Non-Food Side": [13, 16],
+					"Foot Side": [3, 16]
+				},
+				"Carpets": 16,
+				"Activator Rail": "Not Applicable",
+				"Air": "Not Applicable",
+				"Banners": "Not Applicable",
+				"Beetroots": "Not Applicable",
+				"Bubble Column": "Not Applicable",
+				"Buttons": "Not Applicable",
+				"Carrots": "Not Applicable",
+				"Cave Vines": "Not Applicable",
+				"Coral Fans": "Not Applicable",
+				"Corals": "Not Applicable",
+				"Dead Bush": "Not Applicable",
+				"Detector Rail": "Not Applicable",
+				"End Gateway": "Not Applicable",
+				"End Portal": "Not Applicable",
+				"Fern": "Not Applicable",
+				"Fire": "Not Applicable",
+				"Flowers": "Not Applicable",
+				"Fungi": "Not Applicable",
+				"Glow Lichen": "Not Applicable",
+				"Grass": "Not Applicable",
+				"Hanging Roots": "Not Applicable",
+				"Kelp": "Not Applicable",
+				"Lava": "Not Applicable",
+				"Lever": "Not Applicable",
+				"Light Block": "Not Applicable",
+				"Melon Stem": "Not Applicable",
+				"Mushrooms": "Not Applicable",
+				"Nether Portal": "Not Applicable",
+				"Nether Sprouts": "Not Applicable",
+				"Nether Wart": "Not Applicable",
+				"Potatoes": "Not Applicable",
+				"Powder Snow": "Not Applicable",
+				"Powered Rail": "Not Applicable",
+				"Pressure Plates": "Not Applicable",
+				"Pumpkin Stem": "Not Applicable",
+				"Rail": "Not Applicable",
+				"Redstone Dust": "Not Applicable",
+				"Redstone Torch": "Not Applicable",
+				"Roots": "Not Applicable",
+				"Saplings": "Not Applicable",
+				"Scaffolding": "Not Applicable",
+				"Seagrass": "Not Applicable",
+				"Signs": "Not Applicable",
+				"Small Dripleaf": "Not Applicable",
+				"Spore Blossom": "Not Applicable",
+				"Structure Void": "Not Applicable",
+				"Sugar Cane": "Not Applicable",
+				"Sweet Berry Bush": "Not Applicable",
+				"Torch": "Not Applicable",
+				"Tripwire Hook": "Not Applicable",
+				"Tripwire": "Not Applicable",
+				"Twisting Vines": "Not Applicable",
+				"Vines": "Not Applicable",
+				"Water": "Not Applicable",
+				"Weeping Vines": "Not Applicable",
+				"Wheat Crops": "Not Applicable"
+			}
+		},
+		"width_external": {
+			"property_name": "Width (External)",
+			"default_value": 16,
+			"default_selection": true,
+			"entries": {
+				"Amethyst Cluster": {
+					"Back": 16,
+					"Front": {
+						"Cluster": 7,
+						"Large Bud": 5,
+						"Medium Bud": 4,
+						"Small Bud": 3
+					},
+					"Side & Vertical": {
+						"Cluster": 13,
+						"Large Bud": 13,
+						"Medium Bud": 13,
+						"Small Bud": 12
+					}
+				},
+				"Anvil": {
+					"Top Part Side": 16,
+					"Top Part Face": 13,
+					"Base": 14,
+					"Rim Side": 13,
+					"Rim Face": 12,
+					"Shaft Side": 12,
+					"Shaft Face": 10
+				},
+				"Azalea": {
+					"Crown": 16,
+					"Stem": 10
+				},
+				"Bamboo": "Locational",
+				"Bell": {
+					"Floor": {
+						"Face": 12,
+						"Side": 16
+					},
+					"Ceiling": {
+						"Rim": 12,
+						"Bell": 11,
+						"Top": 9
+					},
+					"Wall": { 
+						"Rod Side": 9,
+						"Bell": 11,
+						"Rim": 12,
+						"Unattached Rod": 13,
+						"Attached Rod": 16
+					}
+				},
+				"Big Dripleaf": {
+					"Full Tilt": "Not Applicable",
+					"Partial, Unstable & No Tilt": 16
+				},
+				"Brewing Stand": {
+					"Base": 15,
+					"Rod": 9
+				},
+				"Cactus": 15,
+				"Cake": {
+					"Candle On Cake": 9,
+					"North": 15,
+					"East": 15,
+					"South": 15,
+					"West": {
+						"1 Slices": 3,
+						"2 Slice": 5,
+						"3 Slices": 7,
+						"4 Slices": 9,
+						"5 Slices": 11,
+						"6 Slices": 13,
+						"7 Slices": 15
+					}
+				},
+				"Campfire": 16,
+				"Candle": { 
+					"North": {
+						"1 Candle": 9,
+						"2&3 Candles": 10,
+						"4 Candles": 11
+					},
+					"East": {
+						"1 Candle": 9,
+						"3 Candles": 10,
+						"2&4 Candles": 11
+					},
+					"South": {
+						"1&2 Candles": 9,
+						"4 Candles": 10,
+						"3 Candles": 11
+					},
+					"West": {
+						"1 Candle": 9,
+						"2-4 Candles": 11
+					}
+				},
+				"Cauldron": {
+					"Inside": 2,
+					"Side": 16
+				},
+				"Chain": {
+					"End": 16,
+					"Side": 9.5
+				},
+				"Chest": 15,
+				"Chorus Plant": {
+					"Main Body": 13,
+					"Connected Front": 16
+				},
+				"Stairs": { 
+					"Thin Part": 8,
+					"Wide Part": 16,
+					"Side": 16
+				},
+				"Cocoa": {
+					"Back": 16,
+					"Front": {
+						"Age 0": 5,
+						"Age 1": 7,
+						"Age 2": 9
+					},
+					"Side": {
+						"Age 0": 10,
+						"Age 1": 11,
+						"Age 2": 12
+					}
+				},
+				"Comparator": 16,
+				"Conduit": 11,
+				"Cut Copper Slab": 16,
+				"Daylight Detector": 16,
+				"Dirt Path": 16,
+				"Dragon Egg": 15,
+				"Enchanting Table": 16,
+				"End Portal Frame": 16,
+				"End Rod": {
+					"End": 16,
+					"Side": 10
+				},
+				"Ender Chest": 15,
+				"Farmland": 16,
+				"Fence Gates": {
+					"Open": "Not Applicable",
+					"Closed": {
+						"Face": 10,
+						"Side": 16
+					}
+				},
+				"Fences": { 
+					"Middle": 10,
+					"Connected Front": 16
+				},
+				"Flower Pot": 11,
+				"Glass Panes": {
+					"Main Body": 9,
+					"Connected Front": 16
+				},
+				"Grindstone": {
+					"Floor & Ceiling": {
+						"Front": 14,
+						"Side": {
+							"Main Body": 12,
+							"Leg & Axle": 14
+						}
+					},
+					"Wall": {
+						"Front": {
+							"Axle": 15,
+							"Main Body": 16
+						},
+						"Side": {
+							"Main Body": 12,
+							"Leg & Axle": 14
+						},
+						"Back": {
+							"Axle": 9,
+							"Main Body": 12,
+							"Leg": 16
+						}
+					}
+				},
+				"Heads": {
+					"Floor": 12,
+					"Wall": {
+						"Front": 8,
+						"Side": 12,
+						"Back": 16
+					}
+				},
+				"Honey Block": 15,
+				"Hopper": {
+					"Top & Horizontal Tip End": 16,
+					"Middle": 12,
+					"Tip": 10
+				},
+				"Iron Bars": {
+					"Middle": 9,
+					"Connected": 16
+				},
+				"Iron Door": {
+					"Back": 3,
+					"Sides & Front": 16
+				},
+				"Ladder": {
+					"Front": 3,
+					"Sides & Back": 16
+				},
+				"Lantern": {
+					"Body": 10,
+					"Top": 11
+				},
+				"Lectern": {
+					"Top": 16,
+					"Base": 4
+				},
+				"Lightning Rod": {
+					"End": 16,
+					"Side": 10
+				},
+				"Lily Pad": 15,
+				"Moss Carpet": 16,
+				"Piston": {
+					"Retracted": 16,
+					"Base":{
+						"Back, Side & Vertical": 16,
+						"Front": 12
+					},
+					"Head": {
+						"Front": 16,
+						"Vertical & Side": {
+							"Face": 16,
+							"Shaft": 10
+						},
+						"Back Of Face": 4,
+						"Back Of Shaft": 20,
+						"Shaft, Horizontally Offset": 4
+					}
+				},
+				"Pointed Dripstone": "Locational",
+				"Powder Snow": "Not Applicable",
+				"Repeater": 16,
+				"Scaffolding": "Not Applicable",
+				"Sea Pickle": {
+					"Sea Pickle 1": 10,
+					"Sea Pickle 2": 13,
+					"Sea Pickle 3": 14,
+					"Sea Pickle 4": 14
+				},
+				"Shulker Box": 16,
+				"Snow": {
+					"1 Layer": "Not Applicable",
+					"2-8 Layers": 16
+				},
+				"Soul Sand": 16,
+				"Stonecutter": 16,
+				"Trapped Chest": 15,
+				"Turtle Egg": { 
+					"1 Egg": {
+						"North & West": 13,
+						"East & South": 12
+					},
+					"2-4 Eggs": 15
+				},
+				"Walls": {
+					"Middle Column": 12,
+					"Connected Front": 16,
+					"Connected Side": 11
+				},
+				"Beds": {
+					"Sides": 16,
+					"Feet Inside": 3
+				},
+				"Carpets": 16,
+				"Activator Rail": "Not Applicable",
+				"Air": "Not Applicable",
+				"Banners": "Not Applicable",
+				"Beetroots": "Not Applicable",
+				"Bubble Column": "Not Applicable",
+				"Buttons": "Not Applicable",
+				"Carrots": "Not Applicable",
+				"Cave Vines": "Not Applicable",
+				"Coral Fans": "Not Applicable",
+				"Corals": "Not Applicable",
+				"Dead Bush": "Not Applicable",
+				"Detector Rail": "Not Applicable",
+				"End Gateway": "Not Applicable",
+				"End Portal": "Not Applicable",
+				"Fern": "Not Applicable",
+				"Fire": "Not Applicable",
+				"Flowers": "Not Applicable",
+				"Fungi": "Not Applicable",
+				"Glow Lichen": "Not Applicable",
+				"Grass": "Not Applicable",
+				"Hanging Roots": "Not Applicable",
+				"Kelp": "Not Applicable",
+				"Lava": "Not Applicable",
+				"Lever": "Not Applicable",
+				"Light Block": "Not Applicable",
+				"Melon Stem": "Not Applicable",
+				"Mushrooms": "Not Applicable",
+				"Nether Portal": "Not Applicable",
+				"Nether Sprouts": "Not Applicable",
+				"Nether Wart": "Not Applicable",
+				"Potatoes": "Not Applicable",
+				"Powder Snow": "Not Applicable",
+				"Powered Rail": "Not Applicable",
+				"Pressure Plates": "Not Applicable",
+				"Pumpkin Stem": "Not Applicable",
+				"Rail": "Not Applicable",
+				"Redstone Dust": "Not Applicable",
+				"Redstone Torch": "Not Applicable",
+				"Roots": "Not Applicable",
+				"Saplings": "Not Applicable",
+				"Scaffolding": "Not Applicable",
 				"Seagrass": "Not Applicable",
 				"Signs": "Not Applicable",
 				"Small Dripleaf": "Not Applicable",
