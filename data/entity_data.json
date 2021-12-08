@@ -451,9 +451,9 @@
 				},
 				"Llama Spit": 0.25,
 				"Magma Cube": {
-					"Big (4)": 2.04,
-					"Medium (2)": 1.02,
-					"Small (1)": 0.51
+					"Big (4)": 2.0808,
+					"Medium (2)": 1.0404,
+					"Small (1)": 0.5202
 				},
 				"Marker": 0,
 				"Minecart": 0.98,
@@ -517,9 +517,9 @@
 					"Baby": 0.6982422
 				},
 				"Slime": {
-					"Big (4)": 2.04,
-					"Medium (2)": 1.02,
-					"Small (1)": 0.51
+					"Big (4)": 2.0808,
+					"Medium (2)": 1.0404,
+					"Small (1)": 0.5202
 				},
 				"Small Fireball": 0.3125,
 				"Snow Golem": 0.7,
@@ -679,9 +679,9 @@
 				},
 				"Llama Spit": 0.25,
 				"Magma Cube": {
-					"Big (4)": 2.04,
-					"Medium (2)": 1.02,
-					"Small (1)": 0.51
+					"Big (4)": 2.0808,
+					"Medium (2)": 1.0404,
+					"Small (1)": 0.5202
 				},
 				"Marker": 0,
 				"Minecart": 0.7,
@@ -745,9 +745,9 @@
 					"Baby": 0.8
 				},
 				"Slime": {
-					"Big (4)": 2.04,
-					"Medium (2)": 1.02,
-					"Small (1)": 0.51
+					"Big (4)": 2.0808,
+					"Medium (2)": 1.0404,
+					"Small (1)": 0.5202
 				},
 				"Small Fireball": 0.3125,
 				"Snow Golem": 1.9,
