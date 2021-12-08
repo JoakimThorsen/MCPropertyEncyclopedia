@@ -2411,7 +2411,7 @@
 						"Upwards": [4, 8, 12],
 						"Downwards": [8, 12, 16]
 					},
-					"Head": {
+					"Heads": {
 						"Upwards": [4, 8, 12, 16],
 						"Horizontal": [6, 10, 16],
 						"Downwards": [4, 8, 12, 16, 20]
@@ -2682,7 +2682,7 @@
 						"Upwards": 12,
 						"Downwards & Horizontal": 16
 					},
-					"Head": {
+					"Heads": {
 						"Upwards": 16,
 						"Horizontal": {
 							"Face": 16,
@@ -2912,9 +2912,9 @@
 						"Age 2": 12
 					}
 				},
-				"Comparator": 16,
+				"Redstone Comparator": 16,
 				"Conduit": 11,
-				"Cut Copper Slab": 16,
+				"Slabs": 16,
 				"Daylight Detector": 16,
 				"Dirt Path": 16,
 				"Dragon Egg": 15,
@@ -2939,7 +2939,7 @@
 					"Connected Back (Internal)": 10
 				},
 				"Flower Pot": 11,
-				"Glass Panes": {
+				"Glass Pane": {
 					"Main Body": 9,
 					"Connected Front": 16,
 					"Connected Back (Internal)": 7
@@ -2972,7 +2972,7 @@
 					}
 				},
 				"Iron Bars": [7, 9, 16],
-				"Iron Door": {
+				"Doors": {
 					"Back": 3,
 					"Sides & Front": 16
 				},
@@ -2996,13 +2996,13 @@
 						"Side": [4, 8, 12, 16],
 						"Vertical": 16
 					},
-					"Head": {
+					"Heads": {
 						"Horizontal": [4, 8, 12, 16, 20],
 						"Vertical": [6, 10, 16]
 					}
 				},
 				"Pointed Dripstone": "Locational",
-				"Repeater": 16,
+				"Redstone Repeater": 16,
 				"Sea Pickle": {
 					"Sea Pickle 1": [8, 10],
 					"Sea Pickle 2": 13,
@@ -3224,9 +3224,9 @@
 						"Age 2": 12
 					}
 				},
-				"Comparator": 16,
+				"Redstone Comparator": 16,
 				"Conduit": 11,
-				"Cut Copper Slab": 16,
+				"Slabs": 16,
 				"Daylight Detector": 16,
 				"Dirt Path": 16,
 				"Dragon Egg": 15,
@@ -3250,7 +3250,7 @@
 					"Connected Front": 16
 				},
 				"Flower Pot": 11,
-				"Glass Panes": {
+				"Glass Pane": {
 					"Main Body": 9,
 					"Connected Front": 16
 				},
@@ -3296,7 +3296,7 @@
 					"Middle": 9,
 					"Connected": 16
 				},
-				"Iron Door": {
+				"Doors": {
 					"Back": 3,
 					"Sides & Front": 16
 				},
@@ -3324,7 +3324,7 @@
 						"Back, Side & Vertical": 16,
 						"Front": 12
 					},
-					"Head": {
+					"Heads": {
 						"Front": 16,
 						"Vertical & Side": {
 							"Face": 16,
@@ -3336,7 +3336,7 @@
 					}
 				},
 				"Pointed Dripstone": "Locational",
-				"Repeater": 16,
+				"Redstone Repeater": 16,
 				"Sea Pickle": {
 					"Sea Pickle 1": 10,
 					"Sea Pickle 2": 13,
@@ -3465,7 +3465,7 @@
 				"Cactus": 16,
 				"Cake": 16,
 				"Campfire": 16,
-				"Candle": 16,
+				"Candles": 16,
 				"Carpets": 16,
 				"Cauldron": [4, 8, 12, 13, 16],
 				"Chain": {
@@ -3483,7 +3483,7 @@
 					"Age 1": 11,
 					"Age 2": 13
 				},
-				"Comparator": 16,
+				"Redstone Comparator": 16,
 				"Conduit": 11,
 				"Daylight Detector": [12, 14, 16],
 				"Dirt Path": 16,
@@ -3510,7 +3510,7 @@
 						"Z Axis": [5, 6, 10, 11, 14]
 					}
 				},
-				"Head": {
+				"Heads": {
 					"Floor": 16,
 					"Wall": [8, 12]
 				},
@@ -3532,14 +3532,14 @@
 				},
 				"Lily Pad": 16,
 				"Moss Carpet": 16,
-				"Oak Fence": 16,
-				"Oak Fence Gate": 16,
+				"Fences": 16,
+				"Fence Gates": 16,
 				"Piston": {
 					"Base": {
 						"Downwards": [4, 8, 12],
 						"Upwards": [8, 12, 16]
 					},
-					"Head": {
+					"Heads": {
 						"Downwards": [4, 8, 12, 16],
 						"Horizontal": [6, 10, 16],
 						"Upwards": [4, 8, 12, 16, 20]
@@ -3550,7 +3550,7 @@
 					"Downwards Tip": 11,
 					"Not Tip Or Upwards": 16
 				},
-				"Repeater": 16,
+				"Redstone Repeater": 16,
 				"Sea Pickle": {
 					"1&3 Pickles": [12, 14, 16],
 					"2&4 Pickles": 16
@@ -3659,7 +3659,7 @@
 				},
 				"Anvil": {
 					"Base": 16,
-					"Head": 6
+					"Heads": 6
 				},
 				"Azalea": {
 					"Crown": 8,
@@ -3687,7 +3687,7 @@
 				"Cactus": 16,
 				"Cake": 16,
 				"Campfire": 16,
-				"Candle": 16,
+				"Candles": 16,
 				"Carpets": 16,
 				"Cauldron": {
 					"Leg": 16,
@@ -3707,7 +3707,7 @@
 					"Age 1": 11,
 					"Age 2": 13
 				},
-				"Comparator": 16,
+				"Redstone Comparator": 16,
 				"Conduit": 11,
 				"Daylight Detector": 16,
 				"Dirt Path": 16,
@@ -3741,7 +3741,7 @@
 						"Main Part": 14
 					}
 				},
-				"Head": {
+				"Heads": {
 					"Floor": 16,
 					"Wall": 12
 				},
@@ -3769,7 +3769,7 @@
 						"Downwards": 12,
 						"Upwards & Horizontal": 16
 					},
-					"Head": {
+					"Heads": {
 						"Downwards": 16,
 						"Horizontal": {
 							"Face": 16,
@@ -3787,13 +3787,13 @@
 					"Downwards Tip": 11,
 					"Not Tip Or Upwards": 16
 				},
-				"Repeater": 16,
+				"Redstone Repeater": 16,
 				"Sea Pickle": {
 					"1&3 Pickles": 16,
 					"2&4 Pickles": 16
 				},
 				"Shulker Box": 16,
-				"Slab": {
+				"Slabs": {
 					"Bottom Or Double": 16,
 					"Top": 8
 				},
