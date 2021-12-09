@@ -4432,8 +4432,8 @@
 				"Blaze Rod": "Yes (unless in peaceful)",
 				"Ghast Tear": "Yes (unless in peaceful)",
 				"Potion": {
-					"Yes": "all potions",
-					"(unless in peaceful)": "healing potions only"
+					"All Except Healing": "Yes",
+					"Healing Potion": "Yes (unless in peaceful)"
 				},
 				"Blaze Powder": "Yes (unless in peaceful)",
 				"Eye of Ender": "Yes (unless in peaceful)",
