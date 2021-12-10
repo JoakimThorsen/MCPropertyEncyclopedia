@@ -4317,7 +4317,6 @@
 				"Observer": "Yes",
 				"Obsidian": "Yes",
 				"Packed Ice": "Yes",
-				"Piston": "Yes (TODO)",
 				"Piston": {
 					"Retracted": "Yes",
 					"Base": {
@@ -4344,8 +4343,7 @@
 				"Scaffolding": "Yes",
 				"Sea Lantern": "Yes",
 				"Shroomlight": "Yes",
-				"Shulker Box": "Yes",
-				"Shulkerbox": { "When Verical Or Cosed": "Yes", "Sideways When Opened": "No" },
+				"Shulker Box": { "When Verical Or Cosed": "Yes", "Sideways When Opened": "No" },
 				"Slabs": { "Top Or Double": "Yes", "Bottom": "No"},
 				"Slime Block": "Yes",
 				"Smithing Table": "Yes",

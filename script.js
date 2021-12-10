@@ -516,9 +516,9 @@ function formatting_color(value, property_name, class_exists = false) {
 
 function update_window_history() {
     var url = "";
+    if(selection_arr.length > 0) url += "&selection=" + JSON.stringify(selection_arr);
     if(Object.keys(filter_obj).length > 0) url += "&filter=" + JSON.stringify(filter_obj);
     if(sort_arr.length > 0) url += "&sort=" + JSON.stringify(sort_arr);
-    if(selection_arr.length > 0) url += "&selection=" + JSON.stringify(selection_arr);
 
     url = window.location.origin + window.location.pathname + '?' + url.substr(1);
 

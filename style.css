@@ -211,7 +211,7 @@ th {
     box-shadow: inset 0 -1px 0 #AAA;
     padding: 2px 0 !important;
     position: sticky;
-    top: 0;
+    top: -1px;
     /* z-index: 2; */
 }
 
