@@ -4432,8 +4432,8 @@
 				"Blaze Rod": "Yes (unless in peaceful)",
 				"Ghast Tear": "Yes (unless in peaceful)",
 				"Potion": {
-					"All Except Healing": "Yes",
-					"Healing Potion": "Yes (unless in peaceful)"
+					"All": "Yes (unless in peaceful)",
+					"Healing<br>Fire Resistance<br>Weakness<br>Invisiblity": "Yes"
 				},
 				"Blaze Powder": "Yes (unless in peaceful)",
 				"Eye of Ender": "Yes (unless in peaceful)",
@@ -4443,17 +4443,17 @@
 				"Creeper Head": "Yes (unless in peaceful)",
 				"Nether Star": "Yes (unless in peaceful)",
 				"Prismarine Shard": "Yes (unless in peaceful)",
-				"Prismarine Crystals": "Yes (unless in peaceful)",
 				"End Crystal": "Yes (unless in peaceful)",
-				"Splash Potion": "Yes (unless in peaceful)",
+				"Splash Potion": {
+					"All": "Yes (unless in peaceful)",
+					"Fire Resistance": "Yes"
+				},
 				"Tipped Arrow": "Yes (unless in peaceful)",
 				"Lingering Potion": "Yes (unless in peaceful)",
 				"Totem of Undying": "Yes (unless in peaceful)",
 				"Trident": "Yes (unless in peaceful)",
 				"Creeper Banner Pattern": "Yes (unless in peaceful)",
 				"Skull Banner Pattern": "Yes (unless in peaceful)",
-				"Crying Obsidian": "Yes (unless in peaceful)",
-				"Respawn Anchor": "Yes (unless in peaceful)",
 				"Bedrock": "No",
 				"End Portal Frame": "No",
 				"Barrier": "No",
