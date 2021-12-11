@@ -2545,9 +2545,7 @@
 					"Top": 16,
 					"Bottom Part": 4
 				},
-				"Azalea": {
-					"Top": 16
-				},
+				"Azalea": 16,
 				"Bamboo": {
 					"Bamboo": 16,
 					"Shoot": "Not Applicable"
@@ -3681,9 +3679,7 @@
 					"Full Tilt": "Not Applicable",
 					"Partial, Unstable & No Tilt": 15
 				},
-				"Brewing Stand": {
-					"Brewing Stand": 16
-				},
+				"Brewing Stand": 16,
 				"Cactus": 16,
 				"Cake": 16,
 				"Campfire": 16,
