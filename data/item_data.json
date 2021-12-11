@@ -1,7 +1,7 @@
 {
 	"conditional_formatting": {
 		"Yes": "cf-yes",
-		"Yes (unless in peaceful)": "cf-yes",
+		"Yes (unless in peaceful)": "cf-neutral-yes",
 
 		"No": "cf-no",
 		

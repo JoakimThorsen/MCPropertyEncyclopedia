@@ -219,6 +219,7 @@ th {
 .cf-yes { background-color: #B7E1CD !important;}
 .cf-no { background-color: #F4C7C3 !important;}
 .cf-neutral { background-color: #FCE8B2 !important;}
+.cf-neutral-yes { background-color: #DDE6BA !important;}
 .cf-neutral-no { background-color: #F9D9B8 !important;}
 
 .cf-invalid { background-color: #CCC !important;}
