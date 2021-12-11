@@ -4432,8 +4432,9 @@
 				"Blaze Rod": "Yes (unless in peaceful)",
 				"Ghast Tear": "Yes (unless in peaceful)",
 				"Potion": {
-					"All Except Healing": "Yes",
-					"Healing Potion": "Yes (unless in peaceful)"
+					"Mundane<br>Thick<br>Awkward<br>Night Vision<br>Leaping<br>Swiftness<br>Slowness<br>Turtle Master<br>Water Breathing<br>Harming<br>Poison<br>Regeneration<br>Strength<br>Slow Falling": "Yes (unless in peaceful)",
+					"Healing<br>Fire Resistance<br>Weakness<br>Invisiblity": "Yes",
+					"Uncraftable<br>Luck": "No"
 				},
 				"Blaze Powder": "Yes (unless in peaceful)",
 				"Eye of Ender": "Yes (unless in peaceful)",
@@ -4443,17 +4444,24 @@
 				"Creeper Head": "Yes (unless in peaceful)",
 				"Nether Star": "Yes (unless in peaceful)",
 				"Prismarine Shard": "Yes (unless in peaceful)",
-				"Prismarine Crystals": "Yes (unless in peaceful)",
 				"End Crystal": "Yes (unless in peaceful)",
-				"Splash Potion": "Yes (unless in peaceful)",
-				"Tipped Arrow": "Yes (unless in peaceful)",
-				"Lingering Potion": "Yes (unless in peaceful)",
+				"Splash Potion": {
+					"Mundane<br>Thick<br>Awkward<br>Night Vision<br>Invisibility<br>Leaping<br>Swiftness<br>Slowness<br>Turtle Master<br>Water Breathing<br>Healing<br>Harming<br>Poison<br>Regeneration<br>Strength<br>Weakness<br>Slow Falling": "Yes (unless in peaceful)",
+					"Fire Resistance": "Yes",
+					"Uncraftable<br>Luck": "No"
+				},
+				"Tipped Arrow": {
+					"Night Vision<br>Invisibility<br>Leaping<br>Fire Resistance<br>Swiftness<br>Slowness<br>Turtle Master<br>Water Breathing<br>Healing<br>Harming<br>Poison<br>Regeneration<br>Strength<br>Weakness<br>Slow Falling": "Yes (unless in peaceful)",
+					"Uncraftable<br>Luck<br>Splashing<br>Tipped Arrow": "No"
+				},
+				"Lingering Potion": {
+					"Mundane<br>Thick<br>Awkward<br>Night Vision<br>Invisibility<br>Leaping<br>Fire Resistance<br>Swiftness<br>Slowness<br>Turtle Master<br>Water Breathing<br>Healing<br>Harming<br>Poison<br>Regeneration<br>Strength<br>Weakness<br>Slow Falling": "Yes (unless in peaceful)",
+					"Uncraftable<br>Luck": "No"
+				},
 				"Totem of Undying": "Yes (unless in peaceful)",
 				"Trident": "Yes (unless in peaceful)",
 				"Creeper Banner Pattern": "Yes (unless in peaceful)",
 				"Skull Banner Pattern": "Yes (unless in peaceful)",
-				"Crying Obsidian": "Yes (unless in peaceful)",
-				"Respawn Anchor": "Yes (unless in peaceful)",
 				"Bedrock": "No",
 				"End Portal Frame": "No",
 				"Barrier": "No",
