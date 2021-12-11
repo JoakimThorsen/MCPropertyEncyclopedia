@@ -2533,7 +2533,7 @@
 		},
 		"height_external": {
 			"property_name": "Height (External)",
-			"default_value": "16",
+			"default_value": 16,
 			"default_selection": true,
 			"entries": {
 				"Amethyst Cluster": {
@@ -2813,7 +2813,7 @@
 		},
 		"width_all": {
 			"property_name": "Width (All)",
-			"default_value": "16",
+			"default_value": 16,
 			"default_selection": false,
 			"entries": {
 				"Amethyst Cluster": {
