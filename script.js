@@ -397,8 +397,6 @@ function display_results() {
             split_data.push(...split_elements);
         }); 
 
-        console.log(split_data);
-
         // Sort 
         sort_properties.reverse().forEach(property_entry => {
             let property = property_entry.property;
