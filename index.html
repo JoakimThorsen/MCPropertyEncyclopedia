@@ -51,23 +51,29 @@
   <div class="col-md-10 col-lg-6">
     <h1 class="text-center" style="font-size: 40px;">Minecraft Block Property Encyclopedia</h1>
     <h2 style="font-size: 24px;">This is an open source project. View the <a href="about.html">about</a> page for more info.</h2>
+  </div>
+  <div class="col-md-1 col-lg-3"></div>
+  <div class="col-sm-12">
     <div class="btn-group">
       <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
           Property Selection <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" id="selection"></ul>
+        </button>
+        <ul class="dropdown-menu" id="selection">
+          <!-- Selection options are inserted here using jQuery -->
+        </ul>
     </div>
     <button class="btn btn-default dropdown-toggle" type="button" data-toggle="collapse-next">
-      <i class="fas fa-tools"></i>
+        <i class="fas fa-tools"></i>
     </button>
     <div class="collapse">
       <div class="settings">
         
         <div class="settings-box">
-          <p>Clear Choices:</p>
-          <button class="btn btn-default" type="button" onclick="selection_arr = []; update_window_history(); display_selection(); display_headers_and_table();">Clear selection</button>
-          <button class="btn btn-default" type="button" onclick="sort_arr = []; update_window_history(); display_headers_and_table();">Clear sorting</button>
-          <button class="btn btn-default" type="button" onclick="filter_obj = {}; update_window_history(); display_headers_and_table();">Clear filters</button>
+          <p>Reset:</p>
+          <button class="btn btn-default" type="button" onclick="selection_arr = undefined; update_window_history(); display_selection(); display_headers_and_table();">Property Selection</button>
+          <button class="btn btn-default" type="button" onclick="selection_arr = []; update_window_history(); display_selection(); display_headers_and_table();">Clear Property Selection</button>
+          <button class="btn btn-default" type="button" onclick="filter_obj = {}; update_window_history(); display_headers_and_table();">Filters</button>
+          <button class="btn btn-default" type="button" onclick="sort_arr = []; update_window_history(); display_headers_and_table();">Sorting</button>
         </div>
 
         <div class="settings-box">
@@ -77,16 +83,15 @@
           </a>
         </div>
 
-        <!-- <div class="settings-box">
+        <div class="settings-box">
           <p>Convert size values to:</p>
-          <button class="btn btn-default" type="button" onclick="size_type = 'pixel'; update_window_history(); display_headers_and_table();">Pixelspace</button>
-          <button class="btn btn-default" type="button" onclick="size_type = 'block'; update_window_history(); display_headers_and_table();">Blockspace</button>
-        </div> -->
+          <div class="btn-group">
+            <button class="btn btn-default radio-settings" type="button" setting="size_type" value="pixel"><i class="fas fa-th-large"></i> Pixel</button>
+            <button class="btn btn-default radio-settings" type="button" setting="size_type" value="block"><i class="fas fa-square"></i> Block</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-md-1 col-lg-3"></div>
-  <div class="col-sm-12">
     <div class="results">
         <table class="table table-bordered table-hover text-left" id="output_table">
             <thead>

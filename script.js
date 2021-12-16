@@ -6,6 +6,7 @@ urlParams = new URLSearchParams(window.location.search);
 var filter_obj = JSON.parse(urlParams.get("filter")) ?? {};
 var sort_arr = JSON.parse(urlParams.get("sort")) ?? [];
 var selection_arr = JSON.parse(urlParams.get("selection")) ?? null;
+var settings_obj = JSON.parse(urlParams.get("settings")) ?? {};
 
 var page, entry_header, exportable_list;
 
@@ -33,7 +34,8 @@ function load_data(filename) {
         'dataType': "json",
         'success': function (d) {
             data = d;
-            display_selection()
+            display_selection();
+            initialize_settings();
             display_headers_and_table();
         }
     });
@@ -64,12 +66,26 @@ function display_selection() {
         } else {
             selection_arr.push(value);
         }
-        $(this).children().attr('style', function(_, attr){
-            return attr == 'display:none' ? 'display:inline-block' : 'display:none';
-        });
+        $(this).children().toggle();
         $(this).toggleClass('selected');
         update_window_history();
         display_headers_and_table();
+    });
+}
+
+function initialize_settings() {
+    $('.radio-settings').click(function(e) {
+        var setting = $(this).attr("setting");
+        var value = $(this).attr("value");
+        if(settings_obj[setting] == value) {
+            delete settings_obj[setting];
+        } else {
+            settings_obj[setting] = value;
+        }
+        $(this).siblings('button').removeClass('active');
+        $(this).toggleClass('active');
+        update_window_history();
+        display_results();
     });
 }
 
@@ -467,6 +483,13 @@ function display_results() {
             return_data += "</tbody></table></td>";
 
         } else {
+            if(entry*1==entry) {
+                var data_size_type = data.properties[property_name].size_type;
+                if(typeof settings_obj.size_type !== 'undefined' && data_size_type) {
+                    entry = entry / (data_size_type  == "pixel" ? 16 : 1);
+                    entry = entry * (settings_obj.size_type == "pixel" ? 16 : 1);
+                }
+            }
             return_data = `<td ${formatting_color(entry, property_name)}>${entry}</td>`;
         }
         return return_data;

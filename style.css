@@ -60,7 +60,7 @@ body  {
 }
 
 
-h1, h2, h3, p, .written-list>li, .radio-inline {
+h1, h2, h3, p, .written-list>li {
     color: white;
     text-shadow: 0px 0px 5px black, 2px 2px 3px black;
 }
@@ -264,12 +264,14 @@ td .nested-table {
     min-width: fit-content;
     margin: 5px;
     padding: 7px;
-    background-color: rgba(218, 218, 218, 0.8);
+    background-color: #f5f5f5;
     box-shadow: 0px 0px 4px black;
 }
 .settings-box>p {
+    color: black;
+    text-shadow: none;
     font-size: 24px;
 }
 .settings-box>button, .settings-box>a {
-    box-shadow: 1px 1px 4px rgb(100, 100, 100);
+    box-shadow: 1px 1px 4px rgba(47, 47, 47, 0.828);
 }
