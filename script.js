@@ -5,7 +5,7 @@ var value_list = {};
 urlParams = new URLSearchParams(window.location.search);
 var filter_obj = JSON.parse(urlParams.get("filter")) ?? {};
 var sort_arr = JSON.parse(urlParams.get("sort")) ?? [];
-var selection_arr = JSON.parse(urlParams.get("selection")) ?? [];
+var selection_arr = JSON.parse(urlParams.get("selection")) ?? null;
 
 var page, entry_header, exportable_list;
 
@@ -42,7 +42,8 @@ function load_data(filename) {
 
 function display_selection() {
     $('#selection').children().remove();
-    if(selection_arr.length == 0) {
+    if(selection_arr == undefined) {
+        selection_arr = [];
         for(let [property_name, value] of Object.entries(data.properties)) {
             if(value.default_selection ?? true) {
                 selection_arr.push(property_name);
@@ -175,8 +176,6 @@ function display_headers_and_table() {
         $('#output_table').children('thead').children('tr').append(append_data);
     });
     
-    display_results();
-
     $('.modify-filter').click(function (e) {
         e.stopPropagation();
         
@@ -254,6 +253,8 @@ function display_headers_and_table() {
         update_window_history();
         display_results();
     });
+
+    display_results();
     
 }
 
@@ -476,8 +477,8 @@ function display_results() {
     $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (_e) {
         var $target = $(this).next();
         // Not sure which one I prefer:
-        // $target.toggle("toggle"); // With toggle animation/delay
-        $target.toggle(); // No toggle animation/delay
+        $target.toggle("toggle"); // With toggle animation/delay
+        // $target.toggle(); // No toggle animation/delay
     });
 
 }
@@ -514,11 +515,13 @@ function formatting_color(value, property_name, class_exists = false) {
 
 function update_window_history() {
     var url = "";
-    if(selection_arr.length > 0) url += "&selection=" + JSON.stringify(selection_arr);
+    if(selection_arr != undefined) url += "&selection=" + JSON.stringify(selection_arr);
     if(Object.keys(filter_obj).length > 0) url += "&filter=" + JSON.stringify(filter_obj);
     if(sort_arr.length > 0) url += "&sort=" + JSON.stringify(sort_arr);
-
-    url = window.location.origin + window.location.pathname + '?' + url.substr(1);
+    if(url != "") {
+        url = '?' + url.substr(1) + '#';
+    }
+    url = window.location.origin + window.location.pathname + url;
 
     window.history.pushState("", "", url);
 }
