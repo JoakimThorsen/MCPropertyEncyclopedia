@@ -360,6 +360,7 @@
 		"width": {
 			"property_name": "Width",
 			"default_value": null,
+			"size_type": "block",
 			"default_selection": true,
 			"max": 3,
 			"entries": {
@@ -588,6 +589,7 @@
 		"height": {
 			"property_name": "Height",
 			"default_value": null,
+			"size_type": "block",
 			"default_selection": true,
 			"max": 3,
 			"entries": {
@@ -941,6 +943,7 @@
 		"eye_height": {
 			"property_name": "Eye Height",
 			"default_value": null,
+			"size_type": "block",
 			"default_selection": true,
 			"max": 3,
 			"entries": {

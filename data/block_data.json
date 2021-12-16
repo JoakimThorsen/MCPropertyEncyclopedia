@@ -2291,6 +2291,7 @@
 		"height_all": {
 			"property_name": "Height (All)",
 			"default_value": 16,
+			"size_type": "pixel",
 			"default_selection": false,
 			"entries": {
 				"Amethyst Cluster": {
@@ -2534,6 +2535,7 @@
 		"height_external": {
 			"property_name": "Height (External)",
 			"default_value": 16,
+			"size_type": "pixel",
 			"default_selection": true,
 			"entries": {
 				"Amethyst Cluster": {
@@ -2814,6 +2816,7 @@
 		"width_all": {
 			"property_name": "Width (All)",
 			"default_value": 16,
+			"size_type": "pixel",
 			"default_selection": false,
 			"entries": {
 				"Amethyst Cluster": {
@@ -3106,6 +3109,7 @@
 		"width_external": {
 			"property_name": "Width (External)",
 			"default_value": 16,
+			"size_type": "pixel",
 			"default_selection": true,
 			"entries": {
 				"Amethyst Cluster": {
@@ -3438,6 +3442,7 @@
 		"collision_bottom_all": {
 			"property_name": "Collision Bottom (All)",
 			"default_value": 16,
+			"size_type": "pixel",
 			"default_selection": false,
 			"entries": {
 				"Amethyst Cluster": {
@@ -3649,6 +3654,7 @@
 		"collision_bottom_external": {
 			"property_name": "Collision Bottom (External)",
 			"default_value": 16,
+			"size_type": "pixel",
 			"default_selection": false,
 			"entries": {
 				"Amethyst Cluster": {
