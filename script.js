@@ -82,7 +82,7 @@ function initialize_settings() {
         } else {
             settings_obj[setting] = value;
         }
-        $(this).siblings('button').removeClass('active');
+        $(this).siblings('a').removeClass('active');
         $(this).toggleClass('active');
         update_window_history();
         display_results();
@@ -229,15 +229,12 @@ function display_headers_and_table() {
             if(sort_arr.filter(e => e.property === property)[0].reversed !== reversed) {
                 // If already sorted in the opposite order, reverse the sorting
                 sort_arr[sort_arr.findIndex(e => e.property === property)].reversed = reversed;
-                $(this).siblings('a').removeClass('active');
-                $(this).addClass('active');
 
                 $(this).parents('.dropdown').find('.sorted').toggleClass('display-none');
                 $(this).parents('.dropdown').find('.sorted-reverse').toggleClass('display-none');
             } else {
                 // If already sorted in the same order, remove it
                 sort_arr.splice(sort_arr.findIndex(e => e.property === property), 1);
-                $(this).removeClass('active');
 
                 $(this).parents('.dropdown').find('.sorted').addClass('display-none');
                 $(this).parents('.dropdown').find('.sorted-reverse').addClass('display-none');
@@ -245,10 +242,11 @@ function display_headers_and_table() {
         } else {
             // If not sorted, sort according to selection
             sort_arr.push({"property":property,"reversed":reversed});
-            $(this).addClass('active');
 
             $(this).parents('.dropdown').find(reversed ? '.sorted-reverse' : '.sorted').removeClass('display-none');
         }
+        $(this).siblings('a').removeClass('active');
+        $(this).toggleClass('active');
         update_window_history();
         display_results();
     });
@@ -287,6 +285,12 @@ function display_results() {
         var filtered = false;
         for(var [property_id, property] of Object.entries(data.properties).filter(([e, _]) => selection_arr.includes(e))) {
             var selected_element = property.entries[entry];
+            var size_factor = 1;
+            if(typeof settings_obj.size_type !== 'undefined' && typeof property.size_type !== 'undefined') {
+                size_factor /= (property.size_type  == "pixel" ? 16 : 1);
+                size_factor *= (settings_obj.size_type == "pixel" ? 16 : 1);
+            }
+            property.size_factor = size_factor;
             
             function pivot_element(input_element) {
                 if(typeof input_element == 'object') {
@@ -319,7 +323,11 @@ function display_results() {
                 } else if ((filter_obj[property_id] || []).includes(input_element ?? property.default_value)){
                     return;
                 } else {
-                    return input_element ?? property.default_value;
+                    input_element = input_element ?? property.default_value;
+                    if(input_element*1==input_element) {
+                        input_element *= size_factor;
+                    }
+                    return input_element;
                 }
             }
             
@@ -483,13 +491,6 @@ function display_results() {
             return_data += "</tbody></table></td>";
 
         } else {
-            if(entry*1==entry) {
-                var data_size_type = data.properties[property_name].size_type;
-                if(typeof settings_obj.size_type !== 'undefined' && data_size_type) {
-                    entry = entry / (data_size_type  == "pixel" ? 16 : 1);
-                    entry = entry * (settings_obj.size_type == "pixel" ? 16 : 1);
-                }
-            }
             return_data = `<td ${formatting_color(entry, property_name)}>${entry}</td>`;
         }
         return return_data;
@@ -508,18 +509,20 @@ function display_results() {
 function formatting_color(value, property_name, class_exists = false) {
     let color = "";
     if(value*1==value){
-        // color = block_data.conditional_formatting["!numeric"];
+        value = value*1;
 
         // Minimum in value is assumed to be 0
         function scale(number, inMax, outMin, outMax) {
             return Math.round(100*((number) * (outMax - outMin) / (inMax) + outMin)) / 100;
         }
-        value = value*1;
-        let max = data.properties[property_name].max ?? 17;
+        let max = (data.properties[property_name].max ?? 17) * data.properties[property_name].size_factor;
         let colorA = [152,110,208];
         let colorB = [164,221,255];
         if(value < max) {
-            color = `style="background-color: rgb(${scale(value, max, colorA[0], colorB[0])},${scale(value, max, colorA[1], colorB[1])},${scale(value, max, colorA[2], colorB[2])})!important"`
+            var r = scale(value, max, colorA[0], colorB[0]);
+            var g = scale(value, max, colorA[1], colorB[1]);
+            var b = scale(value, max, colorA[2], colorB[2]);
+            color = `style="background-color: rgb(${r},${g},${b})!important"`;
         } else {
             color = `style="background-color: rgb(${colorB[0]}, ${colorB[1]}, ${colorB[2]})"`;
         }
