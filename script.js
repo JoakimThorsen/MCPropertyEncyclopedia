@@ -85,7 +85,7 @@ function initialize_settings() {
         $(this).siblings('a').removeClass('active');
         $(this).toggleClass('active');
         update_window_history();
-        display_results();
+        display_headers_and_table();
     });
 }
 
@@ -94,22 +94,38 @@ function display_headers_and_table() {
     
     $('#output_table').find('thead>tr>th').remove();
     
-    // Add all unique values to a list of possible values for each property (recursively so for objects)
-    Object.keys(data.properties).filter(e => selection_arr.includes(e)).forEach(property => {
-        value_list[property] = [];
-        if(data.properties[property].default_value != null) {
-            value_list[property].push(data.properties[property].default_value);
+    for(var [_, property] of Object.entries(data.properties).filter(([e, _]) => selection_arr.includes(e))) {
+        var size_factor = 1;
+        if(typeof settings_obj.size_type !== 'undefined' && typeof property.size_type !== 'undefined') {
+            size_factor /= (property.size_type  == "pixel" ? 16 : 1);
+            size_factor *= (settings_obj.size_type == "pixel" ? 16 : 1);
         }
-        add_value(value_list[property], data.properties[property].entries);
+        property.size_factor = size_factor;
+    }
+    
+    console.log("test");
+    // Add all unique values to a list of possible values for each property (recursively so for objects)
+    Object.entries(data.properties).filter(([property_name, _]) => selection_arr.includes(property_name)).forEach(([property_name, property]) => {
+        value_list[property_name] = [];
+        if(property.default_value != null) {
+            add_value(value_list[property_name], property.default_value, property);
+        }
+        console.log(property_name);
+        add_value(value_list[property_name], property.entries, property);
     });
-    function add_value(list, property) {
-        Object.values(property).forEach(entry => {
-            if(typeof(entry) == 'object') { 
-                add_value(list, entry);
-            } else if(!list.includes(entry)){
+    function add_value(list, entry, property) {
+        if(typeof entry == 'object') {
+            Object.values(entry).forEach(value => {
+                add_value(list, value, property);
+            });
+        } else {
+            if(entry*1==entry) {
+                entry *= property.size_factor;
+            }
+            if(!list.includes(entry)){
                 list.push(entry);
             }
-        });
+        }
     }
     
     
@@ -155,6 +171,8 @@ function display_headers_and_table() {
                 sorted = 1;
             }
         }
+
+        // Header and dropdown buttons
         append_data = `<th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">
                 ${data.properties[property].property_name}
                 <span class="icons">
@@ -178,6 +196,8 @@ function display_headers_and_table() {
                 </div>
                 </li>`;
 
+        console.log(value_list);
+        // Filter menu
         value_list[property].sort().reverse().sort((a, b) => (a - b)).forEach(option => {
             var color = formatting_color(option, property, true);
             append_data += `<li>
@@ -285,12 +305,7 @@ function display_results() {
         var filtered = false;
         for(var [property_id, property] of Object.entries(data.properties).filter(([e, _]) => selection_arr.includes(e))) {
             var selected_element = property.entries[entry];
-            var size_factor = 1;
-            if(typeof settings_obj.size_type !== 'undefined' && typeof property.size_type !== 'undefined') {
-                size_factor /= (property.size_type  == "pixel" ? 16 : 1);
-                size_factor *= (settings_obj.size_type == "pixel" ? 16 : 1);
-            }
-            property.size_factor = size_factor;
+            var size_factor = property.size_factor ?? 1;
             
             function pivot_element(input_element) {
                 if(typeof input_element == 'object') {
@@ -320,14 +335,16 @@ function display_results() {
                         }
                         return output_obj;
                     }
-                } else if ((filter_obj[property_id] || []).includes(input_element ?? property.default_value)){
-                    return;
                 } else {
                     input_element = input_element ?? property.default_value;
                     if(input_element*1==input_element) {
                         input_element *= size_factor;
                     }
-                    return input_element;
+                    if ((filter_obj[property_id] || []).includes(input_element)){
+                        return;
+                    } else {
+                        return input_element;
+                    } 
                 }
             }
             
@@ -463,8 +480,8 @@ function display_results() {
         var append_string = "<tr>";
         var sprite = data.sprites[entry[page]];
         append_string += `<td><span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span></td>`;
-        for(var [property_name, value] of Object.entries(entry)) {
-            append_string += get_data_cell(value, property_name);
+        for(var [property_id, value] of Object.entries(entry)) {
+            append_string += get_data_cell(value, property_id);
         };
         append_string += "</tr>";
         $('#output_table').children('tbody').append(append_string);
@@ -515,15 +532,19 @@ function formatting_color(value, property_name, class_exists = false) {
         function scale(number, inMax, outMin, outMax) {
             return Math.round(100*((number) * (outMax - outMin) / (inMax) + outMin)) / 100;
         }
-        let max = (data.properties[property_name].max ?? 17) * data.properties[property_name].size_factor;
+        let max = (data.properties[property_name].max ?? 17) * (data.properties[property_name].size_factor ?? 1);
         let colorA = [152,110,208];
         let colorB = [164,221,255];
         if(value < max) {
+            // var hue = scale(value, max, 200, 280);
+            // color = `style="background-color: hsl(${hue},70%,70%)!important"`;
+            
             var r = scale(value, max, colorA[0], colorB[0]);
             var g = scale(value, max, colorA[1], colorB[1]);
             var b = scale(value, max, colorA[2], colorB[2]);
             color = `style="background-color: rgb(${r},${g},${b})!important"`;
         } else {
+            // console.log(max, property_name);
             color = `style="background-color: rgb(${colorB[0]}, ${colorB[1]}, ${colorB[2]})"`;
         }
         if(class_exists) {
