@@ -4149,7 +4149,10 @@
 				"Sea Pickle": "Yes",
 				"Seagrass": "Inherent",
 				"Signs": "Yes",
-				"Slabs": "Yes",
+				"Slabs": {
+					"Single": "Yes",
+					"Double": "No"
+				},
 				"Small Dripleaf": "Yes",
 				"Stairs": "Yes",
 				"Trapdoors": "Yes",

@@ -549,8 +549,11 @@
 				},
 				"Vex": 0.4,
 				"Villager": {
-					"Adult": 0.6,
-					"Baby": 0.3
+					"Awake": {
+						"Adult": 0.6,
+						"Baby": 0.3
+					},
+					"Sleeping": 0.2
 				},
 				"Vindicator": 0.6,
 				"Wandering Trader": 0.6,
@@ -582,7 +585,10 @@
 					"Adult": 0.6,
 					"Baby": 0.3
 				},
-				"Player": 0.6,
+				"Player": {
+					"Awake": 0.6,
+					"Sleeping": 0.2
+				},
 				"Fishing Bobber": 0.25
 			}
 		},
@@ -778,8 +784,11 @@
 				},
 				"Vex": 0.8,
 				"Villager": {
-					"Adult": 1.95,
-					"Baby": 0.975
+					"Awake": {
+						"Adult": 1.95,
+						"Baby": 0.975
+					},
+					"Sleeping": 0.2
 				},
 				"Vindicator": 1.95,
 				"Wandering Trader": 1.95,
@@ -815,6 +824,7 @@
 					"Standing": 1.8,
 					"Crouching": 1.5,
 					"Swimming": 0.6,
+					"Sleeping": 0.2,
 					"Dying": 0.2
 				},
 				"Fishing Bobber": 0.25
@@ -1145,8 +1155,11 @@
 				},
 				"Vex": 0.68,
 				"Villager": {
-					"Adult": 1.62,
-					"Baby": 0.81
+					"Awake": {
+						"Adult": 1.62,
+						"Baby": 0.81
+					},
+					"Sleeping": 0.2
 				},
 				"Vindicator": 1.6575,
 				"Wandering Trader": 1.62,
@@ -1181,7 +1194,8 @@
 				"Player": {
 					"Standing": 1.62,
 					"Crouching": 1.27,
-					"Swimming": 0.4
+					"Swimming": 0.4,
+					"Sleeping": 0.2
 				},
 				"Fishing Bobber": 0.2125
 			}
