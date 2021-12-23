@@ -777,7 +777,7 @@
 		},
 		"conductivity": { 
 			"property_name": "Conductive",
-			"property_description": "Determintes whether or not a redstone component can be powered through this block.",
+			"property_description": "Whether or not a redstone component can be powered through this block.",
 			"default_value": "Yes",
 			"default_selection": true,
 			"entries": {
@@ -918,6 +918,7 @@
 		},
 		"collision": { 
 			"property_name": "Has Collision",
+			"property_description": "Whether the block has a solid collision that stops entities like players.</p><p>Fluids are listed with a separate value.",
 			"default_value": "Yes",
 			"default_selection": true,
 			"entries": {
@@ -1071,6 +1072,7 @@
 		},
 		"affects_movement": { 
 			"property_name": "Affects Movement",
+			"property_description": "Whether walking on/through this block affects the movement of players or certain other entities.",
 			"default_value": "No",
 			"default_selection": false,
 			"entries": {
@@ -1100,6 +1102,7 @@
 		},
 		"movable": {
 			"property_name": "Movable",
+			"property_description": "Whether it can be pushed by a piston, or whether attempting to push it destroys the block.",
 			"default_value": "Yes",
 			"default_selection": true,
 			"entries":{
@@ -1236,6 +1239,7 @@
 		},
 		"sticky": {
 			"property_name": "Sticky",
+			"property_description": "If the block can be pulled by a sticky piston or an adjacent slime/honey block.</p><p>Slime and honey are listed as 'partially' as they are not sticky when pulled by one another.",
 			"default_value": "Yes",
 			"default_selection": false,
 			"entries":{
@@ -1367,6 +1371,7 @@
 		},
 		"blast_resistance": { 
 			"property_name": "Blast Resistance",
+			"property_description": "Determines how likely this block is to break from exposure to an explosion.",
 			"default_value": null,
 			"max": 10,
 			"default_selection": true,
@@ -1644,6 +1649,7 @@
 		},
 		"hardness": {
 			"property_name": "Hardness",
+			"property_description": "Determines how fast the block can be mined.",
 			"default_value": null,
 			"default_selection": false,
 			"entries":{
@@ -1922,6 +1928,7 @@
 		},
 		"instant_mineable": {
 			"property_name": "Instant-Mineable",
+			"property_description": "Whether this block can be instant-mined when using at least:</p><p>-Efficiency V Diamond/<wbr>Netherite (Yes)</p><p>-Efficiency V Gold (With Gold)</p><p>-Haste 2 with Diamond or greater (With Haste)",
 			"default_value": null,
 			"default_selection": true,
 			"entries": {
@@ -2189,6 +2196,7 @@
 		},
 		"luminosity": {
 			"property_name": "Luminosity",
+			"property_description": "How much light the block emits.",
 			"default_value": "No",
 			"default_selection": true,
 			"entries": {
@@ -2291,8 +2299,9 @@
 		},
 		"height_all": {
 			"property_name": "Height (All)",
-			"default_value": 16,
+			"property_description": "The block's upwards-facing collision surfaces.</p><p>Includes internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
 			"size_type": "pixel",
+			"default_value": 16,
 			"default_selection": false,
 			"entries": {
 				"Amethyst Cluster": {
@@ -2535,8 +2544,9 @@
 		},
 		"height_external": {
 			"property_name": "Height (External)",
-			"default_value": 16,
+			"property_description": "The block's upwards-facing collision surfaces.</p><p>Does not include internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
 			"size_type": "pixel",
+			"default_value": 16,
 			"default_selection": true,
 			"entries": {
 				"Amethyst Cluster": {
@@ -2816,8 +2826,9 @@
 		},
 		"width_all": {
 			"property_name": "Width (All)",
-			"default_value": 16,
+			"property_description": "The block's side-facing collision surfaces.</p><p>Includes internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
 			"size_type": "pixel",
+			"default_value": 16,
 			"default_selection": false,
 			"entries": {
 				"Amethyst Cluster": {
@@ -3109,8 +3120,9 @@
 		},
 		"width_external": {
 			"property_name": "Width (External)",
-			"default_value": 16,
+			"property_description": "The block's side-facing collision surfaces.</p><p>Does not include internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
 			"size_type": "pixel",
+			"default_value": 16,
 			"default_selection": true,
 			"entries": {
 				"Amethyst Cluster": {
@@ -3442,8 +3454,9 @@
 		},
 		"collision_bottom_all": {
 			"property_name": "Collision Bottom (All)",
-			"default_value": 16,
+			"property_description": "The block's downwards-facing collision surfaces.</p><p>Includes internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
 			"size_type": "pixel",
+			"default_value": 16,
 			"default_selection": false,
 			"entries": {
 				"Amethyst Cluster": {
@@ -3654,8 +3667,9 @@
 		},
 		"collision_bottom_external": {
 			"property_name": "Collision Bottom (External)",
-			"default_value": 16,
+			"property_description": "The block's downwards-facing collision surfaces.</p><p>Does not include internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
 			"size_type": "pixel",
+			"default_value": 16,
 			"default_selection": false,
 			"entries": {
 				"Amethyst Cluster": {
@@ -3885,6 +3899,7 @@
 		},
 		"full_cube": {
 			"property_name": "Full Cube",
+			"property_description": "Whether the block has a normal cube shape and has a full block collision on all sides.",
 			"default_value": "No",
 			"default_selection": true,
 			"entries": {
@@ -4035,6 +4050,7 @@
 		},
 		"obstructs_cactus": {
 			"property_name": "Obstructs Cactus",
+			"property_description": "Whether placing this block next to cactus destroys it.",
 			"default_value": "Yes",
 			"default_selection": false,
 			"entries":{
@@ -4117,6 +4133,7 @@
 		},
 		"waterloggable": {
 			"property_name": "Waterloggable",
+			"property_description": "Whether this block can be waterlogged.",
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
@@ -4164,6 +4181,7 @@
 		},
 		"enderman_holdable": {
 			"property_name": "Enderman holdable",
+			"property_description": "Whether endermen can pick up and hold this block.",
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
@@ -4188,6 +4206,7 @@
 		},
 		"dragon_immune": {
 			"property_name": "Dragon immune",
+			"property_description": "Whether this block is immune to The Ender Dragon flying through it.",
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
@@ -4215,6 +4234,7 @@
 		},
 		"wither_immune": {
 			"property_name": "Wither immune",
+			"property_description": "Whether this block is immune to the skull projectiles shot by The Wither.",
 			"default_value": "No",
 			"default_selection": false,
 			"entries": {
@@ -4237,6 +4257,7 @@
 		},
 		"spawnable": {
 			"property_name": "Spawnable",
+			"property_description": "Whether mobs can spawn on this block.",
 			"default_value": "No",
 			"default_selection": true,
 			"entries": {
@@ -4387,6 +4408,7 @@
 		},
 		"flammable": {
 			"property_name": "Flammable",
+			"property_description": "Whether the block can be destroyed by/can sustain fire.",
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
@@ -4443,7 +4465,8 @@
 			}
 		},
 		"catche_fire_from_lava": {
-			"property_name": "Catches fire from lava",
+			"property_name": "Catches&nbsp;fire from&nbsp;lava",
+			"property_description": "Whether this block will catch fire from nearby lava.",
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
@@ -4498,6 +4521,7 @@
 		},
 		"updates_comparator": {
 			"property_name": "Updates Comparator",
+			"property_description": "Whether interactions with this block causes comparators up to 2 blocks away (manhattan distance) to update.",
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
@@ -4526,6 +4550,7 @@
 		},
 		"survival_available": {
 			"property_name": "Survival available",
+			"property_description": "Whether the block is avalible in normal survival gameplay.</p><p>Yes means the block is either obtainable as an item, or can easily be created anywhere in the world.</p><p>Unobtianable means the block cannot be created or obtained in conventional ways, but the block is still avalible in the world.</p><p>No means the block is exclusive to creative mode/cheats.",
 			"default_value": "Yes",
 			"default_selection": false,
 			"entries":{
@@ -4551,6 +4576,7 @@
 		},
 		"gets_flushed": {
 			"property_name": "Gets Flushed",
+			"property_description": "Whether this block will get destroyed by flowing water.",
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
@@ -4607,6 +4633,7 @@
 		},
 		"instrument": {
 			"property_name": "Note Block Instrument",
+			"property_description": "Which instrument a noteblock will play if placed above this block.",
 			"default_value": "Harp / Piano",
 			"default_selection": false,
 			"entries": {
