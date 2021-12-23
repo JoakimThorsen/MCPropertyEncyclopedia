@@ -1304,6 +1304,25 @@
 				"Zombified Piglin": 20,
 				"Player": 20
 			}
+		},
+		"explosion_power": {
+			"property_name": "Explosion Power",
+			"default_value": "Not Applicable",
+			"default_selection": false,
+			"entries": {
+				"Fireball": 1,
+				"Wither Skull": 1,
+				"Creeper": {
+					"Normal": 3,
+					"Charged": 6
+				},
+				"Primed TNT": 4,
+				"End Crystal": 6,
+				"Wither": {
+					"When Spawning": 7
+				},
+				"Minecart with TNT": "4-11.5"
+			}
 		}
 	}
 }
