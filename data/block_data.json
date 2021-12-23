@@ -11,7 +11,7 @@
 		"Partially": "cf-neutral",
 		"With Gold": "cf-neutral",
 		"Inherent": "cf-neutral",
-		"Unobtainable": "cf-neutral",
+		"Uncreatable": "cf-neutral",
 		
 		"With Haste": "cf-neutral-no",
 		
@@ -4549,27 +4549,27 @@
 			}
 		},
 		"survival_available": {
-			"property_name": "Survival available",
-			"property_description": "Whether the block is avalible in normal survival gameplay.</p><p>Yes means the block is either obtainable as an item, or can easily be created anywhere in the world.</p><p>Unobtianable means the block cannot be created or obtained in conventional ways, but the block is still avalible in the world.</p><p>No means the block is exclusive to creative mode/cheats.",
+			"property_name": "Survival Available",
+			"property_description": "Whether the block is avalible in normal survival gameplay.</p><p>Yes means the block is either obtainable as an item, or can easily be created anywhere in the world.</p><p>Uncreatable means the block cannot be created or obtained in conventional ways, but the block is still avalible in the world.</p><p>No means the block is exclusive to creative mode/cheats.",
 			"default_value": "Yes",
 			"default_selection": false,
 			"entries":{
 				"Barrier": "No",
 				"Beacon": "Yes (Unless In Peaceful)",
-				"Bedrock": "Unobtainable",
-				"Budding Amethyst": "Unobtainable",
+				"Bedrock": "Uncreatable",
+				"Budding Amethyst": "Uncreatable",
 				"Command Blocks": "No",
-				"End Gateway": "Unobtainable",
-				"End Portal Frame": "Unobtainable",
-				"End Portal": "Unobtainable",
+				"End Gateway": "Uncreatable",
+				"End Portal Frame": "Uncreatable",
+				"End Portal": "Uncreatable",
 				"Heads": {
 					"Mob skulls": "Yes",
 					"Player heads": "No"
 				},
-				"Infested Blocks": "Unobtainable",
+				"Infested Blocks": "Uncreatable",
 				"Jigsaw Block": "No",
 				"Light Block": "No",
-				"Spawner": "Unobtainable",
+				"Spawner": "Uncreatable",
 				"Structure Block": "No",
 				"Structure Void": "No"
 			}
