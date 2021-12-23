@@ -103,14 +103,12 @@ function display_headers_and_table() {
         property.size_factor = size_factor;
     }
     
-    console.log("test");
     // Add all unique values to a list of possible values for each property (recursively so for objects)
     Object.entries(data.properties).filter(([property_name, _]) => selection_arr.includes(property_name)).forEach(([property_name, property]) => {
         value_list[property_name] = [];
         if(property.default_value != null) {
             add_value(value_list[property_name], property.default_value, property);
         }
-        console.log(property_name);
         add_value(value_list[property_name], property.entries, property);
     });
     function add_value(list, entry, property) {
@@ -198,7 +196,7 @@ function display_headers_and_table() {
         
         if(typeof data.properties[property].property_description !== 'undefined') {
             append_data += `<li class="dropdown-submenu">
-                        <a href="#">Description...</a>
+                        <a href="#" class="description-button">Description...</a>
                         <ul class="dropdown-menu">
                             <p>${data.properties[property].property_description}</p>
                         </ul>
@@ -206,7 +204,6 @@ function display_headers_and_table() {
         }
         append_data += `<li class="divider"></li><div class="dropdown-scrollable">`;
 
-        console.log(value_list);
         // Filter menu
         value_list[property].sort().reverse().sort((a, b) => (a - b)).forEach(option => {
             var color = formatting_color(option, property, true);
@@ -297,7 +294,10 @@ function display_headers_and_table() {
         update_window_history();
         display_results();
     });
-
+    $('.description-button').click(function (e) {
+        e.stopPropagation();
+        $(this).parent().toggleClass('open')
+    });
     display_results();
     
 }

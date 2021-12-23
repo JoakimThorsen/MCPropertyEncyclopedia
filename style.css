@@ -209,6 +209,9 @@ li {
 .dropdown-submenu.open>.dropdown-menu  {
     display: block;
 }
+.dropdown-menu>li.dropdown-submenu.open>a {
+    background-color: #dbdbdb;
+}
 
 .dropdown-submenu>a:after {
     display: block;
