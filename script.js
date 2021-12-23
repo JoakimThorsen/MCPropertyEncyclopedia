@@ -298,6 +298,9 @@ function display_headers_and_table() {
         e.stopPropagation();
         $(this).parent().toggleClass('open')
     });
+    $('.dropdown-submenu>.dropdown-menu').click(function (e) {
+        e.stopPropagation();
+    });
     display_results();
     
 }
