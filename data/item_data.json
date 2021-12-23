@@ -2211,8 +2211,8 @@
 		"Zombified Piglin Spawn Egg": ["item-sprite",-160, -320]
 	},
 	"properties": {
-		"namespace_id": {
-			"property_name": "Namespace ID",
+		"id": {
+			"property_name": "ID",
 			"default_value": null,
 			"default_selection": true,
 			"entries": {

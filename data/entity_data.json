@@ -237,8 +237,8 @@
 		"Fishing Bobber": ["entity-sprite", -128, -64]
 	},
 	"properties": {
-		"namespace_id": {
-			"property_name": "Namespace ID",
+		"id": {
+			"property_name": "ID",
 			"default_value": null,
 			"default_selection": true,
 			"entries": {
