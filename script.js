@@ -155,7 +155,7 @@ function display_headers_and_table() {
         var link = document.createElement("a");
         link.setAttribute("href", encodedUri);
         link.setAttribute("download", page+"list.csv");
-        document.body.appendChild(link); // Required for FF
+        document.body.appendChild(link); // Required for FireFox
 
         link.click();
     });
@@ -179,22 +179,32 @@ function display_headers_and_table() {
                 <i class="fas fa-sort-amount-down-alt${sorted == 1 ? '':' display-none'} sorted"></i>
                 <i class="fas fa-sort-amount-up${sorted == -1 ? '':' display-none'} sorted-reverse"></i>
                 <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </span></a><ul class="dropdown-menu scrollable">
+                </span></a><ul class="dropdown-menu">
                 <li>
                 <div class="text-center">
-                <span class="btn-group dropdown-btn-group" role="group">
-                    <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == 1 ? ' active' : ''}" property="${property}" reversed="false">
-                        <i class="fas fa-sort-amount-down-alt"></i>
-                    </a>
-                    <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == -1 ? ' active' : ''}" property="${property}" reversed="true">
-                        <i class="fas fa-sort-amount-up"></i>
-                    </a>
-                    <a role="button" class="btn dropdown-btn btn-default toggle-select-all" property="${property}">
-                        <i class="far fa-check-square"></i>
-                    </a>
-                </span>
+                    <span class="btn-group dropdown-btn-group" role="group">
+                        <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == 1 ? ' active' : ''}" property="${property}" reversed="false">
+                            <i class="fas fa-sort-amount-down-alt"></i>
+                        </a>
+                        <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == -1 ? ' active' : ''}" property="${property}" reversed="true">
+                            <i class="fas fa-sort-amount-up"></i>
+                        </a>
+                        <a role="button" class="btn dropdown-btn btn-default toggle-select-all" property="${property}">
+                            <i class="far fa-check-square"></i>
+                        </a>
+                    </span>
                 </div>
                 </li>`;
+        
+        if(typeof data.properties[property].property_description !== 'undefined') {
+            append_data += `<li class="dropdown-submenu">
+                        <a href="#">Description...</a>
+                        <ul class="dropdown-menu">
+                            <p>${data.properties[property].property_description}</p>
+                        </ul>
+                    </li>`;
+        }
+        append_data += `<li class="divider"></li><div class="dropdown-scrollable">`;
 
         console.log(value_list);
         // Filter menu
@@ -207,7 +217,7 @@ function display_headers_and_table() {
                     <span class="glyphicon glyphicon-ok${filter_obj[property] !== undefined && filter_obj[property].includes(option) ? ' display-none':''}">
                     </span></a></li>`
         });
-        append_data += `</ul></div></th>`;
+        append_data += `</div></ul></div></th>`;
         
         $('#output_table').children('thead').children('tr').append(append_data);
     });

@@ -777,6 +777,7 @@
 		},
 		"conductivity": { 
 			"property_name": "Conductive",
+			"property_description": "Determintes whether or not a redstone component can be powered through this block.",
 			"default_value": "Yes",
 			"default_selection": true,
 			"entries": {
