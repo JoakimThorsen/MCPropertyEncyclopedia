@@ -2918,6 +2918,7 @@
 					"Connected Front": 16,
 					"Connected Back (Internal)": 3
 				},
+				"Composter": [2, 4, 6, 8, 10, 12, 14, 16],
 				"Stairs": { 
 					"Thin Part": 8,
 					"Wide Part": 16,
@@ -3232,6 +3233,10 @@
 					"Main Body": 13,
 					"Connected Front": 16
 				},
+				"Composter": {
+					"Outside": 16,
+					"Inside": 2
+				},
 				"Stairs": { 
 					"Thin Part": 8,
 					"Wide Part": 16,
@@ -3506,6 +3511,7 @@
 					"Connected Top (Internal)": 3,
 					"Main Body": 13
 				},
+				"Composter": [2, 4, 6, 8, 10, 12, 14, 16],
 				"Cocoa": {
 					"Age 0": 9,
 					"Age 1": 11,
@@ -3730,6 +3736,7 @@
 					"Connected Bottom": 16,
 					"Main Body": 13
 				},
+				"Composter": 16,
 				"Cocoa": {
 					"Age 0": 9,
 					"Age 1": 11,
