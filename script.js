@@ -576,6 +576,7 @@ function formatting_color(value, property_name, class_exists = false) {
 function update_window_history() {
     var url = "";
     if(selection_arr != undefined) url += "&selection=" + JSON.stringify(selection_arr);
+    if(Object.keys(settings_obj).length > 0) url += "&settings=" + JSON.stringify(settings_obj);
     if(Object.keys(filter_obj).length > 0) url += "&filter=" + JSON.stringify(filter_obj);
     if(sort_arr.length > 0) url += "&sort=" + JSON.stringify(sort_arr);
     if(url != "") {
