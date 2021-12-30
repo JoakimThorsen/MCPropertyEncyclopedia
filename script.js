@@ -205,7 +205,7 @@ function display_headers_and_table() {
         append_data += `<li class="divider"></li><div class="dropdown-scrollable">`;
 
         // Filter menu
-        value_list[property].sort().reverse().sort((a, b) => (a - b)).forEach(option => {
+        sort_mixed_types(value_list[property]).forEach(option => {
             var color = formatting_color(option, property, true);
             append_data += `<li>
                     <a role="button" class="dropdown-option modify-filter" property="${property}" value="${option}">
@@ -477,7 +477,7 @@ function display_results() {
                 if (typeof val_0 == 'string' || typeof val_1 == 'string') {
                     result = val_0.toString().localeCompare(val_1.toString(), undefined, {numeric: true, sensitivity: 'base'});
                 } else {
-                    result = val_0 > val_1 ? 1: (val_0 == val_1 ? 0:-1);
+                    result = val_0 > val_1 ? 1 : (val_0 == val_1 ? 0 : -1);
                 }
 
                 return result;
@@ -503,7 +503,7 @@ function display_results() {
     function get_data_cell(entry, property_name, top_level = true) {
         var return_data;
         if(typeof(entry) == 'object' && entry != null) {
-            if(top_level && ((entry.length || Object.values(entry).length) > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2)) {
+            if(top_level && (get_all_values(entry).length > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2)) {
                 return_data = `<td class="nested-cell"><button class="btn expand-btn" type="button" data-toggle="collapse-next">Expand</button>\n<table class="table table-bordered table-hover nested-table collapse"><tbody>`;
             } else {
                 return_data = `<td class="nested-cell"><table class="table table-bordered table-hover nested-table"><tbody>`;
@@ -536,6 +536,34 @@ function display_results() {
     });
 
 }
+
+function get_all_values(input) {
+    if (typeof input == 'object') {
+        var return_arr = [];
+        for (let value in input) {
+            return_arr = return_arr.concat(...get_all_values(input[value]));
+        }
+        return return_arr;
+    } else {
+        return [input];
+    }
+}
+
+function sort_mixed_types(list) {
+    return list.sort((a, b) => {
+        if (typeof a == 'number' && typeof b == 'number') {
+            result = a - b;
+        } else if (typeof a == 'string' && typeof b == 'number') {
+            return -1;
+        } else if (typeof a == 'number' && typeof b == 'string') {
+            return 1;
+        } else {
+            result = a.localeCompare(b, undefined, {numeric: true, sensitivity: 'base'});
+        }
+        return result;
+    });
+}
+
 function formatting_color(value, property_name, class_exists = false) {
     let color = "";
     if(value*1==value){
