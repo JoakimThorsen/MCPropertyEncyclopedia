@@ -8,6 +8,8 @@ var sort_arr = JSON.parse(urlParams.get("sort")) ?? [];
 var selection_arr = JSON.parse(urlParams.get("selection")) ?? null;
 var settings_obj = JSON.parse(urlParams.get("settings")) ?? {};
 
+var search = urlParams.get("search") ?? "";
+
 var page, entry_header, exportable_list;
 
 function load_data(filename) {
@@ -87,6 +89,11 @@ function initialize_settings() {
         update_window_history();
         display_headers_and_table();
     });
+    $('#search').on('input', function() {
+        search = $(this).val();
+        update_window_history();
+        display_results();
+    });
 }
 
 // This functions only handles headers, but calls display_results()
@@ -103,7 +110,7 @@ function display_headers_and_table() {
         property.size_factor = size_factor;
     }
     
-    // Add all unique values to a list of possible values for each property (recursively so for objects)
+    // Add all unique values of a property to a list of possible values for said property (recursively so for objects)
     Object.entries(data.properties).filter(([property_name, _]) => selection_arr.includes(property_name)).forEach(([property_name, property]) => {
         value_list[property_name] = [];
         if(property.default_value != null) {
@@ -128,13 +135,14 @@ function display_headers_and_table() {
     
     
     // Table headers
-    $('#output_table').children('thead').children('tr').append(`<th></th><th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">${entry_header}<span class="icons">
+    $('#output_table').children('thead').children('tr').append(`<th></th>
+    <th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">${entry_header}<span class="icons">
         <i class="fas fa-sort-amount-down-alt${sort_arr.some(e => e.property === page) && !sort_arr.filter(e => e.property === page)[0].reversed ? '':' display-none'} sorted"></i>
         <i class="fas fa-sort-amount-up${sort_arr.some(e => e.property === page) && sort_arr.filter(e => e.property === page)[0].reversed ? '':' display-none'} sorted-reverse"></i>
     <span class="glyphicon glyphicon-triangle-bottom"></span>
     </span></a><ul class="dropdown-menu"><li>
     <div class="text-center">
-    <span class="btn-group dropdown-btn-group" role="group">
+    <span class="btn-group" role="group">
         <a role="button" class="btn dropdown-btn btn-default modify-sorting${(sort_arr.some(e => e.property === page) && !sort_arr.filter(e => e.property === page)[0].reversed) ? ' active' : ''}" property=${page} reversed="false">
             <i class="fas fa-sort-amount-down-alt"></i>
         </a>
@@ -180,7 +188,7 @@ function display_headers_and_table() {
                 </span></a><ul class="dropdown-menu">
                 <li>
                 <div class="text-center">
-                    <span class="btn-group dropdown-btn-group" role="group">
+                    <span class="btn-group" role="group">
                         <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == 1 ? ' active' : ''}" property="${property}" reversed="false">
                             <i class="fas fa-sort-amount-down-alt"></i>
                         </a>
@@ -379,6 +387,13 @@ function display_results() {
     // // For entry count:
     // $('#entry_count').html(output_data.length.toString());
 
+    for (const key in output_data) {
+        var entry = output_data[key][page].toLowerCase();
+        if(!search.split(' ').every(term => entry.includes(term.toLowerCase()))) {
+            delete output_data[key];
+        }
+    }
+
     function deepCopy(obj) {
         if(Array.isArray(obj)) {
             let result = [];
@@ -552,15 +567,14 @@ function get_all_values(input) {
 function sort_mixed_types(list) {
     return list.sort((a, b) => {
         if (typeof a == 'number' && typeof b == 'number') {
-            result = a - b;
+            return a - b;
         } else if (typeof a == 'string' && typeof b == 'number') {
             return -1;
         } else if (typeof a == 'number' && typeof b == 'string') {
             return 1;
         } else {
-            result = a.localeCompare(b, undefined, {numeric: true, sensitivity: 'base'});
+            return a.localeCompare(b, undefined, {numeric: true, sensitivity: 'base'});
         }
-        return result;
     });
 }
 
@@ -603,10 +617,13 @@ function formatting_color(value, property_name, class_exists = false) {
 
 function update_window_history() {
     var url = "";
-    if(selection_arr != undefined) url += "&selection=" + JSON.stringify(selection_arr);
-    if(Object.keys(settings_obj).length > 0) url += "&settings=" + JSON.stringify(settings_obj);
-    if(Object.keys(filter_obj).length > 0) url += "&filter=" + JSON.stringify(filter_obj);
-    if(sort_arr.length > 0) url += "&sort=" + JSON.stringify(sort_arr);
+    if(selection_arr != undefined)              url += "&selection=" + JSON.stringify(selection_arr);
+    if(Object.keys(settings_obj).length > 0)    url += "&settings=" + JSON.stringify(settings_obj);
+    if(Object.keys(filter_obj).length > 0)      url += "&filter=" + JSON.stringify(filter_obj);
+    if(sort_arr.length > 0)                     url += "&sort=" + JSON.stringify(sort_arr);
+    
+    if(search.length > 0)                       url += "&search=" + search;
+    
     if(url != "") {
         url = '?' + url.substr(1) + '#';
     }
