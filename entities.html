@@ -58,38 +58,72 @@
 </nav>
 
 <div class="container-fluid text-center" id="main-body">
-  <div class="col-md-2 col-lg-3"></div>
-  <div class="col-md-8 col-lg-6">
+  <div class="col-md-1 col-lg-3"></div>
+  <div class="col-md-10 col-lg-6">
     <h1 class="text-center" style="font-size: 40px;">Minecraft Entity Property Encyclopedia</h1>
-    <h2 class="display-none">Actively being made by @JoaBro#6761, info is accurate as of 1.17.1.<br>This is an open source project: Check out the <a href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia">Github Page</a>.<br>Any suggestions and/or pull requests are of course welcome</h2>
+    <h2 style="font-size: 24px;">This is an open source project. View the <a href="about.html">about</a> page for more info.<br>Click the button below to customize your selection:</h2>
+  </div>
+  <div class="col-md-1 col-lg-3"></div>
+  <div class="col-sm-12">
     <div class="btn-group">
-      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+      <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="dropdown">
           Property Selection <span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" id="selection">
-          
-      </ul>
-      </div>
-      <div class="reset-buttons">
-      <button class="btn" type="button" onclick="selection_arr = []; update_window_history();display_selection(); display_headers_and_table();">Reset selection</button>
-      <button class="btn" type="button" onclick="sort_arr = []; update_window_history(); display_headers_and_table();">Reset sorting</button>
-      <button class="btn" type="button" onclick="filter_obj = {}; update_window_history(); display_headers_and_table();">Reset filters</button>
-      </div> 
-      <div class="form-inline text-center">
-          <input class="form-control" id="search" placeholder="Seach for entities..." autofocus type="search" autocomplete="off">
+        </button>
+        <ul class="dropdown-menu" id="selection">
+          <!-- Selection options are inserted here using jQuery -->
+        </ul>
+    </div>
+    <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="collapse-next">
+        <i class="fas fa-tools"></i>
+    </button>
+    <div class="collapse">
+      <div class="settings">
+        
+        <div class="settings-box">
+          <p>Reset:</p>
+          <button class="btn btn-default" type="button" onclick="selection_arr = undefined; update_window_history(); display_selection(); display_headers_and_table();">Property Selection</button>
+          <button class="btn btn-default" type="button" onclick="selection_arr = []; update_window_history(); display_selection(); display_headers_and_table();">Clear Property Selection</button>
+          <button class="btn btn-default" type="button" onclick="filter_obj = {}; update_window_history(); display_headers_and_table();">Filters</button>
+          <button class="btn btn-default" type="button" onclick="sort_arr = []; update_window_history(); display_headers_and_table();">Sorting</button>
+        </div>
+
+        <div class="settings-box">
+          <p>Export entitylist:</p>
+          <a role="button" class="btn dropdown-btn btn-default export-csv">
+            <i class="fas fa-file-export"></i>Export CSV
+          </a>
+        </div>
+
+        <div class="settings-box">
+          <p>Convert size values to:</p>
+          <div class="btn-group">
+            <a role="button" class="btn btn-default radio-settings" type="button" setting="size_type" value="pixel"><i class="fas fa-th-large"></i> Pixel</a>
+            <a role="button" class="btn btn-default radio-settings" type="button" setting="size_type" value="block"><i class="fas fa-square"></i> Block</a>
+          </div>
+        </div>
+
+        <div class="settings-box">
+          <p>Expandable tables:</p>
+          <div class="btn-group">
+            <a role="button" class="btn btn-default" type="button" onclick="$('table.collapse').toggle();">Expand All</a>
+            <a role="button" class="btn btn-default" type="button" onclick="$('.expand-btn').toggle();">Hide Buttons</a>
+          </div>
+        </div>
+
       </div>
     </div>
-  <div class="col-md-2 col-lg-3"></div>
-  <div class="col-sm-12">
+    <div class="form-inline text-center">
+      <input class="form-control" id="search" placeholder="Seach for entities..." autofocus type="search" autocomplete="off">
+    </div>
     <div class="results">
-        <table class="table table-bordered table-hover text-left" id="output_table">
-            <thead>
-                <tr></tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
+      <table class="table table-bordered table-hover text-left" id="output_table">
+        <thead>
+          <tr></tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
