@@ -79,6 +79,7 @@ function initialize_page() {
     $(window).on('popstate', function() {
         location.reload(true);
     });
+
     $('.radio-settings').click(function(e) {
         var setting = $(this).attr("setting");
         var value = $(this).attr("value");
@@ -92,6 +93,7 @@ function initialize_page() {
         update_window_history();
         display_headers_and_table();
     });
+    
     $('#search').val(search);
     $('#search').on('input', function() {
         search = $(this).val();
@@ -643,4 +645,24 @@ function update_window_history() {
     url = window.location.origin + window.location.pathname + url;
 
     window.history.pushState("", "", url);
+}
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+    scrollButton = document.getElementById("scrollButton");
+    console.log(document.body.scrollTop, document.documentElement.scrollTop);
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollButton.style.display = "block";
+    } else {
+        scrollButton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function scrollToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
