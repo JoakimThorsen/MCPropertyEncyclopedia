@@ -950,6 +950,24 @@
 				"Fishing Bobber": "projectile"
 			}
 		},
+		"undead": {
+			"property_name": "Undead",
+			"default_value": "No",
+			"default_selection": false,
+			"entires": {
+				"Drowned": "Yes",
+				"Husk": "Yes",
+				"Phantom": "Yes",
+				"Skeleton": "Yes",
+				"Skeleton Horse": "Yes",
+				"Stray": "Yes",
+				"Wither": "Yes",
+				"Wither Skeleton": "Yes",
+				"Zoglin": "Yes",
+				"Zombie": "Yes",
+				"Zombified Piglin": "Yes"
+			}
+		},
 		"eye_height": {
 			"property_name": "Eye Height",
 			"default_value": null,
