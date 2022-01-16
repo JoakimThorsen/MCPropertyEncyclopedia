@@ -36,8 +36,8 @@ function load_data(filename) {
         'dataType': "json",
         'success': function (d) {
             data = d;
+            initialize_page();
             display_selection();
-            initialize_settings();
             display_headers_and_table();
         }
     });
@@ -75,7 +75,7 @@ function display_selection() {
     });
 }
 
-function initialize_settings() {
+function initialize_page() {
     $('.radio-settings').click(function(e) {
         var setting = $(this).attr("setting");
         var value = $(this).attr("value");
@@ -89,6 +89,7 @@ function initialize_settings() {
         update_window_history();
         display_headers_and_table();
     });
+    $('#search').val(search);
     $('#search').on('input', function() {
         search = $(this).val();
         update_window_history();
@@ -508,6 +509,13 @@ function display_results() {
         var append_string = "<tr>";
         var sprite = data.sprites[entry[page]];
         append_string += `<td><span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span></td>`;
+        if(search) {
+            search.split(' ')
+                .filter(e => e !== '')
+                .every(term => entry[page] = entry[page].replace(new RegExp(term, "ig"), '{$&}'));
+            console.log(entry[page]);
+            entry[page] = entry[page].replace(/{/g, '<span class="search-highlight">').replace(/}/g, '</span>')
+        }
         for(var [property_id, value] of Object.entries(entry)) {
             append_string += get_data_cell(value, property_id);
         };

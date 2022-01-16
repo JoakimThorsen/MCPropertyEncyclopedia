@@ -280,6 +280,10 @@ li {
     background-image: url(assets/ItemCSS.png);
 }
 
+.search-highlight {
+    background-color: yellow;
+}
+
 .display-none {
     display: none !important;
 }
