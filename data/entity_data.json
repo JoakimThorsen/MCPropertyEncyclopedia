@@ -954,7 +954,7 @@
 			"property_name": "Undead",
 			"default_value": "No",
 			"default_selection": false,
-			"entires": {
+			"entries": {
 				"Drowned": "Yes",
 				"Husk": "Yes",
 				"Phantom": "Yes",
