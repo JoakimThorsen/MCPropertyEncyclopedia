@@ -620,7 +620,7 @@ function formatting_color(value, property_name, class_exists = false) {
             color = '"' + color;
         }
 
-    } else if (found_key = Object.keys(data.conditional_formatting).find(key_regex => new RegExp(key_regex).test(value))) {
+    } else if (found_key = Object.keys(data.conditional_formatting).find(key_regex => new RegExp(`^${key_regex}$`).test(value))) {
         color = data.conditional_formatting[found_key];
         if(!class_exists) {
             color = `class="${color}"`;
