@@ -76,6 +76,9 @@ function display_selection() {
 }
 
 function initialize_page() {
+    $(window).on('popstate', function() {
+        location.reload(true);
+    });
     $('.radio-settings').click(function(e) {
         var setting = $(this).attr("setting");
         var value = $(this).attr("value");
