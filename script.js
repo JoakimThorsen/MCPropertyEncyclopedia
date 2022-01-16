@@ -49,7 +49,7 @@ function display_selection() {
     if(selection_arr == undefined) {
         selection_arr = [];
         for(let [property_name, value] of Object.entries(data.properties)) {
-            if(value.default_selection ?? true) {
+            if(value.default_selection ?? false) {
                 selection_arr.push(property_name);
             }
         }
@@ -591,13 +591,15 @@ function formatting_color(value, property_name, class_exists = false) {
         let colorA = [152,110,208];
         let colorB = [164,221,255];
         if(value < max) {
-            // var hue = scale(value, max, 200, 280);
-            // color = `style="background-color: hsl(${hue},70%,70%)!important"`;
+            var hue = scale(value, max, 266, 202);
+            var sat = scale(value, max, 62, 100);
+            var val = scale(value, max, 68, 82);
+            color = `style="background-color: hsl(${hue},${sat}%,${val}%)!important"`;
             
-            var r = scale(value, max, colorA[0], colorB[0]);
-            var g = scale(value, max, colorA[1], colorB[1]);
-            var b = scale(value, max, colorA[2], colorB[2]);
-            color = `style="background-color: rgb(${r},${g},${b})!important"`;
+            // var r = scale(value, max, colorA[0], colorB[0]);
+            // var g = scale(value, max, colorA[1], colorB[1]);
+            // var b = scale(value, max, colorA[2], colorB[2]);
+            // color = `style="background-color: rgb(${r},${g},${b})!important"`;
         } else {
             // console.log(max, property_name);
             color = `style="background-color: rgb(${colorB[0]}, ${colorB[1]}, ${colorB[2]})"`;
@@ -606,8 +608,8 @@ function formatting_color(value, property_name, class_exists = false) {
             color = '"' + color;
         }
 
-    } else if(value in data.conditional_formatting) {
-        color = data.conditional_formatting[value];
+    } else if (found_key = Object.keys(data.conditional_formatting).find(key_regex => new RegExp(key_regex).test(value))) {
+        color = data.conditional_formatting[found_key];
         if(!class_exists) {
             color = `class="${color}"`;
         }
