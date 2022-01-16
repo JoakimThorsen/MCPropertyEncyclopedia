@@ -518,7 +518,6 @@ function display_results() {
             search.split(' ')
                 .filter(e => e !== '')
                 .every(term => entry[page] = entry[page].replace(new RegExp(term, "ig"), '{$&}'));
-            console.log(entry[page]);
             entry[page] = entry[page].replace(/{/g, '<span class="search-highlight">').replace(/}/g, '</span>')
         }
         for(var [property_id, value] of Object.entries(entry)) {
@@ -653,7 +652,6 @@ window.onscroll = function() { scrollFunction() };
 
 function scrollFunction() {
     scrollButton = document.getElementById("scrollButton");
-    console.log(document.body.scrollTop, document.documentElement.scrollTop);
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         scrollButton.style.display = "block";
     } else {
