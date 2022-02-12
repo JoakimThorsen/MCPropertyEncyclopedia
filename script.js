@@ -591,42 +591,54 @@ function sort_mixed_types(list) {
 }
 
 function formatting_color(value, property_name, class_exists = false) {
-    let color = "";
-    if(value*1==value){
-        value = value*1;
-
-        // Minimum in value is assumed to be 0
-        function scale(number, inMax, outMin, outMax) {
-            return Math.round(100*((number) * (outMax - outMin) / (inMax) + outMin)) / 100;
-        }
-        let max = (data.properties[property_name].max ?? 17) * (data.properties[property_name].size_factor ?? 1);
-        let colorA = [152,110,208];
-        let colorB = [164,221,255];
-        if(value < max) {
-            var hue = scale(value, max, 266, 202);
-            var sat = scale(value, max, 62, 100);
-            var val = scale(value, max, 68, 82);
-            color = `style="background-color: hsl(${hue},${sat}%,${val}%)!important"`;
-            
-            // var r = scale(value, max, colorA[0], colorB[0]);
-            // var g = scale(value, max, colorA[1], colorB[1]);
-            // var b = scale(value, max, colorA[2], colorB[2]);
-            // color = `style="background-color: rgb(${r},${g},${b})!important"`;
-        } else {
-            // console.log(max, property_name);
-            color = `style="background-color: rgb(${colorB[0]}, ${colorB[1]}, ${colorB[2]})"`;
-        }
-        if(class_exists) {
-            color = '"' + color;
-        }
-
-    } else if (found_key = Object.keys(data.conditional_formatting).find(key_regex => new RegExp(`^${key_regex}$`).test(value))) {
+    var color = "";
+    // console.log(value, property_name);
+    
+    if (found_key = Object.keys(data.conditional_formatting).find(key_regex => new RegExp(`^${key_regex}$`).test(value))) {
         color = data.conditional_formatting[found_key];
         if(!class_exists) {
             color = `class="${color}"`;
         }
+        return color;
     }
-    return color;
+    
+    if(typeof data.properties[property_name] !== 'undefined' || value*1==value) {
+        var hue, sat, lum;
+        var hslA, hslB;
+        var scale_value;
+        if(value*1==value){
+            scale_value = value*1;
+            
+            hslA = [276, 55, 66];
+            hslB = [212, 100, 82];
+        }
+        hslA ??= [223, 62, 68];
+        hslB ??= [159, 70, 82];
+        if(typeof data.properties[property_name] !== 'undefined' && data.properties[property_name].gradient_scaling == "relative") {
+            scale_value = value_list[property_name].indexOf(value) / value_list[property_name].length;
+            max = 1;
+        } else {
+            max = (data.properties[property_name].max ?? 17) * (data.properties[property_name].size_factor ?? 1);
+            if(scale_value >= max) {
+                [hue, sat, luma] = hslB;
+            }
+        }
+        // console.log(scale_value, max, value, property_name);
+        hue ??= scale(scale_value, max, hslA[0], hslB[0]);
+        sat ??= scale(scale_value, max, hslA[1], hslB[1]);
+        lum ??= scale(scale_value, max, hslA[2], hslB[2]);
+
+        color = `style="background-color: hsl(${hue},${sat}%,${lum}%)!important"`;
+        if(class_exists) {
+            color = '"' + color;
+        }
+        return color;
+    }
+}
+
+function scale(number, inMax, outMin, outMax) {
+    // Minimum in value is assumed to be 0
+    return Math.round(((number) * (outMax - outMin) / (inMax) + outMin) * 100) / 100;
 }
 
 function update_window_history() {

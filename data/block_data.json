@@ -1433,8 +1433,8 @@
 			"property_name": "Blast Resistance",
 			"property_description": "Determines how likely this block is to break from exposure to an explosion.",
 			"default_value": null,
-			"max": 10,
 			"default_selection": true,
+			"gradient_scaling": "relative",
 			"entries": {
 				"Activator Rail": 0.7,
 				"Air": 0,
@@ -1704,6 +1704,7 @@
 			"property_description": "Determines how fast the block can be mined.",
 			"default_value": null,
 			"default_selection": false,
+			"gradient_scaling": "relative",
 			"entries":{
 				"Azalea": 0,
 				"Crops": 0,
