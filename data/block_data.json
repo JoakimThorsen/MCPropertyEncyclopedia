@@ -4053,6 +4053,102 @@
 				"Wool": "Yes"
 			}
 		},
+		"needs_support": {
+			"property_name": "Needs Support",
+			"default_value": "No",
+			"default_selection": true,
+			"gradient_scaling": "relative",
+			"entries": {
+				"Activator Rail": ".hasTopRim()",
+				"Amethyst Cluster": ".isSideSolidFullSquare()",
+				"Azalea": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Bamboo": ".isIn(BlockTags.BAMBOO_PLANTABLE_ON)",
+				"Banners": ".getMaterial().isSolid()",
+				"Bell": {
+					"Hanging": ".sideCoversSmallSquare()", 
+					"Side & Floor": ".sideCoversSmallSquare()"
+				},
+				"Big Dripleaf": [".isOf(Blocks.BIG_DRIPLEAF_STEM)", ".isOf(this)", ".isSideSolidFullSquare()"],
+				"Bubble Column": [".isOf(Blocks.BUBBLE_COLUMN)", ".isOf(Blocks.MAGMA_BLOCK)", ".isOf(Blocks.SOUL_SAND)"],
+				"Buttons": ".isSideSolidFullSquare()",
+				"Cactus": [".isOf(Blocks.CACTUS)", ".isOf(Blocks.SAND)", ".isOf(Blocks.RED_SAND)"],
+				"Cake": ".getMaterial().isSolid()",
+				"Candles": ".sideCoversSmallSquare()",
+				"Carpets": "!.isAir()",
+				"Crops": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Cave Vines": [".isOf(this.getStem())", ".isOf(this.getPlant())", ".isSideSolidFullSquare()"],
+				"Chorus Flower": [".isOf(this.plantBlock)", ".isOf(Blocks.END_STONE)"],
+				"Chorus Plant": [".isOf(this)", ".isOf(Blocks.END_STONE)"],
+				"Cocoa": ".isIn(BlockTags.JUNGLE_LOGS)",
+				"Coral Blocks": ".isSideSolidFullSquare()",
+				"Coral Fans": ".isSideSolidFullSquare()",
+				"Corals": ".isSideSolidFullSquare()",
+				"Dead Bush": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Detector Rail": ".hasTopRim()",
+				"Dirt Path": [".getMaterial().isSolid()", ".getBlock() instanceof FenceGateBlock"],
+				"Doors": {
+					"Bottom Half": ".isSideSolidFullSquare()", 
+					"Top Half": ".isOf(this)"
+				},
+				"Farmland": [".getMaterial().isSolid()", ".getBlock() instanceof FenceGateBlock", ".getBlock() instanceof PistonExtensionBlock"],
+				"Fern": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Fire": {
+					"Fire": [".isSideSolidFullSquare()", ".areBlocksAroundFlammable()"],
+					"Soul Fire": ".isIn(BlockTags.SOUL_FIRE_BASE_BLOCKS)"
+				},
+				"Flowers": {
+					"Small": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+					"Tall": {
+						"Bottom": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+						"Top": ".isOf(this)"
+					}
+				},
+				"Fungi": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Glow Lichen": ".isFaceFullSquare()",
+				"Hanging Roots": ".isSideSolidFullSquare()",
+				"Ladder": ".isSideSolidFullSquare()",
+				"Lantern": ".sideCoversSmallSquare()",
+				"Lever": ".isSideSolidFullSquare()",
+				"Lily Pad": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Moss Carpet": "!.isAir()",
+				"Mushrooms": [".isIn(BlockTags.MUSHROOM_GROW_BLOCK)", ".isOpaqueFullCube"],
+				"Nether Sprouts": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Nether Wart": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Piston": ".isOf(Blocks.MOVING_PISTON)",
+				"Pointed Dripstone": [".isSideSolidFullSquare()", ".isOf(Blocks.POINTED_DRIPSTONE)"],
+				"Powered Rail": ".hasTopRim()",
+				"Pressure Plates": [".hasTopRim()", ".sideCoversSmallSquare()"],
+				"Rail": ".hasTopRim()",
+				"Redstone Comparator": ".hasTopRim()",
+				"Redstone Dust": [".isSideSolidFullSquare()", ".isOf(Blocks.HOPPER)"],
+				"Redstone Repeater": ".hasTopRim()",
+				"Roots": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Saplings": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Scaffolding": [".isSideSolidFullSquare()", ".isOf(Blocks.SCAFFOLDING)"],
+				"Sea Pickle": [".isSideSolidFullSquare()", "!.getFace(Direction.UP).isEmpty()"],
+				"Seagrass": {
+					"smol:": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+					"Tall": {
+						"Bottom": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+						"Top": ".isOf(this)"
+					}
+				},
+				"Signs": [".getMaterial().isSolid()"], 
+				"Small Dripleaf": {
+					"Top": ".isOf(this)",
+					"Bottom": [".isIn(BlockTags.SMALL_DRIPLEAF_PLACEABLE)", ".getFluidState(pos.up()).isEqualAndStill(Fluids.WATER)", ".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"]
+				},
+				"Snow": [".isOf(Blocks.ICE)", ".isOf(Blocks.PACKED_ICE)", ".isOf(Blocks.BARRIER)", ".isOf(Blocks.HONEY_BLOCK)", ".isOf(Blocks.SOUL_SAND)", ".isFaceFullSquare()", ".isOf(this) AND (Integer)blockState.get(LAYERS) == 8"],
+				"Spore Blossom": ".sideCoversSmallSquare()",
+				"Sugar Cane": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.SAND)", ".isOf(Blocks.RED_SAND)"],
+				"Sweet Berry Bush": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Torch": [".sideCoversSmallSquare()"],
+				"Tripwire Hook": [".isSideSolidFullSquare()"],
+				"Twisting Vines": [".isOf(this.getStem())", ".isOf(this.getPlant())", ".isSideSolidFullSquare()"],
+				"Vines": [".isOf(this)", ".isSideSolidFullSquare()"],
+				"Weeping Vines": [".isOf(this.getStem())", ".isOf(this.getPlant())", ".isSideSolidFullSquare()"]
+			}
+		},
 		"obstructs_cactus": {
 			"property_name": "Obstructs Cactus",
 			"property_description": "Whether placing this block next to cactus destroys it.",
