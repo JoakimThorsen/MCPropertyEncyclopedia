@@ -388,6 +388,22 @@ td .nested-table {
 #scrollButton:hover {
     background-color: #ddd;
 }
+
+/* Scrollbar Deco */
+::-webkit-scrollbar {
+    width: 0.8em;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff; /* Dark mode: #000000 */
+
+}
+::-webkit-scrollbar-thumb {
+    background: #a8a8a8; /*Dark mode: #5c5c5c */
+    border-radius: 90vw;
+    border: 2px solid #ffffff; /* Dark mode: #000000 */
+}
+
 html {
     scroll-behavior: smooth;
 }
