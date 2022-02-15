@@ -2210,6 +2210,11 @@
 		"Zombie Villager Spawn Egg": ["item-sprite",-176, -320],
 		"Zombified Piglin Spawn Egg": ["item-sprite",-160, -320]
 	},
+	"property_structure": [
+		"id",
+		"stackability",
+		"survival_obtainable"
+	],
 	"properties": {
 		"id": {
 			"property_name": "ID",

@@ -16,17 +16,14 @@ function load_data(filename) {
     page = document.body.dataset.page;
     switch(page) {
         case "block":
-            document.documentElement.style.setProperty('--sprite-url', 'url(assets/BlockCSS.png)');
             entry_header = "Blocks";
             break;
 
         case "entity":
-            document.documentElement.style.setProperty('--sprite-url', 'url(assets/EntityCSS.png)');
             entry_header = "Entities";
             break;
 
         case "item":
-            document.documentElement.style.setProperty('--sprite-url', 'url(assets/ItemCSS.png)');
             entry_header = "Items";
         
     }
@@ -54,14 +51,38 @@ function display_selection() {
             }
         }
     }
-    Object.keys(data.properties).forEach(property =>{
-        selected = selection_arr.includes(property)
-        $('#selection').append(`<li><a role="button" class="dropdown-option select-option${selected ? ' selected':''}" property="${property}">${data.properties[property].property_name}
-                <span class="glyphicon glyphicon-ok" style="${selected ? 'display:inline-block':'display:none'}">
-                </span></a></li>`);
+    function selection_dropdown(entry) {
+        if(typeof entry === 'object') {
+            if(Array.isArray(entry)) { // arr
+                res = entry.reduce((result, ent) => {
+                    return result + selection_dropdown(ent);
+                },"")
+                return res;
+            } else { // obj
+                result = `<li class="dropdown-submenu">
+                        <a role="button" class="selection-category"><i class="fas fa-folder-open"></i> ${entry.category}&hellip;</a>
+                            <ul class="dropdown-menu">
+                                ${selection_dropdown(entry.contents)}
+                            </ul>
+                        </li>`;
+                return result;
+            }
+        } else { // entry
+            var isSelected = selection_arr.includes(entry)
+            return `<li><a role="button" class="dropdown-option select-option${isSelected ? ' selected':''}" property="${entry}">${(data.properties[entry] || {property_name: "Placeholder"}).property_name}
+                    <span class="glyphicon glyphicon-ok" style="${isSelected ? 'display:inline-block':'display:none'}">
+                    </span></a></li>`;
+        }
+    }
+    console.log(selection_dropdown(data.property_structure));
+    $('#selection').append(selection_dropdown(data.property_structure));
+
+    $('.selection-category').click(function(e) {
+        e.stopPropagation();
     });
+
     $('.select-option').click(function(e) {
-        e.stopPropagation()
+        e.stopPropagation();
         var value = $(this).attr("property");
         if(selection_arr.includes(value)) {
             selection_arr.splice(selection_arr.indexOf(value), 1);
@@ -210,7 +231,7 @@ function display_headers_and_table() {
         
         if(typeof data.properties[property].property_description !== 'undefined') {
             append_data += `<li class="dropdown-submenu">
-                        <a href="#" class="description-button">Description...</a>
+                        <a role="button" class="description-button">Description...</a>
                         <ul class="dropdown-menu">
                             <p>${data.properties[property].property_description}</p>
                         </ul>
@@ -553,7 +574,7 @@ function display_results() {
         return return_data;
     }
 
-    // Toggle functionality of 'Expand' buttons
+    // Toggle functionality of 'Expand' buttons 
     $('body').off('click.collapse-next.data-api');
     $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (_e) {
         var $target = $(this).next();

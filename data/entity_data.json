@@ -236,6 +236,16 @@
 		"Player": ["entity-sprite", -112, 0],
 		"Fishing Bobber": ["entity-sprite", -128, -64]
 	},
+	"property_structure": [
+		"id",
+		"width",
+		"height",
+		"type",
+		"undead",
+		"eye_height",
+		"health",
+		"explosion_power"
+	],
 	"properties": {
 		"id": {
 			"property_name": "ID",
@@ -834,6 +844,7 @@
 			"property_name": "Type",
 			"default_value": null,
 			"default_selection": true,
+			"gradient_scaling": "relative",
 			"entries": {
 				"Area Effect Cloud": "other",
 				"Armor Stand": "living",

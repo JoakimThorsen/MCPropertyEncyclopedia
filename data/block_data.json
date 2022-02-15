@@ -503,6 +503,81 @@
 		"Wood": ["block-sprite", -352, -832],
 		"Wool": ["block-sprite", -240, -720]
 	},
+	"property_structure": [
+		"variants",
+		"conductivity",
+		"movable",
+		"sticky",
+		"waterloggable",
+		"spawnable",
+		{
+			"category": "Block interaction",
+			"contents": [
+				"updates_comparator",
+				"obstructs_cactus",
+				"instrument"
+			]
+		},
+		"needs_support",
+		{
+			"category": "Supporting Abilities",
+			"contents": [
+				"all",
+				"the",
+				"different",
+				"support",
+				"types //though these properties are also used in many other checks"
+			]
+		},
+		{
+			"category": "Entity Interaction",
+			"contents": [
+				"affects_movement",
+				"enderman_holdable",
+				"dragon_immune",
+				"wither_immune"
+			]
+		},
+		{
+			"category": "Light",
+			"contents": [
+				"luminosity",
+				"light blocking/filtering (Todo lol)"
+			]
+		},
+		{
+			"category": "Destruction",
+			"contents": [
+				"blast_resistance",
+				"hardness",
+				"instant_mineable",
+				"flammable",
+				"catche_fire_from_lava",
+				"gets_flushed"
+			]
+		},
+		"collision",
+		"full_cube",
+		{
+			"category": "Block size",
+			"contents": [
+				"height_all",
+				"height_external",
+				"width_all",
+				"width_external",
+				"collision_bottom_all",
+				"collision_bottom_external"
+			]
+		},
+		{
+			"category": "Availability",
+			"contents": [
+				"survival_available",
+				"peaceful_available (Todo)",
+				"skyblock_available (Todo)"
+			]
+		}
+	],
 	"properties": {
 		"variants": {
 			"property_name": "Variants",
@@ -999,7 +1074,7 @@
 			"property_name": "Has Collision",
 			"property_description": "Whether the block has a solid collision that stops entities like players.</p><p>Fluids are listed with a separate value.",
 			"default_value": "Yes",
-			"default_selection": true,
+			"default_selection": false,
 			"entries": {
 				"Activator Rail": "No",
 				"Air": "No",
@@ -4056,7 +4131,7 @@
 		"needs_support": {
 			"property_name": "Needs Support",
 			"default_value": "No",
-			"default_selection": true,
+			"default_selection": false,
 			"gradient_scaling": "relative",
 			"entries": {
 				"Activator Rail": ".hasTopRim()",
