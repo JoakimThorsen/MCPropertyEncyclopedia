@@ -4943,7 +4943,7 @@
 				},
 				"Doors": {
 					"Wooden": "Bass (String Bass)",
-					"Iron": "Harp / piano"
+					"Iron": "Harp / Piano"
 				},
 				"Fences": {
 					"Wooden": "Bass (String Bass)",
@@ -4952,21 +4952,21 @@
 				"Pressure Plates": {
 					"Wooden": "Bass (String Bass)",
 					"Stone": "Bass Drum (Kick)",
-					"Weighted": "Harp / piano"
+					"Weighted": "Harp / Piano"
 				},
 				"Stairs": {
 					"Wooden": "Bass (String Bass)",
 					"Stone": "Bass Drum (Kick)",
-					"Copper": "Harp / piano"
+					"Copper": "Harp / Piano"
 				},
 				"Slabs": {
 					"Wooden": "Bass (String Bass)",
 					"Stone": "Bass Drum (Kick)",
-					"Copper": "Harp / piano"
+					"Copper": "Harp / Piano"
 				},
 				"Trapdoors": {
 					"Wooden": "Bass (String Bass)",
-					"Iron": "Harp / piano"
+					"Iron": "Harp / Piano"
 				}
 			}
 		}
