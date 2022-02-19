@@ -1,12 +1,35 @@
-
 var data;
 var value_list = {};
 
 urlParams = new URLSearchParams(window.location.search);
-var filter_obj = JSON.parse(urlParams.get("filter")) ?? {};
-var sort_arr = JSON.parse(urlParams.get("sort")) ?? [];
-var selection_arr = JSON.parse(urlParams.get("selection")) ?? null;
-var settings_obj = JSON.parse(urlParams.get("settings")) ?? {};
+
+// Try-catch spam is for "legacy" purposes, old JSON-links will still work for a while
+try{
+    var filter_obj = JSON.parse(urlParams.get("filter")) ?? {};
+} catch {
+    var filter_obj = parse_custom_url(urlParams.get("filter")) ?? {};
+}
+try{
+    var sort_arr = JSON.parse(urlParams.get("sort")) ?? [];
+} catch {
+    var sort_arr = urlParams.get("sort")
+            .split(',')
+            .map(prop => {
+                reversed = prop.charAt('0') === '!';
+                return {property: prop.substr(reversed), reversed: reversed }
+            })
+            ?? [];
+}
+try{
+    var selection_arr = JSON.parse(urlParams.get("selection")) ?? null;
+} catch {
+    var selection_arr = parse_custom_url(urlParams.get("selection")) ?? null;
+}
+try{
+    var settings_obj = JSON.parse(urlParams.get("settings")) ?? {};
+} catch {
+    var settings_obj = parse_custom_url(urlParams.get("settings")) ?? {};
+}
 
 var search = urlParams.get("search") ?? "";
 
@@ -74,7 +97,6 @@ function display_selection() {
                     </span></a></li>`;
         }
     }
-    console.log(selection_dropdown(data.property_structure));
     $('#selection').append(selection_dropdown(data.property_structure));
 
     $('.selection-category').click(function(e) {
@@ -240,6 +262,9 @@ function display_headers_and_table() {
         append_data += `<li class="divider"></li><div class="dropdown-scrollable">`;
 
         // Filter menu
+        if(filter_obj[property] !== undefined) {
+            filter_obj[property] = [filter_obj[property]].flat();
+        }
         sort_mixed_types(value_list[property]).forEach(option => {
             var color = formatting_color(option, property, true);
             append_data += `<li>
@@ -664,21 +689,75 @@ function scale(number, inMax, outMin, outMax) {
 
 function update_window_history() {
     var url = "";
-    if(selection_arr != undefined)              url += "&selection=" + JSON.stringify(selection_arr);
-    if(Object.keys(settings_obj).length > 0)    url += "&settings=" + JSON.stringify(settings_obj);
-    if(Object.keys(filter_obj).length > 0)      url += "&filter=" + JSON.stringify(filter_obj);
-    if(sort_arr.length > 0)                     url += "&sort=" + JSON.stringify(sort_arr);
     
-    if(search.length > 0)                       url += "&search=" + search;
-    
+    // if(selection_arr != undefined)              url += "&selection=" + JSON.stringify(selection_arr);
+    // if(Object.keys(settings_obj).length > 0)    url += "&settings=" + JSON.stringify(settings_obj);
+    // if(Object.keys(filter_obj).length > 0)      url += "&filter=" + JSON.stringify(filter_obj);
+    // if(sort_arr.length > 0)                     url += "&sort=" + JSON.stringify(sort_arr);
+
+    if(selection_arr != undefined) {
+        url += "&selection=" + serialize_custom_url(selection_arr);
+    }
+    if(Object.keys(settings_obj).length > 0) {
+        url += "&settings=" + serialize_custom_url(settings_obj);
+    }
+    if(Object.keys(filter_obj).length > 0) {
+        url += "&filter=" + serialize_custom_url(filter_obj);
+    }
+    if(sort_arr.length > 0) {
+        url += "&sort=" + sort_arr.map(obj => obj.reversed ? '!' + obj.property : obj.property);
+    };
+    if(search.length > 0) {
+        url += "&search=" + search;
+    }
+
     if(url != "") {
-        url = '?' + url.substr(1) + '#';
+        url = '?' + url.substr(1);
     }
     url = window.location.origin + window.location.pathname + url;
 
     window.history.pushState("", "", url);
 }
 
+// Constructs the custom url parameters:
+// "abc" -> abc
+// ["a", "b", 123] -> a,b,123
+// {key:val} -> (key:val)
+// {key:val,foo:bar} -> (key:val);(foo:bar)
+function serialize_custom_url(value) {
+    if(typeof value === 'object') {
+        if(Array.isArray(value)) {
+            return value.map(v => serialize_custom_url(v)).join(',')
+        }
+        return Object.entries(filter_obj).map(([key, v]) =>
+            "(" + key + ":" + serialize_custom_url(v) + ")"
+        ).join(';');
+    } else {
+        return value;
+    }
+}
+
+// Only supports objects at the top level, nested objects will break parsing.
+function parse_custom_url(value) {
+    if(value.charAt(0) === '(') {
+        split = value.split(';')
+        var result = {};
+        split.forEach(obj_str => {
+            obj_str = obj_str.substr(1, obj_str.length-2);
+            [key, ...val] = obj_str.split(':');
+            result[key] = parse_custom_url(val.join());
+        })
+        return result;
+    }
+    split = value.split(',')
+    if(split.length > 1) {
+        return split.map(v => parse_custom_url(v))
+    }
+    if(value*1==value) {
+        return parseFloat(value);
+    }
+    return value
+}
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() { scrollFunction() };

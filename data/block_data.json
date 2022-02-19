@@ -4806,6 +4806,7 @@
 			"property_description": "Which instrument a noteblock will play if placed above this block.",
 			"default_value": "Harp / Piano",
 			"default_selection": false,
+			"gradient_scaling": "relative",
 			"entries": {
 				"Banners": "Bass (String Bass)",
 				"Barrel": "Bass (String Bass)",
