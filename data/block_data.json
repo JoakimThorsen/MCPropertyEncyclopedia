@@ -3142,8 +3142,8 @@
 				"Soul Sand": 16,
 				"Stonecutter": 16,
 				"Trapdoors": {
-					"Bottom, Closed": 3,
-					"Top Or Opened": 16
+					"Front When Opened": 3,
+					"Closed": 16
 				},
 				"Trapped Chest": 15,
 				"Turtle Egg": { 
@@ -3480,8 +3480,8 @@
 				"Soul Sand": 16,
 				"Stonecutter": 16,
 				"Trapdoors": {
-					"Bottom, Closed": 3,
-					"Top Or Opened": 16
+					"Front When Opened": 3,
+					"Closed": 16
 				},
 				"Trapped Chest": 15,
 				"Turtle Egg": { 
@@ -3707,8 +3707,8 @@
 				},
 				"Stonecutter": 16,
 				"Trapdoors": {
-					"Bottom, Closed": 3,
-					"Top Or Opened": 16
+					"Top, Closed": 3,
+					"Bottom Or Opened": 16
 				},
 				"Trapped Chest": 16,
 				"Turtle Egg": 16,
@@ -3938,8 +3938,8 @@
 				},
 				"Stonecutter": 16,
 				"Trapdoors": {
-					"Bottom, Closed": 3,
-					"Top Or Opened": 16
+					"Top, Closed": 3,
+					"Bottom Or Opened": 16
 				},
 				"Trapped Chest": 16,
 				"Turtle Egg": 16,
