@@ -3141,6 +3141,10 @@
 				},
 				"Soul Sand": 16,
 				"Stonecutter": 16,
+				"Trapdoors": {
+					"Bottom, Closed": 3,
+					"Top Or Opened": 16
+				},
 				"Trapped Chest": 15,
 				"Turtle Egg": { 
 					"1 Egg": {
@@ -3435,7 +3439,7 @@
 				},
 				"Lectern": {
 					"Top": 16,
-					"Base": 4
+					"Base": 12
 				},
 				"Lightning Rod": {
 					"End": 16,
@@ -3475,6 +3479,10 @@
 				},
 				"Soul Sand": 16,
 				"Stonecutter": 16,
+				"Trapdoors": {
+					"Bottom, Closed": 3,
+					"Top Or Opened": 16
+				},
 				"Trapped Chest": 15,
 				"Turtle Egg": { 
 					"1 Egg": {
@@ -3698,6 +3706,10 @@
 					"Wide Part": 16
 				},
 				"Stonecutter": 16,
+				"Trapdoors": {
+					"Bottom, Closed": 3,
+					"Top Or Opened": 16
+				},
 				"Trapped Chest": 16,
 				"Turtle Egg": 16,
 				"Walls": 16,
@@ -3925,6 +3937,10 @@
 					"Wide Part": 16
 				},
 				"Stonecutter": 16,
+				"Trapdoors": {
+					"Bottom, Closed": 3,
+					"Top Or Opened": 16
+				},
 				"Trapped Chest": 16,
 				"Turtle Egg": 16,
 				"Walls": 16,
