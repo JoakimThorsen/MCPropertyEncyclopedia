@@ -13,9 +13,8 @@ body  {
     overflow-x: auto;
 }
 
-.main-body {
-    display: flex;
-    flex-direction: column;
+#about-body {
+    background-color: rgba(255, 255, 255, 0.856);
 }
 
 .navbar {
@@ -60,15 +59,20 @@ body  {
 }
 
 
-h1, h2, h3, .white-text, .written-list>li {
+h1, h2, h3 {
     color: white;
     text-shadow: 0px 0px 5px black, 2px 2px 3px black;
+}
+
+:is(h1, h2, h3).black-text {
+    color: black;
+    text-shadow: none;
 }
 
 h1 {
     font-size: 40px;
 }
-h2, .white-text {
+h2, .about-text {
     font-size: 30px;
 }
 h3 {
@@ -76,10 +80,10 @@ h3 {
 }
 
 a {
-    color: #4eacfd;
+    color: #2f90e6;
 }
 a:hover {
-    color: #bde0ff;
+    color: #05447c;
 }
 
 .select-option, .selection-category {
