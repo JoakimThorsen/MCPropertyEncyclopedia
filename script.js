@@ -23,7 +23,11 @@ try{
 try{
     var selection_arr = JSON.parse(urlParams.get("selection")) ?? null;
 } catch {
-    var selection_arr = parse_custom_url(urlParams.get("selection")) ?? null;
+    if(urlParams.has("selection")) {
+        var selection_arr = parse_custom_url(urlParams.get("selection")) || [];
+    } else {
+        var selection_arr = null;
+    }
 }
 try{
     var settings_obj = JSON.parse(urlParams.get("settings")) ?? {};
@@ -66,6 +70,18 @@ function load_data(filename) {
 
 function display_selection() {
     $('#selection').children().remove();
+    $('#selection').append(`<li>
+    <div class="text-center">
+        <span class="btn-group dropdown-actions" role="group">
+            <a role="button" class="btn dropdown-btn btn-default deselect-all">
+                <i class="far fa-square"></i>
+            </a>
+            <a role="button" class="btn dropdown-btn btn-default select-all">
+                <i class="far fa-check-square"></i>
+            </a>
+        </span>
+    </div>
+    </li>`);
     if(selection_arr == undefined) {
         selection_arr = [];
         for(let [property_name, value] of Object.entries(data.properties)) {
@@ -114,6 +130,20 @@ function display_selection() {
         $(this).children().toggle();
         $(this).toggleClass('selected');
         update_window_history();
+        display_headers_and_table();
+    });
+    $('.select-all').click(function(e) {
+        e.stopPropagation();
+        selection_arr = Object.keys(data.properties);
+        update_window_history();
+        display_selection();
+        display_headers_and_table();
+    });
+    $('.deselect-all').click(function(e) {
+        e.stopPropagation();
+        selection_arr = [];
+        update_window_history();
+        display_selection();
         display_headers_and_table();
     });
 }
@@ -191,7 +221,7 @@ function display_headers_and_table() {
     <span class="glyphicon glyphicon-triangle-bottom"></span>
     </span></a><ul class="dropdown-menu"><li>
     <div class="text-center">
-    <span class="btn-group" role="group">
+    <span class="btn-group dropdown-actions" role="group">
         <a role="button" class="btn dropdown-btn btn-default modify-sorting${(sort_arr.some(e => e.property === page) && !sort_arr.filter(e => e.property === page)[0].reversed) ? ' active' : ''}" property=${page} reversed="false">
             <i class="fas fa-sort-amount-down-alt"></i>
         </a>
@@ -231,13 +261,14 @@ function display_headers_and_table() {
         append_data = `<th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">
                 ${data.properties[property].property_name}
                 <span class="icons">
-                <i class="fas fa-sort-amount-down-alt${sorted == 1 ? '':' display-none'} sorted"></i>
-                <i class="fas fa-sort-amount-up${sorted == -1 ? '':' display-none'} sorted-reverse"></i>
+                    <i class="fas fa-filter${typeof filter_obj !== undefined && filter_obj[property] ? '':' display-none'} filtered"></i>
+                    <i class="fas fa-sort-amount-down-alt${sorted == 1 ? '':' display-none'} sorted"></i>
+                    <i class="fas fa-sort-amount-up${sorted == -1 ? '':' display-none'} sorted-reverse"></i>
                 <span class="glyphicon glyphicon-triangle-bottom"></span>
                 </span></a><ul class="dropdown-menu">
                 <li>
                 <div class="text-center">
-                    <span class="btn-group" role="group">
+                    <span class="btn-group dropdown-actions" role="group">
                         <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == 1 ? ' active' : ''}" property="${property}" reversed="false">
                             <i class="fas fa-sort-amount-down-alt"></i>
                         </a>
@@ -297,10 +328,12 @@ function display_headers_and_table() {
             filter_obj[property].splice(filter_obj[property].indexOf(value), 1);
         } else {
             filter_obj[property].push(value);
+            $(this).parents('.dropdown').find('.filtered').removeClass('display-none');
         }
 
         if(filter_obj[property].length == 0) {
             delete filter_obj[property];
+            $(this).parents('.dropdown').find('.filtered').addClass('display-none');
         }
         update_window_history();
         display_results();
@@ -755,6 +788,9 @@ function parse_custom_url(value) {
     }
     if(value*1==value) {
         return parseFloat(value);
+    }
+    if(value == '') {
+        return false;
     }
     return value
 }

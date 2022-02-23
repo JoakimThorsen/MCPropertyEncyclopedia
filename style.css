@@ -88,11 +88,9 @@ a:hover {
     padding: 6px 16px !important;
     margin: 0px;
 }
-#selection {
+.dropdown-actions {
     padding: 0;
-}
-#selection:last-child {
-    margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 .selected {
     background-color: #B7E1CD;
