@@ -2430,6 +2430,10 @@
 					"Two candlesticks, when lit": 6,
 					"Three candlesticks, when lit": 9,
 					"Four candlesticks, when lit": 12
+				},
+				"Cake": {
+					"With candle, when lit": 3,
+					"Without lit candle": "No"
 				}
 			}
 		},
