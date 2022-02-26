@@ -948,7 +948,6 @@
 				"Azalea": "No",
 				"Bamboo": "No",
 				"Banners": "No",
-				"Barrier": "No",
 				"Beacon": "No",
 				"Beds": "No",
 				"Bell": "No",
@@ -1039,7 +1038,10 @@
 				"Sea Lantern": "No",
 				"Sea Pickle": "No",
 				"Seagrass": "No",
-				"Shulker Box": "No",
+				"Shulker Box": {
+					"Open": "No",
+					"Closed": "Yes"
+				},
 				"Signs": "No",
 				"Slabs": {
 					"Single": "No",
