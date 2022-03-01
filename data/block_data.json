@@ -2855,8 +2855,7 @@
 					"Not Tip Or Downwards": 16
 				},
 				"Powder Snow": {
-					"Top, With Leather Boots": 16,
-					"Sides and Bottom": "Not Applicable",
+					"With Leather Boots": 16,
 					"Without Leather Boots": "Not Applicable"
 				},
 				"Redstone Comparator": 2,
