@@ -6,7 +6,8 @@
 		"No": "cf-no",
 		
 		"Not Applicable": "cf-invalid",
-		"Unstackable": "cf-invalid"
+		"Unstackable": "cf-invalid",
+		"None": "cf-invalid"
 	},
 	"key_list": [
 		"Stone",
@@ -2213,7 +2214,15 @@
 	"property_structure": [
 		"id",
 		"stackability",
-		"survival_obtainable"
+		"survival_obtainable",
+		{
+			"category": "Food Items",
+			"contents": [
+				"hunger",
+				"saturation",
+				"effect_when_eaten"
+			]
+		}
 	],
 	"properties": {
 		"id": {
@@ -4564,6 +4573,156 @@
 				"Zombie Horse Spawn Egg": "No",
 				"Zombie Villager Spawn Egg": "No",
 				"Zombified Piglin Spawn Egg": "No"
+			}
+		},
+		"hunger": {
+			"property_name": "Hunger",
+			"default_value": "None",
+			"default_selection": false,
+			"entries": {
+				"Apple": 4,
+				"Baked Potato": 5,
+				"Beetroot": 1,
+				"Beetroot Soup": 6,
+				"Bread": 5,
+				"Cake": {
+					"Slice": 2,
+					"Whole": 14
+				},
+				"Carrot": 3,
+				"Chorus Fruit": 4,
+				"Cooked Chicken": 6,
+				"Cooked Cod": 5,
+				"Cooked Mutton": 6,
+				"Cooked Porkchop": 8,
+				"Cooked Rabbit": 5,
+				"Cooked Salmon": 6,
+				"Cookie": 2,
+				"Dried Kelp": 1,
+				"Enchanted Golden Apple": 4,
+				"Golden Apple": 4,
+				"Glow Berries": 2,
+				"Golden Carrot": 6,
+				"Honey Bottle": 6,
+				"Melon Slice": 2,
+				"Mushroom Stew": 6,
+				"Poisonous Potato": 2,
+				"Potato": 1,
+				"Pufferfish": 1,
+				"Pumpkin Pie": 8,
+				"Rabbit Stew": 10,
+				"Raw Beef": 3,
+				"Raw Chicken": 2,
+				"Raw Cod": 2,
+				"Raw Mutton": 2,
+				"Raw Porkchop": 3,
+				"Raw Rabbit": 3,
+				"Raw Salmon": 2,
+				"Rotten Flesh": 4,
+				"Spider Eye": 2,
+				"Steak": 8,
+				"Suspicious Stew": 6,
+				"Sweet Berries": 2,
+				"Tropical Fish": 1
+			}
+		},
+		"saturation": {
+			"property_name": "Saturation",
+			"default_value": "None",
+			"default_selection": false,
+			"entries": {
+				"Apple": 2.4,
+				"Baked Potato": 6,
+				"Beetroot": 1.2,
+				"Beetroot Soup": 7.2,
+				"Bread": 6,
+				"Cake": {
+					"Slice": 0.4,
+					"Whole": 2.8
+				},
+				"Carrot": 3.6,
+				"Chorus Fruit": 2.4,
+				"Cooked Chicken": 7.2,
+				"Cooked Cod": 6,
+				"Cooked Mutton": 9.6,
+				"Cooked Porkchop": 12.8,
+				"Cooked Rabbit": 6,
+				"Cooked Salmon": 9.6,
+				"Cookie": 0.4,
+				"Dried Kelp": 0.6,
+				"Enchanted Golden Apple": 9.6,
+				"Golden Apple": 9.6,
+				"Glow Berries": 0.4,
+				"Golden Carrot": 14.4,
+				"Honey Bottle": 1.2,
+				"Melon Slice": 1.2,
+				"Mushroom Stew": 7.2,
+				"Poisonous Potato": 1.2,
+				"Potato": 0.6,
+				"Pufferfish": 0.2,
+				"Pumpkin Pie": 4.8,
+				"Rabbit Stew": 12,
+				"Raw Beef": 1.8,
+				"Raw Chicken": 1.2,
+				"Raw Cod": 0.4,
+				"Raw Mutton": 1.2,
+				"Raw Porkchop": 1.8,
+				"Raw Rabbit": 1.8,
+				"Raw Salmon": 0.4,
+				"Rotten Flesh": 0.8,
+				"Spider Eye": 3.2,
+				"Steak": 12.8,
+				"Suspicious Stew": 7.2,
+				"Sweet Berries": 0.4,
+				"Tropical Fish": 0.2
+			}
+		},
+		"effect_when_eaten": {
+			"property_name": "Effect When Eaten",
+			"default_value": "Inedible",
+			"default_selection": false,
+			"entries": {
+				"Apple": "None",
+				"Baked Potato": "None",
+				"Beetroot": "None",
+				"Beetroot Soup": "None",
+				"Bread": "None",
+				"Cake": "None",
+				"Carrot": "None",
+				"Chorus Fruit": "The player may be teleported randomly.",
+				"Cooked Chicken": "None",
+				"Cooked Cod": "None",
+				"Cooked Mutton": "None",
+				"Cooked Porkchop": "None",
+				"Cooked Rabbit": "None",
+				"Cooked Salmon": "None",
+				"Cookie": "None",
+				"Dried Kelp": "None",
+				"Enchanted Golden Apple": "Regeneration II for 20 seconds<br>Absorption IV for 2 minutes<br>Resistance for 5 minutes<br>Fire Resistance for 5 minutes",
+				"Golden Apple": "Regeneration II for 5 seconds<br>Absorption for 2 minutes",
+				"Glow Berries": "None",
+				"Golden Carrot": "None",
+				"Honey Bottle": "Clears Poison",
+				"Melon Slice": "None",
+				"Mushroom Stew": "None",
+				"Poisonous Potato": "Poison for 5 seconds (60% chance)",
+				"Potato": "None",
+				"Pufferfish": "Hunger III for 15 seconds<br>Nausea for 15 seconds<br>Poison II for 60 seconds",
+				"Pumpkin Pie": "None",
+				"Rabbit Stew": "None",
+				"Raw Beef": "None",
+				"Raw Chicken": "Hunger for 30 seconds (30% chance)",
+				"Raw Cod": "None",
+				"Raw Mutton": "None",
+				"Raw Porkchop": "None",
+				"Raw Rabbit": "None",
+				"Raw Salmon": "None",
+				"Rotten Flesh": "Hunger for 30 seconds (80% chance)",
+				"Spider Eye": "Poison for 5 seconds",
+				"Steak": "None",
+				"Suspicious Stew": "The following for 3-11 seconds, depending on the flower used:<br>Regeneration<br>Jump Boost<br>Poison<br>Wither<br>Weakness<br>Blindness<br>Fire Resistance<br>Saturation<br>Night Vision",
+				"Sweet Berries": "None",
+				"Tropical Fish": "None"
 			}
 		}
 	}
