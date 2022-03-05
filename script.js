@@ -115,6 +115,9 @@ function display_selection() {
     }
     $('#selection').append(selection_dropdown(data.property_structure));
 
+    $('.selection-category').siblings('ul').has('a.selected').siblings('a').addClass('selected');
+
+    
     $('.selection-category').click(function(e) {
         e.stopPropagation();
     });
@@ -129,6 +132,10 @@ function display_selection() {
         }
         $(this).children().toggle();
         $(this).toggleClass('selected');
+
+        $('.selection-category').removeClass('selected');
+        $('.selection-category').siblings('ul').has('a.selected').siblings('a').addClass('selected');
+
         update_window_history();
         display_headers_and_table();
     });
