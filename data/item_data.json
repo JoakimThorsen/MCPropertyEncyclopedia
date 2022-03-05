@@ -4,6 +4,7 @@
 		"Yes (unless in peaceful)": "cf-neutral-yes",
 
 		"No": "cf-no",
+		"Inedible": "cf-no",
 		
 		"Not Applicable": "cf-invalid",
 		"Unstackable": "cf-invalid",
