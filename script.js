@@ -481,7 +481,10 @@ function display_results() {
 
     for (const key in output_data) {
         var entry = output_data[key][page].toLowerCase();
-        if(!search.split(' ').every(term => entry.includes(term.toLowerCase()))) {
+        if(!search.split('|').some(subsearch =>
+            subsearch.split(' ').every(term =>
+                entry.includes(term.toLowerCase()))))
+        {
             delete output_data[key];
         }
     }
@@ -596,9 +599,10 @@ function display_results() {
     output_data = sort_properties(output_data, sort_arr);
     
     // Table outputting
+    var append_string = "";
     output_data.forEach(entry => {
-        var append_string = "<tr>";
         var sprite = data.sprites[entry[page]];
+        append_string += "<tr>";
         append_string += `<td><span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span></td>`;
         if(search) {
             search.split(' ')
@@ -610,8 +614,8 @@ function display_results() {
             append_string += get_data_cell(value, property_id);
         };
         append_string += "</tr>";
-        $('#output_table').children('tbody').append(append_string);
     });
+    $('#output_table').children('tbody').append(append_string);
     
     function get_data_cell(entry, property_name, top_level = true) {
         var return_data;
