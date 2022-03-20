@@ -849,115 +849,529 @@
 				"Area Effect Cloud": "other",
 				"Armor Stand": "living",
 				"Arrow": "projectile",
-				"Axolotl": "animal",
-				"Bat": "ambient",
-				"Bee": "animal",
-				"Blaze": "hostile",
+				"Axolotl": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],	
+				"Bat": [
+					"ambient",
+					"mob",
+					"living"
+				],
+				"Bee": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Blaze": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
 				"Boat": "other",
-				"Cat": "animal",
-				"Cave Spider": "hostile",
-				"Chicken": "animal",
-				"Cod": "water_creature",
-				"Cow": "animal",
-				"Creeper": "hostile",
-				"Dolphin": "water_creature",
-				"Donkey": "animal",
+				"Cat": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Cave Spider": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Chicken": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Cod": [
+					"water_creature",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Cow": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Creeper": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Dolphin": [
+					"water_creature",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Donkey": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
 				"Dragon Fireball": "projectile",
-				"Drowned": "hostile",
-				"Elder Guardian": "hostile",
+				"Drowned": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Elder Guardian": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
 				"End Crystal": "other",
-				"Ender Dragon": "mob",
-				"Enderman": "hostile",
-				"Endermite": "hostile",
-				"Evoker": "hostile",
+				"Ender Dragon": [
+					"mob",
+					"living"
+				],
+				"Enderman": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Endermite": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Evoker": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
 				"Evoker Fangs": "other",
 				"Experience Orb": "other",
 				"Eye of Ender": "other",
 				"Falling Block": "other",
 				"Firework Rocket": "projectile",
-				"Fox": "animal",
-				"Ghast": "mob",
-				"Giant": "hostile",
-				"Glow Item Frame": "other",
-				"Glow Squid": "water_creature",
-				"Goat": "animal",
-				"Guardian": "hostile",
-				"Hoglin": "animal",
-				"Horse": "animal",
-				"Husk": "hostile",
-				"Illusioner": "hostile",
-				"Iron Golem": "mob",
+				"Fox": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Ghast": [
+					"mob",
+					"living"
+				],
+				"Giant": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Glow Item Frame": [
+					"decoration",
+					"other"
+				],
+				"Glow Squid": [
+					"water_creature",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Goat": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Guardian": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Hoglin": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Horse": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Husk": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Illusioner": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Iron Golem": [
+					"golem",
+					"path_aware",
+					"mob",
+					"living"
+				],
 				"Item": "other",
-				"Item Frame": "other",
+				"Item Frame": [
+					"decoration",
+					"other"
+				],
 				"Fireball": "projectile",
-				"Leash Knot": "other",
+				"Leash Knot": [
+					"decoration",
+					"other"
+				],
 				"Lightning Bolt": "other",
-				"Llama": "animal",
+				"Llama": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
 				"Llama Spit": "projectile",
-				"Magma Cube": "mob",
+				"Magma Cube": [
+					"mob",
+					"living"
+				],
 				"Marker": "other",
-				"Minecart": "other",
-				"Minecart with Chest": "other",
-				"Minecart with Command Block": "other",
-				"Minecart with Furnace": "other",
-				"Minecart with Hopper": "other",
-				"Minecart with Spawner": "other",
-				"Minecart with TNT": "other",
-				"Mule": "animal",
-				"Mooshroom": "animal",
-				"Ocelot": "animal",
-				"Painting": "other",
-				"Panda": "animal",
-				"Parrot": "animal",
-				"Phantom": "mob",
-				"Pig": "animal",
-				"Piglin": "hostile",
-				"Piglin Brute": "hostile",
-				"Pillager": "hostile",
-				"Polar Bear": "animal",
+				"Minecart": [
+					"minecart",
+					"other"
+				],
+				"Minecart with Chest": [
+					"minecart",
+					"other"
+				],
+				"Minecart with Command Block": [
+					"minecart",
+					"other"
+				],
+				"Minecart with Furnace": [
+					"minecart",
+					"other"
+				],
+				"Minecart with Hopper": [
+					"minecart",
+					"other"
+				],
+				"Minecart with Spawner": [
+					"minecart",
+					"other"
+				],
+				"Minecart with TNT": [
+					"minecart",
+					"other"
+				],
+				"Mule": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Mooshroom": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Ocelot": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Painting": [
+					"decoration",
+					"other"
+				],
+				"Panda": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Parrot": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Phantom": [
+					"mob",
+					"living"
+				],
+				"Pig": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Piglin": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Piglin Brute": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Pillager": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Polar Bear": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
 				"Primed TNT": "other",
-				"Pufferfish": "water_creature",
-				"Rabbit": "animal",
-				"Ravager": "hostile",
-				"Salmon": "water_creature",
-				"Sheep": "animal",
-				"Shulker": "mob",
+				"Pufferfish": [
+					"water_creature",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Rabbit": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Ravager": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Salmon": [
+					"water_creature",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Sheep": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Shulker": [
+					"golem",
+					"mob",
+					"living"
+				],
 				"Shulker Bullet": "projectile",
-				"Silverfish": "hostile",
-				"Skeleton": "hostile",
-				"Skeleton Horse": "animal",
-				"Slime": "mob",
+				"Silverfish": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Skeleton": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Skeleton Horse": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Slime": [
+					"mob",
+					"living"
+				],
 				"Small Fireball": "projectile",
-				"Snow Golem": "mob",
+				"Snow Golem": [
+					"golem",
+					"mob",
+					"living"
+				],
 				"Snowball": "projectile",
 				"Spectral Arrow": "projectile",
-				"Spider": "hostile",
-				"Squid": "water_creature",
-				"Stray": "hostile",
-				"Strider": "animal",
+				"Spider": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Squid": [
+					"water_creature",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Stray": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Strider": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
 				"Thrown Egg": "projectile",
 				"Thrown Ender Pearl": "projectile",
 				"Thrown Bottle o' Enchanting": "projectile",
 				"Thrown Potion": "projectile",
 				"Trident": "projectile",
-				"Trader Llama": "animal",
-				"Tropical Fish": "water_creature",
-				"Turtle": "animal",
-				"Vex": "hostile",
-				"Villager": "passive",
-				"Vindicator": "hostile",
-				"Wandering Trader": "passive",
-				"Witch": "hostile",
-				"Wither": "hostile",
-				"Wither Skeleton": "hostile",
+				"Trader Llama": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Tropical Fish": [
+					"water_creature",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Turtle": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Vex": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Villager": [
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Vindicator": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Wandering Trader": [
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Witch": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Wither": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Wither Skeleton": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
 				"Wither Skull": "projectile",
-				"Wolf": "animal",
-				"Zoglin": "hostile",
-				"Zombie": "hostile",
-				"Zombie Horse": "animal",
-				"Zombie Villager": "hostile",
-				"Zombified Piglin": "hostile",
-				"Player": "player",
+				"Wolf": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Zoglin": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Zombie": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Zombie Horse": [
+					"animal",
+					"passive",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Zombie Villager": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Zombified Piglin": [
+					"hostile",
+					"path_aware",
+					"mob",
+					"living"
+				],
+				"Player": [
+					"player",
+					"living"
+				],
 				"Fishing Bobber": "projectile"
 			}
 		},
