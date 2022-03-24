@@ -674,7 +674,6 @@ function display_results() {
 
 function un_datatable() {
     if ( $.fn.dataTable.isDataTable( '#output_table' ) ) {
-        reorder_selection_arr();
         $('#output_table').DataTable().destroy();
     }
 }
