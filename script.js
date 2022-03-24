@@ -184,6 +184,8 @@ function initialize_page() {
 
 // This functions only handles headers, but calls display_results()
 function display_headers_and_table() {
+
+    un_datatable();
     
     $('#output_table').find('thead>tr>th').remove();
     
@@ -252,12 +254,12 @@ function display_headers_and_table() {
         link.click();
     });
     
-    Object.keys(data.properties).filter(e => selection_arr.includes(e)).forEach(property => {
+    selection_arr.forEach(property_id => {
         append_data = "";
         
         var sorted = 0;
-        if(sort_arr.some(e => e.property === property)) {
-            if(sort_arr.filter(e => e.property === property)[0].reversed) {
+        if(sort_arr.some(e => e.property === property_id)) {
+            if(sort_arr.filter(e => e.property === property_id)[0].reversed) {
                 sorted = -1;
             } else {
                 sorted = 1;
@@ -265,10 +267,10 @@ function display_headers_and_table() {
         }
 
         // Header and dropdown buttons
-        append_data = `<th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">
-                ${data.properties[property].property_name}
+        append_data = `<th><div class="dropdown noselect"><a property="${property_id}" class="table-header dropdown-toggle justify-start noselect" data-toggle="dropdown">
+                ${data.properties[property_id].property_name}
                 <span class="icons">
-                    <i class="fas fa-filter${typeof filter_obj !== undefined && filter_obj[property] ? '':' display-none'} filtered"></i>
+                    <i class="fas fa-filter${typeof filter_obj !== undefined && filter_obj[property_id] ? '':' display-none'} filtered"></i>
                     <i class="fas fa-sort-amount-down-alt${sorted == 1 ? '':' display-none'} sorted"></i>
                     <i class="fas fa-sort-amount-up${sorted == -1 ? '':' display-none'} sorted-reverse"></i>
                 <span class="glyphicon glyphicon-triangle-bottom"></span>
@@ -276,40 +278,40 @@ function display_headers_and_table() {
                 <li>
                 <div class="text-center">
                     <span class="btn-group dropdown-actions" role="group">
-                        <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == 1 ? ' active' : ''}" property="${property}" reversed="false">
+                        <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == 1 ? ' active' : ''}" property="${property_id}" reversed="false">
                             <i class="fas fa-sort-amount-down-alt"></i>
                         </a>
-                        <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == -1 ? ' active' : ''}" property="${property}" reversed="true">
+                        <a role="button" class="btn dropdown-btn btn-default modify-sorting${sorted == -1 ? ' active' : ''}" property="${property_id}" reversed="true">
                             <i class="fas fa-sort-amount-up"></i>
                         </a>
-                        <a role="button" class="btn dropdown-btn btn-default toggle-select-all" property="${property}">
+                        <a role="button" class="btn dropdown-btn btn-default toggle-select-all" property="${property_id}">
                             <i class="far fa-check-square"></i>
                         </a>
                     </span>
                 </div>
                 </li>`;
         
-        if(typeof data.properties[property].property_description !== 'undefined') {
+        if(typeof data.properties[property_id].property_description !== 'undefined') {
             append_data += `<li class="dropdown-submenu">
                         <a role="button" class="description-button">Description...</a>
                         <ul class="dropdown-menu">
-                            <p>${data.properties[property].property_description}</p>
+                            <p>${data.properties[property_id].property_description}</p>
                         </ul>
                     </li>`;
         }
         append_data += `<li class="divider"></li><div class="dropdown-scrollable">`;
 
         // Filter menu
-        if(filter_obj[property] !== undefined) {
-            filter_obj[property] = [filter_obj[property]].flat();
+        if(filter_obj[property_id] !== undefined) {
+            filter_obj[property_id] = [filter_obj[property_id]].flat();
         }
-        sort_mixed_types(value_list[property]).forEach(option => {
-            var color = formatting_color(option, property, true);
+        sort_mixed_types(value_list[property_id]).forEach(option => {
+            var color = formatting_color(option, property_id, true);
             append_data += `<li>
-                    <a role="button" class="dropdown-option modify-filter" property="${property}" value="${option}">
+                    <a role="button" class="dropdown-option modify-filter" property="${property_id}" value="${option}">
                     <span class="dot ${color ? color : 'display-none'}"></span>
                     <span class="justify-start">${option}</span>
-                    <span class="glyphicon glyphicon-ok${filter_obj[property] !== undefined && filter_obj[property].includes(option) ? ' display-none':''}">
+                    <span class="glyphicon glyphicon-ok${filter_obj[property_id] !== undefined && filter_obj[property_id].includes(option) ? ' display-none':''}">
                     </span></a></li>`
         });
         append_data += `</div></ul></div></th>`;
@@ -407,6 +409,7 @@ function display_headers_and_table() {
 
 // Displays all the table data
 function display_results() {
+    un_datatable();
     $('#output_table').find('tbody>tr').remove();
     
     // Table data
@@ -416,7 +419,8 @@ function display_results() {
     data.key_list.forEach(entry => {
         var output_entry = {[page]: entry};
         var filtered = false;
-        for(var [property_id, property] of Object.entries(data.properties).filter(([e, _]) => selection_arr.includes(e))) {
+        for(var property_id of selection_arr) {
+            var property = data.properties[property_id]
             var selected_element = property.entries[entry];
             var size_factor = property.size_factor ?? 1;
             
@@ -616,6 +620,16 @@ function display_results() {
         append_string += "</tr>";
     });
     $('#output_table').children('tbody').append(append_string);
+
+    $('#output_table').DataTable( {
+        colReorder: {
+            fixedColumnsLeft: 2
+        },
+        paging: false,
+        searching: false,
+        ordering: false,
+        info: false
+    } );
     
     function get_data_cell(entry, property_name, top_level = true) {
         var return_data;
@@ -651,7 +665,27 @@ function display_results() {
         $target.toggle("toggle"); // With toggle animation/delay
         // $target.toggle(); // No toggle animation/delay
     });
+    $('#output_table').on( 'column-reorder.dt', function () {
+        reorder_selection_arr();
+        update_window_history();
+    } );
 
+}
+
+function un_datatable() {
+    if ( $.fn.dataTable.isDataTable( '#output_table' ) ) {
+        reorder_selection_arr();
+        $('#output_table').DataTable().destroy();
+    }
+}
+
+function reorder_selection_arr() {
+    selection_arr = [];
+    $('#output_table:not(.DTCR_clonedTable)>thead>tr>th>div>a').each(function () {
+        var prop = $(this).attr('property');
+        if(typeof prop === 'undefined') return;
+        selection_arr.push(prop);
+    });
 }
 
 function get_all_values(input) {
