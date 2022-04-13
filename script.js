@@ -24,7 +24,7 @@ try{
     var selection_arr = JSON.parse(urlParams.get("selection")) ?? null;
 } catch {
     if(urlParams.has("selection")) {
-        var selection_arr = parse_custom_url(urlParams.get("selection")) || [];
+        var selection_arr = [parse_custom_url(urlParams.get("selection"))].flat() || [];
     } else {
         var selection_arr = null;
     }
@@ -789,7 +789,7 @@ function update_window_history() {
     }
 
     if(url != "") {
-        url = '?' + url.substr(1);
+        url = '?' + url.substr(1) + '#';
     }
     url = window.location.origin + window.location.pathname + url;
 
