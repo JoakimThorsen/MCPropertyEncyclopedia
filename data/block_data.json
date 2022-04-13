@@ -509,6 +509,7 @@
 		"movable",
 		"sticky",
 		"waterloggable",
+		"random_ticked",
 		"spawnable",
 		{
 			"category": "Block interaction",
@@ -518,7 +519,7 @@
 				"instrument"
 			]
 		},
-		"needs_support",
+		"placement_condition",
 		{
 			"category": "Supporting Abilities",
 			"contents": [
@@ -4181,8 +4182,8 @@
 				"Wool": "Yes"
 			}
 		},
-		"needs_support": {
-			"property_name": "Needs Support",
+		"placement_condition": {
+			"property_name": "Placement conditions",
 			"default_value": "No",
 			"default_selection": false,
 			"gradient_scaling": "relative",
@@ -4237,7 +4238,7 @@
 				"Ladder": ".isSideSolidFullSquare()",
 				"Lantern": ".sideCoversSmallSquare()",
 				"Lever": ".isSideSolidFullSquare()",
-				"Lily Pad": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Lily Pad": [".getFluidState() == Fluids.WATER", ".getMaterial() == Material.ICE"],
 				"Moss Carpet": "!.isAir()",
 				"Mushrooms": [".isIn(BlockTags.MUSHROOM_GROW_BLOCK)", ".isOpaqueFullCube"],
 				"Nether Sprouts": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
@@ -12192,6 +12193,56 @@
 				"Wood": "Yes",
 				"Wool": "Yes"
 			}
-		}	
+		},
+		"random_ticked": {
+			"property_name": "Random Ticked",
+			"property_description": "Whether the block gets affected by random ticks. ",
+			"default_value": "No",
+			"default_selection": false,
+			"entries":{
+				"Bamboo": "Yes",
+				"Budding Amethyst": "Yes",
+				"Cactus": "Yes",
+				"Chorus Flower": "Yes",
+				"Cocoa": "Yes",
+				"Crops": "Yes",
+				"Farmland": "Yes",
+				"Frosted Ice": "Yes",
+				"Ice": "Yes",
+				"Leaves": "Yes",
+				"Magma Block": "Yes",
+				"Mushroom Blocks": "Yes",
+				"Nether Portal": "Yes",
+				"Nether Wart": "Yes",
+				"Nylium": "Yes",
+				"Stairs": {
+					"Cobbled Deepslate<br>Polished Deepslate<br>Deepslate Brick<br>Deepslate Tile<br>End Stone Brick<br>Brick<br>(Mossy) Cobblestone<br>(Red) Nether Brick<br>Polished Blackstone<br>Smooth Quartz<br>Smooth (Red) Sandstone<br>Wooden<br>Blackstone<br>(Polished) Andesite<br>(Polished) Diorite<br>(Polished) Granite<br>Polished Blackstone Brick<br>Prismarine (and variants)<br>Purpur<br>Stone<br>(Mossy) Stone Brick<br>Quartz<br>(Red) Sandstone": "No",
+					"Cut Copper": {
+						"Non-waxed": "Yes",
+						"Waxed": "No"
+					}
+				},
+				"Slabs": {
+					"Cobbled Deepslate<br>Polished Deepslate<br>Deepslate Brick<br>Deepslate Tile<br>End Stone Brick<br>(Mossy) Stone Brick<br>Blackstone (and variants)<br>(Mossy) Cobblestone<br>(Polished) Andesite<br>(Polished) Diorite<br>(Polished) Granite<br>Prismarine (and variants)<br>(Red) Nether Brick<br>Petrified Oak<br>Purpur<br>(Smooth) Quartz<br>(Cut/Smooth) Sandstone<br>(Cut/Smooth) Red Sandstone<br>(Smooth) Stone<br>Wooden": "No",
+					"Cut Copper": {
+						"Non-waxed": "Yes",
+						"Waxed": "No"
+					}
+				},
+				"Block of Copper": {
+					"Non-waxed": "Yes",
+					"Waxed": "No"
+				},
+				"Pointed Dripstone": "Yes",
+				"Redstone Ore": "Yes",
+				"Saplings": "Yes",
+				"Snow Block": "Yes",
+				"Sugar Cane": "Yes",
+				"Sweet Berry Bush": "Yes",
+				"Turtle Egg": "Yes",
+				"Vines": "Yes",
+				"Lava": "Yes"
+			}
+		}
 	}
 }
