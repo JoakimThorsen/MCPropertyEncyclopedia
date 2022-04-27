@@ -11135,7 +11135,10 @@
 				"Composter": "Yes",
 				"Dead Bush": "Yes",
 				"Dried Kelp Block": "Yes",
-				"Fence Gates": "Yes",
+				"Fence Gates": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Crimson<br>Warped": "No"
+				},
 				"Fences": {
 					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
 					"Crimson<br>Nether Brick<br>Warped": "No"
@@ -11191,7 +11194,10 @@
 				"Cave Vines": "Yes",
 				"Composter": "Yes",
 				"Dead Bush": "Yes",
-				"Fence Gates": "Yes",
+				"Fence Gates": {
+					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
+					"Crimson<br>Warped": "No"
+				},
 				"Fences": {
 					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
 					"Crimson<br>Nether Brick<br>Warped": "No"
