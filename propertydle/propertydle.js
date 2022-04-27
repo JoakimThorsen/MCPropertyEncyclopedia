@@ -25,24 +25,26 @@ function initialize_page() {
 }
 
 function new_game() {
-    // random block
-    secret_block = data.key_list[(Math.random() * data.key_list.length) | 0];
-    guesses = [];
     
+    // Clear existing header and table body data
     $('#output_table').find('thead>tr>th').remove();
-
-    // Table headers
+    $('#output_table').find('tbody>tr').remove();
+    
+    // Add table headers
     $('#output_table').children('thead').children('tr').append(`<th></th>
     <th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">${entry_header}</a></div></th>`);
 
-    // 10 random properties
+    // random block
+    secret_block = data.key_list[(Math.random() * data.key_list.length) | 0];
+    guesses = [];
+
+    // select 10 random properties, but exclude variants
+    delete data.properties.variants;
     selection_arr = Object.keys(data.properties).sort(() => .5 - Math.random()).slice(0,10)
 
     
     selection_arr.forEach(property_id => {
-        append_data = "";
-
-        // Header and dropdown buttons
+        // Header and dropdown
         append_data = `<th><div class="dropdown noselect"><a property="${property_id}" class="table-header dropdown-toggle justify-start noselect" data-toggle="dropdown">
                 ${data.properties[property_id].property_name}
                 </span></a><ul class="dropdown-menu"><li class="divider"></li><div class="dropdown-scrollable">`;
@@ -57,7 +59,9 @@ function new_game() {
 }
 
 function guess(latest_guess) {
-    
+    if(!data.key_list.includes(latest_guess)) {
+        alert("Invalid input! Watch your capitalization, or make sure to use the option list.")
+    }
     guesses.push(latest_guess);
     
     // Table data
@@ -122,7 +126,7 @@ function guess(latest_guess) {
         append_string += "<tr>";
         append_string += `<td><span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span></td>`;
         for(var [property_id, value] of Object.entries(entry)) {
-            append_string += get_data_cell(value, property_id);
+            append_string += get_data_cell(latest_guess, value, property_id);
         };
         append_string += "</tr>";
     });
@@ -140,6 +144,9 @@ function guess(latest_guess) {
         update_window_history();
     } );
 
+    if(latest_guess == secret_block) {
+        alert('You did it!')
+    }
 }
 function deepCopy(obj) {
     if(Array.isArray(obj)) {
@@ -163,7 +170,7 @@ function deepCopy(obj) {
     return obj;
 }
 
-function get_data_cell(entry, property_name, top_level = true) {
+function get_data_cell(latest_guess, entry, property_name, top_level = true) {
     var return_data;
     if(typeof(entry) == 'object' && entry != null) {
         if(top_level && (get_all_values(entry).length > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2)) {
@@ -174,27 +181,29 @@ function get_data_cell(entry, property_name, top_level = true) {
         
         if(Array.isArray(entry)) {
             entry.forEach(value => {
-                return_data += `<tr>${get_data_cell(value, property_name, false)}</tr>`;
+                return_data += `<tr>${get_data_cell(latest_guess, value, property_name, false)}</tr>`;
             });
         } else {
             Object.keys(entry).forEach(key => {
-                return_data += `<tr><td>${key}</td>${get_data_cell(entry[key], property_name, false)}</tr>`;
+                return_data += `<tr><td>${key}</td>${get_data_cell(latest_guess, entry[key], property_name, false)}</tr>`;
             });
         }
         return_data += "</tbody></table></td>";
 
     } else {
-        return_data = `<td ${formatting_color(entry, property_name)}>${entry}</td>`;
+        return_data = `<td ${formatting_color(latest_guess, entry, property_name)}>${entry}</td>`;
     }
     return return_data;
 }
 
-function formatting_color(value, property_name) {
+function formatting_color(latest_guess, value, property_name) {
     var color = "";
     if(property_name == "block") return "";
     
-    guess_value = data.properties[property_name].entries[secret_block] ?? data.properties[property_name].default_value ?? "no default";
-    if(value == guess_value) {
+    property_entries = data.properties[property_name].entries
+    
+    guess_value = property_entries[secret_block] ?? data.properties[property_name].default_value ?? "no default";
+    if(value == guess_value || JSON.stringify(property_entries[latest_guess]) === JSON.stringify(property_entries[secret_block])) {
         // console.log("match!", value, guess_value)
         color = `class="cf-yes"`;
     } else if(get_all_values(guess_value).includes(value)) {

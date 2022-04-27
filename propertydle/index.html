@@ -40,7 +40,12 @@
 <link rel="stylesheet" href="../style.css">
 <script src="propertydle.js"></script>
 
+<style>
+input[type=search]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+}
 </style>
+
 </head>
 <body data-page="block" onload="load_data('../data/block_data.json')">
 
@@ -93,8 +98,9 @@
     <div class="form-inline text-center">
       <button class="btn btn-default" id="sprite-hint"></button>
       <input list="blocks" class="form-control" id="search" placeholder="Guess a block..." autofocus type="search" autocomplete="off">
-      <datalist id="blocks">
-      </datalist>
+      <datalist id="blocks"></datalist>
+      <button class="btn btn-primary" onclick="guess($(this).siblings('input')[0].value)">Guess (Enter)</button>
+      <button class="btn btn-danger" onclick="if(confirm('Are you sure you want to reset?')) new_game()">Restart</button>
     </div>
   </div>
   <button onclick="scrollToTop()" id="scrollButton" title="Go to top">
