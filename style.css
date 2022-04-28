@@ -15,6 +15,8 @@ body  {
 
 #about-body {
     background-color: rgba(255, 255, 255, 0.856);
+    padding: 10px 5px 5px 5px;
+    margin: 5px;
 }
 
 .navbar {

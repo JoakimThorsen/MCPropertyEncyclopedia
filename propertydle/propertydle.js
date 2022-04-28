@@ -59,11 +59,13 @@ function new_game() {
 }
 
 function guess(latest_guess) {
-    if(!data.key_list.includes(latest_guess)) {
-        alert("Invalid input! Watch your capitalization, or make sure to use the option list.")
+    latest_guess = data.key_list[data.key_list.map(e => e.toLowerCase()).indexOf(latest_guess.toLowerCase())]
+    if(!data.key_list.map(e => e.toLowerCase()).includes(latest_guess.toLowerCase())) {
+        alert("Invalid input! Watch your capitalization, or use the option list.")
     }
     guesses.push(latest_guess);
-    
+    $('#search').val('');
+
     // Table data
     output_data = [];
 
