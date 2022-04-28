@@ -7,7 +7,6 @@
 		"No": "cf-no",
 		
 		"Breaks": "cf-neutral",
-		"Fluid": "cf-neutral",
 		"Partially": "cf-neutral",
 		"With Gold": "cf-neutral",
 		"Inherent": "cf-neutral",
@@ -514,7 +513,7 @@
 		{
 			"category": "Block interaction",
 			"contents": [
-				"updates_comparator",
+				"send_comparator_updates",
 				"obstructs_cactus",
 				"instrument"
 			]
@@ -554,7 +553,7 @@
 		{
 			"category": "Entity Interaction",
 			"contents": [
-				"affects_movement",
+				"affects_movement_speed",
 				"enderman_holdable",
 				"dragon_immune",
 				"wither_immune"
@@ -1253,33 +1252,37 @@
 				"Weeping Vines": "No"
 			}
 		},
-		"affects_movement": { 
-			"property_name": "Affects Movement",
+		"affects_movement_speed": { 
+			"property_name": "Affects Movement Speed",
 			"property_description": "Whether walking on/through this block affects the movement of players or certain other entities.",
 			"default_value": "No",
 			"default_selection": false,
+			"gradient_scaling": "relative",
 			"entries": {
-				"Blue Ice": "Yes",
-				"Cave Vines": "Yes",
-				"Cobweb": "Yes",
-				"Frosted Ice": "Yes",
-				"Honey Block": "Yes",
-				"Ice": "Yes",
-				"Ladder": "Yes",
-				"Lava": "Yes",
-				"Packed Ice": "Yes",
-				"Powder Snow": "Yes",
-				"Slime Block": "Yes",
-				"Soul Sand": "Yes",
+				"Blue Ice": "Slippery",
+				"Cave Vines": "Climbable",
+				"Cobweb": "Slows when intersecting",
+				"Frosted Ice": "Slippery",
+				"Honey Block": ["Slows when walked on", "Slows when intersecting"],
+				"Ice": "Slippery",
+				"Ladder": "Climbable",
+				"Lava": "Fluid",
+				"Packed Ice": "Slippery",
+				"Powder Snow": "Slows when intersecting",
+				"Slime Block": "Slows when walked on",
+				"Soul Sand": {
+					"Normally": "Slows when walked on",
+					"With Soul Speed": "Speeds up when walked on"
+				},
 				"Soul Soil": {
 					"Normally": "No",
-					"With Soul Speed": "Yes"
+					"With Soul Speed": "Speeds up when walked on"
 				},
-				"Sweet Berry Bush": "Yes",
-				"Twisting Vines": "Yes",
-				"Vines": "Yes",
-				"Water": "Yes",
-				"Weeping Vines": "Yes"
+				"Sweet Berry Bush": "Slows when intersecting",
+				"Twisting Vines": "Climbable",
+				"Vines": "Climbable",
+				"Water": "Fluid",
+				"Weeping Vines": "Climbable"
 			}
 		},
 		"movable": {
@@ -2391,7 +2394,7 @@
 					"When Lit": 13
 				},
 				"Redstone Torch": {
-					"Normally": "No",
+					"When Extinguished": "No",
 					"When Lit": 7
 				},
 				"Smoker": {
@@ -2643,6 +2646,7 @@
 				"Buttons": "Not Applicable",
 				"Crops": "Not Applicable",
 				"Cave Vines": "Not Applicable",
+				"Cobweb": "Not Applicable",
 				"Coral Fans": "Not Applicable",
 				"Corals": "Not Applicable",
 				"Dead Bush": "Not Applicable",
@@ -2918,6 +2922,7 @@
 				"Buttons": "Not Applicable",
 				"Crops": "Not Applicable",
 				"Cave Vines": "Not Applicable",
+				"Cobweb": "Not Applicable",
 				"Coral Fans": "Not Applicable",
 				"Corals": "Not Applicable",
 				"Dead Bush": "Not Applicable",
@@ -3209,6 +3214,7 @@
 				"Buttons": "Not Applicable",
 				"Crops": "Not Applicable",
 				"Cave Vines": "Not Applicable",
+				"Cobweb": "Not Applicable",
 				"Coral Fans": "Not Applicable",
 				"Corals": "Not Applicable",
 				"Dead Bush": "Not Applicable",
@@ -3545,6 +3551,7 @@
 				"Buttons": "Not Applicable",
 				"Crops": "Not Applicable",
 				"Cave Vines": "Not Applicable",
+				"Cobweb": "Not Applicable",
 				"Coral Fans": "Not Applicable",
 				"Corals": "Not Applicable",
 				"Dead Bush": "Not Applicable",
@@ -3757,6 +3764,7 @@
 				"Buttons": "Not Applicable",
 				"Crops": "Not Applicable",
 				"Cave Vines": "Not Applicable",
+				"Cobweb": "Not Applicable",
 				"Coral Fans": "Not Applicable",
 				"Corals": "Not Applicable",
 				"Dead Bush": "Not Applicable",
@@ -3988,6 +3996,7 @@
 				"Buttons": "Not Applicable",
 				"Crops": "Not Applicable",
 				"Cave Vines": "Not Applicable",
+				"Cobweb": "Not Applicable",
 				"Coral Fans": "Not Applicable",
 				"Corals": "Not Applicable",
 				"Dead Bush": "Not Applicable",
@@ -4251,6 +4260,7 @@
 				"Redstone Comparator": ".hasTopRim()",
 				"Redstone Dust": [".isSideSolidFullSquare()", ".isOf(Blocks.HOPPER)"],
 				"Redstone Repeater": ".hasTopRim()",
+				"Redstone Torch": ".sideCoversSmallSquare()",
 				"Roots": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
 				"Saplings": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
 				"Scaffolding": [".isSideSolidFullSquare()", ".isOf(Blocks.SCAFFOLDING)"],
@@ -4262,7 +4272,7 @@
 						"Top": ".isOf(this)"
 					}
 				},
-				"Signs": [".getMaterial().isSolid()"], 
+				"Signs": ".getMaterial().isSolid()", 
 				"Small Dripleaf": {
 					"Top": ".isOf(this)",
 					"Bottom": [".isIn(BlockTags.SMALL_DRIPLEAF_PLACEABLE)", ".getFluidState(pos.up()).isEqualAndStill(Fluids.WATER)", ".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"]
@@ -4271,8 +4281,8 @@
 				"Spore Blossom": ".sideCoversSmallSquare()",
 				"Sugar Cane": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.SAND)", ".isOf(Blocks.RED_SAND)"],
 				"Sweet Berry Bush": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
-				"Torch": [".sideCoversSmallSquare()"],
-				"Tripwire Hook": [".isSideSolidFullSquare()"],
+				"Torch": ".sideCoversSmallSquare()",
+				"Tripwire Hook": ".isSideSolidFullSquare()",
 				"Twisting Vines": [".isOf(this.getStem())", ".isOf(this.getPlant())", ".isSideSolidFullSquare()"],
 				"Vines": [".isOf(this)", ".isSideSolidFullSquare()"],
 				"Weeping Vines": [".isOf(this.getStem())", ".isOf(this.getPlant())", ".isSideSolidFullSquare()"]
@@ -10892,7 +10902,7 @@
 				"Trapdoors": "Yes",
 				"Trapped Chest": "Yes",
 				"Walls": "Yes",
-				"Water": "Fluid"
+				"Water": "Inherent"
 			}
 		},
 		"enderman_holdable": {
@@ -11236,9 +11246,9 @@
 				"Wool": "Yes"
 			}
 		},
-		"updates_comparator": {
-			"property_name": "Updates Comparator",
-			"property_description": "Whether interactions with this block causes comparators up to 2 blocks away (manhattan distance) to update.",
+		"send_comparator_updates": {
+			"property_name": "Sends Comparator Updates",
+			"property_description": "Whether interactions with this block sends updates to comparators up to 2 blocks away (manhattan distance).",
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
