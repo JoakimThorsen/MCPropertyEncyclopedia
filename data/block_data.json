@@ -10990,7 +10990,6 @@
 				"Azalea": "Yes",
 				"Barrel": "Yes",
 				"Basalt": "Yes",
-				"Beacon": "Yes",
 				"Bee Nest": "Yes",
 				"Beehive": "Yes",
 				"Blackstone": "Yes",
@@ -11059,6 +11058,7 @@
 				"Jigsaw Block": "Yes",
 				"Jukebox": "Yes",
 				"Lapis Lazuli Ore": "Yes",
+				"Leaves": "Ocelots and Parrots Only",
 				"Lodestone": "Yes",
 				"Logs": "Yes",
 				"Loom": "Yes",
@@ -11103,8 +11103,14 @@
 				"Scaffolding": "Yes",
 				"Sea Lantern": "Yes",
 				"Shroomlight": "Yes",
-				"Shulker Box": { "When Verical Or Cosed": "Yes", "Sideways When Opened": "No" },
-				"Slabs": { "Top Or Double": "Yes", "Bottom": "No"},
+				"Shulker Box": {
+					"When Verical Or Cosed": "Yes",
+					"Sideways When Opened": "No"
+				},
+				"Slabs": {
+					"Top Or Double": "Yes",
+					"Bottom": "No"
+				},
 				"Slime Block": "Yes",
 				"Smithing Table": "Yes",
 				"Smoker": "Yes",
@@ -11113,7 +11119,10 @@
 				"Soul Soil": "Yes",
 				"Spawner": "Yes",
 				"Sponge": "Yes",
-				"Stairs": { "Top": "Yes", "Bottom": "No"},
+				"Stairs": {
+					"Top": "Yes",
+					"Bottom": "No"
+				},
 				"Stems": "Yes",
 				"Stone Bricks": "Yes",
 				"Stone": "Yes",
@@ -11121,7 +11130,6 @@
 				"Target": "Yes",
 				"Terracotta": "Yes",
 				"TNT": "Yes",
-				"Trapdoors": { "Top When Closed":"Yes", "Bottom Or Opened": "No" },
 				"Tuff": "Yes",
 				"Wood": "Yes",
 				"Wool": "Yes"
