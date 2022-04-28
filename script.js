@@ -199,28 +199,22 @@ function display_headers_and_table() {
     }
     
     // Add all unique values of a property to a list of possible values for said property (recursively so for objects)
-    Object.entries(data.properties).filter(([property_name, _]) => selection_arr.includes(property_name)).forEach(([property_name, property]) => {
-        value_list[property_name] = [];
-        if(property.default_value != null) {
-            add_value(value_list[property_name], property.default_value, property);
-        }
-        add_value(value_list[property_name], property.entries, property);
-    });
-    function add_value(list, entry, property) {
-        if(typeof entry == 'object') {
-            Object.values(entry).forEach(value => {
-                add_value(list, value, property);
+    Object.entries(data.properties)
+        .filter(([property_name, _]) => selection_arr.includes(property_name))
+        .forEach(([property_name, property]) => {
+            if(property.default_value != null) {
+                values = [property.entries, property.default_value];
+            } else {
+                values = property.entries;
+            }
+            value_list[property_name] = get_all_values(values, true).map(val => {
+                if(val*1 == val) {
+                    val *= property.size_factor;
+                }
+                return val
             });
-        } else {
-            if(entry*1==entry) {
-                entry *= property.size_factor;
-            }
-            if(!list.includes(entry)){
-                list.push(entry);
-            }
         }
-    }
-    
+    );
     
     // Table headers
     $('#output_table').children('thead').children('tr').append(`<th></th>
@@ -687,11 +681,14 @@ function reorder_selection_arr() {
     });
 }
 
-function get_all_values(input) {
+function get_all_values(input, unique_only = false) {
     if (typeof input == 'object') {
         var return_arr = [];
         for (let value in input) {
             return_arr = return_arr.concat(...get_all_values(input[value]));
+        }
+        if(unique_only) {
+            return_arr = [...new Set(return_arr)]
         }
         return return_arr;
     } else {
@@ -806,7 +803,7 @@ function serialize_custom_url(value) {
         if(Array.isArray(value)) {
             return value.map(v => serialize_custom_url(v)).join(',')
         }
-        return Object.entries(filter_obj).map(([key, v]) =>
+        return Object.entries(value).map(([key, v]) =>
             "(" + key + ":" + serialize_custom_url(v) + ")"
         ).join(';');
     } else {
