@@ -94,7 +94,7 @@ function new_game() {
 
     var sprite = data.sprites[secret_block];
     
-    $('#sprite-hint').html(`Sprite icon: \ \ \ \ <span class="sprite ${sprite[0]}" style="transform: scale(1.03);filter:blur(8px);background-position:${sprite[1]}px ${sprite[2]}px"></span>`);
+    $('#sprite-hint').html(`Average sprite color: \ \ \ \ <span class="sprite unicolor-block-sprite" style="background-position:${sprite[1]}px ${sprite[2]}px"></span>`);
 
 }
 

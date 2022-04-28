@@ -293,6 +293,9 @@ li {
 .item-sprite {
     background-image: url(assets/ItemCSS.png);
 }
+.unicolor-block-sprite {
+    background-image: url(assets/UnicolorBlockCSS.png);
+}
 
 .search-highlight {
     background-color: yellow;
