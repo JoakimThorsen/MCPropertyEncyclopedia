@@ -30,10 +30,6 @@ function new_game() {
     $('#output_table').find('thead>tr>th').remove();
     $('#output_table').find('tbody>tr').remove();
     
-    // Add table headers
-    $('#output_table').children('thead').children('tr').append(`<th></th>
-    <th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">${entry_header}</a></div></th>`);
-
     // random block
     secret_block = data.key_list[(Math.random() * data.key_list.length) | 0];
     guesses = [];
@@ -41,20 +37,64 @@ function new_game() {
     // select 10 random properties, but exclude variants
     delete data.properties.variants;
     selection_arr = Object.keys(data.properties).sort(() => .5 - Math.random()).slice(0,10)
-
     
+    value_list = {};
+    Object.entries(data.properties)
+        .filter(([property_name, _]) => selection_arr.includes(property_name))
+        .forEach(([property_name, property]) => {
+            if(property.default_value != null) {
+                values = [property.entries, property.default_value];
+            } else {
+                values = property.entries;
+            }
+            value_list[property_name] = get_all_values(values, true);
+        }
+    );
+
+    // Add table headers
+    $('#output_table').children('thead').children('tr').append(`<th></th>
+    <th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">${entry_header}</a></div></th>`);
+
     selection_arr.forEach(property_id => {
+        
         // Header and dropdown
+        // Header and dropdown buttons
         append_data = `<th><div class="dropdown noselect"><a property="${property_id}" class="table-header dropdown-toggle justify-start noselect" data-toggle="dropdown">
                 ${data.properties[property_id].property_name}
-                </span></a><ul class="dropdown-menu"><li class="divider"></li><div class="dropdown-scrollable">`;
+                <span class="icons">
+                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                </span></a><ul class="dropdown-menu">`;
         
+        if(typeof data.properties[property_id].property_description !== 'undefined') {
+            append_data += `<li class="dropdown-submenu">
+                        <a role="button" class="description-button">Description...</a>
+                        <ul class="dropdown-menu">
+                            <p>${data.properties[property_id].property_description}</p>
+                        </ul>
+                    </li>`;
+        }
+        append_data += `<li class="divider"></li><div class="dropdown-scrollable">`;
+
+        filter_obj = {}
+        // ~~"Filter" menu~~ -> option menu
+        sort_mixed_types(value_list[property_id]).forEach(option => {
+            // var color = formatting_color(option, property_id, true);
+            // TODO: gray for now. I want this to show the colors of all the ones that have been "revealed"/"exposed" or whatever
+            var color = `" style="background-color: rgb(50%,50%,50%)!important"`;
+            append_data += `<li>
+                    <a role="button" class="dropdown-option modify-filter" property="${property_id}" value="${option}">
+                    <span class="dot ${color ? color : 'display-none'}"></span>
+                    <span class="justify-start">${option}</span>
+                    </span></a></li>`
+        });
+        append_data += `</div></ul></div></th>`;
+
         $('#output_table').children('thead').children('tr').append(append_data);
     });
 
     var sprite = data.sprites[secret_block];
     
-    $('#sprite-hint').html(`<span class="sprite ${sprite[0]}" style="transform: scale(1.03);filter:blur(8px);background-position:${sprite[1]}px ${sprite[2]}px"></span>`);
+    $('#sprite-hint').html(`Sprite icon: \ \ \ \ <span class="sprite ${sprite[0]}" style="transform: scale(1.03);filter:blur(8px);background-position:${sprite[1]}px ${sprite[2]}px"></span>`);
 
 }
 
@@ -198,6 +238,20 @@ function get_data_cell(latest_guess, entry, property_name, top_level = true) {
     return return_data;
 }
 
+function sort_mixed_types(list) {
+    return list.sort((a, b) => {
+        if (typeof a == 'number' && typeof b == 'number') {
+            return a - b;
+        } else if (typeof a == 'string' && typeof b == 'number') {
+            return -1;
+        } else if (typeof a == 'number' && typeof b == 'string') {
+            return 1;
+        } else {
+            return a.localeCompare(b, undefined, {numeric: true, sensitivity: 'base'});
+        }
+    });
+}
+
 function formatting_color(latest_guess, value, property_name) {
     var color = "";
     if(property_name == "block") return "";
@@ -218,11 +272,14 @@ function formatting_color(latest_guess, value, property_name) {
     return color;
 }
 
-function get_all_values(input) {
+function get_all_values(input, unique_only = false) {
     if (typeof input == 'object') {
         var return_arr = [];
         for (let value in input) {
             return_arr = return_arr.concat(...get_all_values(input[value]));
+        }
+        if(unique_only) {
+            return_arr = [...new Set(return_arr)]
         }
         return return_arr;
     } else {
