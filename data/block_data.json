@@ -12267,6 +12267,55 @@
 				"Vines": "Yes",
 				"Lava": "Yes"
 			}
+		},
+		"tile_entity_data": {
+			"property_name": "Tile Entity Data",
+			"property_description": "Whether the block is a tile entity, and if so, what the tile entity stores",
+			"default_value": "No",
+			"default_selection": false,
+			"gradient_scaling": "relative",
+			"entries": {
+				"Bee Nest": "Bees",
+				"Beehive": "Bees",
+				"Signs": "Written text",
+				"Banners": "Patterns",
+				"Chest": ["Item contents", "Opening/closing animation"],
+				"Trapped Chest": ["Item contents", "Opening/closing animation"],
+				"Dispenser": "Item contents",
+				"Furnace": ["Item contents", "-Time until the current item is smelted,<br>-The time until the furnace's current fuel item is exhausted,<br>-All of the items that have been smelted since a player emptied the output slot"],
+				"Brewing Stand": ["Item contents", "Brewing time"],
+				"Hopper": ["Item contents", "Time until the next transfer of an item"],
+				"Dropper": "Item contents",
+				"Shulker Box": ["Item contents", "Opening/closing animation"],
+				"Barrel": "Item contents",
+				"Smoker": ["Item contents", "-Time until the current item is smelted,<br>-The time until the furnace's current fuel item is exhausted,<br>-All of the items that have been smelted since a player emptied the output slot"],
+				"Blast Furnace": ["Item contents", "-Time until the current item is smelted,<br>-The time until the furnace's current fuel item is exhausted,<br>-All of the items that have been smelted since a player emptied the output slot"],
+				"Campfire": "Item contents",
+				"Soul Campfire": "Item contents",
+				"Lectern": ["Item contents", "Page the book is currently on"],
+				"Beacon": "The pyramid level, active effects, and contents.<br>Also uses the block's position for the beacon beam",
+				"Spawner": "-The entity to be spawned,<br>-The delay until the next entity is spawned, and the min and max values for the next spawn delay<br>-How many entities to spawn per spawn attempt<br>-Additional data about the entity to be spawned (such as position, status effects, and entities stacked on top of it)<br>Also uses the block's position to display the spinning mob inside",
+				"Piston": {
+					"Piston": "No",
+					"Moving piston": "-Offset of the block,<br>-Direction of movement,<br>-ID (and data value, if applicable) of the moving block"
+				},
+				"Jukebox": "Play music discs, if any are inside",
+				"Enchanting Table": "For the floating book",
+				"End Portal": "Particle field effect",
+				"Ender Chest": "Particle field effect",
+				"Heads": {
+					"Dragon Head<br>Skulls": "No",
+					"Player Head": "For the (if applicable) data of the player represented"
+				},
+				"Command Block": "Command text, its output strength, and the output text",
+				"End Gateway": "Teleport location and also whether to render the beam",
+				"Structure Block": "Information about the structure",
+				"Jigsaw Block": "The structure pool and the block this jigsaw block becomes",
+				"Daylight Sensor": "To force the daylight sensor to update its output signal strength",
+				"Redstone Comparator": "Output strength",
+				"Conduit": "To check its activation area for valid activation blocks and calculate its effective range.<br>Also used for rendering the block in its active and inactive states",
+				"Bell": "For the render of the swaying animation of the bell"
+			}
 		}
 	}
 }
