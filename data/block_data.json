@@ -12316,6 +12316,314 @@
 				"Conduit": "To check its activation area for valid activation blocks and calculate its effective range.<br>Also used for rendering the block in its active and inactive states",
 				"Bell": "For the render of the swaying animation of the bell"
 			}
+		},
+		"comparator_output": {
+			"property_name": "Comparator Output",
+			"property_description": "What value a comparator will read from this block. Obtained from the wiki.<br>Chest- or Hopper Minecarts placed on detector rails will also give an output identical to their respective blocks.<br>Item frames can also give an output of 0 if there is no item inside, or a value from 1 to 8 depending on the item rotation.",
+			"default_value": "None",
+			"gradient_scaling": "relative",
+			"default_selection": false,
+			"entries": {
+				"Barrel": {
+					"0": "0",
+					"1": "1",
+					"1s 60": "2",
+					"3s 55": "3",
+					"5s 51": "4",
+					"7s 46": "5",
+					"9s 42": "6",
+					"11s 37": "7",
+					"13s 32": "8",
+					"15s 28": "9",
+					"17s 23": "10",
+					"19s 19": "11",
+					"21s 14": "12",
+					"23s 10": "13",
+					"25s 5": "14",
+					"27s": "15"
+				},
+				"Chest": {
+					"Double": {
+						"0": "0",
+						"1": "1",
+						"3s 55": "2",
+						"7s 46": "3",
+						"11s 37": "4",
+						"15s 28": "5",
+						"19s 19": "6",
+						"23s 10": "7",
+						"27s": "8",
+						"30s 55": "9",
+						"34s 46": "10",
+						"38s 37": "11",
+						"42s 28": "12",
+						"46s 19": "13",
+						"50s 10": "14",
+						"54s": "15"
+					},
+					"Single": {
+						"0": "0",
+						"1": "1",
+						"1s 60": "2",
+						"3s 55": "3",
+						"5s 51": "4",
+						"7s 46": "5",
+						"9s 42": "6",
+						"11s 37": "7",
+						"13s 32": "8",
+						"15s 28": "9",
+						"17s 23": "10",
+						"19s 19": "11",
+						"21s 14": "12",
+						"23s 10": "13",
+						"25s 5": "14",
+						"27s": "15"
+					}
+				},
+				"Shulker Box": {
+					"0": "0",
+					"1": "1",
+					"1s 60": "2",
+					"3s 55": "3",
+					"5s 51": "4",
+					"7s 46": "5",
+					"9s 42": "6",
+					"11s 37": "7",
+					"13s 32": "8",
+					"15s 28": "9",
+					"17s 23": "10",
+					"19s 19": "11",
+					"21s 14": "12",
+					"23s 10": "13",
+					"25s 5": "14",
+					"27s": "15"
+				},
+
+				"Dispenser": {
+					"0": "0",
+					"1": "1",
+					"42": "2",
+					"1s 19": "3",
+					"1s 60": "4",
+					"2s 37": "5",
+					"3s 14": "6",
+					"3s 55": "7",
+					"4s 32": "8",
+					"5s 10": "9",
+					"5s 51": "10",
+					"6s 28": "11",
+					"7s 5": "12",
+					"7s 46": "13",
+					"8s 23": "14",
+					"9s": "15"
+				},
+				"Dropper": {
+					"0": "0",
+					"1": "1",
+					"42": "2",
+					"1s 19": "3",
+					"1s 60": "4",
+					"2s 37": "5",
+					"3s 14": "6",
+					"3s 55": "7",
+					"4s 32": "8",
+					"5s 10": "9",
+					"5s 51": "10",
+					"6s 28": "11",
+					"7s 5": "12",
+					"7s 46": "13",
+					"8s 23": "14",
+					"9s": "15"
+				},
+
+				"Brewing Stand": {
+					"0": "0",
+					"1": "1",
+					"23": "2",
+					"46": "3",
+					"1s 5": "4",
+					"1s 28": "5",
+					"1s 51": "6",
+					"2s 10": "7",
+					"2s 32": "8",
+					"2s 55": "9",
+					"3s 14": "10",
+					"3s 37": "11",
+					"3s 60": "12",
+					"4s 19": "13",
+					"4s 42": "14",
+					"5s": "15"
+				},
+				"Hopper": {
+					"0": "0",
+					"1": "1",
+					"23": "2",
+					"46": "3",
+					"1s 5": "4",
+					"1s 28": "5",
+					"1s 51": "6",
+					"2s 10": "7",
+					"2s 32": "8",
+					"2s 55": "9",
+					"3s 14": "10",
+					"3s 37": "11",
+					"3s 60": "12",
+					"4s 19": "13",
+					"4s 42": "14",
+					"5s": "15"
+				},
+
+				"Blast Furnace": {
+					"0": "0",
+					"1": "1",
+					"14": "2",
+					"28": "3",
+					"42": "4",
+					"55": "5",
+					"1s 5": "6",
+					"1s 19": "7",
+					"1s 32": "8",
+					"1s 46": "9",
+					"1s 60": "10",
+					"2s 10": "11",
+					"2s 23": "12",
+					"2s 37": "13",
+					"2s 51": "14",
+					"3s": "15"
+				},
+				"Furnace": {
+					"0": "0",
+					"1": "1",
+					"14": "2",
+					"28": "3",
+					"42": "4",
+					"55": "5",
+					"1s 5": "6",
+					"1s 19": "7",
+					"1s 32": "8",
+					"1s 46": "9",
+					"1s 60": "10",
+					"2s 10": "11",
+					"2s 23": "12",
+					"2s 37": "13",
+					"2s 51": "14",
+					"3s": "15"
+				},
+				"Smoker": {
+					"0": "0",
+					"1": "1",
+					"14": "2",
+					"28": "3",
+					"42": "4",
+					"55": "5",
+					"1s 5": "6",
+					"1s 19": "7",
+					"1s 32": "8",
+					"1s 46": "9",
+					"1s 60": "10",
+					"2s 10": "11",
+					"2s 23": "12",
+					"2s 37": "13",
+					"2s 51": "14",
+					"3s": "15"
+				},
+			
+				"Jukebox": {
+					"No disc": 0,
+					"\"13\"": 1,
+					"cat": 2,
+					"blocks": 3,
+					"chirp": 4,
+					"far": 5,
+					"mall": 6,
+					"mellohi": 7,
+					"stal": 8,
+					"strad": 9,
+					"ward": 10,
+					"\"11\"": 11,
+					"wait": 12,
+					"Pigstep": 13,
+					"Otherside": 14,
+					"\"5\"": 15
+				},
+
+				"Bee Nest": {
+					"honey_level: 0": 0,
+					"honey_level: 1": 1,
+					"honey_level: 2": 2,
+					"honey_level: 3": 3,
+					"honey_level: 4": 4,
+					"honey_level: 5": 5
+				},
+				"Beehive": {
+					"honey_level: 0": 0,
+					"honey_level: 1": 1,
+					"honey_level: 2": 2,
+					"honey_level: 3": 3,
+					"honey_level: 4": 4,
+					"honey_level: 5": 5
+				},
+
+				"Cake": {
+					"bites: 6": 2,
+					"bites: 5": 4,
+					"bites: 4": 6,
+					"bites: 3": 8,
+					"bites: 2": 10,
+					"bites: 1": 12,
+					"bites: 0": 14
+				},
+				
+				"Cauldron": {
+					"Empty Cauldron": 0,
+					"Lava Cauldron": 3,
+					"Water Cauldron<br>Powder Snow Cauldron": {
+						"level: 0": 0,
+						"level: 1": 1,
+						"level: 2": 2,
+						"level: 3": 3
+					}
+				},
+
+				"Composter": {
+					"level: 0": 0,
+					"level: 1": 1,
+					"level: 2": 2,
+					"level: 3": 3,
+					"level: 4": 4,
+					"level: 5": 5,
+					"level: 6": 6,
+					"level: 7": 7,
+					"level: 8": 8
+				},
+
+				"Command Block": {
+					"Success Count": "Any"
+				},
+
+				"End Portal Frame": {
+					"No eye": 0,
+					"With eye": 15
+				},
+
+				"Lectern": {
+					"No book": 0,
+					"With book": "1-15"
+				},
+
+				"Respawn Anchor": {
+					"charges: 0": 0,
+					"charges: 1": 3,
+					"charges: 2": 7,
+					"charges: 3": 11,
+					"charges: 4": 15
+				},
+
+				"Sculk Sensor": {
+					"Non-activated": 0,
+					"Activated": "1-15"
+				}
+			}
 		}
 	}
 }
