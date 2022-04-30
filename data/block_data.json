@@ -511,9 +511,11 @@
 		"waterloggable",
 		"random_ticked",
 		"spawnable",
+		"tile_entity_data",
 		{
 			"category": "Block interaction",
 			"contents": [
+				"comparator_output",
 				"send_comparator_updates",
 				"obstructs_cactus",
 				"instrument"
