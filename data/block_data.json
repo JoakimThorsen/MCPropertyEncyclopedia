@@ -11282,6 +11282,7 @@
 				"Jukebox": "Yes",
 				"Lectern": "Yes",
 				"Respawn Anchor": "Yes",
+				"Sculk Sensor": "Yes",
 				"Shulker Box": "Yes",
 				"Smoker": "Yes"
 			}
@@ -12600,7 +12601,7 @@
 					"level: 8": 8
 				},
 
-				"Command Block": {
+				"Command Blocks": {
 					"Success Count": "Any"
 				},
 
