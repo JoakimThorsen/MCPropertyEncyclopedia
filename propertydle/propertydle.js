@@ -80,7 +80,9 @@ function new_game() {
         sort_mixed_types(value_list[property_id]).forEach(option => {
             // var color = formatting_color(option, property_id, true);
             // TODO: gray for now. I want this to show the colors of all the ones that have been "revealed"/"exposed" or whatever
-            var color = `" style="background-color: rgb(50%,50%,50%)!important"`;
+            if(property_id != 'map_color') {
+                var color = `" style="background-color: rgb(50%,50%,50%)!important"`;
+            }
             append_data += `<li>
                     <a role="button" class="dropdown-option modify-filter" property="${property_id}" value="${option}">
                     <span class="dot ${color ? color : 'display-none'}"></span>

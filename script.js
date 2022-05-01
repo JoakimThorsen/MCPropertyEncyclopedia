@@ -731,6 +731,8 @@ function formatting_color(value, property_name, class_exists = false) {
             
             hslA = [276, 55, 66];
             hslB = [212, 100, 82];
+        } else if(typeof data.properties[property_name].gradient_scaling == 'undefined') {
+            return "";
         }
         hslA ??= [223, 62, 68];
         hslB ??= [159, 70, 82];
