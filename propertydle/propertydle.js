@@ -56,6 +56,8 @@ function new_game() {
             prev_unique_solutions = current_unique_solutions;
         }
     }
+    
+    selection_arr = selection_arr.sort(() => .5 - Math.random());
 
     function unique_solutions(secret_block, selection_arr) {
         var options_left = deepCopy(data.key_list);
