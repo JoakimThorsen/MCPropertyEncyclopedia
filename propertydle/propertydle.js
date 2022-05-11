@@ -22,6 +22,13 @@ function initialize_page() {
             guess(this.value);
         }
     });
+
+    $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (_e) {
+        var $target = $(this).next();
+        // Not sure which one I prefer:
+        $target.toggle("toggle"); // With toggle animation/delay
+        // $target.toggle(); // No toggle animation/delay
+    });
 }
 
 function new_game() {
@@ -40,6 +47,7 @@ function new_game() {
         
         var random_order_props = Object.keys(data.properties).sort(() => .5 - Math.random());
         selection_arr = random_order_props.slice(0,8)
+        random_order_props = random_order_props.slice(8, random_order_props.length)
 
         var prev_unique_solutions = unique_solutions(secret_block, selection_arr).length;
         var max_attempts = random_order_props.length;
@@ -301,13 +309,24 @@ function formatting_color(latest_guess, value, property_name) {
     
     property_entries = data.properties[property_name].entries
     
-    guess_value = property_entries[secret_block] ?? data.properties[property_name].default_value ?? "no default";
-    if(value == guess_value || JSON.stringify(property_entries[latest_guess]) === JSON.stringify(property_entries[secret_block])) {
-        // console.log("match!", value, guess_value)
+    var secret_value = property_entries[secret_block] ?? data.properties[property_name].default_value ?? "no default";
+    if(value == secret_value || JSON.stringify(property_entries[latest_guess]) === JSON.stringify(property_entries[secret_block])) {
         color = `class="cf-yes"`;
-    } else if(get_all_values(guess_value).includes(value)) {
-        // console.log("match!", value, guess_value)
+        
+    } else if(get_all_values(secret_value).includes(value)) {
         color = `class="cf-neutral"`;
+
+    } else if(value*1 == value && get_all_values(secret_value).some(v => v*1 == v)){
+        if(get_all_values(secret_value).every(v => v > value || v*1 != v)) {
+            color = `style="background-color: hsl(276, 55%, 66%);"` // lower
+        }
+        if(get_all_values(secret_value).every(v => v < value || v*1 != v)) {
+            color = `style="background-color: hsl(212, 100%, 82%);"` // higher
+        }
+        if(get_all_values(secret_value).some(v => v < value || v*1 != v) && get_all_values(secret_value).some(v => v > value || v*1 != v)) {
+            color = `style="background-color: hsl(175, 68%, 78.5%);"`; // in between
+        }
+
     } else {
         // console.log("no match!", value, guess_value)
         color = `class="cf-no"`;

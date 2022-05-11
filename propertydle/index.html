@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A comprehensive repository of information about Minecraft blocks.">
+<meta name="description" content="A game where you, like, guess Minecraft blocks and stuff.">
 
 <title>Propertydle - Minecraft Block Guessing Game</title>
 
@@ -81,12 +81,14 @@ input[type=search]::-webkit-search-cancel-button {
   <div class="col-md-1 col-lg-3"></div>
   <div class="col-md-10 col-lg-6">
     <h1 class="text-center" style="font-size: 40px;">Propertydle - A Minecraft Block Guessing Game</h1>
-    <div id="about-body">
+    <button class="btn expand-btn" type="button" data-toggle="collapse-next">Toggle explanation</button>
+    <div id="about-body" class="panel panel-default collapse in">
       <p class="about-text">Yes. This is a thing now.</p>
       <p class="about-text">Your goal is to find the solution by guessing different Minecraft blocks and getting clues based on which properties match the target block.</p>
       <p class="about-text">If the cell is <span class="cf-yes" style="color:black;text-shadow: none;">Green</span>, then this property's value matches that of the solution.</p>
       <p class="about-text">If it is <span class="cf-no" style="color:black;text-shadow: none;">Red</span>, then this is not the case.</p>
       <p class="about-text">If the solution has multiple values for this property, then each correct value will be marked <span class="cf-neutral" style="color:black;text-shadow: none;">Yellow</span>.</p>
+      <p class="about-text">For numbers, the color denotes wether your guess is <span style="background-color: hsl(276, 55%, 66%);">Lower</span> or <span style="background-color: hsl(212, 100%, 82%);">Higher</span> thak the answer, or if your guess is somewhere <span style="background-color: hsl(175, 68%, 78.5%);">in between</span> the values of the answer</p>
     </div>
   </div>
   <div class="col-md-1 col-lg-3"></div>
