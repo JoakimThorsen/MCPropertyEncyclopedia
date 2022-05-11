@@ -30,13 +30,52 @@ function new_game() {
     $('#output_table').find('thead>tr>th').remove();
     $('#output_table').find('tbody>tr').remove();
     
-    // random block
-    secret_block = data.key_list[(Math.random() * data.key_list.length) | 0];
-    guesses = [];
-
-    // select 10 random properties, but exclude variants
+    // exclude variants "property"
     delete data.properties.variants;
-    selection_arr = Object.keys(data.properties).sort(() => .5 - Math.random()).slice(0,10)
+
+    /* this will become a while or something */
+    selection: while(true) {
+        // random block
+        secret_block = data.key_list[(Math.random() * data.key_list.length) | 0];
+        
+        var random_order_props = Object.keys(data.properties).sort(() => .5 - Math.random());
+        selection_arr = random_order_props.slice(0,8)
+
+        var prev_unique_solutions = unique_solutions(secret_block, selection_arr).length;
+        var max_attempts = random_order_props.length;
+        for (let attempts = 0; attempts < max_attempts; attempts++) {
+            selection_arr.push(random_order_props.shift());
+            
+            current_unique_solutions = unique_solutions(secret_block, selection_arr).length;
+            if(current_unique_solutions == 1) {
+                break selection;
+            }
+            if(current_unique_solutions == prev_unique_solutions) {
+                selection_arr.pop();
+            };
+            prev_unique_solutions = current_unique_solutions;
+        }
+    }
+
+    function unique_solutions(secret_block, selection_arr) {
+        var options_left = deepCopy(data.key_list);
+        selection_arr.forEach(property_id => {
+            var entries = data.properties[property_id].entries;
+            var def = data.properties[property_id].default_value;
+            var secret_value = get_all_values((entries[secret_block] || [def]), true)
+            options_left = options_left.filter(block => {
+                var block_value = get_all_values((entries[block] || [def]), true);
+                if(secret_value.every(e => block_value.includes(e)) ) {
+                    return true;
+                }
+                return false;
+            })
+
+        });
+        return options_left;
+    }
+    
+    guesses = [];
     
     value_list = {};
     Object.entries(data.properties)
@@ -76,7 +115,7 @@ function new_game() {
         append_data += `<li class="divider"></li><div class="dropdown-scrollable">`;
 
         filter_obj = {}
-        // ~~"Filter" menu~~ -> option menu
+        // Option menu (usually a Filter menu)
         sort_mixed_types(value_list[property_id]).forEach(option => {
             // var color = formatting_color(option, property_id, true);
             // TODO: gray for now. I want this to show the colors of all the ones that have been "revealed"/"exposed" or whatever
