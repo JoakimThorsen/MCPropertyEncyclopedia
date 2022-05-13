@@ -2223,6 +2223,16 @@
 				"saturation",
 				"effect_when_eaten"
 			]
+		},
+		{
+			"category": "Weapons & Tools",
+			"contents": [
+				"is_weapon",
+				"attack_speed",
+				"attack_damage",
+				"damage_per_second",
+				"breaking_speed"
+			]
 		}
 	],
 	"properties": {
@@ -4724,6 +4734,234 @@
 				"Suspicious Stew": "The following for 3-11 seconds, depending on the flower used:<br>Regeneration<br>Jump Boost<br>Poison<br>Wither<br>Weakness<br>Blindness<br>Fire Resistance<br>Saturation<br>Night Vision",
 				"Sweet Berries": "None",
 				"Tropical Fish": "None"
+			}
+		},
+		"is_weapon": {
+			"property_name": "Is Weapon",
+			"property_description": "Obtained from the wiki. Sor further information, see: https://minecraft.fandom.com/wiki/Breaking#Speed",
+			"default_value": "No",
+			"default_selection": false,
+			"entries": {
+				"Wooden Sword": "Yes",
+				"Gold Sword": "Yes",
+				"Stone Sword": "Yes",
+				"Iron Sword": "Yes",
+				"Diamond Sword": "Yes",
+				"Netherite Sword": "Yes",
+				"Wooden Shovel": "Yes",
+				"Gold Shovel": "Yes",
+				"Stone Shovel": "Yes",
+				"Iron Shovel": "Yes",
+				"Diamond Shovel": "Yes",
+				"Netherite Shovel": "Yes",
+				"Wooden Pickaxe": "Yes",
+				"Gold Pickaxe": "Yes",
+				"Stone Pickaxe": "Yes",
+				"Iron Pickaxe": "Yes",
+				"Diamond Pickaxe": "Yes",
+				"Netherite Pickaxe": "Yes",
+				"Wooden Axe": "Yes",
+				"Gold Axe": "Yes",
+				"Stone Axe": "Yes",
+				"Iron Axe": "Yes",
+				"Diamond Axe": "Yes",
+				"Netherite Axe": "Yes",
+				"Trident": "Yes",
+				"Wooden Hoe": "Yes",
+				"Gold Hoe": "Yes",
+				"Stone Hoe": "Yes",
+				"Iron Hoe": "Yes",
+				"Diamond Hoe": "Yes",
+				"Netherite Hoe": "Yes"
+			}
+		},
+		"attack_speed": {
+			"property_name": "Attack Speed",
+			"property_description": "Obtained from the wiki. Sor further information, see: https://minecraft.fandom.com/wiki/Breaking#Speed",
+			"default_value": 4,
+			"default_selection": false,
+			"max": 4,
+			"entries": {
+				"Wooden Sword": 1.6,
+				"Gold Sword": 1.6,
+				"Stone Sword": 1.6,
+				"Iron Sword": 1.6,
+				"Diamond Sword": 1.6,
+				"Netherite Sword": 1.6,
+				"Wooden Shovel": 1,
+				"Gold Shovel": 1,
+				"Stone Shovel": 1,
+				"Iron Shovel": 1,
+				"Diamond Shovel": 1,
+				"Netherite Shovel": 1,
+				"Wooden Pickaxe": 1.2,
+				"Gold Pickaxe": 1.2,
+				"Stone Pickaxe": 1.2,
+				"Iron Pickaxe": 1.2,
+				"Diamond Pickaxe": 1.2,
+				"Netherite Pickaxe": 1.2,
+				"Wooden Axe": 0.8,
+				"Gold Axe": 1,
+				"Stone Axe": 0.8,
+				"Iron Axe": 0.9,
+				"Diamond Axe": 1,
+				"Netherite Axe": 1,
+				"Trident": 1.1,
+				"Wooden Hoe": 1,
+				"Gold Hoe": 1,
+				"Stone Hoe": 2,
+				"Iron Hoe": 3,
+				"Diamond Hoe": 4,
+				"Netherite Hoe": 4
+			}
+		},
+		"attack_damage": {
+			"property_name": "Attack Damage",
+			"property_description": "Obtained from the wiki. Sor further information, see: https://minecraft.fandom.com/wiki/Breaking#Speed",
+			"default_value": 1,
+			"default_selection": false,
+			"max": 10,
+			"entries": {
+				"Wooden Sword": 4,
+				"Gold Sword": 4,
+				"Stone Sword": 5,
+				"Iron Sword": 6,
+				"Diamond Sword": 7,
+				"Netherite Sword": 8,
+				"Wooden Shovel": 2.5,
+				"Gold Shovel": 2.5,
+				"Stone Shovel": 3.5,
+				"Iron Shovel": 4.5,
+				"Diamond Shovel": 5.5,
+				"Netherite Shovel": 6.5,
+				"Wooden Pickaxe": 2,
+				"Gold Pickaxe": 2,
+				"Stone Pickaxe": 3,
+				"Iron Pickaxe": 4,
+				"Diamond Pickaxe": 5,
+				"Netherite Pickaxe": 6,
+				"Wooden Axe": 7,
+				"Gold Axe": 7,
+				"Stone Axe": 9,
+				"Iron Axe": 9,
+				"Diamond Axe": 9,
+				"Netherite Axe": 10,
+				"Trident": 9,
+				"Wooden Hoe": 1,
+				"Gold Hoe": 1,
+				"Stone Hoe": 1,
+				"Iron Hoe": 1,
+				"Diamond Hoe": 1,
+				"Netherite Hoe": 1
+			}
+		},
+		"damage_per_second": {
+			"property_name": "Damage Per Second",
+			"property_description": "Obtained from the wiki. Sor further information, see: https://minecraft.fandom.com/wiki/Breaking#Speed",
+			"default_value": 4,
+			"default_selection": false,
+			"max": 12.8,
+			"entries": {
+				"Wooden Sword": 6.4,
+				"Gold Sword": 6.4,
+				"Stone Sword": 8,
+				"Iron Sword": 9.6,
+				"Diamond Sword": 11.2,
+				"Netherite Sword": 12.8,
+				"Wooden Shovel": 2.5,
+				"Gold Shovel": 2.5,
+				"Stone Shovel": 3.5,
+				"Iron Shovel": 4.5,
+				"Diamond Shovel": 5.5,
+				"Netherite Shovel": 6.5,
+				"Wooden Pickaxe": 2.4,
+				"Gold Pickaxe": 2.4,
+				"Stone Pickaxe": 3.6,
+				"Iron Pickaxe": 4.8,
+				"Diamond Pickaxe": 6,
+				"Netherite Pickaxe": 7.2,
+				"Wooden Axe": 5.6,
+				"Gold Axe": 7,
+				"Stone Axe": 7.2,
+				"Iron Axe": 8.1,
+				"Diamond Axe": 9,
+				"Netherite Axe": 10,
+				"Trident": 9.9,
+				"Wooden Hoe": 1,
+				"Gold Hoe": 1,
+				"Stone Hoe": 2,
+				"Iron Hoe": 3,
+				"Diamond Hoe": 4,
+				"Netherite Hoe": 4
+			}
+		},
+		"breaking_speed": {
+			"property_name": "Breaking Speed",
+			"property_description": "If the tool has efficiency, then you get an additional (1+level^2) when using the proper tool<br>If you have haste, then your mining speed increases by (20*level)% per level of Haste<br>Obtained from the wiki. For further information, see: https://minecraft.fandom.com/wiki/Breaking#Speed",
+			"default_value": 1,
+			"default_selection": false,
+			"max": 15,
+			"entries": {
+				"Wooden Shovel": 2,
+				"Wooden Pickaxe": 2,
+				"Wooden Axe": 2,
+				"Wooden Hoe": 2,
+
+				"Gold Shovel": 12,
+				"Gold Pickaxe": 12,
+				"Gold Axe": 12,
+				"Gold Hoe": 12,
+
+				"Stone Shovel": 4,
+				"Stone Pickaxe": 4,
+				"Stone Axe": 4,
+				"Stone Hoe": 4,
+
+				"Iron Shovel": 6,
+				"Iron Pickaxe": 6,
+				"Iron Axe": 6,
+				"Iron Hoe": 6,
+
+				"Diamond Shovel": 8,
+				"Diamond Pickaxe": 8,
+				"Diamond Axe": 8,
+				"Diamond Hoe": 8,
+
+				"Netherite Shovel": 9,
+				"Netherite Pickaxe": 9,
+				"Netherite Axe": 9,
+				"Netherite Hoe":9,
+
+				"Wooden Sword": {
+					"By default": 1.5,
+					"On cobwebs": 15
+				},
+				"Gold Sword": {
+					"By default": 1.5,
+					"On cobwebs": 15
+				},
+				"Stone Sword": {
+					"By default": 1.5,
+					"On cobwebs": 15
+				},
+				"Iron Sword": {
+					"By default": 1.5,
+					"On cobwebs": 15
+				},
+				"Diamond Sword": {
+					"By default": 1.5,
+					"On cobwebs": 15
+				},
+				"Netherite Sword": {
+					"By default": 1.5,
+					"On cobwebs": 15
+				},
+
+				"Shears": {
+					"Default": 1.5,
+					"On wool": 5,
+					"On cobwebs and leaves": 15
+				}
 			}
 		}
 	}
