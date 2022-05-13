@@ -21,7 +21,6 @@ body {
 }
 
 .navbar {
-    background-color: transparent;
     background: transparent;
     border-color: transparent;
     margin-bottom: 0;
@@ -64,13 +63,13 @@ body {
     /* margin: 9px 0; */
     overflow: hidden;
     background-color: white;
-    box-shadow: 0px 0px 5px black, 1px 1px 2px black;
+    box-shadow: 0 0 5px black, 1px 1px 2px black;
 }
 
 
 h1, h2, h3 {
     color: white;
-    text-shadow: 0px 0px 5px black, 2px 2px 3px black;
+    text-shadow: 0 0 5px black, 2px 2px 3px black;
 }
 
 :is(h1, h2, h3).black-text {
@@ -99,15 +98,13 @@ a:hover {
 }
 
 .select-option, .selection-category {
-    margin: 5px 4px;
     font-size: 14px;
     padding: 6px 16px !important;
-    margin: 0px;
+    margin: 0;
 }
 
 .dropdown-actions {
-    padding: 0;
-    padding-bottom: 5px;
+    padding: 0 0 5px;
 }
 
 .selected {
@@ -136,7 +133,7 @@ a:hover {
 .results {
     max-width: fit-content;
     margin: auto;
-    padding: 0px;
+    padding: 0;
     display: flex;
     align-items: center;
     /* overflow-x: auto; */
@@ -628,7 +625,7 @@ th {
 
 
 .nested-table {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     width: 100%;
     /* border-collapse: collapse;
     border-style: hidden; */
@@ -636,7 +633,7 @@ th {
 
 .nested-cell {
     height: auto;
-    padding: 0px !important;
+    padding: 0 !important;
 }
 
 td .nested-table {
@@ -668,7 +665,7 @@ td .nested-table {
     margin: 5px;
     padding: 7px;
     background-color: #f5f5f5;
-    box-shadow: 0px 0px 4px black;
+    box-shadow: 0 0 4px black;
 }
 
 .settings-box > p {
