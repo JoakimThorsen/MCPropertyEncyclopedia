@@ -559,6 +559,7 @@
 			"category": "Entity Interaction",
 			"contents": [
 				"affects_movement_speed",
+				"inflicts_damage",
 				"enderman_holdable",
 				"dragon_immune",
 				"wither_immune",
@@ -1290,6 +1291,32 @@
 				"Vines": "Climbable",
 				"Water": "Fluid",
 				"Weeping Vines": "Climbable"
+			}
+		},
+		"inflicts_damage": {
+			"property_name": "Inflicts Damage",
+			"property_description": "Whether the block inflicts damage in any way.<br>Obtained manually",
+			"default_value": "No",
+			"default_selection": false,
+			"entries": {
+				"Anvil": {
+					"Normally": "No",
+					"When Falling": "Damage Entities"
+				},
+				"Beds": "Explodes",
+				"Cactus": "Damage When Touched",
+				"Campfire": "Fire Damage When Touched",
+				"Fire": "Fire Damage When Touched",
+				"Lava": "Fire Damage When Touched",
+				"Magma Blocks": "Fire Damage When Touched",
+				"Pointed Dripstone": {
+					"Normally": "Amplifies Fall Damage",
+					"When Falling": "Damage Entities"
+				},
+				"Respawn Anchor": "Explodes",
+				"Sweet Berry Bush": "Damage When Touched",
+				"TNT": "Explodes",
+				"Water": "Drowning"
 			}
 		},
 		"movable": {
