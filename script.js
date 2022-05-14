@@ -182,7 +182,7 @@ function initialize_page() {
         location.reload(true);
     });
 
-    $('.radio-settings').click(function (e) {
+    $('.radio-settings').click(function () {
         const setting = $(this).attr("setting");
         const value = $(this).attr("value");
         if (settings_obj[setting] === value) {
@@ -231,7 +231,7 @@ function display_headers_and_table() {
                 values = property.entries;
             }
             value_list[property_name] = get_all_values(values, true).map(val => {
-                if (val * 1 === val) {
+                if (val * 1 == val) {
                     val *= property.size_factor;
                 }
                 return val
@@ -395,7 +395,7 @@ function display_headers_and_table() {
         $(this).children().last().toggleClass("display-none")
 
         // Convert to double if applicable
-        value = (value * 1 === value) ? value * 1 : value;
+        value = (value * 1 == value) ? value * 1 : value;
         if (!Object.keys(filter_obj).includes(property)) {
             filter_obj[property] = [];
         }
@@ -480,7 +480,7 @@ function display_results() {
     $('#output_table').find('tbody>tr').remove();
 
     // Table data
-    output_data = [];
+    let output_data = [];
 
     // Filtering and "pivoting" (from data to output_data)
     data.key_list.forEach(entry => {
@@ -521,7 +521,7 @@ function display_results() {
                     }
                 } else {
                     input_element = input_element ?? property.default_value ?? "No defualt value has been assigned.";
-                    if (input_element * 1 === input_element) {
+                    if (input_element * 1 == input_element) {
                         input_element *= size_factor;
                     }
                     if ((filter_obj[property_id] || []).includes(input_element)) {
@@ -799,11 +799,11 @@ function formatting_color(value, property_name, class_exists = false) {
         return color;
     }
 
-    if (typeof data.properties[property_name] !== 'undefined' || value * 1 === value) {
+    if (typeof data.properties[property_name] !== 'undefined' || value * 1 == value) {
         let hue, sat, lum;
         let hslA, hslB;
         let scale_value;
-        if (value * 1 === value) {
+        if (value * 1 == value) {
             scale_value = value * 1;
 
             hslA = [276, 55, 66];
@@ -907,7 +907,7 @@ function parse_custom_url(value) {
     if (split.length > 1) {
         return split.map(v => parse_custom_url(v))
     }
-    if (value * 1 === value) {
+    if (value * 1 == value) {
         return parseFloat(value);
     }
     if (value === '') {
