@@ -348,280 +348,76 @@ th {
 }
 
 /* Conditional formatting: */
-.cf-yes {
-    background-color: #B7E1CD !important;
-}
-
-.cf-no {
-    background-color: #F4C7C3 !important;
-}
-
-.cf-neutral {
-    background-color: #FCE8B2 !important;
-}
-
-.cf-neutral-yes {
-    background-color: #DDE6BA !important;
-}
-
-.cf-neutral-no {
-    background-color: #F9D9B8 !important;
-}
-
-.cf-invalid {
-    background-color: #CCC !important;
-}
-
+.cf-yes { background-color: #B7E1CD !important; }
+.cf-no { background-color: #F4C7C3 !important; }
+.cf-neutral { background-color: #FCE8B2 !important; }
+.cf-neutral-yes { background-color: #DDE6BA !important; }
+.cf-neutral-no { background-color: #F9D9B8 !important; }
+.cf-invalid { background-color: #CCC !important; }
 /* .cf-numeric { background-color: #D0EBFB;} */
 
-
-.CLEAR {
-    background-color: rgb(0 0 0)
-}
-
-.PALE_GREEN {
-    background-color: rgb(127 178 56)
-}
-
-.PALE_YELLOW {
-    background-color: rgb(247 233 163)
-}
-
-.WHITE_GRAY {
-    background-color: rgb(199 199 199)
-}
-
-.BRIGHT_RED {
-    background-color: rgb(255 0 0)
-}
-
-.PALE_PURPLE {
-    background-color: rgb(160 160 255)
-}
-
-.IRON_GRAY {
-    background-color: rgb(167 167 167)
-}
-
-.DARK_GREEN {
-    background-color: rgb(0 124 0)
-}
-
-.WHITE {
-    background-color: rgb(255 255 255)
-}
-
-.LIGHT_BLUE_GRAY {
-    background-color: rgb(164 168 184)
-}
-
-.DIRT_BROWN {
-    background-color: rgb(151 109 77)
-}
-
-.STONE_GRAY {
-    background-color: rgb(112 112 112)
-}
-
-.WATER_BLUE {
-    background-color: rgb(64 64 255)
-}
-
-.OAK_TAN {
-    background-color: rgb(143 119 72)
-}
-
-.OFF_WHITE {
-    background-color: rgb(255 252 245)
-}
-
-.ORANGE {
-    background-color: rgb(216 127 51)
-}
-
-.MAGENTA {
-    background-color: rgb(178 76 216)
-}
-
-.LIGHT_BLUE {
-    background-color: rgb(102 153 216)
-}
-
-.YELLOW {
-    background-color: rgb(229 229 51)
-}
-
-.LIME {
-    background-color: rgb(127 204 25)
-}
-
-.PINK {
-    background-color: rgb(242 127 165)
-}
-
-.GRAY {
-    background-color: rgb(76 76 76)
-}
-
-.LIGHT_GRAY {
-    background-color: rgb(153 153 153)
-}
-
-.CYAN {
-    background-color: rgb(76 127 153)
-}
-
-.PURPLE {
-    background-color: rgb(127 63 178)
-}
-
-.BLUE {
-    background-color: rgb(51 76 178)
-}
-
-.BROWN {
-    background-color: rgb(102 76 51)
-}
-
-.GREEN {
-    background-color: rgb(102 127 51)
-}
-
-.RED {
-    background-color: rgb(153 51 51)
-}
-
-.BLACK {
-    background-color: rgb(25 25 25)
-}
-
-.GOLD {
-    background-color: rgb(250 238 77)
-}
-
-.DIAMOND_BLUE {
-    background-color: rgb(92 219 213)
-}
-
-.LAPIS_BLUE {
-    background-color: rgb(74 128 255)
-}
-
-.EMERALD_GREEN {
-    background-color: rgb(0 217 58)
-}
-
-.SPRUCE_BROWN {
-    background-color: rgb(129 86 49)
-}
-
-.DARK_RED {
-    background-color: rgb(112 2 0)
-}
-
-.TERRACOTTA_WHITE {
-    background-color: rgb(209 177 161)
-}
-
-.TERRACOTTA_ORANGE {
-    background-color: rgb(159 82 36)
-}
-
-.TERRACOTTA_MAGENTA {
-    background-color: rgb(149 87 108)
-}
-
-.TERRACOTTA_LIGHT_BLUE {
-    background-color: rgb(112 108 138)
-}
-
-.TERRACOTTA_YELLOW {
-    background-color: rgb(186 133 36)
-}
-
-.TERRACOTTA_LIME {
-    background-color: rgb(103 117 53)
-}
-
-.TERRACOTTA_PINK {
-    background-color: rgb(160 77 78)
-}
-
-.TERRACOTTA_GRAY {
-    background-color: rgb(57 41 35)
-}
-
-.TERRACOTTA_LIGHT_GRAY {
-    background-color: rgb(135 107 98)
-}
-
-.TERRACOTTA_CYAN {
-    background-color: rgb(87 92 92)
-}
-
-.TERRACOTTA_PURPLE {
-    background-color: rgb(122 73 88)
-}
-
-.TERRACOTTA_BLUE {
-    background-color: rgb(76 62 92)
-}
-
-.TERRACOTTA_BROWN {
-    background-color: rgb(76 50 35)
-}
-
-.TERRACOTTA_GREEN {
-    background-color: rgb(76 82 42)
-}
-
-.TERRACOTTA_RED {
-    background-color: rgb(142 60 46)
-}
-
-.TERRACOTTA_BLACK {
-    background-color: rgb(37 22 16)
-}
-
-.DULL_RED {
-    background-color: rgb(189 48 49)
-}
-
-.DULL_PINK {
-    background-color: rgb(148 63 97)
-}
-
-.DARK_CRIMSON {
-    background-color: rgb(92 25 29)
-}
-
-.TEAL {
-    background-color: rgb(22 126 134)
-}
-
-.DARK_AQUA {
-    background-color: rgb(58 142 140)
-}
-
-.DARK_DULL_PINK {
-    background-color: rgb(86 44 62)
-}
-
-.BRIGHT_TEAL {
-    background-color: rgb(20 180 133)
-}
-
-.DEEPSLATE_GRAY {
-    background-color: rgb(100 100 100)
-}
-
-.RAW_IRON_PINK {
-    background-color: rgb(216 175 147)
-}
-
-.LICHEN_GREEN {
-    background-color: rgb(127 167 150)
-}
+.CLEAR { background-color: rgb(0 0 0) }
+.PALE_GREEN { background-color: rgb(127 178 56) }
+.PALE_YELLOW { background-color: rgb(247 233 163) }
+.WHITE_GRAY { background-color: rgb(199 199 199) }
+.BRIGHT_RED { background-color: rgb(255 0 0) }
+.PALE_PURPLE { background-color: rgb(160 160 255) }
+.IRON_GRAY { background-color: rgb(167 167 167) }
+.DARK_GREEN { background-color: rgb(0 124 0) }
+.WHITE { background-color: rgb(255 255 255) }
+.LIGHT_BLUE_GRAY { background-color: rgb(164 168 184) }
+.DIRT_BROWN { background-color: rgb(151 109 77) }
+.STONE_GRAY { background-color: rgb(112 112 112) }
+.WATER_BLUE { background-color: rgb(64 64 255) }
+.OAK_TAN { background-color: rgb(143 119 72) }
+.OFF_WHITE { background-color: rgb(255 252 245) }
+.ORANGE { background-color: rgb(216 127 51) }
+.MAGENTA { background-color: rgb(178 76 216) }
+.LIGHT_BLUE { background-color: rgb(102 153 216) }
+.YELLOW { background-color: rgb(229 229 51) }
+.LIME { background-color: rgb(127 204 25) }
+.PINK { background-color: rgb(242 127 165) }
+.GRAY { background-color: rgb(76 76 76) }
+.LIGHT_GRAY { background-color: rgb(153 153 153) }
+.CYAN { background-color: rgb(76 127 153) }
+.PURPLE { background-color: rgb(127 63 178) }
+.BLUE { background-color: rgb(51 76 178) }
+.BROWN { background-color: rgb(102 76 51) }
+.GREEN { background-color: rgb(102 127 51) }
+.RED { background-color: rgb(153 51 51) }
+.BLACK { background-color: rgb(25 25 25) }
+.GOLD { background-color: rgb(250 238 77) }
+.DIAMOND_BLUE { background-color: rgb(92 219 213) }
+.LAPIS_BLUE { background-color: rgb(74 128 255) }
+.EMERALD_GREEN { background-color: rgb(0 217 58) }
+.SPRUCE_BROWN { background-color: rgb(129 86 49) }
+.DARK_RED { background-color: rgb(112 2 0) }
+.TERRACOTTA_WHITE { background-color: rgb(209 177 161) }
+.TERRACOTTA_ORANGE { background-color: rgb(159 82 36) }
+.TERRACOTTA_MAGENTA { background-color: rgb(149 87 108) }
+.TERRACOTTA_LIGHT_BLUE { background-color: rgb(112 108 138) }
+.TERRACOTTA_YELLOW { background-color: rgb(186 133 36) }
+.TERRACOTTA_LIME { background-color: rgb(103 117 53) }
+.TERRACOTTA_PINK { background-color: rgb(160 77 78) }
+.TERRACOTTA_GRAY { background-color: rgb(57 41 35) }
+.TERRACOTTA_LIGHT_GRAY { background-color: rgb(135 107 98) }
+.TERRACOTTA_CYAN { background-color: rgb(87 92 92) }
+.TERRACOTTA_PURPLE { background-color: rgb(122 73 88) }
+.TERRACOTTA_BLUE { background-color: rgb(76 62 92) }
+.TERRACOTTA_BROWN { background-color: rgb(76 50 35) }
+.TERRACOTTA_GREEN { background-color: rgb(76 82 42) }
+.TERRACOTTA_RED { background-color: rgb(142 60 46) }
+.TERRACOTTA_BLACK { background-color: rgb(37 22 16) }
+.DULL_RED { background-color: rgb(189 48 49) }
+.DULL_PINK { background-color: rgb(148 63 97) }
+.DARK_CRIMSON { background-color: rgb(92 25 29) }
+.TEAL { background-color: rgb(22 126 134) }
+.DARK_AQUA { background-color: rgb(58 142 140) }
+.DARK_DULL_PINK { background-color: rgb(86 44 62) }
+.BRIGHT_TEAL { background-color: rgb(20 180 133) }
+.DEEPSLATE_GRAY { background-color: rgb(100 100 100) }
+.RAW_IRON_PINK { background-color: rgb(216 175 147) }
+.LICHEN_GREEN { background-color: rgb(127 167 150) }
 
 
 .nested-table {
