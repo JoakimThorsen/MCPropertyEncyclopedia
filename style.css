@@ -181,8 +181,7 @@ li {
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
-    /* Non-prefixed version, currently
-                                       supported by Chrome, Edge, Opera and Firefox */
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 .justify-start {
@@ -283,6 +282,13 @@ li {
     -webkit-border-radius: 6px 0 6px 6px;
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
+}
+
+.custom-collapsible {
+    text-indent: 1em;
+    display: none;
+    opacity: 0;
+    max-height: 0;
 }
 
 .dot {

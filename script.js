@@ -105,11 +105,11 @@ function display_selection() {
                 return entry.reduce((result, ent) => result + selection_dropdown(ent), "");
             } else { // obj
                 return `
-                <li class="dropdown-submenu">
-                    <a role="button" class="selection-category">
+                <li class="">
+                    <a role="button" class="selection-category submenu disabled">
                         <i class="fas fa-folder-open"></i> ${entry.category}&hellip;
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="custom-collapsible list-unstyled">
                         ${selection_dropdown(entry.contents)}
                     </ul>
                 </li>
@@ -140,6 +140,27 @@ function display_selection() {
 
     $('.selection-category').click(function (e) {
         e.stopPropagation();
+    });
+
+    $('a.submenu.selection-category').click(function () {
+        let submenu = $(this).siblings('ul.custom-collapsible');
+        if (submenu.hasClass('submenu-open')) {
+            submenu.animate({
+                'max-height': 0,
+                'opacity': 0,
+            }, 200, function () {
+                submenu.css('display', 'none');
+                submenu.removeClass('submenu-open');
+            });
+        } else {
+            submenu.css('display', 'block');
+            submenu.animate({
+                'max-height': '100rem',
+                'opacity': 1,
+            }, 300, function () {
+                submenu.addClass('submenu-open');
+            });
+        }
     });
 
     $('.select-option').click(function (e) {
