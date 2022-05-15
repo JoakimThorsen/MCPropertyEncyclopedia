@@ -30,12 +30,12 @@ try {
 }
 
 try {
-    selection_arr = JSON.parse(urlParams.get("selection")) ?? [];
+    selection_arr = JSON.parse(urlParams.get("selection")) ?? null;
 } catch {
     if (urlParams.has("selection")) {
-        selection_arr = [parse_custom_url(urlParams.get("selection"))].flat() || [];
+        selection_arr = parse_custom_url(urlParams.get("selection")) || [];
     } else {
-        selection_arr = [];
+        selection_arr = null;
     }
 }
 
@@ -90,7 +90,7 @@ function display_selection() {
         </span>
     </div>
     </li>`);
-    if (selection_arr === undefined) {
+    if (selection_arr === null) {
         selection_arr = [];
         for (let [property_name, value] of Object.entries(data.properties)) {
             if (value.default_selection ?? false) {
@@ -230,7 +230,7 @@ function display_headers_and_table() {
     un_datatable();
 
     $('#output_table').find('thead>tr>th').remove();
-
+    
     for (const [_, property] of Object.entries(data.properties).filter(([e, _]) => selection_arr.includes(e))) {
         let size_factor = 1;
         if (typeof settings_obj.size_type !== 'undefined' && typeof property.size_type !== 'undefined') {
@@ -665,9 +665,7 @@ function display_results() {
 
                 function get_value(value) {
                     if (typeof value == 'object') {
-                        for (let prop in value) {
-                            return get_value(value[prop]);
-                        }
+                        return get_value(Object.values(value)[0]);
                     } else {
                         return value;
                     }
@@ -927,11 +925,11 @@ function parse_custom_url(value) {
     if (split.length > 1) {
         return split.map(v => parse_custom_url(v))
     }
-    if (value * 1 == value) {
-        return parseFloat(value);
-    }
     if (value === '') {
         return false;
+    }
+    if (value * 1 == value) {
+        return parseFloat(value);
     }
     return value
 }
