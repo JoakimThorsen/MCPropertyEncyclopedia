@@ -33,7 +33,7 @@ try {
     selection_arr = JSON.parse(urlParams.get("selection")) ?? null;
 } catch {
     if (urlParams.has("selection")) {
-        selection_arr = parse_custom_url(urlParams.get("selection")) || [];
+        selection_arr = [parse_custom_url(urlParams.get("selection")) || []].flat();
     } else {
         selection_arr = null;
     }
@@ -230,7 +230,7 @@ function display_headers_and_table() {
     un_datatable();
 
     $('#output_table').find('thead>tr>th').remove();
-    
+
     for (const [_, property] of Object.entries(data.properties).filter(([e, _]) => selection_arr.includes(e))) {
         let size_factor = 1;
         if (typeof settings_obj.size_type !== 'undefined' && typeof property.size_type !== 'undefined') {

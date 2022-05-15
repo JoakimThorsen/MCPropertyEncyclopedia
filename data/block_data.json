@@ -517,6 +517,7 @@
 		{
 			"category": "Block interaction",
 			"contents": [
+				"redirects_redstone",
 				"comparator_output",
 				"send_comparator_updates",
 				"obstructs_cactus",
