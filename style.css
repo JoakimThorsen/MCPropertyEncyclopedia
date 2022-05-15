@@ -223,6 +223,10 @@ li {
     padding: 3px 15px !important;
 }
 
+.dropdown-menu {
+    min-width: 21.1rem; /* To match with the width of buttons, this weird width is required */
+}
+
 .dropdown-menu > p {
     line-height: 1.42857143;
     font-weight: normal;
@@ -285,10 +289,25 @@ li {
 }
 
 .custom-collapsible {
-    text-indent: 1em;
     display: none;
     opacity: 0;
     max-height: 0;
+}
+
+.custom-submenu > ul {
+    padding-left: 1.5rem;
+}
+
+.custom-submenu a {
+    color: #000;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+
+.custom-submenu a:hover {
+    text-decoration: none;
+    background: #f5f5f5;
 }
 
 .dot {

@@ -98,14 +98,13 @@ function display_selection() {
             }
         }
     }
-
     function selection_dropdown(entry) {
         if (typeof entry === 'object') {
             if (Array.isArray(entry)) { // arr
                 return entry.reduce((result, ent) => result + selection_dropdown(ent), "");
             } else { // obj
                 return `
-                <li class="">
+                <li class="custom-submenu">
                     <a role="button" class="selection-category submenu disabled">
                         <i class="fas fa-folder-open"></i> ${entry.category}&hellip;
                     </a>
