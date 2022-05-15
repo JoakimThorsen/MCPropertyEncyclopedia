@@ -12,26 +12,26 @@
     <script>
         function convert() {
             text = document.getElementById("input1").value;
-        
-            if(document.getElementById("int1").checked) {
+
+            if (document.getElementById("int1").checked) {
 
                 text = text.replace(/^/gm, '"');
                 text = text.replace(/\t|,|, /gm, '": ');
                 text = text.replace(/$/gm, ',');
-                
+
             } else {
-                
+
                 text = text.replace(/^/gm, '"');
                 text = text.replace(/\t|,|, /gm, '": "');
                 text = text.replace(/$/gm, '",');
-             
+
             }
             text = text.replace(/^""(: ,|: "",)$/gm, '},');
             text = text.replace(/(: ,|: "",)$/gm, ': {');
 
             text = text.replace(/,\n(?!")/gm, '\n');
 
-            text = text.substr(0, text.length-1);
+            text = text.substr(0, text.length - 1);
 
             document.getElementById("output1").value = text;
         }
@@ -56,11 +56,12 @@
             text.split('\n').forEach(row => {
                 columns = row.split(/, |\t/);
                 value = columns.shift();
-                for(let i in columns){
-                    if(columns[i]!='') output += `"${columns[i]}": "${value}",\n`;
-                };
+                for (let i in columns) {
+                    if (columns[i] != '') output += `"${columns[i]}": "${value}",\n`;
+                }
+                ;
             });
-            document.getElementById("output2").value = output.substr(0, output.length-2);
+            document.getElementById("output2").value = output.substr(0, output.length - 2);
         }
     </script>
     <textarea onkeyup="convertReverseTable();" id="input2"></textarea>

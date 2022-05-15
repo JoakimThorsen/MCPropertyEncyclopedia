@@ -1,153 +1,214 @@
 <!DOCTYPE html>
 <html lang="no" dir="ltr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A comprehensive repository of information about Minecraft blocks.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A comprehensive repository of information about Minecraft blocks.">
 
-<title>Minecraft Block Property Thingy</title>
+    <title>Minecraft Block Property Thingy</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
-<script src="https://kit.fontawesome.com/92330e144e.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.min.js" integrity="sha512-bkRnY+Yd8OOKaLeSQ4ywl+eeJKIbJ5TtBvyWwM2OnsV1qeIZb2yi7E4h2P6XVcAMz3ldrTKAXk/lC5vvZnDkZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
-<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.5/cr-1.5.5/datatables.min.css"/> -->
- 
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.5/cr-1.5.5/datatables.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/92330e144e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-hover-dropdown/2.2.1/bootstrap-hover-dropdown.min.js"
+            integrity="sha512-bkRnY+Yd8OOKaLeSQ4ywl+eeJKIbJ5TtBvyWwM2OnsV1qeIZb2yi7E4h2P6XVcAMz3ldrTKAXk/lC5vvZnDkZw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    ></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.5/cr-1.5.5/datatables.min.css"/> -->
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R2CW5GD7WW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.5/cr-1.5.5/datatables.min.js"></script>
 
-  gtag('config', 'G-R2CW5GD7WW');
-</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R2CW5GD7WW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-<!-- Favicon -->
-<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-<link rel="manifest" href="assets/favicon/site.webmanifest">
-<link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="assets/favicon/favicon.ico">
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-<!-- Main css/js -->
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+        gtag('js', new Date());
 
-</style>
+        gtag('config', 'G-R2CW5GD7WW');
+    </script>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+
+    <!-- Main css/js -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
 </head>
 <body data-page="block" onload="load_data('data/block_data.json')">
 
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button"
+                    class="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false"
+            >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a class="navbar-item navbar-disabled">Blocks</a></li>
-          <li role="separator" class="vertical-divider hidden-xs"></li>
-          <li><a class="navbar-item" href="entities.html">Entities</a></li>
-          <li role="separator" class="vertical-divider hidden-xs"></li>
-          <li><a class="navbar-item" href="items.html">Items</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li role="separator" class="horizontal-divider visible-xs"></li>
-            <li><a class="navbar-item" href="about.html">About</a></li>
-        </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-item navbar-disabled">Blocks</a></li>
+                <li role="separator" class="vertical-divider hidden-xs"></li>
+                <li><a class="navbar-item" href="entities.html">Entities</a></li>
+                <li role="separator" class="vertical-divider hidden-xs"></li>
+                <li><a class="navbar-item" href="items.html">Items</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li role="separator" class="horizontal-divider visible-xs"></li>
+                <li><a class="navbar-item" href="about.html">About</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
 </nav>
 
 <div class="container-fluid text-center" id="main-body">
-  <div class="col-md-1 col-lg-3"></div>
-  <div class="col-md-10 col-lg-6">
-    <h1 class="text-center" style="font-size: 40px;">Minecraft Block Property Encyclopedia</h1>
-    <div class="panel panel-default collapse in shameless-self-promo" style="width:fit-content; margin:auto">
-        <div class="panel-heading" style="font-size: 20px; width: 100%;"><i class="fab fa-discord"></i> Heads Up! <i class="fab fa-discord"></i> <a role="button" style="float:right; color:gray" onclick="$(this).parent().parent().collapse('hide');">X</a></div>
-        <div class="panel-body" style="font-size: 16px;">
-          This project now has a dedicated discord server! Head over to <a href="https://discord.gg/RUEVmTahYg">https://discord.gg/RUEVmTahYg</a> :)
+    <div class="col-md-1 col-lg-3"></div>
+    <div class="col-md-10 col-lg-6">
+        <h1 class="text-center" style="font-size: 40px;">Minecraft Block Property Encyclopedia</h1>
+        <div class="panel panel-default collapse in shameless-self-promo" style="width:fit-content; margin:auto">
+            <div class="panel-heading" style="font-size: 20px; width: 100%;"><i class="fab fa-discord"></i> Heads Up! <i
+                    class="fab fa-discord"
+            ></i> <a role="button" style="float:right; color:gray" onclick="$(this).parent().parent().collapse('hide');"
+            >X</a></div>
+            <div class="panel-body" style="font-size: 16px;">
+                This project now has a dedicated discord server! Head over to <a href="https://discord.gg/RUEVmTahYg">https://discord.gg/RUEVmTahYg</a>
+                :)
+            </div>
         </div>
+        <h2 style="font-size: 24px;">This is an open source project. View the <a href="about.html">about</a> page for
+            more info.<br>Click the button below to customize your selection:</h2>
     </div>
-    <h2 style="font-size: 24px;">This is an open source project. View the <a href="about.html">about</a> page for more info.<br>Click the button below to customize your selection:</h2>
-  </div>
-  <div class="col-md-1 col-lg-3"></div>
-  <div class="col-sm-12">
-    <div class="btn-group">
-      <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="dropdown">
-          Property Selection <span class="caret"></span>
+    <div class="col-md-1 col-lg-3"></div>
+    <div class="col-sm-12">
+        <div class="btn-group">
+            <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="dropdown">
+                Property Selection <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" id="selection">
+                <!-- Selection options are inserted here using jQuery -->
+            </ul>
+        </div>
+        <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="collapse-next">
+            <i class="fas fa-tools"></i>
         </button>
-        <ul class="dropdown-menu" id="selection">
-          <!-- Selection options are inserted here using jQuery -->
-        </ul>
+        <div class="collapse">
+            <div class="settings">
+
+                <div class="settings-box">
+                    <p>Reset:</p>
+                    <button class="btn btn-default"
+                            type="button"
+                            onclick="selection_arr = undefined; update_window_history(); display_selection(); display_headers_and_table();"
+                    >
+                        Property Selection
+                    </button>
+                    <button class="btn btn-default"
+                            type="button"
+                            onclick="filter_obj = {}; update_window_history(); display_headers_and_table();"
+                    >Filters
+                    </button>
+                    <button class="btn btn-default"
+                            type="button"
+                            onclick="sort_arr = []; update_window_history(); display_headers_and_table();"
+                    >Sorting
+                    </button>
+                </div>
+
+                <div class="settings-box">
+                    <p>Export blocklist:</p>
+                    <a role="button" class="btn dropdown-btn btn-default export-csv">
+                        <i class="fas fa-file-export"></i>Export CSV
+                    </a>
+                </div>
+
+                <div class="settings-box">
+                    <p>Convert size values to:</p>
+                    <div class="btn-group">
+                        <a role="button"
+                           class="btn btn-default radio-settings"
+                           type="button"
+                           setting="size_type"
+                           value="pixel"
+                        ><i class="fas fa-th-large"></i> Pixel</a>
+                        <a role="button"
+                           class="btn btn-default radio-settings"
+                           type="button"
+                           setting="size_type"
+                           value="block"
+                        ><i class="fas fa-square"></i> Block</a>
+                    </div>
+                </div>
+
+                <div class="settings-box">
+                    <p>Expandable tables:</p>
+                    <div class="btn-group">
+                        <a role="button" class="btn btn-default" type="button" onclick="$('table.collapse').toggle();">Expand
+                            All</a>
+                        <a role="button" class="btn btn-default" type="button" onclick="$('.expand-btn').toggle();">Hide
+                            Buttons</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="form-inline text-center">
+            <input class="form-control"
+                   id="search"
+                   placeholder="Seach for block(s)..."
+                   autofocus
+                   type="search"
+                   autocomplete="off"
+            >
+        </div>
+        <div class="results">
+            <table class="table table-bordered table-hover text-left" id="output_table">
+                <thead>
+                <tr></tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
     </div>
-    <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="collapse-next">
-        <i class="fas fa-tools"></i>
+    <button onclick="scrollToTop()" id="scrollButton" title="Go to top">
+        <i class="fas fa-angle-up"></i>
     </button>
-    <div class="collapse">
-      <div class="settings">
-        
-        <div class="settings-box">
-          <p>Reset:</p>
-          <button class="btn btn-default" type="button" onclick="selection_arr = undefined; update_window_history(); display_selection(); display_headers_and_table();">Property Selection</button>
-          <button class="btn btn-default" type="button" onclick="filter_obj = {}; update_window_history(); display_headers_and_table();">Filters</button>
-          <button class="btn btn-default" type="button" onclick="sort_arr = []; update_window_history(); display_headers_and_table();">Sorting</button>
-        </div>
-
-        <div class="settings-box">
-          <p>Export blocklist:</p>
-          <a role="button" class="btn dropdown-btn btn-default export-csv">
-            <i class="fas fa-file-export"></i>Export CSV
-          </a>
-        </div>
-
-        <div class="settings-box">
-          <p>Convert size values to:</p>
-          <div class="btn-group">
-            <a role="button" class="btn btn-default radio-settings" type="button" setting="size_type" value="pixel"><i class="fas fa-th-large"></i> Pixel</a>
-            <a role="button" class="btn btn-default radio-settings" type="button" setting="size_type" value="block"><i class="fas fa-square"></i> Block</a>
-          </div>
-        </div>
-
-        <div class="settings-box">
-          <p>Expandable tables:</p>
-          <div class="btn-group">
-            <a role="button" class="btn btn-default" type="button" onclick="$('table.collapse').toggle();">Expand All</a>
-            <a role="button" class="btn btn-default" type="button" onclick="$('.expand-btn').toggle();">Hide Buttons</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="form-inline text-center">
-      <input class="form-control" id="search" placeholder="Seach for block(s)..." autofocus type="search" autocomplete="off">
-    </div>
-    <div class="results">
-      <table class="table table-bordered table-hover text-left" id="output_table">
-        <thead>
-          <tr></tr>
-        </thead>
-        <tbody>
-          
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <button onclick="scrollToTop()" id="scrollButton" title="Go to top">
-    <i class="fas fa-angle-up"></i>
-  </button>
 </div>
 </body>
