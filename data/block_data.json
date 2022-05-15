@@ -13417,6 +13417,36 @@
 				"Wood": "Yes",
 				"Wool": "Yes"
 			}
+		},
+		"redirects_redstone": {
+			"property_name": "Redirects Redstone Wire (North)",
+			"property_description": "This is true if the North side connects to/redirects adjacent redstone dust",
+			"default_value": "No",
+			"entries": {
+				"Block of Redstone": "Yes",
+				"Buttons": "Yes",
+				"Daylight Detector": "Yes",
+				"Detector Rail": "Yes",
+				"Lectern": "Yes",
+				"Lever": "Yes",
+				"Lightning Rod": "Yes",
+				"Observer": {
+					"facing: north<br>facing: east<br>facing: west<br>facing: up<br>facing: down": "No",
+					"facing: south": "Yes"
+				},
+				"Pressure Plates": "Yes",
+				"Redstone Comparator": "Yes",
+				"Redstone Dust": "Yes",
+				"Redstone Repeater": {
+					"facing: north<br>facing: south": "Yes",
+					"facing: west<br>facing: east": "No"
+				},
+				"Redstone Torch": "Yes",
+				"Sculk Sensor": "Yes",
+				"Target": "Yes",
+				"Trapped Chest": "Yes",
+				"Tripwire Hook": "Yes"
+			}
 		}
 	}
 }
