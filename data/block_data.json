@@ -1299,6 +1299,7 @@
 			"property_description": "Whether the block inflicts damage in any way.<br>Obtained manually",
 			"default_value": "No",
 			"default_selection": false,
+			"gradient_scaling": "relative",
 			"entries": {
 				"Anvil": {
 					"Normally": "No",
@@ -1307,15 +1308,25 @@
 				"Beds": "Explodes",
 				"Cactus": "Damage When Touched",
 				"Campfire": "Fire Damage When Touched",
+				"Cauldron": {
+					"Empty Cauldron<br>Water Cauldron": "No",
+					"Lava Cauldron": "Fire Damage When Touched"
+				},
+				"Conduit": "Attacks mobs",
 				"Fire": "Fire Damage When Touched",
+				"Flowers": {
+					"Normal Flowers": "No",
+					"Wither Rose": "Wither Effect"
+				},
 				"Lava": "Fire Damage When Touched",
-				"Magma Blocks": "Fire Damage When Touched",
+				"Magma Block": "Fire Damage When Touched",
 				"Pointed Dripstone": {
 					"Normally": "Amplifies Fall Damage",
 					"When Falling": "Damage Entities"
 				},
+				"Powder": "Freezes",
 				"Respawn Anchor": "Explodes",
-				"Sweet Berry Bush": "Damage When Touched",
+				"Sweet Berry Bush": "Damage When Moving Through",
 				"TNT": "Explodes",
 				"Water": "Drowning"
 			}
@@ -7646,6 +7657,7 @@
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
+				"Air": "Not Applicable",
 				"Barrier": "Yes",
 				"Bedrock": "Yes",
 				"Command Blocks": "Yes",
@@ -7673,6 +7685,7 @@
 			"default_value": "No",
 			"default_selection": false,
 			"entries": {
+				"Air": "Not Applicable",
 				"Barrier": "Yes",
 				"Bedrock": "Yes",
 				"Command Blocks": "Yes",
@@ -8231,6 +8244,7 @@
 				"Blast Furnace": "Yes",
 				"Brewing Stand": "Yes",
 				"Cake": "Yes",
+				"Campfire": "Yes",
 				"Cauldron": "Yes",
 				"Chest": "Yes",
 				"Command Blocks": "Yes",
@@ -8246,7 +8260,8 @@
 				"Respawn Anchor": "Yes",
 				"Sculk Sensor": "Yes",
 				"Shulker Box": "Yes",
-				"Smoker": "Yes"
+				"Smoker": "Yes",
+				"Trapped Chest": "Yes"
 			}
 		},
 		"survival_available": {
@@ -9409,6 +9424,44 @@
 						"27s": 15
 					}
 				},
+				"Trapped Chest": {
+					"Double": {
+						"0": 0,
+						"1": 1,
+						"3s 55": 2,
+						"7s 46": 3,
+						"11s 37": 4,
+						"15s 28": 5,
+						"19s 19": 6,
+						"23s 10": 7,
+						"27s": 8,
+						"30s 55": 9,
+						"34s 46": 10,
+						"38s 37": 11,
+						"42s 28": 12,
+						"46s 19": 13,
+						"50s 10": 14,
+						"54s": 15
+					},
+					"Single": {
+						"0": 0,
+						"1": 1,
+						"1s 60": 2,
+						"3s 55": 3,
+						"5s 51": 4,
+						"7s 46": 5,
+						"9s 42": 6,
+						"11s 37": 7,
+						"13s 32": 8,
+						"15s 28": 9,
+						"17s 23": 10,
+						"19s 19": 11,
+						"21s 14": 12,
+						"23s 10": 13,
+						"25s 5": 14,
+						"27s": 15
+					}
+				},
 				"Shulker Box": {
 					"0": 0,
 					"1": 1,
@@ -9607,7 +9660,6 @@
 					"Empty Cauldron": 0,
 					"Lava Cauldron": 3,
 					"Water Cauldron<br>Powder Snow Cauldron": {
-						"level: 0": 0,
 						"level: 1": 1,
 						"level: 2": 2,
 						"level: 3": 3
