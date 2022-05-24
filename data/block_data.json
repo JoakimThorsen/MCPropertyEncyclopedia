@@ -1208,7 +1208,10 @@
 				"Piston": "Yes",
 				"Pointed Dripstone": "Yes",
 				"Powder Snow": {
-					"Top, with leather boots": "Yes",
+					"Top": {
+						"With Leather Boots": "Yes",
+						"Without Leather Boots": "No"
+					},
 					"Sides and Bottom": "No"
 				},
 				"Powered Rail": "No",
@@ -1307,7 +1310,10 @@
 				},
 				"Beds": "Explodes",
 				"Cactus": "Damage When Touched",
-				"Campfire": "Fire Damage When Touched",
+				"Campfire": {
+					"Wen Lit": "Fire Damage When Touched",
+					"When Unlit": "No"
+				},
 				"Cauldron": {
 					"Empty Cauldron<br>Water Cauldron": "No",
 					"Lava Cauldron": "Fire Damage When Touched"
@@ -2642,7 +2648,7 @@
 					"Not Tip Or Downwards": 16
 				},
 				"Powder Snow": {
-					"Top, With Leather Boots": 16,
+					"With Leather Boots": 16,
 					"Without Leather Boots": "Not Applicable"
 				},
 				"Redstone Comparator": 2,
