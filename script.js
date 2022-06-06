@@ -693,7 +693,7 @@ function display_results() {
     // Table outputting
     let append_string = "";
     output_data.forEach(entry => {
-        const sprite = data.sprites[entry[page]];
+        const sprite = data.sprites[entry[page]] ?? ["block-sprite", -240, -16]; // defaluts to the air sprite
         append_string += "<tr>";
         append_string += `<td><span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span></td>`;
         if (search) {
