@@ -59,7 +59,7 @@
 
     <!-- Main css/js -->
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </head>
 <body data-page="block" onload="load_data('data/block_data.json')">
@@ -91,6 +91,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li role="separator" class="horizontal-divider visible-xs"></li>
+                <li><a class="navbar-item display-none discord" ><i class="fab fa-discord"></i></a></li>
+                <li role="separator" class="vertical-divider hidden-xs display-none discord"></li>
                 <li><a class="navbar-item" href="about.html">About</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -104,7 +106,7 @@
         <div class="panel panel-default collapse in shameless-self-promo" style="width:fit-content; margin:auto">
             <div class="panel-heading" style="font-size: 20px; width: 100%;"><i class="fab fa-discord"></i> Heads Up! <i
                     class="fab fa-discord"
-            ></i> <a role="button" style="float:right; color:gray" onclick="$(this).parent().parent().collapse('hide');"
+            ></i> <a role="button" style="float:right; color:gray" onclick="$(this).parent().parent().collapse('hide'); stopPromo();"
             >X</a></div>
             <div class="panel-body" style="font-size: 16px;">
                 This project now has a dedicated discord server! Head over to <a href="https://discord.gg/RUEVmTahYg">https://discord.gg/RUEVmTahYg</a>

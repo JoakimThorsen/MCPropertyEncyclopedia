@@ -1,5 +1,4 @@
 // noinspection JSCheckFunctionSignatures,JSUnresolvedVariable
-
 let data = {};
 const value_list = {};
 
@@ -953,4 +952,13 @@ function scrollFunction() {
 function scrollToTop() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+if (localStorage.getItem("MCProperty-discord-promoted")) {
+    $(".shameless-self-promo").hide()
+    $(".discord").removeClass("display-none")
+}
+
+function stopPromo() {
+    localStorage.setItem("MCProperty-discord-promoted", true)
 }
