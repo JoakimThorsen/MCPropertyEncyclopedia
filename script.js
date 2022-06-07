@@ -759,6 +759,7 @@ function display_results() {
         update_window_history();
     });
 
+    $("th")[0].textContent = output_data.length
 }
 
 function un_datatable() {
