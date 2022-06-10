@@ -537,6 +537,7 @@
 				"send_comparator_updates",
 				"shape_update_when_powered",
 				"shape_update_on_interaction",
+				"shape_update_from_environment",
 				"obstructs_cactus",
 				"instrument"
 			]
