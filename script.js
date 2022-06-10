@@ -485,7 +485,7 @@ function display_headers_and_table() {
             delete filter_obj[property];
             $(this).parents('ul').find('.glyphicon').removeClass('display-none');
         } else {
-            filter_obj[property] = value_list[property];
+            filter_obj[property] = deepCopy(value_list[property]);
             $(this).parents('ul').find('.glyphicon').addClass('display-none');
         }
 
@@ -588,28 +588,6 @@ function display_results() {
     // // For entry count:
     // $('#entry_count').html(output_data.length.toString());
     $('#entry_count').html(output_data.length.toString());
-
-    function deepCopy(obj) {
-        if (Array.isArray(obj)) {
-            let result = [];
-
-            for (let index in obj) {
-                result.push(deepCopy(obj[index]));
-            }
-
-            return result;
-        } else if (typeof obj == 'object') {
-            let result = {};
-
-            for (let [key, value] of Object.entries(obj)) {
-                result[key] = deepCopy(value);
-            }
-
-            return result;
-        }
-
-        return obj;
-    }
 
     function sort_properties(data, sort_properties) {
         if (!sort_properties.length) {
@@ -942,6 +920,28 @@ function parse_custom_url(value) {
         return parseFloat(value);
     }
     return value
+}
+
+function deepCopy(obj) {
+    if (Array.isArray(obj)) {
+        let result = [];
+
+        for (let index in obj) {
+            result.push(deepCopy(obj[index]));
+        }
+
+        return result;
+    } else if (typeof obj == 'object') {
+        let result = {};
+
+        for (let [key, value] of Object.entries(obj)) {
+            result[key] = deepCopy(value);
+        }
+
+        return result;
+    }
+
+    return obj;
 }
 
 // When the user scrolls down 20px from the top of the document, show the button
