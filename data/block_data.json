@@ -12,7 +12,8 @@
 		"With Gold": "cf-neutral",
 		"Inherent": "cf-neutral",
 		"Uncreatable": "cf-neutral",
-		
+		"When Powered": "cf-neutral",
+
 		"With Haste": "cf-neutral-no",
 		
 		"Not Applicable": "cf-invalid",
@@ -531,8 +532,11 @@
 			"category": "Block interaction",
 			"contents": [
 				"redirects_redstone",
+				"emits_power",
 				"comparator_output",
 				"send_comparator_updates",
+				"shape_update_when_powered",
+				"shape_update_on_interaction",
 				"obstructs_cactus",
 				"instrument"
 			]
@@ -960,7 +964,7 @@
 				},
 				"Stone": ["Stone", "Infested Stone", "Smooth Stone"],
 				"Stone Bricks": {
-					"Infested": ["Stone Bricks", "Mossy Stone Bricks", "Cracked Stone Bricks", "Chiseled Stone Bricks"],
+					"Infested": ["Infested Stone Bricks", "Infested Mossy Stone Bricks", "Infested Cracked Stone Bricks", "Infested Chiseled Stone Bricks"],
 					"Normal": ["Stone Bricks", "Mossy Stone Bricks", "Cracked Stone Bricks", "Chiseled Stone Bricks"]
 				},
 				"Stonecutter": "Stonecutter",
@@ -1290,7 +1294,7 @@
 					"Normally": "Amplifies Fall Damage",
 					"When Falling": "Damage Entities"
 				},
-				"Powder": "Freezes",
+				"Powder Snow": "Freezes",
 				"Respawn Anchor": "Explodes",
 				"Sweet Berry Bush": "Damage When Moving Through",
 				"TNT": "Explodes",
@@ -3422,7 +3426,7 @@
 				},
 				"Beds": {
 					"Sides": [3, 13, 16],
-					"Non-Food Side": [13, 16],
+					"Non-Foot Side": [13, 16],
 					"Foot Side": [3, 16]
 				},
 				"Carpets": 16,
@@ -4446,7 +4450,6 @@
 					"Side & Floor": ".sideCoversSmallSquare()"
 				},
 				"Big Dripleaf": [".isOf(Blocks.BIG_DRIPLEAF_STEM)", ".isOf(this)", ".isSideSolidFullSquare()"],
-				"Bubble Column": [".isOf(Blocks.BUBBLE_COLUMN)", ".isOf(Blocks.MAGMA_BLOCK)", ".isOf(Blocks.SOUL_SAND)"],
 				"Buttons": ".isSideSolidFullSquare()",
 				"Cactus": [".isOf(Blocks.CACTUS)", ".isOf(Blocks.SAND)", ".isOf(Blocks.RED_SAND)"],
 				"Cake": ".getMaterial().isSolid()",
@@ -4530,6 +4533,10 @@
 				"Tripwire Hook": ".isSideSolidFullSquare()",
 				"Twisting Vines": [".isOf(this.getStem())", ".isOf(this.getPlant())", ".isSideSolidFullSquare()"],
 				"Vines": [".isOf(this)", ".isSideSolidFullSquare()"],
+				"Water": {
+					"Water": "No",
+					"Bubble Column": [".isOf(Blocks.BUBBLE_COLUMN)", ".isOf(Blocks.MAGMA_BLOCK)", ".isOf(Blocks.SOUL_SAND)"]
+				},
 				"Weeping Vines": [".isOf(this.getStem())", ".isOf(this.getPlant())", ".isSideSolidFullSquare()"]
 			}
 		},
@@ -6328,7 +6335,6 @@
 				"Beds": "No",
 				"Bee Nest": "Yes",
 				"Beehive": "Yes",
-				"Beetroots": "No",
 				"Bell": "No",
 				"Big Dripleaf": "No",
 				"Blackstone": "Yes",
@@ -6361,7 +6367,6 @@
 				"Campfire": "No",
 				"Candles": "No",
 				"Carpets": "No",
-				"Carrots": "No",
 				"Cartography Table": "Yes",
 				"Cauldron": "No",
 				"Cave Vines": "No",
@@ -6385,6 +6390,7 @@
 				"Coral Blocks": "Yes",
 				"Coral Fans": "No",
 				"Corals": "No",
+				"Crops": "No",
 				"Crafting Table": "Yes",
 				"Crying Obsidian": "Yes",
 				"Daylight Detector": "No",
@@ -6442,7 +6448,6 @@
 				"Hopper": "No",
 				"Hyphae": "Yes",
 				"Ice": "No",
-				"Infested Blocks": "Yes",
 				"Iron Bars": "No",
 				"Iron Ore": "Yes",
 				"Jack o'Lantern": "Yes",
@@ -6465,7 +6470,6 @@
 				"Magma Block": "Yes",
 				"Mangrove Roots": "Yes",
 				"Melon": "Yes",
-				"Melon Stem": "No",
 				"Moss Block": "Yes",
 				"Moss Carpet": "No",
 				"Mud": "Yes",
@@ -6480,7 +6484,7 @@
 				"Nether Quartz Ore": "Yes",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
-				"Nether Wart Blocks": "Yes",
+				"Wart Blocks": "Yes",
 				"Netherrack": "Yes",
 				"Note Block": "Yes",
 				"Nylium": "Yes",
@@ -6495,13 +6499,11 @@
 				"Planks": "Yes",
 				"Podzol": "Yes",
 				"Pointed Dripstone": "No",
-				"Potatoes": "No",
 				"Powder Snow": "No",
 				"Powered Rail": "No",
 				"Pressure Plates": "No",
 				"Prismarine": "Yes",
 				"Pumpkin": "Yes",
-				"Pumpkin Stem": "No",
 				"Purpur Block": "Yes",
 				"Rail": "No",
 				"Red Sand": "Yes",
@@ -6573,8 +6575,6 @@
 				"Walls": "No",
 				"Water": "No",
 				"Weeping Vines": "No",
-				"Wet Sponge": "Yes",
-				"Wheat Crops": "No",
 				"Wood": "Yes",
 				"Wool": "Yes"
 			}
@@ -8018,7 +8018,6 @@
 				"Smoker": ["Item contents", "-Time until the current item is smelted,<br>-The time until the furnace's current fuel item is exhausted,<br>-All of the items that have been smelted since a player emptied the output slot"],
 				"Blast Furnace": ["Item contents", "-Time until the current item is smelted,<br>-The time until the furnace's current fuel item is exhausted,<br>-All of the items that have been smelted since a player emptied the output slot"],
 				"Campfire": "Item contents",
-				"Soul Campfire": "Item contents",
 				"Lectern": ["Item contents", "Page the book is currently on"],
 				"Beacon": "The pyramid level, active effects, and contents.<br>Also uses the block's position for the beacon beam",
 				"Spawner": "-The entity to be spawned,<br>-The delay until the next entity is spawned, and the min and max values for the next spawn delay<br>-How many entities to spawn per spawn attempt<br>-Additional data about the entity to be spawned (such as position, status effects, and entities stacked on top of it)<br>Also uses the block's position to display the spinning mob inside",
@@ -8034,11 +8033,11 @@
 					"Dragon Head<br>Skulls": "No",
 					"Player Head": "For the (if applicable) data of the player represented"
 				},
-				"Command Block": "Command text, its output strength, and the output text",
+				"Command Blocks": "Command text, its output strength, and the output text",
 				"End Gateway": "Teleport location and also whether to render the beam",
 				"Structure Block": "Information about the structure",
 				"Jigsaw Block": "The structure pool and the block this jigsaw block becomes",
-				"Daylight Sensor": "To force the daylight sensor to update its output signal strength",
+				"Daylight Detector": "To force the daylight sensor to update its output signal strength",
 				"Redstone Comparator": "Output strength",
 				"Conduit": "To check its activation area for valid activation blocks and calculate its effective range.<br>Also used for rendering the block in its active and inactive states",
 				"Bell": "For the render of the swaying animation of the bell"
@@ -9757,6 +9756,180 @@
 				"Tripwire Hook": "Yes"
 			}
 		},
+		"emits_power": {
+			"property_name": "Emits Power",
+			"default_value": "No",
+			"default_selection": false,
+			"entries": {
+				"Redstone Comparator": "When Powered",
+				"Block of Redstone": "Yes",
+				"Daylight Detector": "Yes",
+				"Observer": "When Powered",
+				"Detector Rail": "Yes",
+				"Redstone Dust": "When Powered",
+				"Redstone Torch": "When Powered",
+				"Buttons": "Yes",
+				"Lectern": "Yes",
+				"Lever": "Yes",
+				"Lightning Rod": "Yes",
+				"Pressure Plates": "Yes",
+				"Sculk Sensor": "Yes",
+				"Trapped Chest": "Yes",
+				"Target": "Yes",
+				"Tripwire Hook": "Yes",
+				"Redstone Repeater": {
+					"locked: false": "When Powered",
+					"locked: true": {
+						"powered: false": "No",
+						"powered: true": "Yes"
+					}
+				}
+			}
+		},
+		"shape_update_when_powered": {
+			"property_name": "Shape Update When Powered",
+			"default_value": "No",
+			"default_selection": false,
+			"entries": {
+				"Activator Rail": "Yes",
+				"Bell": "Yes",
+				"Redstone Comparator": "Yes",
+				"Daylight Detector": "Yes",
+				"Dispenser": "Yes",
+				"Dropper": "Yes",
+				"Fence Gates": "Yes",
+				"Hopper": "Yes",
+				"Note Block": "Yes",
+				"Observer": "Yes",
+				"Piston": "Yes",
+				"Powered Rail": "Yes",
+				"Redstone Dust": "Yes",
+				"Redstone Lamp": "Yes",
+				"Redstone Torch": "Yes",
+				"Redstone Repeater": "Yes",
+				"Doors": "Yes",
+				"Trapdoors": "Yes"
+			}
+		},
+		"shape_update_on_interaction": {
+			"property_name": "Shape Update On Player Interaction",
+			"default_value": "No",
+			"default_selection": false,
+			"gradient_scaling": "relative",
+			"entries": {
+				"Shulker Box": "With hand",
+				"Barrel": "With hand",
+				"Bell": "With hand",
+				"Redstone Comparator": "With hand",
+				"Daylight Detector": "With hand",
+				"Fence Gates": "With hand",
+				"Note Block": "With hand",
+				"Redstone Dust": {
+					"Connected": "No",
+					"Dot": "With hand"
+				},
+				"Buttons": "With hand",
+				"Lever": "With hand",
+				"Big Dripleaf": "Any touching entity",
+				"Pressure Plates": "Any touching entity",
+				"Trapped Chest": "With hand",
+				"Target": "With item",
+				"Redstone Ore": "With hand",
+				"Tripwire": "Any touching entity",
+				"Cauldron": "With item",
+				"Composter": "With item",
+				"Lectern": "Once with item",
+				"Crops": "Limited",
+				"Flower Pot": "With item",
+				"Grass": "Once with item",
+				"Mycelium": "Once with item",
+				"Podzol": "Once with item",
+				"Farmland": "Once",
+				"Campfire": "With hand",
+				"Brewing Stand": "With hand",
+				"Beds": "With hand",
+				"Cake": "Limited",
+				"Anvil": "Limited",
+				"Jukebox": "With item",
+				"Frosted Ice": "Once with item",
+				"Pumpkin": "Once with item",
+				"Logs": "Once with item",
+				"Snow": "With item",
+				"Redstone Repeater": "With hand",
+				"Doors": {
+					"Wooden": "With hand",
+					"Iron": "No"
+				},
+				"Trapdoors": {
+					"Wooden": "With hand",
+					"Iron": "No"
+				},
+				"Saplings": "With item",
+				"Fungi": "With item",
+				"Dirt": "Once",
+				"Coarse Dirt": "Once",
+				"Furnace": "Once",
+				"Blast Furnace": "Once",
+				"Smoker": "Once",
+				"Respawn Anchor": "With item",
+				"Lodestone": "With item",
+				"Beehive": "Once with item",
+				"Bee Nest": "Once with item"
+			}
+		},
+		"shape_update_from_environment": {
+			"property_name": "Shape Update From Environment",
+			"default_value": "No",
+			"default_selection": false,
+			"gradient_scaling": "relative",
+			"entries": {
+				"Bee Nest": "Other",
+				"Beehive": "Other",
+				"Campfire": "On reaction",
+				"Cauldron": "Weather Tick",
+				"Cobblestone": {
+					"Cobblestone<br>Mossy Cobblestone": "No",
+					"Infested Cobblestone": "Other"
+				},
+				"Composter": "On reaction",
+				"Concrete Powder": "On reaction",
+				"Crops": {
+					"Beetroots<br>Crops<br>Potatoes<br>Wheat": "No",
+					"Melon Stem<br>Pumpkin Stem": "On reaction"
+				},
+				"Daylight Detector": "Other",
+				"Frosted Ice": "Weather Tick",
+				"Gravel": "On reaction",
+				"Ice": "Weather Tick",
+				"Lava": "On reaction",
+				"Leaves": "On reaction",
+				"Lodestone": "On reaction",
+				"Mushroom Blocks": "On reaction",
+				"Pressure Plates": "Other",
+				"Respawn Anchor": "On reaction",
+				"Sand": "On reaction",
+				"Scaffolding": "On reaction",
+				"Snow": "Weather Tick",
+				"Stairs": "On reaction",
+				"Stone": {
+					"Infested Stone": "Other",
+					"Stone<br>Smooth Stone": "No"
+				},
+				"Stone Bricks": {
+					"Infested Stone Bricks<br>Infested Mossy Stone Bricks<br>Infested Cracked Stone Bricks<br>Infested Chiseled Stone Bricks": "Other",
+					"Stone Bricks<br>Mossy Stone Bricks<br>Cracked Stone Bricks<br>Chiseled Stone Bricks": "No"
+				},
+				"Target": "Other",
+				"Tripwire": "Other",
+				"Tripwire Hook": "On reaction",
+				"Walls": "On reaction",
+				"Water": [
+					"On reaction",
+					"Weather Tick"
+				],
+				"Workstations (CHECK)": "Other"
+			}
+		},
 		"onenineteen": {
 			"property_name": "added in 1.19",
 			"property_description": "Was added in 1.19",
@@ -9781,3 +9954,4 @@
 		}
 	}
 }
+
