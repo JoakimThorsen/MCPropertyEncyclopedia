@@ -162,16 +162,27 @@ li {
     justify-content: space-between;
     text-decoration: none;
     color: black;
-    cursor: pointer;
     margin: 0 auto;
     padding: 6px 8px;
     height: 100%;
     /* cursor: progress; */
 }
+a.table-header {
+    cursor: pointer;
+}
 
-.table-header:hover {
+a.table-header:hover {
     text-decoration: none;
     color: #666;
+}
+
+#output_table>tbody>tr>td:first-child {
+    text-align: center;
+}
+th:first-child>*>* {
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .noselect {

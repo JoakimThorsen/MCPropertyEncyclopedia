@@ -63,12 +63,12 @@ function load_data(filename) {
             entry_header = "Items";
     }
 
+    initialize_page();
     $.ajax({
         'url': filename,
         'dataType': "json",
         'success': function (d) {
             data = d;
-            initialize_page();
             display_selection();
             display_headers_and_table();
         }
@@ -198,6 +198,10 @@ function display_selection() {
 }
 
 function initialize_page() {
+    if (!localStorage.getItem("MCProperty-discord-promoted")) {
+        $(".shameless-self-promo").removeClass("display-none")
+    }
+    
     $(window).on('popstate', function () {
         location.reload(true);
     });
@@ -261,7 +265,12 @@ function display_headers_and_table() {
 
     // Table headers
     $('#output_table').children('thead').children('tr').append(`
-    <th></th>
+    <th>
+        <div class="text-center">
+            <span class="table-header" id="entry_count" title="Number of rows">
+            </span>
+        </div>
+    </th>
     <th>
         <div class="dropdown">
             <a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">
@@ -564,20 +573,21 @@ function display_results() {
         }
     });
 
+    // Search filtering:
+    output_data = output_data.filter(row => {
+        return Boolean(search.split('|').some(subsearch =>
+            subsearch.split(' ').every(term =>
+                row[page].toLowerCase().includes(term.toLowerCase()))
+            )
+        )
+    })
+
     // For exporting as CSV:
     exportable_list = output_data.map(entry => entry[page]);
 
     // // For entry count:
     // $('#entry_count').html(output_data.length.toString());
-
-    for (const key in output_data) {
-        var entry = output_data[key][page].toLowerCase();
-        if (!search.split('|').some(subsearch =>
-            subsearch.split(' ').every(term =>
-                entry.includes(term.toLowerCase())))) {
-            delete output_data[key];
-        }
-    }
+    $('#entry_count').html(output_data.length.toString());
 
     function deepCopy(obj) {
         if (Array.isArray(obj)) {
@@ -952,4 +962,8 @@ function scrollFunction() {
 function scrollToTop() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+function stopPromo() {
+    localStorage.setItem("MCProperty-discord-promoted", true)
 }
