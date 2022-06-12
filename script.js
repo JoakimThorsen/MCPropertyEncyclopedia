@@ -673,6 +673,45 @@ function display_results() {
             });
         });
 
+        // Recombine
+        for (let i = 0; i < split_data.length - 1; i++) {
+            let this_elm = split_data[i];
+            let next_elm = split_data[i + 1];
+            if(this_elm[page] === next_elm[page]) {
+                Object.entries(this_elm).forEach(([property_id, this_value]) => {
+                    let next_value = next_elm[property_id];
+                    this_elm[property_id] = combine_elements(this_value, next_value);
+                });
+                split_data.splice(i + 1, 1);
+                i--;
+            }
+        }
+
+        function combine_elements(first, second) {
+            console.log(first, second)
+            if(JSON.stringify(first) == JSON.stringify(second)) {
+                return first;
+            }
+            if(Array.isArray(first)) {
+                first.push(...second);
+                return first;
+            }
+            if(Array.isArray(second)) {
+                second.unshift(first);
+                return second;
+            }
+            if(typeof first == 'object' && typeof second == 'object') {
+                let path = Object.getOwnPropertyNames(second)[0];
+                if(first.hasOwnProperty(path)) {
+                    first[path] = combine_elements(first[path], second[path])
+                } else {
+                    first[path] = second[path];
+                }
+                return first;
+            }
+            return [first, second];
+        }
+
         return split_data;
     }
 
