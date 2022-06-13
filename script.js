@@ -737,15 +737,17 @@ function display_results() {
     });
     $('#output_table').children('tbody').append(append_string);
 
-    $('#output_table').DataTable({
-        colReorder: {
-            fixedColumnsLeft: 2
-        },
-        paging: false,
-        searching: false,
-        ordering: false,
-        info: false
-    });
+    if(!('ontouchstart' in window)){
+        $('#output_table').DataTable({
+            colReorder: {
+                fixedColumnsLeft: 2
+            },
+            paging: false,
+            searching: false,
+            ordering: false,
+            info: false
+        });
+    }
 
     function get_data_cell(entry, property_name, top_level = true) {
         let return_data;
