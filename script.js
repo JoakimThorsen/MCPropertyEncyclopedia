@@ -778,8 +778,8 @@ function display_results() {
     $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (_e) {
         const $target = $(this).next();
         // Not sure which one I prefer:
-        $target.toggle("toggle"); // With toggle animation/delay
-        // $target.toggle(); // No toggle animation/delay
+        // $target.toggle("toggle"); // With toggle animation/delay
+        $target.toggle(); // No toggle animation/delay
     });
     $('#output_table').on('column-reorder.dt', function () {
         reorder_selection_arr();
