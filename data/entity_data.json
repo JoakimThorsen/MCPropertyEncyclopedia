@@ -1092,7 +1092,7 @@
 			"property_name": "Type",
 			"default_value": null,
 			"default_selection": true,
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"entries": {
 				"Area Effect Cloud": "other",
 				"Armor Stand": "living",

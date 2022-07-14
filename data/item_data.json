@@ -4967,6 +4967,48 @@
 					"On cobwebs and leaves": 15
 				}
 			}
+		},
+		"cooldown": {
+			"property_name": "Cooldown (in seconds)",
+			"default_value": "No",
+			"default_selection": false,
+			"entries": {
+				"Shield": 5,
+				"Ender Pearl": 1,
+				"Chorus Fruit": 1,
+				"Goat Horns (eventually)": "Not sure lol",
+				"Wooden Sword": 0.625,
+				"Gold Sword": 0.625,
+				"Stone Sword": 0.625,
+				"Iron Sword": 0.625,
+				"Diamond Sword": 0.625,
+				"Netherite Sword": 0.625,
+				"Wooden Shovel": 1,
+				"Gold Shovel": 1,
+				"Stone Shovel": 1,
+				"Iron Shovel": 1,
+				"Diamond Shovel": 1,
+				"Netherite Shovel": 1,
+				"Wooden Pickaxe": 0.833,
+				"Gold Pickaxe": 0.833,
+				"Stone Pickaxe": 0.833,
+				"Iron Pickaxe": 0.833,
+				"Diamond Pickaxe": 0.833,
+				"Netherite Pickaxe": 0.833,
+				"Wooden Axe": 1.25,
+				"Gold Axe": 1,
+				"Stone Axe": 1.25,
+				"Iron Axe": 1.111,
+				"Diamond Axe": 1,
+				"Netherite Axe": 1,
+				"Trident": 0.9,
+				"Wooden Hoe": 1,
+				"Gold Hoe": 1,
+				"Stone Hoe": 0.5,
+				"Iron Hoe": 0.333,
+				"Diamond Hoe": 0.25,
+				"Netherite Hoe": 0.25
+			}
 		}
 	}
 }

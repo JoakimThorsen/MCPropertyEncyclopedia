@@ -1234,7 +1234,7 @@
 			"property_description": "Whether walking on/through this block affects the movement of players or certain other entities.",
 			"default_value": "No",
 			"default_selection": false,
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"entries": {
 				"Blue Ice": "Slippery",
 				"Cave Vines": "Climbable",
@@ -1267,7 +1267,7 @@
 			"property_description": "Whether the block inflicts damage in any way.<br>Obtained manually",
 			"default_value": "No",
 			"default_selection": false,
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"entries": {
 				"Anvil": {
 					"Normally": "No",
@@ -1585,7 +1585,7 @@
 			"property_description": "Determines how likely this block is to break from exposure to an explosion",
 			"default_value": null,
 			"default_selection": true,
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"entries": {
 				"Activator Rail": 0.7,
 				"Air": 0,
@@ -1897,7 +1897,7 @@
 			"property_description": "Determines how fast the block can be mined",
 			"default_value": null,
 			"default_selection": false,
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"entries": {
 				"Activator Rail": 0.7,
 				"Air": "Not Applicable",
@@ -4439,7 +4439,7 @@
 			"property_name": "Placement conditions",
 			"default_value": "No",
 			"default_selection": false,
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"entries": {
 				"Activator Rail": ".top_face_has_rim()",
 				"Amethyst Cluster": ".isSideSolidFullSquare()",
@@ -7343,7 +7343,7 @@
 			"property_description": "Which instrument a noteblock will play if placed above this block.",
 			"default_value": "Harp / Piano",
 			"default_selection": false,
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"entries": {
 				"Banners": "Bass (String Bass)",
 				"Barrel": "Bass (String Bass)",
@@ -8005,7 +8005,7 @@
 			"property_description": "Whether the block is a tile entity, and if so, what the tile entity stores",
 			"default_value": "No",
 			"default_selection": false,
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"entries": {
 				"Bee Nest": "Bees",
 				"Beehive": "Bees",
@@ -8052,7 +8052,7 @@
 			"property_name": "Comparator Output",
 			"property_description": "What value a comparator will read from this block. Obtained from the wiki.<br>Chest- or Hopper Minecarts placed on detector rails will also give an output identical to their respective blocks.<br>Item frames can also give an output of 0 if there is no item inside, or a value from 1 to 8 depending on the item rotation.",
 			"default_value": "No",
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"default_selection": false,
 			"entries": {
 				"Barrel": {
@@ -9820,7 +9820,7 @@
 			"property_name": "Shape Update On Player Interaction",
 			"default_value": "No",
 			"default_selection": false,
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"entries": {
 				"Anvil": "Limited",
 				"Barrel": "With hand",
@@ -9895,7 +9895,7 @@
 			"property_name": "Shape Update From Environment",
 			"default_value": "No",
 			"default_selection": false,
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"entries": {
 				"Bee Nest": "Other",
 				"Beehive": "Other",
@@ -9949,7 +9949,7 @@
 			"property_description": "Was added in 1.19",
 			"default_value": "No",
 			"default_selection": false,
-			"gradient_scaling": "relative",
+			"relative_gradient": true,
 			"entries": {
 				"Froglights": "Yes",
 				"Frogspawn": "Yes",

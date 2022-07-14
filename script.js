@@ -855,18 +855,18 @@ function formatting_color(value, property_name, class_exists = false) {
 
             hslA = [276, 55, 66];
             hslB = [212, 100, 82];
-        } else if (typeof data.properties[property_name].gradient_scaling == 'undefined') {
+        } else if (typeof data.properties[property_name].relative_gradient == 'undefined') {
             return "";
         }
         hslA ??= [223, 62, 68];
         hslB ??= [159, 70, 82];
-        if (typeof data.properties[property_name] !== 'undefined' && data.properties[property_name].gradient_scaling === "relative") {
+        if (data.properties[property_name].relative_gradient) {
             scale_value = value_list[property_name].indexOf(value) / value_list[property_name].length;
             max = 1;
         } else {
             max = (data.properties[property_name].max ?? 17) * (data.properties[property_name].size_factor ?? 1);
             if (scale_value >= max) {
-                [hue, sat, luma] = hslB;
+                [hue, sat, lum] = hslB;
             }
         }
         // console.log(scale_value, max, value, property_name);
