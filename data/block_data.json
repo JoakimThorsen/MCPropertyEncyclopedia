@@ -1413,6 +1413,7 @@
 				"Redstone Dust": "Breaks",
 				"Redstone Repeater": "Breaks",
 				"Redstone Torch": "Breaks",
+				"Reinforced Deepslate": "No",
 				"Respawn Anchor": "No",
 				"Roots": "Breaks",
 				"Saplings": "Breaks",
@@ -3051,8 +3052,8 @@
 						"Side part": 7
 					},
 					"Hanging": {
-						"Top": 8,
-						"Side part": 10
+						"Top": 10,
+						"Side part": 8
 					} 
 				},
 				"Lectern": {
@@ -4051,7 +4052,7 @@
 			"default_selection": false,
 			"entries": {
 				"Amethyst Cluster": {
-					"Bottom": {
+					"Top": {
 						"Cluster": 7,
 						"Large Bud": 5,
 						"Medium Bud": 4,
@@ -4063,11 +4064,11 @@
 						"Medium Bud": 13,
 						"Small Bud": 12
 					},
-					"Top": 16
+					"Bottom": 16
 				},
 				"Anvil": {
 					"Base": 16,
-					"Heads": 6
+					"Head": 6
 				},
 				"Azalea": {
 					"Crown": 8,
@@ -4087,7 +4088,7 @@
 				},
 				"Big Dripleaf": {
 					"Full Tilt": "Not Applicable",
-					"Partial, Unstable & No Tilt": 15
+					"Partial, Unstable & No Tilt": 16
 				},
 				"Brewing Stand": 16,
 				"Cactus": 16,
@@ -4515,7 +4516,7 @@
 				"Sculk Vein": ".isFaceFullSquare()",
 				"Sea Pickle": [".isSideSolidFullSquare()", "!.getFace(Direction.UP).isEmpty()"],
 				"Seagrass": {
-					"smol:": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+					"Small:": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
 					"Tall": {
 						"Bottom": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
 						"Top": ".isOf(this)"
