@@ -342,6 +342,9 @@ th:first-child>*>* {
 .block-sprite {
     background-image: url(assets/BlockCSS.png);
 }
+.block-sprite2 {
+    background-image: url(assets/BlockCSS2.png);
+}
 
 .entity-sprite {
     background-image: url(assets/EntityCSS.png);
