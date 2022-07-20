@@ -414,8 +414,8 @@
 		],
 		"Brown Shulker Box": [
 			"block-sprite2",
-			16,
-			-208
+			-752,
+			-192
 		],
 		"Cactus": [
 			"block-sprite2",
@@ -529,8 +529,8 @@
 		],
 		"Dark Oak Fence": [
 			"block-sprite2",
-			16,
-			-480
+			-752,
+			-464
 		],
 		"Dark Oak Fence Gate": [
 			"block-sprite2",
@@ -539,8 +539,8 @@
 		],
 		"Dark Oak Stairs": [
 			"block-sprite2",
-			16,
-			-496
+			-752,
+			-480
 		],
 		"Daylight Detector": [
 			"block-sprite2",
@@ -554,8 +554,8 @@
 		],
 		"Deadbush": [
 			"block-sprite2",
-			-192,
-			-288
+			-16,
+			-560
 		],
 		"Detector Rail": [
 			"block-sprite2",
@@ -589,18 +589,18 @@
 		],
 		"Double Stone Slab2": [
 			"block-sprite2",
-			-192,
-			-672
+			-672,
+			-464
 		],
 		"Double Stone Slab": [
 			"block-sprite2",
-			-192,
-			-672
+			-384,
+			-480
 		],
 		"Double Wooden Slab": [
 			"block-sprite2",
-			-192,
-			-288
+			-480,
+			-656
 		],
 		"Dragon Egg": [
 			"block-sprite2",
@@ -629,18 +629,18 @@
 		],
 		"End Bricks": [
 			"block-sprite2",
-			-192,
-			-288
+			-144,
+			-480
 		],
 		"End Gateway": [
 			"block-sprite2",
-			16,
-			-48
+			-752,
+			-32
 		],
 		"End Portal": [
 			"block-sprite2",
-			16,
-			-48
+			-752,
+			-32
 		],
 		"End Portal Frame": [
 			"block-sprite2",
@@ -669,13 +669,13 @@
 		],
 		"Fence": [
 			"block-sprite2",
-			-192,
-			-288
+			-48,
+			-480
 		],
 		"Fence Gate": [
 			"block-sprite2",
-			-192,
-			-288
+			-368,
+			-592
 		],
 		"Fire": [
 			"block-sprite2",
@@ -729,13 +729,13 @@
 		],
 		"Gold Ore": [
 			"block-sprite2",
-			16,
-			-464
+			-752,
+			-448
 		],
 		"Golden Rail": [
 			"block-sprite2",
-			-192,
-			-288
+			-560,
+			-592
 		],
 		"Grass": [
 			"block-sprite2",
@@ -774,8 +774,8 @@
 		],
 		"Hardened Clay": [
 			"block-sprite2",
-			-192,
-			-288
+			-528,
+			-432
 		],
 		"Hay Block": [
 			"block-sprite2",
@@ -914,8 +914,8 @@
 		],
 		"Lit Pumpkin": [
 			"block-sprite2",
-			-192,
-			-288
+			-176,
+			-576
 		],
 		"Lit Redstone Lamp": [
 			"block-sprite2",
@@ -924,8 +924,8 @@
 		],
 		"Lit Redstone Ore": [
 			"block-sprite2",
-			-192,
-			-288
+			-48,
+			-464
 		],
 		"Log2": [
 			"block-sprite2",
@@ -949,13 +949,13 @@
 		],
 		"Magma": [
 			"block-sprite2",
-			-192,
-			-288
+			-240,
+			-416
 		],
 		"Melon Block": [
 			"block-sprite2",
 			-192,
-			-288
+			-576
 		],
 		"Melon Stem": [
 			"block-sprite2",
@@ -1064,8 +1064,8 @@
 		],
 		"Piston Extension": [
 			"block-sprite2",
-			-192,
-			-288
+			-416,
+			-608
 		],
 		"Piston Head": [
 			"block-sprite2",
@@ -1129,8 +1129,8 @@
 		],
 		"Purpur Double Slab": [
 			"block-sprite2",
-			-192,
-			-288
+			-48,
+			-672
 		],
 		"Purpur Pillar": [
 			"block-sprite2",
@@ -1169,8 +1169,8 @@
 		],
 		"Red Flower": [
 			"block-sprite2",
-			-192,
-			-288
+			-304,
+			-560
 		],
 		"Red Glazed Terracotta": [
 			"block-sprite2",
@@ -1259,8 +1259,8 @@
 		],
 		"Sapling": [
 			"block-sprite2",
-			-192,
-			-288
+			-640,
+			-608
 		],
 		"Sea Lantern": [
 			"block-sprite2",
@@ -1269,23 +1269,23 @@
 		],
 		"Silver Glazed Terracotta": [
 			"block-sprite2",
-			-192,
-			-288
+			-736,
+			-208
 		],
 		"Silver Shulker Box": [
 			"block-sprite2",
-			-192,
-			-288
+			-560,
+			-192
 		],
 		"Skull": [
 			"block-sprite2",
-			-192,
-			-288
+			-224,
+			-608
 		],
 		"Slime": [
 			"block-sprite2",
-			-192,
-			-288
+			-656,
+			-464
 		],
 		"Snow": [
 			"block-sprite2",
@@ -1334,23 +1334,23 @@
 		],
 		"Stained Glass Pane": [
 			"block-sprite2",
-			-192,
-			-288
+			-624,
+			-384
 		],
 		"Stained Hardened Clay": [
 			"block-sprite2",
-			-192,
-			-288
+			-432,
+			-128
 		],
 		"Standing Banner": [
 			"block-sprite2",
-			-192,
-			-288
+			-336,
+			0
 		],
 		"Standing Sign": [
 			"block-sprite2",
-			-192,
-			-288
+			-320,
+			-16
 		],
 		"Sticky Piston": [
 			"block-sprite2",
@@ -1379,13 +1379,13 @@
 		],
 		"Stone Slab2": [
 			"block-sprite2",
-			-192,
-			-288
+			-688,
+			-672
 		],
 		"Stone Slab": [
 			"block-sprite2",
-			-176,
-			-688
+			-80,
+			-656
 		],
 		"Stone Stairs": [
 			"block-sprite2",
@@ -1394,8 +1394,8 @@
 		],
 		"Stonebrick": [
 			"block-sprite2",
-			-192,
-			-288
+			-176,
+			-480
 		],
 		"Structure Block": [
 			"block-sprite2",
@@ -1409,8 +1409,8 @@
 		],
 		"Tallgrass": [
 			"block-sprite2",
-			-192,
-			-288
+			-112,
+			-560
 		],
 		"Tnt": [
 			"block-sprite2",
@@ -1424,8 +1424,8 @@
 		],
 		"Trapdoor": [
 			"block-sprite2",
-			-192,
-			-288
+			-400,
+			-592
 		],
 		"Trapped Chest": [
 			"block-sprite2",
@@ -1504,23 +1504,23 @@
 		],
 		"Wooden Button": [
 			"block-sprite2",
-			-192,
-			-288
+			-352,
+			-592
 		],
 		"Wooden Door": [
 			"block-sprite2",
-			-192,
-			-288
+			-128,
+			-400
 		],
 		"Wooden Pressure Plate": [
 			"block-sprite2",
-			-192,
-			-288
+			-384,
+			-592
 		],
 		"Wooden Slab": [
 			"block-sprite2",
-			-112,
-			-656
+			-240,
+			-672
 		],
 		"Wool": [
 			"block-sprite2",
@@ -1530,7 +1530,7 @@
 		"Yellow Flower": [
 			"block-sprite2",
 			-192,
-			-288
+			-560
 		],
 		"Yellow Glazed Terracotta": [
 			"block-sprite2",
