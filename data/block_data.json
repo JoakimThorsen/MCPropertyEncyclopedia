@@ -1484,11 +1484,11 @@
 				"Crying Obsidian": "No",
 				"Daylight Detector": "No",
 				"Coral Fans": {
-					"Dead Tube Coral Fan<br>Dead Brain Coral Fan<br>Dead Bubble Coral Fan<br>Dead Fire Coral Fan<br>Dead Horn Coral Fan<br>Dead Tube Coral Wall Fan<br>Dead Brain Coral Wall Fan<br>Dead Bubble Coral Wall Fan<br>Dead Fire Coral Wall Fan<br>Dead Horn Coral Wall Fan": "No",
+					"Dead Tube Coral Fan<br>Dead Brain Coral Fan<br>Dead Bubble Coral Fan<br>Dead Fire Coral Fan<br>Dead Horn Coral Fan<br>Dead Tube Coral Wall Fan<br>Dead Brain Coral Wall Fan<br>Dead Bubble Coral Wall Fan<br>Dead Fire Coral Wall Fan<br>Dead Horn Coral Wall Fan": "Yes",
 					"Tube Coral Fan<br>Brain Coral Fan<br>Bubble Coral Fan<br>Fire Coral Fan<br>Horn Coral Fan<br>Tube Coral Wall Fan<br>Brain Coral Wall Fan<br>Bubble Coral Wall Fan<br>Fire Coral Wall Fan<br>Horn Coral Wall Fan": "No"
 				},
 				"Corals": {
-					"Dead Tube Coral<br>Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral": "No",
+					"Dead Tube Coral<br>Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral": "Yes",
 					"Tube Coral<br>Brain Coral<br>Bubble Coral<br>Fire Coral<br>Horn Coral": "No"
 				},
 				"Crops": "No",
