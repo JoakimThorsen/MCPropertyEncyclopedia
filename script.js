@@ -255,7 +255,7 @@ function display_headers_and_table() {
                 values = property.entries;
             }
             value_list[property_name] = get_all_values(values, true).map(val => {
-                if (val * 1 == val) {
+                if (val * 1 == val && property.size_factor !== 1) {
                     val *= property.size_factor;
                 }
                 return val
@@ -424,7 +424,7 @@ function display_headers_and_table() {
         $(this).children().last().toggleClass("display-none")
 
         // Convert to double if applicable
-        value = (value * 1 == value) ? value * 1 : value;
+        // value = (value * 1 == value) ? value * 1 : value;
         if (!Object.keys(filter_obj).includes(property)) {
             filter_obj[property] = [];
         }
@@ -550,10 +550,10 @@ function display_results() {
                     }
                 } else {
                     input_element = input_element ?? property.default_value ?? "No defualt value has been assigned.";
-                    if (input_element * 1 == input_element) {
+                    if (input_element * 1 == input_element && size_factor !== 1) {
                         input_element *= size_factor;
                     }
-                    if ((filter_obj[property_id] || []).includes(input_element)) {
+                    if ((filter_obj[property_id] || []).includes(String(input_element))) {
                         return;
                     } else {
                         return input_element;

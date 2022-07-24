@@ -1,10 +1,11 @@
 * {
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: monospace, 'Courier New'; */
+    /* font-family: 'Montserrat', sans-serif; */
 }
 
 body {
     /* padding-bottom: 70px; */
-
+    font-family: 'Montserrat', sans-serif;
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("assets/blockpropertythingy.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -501,6 +502,7 @@ td .nested-table {
     padding: 7px;
     background-color: #f5f5f5;
     box-shadow: 0 0 4px black;
+    height: fit-content;
 }
 
 .settings-box > p {

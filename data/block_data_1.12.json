@@ -1573,7 +1573,14 @@
 		"redirects_dust",
 		"flammable",
 		"instrument",
-		"sends_comparator_updates"
+		"sends_comparator_updates",
+		{
+			"category": "World Tearing",
+			"contents": [
+				"binary_rep",
+				"int_rep"
+			]
+		}
 	],
 	"properties": {
 		"hardness": {
@@ -6925,7 +6932,6256 @@
 				"Yellow Shulker Box": "Yes"
 			},
 			"default_value": "No"
+		},
+		"binary_rep": {
+			"property_name": "Binary Representation",
+			"relative_gradient": true,
+			"entries": {
+				"Air": "0000000000000",
+				"Stone": {
+					"variant: stone": "0000000010000",
+					"variant: granite": "0000000010001",
+					"variant: smooth_granite": "0000000010010",
+					"variant: diorite": "0000000010011",
+					"variant: smooth_diorite": "0000000010100",
+					"variant: andesite": "0000000010101",
+					"variant: smooth_andesite": "0000000010110"
+				},
+				"Grass": "0000000100000",
+				"Dirt": {
+					"variant: dirt": "0000000110000",
+					"variant: coarse_dirt": "0000000110001",
+					"variant: podzol": "0000000110010"
+				},
+				"Cobblestone": "0000001000000",
+				"Planks": {
+					"variant: oak": "0000001010000",
+					"variant: spruce": "0000001010001",
+					"variant: birch": "0000001010010",
+					"variant: jungle": "0000001010011",
+					"variant: acacia": "0000001010100",
+					"variant: dark_oak": "0000001010101"
+				},
+				"Sapling": {
+					"stage: 0": {
+						"type: oak": "0000001100000",
+						"type: spruce": "0000001100001",
+						"type: birch": "0000001100010",
+						"type: jungle": "0000001100011",
+						"type: acacia": "0000001100100",
+						"type: dark_oak": "0000001100101"
+					},
+					"stage: 1": {
+						"type: oak": "0000001101000",
+						"type: spruce": "0000001101001",
+						"type: birch": "0000001101010",
+						"type: jungle": "0000001101011",
+						"type: acacia": "0000001101100",
+						"type: dark_oak": "0000001101101"
+					}
+				},
+				"Bedrock": "0000001110000",
+				"Flowing Water": {
+					"level: 0": "0000010000000",
+					"level: 1": "0000010000001",
+					"level: 2": "0000010000010",
+					"level: 3": "0000010000011",
+					"level: 4": "0000010000100",
+					"level: 5": "0000010000101",
+					"level: 6": "0000010000110",
+					"level: 7": "0000010000111",
+					"level: 8": "0000010001000",
+					"level: 9": "0000010001001",
+					"level: 10": "0000010001010",
+					"level: 11": "0000010001011",
+					"level: 12": "0000010001100",
+					"level: 13": "0000010001101",
+					"level: 14": "0000010001110",
+					"level: 15": "0000010001111"
+				},
+				"Water": {
+					"level: 0": "0000010010000",
+					"level: 1": "0000010010001",
+					"level: 2": "0000010010010",
+					"level: 3": "0000010010011",
+					"level: 4": "0000010010100",
+					"level: 5": "0000010010101",
+					"level: 6": "0000010010110",
+					"level: 7": "0000010010111",
+					"level: 8": "0000010011000",
+					"level: 9": "0000010011001",
+					"level: 10": "0000010011010",
+					"level: 11": "0000010011011",
+					"level: 12": "0000010011100",
+					"level: 13": "0000010011101",
+					"level: 14": "0000010011110",
+					"level: 15": "0000010011111"
+				},
+				"Flowing Lava": {
+					"level: 0": "0000010100000",
+					"level: 1": "0000010100001",
+					"level: 2": "0000010100010",
+					"level: 3": "0000010100011",
+					"level: 4": "0000010100100",
+					"level: 5": "0000010100101",
+					"level: 6": "0000010100110",
+					"level: 7": "0000010100111",
+					"level: 8": "0000010101000",
+					"level: 9": "0000010101001",
+					"level: 10": "0000010101010",
+					"level: 11": "0000010101011",
+					"level: 12": "0000010101100",
+					"level: 13": "0000010101101",
+					"level: 14": "0000010101110",
+					"level: 15": "0000010101111"
+				},
+				"Lava": {
+					"level: 0": "0000010110000",
+					"level: 1": "0000010110001",
+					"level: 2": "0000010110010",
+					"level: 3": "0000010110011",
+					"level: 4": "0000010110100",
+					"level: 5": "0000010110101",
+					"level: 6": "0000010110110",
+					"level: 7": "0000010110111",
+					"level: 8": "0000010111000",
+					"level: 9": "0000010111001",
+					"level: 10": "0000010111010",
+					"level: 11": "0000010111011",
+					"level: 12": "0000010111100",
+					"level: 13": "0000010111101",
+					"level: 14": "0000010111110",
+					"level: 15": "0000010111111"
+				},
+				"Sand": {
+					"variant: sand": "0000011000000",
+					"variant: red_sand": "0000011000001"
+				},
+				"Gravel": "0000011010000",
+				"Gold Ore": "0000011100000",
+				"Iron Ore": "0000011110000",
+				"Coal Ore": "0000100000000",
+				"Log": {
+					"axis: x": {
+						"variant: oak": "0000100010100",
+						"variant: spruce": "0000100010101",
+						"variant: birch": "0000100010110",
+						"variant: jungle": "0000100010111"
+					},
+					"axis: y": {
+						"variant: oak": "0000100010000",
+						"variant: spruce": "0000100010001",
+						"variant: birch": "0000100010010",
+						"variant: jungle": "0000100010011"
+					},
+					"axis: z": {
+						"variant: oak": "0000100011000",
+						"variant: spruce": "0000100011001",
+						"variant: birch": "0000100011010",
+						"variant: jungle": "0000100011011"
+					},
+					"axis: none": {
+						"variant: oak": "0000100011100",
+						"variant: spruce": "0000100011101",
+						"variant: birch": "0000100011110",
+						"variant: jungle": "0000100011111"
+					}
+				},
+				"Leaves": {
+					"check_decay: true": {
+						"decayable: true": {
+							"variant: oak": "0000100101000",
+							"variant: spruce": "0000100101001",
+							"variant: birch": "0000100101010",
+							"variant: jungle": "0000100101011"
+						},
+						"decayable: false": {
+							"variant: oak": "0000100101100",
+							"variant: spruce": "0000100101101",
+							"variant: birch": "0000100101110",
+							"variant: jungle": "0000100101111"
+						}
+					},
+					"check_decay: false": {
+						"decayable: true": {
+							"variant: oak": "0000100100000",
+							"variant: spruce": "0000100100001",
+							"variant: birch": "0000100100010",
+							"variant: jungle": "0000100100011"
+						},
+						"decayable: false": {
+							"variant: oak": "0000100100100",
+							"variant: spruce": "0000100100101",
+							"variant: birch": "0000100100110",
+							"variant: jungle": "0000100100111"
+						}
+					}
+				},
+				"Sponge": {
+					"wet: true": "0000100110001",
+					"wet: false": "0000100110000"
+				},
+				"Glass": "0000101000000",
+				"Lapis Ore": "0000101010000",
+				"Lapis Block": "0000101100000",
+				"Dispenser": {
+					"facing: down": {
+						"triggered: true": "0000101111000",
+						"triggered: false": "0000101110000"
+					},
+					"facing: up": {
+						"triggered: true": "0000101111001",
+						"triggered: false": "0000101110001"
+					},
+					"facing: north": {
+						"triggered: true": "0000101111010",
+						"triggered: false": "0000101110010"
+					},
+					"facing: south": {
+						"triggered: true": "0000101111011",
+						"triggered: false": "0000101110011"
+					},
+					"facing: west": {
+						"triggered: true": "0000101111100",
+						"triggered: false": "0000101110100"
+					},
+					"facing: east": {
+						"triggered: true": "0000101111101",
+						"triggered: false": "0000101110101"
+					}
+				},
+				"Sandstone": {
+					"type: sandstone": "0000110000000",
+					"type: chiseled_sandstone": "0000110000001",
+					"type: smooth_sandstone": "0000110000010"
+				},
+				"Noteblock": "0000110010000",
+				"Bed": {
+					"facing: north": {
+						"occupied: true": {
+							"part: head": "0000110101110",
+							"part: foot": "0000110100010"
+						},
+						"occupied: false": {
+							"part: head": "0000110101010",
+							"part: foot": "0000110100010"
+						}
+					},
+					"facing: south": {
+						"occupied: true": {
+							"part: head": "0000110101100",
+							"part: foot": "0000110100000"
+						},
+						"occupied: false": {
+							"part: head": "0000110101000",
+							"part: foot": "0000110100000"
+						}
+					},
+					"facing: west": {
+						"occupied: true": {
+							"part: head": "0000110101101",
+							"part: foot": "0000110100001"
+						},
+						"occupied: false": {
+							"part: head": "0000110101001",
+							"part: foot": "0000110100001"
+						}
+					},
+					"facing: east": {
+						"occupied: true": {
+							"part: head": "0000110101111",
+							"part: foot": "0000110100011"
+						},
+						"occupied: false": {
+							"part: head": "0000110101011",
+							"part: foot": "0000110100011"
+						}
+					}
+				},
+				"Golden Rail": {
+					"powered: true": {
+						"shape: north_south": "0000110111000",
+						"shape: east_west": "0000110111001",
+						"shape: ascending_east": "0000110111010",
+						"shape: ascending_west": "0000110111011",
+						"shape: ascending_north": "0000110111100",
+						"shape: ascending_south": "0000110111101"
+					},
+					"powered: false": {
+						"shape: north_south": "0000110110000",
+						"shape: east_west": "0000110110001",
+						"shape: ascending_east": "0000110110010",
+						"shape: ascending_west": "0000110110011",
+						"shape: ascending_north": "0000110110100",
+						"shape: ascending_south": "0000110110101"
+					}
+				},
+				"Detector Rail": {
+					"powered: true": {
+						"shape: north_south": "0000111001000",
+						"shape: east_west": "0000111001001",
+						"shape: ascending_east": "0000111001010",
+						"shape: ascending_west": "0000111001011",
+						"shape: ascending_north": "0000111001100",
+						"shape: ascending_south": "0000111001101"
+					},
+					"powered: false": {
+						"shape: north_south": "0000111000000",
+						"shape: east_west": "0000111000001",
+						"shape: ascending_east": "0000111000010",
+						"shape: ascending_west": "0000111000011",
+						"shape: ascending_north": "0000111000100",
+						"shape: ascending_south": "0000111000101"
+					}
+				},
+				"Sticky Piston": {
+					"extended: true": {
+						"facing: down": "0000111011000",
+						"facing: up": "0000111011001",
+						"facing: north": "0000111011010",
+						"facing: south": "0000111011011",
+						"facing: west": "0000111011100",
+						"facing: east": "0000111011101"
+					},
+					"extended: false": {
+						"facing: down": "0000111010000",
+						"facing: up": "0000111010001",
+						"facing: north": "0000111010010",
+						"facing: south": "0000111010011",
+						"facing: west": "0000111010100",
+						"facing: east": "0000111010101"
+					}
+				},
+				"Web": "0000111100000",
+				"Tallgrass": {
+					"type: dead_bush": "0000111110000",
+					"type: tall_grass": "0000111110001",
+					"type: fern": "0000111110010"
+				},
+				"Deadbush": "0001000000000",
+				"Piston": {
+					"extended: true": {
+						"facing: down": "0001000011000",
+						"facing: up": "0001000011001",
+						"facing: north": "0001000011010",
+						"facing: south": "0001000011011",
+						"facing: west": "0001000011100",
+						"facing: east": "0001000011101"
+					},
+					"extended: false": {
+						"facing: down": "0001000010000",
+						"facing: up": "0001000010001",
+						"facing: north": "0001000010010",
+						"facing: south": "0001000010011",
+						"facing: west": "0001000010100",
+						"facing: east": "0001000010101"
+					}
+				},
+				"Piston Head": {
+					"facing: down": {
+						"type: normal": "0001000100000",
+						"type: sticky": "0001000101000"
+					},
+					"facing: up": {
+						"type: normal": "0001000100001",
+						"type: sticky": "0001000101001"
+					},
+					"facing: north": {
+						"type: normal": "0001000100010",
+						"type: sticky": "0001000101010"
+					},
+					"facing: south": {
+						"type: normal": "0001000100011",
+						"type: sticky": "0001000101011"
+					},
+					"facing: west": {
+						"type: normal": "0001000100100",
+						"type: sticky": "0001000101100"
+					},
+					"facing: east": {
+						"type: normal": "0001000100101",
+						"type: sticky": "0001000101101"
+					}
+				},
+				"Wool": {
+					"color: white": "0001000110000",
+					"color: orange": "0001000110001",
+					"color: magenta": "0001000110010",
+					"color: light_blue": "0001000110011",
+					"color: yellow": "0001000110100",
+					"color: lime": "0001000110101",
+					"color: pink": "0001000110110",
+					"color: gray": "0001000110111",
+					"color: silver": "0001000111000",
+					"color: cyan": "0001000111001",
+					"color: purple": "0001000111010",
+					"color: blue": "0001000111011",
+					"color: brown": "0001000111100",
+					"color: green": "0001000111101",
+					"color: red": "0001000111110",
+					"color: black": "0001000111111"
+				},
+				"Piston Extension": {
+					"facing: down": {
+						"type: normal": "0001001000000",
+						"type: sticky": "0001001001000"
+					},
+					"facing: up": {
+						"type: normal": "0001001000001",
+						"type: sticky": "0001001001001"
+					},
+					"facing: north": {
+						"type: normal": "0001001000010",
+						"type: sticky": "0001001001010"
+					},
+					"facing: south": {
+						"type: normal": "0001001000011",
+						"type: sticky": "0001001001011"
+					},
+					"facing: west": {
+						"type: normal": "0001001000100",
+						"type: sticky": "0001001001100"
+					},
+					"facing: east": {
+						"type: normal": "0001001000101",
+						"type: sticky": "0001001001101"
+					}
+				},
+				"Yellow Flower": "0001001010000",
+				"Red Flower": {
+					"type: poppy": "0001001100000",
+					"type: blue_orchid": "0001001100001",
+					"type: allium": "0001001100010",
+					"type: houstonia": "0001001100011",
+					"type: red_tulip": "0001001100100",
+					"type: orange_tulip": "0001001100101",
+					"type: white_tulip": "0001001100110",
+					"type: pink_tulip": "0001001100111",
+					"type: oxeye_daisy": "0001001101000"
+				},
+				"Brown Mushroom": "0001001110000",
+				"Red Mushroom": "0001010000000",
+				"Gold Block": "0001010010000",
+				"Iron Block": "0001010100000",
+				"Double Stone Slab": {
+					"seamless: true": {
+						"variant: stone": "0001010111000",
+						"variant: sandstone": "0001010111001",
+						"variant: wood_old": "0001010111010",
+						"variant: cobblestone": "0001010111011",
+						"variant: brick": "0001010111100",
+						"variant: stone_brick": "0001010111101",
+						"variant: nether_brick": "0001010111110",
+						"variant: quartz": "0001010111111"
+					},
+					"seamless: false": {
+						"variant: stone": "0001010110000",
+						"variant: sandstone": "0001010110001",
+						"variant: wood_old": "0001010110010",
+						"variant: cobblestone": "0001010110011",
+						"variant: brick": "0001010110100",
+						"variant: stone_brick": "0001010110101",
+						"variant: nether_brick": "0001010110110",
+						"variant: quartz": "0001010110111"
+					}
+				},
+				"Stone Slab": {
+					"half: top": {
+						"variant: stone": "0001011001000",
+						"variant: sandstone": "0001011001001",
+						"variant: wood_old": "0001011001010",
+						"variant: cobblestone": "0001011001011",
+						"variant: brick": "0001011001100",
+						"variant: stone_brick": "0001011001101",
+						"variant: nether_brick": "0001011001110",
+						"variant: quartz": "0001011001111"
+					},
+					"half: bottom": {
+						"variant: stone": "0001011000000",
+						"variant: sandstone": "0001011000001",
+						"variant: wood_old": "0001011000010",
+						"variant: cobblestone": "0001011000011",
+						"variant: brick": "0001011000100",
+						"variant: stone_brick": "0001011000101",
+						"variant: nether_brick": "0001011000110",
+						"variant: quartz": "0001011000111"
+					}
+				},
+				"Brick Block": "0001011010000",
+				"Tnt": {
+					"explode: true": "0001011100001",
+					"explode: false": "0001011100000"
+				},
+				"Bookshelf": "0001011110000",
+				"Mossy Cobblestone": "0001100000000",
+				"Obsidian": "0001100010000",
+				"Torch": {
+					"facing: up": "0001100100101",
+					"facing: north": "0001100100100",
+					"facing: south": "0001100100011",
+					"facing: west": "0001100100010",
+					"facing: east": "0001100100001"
+				},
+				"Fire": {
+					"age: 0": "0001100110000",
+					"age: 1": "0001100110001",
+					"age: 2": "0001100110010",
+					"age: 3": "0001100110011",
+					"age: 4": "0001100110100",
+					"age: 5": "0001100110101",
+					"age: 6": "0001100110110",
+					"age: 7": "0001100110111",
+					"age: 8": "0001100111000",
+					"age: 9": "0001100111001",
+					"age: 10": "0001100111010",
+					"age: 11": "0001100111011",
+					"age: 12": "0001100111100",
+					"age: 13": "0001100111101",
+					"age: 14": "0001100111110",
+					"age: 15": "0001100111111"
+				},
+				"Mob Spawner": "0001101000000",
+				"Oak Stairs": {
+					"facing: north": {
+						"half: top": "0001101010111",
+						"half: bottom": "0001101010011"
+					},
+					"facing: south": {
+						"half: top": "0001101010110",
+						"half: bottom": "0001101010010"
+					},
+					"facing: west": {
+						"half: top": "0001101010101",
+						"half: bottom": "0001101010001"
+					},
+					"facing: east": {
+						"half: top": "0001101010100",
+						"half: bottom": "0001101010000"
+					}
+				},
+				"Chest": {
+					"facing: north": "0001101100010",
+					"facing: south": "0001101100011",
+					"facing: west": "0001101100100",
+					"facing: east": "0001101100101"
+				},
+				"Redstone Wire": {
+					"power: 0": "0001101110000",
+					"power: 1": "0001101110001",
+					"power: 2": "0001101110010",
+					"power: 3": "0001101110011",
+					"power: 4": "0001101110100",
+					"power: 5": "0001101110101",
+					"power: 6": "0001101110110",
+					"power: 7": "0001101110111",
+					"power: 8": "0001101111000",
+					"power: 9": "0001101111001",
+					"power: 10": "0001101111010",
+					"power: 11": "0001101111011",
+					"power: 12": "0001101111100",
+					"power: 13": "0001101111101",
+					"power: 14": "0001101111110",
+					"power: 15": "0001101111111"
+				},
+				"Diamond Ore": "0001110000000",
+				"Diamond Block": "0001110010000",
+				"Crafting Table": "0001110100000",
+				"Wheat": {
+					"age: 0": "0001110110000",
+					"age: 1": "0001110110001",
+					"age: 2": "0001110110010",
+					"age: 3": "0001110110011",
+					"age: 4": "0001110110100",
+					"age: 5": "0001110110101",
+					"age: 6": "0001110110110",
+					"age: 7": "0001110110111"
+				},
+				"Farmland": {
+					"moisture: 0": "0001111000000",
+					"moisture: 1": "0001111000001",
+					"moisture: 2": "0001111000010",
+					"moisture: 3": "0001111000011",
+					"moisture: 4": "0001111000100",
+					"moisture: 5": "0001111000101",
+					"moisture: 6": "0001111000110",
+					"moisture: 7": "0001111000111"
+				},
+				"Furnace": {
+					"facing: north": "0001111010010",
+					"facing: south": "0001111010011",
+					"facing: west": "0001111010100",
+					"facing: east": "0001111010101"
+				},
+				"Lit Furnace": {
+					"facing: north": "0001111100010",
+					"facing: south": "0001111100011",
+					"facing: west": "0001111100100",
+					"facing: east": "0001111100101"
+				},
+				"Standing Sign": {
+					"rotation: 0": "0001111110000",
+					"rotation: 1": "0001111110001",
+					"rotation: 2": "0001111110010",
+					"rotation: 3": "0001111110011",
+					"rotation: 4": "0001111110100",
+					"rotation: 5": "0001111110101",
+					"rotation: 6": "0001111110110",
+					"rotation: 7": "0001111110111",
+					"rotation: 8": "0001111111000",
+					"rotation: 9": "0001111111001",
+					"rotation: 10": "0001111111010",
+					"rotation: 11": "0001111111011",
+					"rotation: 12": "0001111111100",
+					"rotation: 13": "0001111111101",
+					"rotation: 14": "0001111111110",
+					"rotation: 15": "0001111111111"
+				},
+				"Wooden Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0010000001010",
+								"powered: false": "0010000001000"
+							},
+							"hinge: right": {
+								"powered: true": "0010000001011",
+								"powered: false": "0010000001001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0010000000111",
+							"open: false": "0010000000011"
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0010000001010",
+								"powered: false": "0010000001000"
+							},
+							"hinge: right": {
+								"powered: true": "0010000001011",
+								"powered: false": "0010000001001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0010000000101",
+							"open: false": "0010000000001"
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0010000001010",
+								"powered: false": "0010000001000"
+							},
+							"hinge: right": {
+								"powered: true": "0010000001011",
+								"powered: false": "0010000001001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0010000000110",
+							"open: false": "0010000000010"
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0010000001010",
+								"powered: false": "0010000001000"
+							},
+							"hinge: right": {
+								"powered: true": "0010000001011",
+								"powered: false": "0010000001001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0010000000100",
+							"open: false": "0010000000000"
+						}
+					}
+				},
+				"Ladder": {
+					"facing: north": "0010000010010",
+					"facing: south": "0010000010011",
+					"facing: west": "0010000010100",
+					"facing: east": "0010000010101"
+				},
+				"Rail": {
+					"shape: north_south": "0010000100000",
+					"shape: east_west": "0010000100001",
+					"shape: ascending_east": "0010000100010",
+					"shape: ascending_west": "0010000100011",
+					"shape: ascending_north": "0010000100100",
+					"shape: ascending_south": "0010000100101",
+					"shape: south_east": "0010000100110",
+					"shape: south_west": "0010000100111",
+					"shape: north_west": "0010000101000",
+					"shape: north_east": "0010000101001"
+				},
+				"Stone Stairs": {
+					"facing: north": {
+						"half: top": "0010000110111",
+						"half: bottom": "0010000110011"
+					},
+					"facing: south": {
+						"half: top": "0010000110110",
+						"half: bottom": "0010000110010"
+					},
+					"facing: west": {
+						"half: top": "0010000110101",
+						"half: bottom": "0010000110001"
+					},
+					"facing: east": {
+						"half: top": "0010000110100",
+						"half: bottom": "0010000110000"
+					}
+				},
+				"Wall Sign": {
+					"facing: north": "0010001000010",
+					"facing: south": "0010001000011",
+					"facing: west": "0010001000100",
+					"facing: east": "0010001000101"
+				},
+				"Lever": {
+					"facing: down_x": {
+						"powered: true": "0010001011000",
+						"powered: false": "0010001010000"
+					},
+					"facing: east": {
+						"powered: true": "0010001011001",
+						"powered: false": "0010001010001"
+					},
+					"facing: west": {
+						"powered: true": "0010001011010",
+						"powered: false": "0010001010010"
+					},
+					"facing: south": {
+						"powered: true": "0010001011011",
+						"powered: false": "0010001010011"
+					},
+					"facing: north": {
+						"powered: true": "0010001011100",
+						"powered: false": "0010001010100"
+					},
+					"facing: up_z": {
+						"powered: true": "0010001011101",
+						"powered: false": "0010001010101"
+					},
+					"facing: up_x": {
+						"powered: true": "0010001011110",
+						"powered: false": "0010001010110"
+					},
+					"facing: down_z": {
+						"powered: true": "0010001011111",
+						"powered: false": "0010001010111"
+					}
+				},
+				"Stone Pressure Plate": {
+					"powered: true": "0010001100001",
+					"powered: false": "0010001100000"
+				},
+				"Iron Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0010001111010",
+								"powered: false": "0010001111000"
+							},
+							"hinge: right": {
+								"powered: true": "0010001111011",
+								"powered: false": "0010001111001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0010001110111",
+							"open: false": "0010001110011"
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0010001111010",
+								"powered: false": "0010001111000"
+							},
+							"hinge: right": {
+								"powered: true": "0010001111011",
+								"powered: false": "0010001111001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0010001110101",
+							"open: false": "0010001110001"
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0010001111010",
+								"powered: false": "0010001111000"
+							},
+							"hinge: right": {
+								"powered: true": "0010001111011",
+								"powered: false": "0010001111001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0010001110110",
+							"open: false": "0010001110010"
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0010001111010",
+								"powered: false": "0010001111000"
+							},
+							"hinge: right": {
+								"powered: true": "0010001111011",
+								"powered: false": "0010001111001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0010001110100",
+							"open: false": "0010001110000"
+						}
+					}
+				},
+				"Wooden Pressure Plate": {
+					"powered: true": "0010010000001",
+					"powered: false": "0010010000000"
+				},
+				"Redstone Ore": "0010010010000",
+				"Lit Redstone Ore": "0010010100000",
+				"Unlit Redstone Torch": {
+					"facing: up": "0010010110101",
+					"facing: north": "0010010110100",
+					"facing: south": "0010010110011",
+					"facing: west": "0010010110010",
+					"facing: east": "0010010110001"
+				},
+				"Redstone Torch": {
+					"facing: up": "0010011000101",
+					"facing: north": "0010011000100",
+					"facing: south": "0010011000011",
+					"facing: west": "0010011000010",
+					"facing: east": "0010011000001"
+				},
+				"Stone Button": {
+					"facing: down": {
+						"powered: true": "0010011011000",
+						"powered: false": "0010011010000"
+					},
+					"facing: up": {
+						"powered: true": "0010011011101",
+						"powered: false": "0010011010101"
+					},
+					"facing: north": {
+						"powered: true": "0010011011100",
+						"powered: false": "0010011010100"
+					},
+					"facing: south": {
+						"powered: true": "0010011011011",
+						"powered: false": "0010011010011"
+					},
+					"facing: west": {
+						"powered: true": "0010011011010",
+						"powered: false": "0010011010010"
+					},
+					"facing: east": {
+						"powered: true": "0010011011001",
+						"powered: false": "0010011010001"
+					}
+				},
+				"Snow Layer": {
+					"layers: 1": "0010011100000",
+					"layers: 2": "0010011100001",
+					"layers: 3": "0010011100010",
+					"layers: 4": "0010011100011",
+					"layers: 5": "0010011100100",
+					"layers: 6": "0010011100101",
+					"layers: 7": "0010011100110",
+					"layers: 8": "0010011100111"
+				},
+				"Ice": "0010011110000",
+				"Snow": "0010100000000",
+				"Cactus": {
+					"age: 0": "0010100010000",
+					"age: 1": "0010100010001",
+					"age: 2": "0010100010010",
+					"age: 3": "0010100010011",
+					"age: 4": "0010100010100",
+					"age: 5": "0010100010101",
+					"age: 6": "0010100010110",
+					"age: 7": "0010100010111",
+					"age: 8": "0010100011000",
+					"age: 9": "0010100011001",
+					"age: 10": "0010100011010",
+					"age: 11": "0010100011011",
+					"age: 12": "0010100011100",
+					"age: 13": "0010100011101",
+					"age: 14": "0010100011110",
+					"age: 15": "0010100011111"
+				},
+				"Clay": "0010100100000",
+				"Reeds": {
+					"age: 0": "0010100110000",
+					"age: 1": "0010100110001",
+					"age: 2": "0010100110010",
+					"age: 3": "0010100110011",
+					"age: 4": "0010100110100",
+					"age: 5": "0010100110101",
+					"age: 6": "0010100110110",
+					"age: 7": "0010100110111",
+					"age: 8": "0010100111000",
+					"age: 9": "0010100111001",
+					"age: 10": "0010100111010",
+					"age: 11": "0010100111011",
+					"age: 12": "0010100111100",
+					"age: 13": "0010100111101",
+					"age: 14": "0010100111110",
+					"age: 15": "0010100111111"
+				},
+				"Jukebox": {
+					"has_record: true": "0010101000001",
+					"has_record: false": "0010101000000"
+				},
+				"Fence": "0010101010000",
+				"Pumpkin": {
+					"facing: north": "0010101100010",
+					"facing: south": "0010101100000",
+					"facing: west": "0010101100001",
+					"facing: east": "0010101100011"
+				},
+				"Netherrack": "0010101110000",
+				"Soul Sand": "0010110000000",
+				"Glowstone": "0010110010000",
+				"Portal": {
+					"axis: x": "0010110100001",
+					"axis: z": "0010110100010"
+				},
+				"Lit Pumpkin": {
+					"facing: north": "0010110110010",
+					"facing: south": "0010110110000",
+					"facing: west": "0010110110001",
+					"facing: east": "0010110110011"
+				},
+				"Cake": {
+					"bites: 0": "0010111000000",
+					"bites: 1": "0010111000001",
+					"bites: 2": "0010111000010",
+					"bites: 3": "0010111000011",
+					"bites: 4": "0010111000100",
+					"bites: 5": "0010111000101",
+					"bites: 6": "0010111000110"
+				},
+				"Unpowered Repeater": {
+					"delay: 1": {
+						"facing: north": "0010111010010",
+						"facing: south": "0010111010000",
+						"facing: west": "0010111010001",
+						"facing: east": "0010111010011"
+					},
+					"delay: 2": {
+						"facing: north": "0010111010110",
+						"facing: south": "0010111010100",
+						"facing: west": "0010111010101",
+						"facing: east": "0010111010111"
+					},
+					"delay: 3": {
+						"facing: north": "0010111011010",
+						"facing: south": "0010111011000",
+						"facing: west": "0010111011001",
+						"facing: east": "0010111011011"
+					},
+					"delay: 4": {
+						"facing: north": "0010111011110",
+						"facing: south": "0010111011100",
+						"facing: west": "0010111011101",
+						"facing: east": "0010111011111"
+					}
+				},
+				"Powered Repeater": {
+					"delay: 1": {
+						"facing: north": "0010111100010",
+						"facing: south": "0010111100000",
+						"facing: west": "0010111100001",
+						"facing: east": "0010111100011"
+					},
+					"delay: 2": {
+						"facing: north": "0010111100110",
+						"facing: south": "0010111100100",
+						"facing: west": "0010111100101",
+						"facing: east": "0010111100111"
+					},
+					"delay: 3": {
+						"facing: north": "0010111101010",
+						"facing: south": "0010111101000",
+						"facing: west": "0010111101001",
+						"facing: east": "0010111101011"
+					},
+					"delay: 4": {
+						"facing: north": "0010111101110",
+						"facing: south": "0010111101100",
+						"facing: west": "0010111101101",
+						"facing: east": "0010111101111"
+					}
+				},
+				"Stained Glass": {
+					"color: white": "0010111110000",
+					"color: orange": "0010111110001",
+					"color: magenta": "0010111110010",
+					"color: light_blue": "0010111110011",
+					"color: yellow": "0010111110100",
+					"color: lime": "0010111110101",
+					"color: pink": "0010111110110",
+					"color: gray": "0010111110111",
+					"color: silver": "0010111111000",
+					"color: cyan": "0010111111001",
+					"color: purple": "0010111111010",
+					"color: blue": "0010111111011",
+					"color: brown": "0010111111100",
+					"color: green": "0010111111101",
+					"color: red": "0010111111110",
+					"color: black": "0010111111111"
+				},
+				"Trapdoor": {
+					"facing: north": {
+						"half: top": {
+							"open: true": "0011000001100",
+							"open: false": "0011000001000"
+						},
+						"half: bottom": {
+							"open: true": "0011000000100",
+							"open: false": "0011000000000"
+						}
+					},
+					"facing: south": {
+						"half: top": {
+							"open: true": "0011000001101",
+							"open: false": "0011000001001"
+						},
+						"half: bottom": {
+							"open: true": "0011000000101",
+							"open: false": "0011000000001"
+						}
+					},
+					"facing: west": {
+						"half: top": {
+							"open: true": "0011000001110",
+							"open: false": "0011000001010"
+						},
+						"half: bottom": {
+							"open: true": "0011000000110",
+							"open: false": "0011000000010"
+						}
+					},
+					"facing: east": {
+						"half: top": {
+							"open: true": "0011000001111",
+							"open: false": "0011000001011"
+						},
+						"half: bottom": {
+							"open: true": "0011000000111",
+							"open: false": "0011000000011"
+						}
+					}
+				},
+				"Monster Egg": {
+					"variant: stone": "0011000010000",
+					"variant: cobblestone": "0011000010001",
+					"variant: stone_brick": "0011000010010",
+					"variant: mossy_brick": "0011000010011",
+					"variant: cracked_brick": "0011000010100",
+					"variant: chiseled_brick": "0011000010101"
+				},
+				"Stonebrick": {
+					"variant: stonebrick": "0011000100000",
+					"variant: mossy_stonebrick": "0011000100001",
+					"variant: cracked_stonebrick": "0011000100010",
+					"variant: chiseled_stonebrick": "0011000100011"
+				},
+				"Brown Mushroom Block": {
+					"variant: north_west": "0011000110001",
+					"variant: north": "0011000110010",
+					"variant: north_east": "0011000110011",
+					"variant: west": "0011000110100",
+					"variant: center": "0011000110101",
+					"variant: east": "0011000110110",
+					"variant: south_west": "0011000110111",
+					"variant: south": "0011000111000",
+					"variant: south_east": "0011000111001",
+					"variant: stem": "0011000111010",
+					"variant: all_inside": "0011000110000",
+					"variant: all_outside": "0011000111110",
+					"variant: all_stem": "0011000111111"
+				},
+				"Red Mushroom Block": {
+					"variant: north_west": "0011001000001",
+					"variant: north": "0011001000010",
+					"variant: north_east": "0011001000011",
+					"variant: west": "0011001000100",
+					"variant: center": "0011001000101",
+					"variant: east": "0011001000110",
+					"variant: south_west": "0011001000111",
+					"variant: south": "0011001001000",
+					"variant: south_east": "0011001001001",
+					"variant: stem": "0011001001010",
+					"variant: all_inside": "0011001000000",
+					"variant: all_outside": "0011001001110",
+					"variant: all_stem": "0011001001111"
+				},
+				"Iron Bars": "0011001010000",
+				"Glass Pane": "0011001100000",
+				"Melon Block": "0011001110000",
+				"Pumpkin Stem": {
+					"age: 0": "0011010000000",
+					"age: 1": "0011010000001",
+					"age: 2": "0011010000010",
+					"age: 3": "0011010000011",
+					"age: 4": "0011010000100",
+					"age: 5": "0011010000101",
+					"age: 6": "0011010000110",
+					"age: 7": "0011010000111"
+				},
+				"Melon Stem": {
+					"age: 0": "0011010010000",
+					"age: 1": "0011010010001",
+					"age: 2": "0011010010010",
+					"age: 3": "0011010010011",
+					"age: 4": "0011010010100",
+					"age: 5": "0011010010101",
+					"age: 6": "0011010010110",
+					"age: 7": "0011010010111"
+				},
+				"Vine": {
+					"east: true": {
+						"north: true": {
+							"south: true": {
+								"west: true": "0011010101111",
+								"west: false": "0011010101101"
+							},
+							"south: false": {
+								"west: true": "0011010101110",
+								"west: false": "0011010101100"
+							}
+						},
+						"north: false": {
+							"south: true": {
+								"west: true": "0011010101011",
+								"west: false": "0011010101001"
+							},
+							"south: false": {
+								"west: true": "0011010101010",
+								"west: false": "0011010101000"
+							}
+						}
+					},
+					"east: false": {
+						"north: true": {
+							"south: true": {
+								"west: true": "0011010100111",
+								"west: false": "0011010100101"
+							},
+							"south: false": {
+								"west: true": "0011010100110",
+								"west: false": "0011010100100"
+							}
+						},
+						"north: false": {
+							"south: true": {
+								"west: true": "0011010100011",
+								"west: false": "0011010100001"
+							},
+							"south: false": {
+								"west: true": "0011010100010",
+								"west: false": "0011010100000"
+							}
+						}
+					}
+				},
+				"Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": "0011010111110",
+							"powered: false": "0011010110110"
+						},
+						"open: false": {
+							"powered: true": "0011010111010",
+							"powered: false": "0011010110010"
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": "0011010111100",
+							"powered: false": "0011010110100"
+						},
+						"open: false": {
+							"powered: true": "0011010111000",
+							"powered: false": "0011010110000"
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": "0011010111101",
+							"powered: false": "0011010110101"
+						},
+						"open: false": {
+							"powered: true": "0011010111001",
+							"powered: false": "0011010110001"
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": "0011010111111",
+							"powered: false": "0011010110111"
+						},
+						"open: false": {
+							"powered: true": "0011010111011",
+							"powered: false": "0011010110011"
+						}
+					}
+				},
+				"Brick Stairs": {
+					"facing: north": {
+						"half: top": "0011011000111",
+						"half: bottom": "0011011000011"
+					},
+					"facing: south": {
+						"half: top": "0011011000110",
+						"half: bottom": "0011011000010"
+					},
+					"facing: west": {
+						"half: top": "0011011000101",
+						"half: bottom": "0011011000001"
+					},
+					"facing: east": {
+						"half: top": "0011011000100",
+						"half: bottom": "0011011000000"
+					}
+				},
+				"Stone Brick Stairs": {
+					"facing: north": {
+						"half: top": "0011011010111",
+						"half: bottom": "0011011010011"
+					},
+					"facing: south": {
+						"half: top": "0011011010110",
+						"half: bottom": "0011011010010"
+					},
+					"facing: west": {
+						"half: top": "0011011010101",
+						"half: bottom": "0011011010001"
+					},
+					"facing: east": {
+						"half: top": "0011011010100",
+						"half: bottom": "0011011010000"
+					}
+				},
+				"Mycelium": "0011011100000",
+				"Waterlily": "0011011110000",
+				"Nether Brick": "0011100000000",
+				"Nether Brick Fence": "0011100010000",
+				"Nether Brick Stairs": {
+					"facing: north": {
+						"half: top": "0011100100111",
+						"half: bottom": "0011100100011"
+					},
+					"facing: south": {
+						"half: top": "0011100100110",
+						"half: bottom": "0011100100010"
+					},
+					"facing: west": {
+						"half: top": "0011100100101",
+						"half: bottom": "0011100100001"
+					},
+					"facing: east": {
+						"half: top": "0011100100100",
+						"half: bottom": "0011100100000"
+					}
+				},
+				"Nether Wart": {
+					"age: 0": "0011100110000",
+					"age: 1": "0011100110001",
+					"age: 2": "0011100110010",
+					"age: 3": "0011100110011"
+				},
+				"Enchanting Table": "0011101000000",
+				"Brewing Stand": {
+					"has_bottle_0: true": {
+						"has_bottle_1: true": {
+							"has_bottle_2: true": "0011101010111",
+							"has_bottle_2: false": "0011101010011"
+						},
+						"has_bottle_1: false": {
+							"has_bottle_2: true": "0011101010101",
+							"has_bottle_2: false": "0011101010001"
+						}
+					},
+					"has_bottle_0: false": {
+						"has_bottle_1: true": {
+							"has_bottle_2: true": "0011101010110",
+							"has_bottle_2: false": "0011101010010"
+						},
+						"has_bottle_1: false": {
+							"has_bottle_2: true": "0011101010100",
+							"has_bottle_2: false": "0011101010000"
+						}
+					}
+				},
+				"Cauldron": {
+					"level: 0": "0011101100000",
+					"level: 1": "0011101100001",
+					"level: 2": "0011101100010",
+					"level: 3": "0011101100011"
+				},
+				"End Portal": "0011101110000",
+				"End Portal Frame": {
+					"eye: true": {
+						"facing: north": "0011110000110",
+						"facing: south": "0011110000100",
+						"facing: west": "0011110000101",
+						"facing: east": "0011110000111"
+					},
+					"eye: false": {
+						"facing: north": "0011110000010",
+						"facing: south": "0011110000000",
+						"facing: west": "0011110000001",
+						"facing: east": "0011110000011"
+					}
+				},
+				"End Stone": "0011110010000",
+				"Dragon Egg": "0011110100000",
+				"Redstone Lamp": "0011110110000",
+				"Lit Redstone Lamp": "0011111000000",
+				"Double Wooden Slab": {
+					"variant: oak": "0011111010000",
+					"variant: spruce": "0011111010001",
+					"variant: birch": "0011111010010",
+					"variant: jungle": "0011111010011",
+					"variant: acacia": "0011111010100",
+					"variant: dark_oak": "0011111010101"
+				},
+				"Wooden Slab": {
+					"half: top": {
+						"variant: oak": "0011111101000",
+						"variant: spruce": "0011111101001",
+						"variant: birch": "0011111101010",
+						"variant: jungle": "0011111101011",
+						"variant: acacia": "0011111101100",
+						"variant: dark_oak": "0011111101101"
+					},
+					"half: bottom": {
+						"variant: oak": "0011111100000",
+						"variant: spruce": "0011111100001",
+						"variant: birch": "0011111100010",
+						"variant: jungle": "0011111100011",
+						"variant: acacia": "0011111100100",
+						"variant: dark_oak": "0011111100101"
+					}
+				},
+				"Cocoa": {
+					"age: 0": {
+						"facing: north": "0011111110010",
+						"facing: south": "0011111110000",
+						"facing: west": "0011111110001",
+						"facing: east": "0011111110011"
+					},
+					"age: 1": {
+						"facing: north": "0011111110110",
+						"facing: south": "0011111110100",
+						"facing: west": "0011111110101",
+						"facing: east": "0011111110111"
+					},
+					"age: 2": {
+						"facing: north": "0011111111010",
+						"facing: south": "0011111111000",
+						"facing: west": "0011111111001",
+						"facing: east": "0011111111011"
+					}
+				},
+				"Sandstone Stairs": {
+					"facing: north": {
+						"half: top": "0100000000111",
+						"half: bottom": "0100000000011"
+					},
+					"facing: south": {
+						"half: top": "0100000000110",
+						"half: bottom": "0100000000010"
+					},
+					"facing: west": {
+						"half: top": "0100000000101",
+						"half: bottom": "0100000000001"
+					},
+					"facing: east": {
+						"half: top": "0100000000100",
+						"half: bottom": "0100000000000"
+					}
+				},
+				"Emerald Ore": "0100000010000",
+				"Ender Chest": {
+					"facing: north": "0100000100010",
+					"facing: south": "0100000100011",
+					"facing: west": "0100000100100",
+					"facing: east": "0100000100101"
+				},
+				"Tripwire Hook": {
+					"attached: true": {
+						"facing: north": {
+							"powered: true": "0100000111110",
+							"powered: false": "0100000110110"
+						},
+						"facing: south": {
+							"powered: true": "0100000111100",
+							"powered: false": "0100000110100"
+						},
+						"facing: west": {
+							"powered: true": "0100000111101",
+							"powered: false": "0100000110101"
+						},
+						"facing: east": {
+							"powered: true": "0100000111111",
+							"powered: false": "0100000110111"
+						}
+					},
+					"attached: false": {
+						"facing: north": {
+							"powered: true": "0100000111010",
+							"powered: false": "0100000110010"
+						},
+						"facing: south": {
+							"powered: true": "0100000111000",
+							"powered: false": "0100000110000"
+						},
+						"facing: west": {
+							"powered: true": "0100000111001",
+							"powered: false": "0100000110001"
+						},
+						"facing: east": {
+							"powered: true": "0100000111011",
+							"powered: false": "0100000110011"
+						}
+					}
+				},
+				"Tripwire": {
+					"attached: true": {
+						"disarmed: true": {
+							"powered: true": "0100001001101",
+							"powered: false": "0100001001100"
+						},
+						"disarmed: false": {
+							"powered: true": "0100001000101",
+							"powered: false": "0100001000100"
+						}
+					},
+					"attached: false": {
+						"disarmed: true": {
+							"powered: true": "0100001001001",
+							"powered: false": "0100001001000"
+						},
+						"disarmed: false": {
+							"powered: true": "0100001000001",
+							"powered: false": "0100001000000"
+						}
+					}
+				},
+				"Emerald Block": "0100001010000",
+				"Spruce Stairs": {
+					"facing: north": {
+						"half: top": "0100001100111",
+						"half: bottom": "0100001100011"
+					},
+					"facing: south": {
+						"half: top": "0100001100110",
+						"half: bottom": "0100001100010"
+					},
+					"facing: west": {
+						"half: top": "0100001100101",
+						"half: bottom": "0100001100001"
+					},
+					"facing: east": {
+						"half: top": "0100001100100",
+						"half: bottom": "0100001100000"
+					}
+				},
+				"Birch Stairs": {
+					"facing: north": {
+						"half: top": "0100001110111",
+						"half: bottom": "0100001110011"
+					},
+					"facing: south": {
+						"half: top": "0100001110110",
+						"half: bottom": "0100001110010"
+					},
+					"facing: west": {
+						"half: top": "0100001110101",
+						"half: bottom": "0100001110001"
+					},
+					"facing: east": {
+						"half: top": "0100001110100",
+						"half: bottom": "0100001110000"
+					}
+				},
+				"Jungle Stairs": {
+					"facing: north": {
+						"half: top": "0100010000111",
+						"half: bottom": "0100010000011"
+					},
+					"facing: south": {
+						"half: top": "0100010000110",
+						"half: bottom": "0100010000010"
+					},
+					"facing: west": {
+						"half: top": "0100010000101",
+						"half: bottom": "0100010000001"
+					},
+					"facing: east": {
+						"half: top": "0100010000100",
+						"half: bottom": "0100010000000"
+					}
+				},
+				"Command Block": {
+					"conditional: true": {
+						"facing: down": "0100010011000",
+						"facing: up": "0100010011001",
+						"facing: north": "0100010011010",
+						"facing: south": "0100010011011",
+						"facing: west": "0100010011100",
+						"facing: east": "0100010011101"
+					},
+					"conditional: false": {
+						"facing: down": "0100010010000",
+						"facing: up": "0100010010001",
+						"facing: north": "0100010010010",
+						"facing: south": "0100010010011",
+						"facing: west": "0100010010100",
+						"facing: east": "0100010010101"
+					}
+				},
+				"Beacon": "0100010100000",
+				"Cobblestone Wall": {
+					"variant: cobblestone": "0100010110000",
+					"variant: mossy_cobblestone": "0100010110001"
+				},
+				"Flower Pot": {
+					"legacy_data: 0": "0100011000000",
+					"legacy_data: 1": "0100011000001",
+					"legacy_data: 2": "0100011000010",
+					"legacy_data: 3": "0100011000011",
+					"legacy_data: 4": "0100011000100",
+					"legacy_data: 5": "0100011000101",
+					"legacy_data: 6": "0100011000110",
+					"legacy_data: 7": "0100011000111",
+					"legacy_data: 8": "0100011001000",
+					"legacy_data: 9": "0100011001001",
+					"legacy_data: 10": "0100011001010",
+					"legacy_data: 11": "0100011001011",
+					"legacy_data: 12": "0100011001100",
+					"legacy_data: 13": "0100011001101",
+					"legacy_data: 14": "0100011001110",
+					"legacy_data: 15": "0100011001111"
+				},
+				"Carrots": {
+					"age: 0": "0100011010000",
+					"age: 1": "0100011010001",
+					"age: 2": "0100011010010",
+					"age: 3": "0100011010011",
+					"age: 4": "0100011010100",
+					"age: 5": "0100011010101",
+					"age: 6": "0100011010110",
+					"age: 7": "0100011010111"
+				},
+				"Potatoes": {
+					"age: 0": "0100011100000",
+					"age: 1": "0100011100001",
+					"age: 2": "0100011100010",
+					"age: 3": "0100011100011",
+					"age: 4": "0100011100100",
+					"age: 5": "0100011100101",
+					"age: 6": "0100011100110",
+					"age: 7": "0100011100111"
+				},
+				"Wooden Button": {
+					"facing: down": {
+						"powered: true": "0100011111000",
+						"powered: false": "0100011110000"
+					},
+					"facing: up": {
+						"powered: true": "0100011111101",
+						"powered: false": "0100011110101"
+					},
+					"facing: north": {
+						"powered: true": "0100011111100",
+						"powered: false": "0100011110100"
+					},
+					"facing: south": {
+						"powered: true": "0100011111011",
+						"powered: false": "0100011110011"
+					},
+					"facing: west": {
+						"powered: true": "0100011111010",
+						"powered: false": "0100011110010"
+					},
+					"facing: east": {
+						"powered: true": "0100011111001",
+						"powered: false": "0100011110001"
+					}
+				},
+				"Skull": {
+					"facing: down": {
+						"nodrop: true": "0100100001000",
+						"nodrop: false": "0100100000000"
+					},
+					"facing: up": {
+						"nodrop: true": "0100100001001",
+						"nodrop: false": "0100100000001"
+					},
+					"facing: north": {
+						"nodrop: true": "0100100001010",
+						"nodrop: false": "0100100000010"
+					},
+					"facing: south": {
+						"nodrop: true": "0100100001011",
+						"nodrop: false": "0100100000011"
+					},
+					"facing: west": {
+						"nodrop: true": "0100100001100",
+						"nodrop: false": "0100100000100"
+					},
+					"facing: east": {
+						"nodrop: true": "0100100001101",
+						"nodrop: false": "0100100000101"
+					}
+				},
+				"Anvil": {
+					"damage: 0": {
+						"facing: north": "0100100010010",
+						"facing: south": "0100100010000",
+						"facing: west": "0100100010001",
+						"facing: east": "0100100010011"
+					},
+					"damage: 1": {
+						"facing: north": "0100100010110",
+						"facing: south": "0100100010100",
+						"facing: west": "0100100010101",
+						"facing: east": "0100100010111"
+					},
+					"damage: 2": {
+						"facing: north": "0100100011010",
+						"facing: south": "0100100011000",
+						"facing: west": "0100100011001",
+						"facing: east": "0100100011011"
+					}
+				},
+				"Trapped Chest": {
+					"facing: north": "0100100100010",
+					"facing: south": "0100100100011",
+					"facing: west": "0100100100100",
+					"facing: east": "0100100100101"
+				},
+				"Light Weighted Pressure Plate": {
+					"power: 0": "0100100110000",
+					"power: 1": "0100100110001",
+					"power: 2": "0100100110010",
+					"power: 3": "0100100110011",
+					"power: 4": "0100100110100",
+					"power: 5": "0100100110101",
+					"power: 6": "0100100110110",
+					"power: 7": "0100100110111",
+					"power: 8": "0100100111000",
+					"power: 9": "0100100111001",
+					"power: 10": "0100100111010",
+					"power: 11": "0100100111011",
+					"power: 12": "0100100111100",
+					"power: 13": "0100100111101",
+					"power: 14": "0100100111110",
+					"power: 15": "0100100111111"
+				},
+				"Heavy Weighted Pressure Plate": {
+					"power: 0": "0100101000000",
+					"power: 1": "0100101000001",
+					"power: 2": "0100101000010",
+					"power: 3": "0100101000011",
+					"power: 4": "0100101000100",
+					"power: 5": "0100101000101",
+					"power: 6": "0100101000110",
+					"power: 7": "0100101000111",
+					"power: 8": "0100101001000",
+					"power: 9": "0100101001001",
+					"power: 10": "0100101001010",
+					"power: 11": "0100101001011",
+					"power: 12": "0100101001100",
+					"power: 13": "0100101001101",
+					"power: 14": "0100101001110",
+					"power: 15": "0100101001111"
+				},
+				"Unpowered Comparator": {
+					"facing: north": {
+						"mode: compare": {
+							"powered: true": "0100101011010",
+							"powered: false": "0100101010010"
+						},
+						"mode: subtract": {
+							"powered: true": "0100101011110",
+							"powered: false": "0100101010110"
+						}
+					},
+					"facing: south": {
+						"mode: compare": {
+							"powered: true": "0100101011000",
+							"powered: false": "0100101010000"
+						},
+						"mode: subtract": {
+							"powered: true": "0100101011100",
+							"powered: false": "0100101010100"
+						}
+					},
+					"facing: west": {
+						"mode: compare": {
+							"powered: true": "0100101011001",
+							"powered: false": "0100101010001"
+						},
+						"mode: subtract": {
+							"powered: true": "0100101011101",
+							"powered: false": "0100101010101"
+						}
+					},
+					"facing: east": {
+						"mode: compare": {
+							"powered: true": "0100101011011",
+							"powered: false": "0100101010011"
+						},
+						"mode: subtract": {
+							"powered: true": "0100101011111",
+							"powered: false": "0100101010111"
+						}
+					}
+				},
+				"Powered Comparator": {
+					"facing: north": {
+						"mode: compare": {
+							"powered: true": "0100101101010",
+							"powered: false": "0100101100010"
+						},
+						"mode: subtract": {
+							"powered: true": "0100101101110",
+							"powered: false": "0100101100110"
+						}
+					},
+					"facing: south": {
+						"mode: compare": {
+							"powered: true": "0100101101000",
+							"powered: false": "0100101100000"
+						},
+						"mode: subtract": {
+							"powered: true": "0100101101100",
+							"powered: false": "0100101100100"
+						}
+					},
+					"facing: west": {
+						"mode: compare": {
+							"powered: true": "0100101101001",
+							"powered: false": "0100101100001"
+						},
+						"mode: subtract": {
+							"powered: true": "0100101101101",
+							"powered: false": "0100101100101"
+						}
+					},
+					"facing: east": {
+						"mode: compare": {
+							"powered: true": "0100101101011",
+							"powered: false": "0100101100011"
+						},
+						"mode: subtract": {
+							"powered: true": "0100101101111",
+							"powered: false": "0100101100111"
+						}
+					}
+				},
+				"Daylight Detector": {
+					"power: 0": "0100101110000",
+					"power: 1": "0100101110001",
+					"power: 2": "0100101110010",
+					"power: 3": "0100101110011",
+					"power: 4": "0100101110100",
+					"power: 5": "0100101110101",
+					"power: 6": "0100101110110",
+					"power: 7": "0100101110111",
+					"power: 8": "0100101111000",
+					"power: 9": "0100101111001",
+					"power: 10": "0100101111010",
+					"power: 11": "0100101111011",
+					"power: 12": "0100101111100",
+					"power: 13": "0100101111101",
+					"power: 14": "0100101111110",
+					"power: 15": "0100101111111"
+				},
+				"Redstone Block": "0100110000000",
+				"Quartz Ore": "0100110010000",
+				"Hopper": {
+					"enabled: true": {
+						"facing: down": "0100110100000",
+						"facing: north": "0100110100010",
+						"facing: south": "0100110100011",
+						"facing: west": "0100110100100",
+						"facing: east": "0100110100101"
+					},
+					"enabled: false": {
+						"facing: down": "0100110101000",
+						"facing: north": "0100110101010",
+						"facing: south": "0100110101011",
+						"facing: west": "0100110101100",
+						"facing: east": "0100110101101"
+					}
+				},
+				"Quartz Block": {
+					"variant: default": "0100110110000",
+					"variant: chiseled": "0100110110001",
+					"variant: lines_y": "0100110110010",
+					"variant: lines_x": "0100110110011",
+					"variant: lines_z": "0100110110100"
+				},
+				"Quartz Stairs": {
+					"facing: north": {
+						"half: top": "0100111000111",
+						"half: bottom": "0100111000011"
+					},
+					"facing: south": {
+						"half: top": "0100111000110",
+						"half: bottom": "0100111000010"
+					},
+					"facing: west": {
+						"half: top": "0100111000101",
+						"half: bottom": "0100111000001"
+					},
+					"facing: east": {
+						"half: top": "0100111000100",
+						"half: bottom": "0100111000000"
+					}
+				},
+				"Activator Rail": {
+					"powered: true": {
+						"shape: north_south": "0100111011000",
+						"shape: east_west": "0100111011001",
+						"shape: ascending_east": "0100111011010",
+						"shape: ascending_west": "0100111011011",
+						"shape: ascending_north": "0100111011100",
+						"shape: ascending_south": "0100111011101"
+					},
+					"powered: false": {
+						"shape: north_south": "0100111010000",
+						"shape: east_west": "0100111010001",
+						"shape: ascending_east": "0100111010010",
+						"shape: ascending_west": "0100111010011",
+						"shape: ascending_north": "0100111010100",
+						"shape: ascending_south": "0100111010101"
+					}
+				},
+				"Dropper": {
+					"facing: down": {
+						"triggered: true": "0100111101000",
+						"triggered: false": "0100111100000"
+					},
+					"facing: up": {
+						"triggered: true": "0100111101001",
+						"triggered: false": "0100111100001"
+					},
+					"facing: north": {
+						"triggered: true": "0100111101010",
+						"triggered: false": "0100111100010"
+					},
+					"facing: south": {
+						"triggered: true": "0100111101011",
+						"triggered: false": "0100111100011"
+					},
+					"facing: west": {
+						"triggered: true": "0100111101100",
+						"triggered: false": "0100111100100"
+					},
+					"facing: east": {
+						"triggered: true": "0100111101101",
+						"triggered: false": "0100111100101"
+					}
+				},
+				"Stained Hardened Clay": {
+					"color: white": "0100111110000",
+					"color: orange": "0100111110001",
+					"color: magenta": "0100111110010",
+					"color: light_blue": "0100111110011",
+					"color: yellow": "0100111110100",
+					"color: lime": "0100111110101",
+					"color: pink": "0100111110110",
+					"color: gray": "0100111110111",
+					"color: silver": "0100111111000",
+					"color: cyan": "0100111111001",
+					"color: purple": "0100111111010",
+					"color: blue": "0100111111011",
+					"color: brown": "0100111111100",
+					"color: green": "0100111111101",
+					"color: red": "0100111111110",
+					"color: black": "0100111111111"
+				},
+				"Stained Glass Pane": {
+					"color: white": "0101000000000",
+					"color: orange": "0101000000001",
+					"color: magenta": "0101000000010",
+					"color: light_blue": "0101000000011",
+					"color: yellow": "0101000000100",
+					"color: lime": "0101000000101",
+					"color: pink": "0101000000110",
+					"color: gray": "0101000000111",
+					"color: silver": "0101000001000",
+					"color: cyan": "0101000001001",
+					"color: purple": "0101000001010",
+					"color: blue": "0101000001011",
+					"color: brown": "0101000001100",
+					"color: green": "0101000001101",
+					"color: red": "0101000001110",
+					"color: black": "0101000001111"
+				},
+				"Leaves2": {
+					"check_decay: true": {
+						"decayable: true": {
+							"variant: acacia": "0101000011000",
+							"variant: dark_oak": "0101000011001"
+						},
+						"decayable: false": {
+							"variant: acacia": "0101000011100",
+							"variant: dark_oak": "0101000011101"
+						}
+					},
+					"check_decay: false": {
+						"decayable: true": {
+							"variant: acacia": "0101000010000",
+							"variant: dark_oak": "0101000010001"
+						},
+						"decayable: false": {
+							"variant: acacia": "0101000010100",
+							"variant: dark_oak": "0101000010101"
+						}
+					}
+				},
+				"Log2": {
+					"axis: x": {
+						"variant: acacia": "0101000100100",
+						"variant: dark_oak": "0101000100101"
+					},
+					"axis: y": {
+						"variant: acacia": "0101000100000",
+						"variant: dark_oak": "0101000100001"
+					},
+					"axis: z": {
+						"variant: acacia": "0101000101000",
+						"variant: dark_oak": "0101000101001"
+					},
+					"axis: none": {
+						"variant: acacia": "0101000101100",
+						"variant: dark_oak": "0101000101101"
+					}
+				},
+				"Acacia Stairs": {
+					"facing: north": {
+						"half: top": "0101000110111",
+						"half: bottom": "0101000110011"
+					},
+					"facing: south": {
+						"half: top": "0101000110110",
+						"half: bottom": "0101000110010"
+					},
+					"facing: west": {
+						"half: top": "0101000110101",
+						"half: bottom": "0101000110001"
+					},
+					"facing: east": {
+						"half: top": "0101000110100",
+						"half: bottom": "0101000110000"
+					}
+				},
+				"Dark Oak Stairs": {
+					"facing: north": {
+						"half: top": "0101001000111",
+						"half: bottom": "0101001000011"
+					},
+					"facing: south": {
+						"half: top": "0101001000110",
+						"half: bottom": "0101001000010"
+					},
+					"facing: west": {
+						"half: top": "0101001000101",
+						"half: bottom": "0101001000001"
+					},
+					"facing: east": {
+						"half: top": "0101001000100",
+						"half: bottom": "0101001000000"
+					}
+				},
+				"Slime": "0101001010000",
+				"Barrier": "0101001100000",
+				"Iron Trapdoor": {
+					"facing: north": {
+						"half: top": {
+							"open: true": "0101001111100",
+							"open: false": "0101001111000"
+						},
+						"half: bottom": {
+							"open: true": "0101001110100",
+							"open: false": "0101001110000"
+						}
+					},
+					"facing: south": {
+						"half: top": {
+							"open: true": "0101001111101",
+							"open: false": "0101001111001"
+						},
+						"half: bottom": {
+							"open: true": "0101001110101",
+							"open: false": "0101001110001"
+						}
+					},
+					"facing: west": {
+						"half: top": {
+							"open: true": "0101001111110",
+							"open: false": "0101001111010"
+						},
+						"half: bottom": {
+							"open: true": "0101001110110",
+							"open: false": "0101001110010"
+						}
+					},
+					"facing: east": {
+						"half: top": {
+							"open: true": "0101001111111",
+							"open: false": "0101001111011"
+						},
+						"half: bottom": {
+							"open: true": "0101001110111",
+							"open: false": "0101001110011"
+						}
+					}
+				},
+				"Prismarine": {
+					"variant: prismarine": "0101010000000",
+					"variant: prismarine_bricks": "0101010000001",
+					"variant: dark_prismarine": "0101010000010"
+				},
+				"Sea Lantern": "0101010010000",
+				"Hay Block": {
+					"axis: x": "0101010100100",
+					"axis: y": "0101010100000",
+					"axis: z": "0101010101000"
+				},
+				"Carpet": {
+					"color: white": "0101010110000",
+					"color: orange": "0101010110001",
+					"color: magenta": "0101010110010",
+					"color: light_blue": "0101010110011",
+					"color: yellow": "0101010110100",
+					"color: lime": "0101010110101",
+					"color: pink": "0101010110110",
+					"color: gray": "0101010110111",
+					"color: silver": "0101010111000",
+					"color: cyan": "0101010111001",
+					"color: purple": "0101010111010",
+					"color: blue": "0101010111011",
+					"color: brown": "0101010111100",
+					"color: green": "0101010111101",
+					"color: red": "0101010111110",
+					"color: black": "0101010111111"
+				},
+				"Hardened Clay": "0101011000000",
+				"Coal Block": "0101011010000",
+				"Packed Ice": "0101011100000",
+				"Double Plant": {
+					"facing: north": {
+						"half: upper": "0101011111010",
+						"half: lower": {
+							"variant: sunflower": "0101011110000",
+							"variant: syringa": "0101011110001",
+							"variant: double_grass": "0101011110010",
+							"variant: double_fern": "0101011110011",
+							"variant: double_rose": "0101011110100",
+							"variant: paeonia": "0101011110101"
+						}
+					},
+					"facing: south": {
+						"half: upper": "0101011111000",
+						"half: lower": {
+							"variant: sunflower": "0101011110000",
+							"variant: syringa": "0101011110001",
+							"variant: double_grass": "0101011110010",
+							"variant: double_fern": "0101011110011",
+							"variant: double_rose": "0101011110100",
+							"variant: paeonia": "0101011110101"
+						}
+					},
+					"facing: west": {
+						"half: upper": "0101011111001",
+						"half: lower": {
+							"variant: sunflower": "0101011110000",
+							"variant: syringa": "0101011110001",
+							"variant: double_grass": "0101011110010",
+							"variant: double_fern": "0101011110011",
+							"variant: double_rose": "0101011110100",
+							"variant: paeonia": "0101011110101"
+						}
+					},
+					"facing: east": {
+						"half: upper": "0101011111011",
+						"half: lower": {
+							"variant: sunflower": "0101011110000",
+							"variant: syringa": "0101011110001",
+							"variant: double_grass": "0101011110010",
+							"variant: double_fern": "0101011110011",
+							"variant: double_rose": "0101011110100",
+							"variant: paeonia": "0101011110101"
+						}
+					}
+				},
+				"Standing Banner": {
+					"rotation: 0": "0101100000000",
+					"rotation: 1": "0101100000001",
+					"rotation: 2": "0101100000010",
+					"rotation: 3": "0101100000011",
+					"rotation: 4": "0101100000100",
+					"rotation: 5": "0101100000101",
+					"rotation: 6": "0101100000110",
+					"rotation: 7": "0101100000111",
+					"rotation: 8": "0101100001000",
+					"rotation: 9": "0101100001001",
+					"rotation: 10": "0101100001010",
+					"rotation: 11": "0101100001011",
+					"rotation: 12": "0101100001100",
+					"rotation: 13": "0101100001101",
+					"rotation: 14": "0101100001110",
+					"rotation: 15": "0101100001111"
+				},
+				"Wall Banner": {
+					"facing: north": "0101100010010",
+					"facing: south": "0101100010011",
+					"facing: west": "0101100010100",
+					"facing: east": "0101100010101"
+				},
+				"Daylight Detector Inverted": {
+					"power: 0": "0101100100000",
+					"power: 1": "0101100100001",
+					"power: 2": "0101100100010",
+					"power: 3": "0101100100011",
+					"power: 4": "0101100100100",
+					"power: 5": "0101100100101",
+					"power: 6": "0101100100110",
+					"power: 7": "0101100100111",
+					"power: 8": "0101100101000",
+					"power: 9": "0101100101001",
+					"power: 10": "0101100101010",
+					"power: 11": "0101100101011",
+					"power: 12": "0101100101100",
+					"power: 13": "0101100101101",
+					"power: 14": "0101100101110",
+					"power: 15": "0101100101111"
+				},
+				"Red Sandstone": {
+					"type: red_sandstone": "0101100110000",
+					"type: chiseled_red_sandstone": "0101100110001",
+					"type: smooth_red_sandstone": "0101100110010"
+				},
+				"Red Sandstone Stairs": {
+					"facing: north": {
+						"half: top": "0101101000111",
+						"half: bottom": "0101101000011"
+					},
+					"facing: south": {
+						"half: top": "0101101000110",
+						"half: bottom": "0101101000010"
+					},
+					"facing: west": {
+						"half: top": "0101101000101",
+						"half: bottom": "0101101000001"
+					},
+					"facing: east": {
+						"half: top": "0101101000100",
+						"half: bottom": "0101101000000"
+					}
+				},
+				"Double Stone Slab2": {
+					"seamless: true": "0101101011000",
+					"seamless: false": "0101101010000"
+				},
+				"Stone Slab2": {
+					"half: top": "0101101101000",
+					"half: bottom": "0101101100000"
+				},
+				"Spruce Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": "0101101111110",
+							"powered: false": "0101101110110"
+						},
+						"open: false": {
+							"powered: true": "0101101111010",
+							"powered: false": "0101101110010"
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": "0101101111100",
+							"powered: false": "0101101110100"
+						},
+						"open: false": {
+							"powered: true": "0101101111000",
+							"powered: false": "0101101110000"
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": "0101101111101",
+							"powered: false": "0101101110101"
+						},
+						"open: false": {
+							"powered: true": "0101101111001",
+							"powered: false": "0101101110001"
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": "0101101111111",
+							"powered: false": "0101101110111"
+						},
+						"open: false": {
+							"powered: true": "0101101111011",
+							"powered: false": "0101101110011"
+						}
+					}
+				},
+				"Birch Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": "0101110001110",
+							"powered: false": "0101110000110"
+						},
+						"open: false": {
+							"powered: true": "0101110001010",
+							"powered: false": "0101110000010"
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": "0101110001100",
+							"powered: false": "0101110000100"
+						},
+						"open: false": {
+							"powered: true": "0101110001000",
+							"powered: false": "0101110000000"
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": "0101110001101",
+							"powered: false": "0101110000101"
+						},
+						"open: false": {
+							"powered: true": "0101110001001",
+							"powered: false": "0101110000001"
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": "0101110001111",
+							"powered: false": "0101110000111"
+						},
+						"open: false": {
+							"powered: true": "0101110001011",
+							"powered: false": "0101110000011"
+						}
+					}
+				},
+				"Jungle Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": "0101110011110",
+							"powered: false": "0101110010110"
+						},
+						"open: false": {
+							"powered: true": "0101110011010",
+							"powered: false": "0101110010010"
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": "0101110011100",
+							"powered: false": "0101110010100"
+						},
+						"open: false": {
+							"powered: true": "0101110011000",
+							"powered: false": "0101110010000"
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": "0101110011101",
+							"powered: false": "0101110010101"
+						},
+						"open: false": {
+							"powered: true": "0101110011001",
+							"powered: false": "0101110010001"
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": "0101110011111",
+							"powered: false": "0101110010111"
+						},
+						"open: false": {
+							"powered: true": "0101110011011",
+							"powered: false": "0101110010011"
+						}
+					}
+				},
+				"Dark Oak Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": "0101110101110",
+							"powered: false": "0101110100110"
+						},
+						"open: false": {
+							"powered: true": "0101110101010",
+							"powered: false": "0101110100010"
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": "0101110101100",
+							"powered: false": "0101110100100"
+						},
+						"open: false": {
+							"powered: true": "0101110101000",
+							"powered: false": "0101110100000"
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": "0101110101101",
+							"powered: false": "0101110100101"
+						},
+						"open: false": {
+							"powered: true": "0101110101001",
+							"powered: false": "0101110100001"
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": "0101110101111",
+							"powered: false": "0101110100111"
+						},
+						"open: false": {
+							"powered: true": "0101110101011",
+							"powered: false": "0101110100011"
+						}
+					}
+				},
+				"Acacia Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": "0101110111110",
+							"powered: false": "0101110110110"
+						},
+						"open: false": {
+							"powered: true": "0101110111010",
+							"powered: false": "0101110110010"
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": "0101110111100",
+							"powered: false": "0101110110100"
+						},
+						"open: false": {
+							"powered: true": "0101110111000",
+							"powered: false": "0101110110000"
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": "0101110111101",
+							"powered: false": "0101110110101"
+						},
+						"open: false": {
+							"powered: true": "0101110111001",
+							"powered: false": "0101110110001"
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": "0101110111111",
+							"powered: false": "0101110110111"
+						},
+						"open: false": {
+							"powered: true": "0101110111011",
+							"powered: false": "0101110110011"
+						}
+					}
+				},
+				"Spruce Fence": "0101111000000",
+				"Birch Fence": "0101111010000",
+				"Jungle Fence": "0101111100000",
+				"Dark Oak Fence": "0101111110000",
+				"Acacia Fence": "0110000000000",
+				"Spruce Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000011010",
+								"powered: false": "0110000011000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000011011",
+								"powered: false": "0110000011001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000010111",
+							"open: false": "0110000010011"
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000011010",
+								"powered: false": "0110000011000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000011011",
+								"powered: false": "0110000011001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000010101",
+							"open: false": "0110000010001"
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000011010",
+								"powered: false": "0110000011000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000011011",
+								"powered: false": "0110000011001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000010110",
+							"open: false": "0110000010010"
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000011010",
+								"powered: false": "0110000011000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000011011",
+								"powered: false": "0110000011001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000010100",
+							"open: false": "0110000010000"
+						}
+					}
+				},
+				"Birch Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000101010",
+								"powered: false": "0110000101000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000101011",
+								"powered: false": "0110000101001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000100111",
+							"open: false": "0110000100011"
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000101010",
+								"powered: false": "0110000101000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000101011",
+								"powered: false": "0110000101001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000100101",
+							"open: false": "0110000100001"
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000101010",
+								"powered: false": "0110000101000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000101011",
+								"powered: false": "0110000101001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000100110",
+							"open: false": "0110000100010"
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000101010",
+								"powered: false": "0110000101000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000101011",
+								"powered: false": "0110000101001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000100100",
+							"open: false": "0110000100000"
+						}
+					}
+				},
+				"Jungle Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000111010",
+								"powered: false": "0110000111000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000111011",
+								"powered: false": "0110000111001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000110111",
+							"open: false": "0110000110011"
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000111010",
+								"powered: false": "0110000111000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000111011",
+								"powered: false": "0110000111001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000110101",
+							"open: false": "0110000110001"
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000111010",
+								"powered: false": "0110000111000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000111011",
+								"powered: false": "0110000111001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000110110",
+							"open: false": "0110000110010"
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110000111010",
+								"powered: false": "0110000111000"
+							},
+							"hinge: right": {
+								"powered: true": "0110000111011",
+								"powered: false": "0110000111001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110000110100",
+							"open: false": "0110000110000"
+						}
+					}
+				},
+				"Acacia Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110001001010",
+								"powered: false": "0110001001000"
+							},
+							"hinge: right": {
+								"powered: true": "0110001001011",
+								"powered: false": "0110001001001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110001000111",
+							"open: false": "0110001000011"
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110001001010",
+								"powered: false": "0110001001000"
+							},
+							"hinge: right": {
+								"powered: true": "0110001001011",
+								"powered: false": "0110001001001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110001000101",
+							"open: false": "0110001000001"
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110001001010",
+								"powered: false": "0110001001000"
+							},
+							"hinge: right": {
+								"powered: true": "0110001001011",
+								"powered: false": "0110001001001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110001000110",
+							"open: false": "0110001000010"
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110001001010",
+								"powered: false": "0110001001000"
+							},
+							"hinge: right": {
+								"powered: true": "0110001001011",
+								"powered: false": "0110001001001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110001000100",
+							"open: false": "0110001000000"
+						}
+					}
+				},
+				"Dark Oak Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110001011010",
+								"powered: false": "0110001011000"
+							},
+							"hinge: right": {
+								"powered: true": "0110001011011",
+								"powered: false": "0110001011001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110001010111",
+							"open: false": "0110001010011"
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110001011010",
+								"powered: false": "0110001011000"
+							},
+							"hinge: right": {
+								"powered: true": "0110001011011",
+								"powered: false": "0110001011001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110001010101",
+							"open: false": "0110001010001"
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110001011010",
+								"powered: false": "0110001011000"
+							},
+							"hinge: right": {
+								"powered: true": "0110001011011",
+								"powered: false": "0110001011001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110001010110",
+							"open: false": "0110001010010"
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": "0110001011010",
+								"powered: false": "0110001011000"
+							},
+							"hinge: right": {
+								"powered: true": "0110001011011",
+								"powered: false": "0110001011001"
+							}
+						},
+						"half: lower": {
+							"open: true": "0110001010100",
+							"open: false": "0110001010000"
+						}
+					}
+				},
+				"End Rod": {
+					"facing: down": "0110001100000",
+					"facing: up": "0110001100001",
+					"facing: north": "0110001100010",
+					"facing: south": "0110001100011",
+					"facing: west": "0110001100100",
+					"facing: east": "0110001100101"
+				},
+				"Chorus Plant": "0110001110000",
+				"Chorus Flower": {
+					"age: 0": "0110010000000",
+					"age: 1": "0110010000001",
+					"age: 2": "0110010000010",
+					"age: 3": "0110010000011",
+					"age: 4": "0110010000100",
+					"age: 5": "0110010000101"
+				},
+				"Purpur Block": "0110010010000",
+				"Purpur Pillar": {
+					"axis: x": "0110010100100",
+					"axis: y": "0110010100000",
+					"axis: z": "0110010101000"
+				},
+				"Purpur Stairs": {
+					"facing: north": {
+						"half: top": "0110010110111",
+						"half: bottom": "0110010110011"
+					},
+					"facing: south": {
+						"half: top": "0110010110110",
+						"half: bottom": "0110010110010"
+					},
+					"facing: west": {
+						"half: top": "0110010110101",
+						"half: bottom": "0110010110001"
+					},
+					"facing: east": {
+						"half: top": "0110010110100",
+						"half: bottom": "0110010110000"
+					}
+				},
+				"Purpur Double Slab": "0110011000000",
+				"Purpur Slab": {
+					"half: top": "0110011011000",
+					"half: bottom": "0110011010000"
+				},
+				"End Bricks": "0110011100000",
+				"Beetroots": {
+					"age: 0": "0110011110000",
+					"age: 1": "0110011110001",
+					"age: 2": "0110011110010",
+					"age: 3": "0110011110011"
+				},
+				"Grass Path": "0110100000000",
+				"End Gateway": "0110100010000",
+				"Repeating Command Block": {
+					"conditional: true": {
+						"facing: down": "0110100101000",
+						"facing: up": "0110100101001",
+						"facing: north": "0110100101010",
+						"facing: south": "0110100101011",
+						"facing: west": "0110100101100",
+						"facing: east": "0110100101101"
+					},
+					"conditional: false": {
+						"facing: down": "0110100100000",
+						"facing: up": "0110100100001",
+						"facing: north": "0110100100010",
+						"facing: south": "0110100100011",
+						"facing: west": "0110100100100",
+						"facing: east": "0110100100101"
+					}
+				},
+				"Chain Command Block": {
+					"conditional: true": {
+						"facing: down": "0110100111000",
+						"facing: up": "0110100111001",
+						"facing: north": "0110100111010",
+						"facing: south": "0110100111011",
+						"facing: west": "0110100111100",
+						"facing: east": "0110100111101"
+					},
+					"conditional: false": {
+						"facing: down": "0110100110000",
+						"facing: up": "0110100110001",
+						"facing: north": "0110100110010",
+						"facing: south": "0110100110011",
+						"facing: west": "0110100110100",
+						"facing: east": "0110100110101"
+					}
+				},
+				"Frosted Ice": {
+					"age: 0": "0110101000000",
+					"age: 1": "0110101000001",
+					"age: 2": "0110101000010",
+					"age: 3": "0110101000011"
+				},
+				"Magma": "0110101010000",
+				"Nether Wart Block": "0110101100000",
+				"Red Nether Brick": "0110101110000",
+				"Bone Block": {
+					"axis: x": "0110110000100",
+					"axis: y": "0110110000000",
+					"axis: z": "0110110001000"
+				},
+				"Structure Void": "0110110010000",
+				"Observer": {
+					"facing: down": {
+						"powered: true": "0110110101000",
+						"powered: false": "0110110100000"
+					},
+					"facing: up": {
+						"powered: true": "0110110101001",
+						"powered: false": "0110110100001"
+					},
+					"facing: north": {
+						"powered: true": "0110110101010",
+						"powered: false": "0110110100010"
+					},
+					"facing: south": {
+						"powered: true": "0110110101011",
+						"powered: false": "0110110100011"
+					},
+					"facing: west": {
+						"powered: true": "0110110101100",
+						"powered: false": "0110110100100"
+					},
+					"facing: east": {
+						"powered: true": "0110110101101",
+						"powered: false": "0110110100101"
+					}
+				},
+				"White Shulker Box": {
+					"facing: down": "0110110110000",
+					"facing: up": "0110110110001",
+					"facing: north": "0110110110010",
+					"facing: south": "0110110110011",
+					"facing: west": "0110110110100",
+					"facing: east": "0110110110101"
+				},
+				"Orange Shulker Box": {
+					"facing: down": "0110111000000",
+					"facing: up": "0110111000001",
+					"facing: north": "0110111000010",
+					"facing: south": "0110111000011",
+					"facing: west": "0110111000100",
+					"facing: east": "0110111000101"
+				},
+				"Magenta Shulker Box": {
+					"facing: down": "0110111010000",
+					"facing: up": "0110111010001",
+					"facing: north": "0110111010010",
+					"facing: south": "0110111010011",
+					"facing: west": "0110111010100",
+					"facing: east": "0110111010101"
+				},
+				"Light Blue Shulker Box": {
+					"facing: down": "0110111100000",
+					"facing: up": "0110111100001",
+					"facing: north": "0110111100010",
+					"facing: south": "0110111100011",
+					"facing: west": "0110111100100",
+					"facing: east": "0110111100101"
+				},
+				"Yellow Shulker Box": {
+					"facing: down": "0110111110000",
+					"facing: up": "0110111110001",
+					"facing: north": "0110111110010",
+					"facing: south": "0110111110011",
+					"facing: west": "0110111110100",
+					"facing: east": "0110111110101"
+				},
+				"Lime Shulker Box": {
+					"facing: down": "0111000000000",
+					"facing: up": "0111000000001",
+					"facing: north": "0111000000010",
+					"facing: south": "0111000000011",
+					"facing: west": "0111000000100",
+					"facing: east": "0111000000101"
+				},
+				"Pink Shulker Box": {
+					"facing: down": "0111000010000",
+					"facing: up": "0111000010001",
+					"facing: north": "0111000010010",
+					"facing: south": "0111000010011",
+					"facing: west": "0111000010100",
+					"facing: east": "0111000010101"
+				},
+				"Gray Shulker Box": {
+					"facing: down": "0111000100000",
+					"facing: up": "0111000100001",
+					"facing: north": "0111000100010",
+					"facing: south": "0111000100011",
+					"facing: west": "0111000100100",
+					"facing: east": "0111000100101"
+				},
+				"Silver Shulker Box": {
+					"facing: down": "0111000110000",
+					"facing: up": "0111000110001",
+					"facing: north": "0111000110010",
+					"facing: south": "0111000110011",
+					"facing: west": "0111000110100",
+					"facing: east": "0111000110101"
+				},
+				"Cyan Shulker Box": {
+					"facing: down": "0111001000000",
+					"facing: up": "0111001000001",
+					"facing: north": "0111001000010",
+					"facing: south": "0111001000011",
+					"facing: west": "0111001000100",
+					"facing: east": "0111001000101"
+				},
+				"Purple Shulker Box": {
+					"facing: down": "0111001010000",
+					"facing: up": "0111001010001",
+					"facing: north": "0111001010010",
+					"facing: south": "0111001010011",
+					"facing: west": "0111001010100",
+					"facing: east": "0111001010101"
+				},
+				"Blue Shulker Box": {
+					"facing: down": "0111001100000",
+					"facing: up": "0111001100001",
+					"facing: north": "0111001100010",
+					"facing: south": "0111001100011",
+					"facing: west": "0111001100100",
+					"facing: east": "0111001100101"
+				},
+				"Brown Shulker Box": {
+					"facing: down": "0111001110000",
+					"facing: up": "0111001110001",
+					"facing: north": "0111001110010",
+					"facing: south": "0111001110011",
+					"facing: west": "0111001110100",
+					"facing: east": "0111001110101"
+				},
+				"Green Shulker Box": {
+					"facing: down": "0111010000000",
+					"facing: up": "0111010000001",
+					"facing: north": "0111010000010",
+					"facing: south": "0111010000011",
+					"facing: west": "0111010000100",
+					"facing: east": "0111010000101"
+				},
+				"Red Shulker Box": {
+					"facing: down": "0111010010000",
+					"facing: up": "0111010010001",
+					"facing: north": "0111010010010",
+					"facing: south": "0111010010011",
+					"facing: west": "0111010010100",
+					"facing: east": "0111010010101"
+				},
+				"Black Shulker Box": {
+					"facing: down": "0111010100000",
+					"facing: up": "0111010100001",
+					"facing: north": "0111010100010",
+					"facing: south": "0111010100011",
+					"facing: west": "0111010100100",
+					"facing: east": "0111010100101"
+				},
+				"White Glazed Terracotta": {
+					"facing: north": "0111010110010",
+					"facing: south": "0111010110000",
+					"facing: west": "0111010110001",
+					"facing: east": "0111010110011"
+				},
+				"Orange Glazed Terracotta": {
+					"facing: north": "0111011000010",
+					"facing: south": "0111011000000",
+					"facing: west": "0111011000001",
+					"facing: east": "0111011000011"
+				},
+				"Magenta Glazed Terracotta": {
+					"facing: north": "0111011010010",
+					"facing: south": "0111011010000",
+					"facing: west": "0111011010001",
+					"facing: east": "0111011010011"
+				},
+				"Light Blue Glazed Terracotta": {
+					"facing: north": "0111011100010",
+					"facing: south": "0111011100000",
+					"facing: west": "0111011100001",
+					"facing: east": "0111011100011"
+				},
+				"Yellow Glazed Terracotta": {
+					"facing: north": "0111011110010",
+					"facing: south": "0111011110000",
+					"facing: west": "0111011110001",
+					"facing: east": "0111011110011"
+				},
+				"Lime Glazed Terracotta": {
+					"facing: north": "0111100000010",
+					"facing: south": "0111100000000",
+					"facing: west": "0111100000001",
+					"facing: east": "0111100000011"
+				},
+				"Pink Glazed Terracotta": {
+					"facing: north": "0111100010010",
+					"facing: south": "0111100010000",
+					"facing: west": "0111100010001",
+					"facing: east": "0111100010011"
+				},
+				"Gray Glazed Terracotta": {
+					"facing: north": "0111100100010",
+					"facing: south": "0111100100000",
+					"facing: west": "0111100100001",
+					"facing: east": "0111100100011"
+				},
+				"Silver Glazed Terracotta": {
+					"facing: north": "0111100110010",
+					"facing: south": "0111100110000",
+					"facing: west": "0111100110001",
+					"facing: east": "0111100110011"
+				},
+				"Cyan Glazed Terracotta": {
+					"facing: north": "0111101000010",
+					"facing: south": "0111101000000",
+					"facing: west": "0111101000001",
+					"facing: east": "0111101000011"
+				},
+				"Purple Glazed Terracotta": {
+					"facing: north": "0111101010010",
+					"facing: south": "0111101010000",
+					"facing: west": "0111101010001",
+					"facing: east": "0111101010011"
+				},
+				"Blue Glazed Terracotta": {
+					"facing: north": "0111101100010",
+					"facing: south": "0111101100000",
+					"facing: west": "0111101100001",
+					"facing: east": "0111101100011"
+				},
+				"Brown Glazed Terracotta": {
+					"facing: north": "0111101110010",
+					"facing: south": "0111101110000",
+					"facing: west": "0111101110001",
+					"facing: east": "0111101110011"
+				},
+				"Green Glazed Terracotta": {
+					"facing: north": "0111110000010",
+					"facing: south": "0111110000000",
+					"facing: west": "0111110000001",
+					"facing: east": "0111110000011"
+				},
+				"Red Glazed Terracotta": {
+					"facing: north": "0111110010010",
+					"facing: south": "0111110010000",
+					"facing: west": "0111110010001",
+					"facing: east": "0111110010011"
+				},
+				"Black Glazed Terracotta": {
+					"facing: north": "0111110100010",
+					"facing: south": "0111110100000",
+					"facing: west": "0111110100001",
+					"facing: east": "0111110100011"
+				},
+				"Concrete": {
+					"color: white": "0111110110000",
+					"color: orange": "0111110110001",
+					"color: magenta": "0111110110010",
+					"color: light_blue": "0111110110011",
+					"color: yellow": "0111110110100",
+					"color: lime": "0111110110101",
+					"color: pink": "0111110110110",
+					"color: gray": "0111110110111",
+					"color: silver": "0111110111000",
+					"color: cyan": "0111110111001",
+					"color: purple": "0111110111010",
+					"color: blue": "0111110111011",
+					"color: brown": "0111110111100",
+					"color: green": "0111110111101",
+					"color: red": "0111110111110",
+					"color: black": "0111110111111"
+				},
+				"Concrete Powder": {
+					"color: white": "0111111000000",
+					"color: orange": "0111111000001",
+					"color: magenta": "0111111000010",
+					"color: light_blue": "0111111000011",
+					"color: yellow": "0111111000100",
+					"color: lime": "0111111000101",
+					"color: pink": "0111111000110",
+					"color: gray": "0111111000111",
+					"color: silver": "0111111001000",
+					"color: cyan": "0111111001001",
+					"color: purple": "0111111001010",
+					"color: blue": "0111111001011",
+					"color: brown": "0111111001100",
+					"color: green": "0111111001101",
+					"color: red": "0111111001110",
+					"color: black": "0111111001111"
+				},
+				"Structure Block": {
+					"mode: SAVE": "0111111110000",
+					"mode: LOAD": "0111111110001",
+					"mode: CORNER": "0111111110010",
+					"mode: DATA": "0111111110011"
+				}
+			},
+			"default_value": "undefined"
+		},
+		"int_rep": {
+			"property_name": "Integer representation",
+			"property_description": "id*16+meta",
+			"relative_gradient": true,
+			"entries": {
+				"Air": 0,
+				"Stone": {
+					"variant: stone": 16,
+					"variant: granite": 17,
+					"variant: smooth_granite": 18,
+					"variant: diorite": 19,
+					"variant: smooth_diorite": 20,
+					"variant: andesite": 21,
+					"variant: smooth_andesite": 22
+				},
+				"Grass": 32,
+				"Dirt": {
+					"variant: dirt": 48,
+					"variant: coarse_dirt": 49,
+					"variant: podzol": 50
+				},
+				"Cobblestone": 64,
+				"Planks": {
+					"variant: oak": 80,
+					"variant: spruce": 81,
+					"variant: birch": 82,
+					"variant: jungle": 83,
+					"variant: acacia": 84,
+					"variant: dark_oak": 85
+				},
+				"Sapling": {
+					"stage: 0": {
+						"type: oak": 96,
+						"type: spruce": 97,
+						"type: birch": 98,
+						"type: jungle": 99,
+						"type: acacia": 100,
+						"type: dark_oak": 101
+					},
+					"stage: 1": {
+						"type: oak": 104,
+						"type: spruce": 105,
+						"type: birch": 106,
+						"type: jungle": 107,
+						"type: acacia": 108,
+						"type: dark_oak": 109
+					}
+				},
+				"Bedrock": 112,
+				"Flowing Water": {
+					"level: 0": 128,
+					"level: 1": 129,
+					"level: 2": 130,
+					"level: 3": 131,
+					"level: 4": 132,
+					"level: 5": 133,
+					"level: 6": 134,
+					"level: 7": 135,
+					"level: 8": 136,
+					"level: 9": 137,
+					"level: 10": 138,
+					"level: 11": 139,
+					"level: 12": 140,
+					"level: 13": 141,
+					"level: 14": 142,
+					"level: 15": 143
+				},
+				"Water": {
+					"level: 0": 144,
+					"level: 1": 145,
+					"level: 2": 146,
+					"level: 3": 147,
+					"level: 4": 148,
+					"level: 5": 149,
+					"level: 6": 150,
+					"level: 7": 151,
+					"level: 8": 152,
+					"level: 9": 153,
+					"level: 10": 154,
+					"level: 11": 155,
+					"level: 12": 156,
+					"level: 13": 157,
+					"level: 14": 158,
+					"level: 15": 159
+				},
+				"Flowing Lava": {
+					"level: 0": 160,
+					"level: 1": 161,
+					"level: 2": 162,
+					"level: 3": 163,
+					"level: 4": 164,
+					"level: 5": 165,
+					"level: 6": 166,
+					"level: 7": 167,
+					"level: 8": 168,
+					"level: 9": 169,
+					"level: 10": 170,
+					"level: 11": 171,
+					"level: 12": 172,
+					"level: 13": 173,
+					"level: 14": 174,
+					"level: 15": 175
+				},
+				"Lava": {
+					"level: 0": 176,
+					"level: 1": 177,
+					"level: 2": 178,
+					"level: 3": 179,
+					"level: 4": 180,
+					"level: 5": 181,
+					"level: 6": 182,
+					"level: 7": 183,
+					"level: 8": 184,
+					"level: 9": 185,
+					"level: 10": 186,
+					"level: 11": 187,
+					"level: 12": 188,
+					"level: 13": 189,
+					"level: 14": 190,
+					"level: 15": 191
+				},
+				"Sand": {
+					"variant: sand": 192,
+					"variant: red_sand": 193
+				},
+				"Gravel": 208,
+				"Gold Ore": 224,
+				"Iron Ore": 240,
+				"Coal Ore": 256,
+				"Log": {
+					"axis: x": {
+						"variant: oak": 276,
+						"variant: spruce": 277,
+						"variant: birch": 278,
+						"variant: jungle": 279
+					},
+					"axis: y": {
+						"variant: oak": 272,
+						"variant: spruce": 273,
+						"variant: birch": 274,
+						"variant: jungle": 275
+					},
+					"axis: z": {
+						"variant: oak": 280,
+						"variant: spruce": 281,
+						"variant: birch": 282,
+						"variant: jungle": 283
+					},
+					"axis: none": {
+						"variant: oak": 284,
+						"variant: spruce": 285,
+						"variant: birch": 286,
+						"variant: jungle": 287
+					}
+				},
+				"Leaves": {
+					"check_decay: true": {
+						"decayable: true": {
+							"variant: oak": 296,
+							"variant: spruce": 297,
+							"variant: birch": 298,
+							"variant: jungle": 299
+						},
+						"decayable: false": {
+							"variant: oak": 300,
+							"variant: spruce": 301,
+							"variant: birch": 302,
+							"variant: jungle": 303
+						}
+					},
+					"check_decay: false": {
+						"decayable: true": {
+							"variant: oak": 288,
+							"variant: spruce": 289,
+							"variant: birch": 290,
+							"variant: jungle": 291
+						},
+						"decayable: false": {
+							"variant: oak": 292,
+							"variant: spruce": 293,
+							"variant: birch": 294,
+							"variant: jungle": 295
+						}
+					}
+				},
+				"Sponge": {
+					"wet: true": 305,
+					"wet: false": 304
+				},
+				"Glass": 320,
+				"Lapis Ore": 336,
+				"Lapis Block": 352,
+				"Dispenser": {
+					"facing: down": {
+						"triggered: true": 376,
+						"triggered: false": 368
+					},
+					"facing: up": {
+						"triggered: true": 377,
+						"triggered: false": 369
+					},
+					"facing: north": {
+						"triggered: true": 378,
+						"triggered: false": 370
+					},
+					"facing: south": {
+						"triggered: true": 379,
+						"triggered: false": 371
+					},
+					"facing: west": {
+						"triggered: true": 380,
+						"triggered: false": 372
+					},
+					"facing: east": {
+						"triggered: true": 381,
+						"triggered: false": 373
+					}
+				},
+				"Sandstone": {
+					"type: sandstone": 384,
+					"type: chiseled_sandstone": 385,
+					"type: smooth_sandstone": 386
+				},
+				"Noteblock": 400,
+				"Bed": {
+					"facing: north": {
+						"occupied: true": {
+							"part: head": 430,
+							"part: foot": 418
+						},
+						"occupied: false": {
+							"part: head": 426,
+							"part: foot": 418
+						}
+					},
+					"facing: south": {
+						"occupied: true": {
+							"part: head": 428,
+							"part: foot": 416
+						},
+						"occupied: false": {
+							"part: head": 424,
+							"part: foot": 416
+						}
+					},
+					"facing: west": {
+						"occupied: true": {
+							"part: head": 429,
+							"part: foot": 417
+						},
+						"occupied: false": {
+							"part: head": 425,
+							"part: foot": 417
+						}
+					},
+					"facing: east": {
+						"occupied: true": {
+							"part: head": 431,
+							"part: foot": 419
+						},
+						"occupied: false": {
+							"part: head": 427,
+							"part: foot": 419
+						}
+					}
+				},
+				"Golden Rail": {
+					"powered: true": {
+						"shape: north_south": 440,
+						"shape: east_west": 441,
+						"shape: ascending_east": 442,
+						"shape: ascending_west": 443,
+						"shape: ascending_north": 444,
+						"shape: ascending_south": 445
+					},
+					"powered: false": {
+						"shape: north_south": 432,
+						"shape: east_west": 433,
+						"shape: ascending_east": 434,
+						"shape: ascending_west": 435,
+						"shape: ascending_north": 436,
+						"shape: ascending_south": 437
+					}
+				},
+				"Detector Rail": {
+					"powered: true": {
+						"shape: north_south": 456,
+						"shape: east_west": 457,
+						"shape: ascending_east": 458,
+						"shape: ascending_west": 459,
+						"shape: ascending_north": 460,
+						"shape: ascending_south": 461
+					},
+					"powered: false": {
+						"shape: north_south": 448,
+						"shape: east_west": 449,
+						"shape: ascending_east": 450,
+						"shape: ascending_west": 451,
+						"shape: ascending_north": 452,
+						"shape: ascending_south": 453
+					}
+				},
+				"Sticky Piston": {
+					"extended: true": {
+						"facing: down": 472,
+						"facing: up": 473,
+						"facing: north": 474,
+						"facing: south": 475,
+						"facing: west": 476,
+						"facing: east": 477
+					},
+					"extended: false": {
+						"facing: down": 464,
+						"facing: up": 465,
+						"facing: north": 466,
+						"facing: south": 467,
+						"facing: west": 468,
+						"facing: east": 469
+					}
+				},
+				"Web": 480,
+				"Tallgrass": {
+					"type: dead_bush": 496,
+					"type: tall_grass": 497,
+					"type: fern": 498
+				},
+				"Deadbush": 512,
+				"Piston": {
+					"extended: true": {
+						"facing: down": 536,
+						"facing: up": 537,
+						"facing: north": 538,
+						"facing: south": 539,
+						"facing: west": 540,
+						"facing: east": 541
+					},
+					"extended: false": {
+						"facing: down": 528,
+						"facing: up": 529,
+						"facing: north": 530,
+						"facing: south": 531,
+						"facing: west": 532,
+						"facing: east": 533
+					}
+				},
+				"Piston Head": {
+					"facing: down": {
+						"type: normal": 544,
+						"type: sticky": 552
+					},
+					"facing: up": {
+						"type: normal": 545,
+						"type: sticky": 553
+					},
+					"facing: north": {
+						"type: normal": 546,
+						"type: sticky": 554
+					},
+					"facing: south": {
+						"type: normal": 547,
+						"type: sticky": 555
+					},
+					"facing: west": {
+						"type: normal": 548,
+						"type: sticky": 556
+					},
+					"facing: east": {
+						"type: normal": 549,
+						"type: sticky": 557
+					}
+				},
+				"Wool": {
+					"color: white": 560,
+					"color: orange": 561,
+					"color: magenta": 562,
+					"color: light_blue": 563,
+					"color: yellow": 564,
+					"color: lime": 565,
+					"color: pink": 566,
+					"color: gray": 567,
+					"color: silver": 568,
+					"color: cyan": 569,
+					"color: purple": 570,
+					"color: blue": 571,
+					"color: brown": 572,
+					"color: green": 573,
+					"color: red": 574,
+					"color: black": 575
+				},
+				"Piston Extension": {
+					"facing: down": {
+						"type: normal": 576,
+						"type: sticky": 584
+					},
+					"facing: up": {
+						"type: normal": 577,
+						"type: sticky": 585
+					},
+					"facing: north": {
+						"type: normal": 578,
+						"type: sticky": 586
+					},
+					"facing: south": {
+						"type: normal": 579,
+						"type: sticky": 587
+					},
+					"facing: west": {
+						"type: normal": 580,
+						"type: sticky": 588
+					},
+					"facing: east": {
+						"type: normal": 581,
+						"type: sticky": 589
+					}
+				},
+				"Yellow Flower": 592,
+				"Red Flower": {
+					"type: poppy": 608,
+					"type: blue_orchid": 609,
+					"type: allium": 610,
+					"type: houstonia": 611,
+					"type: red_tulip": 612,
+					"type: orange_tulip": 613,
+					"type: white_tulip": 614,
+					"type: pink_tulip": 615,
+					"type: oxeye_daisy": 616
+				},
+				"Brown Mushroom": 624,
+				"Red Mushroom": 640,
+				"Gold Block": 656,
+				"Iron Block": 672,
+				"Double Stone Slab": {
+					"seamless: true": {
+						"variant: stone": 696,
+						"variant: sandstone": 697,
+						"variant: wood_old": 698,
+						"variant: cobblestone": 699,
+						"variant: brick": 700,
+						"variant: stone_brick": 701,
+						"variant: nether_brick": 702,
+						"variant: quartz": 703
+					},
+					"seamless: false": {
+						"variant: stone": 688,
+						"variant: sandstone": 689,
+						"variant: wood_old": 690,
+						"variant: cobblestone": 691,
+						"variant: brick": 692,
+						"variant: stone_brick": 693,
+						"variant: nether_brick": 694,
+						"variant: quartz": 695
+					}
+				},
+				"Stone Slab": {
+					"half: top": {
+						"variant: stone": 712,
+						"variant: sandstone": 713,
+						"variant: wood_old": 714,
+						"variant: cobblestone": 715,
+						"variant: brick": 716,
+						"variant: stone_brick": 717,
+						"variant: nether_brick": 718,
+						"variant: quartz": 719
+					},
+					"half: bottom": {
+						"variant: stone": 704,
+						"variant: sandstone": 705,
+						"variant: wood_old": 706,
+						"variant: cobblestone": 707,
+						"variant: brick": 708,
+						"variant: stone_brick": 709,
+						"variant: nether_brick": 710,
+						"variant: quartz": 711
+					}
+				},
+				"Brick Block": 720,
+				"Tnt": {
+					"explode: true": 737,
+					"explode: false": 736
+				},
+				"Bookshelf": 752,
+				"Mossy Cobblestone": 768,
+				"Obsidian": 784,
+				"Torch": {
+					"facing: up": 805,
+					"facing: north": 804,
+					"facing: south": 803,
+					"facing: west": 802,
+					"facing: east": 801
+				},
+				"Fire": {
+					"age: 0": 816,
+					"age: 1": 817,
+					"age: 2": 818,
+					"age: 3": 819,
+					"age: 4": 820,
+					"age: 5": 821,
+					"age: 6": 822,
+					"age: 7": 823,
+					"age: 8": 824,
+					"age: 9": 825,
+					"age: 10": 826,
+					"age: 11": 827,
+					"age: 12": 828,
+					"age: 13": 829,
+					"age: 14": 830,
+					"age: 15": 831
+				},
+				"Mob Spawner": 832,
+				"Oak Stairs": {
+					"facing: north": {
+						"half: top": 855,
+						"half: bottom": 851
+					},
+					"facing: south": {
+						"half: top": 854,
+						"half: bottom": 850
+					},
+					"facing: west": {
+						"half: top": 853,
+						"half: bottom": 849
+					},
+					"facing: east": {
+						"half: top": 852,
+						"half: bottom": 848
+					}
+				},
+				"Chest": {
+					"facing: north": 866,
+					"facing: south": 867,
+					"facing: west": 868,
+					"facing: east": 869
+				},
+				"Redstone Wire": {
+					"power: 0": 880,
+					"power: 1": 881,
+					"power: 2": 882,
+					"power: 3": 883,
+					"power: 4": 884,
+					"power: 5": 885,
+					"power: 6": 886,
+					"power: 7": 887,
+					"power: 8": 888,
+					"power: 9": 889,
+					"power: 10": 890,
+					"power: 11": 891,
+					"power: 12": 892,
+					"power: 13": 893,
+					"power: 14": 894,
+					"power: 15": 895
+				},
+				"Diamond Ore": 896,
+				"Diamond Block": 912,
+				"Crafting Table": 928,
+				"Wheat": {
+					"age: 0": 944,
+					"age: 1": 945,
+					"age: 2": 946,
+					"age: 3": 947,
+					"age: 4": 948,
+					"age: 5": 949,
+					"age: 6": 950,
+					"age: 7": 951
+				},
+				"Farmland": {
+					"moisture: 0": 960,
+					"moisture: 1": 961,
+					"moisture: 2": 962,
+					"moisture: 3": 963,
+					"moisture: 4": 964,
+					"moisture: 5": 965,
+					"moisture: 6": 966,
+					"moisture: 7": 967
+				},
+				"Furnace": {
+					"facing: north": 978,
+					"facing: south": 979,
+					"facing: west": 980,
+					"facing: east": 981
+				},
+				"Lit Furnace": {
+					"facing: north": 994,
+					"facing: south": 995,
+					"facing: west": 996,
+					"facing: east": 997
+				},
+				"Standing Sign": {
+					"rotation: 0": 1008,
+					"rotation: 1": 1009,
+					"rotation: 2": 1010,
+					"rotation: 3": 1011,
+					"rotation: 4": 1012,
+					"rotation: 5": 1013,
+					"rotation: 6": 1014,
+					"rotation: 7": 1015,
+					"rotation: 8": 1016,
+					"rotation: 9": 1017,
+					"rotation: 10": 1018,
+					"rotation: 11": 1019,
+					"rotation: 12": 1020,
+					"rotation: 13": 1021,
+					"rotation: 14": 1022,
+					"rotation: 15": 1023
+				},
+				"Wooden Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 1034,
+								"powered: false": 1032
+							},
+							"hinge: right": {
+								"powered: true": 1035,
+								"powered: false": 1033
+							}
+						},
+						"half: lower": {
+							"open: true": 1031,
+							"open: false": 1027
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 1034,
+								"powered: false": 1032
+							},
+							"hinge: right": {
+								"powered: true": 1035,
+								"powered: false": 1033
+							}
+						},
+						"half: lower": {
+							"open: true": 1029,
+							"open: false": 1025
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 1034,
+								"powered: false": 1032
+							},
+							"hinge: right": {
+								"powered: true": 1035,
+								"powered: false": 1033
+							}
+						},
+						"half: lower": {
+							"open: true": 1030,
+							"open: false": 1026
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 1034,
+								"powered: false": 1032
+							},
+							"hinge: right": {
+								"powered: true": 1035,
+								"powered: false": 1033
+							}
+						},
+						"half: lower": {
+							"open: true": 1028,
+							"open: false": 1024
+						}
+					}
+				},
+				"Ladder": {
+					"facing: north": 1042,
+					"facing: south": 1043,
+					"facing: west": 1044,
+					"facing: east": 1045
+				},
+				"Rail": {
+					"shape: north_south": 1056,
+					"shape: east_west": 1057,
+					"shape: ascending_east": 1058,
+					"shape: ascending_west": 1059,
+					"shape: ascending_north": 1060,
+					"shape: ascending_south": 1061,
+					"shape: south_east": 1062,
+					"shape: south_west": 1063,
+					"shape: north_west": 1064,
+					"shape: north_east": 1065
+				},
+				"Stone Stairs": {
+					"facing: north": {
+						"half: top": 1079,
+						"half: bottom": 1075
+					},
+					"facing: south": {
+						"half: top": 1078,
+						"half: bottom": 1074
+					},
+					"facing: west": {
+						"half: top": 1077,
+						"half: bottom": 1073
+					},
+					"facing: east": {
+						"half: top": 1076,
+						"half: bottom": 1072
+					}
+				},
+				"Wall Sign": {
+					"facing: north": 1090,
+					"facing: south": 1091,
+					"facing: west": 1092,
+					"facing: east": 1093
+				},
+				"Lever": {
+					"facing: down_x": {
+						"powered: true": 1112,
+						"powered: false": 1104
+					},
+					"facing: east": {
+						"powered: true": 1113,
+						"powered: false": 1105
+					},
+					"facing: west": {
+						"powered: true": 1114,
+						"powered: false": 1106
+					},
+					"facing: south": {
+						"powered: true": 1115,
+						"powered: false": 1107
+					},
+					"facing: north": {
+						"powered: true": 1116,
+						"powered: false": 1108
+					},
+					"facing: up_z": {
+						"powered: true": 1117,
+						"powered: false": 1109
+					},
+					"facing: up_x": {
+						"powered: true": 1118,
+						"powered: false": 1110
+					},
+					"facing: down_z": {
+						"powered: true": 1119,
+						"powered: false": 1111
+					}
+				},
+				"Stone Pressure Plate": {
+					"powered: true": 1121,
+					"powered: false": 1120
+				},
+				"Iron Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 1146,
+								"powered: false": 1144
+							},
+							"hinge: right": {
+								"powered: true": 1147,
+								"powered: false": 1145
+							}
+						},
+						"half: lower": {
+							"open: true": 1143,
+							"open: false": 1139
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 1146,
+								"powered: false": 1144
+							},
+							"hinge: right": {
+								"powered: true": 1147,
+								"powered: false": 1145
+							}
+						},
+						"half: lower": {
+							"open: true": 1141,
+							"open: false": 1137
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 1146,
+								"powered: false": 1144
+							},
+							"hinge: right": {
+								"powered: true": 1147,
+								"powered: false": 1145
+							}
+						},
+						"half: lower": {
+							"open: true": 1142,
+							"open: false": 1138
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 1146,
+								"powered: false": 1144
+							},
+							"hinge: right": {
+								"powered: true": 1147,
+								"powered: false": 1145
+							}
+						},
+						"half: lower": {
+							"open: true": 1140,
+							"open: false": 1136
+						}
+					}
+				},
+				"Wooden Pressure Plate": {
+					"powered: true": 1153,
+					"powered: false": 1152
+				},
+				"Redstone Ore": 1168,
+				"Lit Redstone Ore": 1184,
+				"Unlit Redstone Torch": {
+					"facing: up": 1205,
+					"facing: north": 1204,
+					"facing: south": 1203,
+					"facing: west": 1202,
+					"facing: east": 1201
+				},
+				"Redstone Torch": {
+					"facing: up": 1221,
+					"facing: north": 1220,
+					"facing: south": 1219,
+					"facing: west": 1218,
+					"facing: east": 1217
+				},
+				"Stone Button": {
+					"facing: down": {
+						"powered: true": 1240,
+						"powered: false": 1232
+					},
+					"facing: up": {
+						"powered: true": 1245,
+						"powered: false": 1237
+					},
+					"facing: north": {
+						"powered: true": 1244,
+						"powered: false": 1236
+					},
+					"facing: south": {
+						"powered: true": 1243,
+						"powered: false": 1235
+					},
+					"facing: west": {
+						"powered: true": 1242,
+						"powered: false": 1234
+					},
+					"facing: east": {
+						"powered: true": 1241,
+						"powered: false": 1233
+					}
+				},
+				"Snow Layer": {
+					"layers: 1": 1248,
+					"layers: 2": 1249,
+					"layers: 3": 1250,
+					"layers: 4": 1251,
+					"layers: 5": 1252,
+					"layers: 6": 1253,
+					"layers: 7": 1254,
+					"layers: 8": 1255
+				},
+				"Ice": 1264,
+				"Snow": 1280,
+				"Cactus": {
+					"age: 0": 1296,
+					"age: 1": 1297,
+					"age: 2": 1298,
+					"age: 3": 1299,
+					"age: 4": 1300,
+					"age: 5": 1301,
+					"age: 6": 1302,
+					"age: 7": 1303,
+					"age: 8": 1304,
+					"age: 9": 1305,
+					"age: 10": 1306,
+					"age: 11": 1307,
+					"age: 12": 1308,
+					"age: 13": 1309,
+					"age: 14": 1310,
+					"age: 15": 1311
+				},
+				"Clay": 1312,
+				"Reeds": {
+					"age: 0": 1328,
+					"age: 1": 1329,
+					"age: 2": 1330,
+					"age: 3": 1331,
+					"age: 4": 1332,
+					"age: 5": 1333,
+					"age: 6": 1334,
+					"age: 7": 1335,
+					"age: 8": 1336,
+					"age: 9": 1337,
+					"age: 10": 1338,
+					"age: 11": 1339,
+					"age: 12": 1340,
+					"age: 13": 1341,
+					"age: 14": 1342,
+					"age: 15": 1343
+				},
+				"Jukebox": {
+					"has_record: true": 1345,
+					"has_record: false": 1344
+				},
+				"Fence": 1360,
+				"Pumpkin": {
+					"facing: north": 1378,
+					"facing: south": 1376,
+					"facing: west": 1377,
+					"facing: east": 1379
+				},
+				"Netherrack": 1392,
+				"Soul Sand": 1408,
+				"Glowstone": 1424,
+				"Portal": {
+					"axis: x": 1441,
+					"axis: z": 1442
+				},
+				"Lit Pumpkin": {
+					"facing: north": 1458,
+					"facing: south": 1456,
+					"facing: west": 1457,
+					"facing: east": 1459
+				},
+				"Cake": {
+					"bites: 0": 1472,
+					"bites: 1": 1473,
+					"bites: 2": 1474,
+					"bites: 3": 1475,
+					"bites: 4": 1476,
+					"bites: 5": 1477,
+					"bites: 6": 1478
+				},
+				"Unpowered Repeater": {
+					"delay: 1": {
+						"facing: north": 1490,
+						"facing: south": 1488,
+						"facing: west": 1489,
+						"facing: east": 1491
+					},
+					"delay: 2": {
+						"facing: north": 1494,
+						"facing: south": 1492,
+						"facing: west": 1493,
+						"facing: east": 1495
+					},
+					"delay: 3": {
+						"facing: north": 1498,
+						"facing: south": 1496,
+						"facing: west": 1497,
+						"facing: east": 1499
+					},
+					"delay: 4": {
+						"facing: north": 1502,
+						"facing: south": 1500,
+						"facing: west": 1501,
+						"facing: east": 1503
+					}
+				},
+				"Powered Repeater": {
+					"delay: 1": {
+						"facing: north": 1506,
+						"facing: south": 1504,
+						"facing: west": 1505,
+						"facing: east": 1507
+					},
+					"delay: 2": {
+						"facing: north": 1510,
+						"facing: south": 1508,
+						"facing: west": 1509,
+						"facing: east": 1511
+					},
+					"delay: 3": {
+						"facing: north": 1514,
+						"facing: south": 1512,
+						"facing: west": 1513,
+						"facing: east": 1515
+					},
+					"delay: 4": {
+						"facing: north": 1518,
+						"facing: south": 1516,
+						"facing: west": 1517,
+						"facing: east": 1519
+					}
+				},
+				"Stained Glass": {
+					"color: white": 1520,
+					"color: orange": 1521,
+					"color: magenta": 1522,
+					"color: light_blue": 1523,
+					"color: yellow": 1524,
+					"color: lime": 1525,
+					"color: pink": 1526,
+					"color: gray": 1527,
+					"color: silver": 1528,
+					"color: cyan": 1529,
+					"color: purple": 1530,
+					"color: blue": 1531,
+					"color: brown": 1532,
+					"color: green": 1533,
+					"color: red": 1534,
+					"color: black": 1535
+				},
+				"Trapdoor": {
+					"facing: north": {
+						"half: top": {
+							"open: true": 1548,
+							"open: false": 1544
+						},
+						"half: bottom": {
+							"open: true": 1540,
+							"open: false": 1536
+						}
+					},
+					"facing: south": {
+						"half: top": {
+							"open: true": 1549,
+							"open: false": 1545
+						},
+						"half: bottom": {
+							"open: true": 1541,
+							"open: false": 1537
+						}
+					},
+					"facing: west": {
+						"half: top": {
+							"open: true": 1550,
+							"open: false": 1546
+						},
+						"half: bottom": {
+							"open: true": 1542,
+							"open: false": 1538
+						}
+					},
+					"facing: east": {
+						"half: top": {
+							"open: true": 1551,
+							"open: false": 1547
+						},
+						"half: bottom": {
+							"open: true": 1543,
+							"open: false": 1539
+						}
+					}
+				},
+				"Monster Egg": {
+					"variant: stone": 1552,
+					"variant: cobblestone": 1553,
+					"variant: stone_brick": 1554,
+					"variant: mossy_brick": 1555,
+					"variant: cracked_brick": 1556,
+					"variant: chiseled_brick": 1557
+				},
+				"Stonebrick": {
+					"variant: stonebrick": 1568,
+					"variant: mossy_stonebrick": 1569,
+					"variant: cracked_stonebrick": 1570,
+					"variant: chiseled_stonebrick": 1571
+				},
+				"Brown Mushroom Block": {
+					"variant: north_west": 1585,
+					"variant: north": 1586,
+					"variant: north_east": 1587,
+					"variant: west": 1588,
+					"variant: center": 1589,
+					"variant: east": 1590,
+					"variant: south_west": 1591,
+					"variant: south": 1592,
+					"variant: south_east": 1593,
+					"variant: stem": 1594,
+					"variant: all_inside": 1584,
+					"variant: all_outside": 1598,
+					"variant: all_stem": 1599
+				},
+				"Red Mushroom Block": {
+					"variant: north_west": 1601,
+					"variant: north": 1602,
+					"variant: north_east": 1603,
+					"variant: west": 1604,
+					"variant: center": 1605,
+					"variant: east": 1606,
+					"variant: south_west": 1607,
+					"variant: south": 1608,
+					"variant: south_east": 1609,
+					"variant: stem": 1610,
+					"variant: all_inside": 1600,
+					"variant: all_outside": 1614,
+					"variant: all_stem": 1615
+				},
+				"Iron Bars": 1616,
+				"Glass Pane": 1632,
+				"Melon Block": 1648,
+				"Pumpkin Stem": {
+					"age: 0": 1664,
+					"age: 1": 1665,
+					"age: 2": 1666,
+					"age: 3": 1667,
+					"age: 4": 1668,
+					"age: 5": 1669,
+					"age: 6": 1670,
+					"age: 7": 1671
+				},
+				"Melon Stem": {
+					"age: 0": 1680,
+					"age: 1": 1681,
+					"age: 2": 1682,
+					"age: 3": 1683,
+					"age: 4": 1684,
+					"age: 5": 1685,
+					"age: 6": 1686,
+					"age: 7": 1687
+				},
+				"Vine": {
+					"east: true": {
+						"north: true": {
+							"south: true": {
+								"west: true": 1711,
+								"west: false": 1709
+							},
+							"south: false": {
+								"west: true": 1710,
+								"west: false": 1708
+							}
+						},
+						"north: false": {
+							"south: true": {
+								"west: true": 1707,
+								"west: false": 1705
+							},
+							"south: false": {
+								"west: true": 1706,
+								"west: false": 1704
+							}
+						}
+					},
+					"east: false": {
+						"north: true": {
+							"south: true": {
+								"west: true": 1703,
+								"west: false": 1701
+							},
+							"south: false": {
+								"west: true": 1702,
+								"west: false": 1700
+							}
+						},
+						"north: false": {
+							"south: true": {
+								"west: true": 1699,
+								"west: false": 1697
+							},
+							"south: false": {
+								"west: true": 1698,
+								"west: false": 1696
+							}
+						}
+					}
+				},
+				"Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": 1726,
+							"powered: false": 1718
+						},
+						"open: false": {
+							"powered: true": 1722,
+							"powered: false": 1714
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": 1724,
+							"powered: false": 1716
+						},
+						"open: false": {
+							"powered: true": 1720,
+							"powered: false": 1712
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": 1725,
+							"powered: false": 1717
+						},
+						"open: false": {
+							"powered: true": 1721,
+							"powered: false": 1713
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": 1727,
+							"powered: false": 1719
+						},
+						"open: false": {
+							"powered: true": 1723,
+							"powered: false": 1715
+						}
+					}
+				},
+				"Brick Stairs": {
+					"facing: north": {
+						"half: top": 1735,
+						"half: bottom": 1731
+					},
+					"facing: south": {
+						"half: top": 1734,
+						"half: bottom": 1730
+					},
+					"facing: west": {
+						"half: top": 1733,
+						"half: bottom": 1729
+					},
+					"facing: east": {
+						"half: top": 1732,
+						"half: bottom": 1728
+					}
+				},
+				"Stone Brick Stairs": {
+					"facing: north": {
+						"half: top": 1751,
+						"half: bottom": 1747
+					},
+					"facing: south": {
+						"half: top": 1750,
+						"half: bottom": 1746
+					},
+					"facing: west": {
+						"half: top": 1749,
+						"half: bottom": 1745
+					},
+					"facing: east": {
+						"half: top": 1748,
+						"half: bottom": 1744
+					}
+				},
+				"Mycelium": 1760,
+				"Waterlily": 1776,
+				"Nether Brick": 1792,
+				"Nether Brick Fence": 1808,
+				"Nether Brick Stairs": {
+					"facing: north": {
+						"half: top": 1831,
+						"half: bottom": 1827
+					},
+					"facing: south": {
+						"half: top": 1830,
+						"half: bottom": 1826
+					},
+					"facing: west": {
+						"half: top": 1829,
+						"half: bottom": 1825
+					},
+					"facing: east": {
+						"half: top": 1828,
+						"half: bottom": 1824
+					}
+				},
+				"Nether Wart": {
+					"age: 0": 1840,
+					"age: 1": 1841,
+					"age: 2": 1842,
+					"age: 3": 1843
+				},
+				"Enchanting Table": 1856,
+				"Brewing Stand": {
+					"has_bottle_0: true": {
+						"has_bottle_1: true": {
+							"has_bottle_2: true": 1879,
+							"has_bottle_2: false": 1875
+						},
+						"has_bottle_1: false": {
+							"has_bottle_2: true": 1877,
+							"has_bottle_2: false": 1873
+						}
+					},
+					"has_bottle_0: false": {
+						"has_bottle_1: true": {
+							"has_bottle_2: true": 1878,
+							"has_bottle_2: false": 1874
+						},
+						"has_bottle_1: false": {
+							"has_bottle_2: true": 1876,
+							"has_bottle_2: false": 1872
+						}
+					}
+				},
+				"Cauldron": {
+					"level: 0": 1888,
+					"level: 1": 1889,
+					"level: 2": 1890,
+					"level: 3": 1891
+				},
+				"End Portal": 1904,
+				"End Portal Frame": {
+					"eye: true": {
+						"facing: north": 1926,
+						"facing: south": 1924,
+						"facing: west": 1925,
+						"facing: east": 1927
+					},
+					"eye: false": {
+						"facing: north": 1922,
+						"facing: south": 1920,
+						"facing: west": 1921,
+						"facing: east": 1923
+					}
+				},
+				"End Stone": 1936,
+				"Dragon Egg": 1952,
+				"Redstone Lamp": 1968,
+				"Lit Redstone Lamp": 1984,
+				"Double Wooden Slab": {
+					"variant: oak": 2000,
+					"variant: spruce": 2001,
+					"variant: birch": 2002,
+					"variant: jungle": 2003,
+					"variant: acacia": 2004,
+					"variant: dark_oak": 2005
+				},
+				"Wooden Slab": {
+					"half: top": {
+						"variant: oak": 2024,
+						"variant: spruce": 2025,
+						"variant: birch": 2026,
+						"variant: jungle": 2027,
+						"variant: acacia": 2028,
+						"variant: dark_oak": 2029
+					},
+					"half: bottom": {
+						"variant: oak": 2016,
+						"variant: spruce": 2017,
+						"variant: birch": 2018,
+						"variant: jungle": 2019,
+						"variant: acacia": 2020,
+						"variant: dark_oak": 2021
+					}
+				},
+				"Cocoa": {
+					"age: 0": {
+						"facing: north": 2034,
+						"facing: south": 2032,
+						"facing: west": 2033,
+						"facing: east": 2035
+					},
+					"age: 1": {
+						"facing: north": 2038,
+						"facing: south": 2036,
+						"facing: west": 2037,
+						"facing: east": 2039
+					},
+					"age: 2": {
+						"facing: north": 2042,
+						"facing: south": 2040,
+						"facing: west": 2041,
+						"facing: east": 2043
+					}
+				},
+				"Sandstone Stairs": {
+					"facing: north": {
+						"half: top": 2055,
+						"half: bottom": 2051
+					},
+					"facing: south": {
+						"half: top": 2054,
+						"half: bottom": 2050
+					},
+					"facing: west": {
+						"half: top": 2053,
+						"half: bottom": 2049
+					},
+					"facing: east": {
+						"half: top": 2052,
+						"half: bottom": 2048
+					}
+				},
+				"Emerald Ore": 2064,
+				"Ender Chest": {
+					"facing: north": 2082,
+					"facing: south": 2083,
+					"facing: west": 2084,
+					"facing: east": 2085
+				},
+				"Tripwire Hook": {
+					"attached: true": {
+						"facing: north": {
+							"powered: true": 2110,
+							"powered: false": 2102
+						},
+						"facing: south": {
+							"powered: true": 2108,
+							"powered: false": 2100
+						},
+						"facing: west": {
+							"powered: true": 2109,
+							"powered: false": 2101
+						},
+						"facing: east": {
+							"powered: true": 2111,
+							"powered: false": 2103
+						}
+					},
+					"attached: false": {
+						"facing: north": {
+							"powered: true": 2106,
+							"powered: false": 2098
+						},
+						"facing: south": {
+							"powered: true": 2104,
+							"powered: false": 2096
+						},
+						"facing: west": {
+							"powered: true": 2105,
+							"powered: false": 2097
+						},
+						"facing: east": {
+							"powered: true": 2107,
+							"powered: false": 2099
+						}
+					}
+				},
+				"Tripwire": {
+					"attached: true": {
+						"disarmed: true": {
+							"powered: true": 2125,
+							"powered: false": 2124
+						},
+						"disarmed: false": {
+							"powered: true": 2117,
+							"powered: false": 2116
+						}
+					},
+					"attached: false": {
+						"disarmed: true": {
+							"powered: true": 2121,
+							"powered: false": 2120
+						},
+						"disarmed: false": {
+							"powered: true": 2113,
+							"powered: false": 2112
+						}
+					}
+				},
+				"Emerald Block": 2128,
+				"Spruce Stairs": {
+					"facing: north": {
+						"half: top": 2151,
+						"half: bottom": 2147
+					},
+					"facing: south": {
+						"half: top": 2150,
+						"half: bottom": 2146
+					},
+					"facing: west": {
+						"half: top": 2149,
+						"half: bottom": 2145
+					},
+					"facing: east": {
+						"half: top": 2148,
+						"half: bottom": 2144
+					}
+				},
+				"Birch Stairs": {
+					"facing: north": {
+						"half: top": 2167,
+						"half: bottom": 2163
+					},
+					"facing: south": {
+						"half: top": 2166,
+						"half: bottom": 2162
+					},
+					"facing: west": {
+						"half: top": 2165,
+						"half: bottom": 2161
+					},
+					"facing: east": {
+						"half: top": 2164,
+						"half: bottom": 2160
+					}
+				},
+				"Jungle Stairs": {
+					"facing: north": {
+						"half: top": 2183,
+						"half: bottom": 2179
+					},
+					"facing: south": {
+						"half: top": 2182,
+						"half: bottom": 2178
+					},
+					"facing: west": {
+						"half: top": 2181,
+						"half: bottom": 2177
+					},
+					"facing: east": {
+						"half: top": 2180,
+						"half: bottom": 2176
+					}
+				},
+				"Command Block": {
+					"conditional: true": {
+						"facing: down": 2200,
+						"facing: up": 2201,
+						"facing: north": 2202,
+						"facing: south": 2203,
+						"facing: west": 2204,
+						"facing: east": 2205
+					},
+					"conditional: false": {
+						"facing: down": 2192,
+						"facing: up": 2193,
+						"facing: north": 2194,
+						"facing: south": 2195,
+						"facing: west": 2196,
+						"facing: east": 2197
+					}
+				},
+				"Beacon": 2208,
+				"Cobblestone Wall": {
+					"variant: cobblestone": 2224,
+					"variant: mossy_cobblestone": 2225
+				},
+				"Flower Pot": {
+					"legacy_data: 0": 2240,
+					"legacy_data: 1": 2241,
+					"legacy_data: 2": 2242,
+					"legacy_data: 3": 2243,
+					"legacy_data: 4": 2244,
+					"legacy_data: 5": 2245,
+					"legacy_data: 6": 2246,
+					"legacy_data: 7": 2247,
+					"legacy_data: 8": 2248,
+					"legacy_data: 9": 2249,
+					"legacy_data: 10": 2250,
+					"legacy_data: 11": 2251,
+					"legacy_data: 12": 2252,
+					"legacy_data: 13": 2253,
+					"legacy_data: 14": 2254,
+					"legacy_data: 15": 2255
+				},
+				"Carrots": {
+					"age: 0": 2256,
+					"age: 1": 2257,
+					"age: 2": 2258,
+					"age: 3": 2259,
+					"age: 4": 2260,
+					"age: 5": 2261,
+					"age: 6": 2262,
+					"age: 7": 2263
+				},
+				"Potatoes": {
+					"age: 0": 2272,
+					"age: 1": 2273,
+					"age: 2": 2274,
+					"age: 3": 2275,
+					"age: 4": 2276,
+					"age: 5": 2277,
+					"age: 6": 2278,
+					"age: 7": 2279
+				},
+				"Wooden Button": {
+					"facing: down": {
+						"powered: true": 2296,
+						"powered: false": 2288
+					},
+					"facing: up": {
+						"powered: true": 2301,
+						"powered: false": 2293
+					},
+					"facing: north": {
+						"powered: true": 2300,
+						"powered: false": 2292
+					},
+					"facing: south": {
+						"powered: true": 2299,
+						"powered: false": 2291
+					},
+					"facing: west": {
+						"powered: true": 2298,
+						"powered: false": 2290
+					},
+					"facing: east": {
+						"powered: true": 2297,
+						"powered: false": 2289
+					}
+				},
+				"Skull": {
+					"facing: down": {
+						"nodrop: true": 2312,
+						"nodrop: false": 2304
+					},
+					"facing: up": {
+						"nodrop: true": 2313,
+						"nodrop: false": 2305
+					},
+					"facing: north": {
+						"nodrop: true": 2314,
+						"nodrop: false": 2306
+					},
+					"facing: south": {
+						"nodrop: true": 2315,
+						"nodrop: false": 2307
+					},
+					"facing: west": {
+						"nodrop: true": 2316,
+						"nodrop: false": 2308
+					},
+					"facing: east": {
+						"nodrop: true": 2317,
+						"nodrop: false": 2309
+					}
+				},
+				"Anvil": {
+					"damage: 0": {
+						"facing: north": 2322,
+						"facing: south": 2320,
+						"facing: west": 2321,
+						"facing: east": 2323
+					},
+					"damage: 1": {
+						"facing: north": 2326,
+						"facing: south": 2324,
+						"facing: west": 2325,
+						"facing: east": 2327
+					},
+					"damage: 2": {
+						"facing: north": 2330,
+						"facing: south": 2328,
+						"facing: west": 2329,
+						"facing: east": 2331
+					}
+				},
+				"Trapped Chest": {
+					"facing: north": 2338,
+					"facing: south": 2339,
+					"facing: west": 2340,
+					"facing: east": 2341
+				},
+				"Light Weighted Pressure Plate": {
+					"power: 0": 2352,
+					"power: 1": 2353,
+					"power: 2": 2354,
+					"power: 3": 2355,
+					"power: 4": 2356,
+					"power: 5": 2357,
+					"power: 6": 2358,
+					"power: 7": 2359,
+					"power: 8": 2360,
+					"power: 9": 2361,
+					"power: 10": 2362,
+					"power: 11": 2363,
+					"power: 12": 2364,
+					"power: 13": 2365,
+					"power: 14": 2366,
+					"power: 15": 2367
+				},
+				"Heavy Weighted Pressure Plate": {
+					"power: 0": 2368,
+					"power: 1": 2369,
+					"power: 2": 2370,
+					"power: 3": 2371,
+					"power: 4": 2372,
+					"power: 5": 2373,
+					"power: 6": 2374,
+					"power: 7": 2375,
+					"power: 8": 2376,
+					"power: 9": 2377,
+					"power: 10": 2378,
+					"power: 11": 2379,
+					"power: 12": 2380,
+					"power: 13": 2381,
+					"power: 14": 2382,
+					"power: 15": 2383
+				},
+				"Unpowered Comparator": {
+					"facing: north": {
+						"mode: compare": {
+							"powered: true": 2394,
+							"powered: false": 2386
+						},
+						"mode: subtract": {
+							"powered: true": 2398,
+							"powered: false": 2390
+						}
+					},
+					"facing: south": {
+						"mode: compare": {
+							"powered: true": 2392,
+							"powered: false": 2384
+						},
+						"mode: subtract": {
+							"powered: true": 2396,
+							"powered: false": 2388
+						}
+					},
+					"facing: west": {
+						"mode: compare": {
+							"powered: true": 2393,
+							"powered: false": 2385
+						},
+						"mode: subtract": {
+							"powered: true": 2397,
+							"powered: false": 2389
+						}
+					},
+					"facing: east": {
+						"mode: compare": {
+							"powered: true": 2395,
+							"powered: false": 2387
+						},
+						"mode: subtract": {
+							"powered: true": 2399,
+							"powered: false": 2391
+						}
+					}
+				},
+				"Powered Comparator": {
+					"facing: north": {
+						"mode: compare": {
+							"powered: true": 2410,
+							"powered: false": 2402
+						},
+						"mode: subtract": {
+							"powered: true": 2414,
+							"powered: false": 2406
+						}
+					},
+					"facing: south": {
+						"mode: compare": {
+							"powered: true": 2408,
+							"powered: false": 2400
+						},
+						"mode: subtract": {
+							"powered: true": 2412,
+							"powered: false": 2404
+						}
+					},
+					"facing: west": {
+						"mode: compare": {
+							"powered: true": 2409,
+							"powered: false": 2401
+						},
+						"mode: subtract": {
+							"powered: true": 2413,
+							"powered: false": 2405
+						}
+					},
+					"facing: east": {
+						"mode: compare": {
+							"powered: true": 2411,
+							"powered: false": 2403
+						},
+						"mode: subtract": {
+							"powered: true": 2415,
+							"powered: false": 2407
+						}
+					}
+				},
+				"Daylight Detector": {
+					"power: 0": 2416,
+					"power: 1": 2417,
+					"power: 2": 2418,
+					"power: 3": 2419,
+					"power: 4": 2420,
+					"power: 5": 2421,
+					"power: 6": 2422,
+					"power: 7": 2423,
+					"power: 8": 2424,
+					"power: 9": 2425,
+					"power: 10": 2426,
+					"power: 11": 2427,
+					"power: 12": 2428,
+					"power: 13": 2429,
+					"power: 14": 2430,
+					"power: 15": 2431
+				},
+				"Redstone Block": 2432,
+				"Quartz Ore": 2448,
+				"Hopper": {
+					"enabled: true": {
+						"facing: down": 2464,
+						"facing: north": 2466,
+						"facing: south": 2467,
+						"facing: west": 2468,
+						"facing: east": 2469
+					},
+					"enabled: false": {
+						"facing: down": 2472,
+						"facing: north": 2474,
+						"facing: south": 2475,
+						"facing: west": 2476,
+						"facing: east": 2477
+					}
+				},
+				"Quartz Block": {
+					"variant: default": 2480,
+					"variant: chiseled": 2481,
+					"variant: lines_y": 2482,
+					"variant: lines_x": 2483,
+					"variant: lines_z": 2484
+				},
+				"Quartz Stairs": {
+					"facing: north": {
+						"half: top": 2503,
+						"half: bottom": 2499
+					},
+					"facing: south": {
+						"half: top": 2502,
+						"half: bottom": 2498
+					},
+					"facing: west": {
+						"half: top": 2501,
+						"half: bottom": 2497
+					},
+					"facing: east": {
+						"half: top": 2500,
+						"half: bottom": 2496
+					}
+				},
+				"Activator Rail": {
+					"powered: true": {
+						"shape: north_south": 2520,
+						"shape: east_west": 2521,
+						"shape: ascending_east": 2522,
+						"shape: ascending_west": 2523,
+						"shape: ascending_north": 2524,
+						"shape: ascending_south": 2525
+					},
+					"powered: false": {
+						"shape: north_south": 2512,
+						"shape: east_west": 2513,
+						"shape: ascending_east": 2514,
+						"shape: ascending_west": 2515,
+						"shape: ascending_north": 2516,
+						"shape: ascending_south": 2517
+					}
+				},
+				"Dropper": {
+					"facing: down": {
+						"triggered: true": 2536,
+						"triggered: false": 2528
+					},
+					"facing: up": {
+						"triggered: true": 2537,
+						"triggered: false": 2529
+					},
+					"facing: north": {
+						"triggered: true": 2538,
+						"triggered: false": 2530
+					},
+					"facing: south": {
+						"triggered: true": 2539,
+						"triggered: false": 2531
+					},
+					"facing: west": {
+						"triggered: true": 2540,
+						"triggered: false": 2532
+					},
+					"facing: east": {
+						"triggered: true": 2541,
+						"triggered: false": 2533
+					}
+				},
+				"Stained Hardened Clay": {
+					"color: white": 2544,
+					"color: orange": 2545,
+					"color: magenta": 2546,
+					"color: light_blue": 2547,
+					"color: yellow": 2548,
+					"color: lime": 2549,
+					"color: pink": 2550,
+					"color: gray": 2551,
+					"color: silver": 2552,
+					"color: cyan": 2553,
+					"color: purple": 2554,
+					"color: blue": 2555,
+					"color: brown": 2556,
+					"color: green": 2557,
+					"color: red": 2558,
+					"color: black": 2559
+				},
+				"Stained Glass Pane": {
+					"color: white": 2560,
+					"color: orange": 2561,
+					"color: magenta": 2562,
+					"color: light_blue": 2563,
+					"color: yellow": 2564,
+					"color: lime": 2565,
+					"color: pink": 2566,
+					"color: gray": 2567,
+					"color: silver": 2568,
+					"color: cyan": 2569,
+					"color: purple": 2570,
+					"color: blue": 2571,
+					"color: brown": 2572,
+					"color: green": 2573,
+					"color: red": 2574,
+					"color: black": 2575
+				},
+				"Leaves2": {
+					"check_decay: true": {
+						"decayable: true": {
+							"variant: acacia": 2584,
+							"variant: dark_oak": 2585
+						},
+						"decayable: false": {
+							"variant: acacia": 2588,
+							"variant: dark_oak": 2589
+						}
+					},
+					"check_decay: false": {
+						"decayable: true": {
+							"variant: acacia": 2576,
+							"variant: dark_oak": 2577
+						},
+						"decayable: false": {
+							"variant: acacia": 2580,
+							"variant: dark_oak": 2581
+						}
+					}
+				},
+				"Log2": {
+					"axis: x": {
+						"variant: acacia": 2596,
+						"variant: dark_oak": 2597
+					},
+					"axis: y": {
+						"variant: acacia": 2592,
+						"variant: dark_oak": 2593
+					},
+					"axis: z": {
+						"variant: acacia": 2600,
+						"variant: dark_oak": 2601
+					},
+					"axis: none": {
+						"variant: acacia": 2604,
+						"variant: dark_oak": 2605
+					}
+				},
+				"Acacia Stairs": {
+					"facing: north": {
+						"half: top": 2615,
+						"half: bottom": 2611
+					},
+					"facing: south": {
+						"half: top": 2614,
+						"half: bottom": 2610
+					},
+					"facing: west": {
+						"half: top": 2613,
+						"half: bottom": 2609
+					},
+					"facing: east": {
+						"half: top": 2612,
+						"half: bottom": 2608
+					}
+				},
+				"Dark Oak Stairs": {
+					"facing: north": {
+						"half: top": 2631,
+						"half: bottom": 2627
+					},
+					"facing: south": {
+						"half: top": 2630,
+						"half: bottom": 2626
+					},
+					"facing: west": {
+						"half: top": 2629,
+						"half: bottom": 2625
+					},
+					"facing: east": {
+						"half: top": 2628,
+						"half: bottom": 2624
+					}
+				},
+				"Slime": 2640,
+				"Barrier": 2656,
+				"Iron Trapdoor": {
+					"facing: north": {
+						"half: top": {
+							"open: true": 2684,
+							"open: false": 2680
+						},
+						"half: bottom": {
+							"open: true": 2676,
+							"open: false": 2672
+						}
+					},
+					"facing: south": {
+						"half: top": {
+							"open: true": 2685,
+							"open: false": 2681
+						},
+						"half: bottom": {
+							"open: true": 2677,
+							"open: false": 2673
+						}
+					},
+					"facing: west": {
+						"half: top": {
+							"open: true": 2686,
+							"open: false": 2682
+						},
+						"half: bottom": {
+							"open: true": 2678,
+							"open: false": 2674
+						}
+					},
+					"facing: east": {
+						"half: top": {
+							"open: true": 2687,
+							"open: false": 2683
+						},
+						"half: bottom": {
+							"open: true": 2679,
+							"open: false": 2675
+						}
+					}
+				},
+				"Prismarine": {
+					"variant: prismarine": 2688,
+					"variant: prismarine_bricks": 2689,
+					"variant: dark_prismarine": 2690
+				},
+				"Sea Lantern": 2704,
+				"Hay Block": {
+					"axis: x": 2724,
+					"axis: y": 2720,
+					"axis: z": 2728
+				},
+				"Carpet": {
+					"color: white": 2736,
+					"color: orange": 2737,
+					"color: magenta": 2738,
+					"color: light_blue": 2739,
+					"color: yellow": 2740,
+					"color: lime": 2741,
+					"color: pink": 2742,
+					"color: gray": 2743,
+					"color: silver": 2744,
+					"color: cyan": 2745,
+					"color: purple": 2746,
+					"color: blue": 2747,
+					"color: brown": 2748,
+					"color: green": 2749,
+					"color: red": 2750,
+					"color: black": 2751
+				},
+				"Hardened Clay": 2752,
+				"Coal Block": 2768,
+				"Packed Ice": 2784,
+				"Double Plant": {
+					"facing: north": {
+						"half: upper": 2810,
+						"half: lower": {
+							"variant: sunflower": 2800,
+							"variant: syringa": 2801,
+							"variant: double_grass": 2802,
+							"variant: double_fern": 2803,
+							"variant: double_rose": 2804,
+							"variant: paeonia": 2805
+						}
+					},
+					"facing: south": {
+						"half: upper": 2808,
+						"half: lower": {
+							"variant: sunflower": 2800,
+							"variant: syringa": 2801,
+							"variant: double_grass": 2802,
+							"variant: double_fern": 2803,
+							"variant: double_rose": 2804,
+							"variant: paeonia": 2805
+						}
+					},
+					"facing: west": {
+						"half: upper": 2809,
+						"half: lower": {
+							"variant: sunflower": 2800,
+							"variant: syringa": 2801,
+							"variant: double_grass": 2802,
+							"variant: double_fern": 2803,
+							"variant: double_rose": 2804,
+							"variant: paeonia": 2805
+						}
+					},
+					"facing: east": {
+						"half: upper": 2811,
+						"half: lower": {
+							"variant: sunflower": 2800,
+							"variant: syringa": 2801,
+							"variant: double_grass": 2802,
+							"variant: double_fern": 2803,
+							"variant: double_rose": 2804,
+							"variant: paeonia": 2805
+						}
+					}
+				},
+				"Standing Banner": {
+					"rotation: 0": 2816,
+					"rotation: 1": 2817,
+					"rotation: 2": 2818,
+					"rotation: 3": 2819,
+					"rotation: 4": 2820,
+					"rotation: 5": 2821,
+					"rotation: 6": 2822,
+					"rotation: 7": 2823,
+					"rotation: 8": 2824,
+					"rotation: 9": 2825,
+					"rotation: 10": 2826,
+					"rotation: 11": 2827,
+					"rotation: 12": 2828,
+					"rotation: 13": 2829,
+					"rotation: 14": 2830,
+					"rotation: 15": 2831
+				},
+				"Wall Banner": {
+					"facing: north": 2834,
+					"facing: south": 2835,
+					"facing: west": 2836,
+					"facing: east": 2837
+				},
+				"Daylight Detector Inverted": {
+					"power: 0": 2848,
+					"power: 1": 2849,
+					"power: 2": 2850,
+					"power: 3": 2851,
+					"power: 4": 2852,
+					"power: 5": 2853,
+					"power: 6": 2854,
+					"power: 7": 2855,
+					"power: 8": 2856,
+					"power: 9": 2857,
+					"power: 10": 2858,
+					"power: 11": 2859,
+					"power: 12": 2860,
+					"power: 13": 2861,
+					"power: 14": 2862,
+					"power: 15": 2863
+				},
+				"Red Sandstone": {
+					"type: red_sandstone": 2864,
+					"type: chiseled_red_sandstone": 2865,
+					"type: smooth_red_sandstone": 2866
+				},
+				"Red Sandstone Stairs": {
+					"facing: north": {
+						"half: top": 2887,
+						"half: bottom": 2883
+					},
+					"facing: south": {
+						"half: top": 2886,
+						"half: bottom": 2882
+					},
+					"facing: west": {
+						"half: top": 2885,
+						"half: bottom": 2881
+					},
+					"facing: east": {
+						"half: top": 2884,
+						"half: bottom": 2880
+					}
+				},
+				"Double Stone Slab2": {
+					"seamless: true": 2904,
+					"seamless: false": 2896
+				},
+				"Stone Slab2": {
+					"half: top": 2920,
+					"half: bottom": 2912
+				},
+				"Spruce Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": 2942,
+							"powered: false": 2934
+						},
+						"open: false": {
+							"powered: true": 2938,
+							"powered: false": 2930
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": 2940,
+							"powered: false": 2932
+						},
+						"open: false": {
+							"powered: true": 2936,
+							"powered: false": 2928
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": 2941,
+							"powered: false": 2933
+						},
+						"open: false": {
+							"powered: true": 2937,
+							"powered: false": 2929
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": 2943,
+							"powered: false": 2935
+						},
+						"open: false": {
+							"powered: true": 2939,
+							"powered: false": 2931
+						}
+					}
+				},
+				"Birch Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": 2958,
+							"powered: false": 2950
+						},
+						"open: false": {
+							"powered: true": 2954,
+							"powered: false": 2946
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": 2956,
+							"powered: false": 2948
+						},
+						"open: false": {
+							"powered: true": 2952,
+							"powered: false": 2944
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": 2957,
+							"powered: false": 2949
+						},
+						"open: false": {
+							"powered: true": 2953,
+							"powered: false": 2945
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": 2959,
+							"powered: false": 2951
+						},
+						"open: false": {
+							"powered: true": 2955,
+							"powered: false": 2947
+						}
+					}
+				},
+				"Jungle Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": 2974,
+							"powered: false": 2966
+						},
+						"open: false": {
+							"powered: true": 2970,
+							"powered: false": 2962
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": 2972,
+							"powered: false": 2964
+						},
+						"open: false": {
+							"powered: true": 2968,
+							"powered: false": 2960
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": 2973,
+							"powered: false": 2965
+						},
+						"open: false": {
+							"powered: true": 2969,
+							"powered: false": 2961
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": 2975,
+							"powered: false": 2967
+						},
+						"open: false": {
+							"powered: true": 2971,
+							"powered: false": 2963
+						}
+					}
+				},
+				"Dark Oak Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": 2990,
+							"powered: false": 2982
+						},
+						"open: false": {
+							"powered: true": 2986,
+							"powered: false": 2978
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": 2988,
+							"powered: false": 2980
+						},
+						"open: false": {
+							"powered: true": 2984,
+							"powered: false": 2976
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": 2989,
+							"powered: false": 2981
+						},
+						"open: false": {
+							"powered: true": 2985,
+							"powered: false": 2977
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": 2991,
+							"powered: false": 2983
+						},
+						"open: false": {
+							"powered: true": 2987,
+							"powered: false": 2979
+						}
+					}
+				},
+				"Acacia Fence Gate": {
+					"facing: north": {
+						"open: true": {
+							"powered: true": 3006,
+							"powered: false": 2998
+						},
+						"open: false": {
+							"powered: true": 3002,
+							"powered: false": 2994
+						}
+					},
+					"facing: south": {
+						"open: true": {
+							"powered: true": 3004,
+							"powered: false": 2996
+						},
+						"open: false": {
+							"powered: true": 3000,
+							"powered: false": 2992
+						}
+					},
+					"facing: west": {
+						"open: true": {
+							"powered: true": 3005,
+							"powered: false": 2997
+						},
+						"open: false": {
+							"powered: true": 3001,
+							"powered: false": 2993
+						}
+					},
+					"facing: east": {
+						"open: true": {
+							"powered: true": 3007,
+							"powered: false": 2999
+						},
+						"open: false": {
+							"powered: true": 3003,
+							"powered: false": 2995
+						}
+					}
+				},
+				"Spruce Fence": 3008,
+				"Birch Fence": 3024,
+				"Jungle Fence": 3040,
+				"Dark Oak Fence": 3056,
+				"Acacia Fence": 3072,
+				"Spruce Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3098,
+								"powered: false": 3096
+							},
+							"hinge: right": {
+								"powered: true": 3099,
+								"powered: false": 3097
+							}
+						},
+						"half: lower": {
+							"open: true": 3095,
+							"open: false": 3091
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3098,
+								"powered: false": 3096
+							},
+							"hinge: right": {
+								"powered: true": 3099,
+								"powered: false": 3097
+							}
+						},
+						"half: lower": {
+							"open: true": 3093,
+							"open: false": 3089
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3098,
+								"powered: false": 3096
+							},
+							"hinge: right": {
+								"powered: true": 3099,
+								"powered: false": 3097
+							}
+						},
+						"half: lower": {
+							"open: true": 3094,
+							"open: false": 3090
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3098,
+								"powered: false": 3096
+							},
+							"hinge: right": {
+								"powered: true": 3099,
+								"powered: false": 3097
+							}
+						},
+						"half: lower": {
+							"open: true": 3092,
+							"open: false": 3088
+						}
+					}
+				},
+				"Birch Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3114,
+								"powered: false": 3112
+							},
+							"hinge: right": {
+								"powered: true": 3115,
+								"powered: false": 3113
+							}
+						},
+						"half: lower": {
+							"open: true": 3111,
+							"open: false": 3107
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3114,
+								"powered: false": 3112
+							},
+							"hinge: right": {
+								"powered: true": 3115,
+								"powered: false": 3113
+							}
+						},
+						"half: lower": {
+							"open: true": 3109,
+							"open: false": 3105
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3114,
+								"powered: false": 3112
+							},
+							"hinge: right": {
+								"powered: true": 3115,
+								"powered: false": 3113
+							}
+						},
+						"half: lower": {
+							"open: true": 3110,
+							"open: false": 3106
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3114,
+								"powered: false": 3112
+							},
+							"hinge: right": {
+								"powered: true": 3115,
+								"powered: false": 3113
+							}
+						},
+						"half: lower": {
+							"open: true": 3108,
+							"open: false": 3104
+						}
+					}
+				},
+				"Jungle Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3130,
+								"powered: false": 3128
+							},
+							"hinge: right": {
+								"powered: true": 3131,
+								"powered: false": 3129
+							}
+						},
+						"half: lower": {
+							"open: true": 3127,
+							"open: false": 3123
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3130,
+								"powered: false": 3128
+							},
+							"hinge: right": {
+								"powered: true": 3131,
+								"powered: false": 3129
+							}
+						},
+						"half: lower": {
+							"open: true": 3125,
+							"open: false": 3121
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3130,
+								"powered: false": 3128
+							},
+							"hinge: right": {
+								"powered: true": 3131,
+								"powered: false": 3129
+							}
+						},
+						"half: lower": {
+							"open: true": 3126,
+							"open: false": 3122
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3130,
+								"powered: false": 3128
+							},
+							"hinge: right": {
+								"powered: true": 3131,
+								"powered: false": 3129
+							}
+						},
+						"half: lower": {
+							"open: true": 3124,
+							"open: false": 3120
+						}
+					}
+				},
+				"Acacia Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3146,
+								"powered: false": 3144
+							},
+							"hinge: right": {
+								"powered: true": 3147,
+								"powered: false": 3145
+							}
+						},
+						"half: lower": {
+							"open: true": 3143,
+							"open: false": 3139
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3146,
+								"powered: false": 3144
+							},
+							"hinge: right": {
+								"powered: true": 3147,
+								"powered: false": 3145
+							}
+						},
+						"half: lower": {
+							"open: true": 3141,
+							"open: false": 3137
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3146,
+								"powered: false": 3144
+							},
+							"hinge: right": {
+								"powered: true": 3147,
+								"powered: false": 3145
+							}
+						},
+						"half: lower": {
+							"open: true": 3142,
+							"open: false": 3138
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3146,
+								"powered: false": 3144
+							},
+							"hinge: right": {
+								"powered: true": 3147,
+								"powered: false": 3145
+							}
+						},
+						"half: lower": {
+							"open: true": 3140,
+							"open: false": 3136
+						}
+					}
+				},
+				"Dark Oak Door": {
+					"facing: north": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3162,
+								"powered: false": 3160
+							},
+							"hinge: right": {
+								"powered: true": 3163,
+								"powered: false": 3161
+							}
+						},
+						"half: lower": {
+							"open: true": 3159,
+							"open: false": 3155
+						}
+					},
+					"facing: south": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3162,
+								"powered: false": 3160
+							},
+							"hinge: right": {
+								"powered: true": 3163,
+								"powered: false": 3161
+							}
+						},
+						"half: lower": {
+							"open: true": 3157,
+							"open: false": 3153
+						}
+					},
+					"facing: west": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3162,
+								"powered: false": 3160
+							},
+							"hinge: right": {
+								"powered: true": 3163,
+								"powered: false": 3161
+							}
+						},
+						"half: lower": {
+							"open: true": 3158,
+							"open: false": 3154
+						}
+					},
+					"facing: east": {
+						"half: upper": {
+							"hinge: left": {
+								"powered: true": 3162,
+								"powered: false": 3160
+							},
+							"hinge: right": {
+								"powered: true": 3163,
+								"powered: false": 3161
+							}
+						},
+						"half: lower": {
+							"open: true": 3156,
+							"open: false": 3152
+						}
+					}
+				},
+				"End Rod": {
+					"facing: down": 3168,
+					"facing: up": 3169,
+					"facing: north": 3170,
+					"facing: south": 3171,
+					"facing: west": 3172,
+					"facing: east": 3173
+				},
+				"Chorus Plant": 3184,
+				"Chorus Flower": {
+					"age: 0": 3200,
+					"age: 1": 3201,
+					"age: 2": 3202,
+					"age: 3": 3203,
+					"age: 4": 3204,
+					"age: 5": 3205
+				},
+				"Purpur Block": 3216,
+				"Purpur Pillar": {
+					"axis: x": 3236,
+					"axis: y": 3232,
+					"axis: z": 3240
+				},
+				"Purpur Stairs": {
+					"facing: north": {
+						"half: top": 3255,
+						"half: bottom": 3251
+					},
+					"facing: south": {
+						"half: top": 3254,
+						"half: bottom": 3250
+					},
+					"facing: west": {
+						"half: top": 3253,
+						"half: bottom": 3249
+					},
+					"facing: east": {
+						"half: top": 3252,
+						"half: bottom": 3248
+					}
+				},
+				"Purpur Double Slab": 3264,
+				"Purpur Slab": {
+					"half: top": 3288,
+					"half: bottom": 3280
+				},
+				"End Bricks": 3296,
+				"Beetroots": {
+					"age: 0": 3312,
+					"age: 1": 3313,
+					"age: 2": 3314,
+					"age: 3": 3315
+				},
+				"Grass Path": 3328,
+				"End Gateway": 3344,
+				"Repeating Command Block": {
+					"conditional: true": {
+						"facing: down": 3368,
+						"facing: up": 3369,
+						"facing: north": 3370,
+						"facing: south": 3371,
+						"facing: west": 3372,
+						"facing: east": 3373
+					},
+					"conditional: false": {
+						"facing: down": 3360,
+						"facing: up": 3361,
+						"facing: north": 3362,
+						"facing: south": 3363,
+						"facing: west": 3364,
+						"facing: east": 3365
+					}
+				},
+				"Chain Command Block": {
+					"conditional: true": {
+						"facing: down": 3384,
+						"facing: up": 3385,
+						"facing: north": 3386,
+						"facing: south": 3387,
+						"facing: west": 3388,
+						"facing: east": 3389
+					},
+					"conditional: false": {
+						"facing: down": 3376,
+						"facing: up": 3377,
+						"facing: north": 3378,
+						"facing: south": 3379,
+						"facing: west": 3380,
+						"facing: east": 3381
+					}
+				},
+				"Frosted Ice": {
+					"age: 0": 3392,
+					"age: 1": 3393,
+					"age: 2": 3394,
+					"age: 3": 3395
+				},
+				"Magma": 3408,
+				"Nether Wart Block": 3424,
+				"Red Nether Brick": 3440,
+				"Bone Block": {
+					"axis: x": 3460,
+					"axis: y": 3456,
+					"axis: z": 3464
+				},
+				"Structure Void": 3472,
+				"Observer": {
+					"facing: down": {
+						"powered: true": 3496,
+						"powered: false": 3488
+					},
+					"facing: up": {
+						"powered: true": 3497,
+						"powered: false": 3489
+					},
+					"facing: north": {
+						"powered: true": 3498,
+						"powered: false": 3490
+					},
+					"facing: south": {
+						"powered: true": 3499,
+						"powered: false": 3491
+					},
+					"facing: west": {
+						"powered: true": 3500,
+						"powered: false": 3492
+					},
+					"facing: east": {
+						"powered: true": 3501,
+						"powered: false": 3493
+					}
+				},
+				"White Shulker Box": {
+					"facing: down": 3504,
+					"facing: up": 3505,
+					"facing: north": 3506,
+					"facing: south": 3507,
+					"facing: west": 3508,
+					"facing: east": 3509
+				},
+				"Orange Shulker Box": {
+					"facing: down": 3520,
+					"facing: up": 3521,
+					"facing: north": 3522,
+					"facing: south": 3523,
+					"facing: west": 3524,
+					"facing: east": 3525
+				},
+				"Magenta Shulker Box": {
+					"facing: down": 3536,
+					"facing: up": 3537,
+					"facing: north": 3538,
+					"facing: south": 3539,
+					"facing: west": 3540,
+					"facing: east": 3541
+				},
+				"Light Blue Shulker Box": {
+					"facing: down": 3552,
+					"facing: up": 3553,
+					"facing: north": 3554,
+					"facing: south": 3555,
+					"facing: west": 3556,
+					"facing: east": 3557
+				},
+				"Yellow Shulker Box": {
+					"facing: down": 3568,
+					"facing: up": 3569,
+					"facing: north": 3570,
+					"facing: south": 3571,
+					"facing: west": 3572,
+					"facing: east": 3573
+				},
+				"Lime Shulker Box": {
+					"facing: down": 3584,
+					"facing: up": 3585,
+					"facing: north": 3586,
+					"facing: south": 3587,
+					"facing: west": 3588,
+					"facing: east": 3589
+				},
+				"Pink Shulker Box": {
+					"facing: down": 3600,
+					"facing: up": 3601,
+					"facing: north": 3602,
+					"facing: south": 3603,
+					"facing: west": 3604,
+					"facing: east": 3605
+				},
+				"Gray Shulker Box": {
+					"facing: down": 3616,
+					"facing: up": 3617,
+					"facing: north": 3618,
+					"facing: south": 3619,
+					"facing: west": 3620,
+					"facing: east": 3621
+				},
+				"Silver Shulker Box": {
+					"facing: down": 3632,
+					"facing: up": 3633,
+					"facing: north": 3634,
+					"facing: south": 3635,
+					"facing: west": 3636,
+					"facing: east": 3637
+				},
+				"Cyan Shulker Box": {
+					"facing: down": 3648,
+					"facing: up": 3649,
+					"facing: north": 3650,
+					"facing: south": 3651,
+					"facing: west": 3652,
+					"facing: east": 3653
+				},
+				"Purple Shulker Box": {
+					"facing: down": 3664,
+					"facing: up": 3665,
+					"facing: north": 3666,
+					"facing: south": 3667,
+					"facing: west": 3668,
+					"facing: east": 3669
+				},
+				"Blue Shulker Box": {
+					"facing: down": 3680,
+					"facing: up": 3681,
+					"facing: north": 3682,
+					"facing: south": 3683,
+					"facing: west": 3684,
+					"facing: east": 3685
+				},
+				"Brown Shulker Box": {
+					"facing: down": 3696,
+					"facing: up": 3697,
+					"facing: north": 3698,
+					"facing: south": 3699,
+					"facing: west": 3700,
+					"facing: east": 3701
+				},
+				"Green Shulker Box": {
+					"facing: down": 3712,
+					"facing: up": 3713,
+					"facing: north": 3714,
+					"facing: south": 3715,
+					"facing: west": 3716,
+					"facing: east": 3717
+				},
+				"Red Shulker Box": {
+					"facing: down": 3728,
+					"facing: up": 3729,
+					"facing: north": 3730,
+					"facing: south": 3731,
+					"facing: west": 3732,
+					"facing: east": 3733
+				},
+				"Black Shulker Box": {
+					"facing: down": 3744,
+					"facing: up": 3745,
+					"facing: north": 3746,
+					"facing: south": 3747,
+					"facing: west": 3748,
+					"facing: east": 3749
+				},
+				"White Glazed Terracotta": {
+					"facing: north": 3762,
+					"facing: south": 3760,
+					"facing: west": 3761,
+					"facing: east": 3763
+				},
+				"Orange Glazed Terracotta": {
+					"facing: north": 3778,
+					"facing: south": 3776,
+					"facing: west": 3777,
+					"facing: east": 3779
+				},
+				"Magenta Glazed Terracotta": {
+					"facing: north": 3794,
+					"facing: south": 3792,
+					"facing: west": 3793,
+					"facing: east": 3795
+				},
+				"Light Blue Glazed Terracotta": {
+					"facing: north": 3810,
+					"facing: south": 3808,
+					"facing: west": 3809,
+					"facing: east": 3811
+				},
+				"Yellow Glazed Terracotta": {
+					"facing: north": 3826,
+					"facing: south": 3824,
+					"facing: west": 3825,
+					"facing: east": 3827
+				},
+				"Lime Glazed Terracotta": {
+					"facing: north": 3842,
+					"facing: south": 3840,
+					"facing: west": 3841,
+					"facing: east": 3843
+				},
+				"Pink Glazed Terracotta": {
+					"facing: north": 3858,
+					"facing: south": 3856,
+					"facing: west": 3857,
+					"facing: east": 3859
+				},
+				"Gray Glazed Terracotta": {
+					"facing: north": 3874,
+					"facing: south": 3872,
+					"facing: west": 3873,
+					"facing: east": 3875
+				},
+				"Silver Glazed Terracotta": {
+					"facing: north": 3890,
+					"facing: south": 3888,
+					"facing: west": 3889,
+					"facing: east": 3891
+				},
+				"Cyan Glazed Terracotta": {
+					"facing: north": 3906,
+					"facing: south": 3904,
+					"facing: west": 3905,
+					"facing: east": 3907
+				},
+				"Purple Glazed Terracotta": {
+					"facing: north": 3922,
+					"facing: south": 3920,
+					"facing: west": 3921,
+					"facing: east": 3923
+				},
+				"Blue Glazed Terracotta": {
+					"facing: north": 3938,
+					"facing: south": 3936,
+					"facing: west": 3937,
+					"facing: east": 3939
+				},
+				"Brown Glazed Terracotta": {
+					"facing: north": 3954,
+					"facing: south": 3952,
+					"facing: west": 3953,
+					"facing: east": 3955
+				},
+				"Green Glazed Terracotta": {
+					"facing: north": 3970,
+					"facing: south": 3968,
+					"facing: west": 3969,
+					"facing: east": 3971
+				},
+				"Red Glazed Terracotta": {
+					"facing: north": 3986,
+					"facing: south": 3984,
+					"facing: west": 3985,
+					"facing: east": 3987
+				},
+				"Black Glazed Terracotta": {
+					"facing: north": 4002,
+					"facing: south": 4000,
+					"facing: west": 4001,
+					"facing: east": 4003
+				},
+				"Concrete": {
+					"color: white": 4016,
+					"color: orange": 4017,
+					"color: magenta": 4018,
+					"color: light_blue": 4019,
+					"color: yellow": 4020,
+					"color: lime": 4021,
+					"color: pink": 4022,
+					"color: gray": 4023,
+					"color: silver": 4024,
+					"color: cyan": 4025,
+					"color: purple": 4026,
+					"color: blue": 4027,
+					"color: brown": 4028,
+					"color: green": 4029,
+					"color: red": 4030,
+					"color: black": 4031
+				},
+				"Concrete Powder": {
+					"color: white": 4032,
+					"color: orange": 4033,
+					"color: magenta": 4034,
+					"color: light_blue": 4035,
+					"color: yellow": 4036,
+					"color: lime": 4037,
+					"color: pink": 4038,
+					"color: gray": 4039,
+					"color: silver": 4040,
+					"color: cyan": 4041,
+					"color: purple": 4042,
+					"color: blue": 4043,
+					"color: brown": 4044,
+					"color: green": 4045,
+					"color: red": 4046,
+					"color: black": 4047
+				},
+				"Structure Block": {
+					"mode: SAVE": 4080,
+					"mode: LOAD": 4081,
+					"mode: CORNER": 4082,
+					"mode: DATA": 4083
+				}
+			}
 		}
 	}
 }
-
