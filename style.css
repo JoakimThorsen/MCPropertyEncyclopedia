@@ -1,12 +1,7 @@
-* {
-    /* font-family: monospace, 'Courier New'; */
-    /* font-family: 'Montserrat', sans-serif; */
-}
-
 body {
     /* padding-bottom: 70px; */
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("assets/blockpropertythingy.png") no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("assets/blockpropertythingy_255kb.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
