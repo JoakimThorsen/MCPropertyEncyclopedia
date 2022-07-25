@@ -418,7 +418,7 @@ function display_headers_and_table() {
                     <a role="button" class="dropdown-option modify-filter" property="${property_id}" value="${option}">
                         <span class="dot ${color ? color : 'display-none'}"></span>
                         <span class="justify-start">${option}</span>
-                        <span class="glyphicon glyphicon-ok${filter_obj[property_id]?.includes(option) ? ' display-none' : ''}">
+                        <span class="glyphicon glyphicon-ok${filter_obj[property_id]?.includes(String(option)) ? ' display-none' : ''}">
                         </span></a></li>`
         });
         append_data += `</div></ul></div></th>`;
@@ -971,9 +971,9 @@ function parse_custom_url(value) {
     if (value === '') {
         return false;
     }
-    if (value * 1 == value) {
-        return parseFloat(value);
-    }
+    // if (value * 1 == value) {
+    //     return parseFloat(value);
+    // }
     return value
 }
 
