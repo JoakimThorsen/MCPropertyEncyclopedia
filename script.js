@@ -206,18 +206,29 @@ function initialize_page() {
         location.reload(true);
     });
 
-    $('.radio-settings').click(function () {
+    $('.radio-settings, .toggle-settings').each(function () {
         const setting = $(this).attr("setting");
-        const value = $(this).attr("value");
+        const value = $(this).attr("value") ?? "true";
+        if (settings_obj[setting] === value) {
+            $(this).addClass('active');
+        }
+    });
+    
+    $('.radio-settings, .toggle-settings').click(function () {
+        const setting = $(this).attr("setting");
+        const value = $(this).attr("value") ?? "true";
+        const rerender = $(this).attr("rerender");
         if (settings_obj[setting] === value) {
             delete settings_obj[setting];
         } else {
             settings_obj[setting] = value;
         }
-        $(this).siblings('a').removeClass('active');
+        $(this).siblings('a.radio-settings').removeClass('active');
         $(this).toggleClass('active');
         update_window_history();
-        display_headers_and_table();
+        if(rerender !== "false") {
+            display_headers_and_table();
+        }
     });
 
     $('#search').val(search);
@@ -688,7 +699,7 @@ function display_results() {
         }
 
         function combine_elements(first, second) {
-            console.log(first, second)
+            // console.log(first, second)
             if(JSON.stringify(first) == JSON.stringify(second)) {
                 return first;
             }
@@ -752,10 +763,12 @@ function display_results() {
     function get_data_cell(entry, property_name, top_level = true) {
         let return_data;
         if (typeof (entry) == 'object' && entry != null) {
+            return_data = `<td class="nested-cell">`;
             if (top_level && (get_all_values(entry).length > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2)) {
-                return_data = `<td class="nested-cell"><button class="btn expand-btn" type="button" data-toggle="collapse-next">Expand</button>\n<table class="table table-bordered table-hover nested-table collapse"><tbody>`;
+                return_data += `<button class="btn expand-btn ${settings_obj.hide_expand_buttons ? `display-none` : ""}" type="button" data-toggle="collapse-next">Expand</button>\n`
+                return_data += `<table class="table table-bordered table-hover nested-table expandable ${settings_obj.expand_tables ? "" : `display-none`}"><tbody>`;
             } else {
-                return_data = `<td class="nested-cell"><table class="table table-bordered table-hover nested-table"><tbody>`;
+                return_data += `<table class="table table-bordered table-hover nested-table"><tbody>`;
             }
 
             if (Array.isArray(entry)) {
@@ -781,7 +794,8 @@ function display_results() {
         const $target = $(this).next();
         // Not sure which one I prefer:
         // $target.toggle("toggle"); // With toggle animation/delay
-        $target.toggle(); // No toggle animation/delay
+        // $target.toggle(); // No toggle animation/delay
+        $target.toggleClass("display-none"); // uses a class instead
     });
     $('#output_table').on('column-reorder.dt', function () {
         reorder_selection_arr();

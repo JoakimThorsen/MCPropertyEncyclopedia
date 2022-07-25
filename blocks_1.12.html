@@ -135,7 +135,7 @@
         <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="collapse-next">
             <i class="fas fa-tools"></i>
         </button>
-        <div class="collapse">
+        <div class="display-none">
             <div class="settings">
 
                 <div class="settings-box">
@@ -185,12 +185,12 @@
 
                 <div class="settings-box">
                     <p>Expandable tables:</p>
-                    <div class="btn-group">
-                        <a role="button" class="btn btn-default" type="button" onclick="$('table.collapse').toggle();">Expand
-                            All</a>
-                        <a role="button" class="btn btn-default" type="button" onclick="$('.expand-btn').toggle();">Hide
-                            Buttons</a>
-                    </div>
+                    <a role="button" class="btn btn-default toggle-settings" type="button" setting="expand_tables" rerender="false" onclick="$('table.expandable').toggleClass('display-none');">
+                        Expand All
+                    </a>
+                    <a role="button" class="btn btn-default toggle-settings" type="button" setting="hide_expand_buttons" rerender="false" onclick="$('.expand-btn').toggleClass('display-none');">
+                        Hide Buttons
+                    </a>
                 </div>
 
                 <div class="settings-box">
