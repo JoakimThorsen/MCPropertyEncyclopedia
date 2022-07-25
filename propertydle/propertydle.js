@@ -8,7 +8,7 @@ function load_data(filename) {
         'success': function (d) {
             data = d;
             initialize_page();
-            new_game();
+            // new_game();
         }
     });
 }
@@ -31,21 +31,45 @@ function initialize_page() {
     });
 }
 
-function new_game() {
+function new_game(daily_game = false) {
+    // Switch to game controls
+    $('#start-game').addClass('display-none');
+    $('#game-inputs').removeClass('display-none');
+    $('#explanation-toggle-button').removeClass('display-none');
     
     // Clear existing header and table body data
     $('#output_table').find('thead>tr>th').remove();
     $('#output_table').find('tbody>tr').remove();
     
-    // exclude variants "property"
-    delete data.properties.variants;
+    if (localStorage.getItem("Propertydle-hide-explanation") != 'true') {
+        $('#about-body').toggle();
+    }
 
-    /* this will become a while or something */
+    let random;
+    if(daily_game) {
+        // get current day by dividing unix time by 1000*60*60*24
+        // then offset it to 18th of july 2022 because who cares about the 1970s?
+        current_day = Math.floor(Date.now() / 86400000 - 19197);
+        random = mulberry32(current_day)
+        $("#current-day").text(current_day);
+        $("#infinite-mode").addClass('display-none');
+        $("#daily-mode").removeClass('display-none');
+    } else {
+        $("#daily-mode").addClass('display-none');
+        $("#infinite-mode").removeClass('display-none');
+        random = Math.random;
+    }
+    
+    // exclude "variants" and "wiki page" "properties"
+    delete data.properties.variants;
+    delete data.properties.wiki_page;
+
+    /* block selection/unique property selector */
     selection: while(true) {
         // random block
-        secret_block = data.key_list[(Math.random() * data.key_list.length) | 0];
+        secret_block = data.key_list[(random() * data.key_list.length) | 0];
         
-        var random_order_props = Object.keys(data.properties).sort(() => .5 - Math.random());
+        var random_order_props = Object.keys(data.properties).sort(() => .5 - random());
         selection_arr = random_order_props.slice(0,8)
         random_order_props = random_order_props.slice(8, random_order_props.length)
 
@@ -65,7 +89,7 @@ function new_game() {
         }
     }
     
-    selection_arr = selection_arr.sort(() => .5 - Math.random());
+    selection_arr = selection_arr.sort(() => .5 - random());
 
     function unique_solutions(secret_block, selection_arr) {
         var options_left = deepCopy(data.key_list);
@@ -143,9 +167,11 @@ function new_game() {
         $('#output_table').children('thead').children('tr').append(append_data);
     });
 
-    var sprite = data.sprites[secret_block];
-    
-    $('#sprite-hint').html(`Average sprite color: \ \ \ \ <span class="sprite unicolor-block-sprite" style="background-position:${sprite[1]}px ${sprite[2]}px"></span>`);
+    if(!daily_game) {
+        var sprite = data.sprites[secret_block] ?? ["block-sprite", -240, -16];
+        // $('#sprite-hint').removeClass("display-none");
+        $('#sprite-hint').html(`<button class="btn btn-default" onclick="toggle_sprite_hint(this)"><span>Click to reveal sprite hint</span><span class="display-none">Average sprite color:\ \ \ \ </span><span class="sprite unicolor-block-sprite display-none" style="background-position:${sprite[1]}px ${sprite[2]}px"></span></button>`);
+    }
 
 }
 
@@ -215,7 +241,7 @@ function guess(latest_guess) {
     // Table outputting
     var append_string = "";
     output_data.forEach(entry => {
-        var sprite = data.sprites[entry[page]];
+        var sprite = data.sprites[entry[page]] ?? ["block-sprite", -240, -16];
         append_string += "<tr>";
         append_string += `<td><span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span></td>`;
         for(var [property_id, value] of Object.entries(entry)) {
@@ -238,7 +264,7 @@ function guess(latest_guess) {
     } );
 
     if(latest_guess == secret_block) {
-        alert('You did it!')
+        alert(`You did it! You got it in ${guesses.length} ${guesses.length === 1 ? 'guess' : 'guesses'}`)
     }
 }
 function deepCopy(obj) {
@@ -346,5 +372,24 @@ function get_all_values(input, unique_only = false) {
         return return_arr;
     } else {
         return [input];
+    }
+}
+
+function toggle_sprite_hint(button) {
+    $(button).children().toggleClass("display-none");
+}
+
+function save_explanation() {
+    let hidden = localStorage.getItem("Propertydle-hide-explanation") == 'true';
+    
+    localStorage.setItem("Propertydle-hide-explanation", !hidden)
+}
+
+function mulberry32(a) {
+    return function() {
+      a |= 0; a = a + 0x6D2B79F5 | 0;
+      var t = Math.imul(a ^ a >>> 15, 1 | a);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+      return ((t ^ t >>> 14) >>> 0) / 4294967296;
     }
 }

@@ -68,9 +68,17 @@ input[type=search]::-webkit-search-cancel-button {
           <li><a class="navbar-item" href="../entities.html">Entities</a></li>
           <li role="separator" class="vertical-divider hidden-xs"></li>
           <li><a class="navbar-item" href="../items.html">Items</a></li>
+          <li role="separator" class="vertical-divider hidden-xs"></li>
+          <li><a class="navbar-item" href="../blocks_1.12.html" style="color: #ff4040;">1.12 Blocks</a></li>
+          <li role="separator" class="vertical-divider hidden-xs"></li>
+          <li><a class="navbar-item" href="../propertydle/">Propertydle</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li role="separator" class="horizontal-divider visible-xs"></li>
+            <li><a class="navbar-item" href="https://discord.gg/RUEVmTahYg"><i class="fab fa-discord"></i></a></li>
+            <li role="separator" class="vertical-divider hidden-xs"></li>
+            <li><a class="navbar-item" href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia"><i class="fab fa-github"></i></a></li>
+            <li role="separator" class="vertical-divider hidden-xs"></li>
             <li><a class="navbar-item" href="../about.html">About</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
@@ -81,15 +89,17 @@ input[type=search]::-webkit-search-cancel-button {
   <div class="col-md-1 col-lg-3"></div>
   <div class="col-md-10 col-lg-6">
     <h1 class="text-center" style="font-size: 40px;">Propertydle - A Minecraft Block Guessing Game</h1>
-    <button class="btn expand-btn" type="button" data-toggle="collapse-next">Toggle explanation</button>
+    <button id="explanation-toggle-button" class="btn expand-btn display-none" type="button" data-toggle="collapse-next" onclick="save_explanation();">Toggle explanation</button>
     <div id="about-body" class="panel panel-default collapse in">
       <p class="about-text">Yes. This is a thing now.</p>
       <p class="about-text">Your goal is to find the solution by guessing different Minecraft blocks and getting clues based on which properties match the target block.</p>
       <p class="about-text">If the cell is <span class="cf-yes" style="color:black;text-shadow: none;">Green</span>, then this property's value matches that of the solution.</p>
       <p class="about-text">If it is <span class="cf-no" style="color:black;text-shadow: none;">Red</span>, then this is not the case.</p>
-      <p class="about-text">If the solution has multiple values for this property, then each correct value will be marked <span class="cf-neutral" style="color:black;text-shadow: none;">Yellow</span>.</p>
+      <p class="about-text">If the solution has multiple values for this property, then each correct value will be marked <span class="cf-neutral" style="color:black;text-shadow: none;">Yellow</span>, until you get them all right.</p>
       <p class="about-text">For numbers, the color denotes wether your guess is <span style="background-color: hsl(276, 55%, 66%);">Lower</span> or <span style="background-color: hsl(212, 100%, 82%);">Higher</span> than the answer, or if your guess is somewhere <span style="background-color: hsl(175, 68%, 78.5%);">in between</span> the values of the answer</p>
     </div>
+    <h2 id="daily-mode" class="text-center display-none" style="font-size: 40px;">Daily Mode: day <span id="current-day">?</span></h1>
+    <h2 id="infinite-mode" class="text-center display-none" style="font-size: 40px;">Infinite Mode</h1>
   </div>
   <div class="col-md-1 col-lg-3"></div>
   <div class="col-sm-12">
@@ -103,15 +113,24 @@ input[type=search]::-webkit-search-cancel-button {
         </tbody>
       </table>
     </div>
-    <div class="form-inline text-center">
-        <button class="btn btn-default" id="sprite-hint"></button>
-        <input list="blocks" class="form-control" id="search" placeholder="Guess a block..." autofocus type="search" autocomplete="off">
-        <datalist id="blocks"></datalist>
-        <button class="btn btn-primary" onclick="guess($(this).siblings('input')[0].value)">Guess (Enter)</button>
+    <div id="start-game">
+        <div class="form-inline text-center">
+            <button class="btn btn-primary" onclick="new_game(true)">Daily Propertydle</button>
+            <button class="btn btn-default" onclick="new_game()">Infinite Propertydle</button>
+        </div>
     </div>
-    <div class="form-inline text-center">
-        <button class="btn btn-danger" onclick="if(confirm('Are you sure you want to reveal the answer?')) alert('The secret block was: ' + secret_block)">Reveal Answer</button>
-        <button class="btn btn-danger" onclick="if(confirm('Are you sure you want to reset?')) new_game()">Restart the Game</button>
+    <div class="display-none" id="game-inputs">
+        <div class="form-inline text-center">
+            <span id="sprite-hint"></span>
+            <input list="blocks" class="form-control" id="search" placeholder="Guess a block..." autofocus type="search" autocomplete="off">
+            <datalist id="blocks"></datalist>
+            <button class="btn btn-primary" onclick="guess($(this).siblings('input')[0].value)">Guess (Enter)</button>
+        </div>
+        <div class="form-inline text-center">
+            <button class="btn btn-danger" onclick="if(confirm('Are you sure you want to reveal the answer?')) alert('The secret block was: ' + secret_block)">Reveal Answer</button>
+            <button class="btn btn-danger" onclick="if(confirm('Are you sure you want to reset?')) new_game()">Restart the Game</button>
+            <button class="btn btn-danger" onclick="if(confirm('Are you sure you want to return to the menu?')) location.reload();">Return to Menu</button>
+        </div>
     </div>
   </div>
   <button onclick="scrollToTop()" id="scrollButton" title="Go to top">
