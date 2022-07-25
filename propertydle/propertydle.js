@@ -63,6 +63,7 @@ function new_game(daily_game = false) {
     // exclude "variants" and "wiki page" "properties"
     delete data.properties.variants;
     delete data.properties.wiki_page;
+    delete data.properties.onenineteen;
 
     /* block selection/unique property selector */
     selection: while(true) {
