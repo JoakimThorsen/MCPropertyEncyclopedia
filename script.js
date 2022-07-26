@@ -269,7 +269,7 @@ function display_headers_and_table() {
                 if (val * 1 == val && property.size_factor !== 1) {
                     val *= property.size_factor;
                 }
-                return val
+                return String(val)
             });
             }
         );
@@ -560,7 +560,7 @@ function display_results() {
                         return output_obj;
                     }
                 } else {
-                    input_element = input_element ?? property.default_value ?? "No defualt value has been assigned.";
+                    input_element = input_element ?? property.default_value ?? "No default value has been assigned.";
                     if (input_element * 1 == input_element && size_factor !== 1) {
                         input_element *= size_factor;
                     }
@@ -852,6 +852,7 @@ function formatting_color(value, property_name, class_exists = false) {
     let color = "";
     // console.log(value, property_name);
 
+    let found_key;
     if (found_key = Object.keys(data.conditional_formatting).find(key_regex => new RegExp(`^${key_regex}$`).test(value))) {
         color = data.conditional_formatting[found_key];
         if (!class_exists) {
@@ -863,7 +864,7 @@ function formatting_color(value, property_name, class_exists = false) {
     if (typeof data.properties[property_name] !== 'undefined' || value * 1 == value) {
         let hue, sat, lum;
         let hslA, hslB;
-        let scale_value;
+        let scale_value, max;
         if (value * 1 == value) {
             scale_value = value * 1;
 
@@ -955,16 +956,16 @@ function serialize_custom_url(value) {
 // Only supports objects at the top level, nested objects will break parsing.
 function parse_custom_url(value) {
     if (value.charAt(0) === '(') {
-        split = value.split(';')
+        const split = value.split(';');
         const result = {};
         split.forEach(obj_str => {
             obj_str = obj_str.substr(1, obj_str.length - 2);
-            [key, ...val] = obj_str.split(':');
+            const [key, ...val] = obj_str.split(':');
             result[key] = parse_custom_url(val.join());
         })
         return result;
     }
-    split = value.split(',')
+    const split = value.split(',');
     if (split.length > 1) {
         return split.map(v => parse_custom_url(v))
     }
