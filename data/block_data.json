@@ -540,7 +540,8 @@
 				"shape_update_on_interaction",
 				"shape_update_from_environment",
 				"obstructs_cactus",
-				"instrument"
+				"instrument",
+				"connects_to_panes"
 			]
 		},
 		"placement_condition",
@@ -6725,7 +6726,7 @@
 					"Tall": "No"
 				},
 				"Fungi": "Yes",
-				"Grass": "Yes",
+				"Grass Block": "Yes",
 				"Gravel": "Yes",
 				"Melon": "Yes",
 				"Moss Block": "Yes",
@@ -9818,7 +9819,7 @@
 			}
 		},
 		"shape_update_on_interaction": {
-			"property_name": "Shape Update On Player Interaction",
+			"property_name": "Shape Update On Interaction",
 			"default_value": "No",
 			"default_selection": false,
 			"relative_gradient": true,
@@ -9829,7 +9830,7 @@
 				"Bee Nest": "Once with item",
 				"Beehive": "Once with item",
 				"Bell": "With hand",
-				"Big Dripleaf": "Any touching entity",
+				"Big Dripleaf": "Touching entity",
 				"Blast Furnace": "Once",
 				"Brewing Stand": "With hand",
 				"Buttons": "With hand",
@@ -9843,11 +9844,14 @@
 				},
 				"Crops": "Limited",
 				"Daylight Detector": "With hand",
+                "Detector Rail": "Touching entity",
 				"Dirt": "Once",
 				"Doors": {
 					"Iron": "No",
 					"Wooden": "With hand"
 				},
+                "Dragon Egg": "With hand",
+                "End Portal Frame": "Once with item",
 				"Farmland": "Once",
 				"Fence Gates": "With hand",
 				"Flower Pot": {
@@ -9869,27 +9873,27 @@
 				"Mycelium": "Once with item",
 				"Note Block": "With hand",
 				"Podzol": "Once with item",
-				"Pressure Plates": "Any touching entity",
+				"Pressure Plates": "Touching entity",
 				"Pumpkin": "Once with item",
 				"Redstone Comparator": "With hand",
 				"Redstone Dust": {
 					"Connected": "No",
 					"Dot": "With hand"
 				},
-				"Redstone Ore": ["With hand", "Any touching entity"],
+				"Redstone Ore": ["With hand", "Touching entity"],
 				"Redstone Repeater": "With hand",
 				"Respawn Anchor": "Limited with item",
 				"Saplings": "With item",
 				"Shulker Box": "With hand",
 				"Smoker": "Once",
-				"Snow": "Limited With item",
+				"Snow": "Limited with item",
 				"Target": "With item",
 				"Trapdoors": {
 					"Iron": "No",
 					"Wooden": "With hand"
 				},
 				"Trapped Chest": "With hand",
-				"Tripwire": "Any touching entity"
+				"Tripwire": "Touching entity"
 			}
 		},
 		"shape_update_from_environment": {
@@ -9898,8 +9902,10 @@
 			"default_selection": false,
 			"relative_gradient": true,
 			"entries": {
+				"Activator Rail": "On reaction",
 				"Bee Nest": "Other",
 				"Beehive": "Other",
+				"Bell": "Other",
 				"Campfire": "On reaction",
 				"Cauldron": "Weather Tick",
 				"Cobblestone": {
@@ -9913,16 +9919,19 @@
 					"Melon Stem<br>Pumpkin Stem": "On reaction"
 				},
 				"Daylight Detector": "Other",
+				"Farmland": "Other",
+				"Fences": "Other",
 				"Frosted Ice": "Weather Tick",
-				"Gravel": "On reaction",
+				"Glass Pane": "On reaction",
 				"Ice": "Weather Tick",
+				"Iron Bars": "Weather Tick",
 				"Lava": "On reaction",
 				"Leaves": "On reaction",
+				"Lightning Rod": "Weather Tick",
 				"Lodestone": "On reaction",
 				"Mushroom Blocks": "On reaction",
 				"Pressure Plates": "Other",
 				"Respawn Anchor": "On reaction",
-				"Sand": "On reaction",
 				"Scaffolding": "On reaction",
 				"Snow": "Weather Tick",
 				"Stairs": "On reaction",
@@ -10269,6 +10278,190 @@
 				"Wood": "<a href='https://minecraft.fandom.com/wiki/Wood'>Wood</a>",
 				"Wool": "<a href='https://minecraft.fandom.com/wiki/<a href='https://minecraft.fandom.com/wiki/Wool'>Wool</a>'><a href='https://minecraft.fandom.com/wiki/Wool'>Wool</a></a>"
 			}
+		},
+		"connects_to_panes": {
+			"property_name": "Connects To Panes (North)",
+			"property_description": "Whether a glass pane block will connect to this block. ",
+			"entries": {
+				"Activator Rail": "No",
+				"Air": "No",
+				"Amethyst Cluster": "No",
+				"Anvil": "No",
+				"Azalea": "No",
+				"Bamboo": "No",
+				"Banners": "No",
+				"Barrier": "No",
+				"Beds": "No",
+				"Bell": "No",
+				"Big Dripleaf": "No",
+				"Brewing Stand": "No",
+				"Buttons": "No",
+				"Cactus": "No",
+				"Cake": "No",
+				"Campfire": "No",
+				"Candles": "No",
+				"Carpets": "No",
+				"Cauldron": "No",
+				"Cave Vines": "No",
+				"Chain": "No",
+				"Chest": "No",
+				"Chorus Plant": "No",
+				"Cobweb": "No",
+				"Cocoa": "No",
+				"Conduit": "No",
+				"Coral Fans": "No",
+				"Corals": "No",
+				"Crops": "No",
+				"Daylight Detector": "No",
+				"Dead Bush": "No",
+				"Detector Rail": "No",
+				"Dirt Path": "No",
+				"Doors": {
+					"facing: north": "No",
+					"facing: south": {
+						"open: true": "No",
+						"open: false": "Yes"
+					},
+					"facing: west": {
+						"hinge: left": "No",
+						"hinge: right": {
+							"open: true": "Yes",
+							"open: false": "No"
+						}
+					},
+					"facing: east": {
+						"hinge: left": {
+							"open: true": "Yes",
+							"open: false": "No"
+						},
+						"hinge: right": "No"
+					}
+				},
+				"Dragon Egg": "No",
+				"Enchanting Table": "No",
+				"End Gateway": "No",
+				"End Portal": "No",
+				"End Portal Frame": "No",
+				"End Rod": "No",
+				"Ender Chest": "No",
+				"Farmland": "No",
+				"Fence Gates": "No",
+				"Fences": "No",
+				"Fern": "No",
+				"Fire": "No",
+				"Flower Pot": "No",
+				"Flowers": "No",
+				"Frogspawn": "No",
+				"Fungi": "No",
+				"Glow Lichen": "No",
+				"Grass": "No",
+				"Grindstone": "No",
+				"Hanging Roots": "No",
+				"Heads": "No",
+				"Honey Block": "No",
+				"Hopper": "No",
+				"Jack o'Lantern": "No",
+				"Kelp": "No",
+				"Ladder": {
+					"facing: north<br>facing: west<br>facing: east": "No",
+					"facing: south": "Yes"
+				},
+				"Lantern": "No",
+				"Lava": "No",
+				"Leaves": "No",
+				"Lectern": "No",
+				"Lever": "No",
+				"Light Block": "No",
+				"Lightning Rod": "No",
+				"Lily Pad": "No",
+				"Mangrove Propagule": "No",
+				"Melon": "No",
+				"Moss Carpet": "No",
+				"Mushrooms": "No",
+				"Nether Portal": "No",
+				"Nether Sprouts": "No",
+				"Nether Wart": "No",
+				"Piston": {
+					"sticky_piston<br>piston": {
+						"extended: true": {
+							"facing: north<br>facing: east<br>facing: west<br>facing: up<br>facing: down": "No",
+							"facing: south": "Yes"
+						},
+						"extended: false": "Yes"
+					},
+					"piston_head": {
+						"facing: north": "Yes",
+						"facing: east<br>facing: south<br>facing: west<br>facing: up<br>facing: down": "No"
+					},
+					"moving_piston": "No"
+				},
+				"Pointed Dripstone": "No",
+				"Powder Snow": "No",
+				"Powered Rail": "No",
+				"Pressure Plates": "No",
+				"Pumpkin": "No",
+				"Rail": "No",
+				"Redstone Comparator": "No",
+				"Redstone Dust": "No",
+				"Redstone Repeater": "No",
+				"Redstone Torch": "No",
+				"Roots": "No",
+				"Saplings": "No",
+				"Scaffolding": "No",
+				"Sculk Sensor": "No",
+				"Sculk Shrieker": "No",
+				"Sculk Vein": "No",
+				"Sea Pickle": "No",
+				"Seagrass": "No",
+				"Shulker Box": "No",
+				"Signs": "No",
+				"Slabs": {
+					"type: top<br>type: bottom": "No",
+					"type: double": "Yes"
+				},
+				"Small Dripleaf": "No",
+				"Snow": {
+					"layers: 1<br>layers: 2<br>layers: 3<br>layers: 4<br>layers: 5<br>layers: 6<br>layers: 7": "No",
+					"layers: 8": "Yes"
+				},
+				"Spore Blossom": "No",
+				"Stairs": {
+					"facing: north": {
+						"shape: straight<br>shape: inner_left<br>shape: inner_right": "Yes",
+						"shape: outer_left<br>shape: outer_right": "No"
+					},
+					"facing: south": "No",
+					"facing: west": {
+						"shape: straight<br>shape: inner_left<br>shape: outer_left<br>shape: outer_right": "No",
+						"shape: inner_right": "Yes"
+					},
+					"facing: east": {
+						"shape: straight<br>shape: inner_right<br>shape: outer_left<br>shape: outer_right": "No",
+						"shape: inner_left": "Yes"
+					}
+				},
+				"Stonecutter": "No",
+				"Structure Void": "No",
+				"Sugar Cane": "No",
+				"Sweet Berry Bush": "No",
+				"Torch": "No",
+				"Trapdoors": {
+					"facing: north<br>facing: west<br>facing: east": "No",
+					"facing: south": {
+						"open: true": "Yes",
+						"open: false": "No"
+					}
+				},
+				"Trapped Chest": "No",
+				"Tripwire": "No",
+				"Tripwire Hook": "No",
+				"Turtle Egg": "No",
+				"Twisting Vines": "No",
+				"Vines": "No",
+				"Water": "No",
+				"Weeping Vines": "No"
+			},
+			"default_value": "Yes"
 		}
 	}
 }
