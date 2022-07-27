@@ -42,7 +42,7 @@ function new_game(daily_game = false) {
     $('#output_table').find('tbody>tr').remove();
     
     if (localStorage.getItem("Propertydle-hide-explanation") != 'true') {
-        $('#about-body').toggle();
+        $('#about-body').toggle(false);
     }
 
     let random;
