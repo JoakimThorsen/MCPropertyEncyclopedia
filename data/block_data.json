@@ -526,7 +526,6 @@
 		"gets_random_ticked",
 		"spawnable",
 		"tile_entity_data",
-		"opaque",
 		"map_color",
 		"wiki_page",
 		{
@@ -591,7 +590,9 @@
 			"category": "Light",
 			"contents": [
 				"luminosity",
-				"light blocking/filtering (Todo lol)"
+				"opaque",
+				"opacity",
+				"blocks_beacon_beam"
 			]
 		},
 		{
@@ -10462,6 +10463,438 @@
 				"Weeping Vines": "No"
 			},
 			"default_value": "Yes"
+		},
+		"blocks_beacon_beam": {
+			"property_name": "Blocks Beacon Beam",
+			"property_description": "Whether placing this block above a beacon will prevent its beam from forming, or stop its current one.",
+			"entries": {
+				"Activator Rail": "No",
+				"Air": "No",
+				"Amethyst Cluster": "No",
+				"Anvil": "No",
+				"Azalea": "No",
+				"Bamboo": "No",
+				"Banners": "No",
+				"Barrier": "No",
+				"Beacon": "No",
+				"Bedrock": "No",
+				"Beds": "No",
+				"Bell": "No",
+				"Big Dripleaf": "No",
+				"Brewing Stand": "No",
+				"Buttons": "No",
+				"Cactus": "No",
+				"Cake": "No",
+				"Campfire": "No",
+				"Candles": "No",
+				"Carpets": "No",
+				"Cauldron": "No",
+				"Cave Vines": "No",
+				"Chain": "No",
+				"Chest": "No",
+				"Chorus Flower": "No",
+				"Chorus Plant": "No",
+				"Cobweb": "No",
+				"Cocoa": "No",
+				"Composter": "No",
+				"Conduit": "No",
+				"Coral Fans": "No",
+				"Corals": "No",
+				"Crops": "No",
+				"Daylight Detector": "No",
+				"Dead Bush": "No",
+				"Detector Rail": "No",
+				"Dirt Path": "No",
+				"Doors": "No",
+				"Dragon Egg": "No",
+				"Enchanting Table": "No",
+				"End Gateway": "No",
+				"End Portal": "No",
+				"End Portal Frame": "No",
+				"End Rod": "No",
+				"Ender Chest": "No",
+				"Farmland": "No",
+				"Fence Gates": "No",
+				"Fences": "No",
+				"Fern": "No",
+				"Fire": "No",
+				"Flower Pot": "No",
+				"Flowers": "No",
+				"Frogspawn": "No",
+				"Frosted Ice": "No",
+				"Fungi": "No",
+				"Glass": "No",
+				"Glass Pane": "No",
+				"Glow Lichen": "No",
+				"Grass": "No",
+				"Grindstone": "No",
+				"Hanging Roots": "No",
+				"Heads": "No",
+				"Honey Block": "No",
+				"Hopper": "No",
+				"Ice": "No",
+				"Iron Bars": "No",
+				"Kelp": "No",
+				"Ladder": "No",
+				"Lantern": "No",
+				"Lava": "No",
+				"Leaves": "No",
+				"Lectern": "No",
+				"Lever": "No",
+				"Light Block": "No",
+				"Lightning Rod": "No",
+				"Lily Pad": "No",
+				"Mangrove Propagule": "No",
+				"Mangrove Roots": "No",
+				"Moss Carpet": "No",
+				"Mushrooms": "No",
+				"Nether Portal": "No",
+				"Nether Sprouts": "No",
+				"Nether Wart": "No",
+				"Piston": {
+					"Sticky Piston<br>Piston": {
+						"extended: true": "No",
+						"extended: false": "Yes"
+					},
+					"Piston Head<br>Moving Piston": "No"
+				},
+				"Pointed Dripstone": "No",
+				"Powder Snow": "No",
+				"Powered Rail": "No",
+				"Pressure Plates": "No",
+				"Rail": "No",
+				"Redstone Comparator": "No",
+				"Redstone Dust": "No",
+				"Redstone Repeater": "No",
+				"Redstone Torch": "No",
+				"Roots": "No",
+				"Saplings": "No",
+				"Scaffolding": "No",
+				"Sculk Sensor": "No",
+				"Sculk Shrieker": "No",
+				"Sculk Vein": "No",
+				"Sea Pickle": "No",
+				"Seagrass": "No",
+				"Shulker Box": "No",
+				"Signs": "No",
+				"Slabs": {
+					"type: top<br>type: bottom": "No",
+					"type: double": "Yes"
+				},
+				"Slime Block": "No",
+				"Small Dripleaf": "No",
+				"Snow": {
+					"layers: 1<br>layers: 2<br>layers: 3<br>layers: 4<br>layers: 5<br>layers: 6<br>layers: 7": "No",
+					"layers: 8": "Yes"
+				},
+				"Spawner": "No",
+				"Spore Blossom": "No",
+				"Stained Glass": "No",
+				"Stained Glass Panes": "No",
+				"Stairs": "No",
+				"Stonecutter": "No",
+				"Structure Void": "No",
+				"Sugar Cane": "No",
+				"Sweet Berry Bush": "No",
+				"Torch": "No",
+				"Trapdoors": "No",
+				"Trapped Chest": "No",
+				"Tripwire": "No",
+				"Tripwire Hook": "No",
+				"Turtle Egg": "No",
+				"Twisting Vines": "No",
+				"Vines": "No",
+				"Walls": "No",
+				"Water": "No",
+				"Weeping Vines": "No"
+			},
+			"default_value": "Yes"
+		},
+		"opacity": {
+			"property_name": "Opacity",
+			"property_description": "How much light the block... blocks.",
+			"entries": {
+				"Activator Rail": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Air": 0,
+				"Amethyst Cluster": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Anvil": 0,
+				"Azalea": 0,
+				"Bamboo": 0,
+				"Banners": 0,
+				"Barrier": 0,
+				"Beacon": 1,
+				"Beds": 0,
+				"Bell": 0,
+				"Big Dripleaf": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Brewing Stand": 0,
+				"Buttons": 0,
+				"Cactus": 0,
+				"Cake": 0,
+				"Campfire": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Candles": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Carpets": 0,
+				"Cauldron": 0,
+				"Cave Vines": 0,
+				"Chain": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Chest": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Chorus Flower": 1,
+				"Chorus Plant": 1,
+				"Cobweb": 1,
+				"Cocoa": 0,
+				"Composter": 0,
+				"Conduit": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Coral Fans": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Corals": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Crops": 0,
+				"Daylight Detector": 0,
+				"Dead Bush": 0,
+				"Detector Rail": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Dirt Path": 0,
+				"Doors": 0,
+				"Dragon Egg": 0,
+				"Enchanting Table": 0,
+				"End Gateway": 1,
+				"End Portal": 0,
+				"End Portal Frame": 0,
+				"End Rod": 0,
+				"Ender Chest": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Farmland": 0,
+				"Fence Gates": 0,
+				"Fences": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Fern": 0,
+				"Fire": 0,
+				"Flower Pot": 0,
+				"Flowers": 0,
+				"Frogspawn": 0,
+				"Frosted Ice": 1,
+				"Fungi": 0,
+				"Glass": 0,
+				"Glass Pane": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Glow Lichen": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Grass": 0,
+				"Grindstone": 0,
+				"Hanging Roots": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Heads": 0,
+				"Honey Block": 1,
+				"Hopper": 0,
+				"Ice": 1,
+				"Iron Bars": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Kelp": 1,
+				"Ladder": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Lantern": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Lava": 1,
+				"Leaves": 1,
+				"Lectern": 0,
+				"Lever": 0,
+				"Light Block": 0,
+				"Lightning Rod": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Lily Pad": 0,
+				"Mangrove Propagule": {
+					"waterlogged: false": 0,
+					"waterlogged: true": 1
+				},
+				"Mangrove Roots": 1,
+				"Moss Carpet": 0,
+				"Mushrooms": 0,
+				"Nether Portal": 0,
+				"Nether Sprouts": 0,
+				"Nether Wart": 0,
+				"Piston": {
+					"Sticky Piston<br>Piston": {
+						"extended: true": 0,
+						"extended: false": 15
+					},
+					"Piston Head<br>Moving Piston": 0
+				},
+				"Pointed Dripstone": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Powder Snow": 1,
+				"Powered Rail": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Pressure Plates": 0,
+				"Rail": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Redstone Comparator": 0,
+				"Redstone Dust": 0,
+				"Redstone Repeater": 0,
+				"Redstone Torch": 0,
+				"Roots": 0,
+				"Saplings": 0,
+				"Scaffolding": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Sculk Sensor": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Sculk Shrieker": 1,
+				"Sculk Vein": {
+					"down: false": {
+						"east: false": {
+							"north: false": {
+								"south: false": {
+									"up: false": {
+										"waterlogged: false": {
+											"west: false": 1,
+											"west: true": 0
+										},
+										"waterlogged: true": 1
+									},
+									"up: true": {
+										"waterlogged: false": 0,
+										"waterlogged: true": 1
+									}
+								},
+								"south: true": {
+									"waterlogged: false": 0,
+									"waterlogged: true": 1
+								}
+							},
+							"north: true": {
+								"waterlogged: false": 0,
+								"waterlogged: true": 1
+							}
+						},
+						"east: true": {
+							"waterlogged: false": 0,
+							"waterlogged: true": 1
+						}
+					},
+					"down: true": {
+						"waterlogged: false": 0,
+						"waterlogged: true": 1
+					}
+				},
+				"Sea Pickle": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Seagrass": 1,
+				"Shulker Box": 1,
+				"Signs": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Slabs": {
+					"type: top<br>type: bottom": {
+						"waterlogged: true": 1,
+						"waterlogged: false": 0
+					},
+					"type: double": 15
+				},
+				"Slime Block": 1,
+				"Small Dripleaf": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Snow": {
+					"layers: 1<br>layers: 2<br>layers: 3<br>layers: 4<br>layers: 5<br>layers: 6<br>layers: 7": 0,
+					"layers: 8": 15
+				},
+				"Spawner": 1,
+				"Spore Blossom": 0,
+				"Stained Glass": 0,
+				"Stained Glass Panes": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Stairs": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Stonecutter": 0,
+				"Structure Void": 0,
+				"Sugar Cane": 0,
+				"Sweet Berry Bush": 0,
+				"Torch": 0,
+				"Trapdoors": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Trapped Chest": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Tripwire": 0,
+				"Tripwire Hook": 0,
+				"Turtle Egg": 0,
+				"Twisting Vines": 0,
+				"Vines": 0,
+				"Walls": {
+					"waterlogged: true": 1,
+					"waterlogged: false": 0
+				},
+				"Water": 1,
+				"Weeping Vines": 0
+			},
+			"default_value": 15
 		}
 	}
 }
