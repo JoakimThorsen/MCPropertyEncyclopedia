@@ -8724,7 +8724,10 @@
 			"entries": {
 				"Activator Rail": "<span class='dot CLEAR'></span> CLEAR",
 				"Air": "<span class='dot CLEAR'></span> CLEAR",
-				"Amethyst Cluster": "<span class='dot PURPLE'></span> PURPLE",
+				"Amethyst Cluster": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot PURPLE'></span> PURPLE"
+				},
 				"Ancient Debris": "<span class='dot BLACK'></span> BLACK",
 				"Andesite": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
 				"Anvil": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
@@ -8808,7 +8811,10 @@
 				"Bee Nest": "<span class='dot YELLOW'></span> YELLOW",
 				"Beehive": "<span class='dot OAK_TAN'></span> OAK_TAN",
 				"Bell": "<span class='dot GOLD'></span> GOLD",
-				"Big Dripleaf": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
+				"Big Dripleaf": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot DARK_GREEN'></span> DARK_GREEN"
+				},
 				"Blackstone": "<span class='dot BLACK'></span> BLACK",
 				"Blast Furnace": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
 				"Block of Amethyst": "<span class='dot PURPLE'></span> PURPLE",
@@ -8840,25 +8846,79 @@
 				"Cactus": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
 				"Cake": "<span class='dot CLEAR'></span> CLEAR",
 				"Calcite": "<span class='dot TERRACOTTA_WHITE'></span> TERRACOTTA_WHITE",
-				"Campfire": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
+				"Campfire": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN"
+				},
 				"Candles": {
-					"Candle": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"White Candle": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY",
-					"Orange Candle": "<span class='dot ORANGE'></span> ORANGE",
-					"Magenta Candle": "<span class='dot MAGENTA'></span> MAGENTA",
-					"Light Blue Candle": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE",
-					"Yellow Candle": "<span class='dot YELLOW'></span> YELLOW",
-					"Lime Candle": "<span class='dot LIME'></span> LIME",
-					"Pink Candle": "<span class='dot PINK'></span> PINK",
-					"Gray Candle": "<span class='dot GRAY'></span> GRAY",
-					"Light Gray Candle": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-					"Cyan Candle": "<span class='dot CYAN'></span> CYAN",
-					"Purple Candle": "<span class='dot PURPLE'></span> PURPLE",
-					"Blue Candle": "<span class='dot BLUE'></span> BLUE",
-					"Brown Candle": "<span class='dot BROWN'></span> BROWN",
-					"Green Candle": "<span class='dot GREEN'></span> GREEN",
-					"Red Candle": "<span class='dot RED'></span> RED",
-					"Black Candle": "<span class='dot BLACK'></span> BLACK"
+					"Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW"
+					},
+					"White Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+					},
+					"Orange Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot ORANGE'></span> ORANGE"
+					},
+					"Magenta Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot MAGENTA'></span> MAGENTA"
+					},
+					"Light Blue Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE"
+					},
+					"Yellow Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot YELLOW'></span> YELLOW"
+					},
+					"Lime Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot LIME'></span> LIME"
+					},
+					"Pink Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot PINK'></span> PINK"
+					},
+					"Gray Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot GRAY'></span> GRAY"
+					},
+					"Light Gray Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY"
+					},
+					"Cyan Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot CYAN'></span> CYAN"
+					},
+					"Purple Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot PURPLE'></span> PURPLE"
+					},
+					"Blue Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot BLUE'></span> BLUE"
+					},
+					"Brown Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot BROWN'></span> BROWN"
+					},
+					"Green Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot GREEN'></span> GREEN"
+					},
+					"Red Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot RED'></span> RED"
+					},
+					"Black Candle": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot BLACK'></span> BLACK"
+					}
 				},
 				"Carpets": {
 					"White Carpet": "<span class='dot WHITE'></span> WHITE",
@@ -8882,7 +8942,10 @@
 				"Cauldron": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
 				"Cave Vines": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
 				"Chain": "<span class='dot CLEAR'></span> CLEAR",
-				"Chest": "<span class='dot OAK_TAN'></span> OAK_TAN",
+				"Chest": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot OAK_TAN'></span> OAK_TAN"
+				},
 				"Chorus Flower": "<span class='dot PURPLE'></span> PURPLE",
 				"Chorus Plant": "<span class='dot PURPLE'></span> PURPLE",
 				"Clay": "<span class='dot LIGHT_BLUE_GRAY'></span> LIGHT_BLUE_GRAY",
@@ -8940,7 +9003,10 @@
 					"Red Concrete Powder": "<span class='dot RED'></span> RED",
 					"Black Concrete Powder": "<span class='dot BLACK'></span> BLACK"
 				},
-				"Conduit": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE",
+				"Conduit": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE"
+				},
 				"Copper Ore": {
 					"Copper Ore": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
 					"Deepslate Copper Ore": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY"
@@ -9011,7 +9077,10 @@
 				"End Rod": "<span class='dot CLEAR'></span> CLEAR",
 				"End Stone": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
 				"End Stone Bricks": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-				"Ender Chest": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
+				"Ender Chest": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot STONE_GRAY'></span> STONE_GRAY"
+				},
 				"Farmland": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
 				"Fence Gates": {
 					"Oak Fence Gate": "<span class='dot OAK_TAN'></span> OAK_TAN",
@@ -9025,16 +9094,46 @@
 					"Warped Fence Gate": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
 				},
 				"Fences": {
-					"Oak Fence": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"Nether Brick Fence": "<span class='dot DARK_RED'></span> DARK_RED",
-					"Spruce Fence": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-					"Birch Fence": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Jungle Fence": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Acacia Fence": "<span class='dot ORANGE'></span> ORANGE",
-					"Dark Oak Fence": "<span class='dot BROWN'></span> BROWN",
-					"Crimson Fence": "<span class='dot DULL_PINK'></span> DULL_PINK",
-					"mangrove_fence": "<span class='dot RED'></span> RED",
-					"Warped Fence": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+					"Oak Fence": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot OAK_TAN'></span> OAK_TAN"
+					},
+					"Nether Brick Fence": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot DARK_RED'></span> DARK_RED"
+					},
+					"Spruce Fence": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN"
+					},
+					"Birch Fence": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW"
+					},
+					"Jungle Fence": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN"
+					},
+					"Acacia Fence": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot ORANGE'></span> ORANGE"
+					},
+					"Dark Oak Fence": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot BROWN'></span> BROWN"
+					},
+					"Crimson Fence": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot DULL_PINK'></span> DULL_PINK"
+					},
+					"mangrove_fence": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot RED'></span> RED"
+					},
+					"Warped Fence": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+					}
 				},
 				"Fern": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
 				"Fire": {
@@ -9088,7 +9187,10 @@
 				"Grass Block": "<span class='dot PALE_GREEN'></span> PALE_GREEN",
 				"Gravel": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
 				"Grindstone": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
-				"Hanging Roots": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
+				"Hanging Roots": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN"
+				},
 				"Hay Bale": "<span class='dot YELLOW'></span> YELLOW",
 				"Heads": "<span class='dot CLEAR'></span> CLEAR",
 				"Honey Block": "<span class='dot ORANGE'></span> ORANGE",
@@ -9109,17 +9211,26 @@
 				"Jukebox": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
 				"Kelp": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
 				"Ladder": "<span class='dot CLEAR'></span> CLEAR",
-				"Lantern": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
+				"Lantern": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot IRON_GRAY'></span> IRON_GRAY"
+				},
 				"Lapis Lazuli Ore": {
 					"Lapis Lazuli Ore": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
 					"Deepslate Lapis Lazuli Ore": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY"
 				},
 				"Lava": "<span class='dot BRIGHT_RED'></span> BRIGHT_RED",
-				"Leaves": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
+				"Leaves": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot DARK_GREEN'></span> DARK_GREEN"
+				},
 				"Lectern": "<span class='dot OAK_TAN'></span> OAK_TAN",
 				"Lever": "<span class='dot CLEAR'></span> CLEAR",
 				"Light Block": "<span class='dot CLEAR'></span> CLEAR",
-				"Lightning Rod": "<span class='dot ORANGE'></span> ORANGE",
+				"Lightning Rod": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot ORANGE'></span> ORANGE"
+				},
 				"Lily Pad": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
 				"Lodestone": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
 				"Logs": {
@@ -9157,7 +9268,10 @@
 				},
 				"Loom": "<span class='dot OAK_TAN'></span> OAK_TAN",
 				"Magma Block": "<span class='dot DARK_RED'></span> DARK_RED",
-				"Mangrove Propagule": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
+				"Mangrove Propagule": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot DARK_GREEN'></span> DARK_GREEN"
+				},
 				"Mangrove Roots": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
 				"Melon": "<span class='dot LIME'></span> LIME",
 				"Moss Block": "<span class='dot GREEN'></span> GREEN",
@@ -9204,7 +9318,10 @@
 					"Warped Planks": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
 				},
 				"Podzol": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-				"Pointed Dripstone": "<span class='dot TERRACOTTA_BROWN'></span> TERRACOTTA_BROWN",
+				"Pointed Dripstone": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot TERRACOTTA_BROWN'></span> TERRACOTTA_BROWN"
+				},
 				"Powder Snow": "<span class='dot WHITE'></span> WHITE",
 				"Powered Rail": "<span class='dot CLEAR'></span> CLEAR",
 				"Pressure Plates": {
@@ -9256,7 +9373,10 @@
 				"Sculk Shrieker": "<span class='dot BLACK'></span> BLACK",
 				"Sculk Vein": "<span class='dot BLACK'></span> BLACK",
 				"Sea Lantern": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
-				"Sea Pickle": "<span class='dot GREEN'></span> GREEN",
+				"Sea Pickle": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot GREEN'></span> GREEN"
+				},
 				"Seagrass": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
 				"Shroomlight": "<span class='dot RED'></span> RED",
 				"Shulker Box": {
@@ -9279,36 +9399,69 @@
 					"Black Shulker Box": "<span class='dot BLACK'></span> BLACK"
 				},
 				"Signs": {
-					"Oak Sign<br>Oak Wall Sign": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"Spruce Sign<br>Spruce Wall Sign": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-					"Birch Sign<br>Birch Wall Sign": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Acacia Sign<br>Acacia Wall Sign": "<span class='dot ORANGE'></span> ORANGE",
-					"Jungle Sign<br>Jungle Wall Sign": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Dark Oak Sign<br>Dark Oak Wall Sign": "<span class='dot BROWN'></span> BROWN",
-					"Crimson Sign<br>Crimson Wall Sign": "<span class='dot DULL_PINK'></span> DULL_PINK",
-					"mangrove_sign<br>mangrove_wall_sign": "<span class='dot RED'></span> RED",
-					"Warped Sign<br>Warped Wall Sign": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+					"Oak Sign<br>Oak Wall Sign": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot OAK_TAN'></span> OAK_TAN"
+					},
+					"Spruce Sign<br>Spruce Wall Sign": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN"
+					},
+					"Birch Sign<br>Birch Wall Sign": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW"
+					},
+					"Acacia Sign<br>Acacia Wall Sign": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot ORANGE'></span> ORANGE"
+					},
+					"Jungle Sign<br>Jungle Wall Sign": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN"
+					},
+					"Dark Oak Sign<br>Dark Oak Wall Sign": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot BROWN'></span> BROWN"
+					},
+					"Crimson Sign<br>Crimson Wall Sign": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot DULL_PINK'></span> DULL_PINK"
+					},
+					"mangrove_sign<br>mangrove_wall_sign": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot RED'></span> RED"
+					},
+					"Warped Sign<br>Warped Wall Sign": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+					}
 				},
 				"Slabs": {
-					"Prismarine Slab": "<span class='dot CYAN'></span> CYAN",
-					"Prismarine Brick Slab<br>Dark Prismarine Slab": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE",
-					"Oak Slab<br>Petrified Oak Slab": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"Spruce Slab": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-					"Birch Slab<br>Sandstone Slab<br>Cut Sandstone Slab<br>End Stone Brick Slab<br>Smooth Sandstone Slab": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Jungle Slab<br>Polished Granite Slab<br>Granite Slab": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Acacia Slab<br>Red Sandstone Slab<br>Cut Red Sandstone Slab<br>Smooth Red Sandstone Slab<br>Cut Copper Slab<br>Waxed Cut Copper Slab": "<span class='dot ORANGE'></span> ORANGE",
-					"Dark Oak Slab<br>mud_brick_slab": "<span class='dot BROWN'></span> BROWN",
-					"Stone Slab<br>Smooth Stone Slab<br>Cobblestone Slab<br>Stone Brick Slab<br>Mossy Stone Brick Slab<br>Mossy Cobblestone Slab<br>Andesite Slab<br>Polished Andesite Slab": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-					"Brick Slab<br>mangrove_slab": "<span class='dot RED'></span> RED",
-					"Nether Brick Slab<br>Red Nether Brick Slab": "<span class='dot DARK_RED'></span> DARK_RED",
-					"Quartz Slab<br>Polished Diorite Slab<br>Smooth Quartz Slab<br>Diorite Slab": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
-					"Purpur Slab": "<span class='dot MAGENTA'></span> MAGENTA",
-					"Crimson Slab": "<span class='dot DULL_PINK'></span> DULL_PINK",
-					"Warped Slab<br>Weathered Cut Copper Slab<br>Waxed Weathered Cut Copper Slab": "<span class='dot DARK_AQUA'></span> DARK_AQUA",
-					"Blackstone Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab": "<span class='dot BLACK'></span> BLACK",
-					"Oxidized Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab": "<span class='dot TEAL'></span> TEAL",
-					"Exposed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY",
-					"Cobbled Deepslate Slab<br>Polished Deepslate Slab<br>Deepslate Tile Slab<br>Deepslate Brick Slab": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY"
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": {
+						"half: bottom": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"half: double<br>half: top": {
+							"Prismarine Slab": "<span class='dot CYAN'></span> CYAN",
+							"Prismarine Brick Slab<br>Dark Prismarine Slab": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE",
+							"Oak Slab<br>Petrified Oak Slab": "<span class='dot OAK_TAN'></span> OAK_TAN",
+							"Spruce Slab": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
+							"Birch Slab<br>Sandstone Slab<br>Cut Sandstone Slab<br>End Stone Brick Slab<br>Smooth Sandstone Slab": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
+							"Jungle Slab<br>Polished Granite Slab<br>Granite Slab": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
+							"Acacia Slab<br>Red Sandstone Slab<br>Cut Red Sandstone Slab<br>Smooth Red Sandstone Slab<br>Cut Copper Slab<br>Waxed Cut Copper Slab": "<span class='dot ORANGE'></span> ORANGE",
+							"Dark Oak Slab<br>mud_brick_slab": "<span class='dot BROWN'></span> BROWN",
+							"Stone Slab<br>Smooth Stone Slab<br>Cobblestone Slab<br>Stone Brick Slab<br>Mossy Stone Brick Slab<br>Mossy Cobblestone Slab<br>Andesite Slab<br>Polished Andesite Slab": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
+							"Brick Slab<br>mangrove_slab": "<span class='dot RED'></span> RED",
+							"Nether Brick Slab<br>Red Nether Brick Slab": "<span class='dot DARK_RED'></span> DARK_RED",
+							"Quartz Slab<br>Polished Diorite Slab<br>Smooth Quartz Slab<br>Diorite Slab": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
+							"Purpur Slab": "<span class='dot MAGENTA'></span> MAGENTA",
+							"Crimson Slab": "<span class='dot DULL_PINK'></span> DULL_PINK",
+							"Warped Slab<br>Weathered Cut Copper Slab<br>Waxed Weathered Cut Copper Slab": "<span class='dot DARK_AQUA'></span> DARK_AQUA",
+							"Blackstone Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab": "<span class='dot BLACK'></span> BLACK",
+							"Oxidized Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab": "<span class='dot TEAL'></span> TEAL",
+							"Exposed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY",
+							"Cobbled Deepslate Slab<br>Polished Deepslate Slab<br>Deepslate Tile Slab<br>Deepslate Brick Slab": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY"
+						}
+					}
 				},
 				"Slime Block": "<span class='dot PALE_GREEN'></span> PALE_GREEN",
 				"Small Dripleaf": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
@@ -9341,25 +9494,31 @@
 				},
 				"Stained Glass Panes": "<span class='dot CLEAR'></span> CLEAR",
 				"Stairs": {
-					"Oak Stairs": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"Cobblestone Stairs<br>Stone Brick Stairs<br>Mossy Stone Brick Stairs<br>Mossy Cobblestone Stairs<br>Stone Stairs<br>Andesite Stairs<br>Polished Andesite Stairs": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-					"Brick Stairs<br>mangrove_stairs": "<span class='dot RED'></span> RED",
-					"mud_brick_stairs<br>Exposed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY",
-					"Nether Brick Stairs<br>Red Nether Brick Stairs": "<span class='dot DARK_RED'></span> DARK_RED",
-					"Sandstone Stairs<br>Birch Stairs<br>End Stone Brick Stairs<br>Smooth Sandstone Stairs": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Spruce Stairs": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-					"Jungle Stairs<br>Polished Granite Stairs<br>Granite Stairs": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Quartz Stairs<br>Polished Diorite Stairs<br>Smooth Quartz Stairs<br>Diorite Stairs": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
-					"Acacia Stairs<br>Red Sandstone Stairs<br>Smooth Red Sandstone Stairs<br>Cut Copper Stairs<br>Waxed Cut Copper Stairs": "<span class='dot ORANGE'></span> ORANGE",
-					"Dark Oak Stairs": "<span class='dot BROWN'></span> BROWN",
-					"Prismarine Stairs": "<span class='dot CYAN'></span> CYAN",
-					"Prismarine Brick Stairs<br>Dark Prismarine Stairs": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE",
-					"Purpur Stairs": "<span class='dot MAGENTA'></span> MAGENTA",
-					"Crimson Stairs": "<span class='dot DULL_PINK'></span> DULL_PINK",
-					"Warped Stairs<br>Weathered Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs": "<span class='dot DARK_AQUA'></span> DARK_AQUA",
-					"Blackstone Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs": "<span class='dot BLACK'></span> BLACK",
-					"Oxidized Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs": "<span class='dot TEAL'></span> TEAL",
-					"Cobbled Deepslate Stairs<br>Polished Deepslate Stairs<br>Deepslate Tile Stairs<br>Deepslate Brick Stairs": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY"
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": {
+						"half: bottom": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"half: top": {
+							"Oak Stairs": "<span class='dot OAK_TAN'></span> OAK_TAN",
+							"Cobblestone Stairs<br>Stone Brick Stairs<br>Mossy Stone Brick Stairs<br>Mossy Cobblestone Stairs<br>Stone Stairs<br>Andesite Stairs<br>Polished Andesite Stairs": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
+							"Brick Stairs<br>mangrove_stairs": "<span class='dot RED'></span> RED",
+							"mud_brick_stairs<br>Exposed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY",
+							"Nether Brick Stairs<br>Red Nether Brick Stairs": "<span class='dot DARK_RED'></span> DARK_RED",
+							"Sandstone Stairs<br>Birch Stairs<br>End Stone Brick Stairs<br>Smooth Sandstone Stairs": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
+							"Spruce Stairs": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
+							"Jungle Stairs<br>Polished Granite Stairs<br>Granite Stairs": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
+							"Quartz Stairs<br>Polished Diorite Stairs<br>Smooth Quartz Stairs<br>Diorite Stairs": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
+							"Acacia Stairs<br>Red Sandstone Stairs<br>Smooth Red Sandstone Stairs<br>Cut Copper Stairs<br>Waxed Cut Copper Stairs": "<span class='dot ORANGE'></span> ORANGE",
+							"Dark Oak Stairs": "<span class='dot BROWN'></span> BROWN",
+							"Prismarine Stairs": "<span class='dot CYAN'></span> CYAN",
+							"Prismarine Brick Stairs<br>Dark Prismarine Stairs": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE",
+							"Purpur Stairs": "<span class='dot MAGENTA'></span> MAGENTA",
+							"Crimson Stairs": "<span class='dot DULL_PINK'></span> DULL_PINK",
+							"Warped Stairs<br>Weathered Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs": "<span class='dot DARK_AQUA'></span> DARK_AQUA",
+							"Blackstone Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs": "<span class='dot BLACK'></span> BLACK",
+							"Oxidized Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs": "<span class='dot TEAL'></span> TEAL",
+							"Cobbled Deepslate Stairs<br>Polished Deepslate Stairs<br>Deepslate Tile Stairs<br>Deepslate Brick Stairs": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY"
+						}
+					}
 				},
 				"Stems": {
 					"Warped Stem<br>Stripped Warped Stem": "<span class='dot DARK_AQUA'></span> DARK_AQUA",
@@ -9402,18 +9561,27 @@
 				"TNT": "<span class='dot BRIGHT_RED'></span> BRIGHT_RED",
 				"Torch": "<span class='dot CLEAR'></span> CLEAR",
 				"Trapdoors": {
-					"Oak Trapdoor": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"Spruce Trapdoor": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-					"Birch Trapdoor": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Jungle Trapdoor": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Acacia Trapdoor": "<span class='dot ORANGE'></span> ORANGE",
-					"Dark Oak Trapdoor": "<span class='dot BROWN'></span> BROWN",
-					"Iron Trapdoor": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
-					"Crimson Trapdoor": "<span class='dot DULL_PINK'></span> DULL_PINK",
-					"mangrove_trapdoor": "<span class='dot RED'></span> RED",
-					"Warped Trapdoor": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": {
+						"half: bottom": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"half: top": {
+							"Oak Trapdoor": "<span class='dot OAK_TAN'></span> OAK_TAN",
+							"Spruce Trapdoor": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
+							"Birch Trapdoor": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
+							"Jungle Trapdoor": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
+							"Acacia Trapdoor": "<span class='dot ORANGE'></span> ORANGE",
+							"Dark Oak Trapdoor": "<span class='dot BROWN'></span> BROWN",
+							"Iron Trapdoor": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
+							"Crimson Trapdoor": "<span class='dot DULL_PINK'></span> DULL_PINK",
+							"mangrove_trapdoor": "<span class='dot RED'></span> RED",
+							"Warped Trapdoor": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+						}
+					}
 				},
-				"Trapped Chest": "<span class='dot OAK_TAN'></span> OAK_TAN",
+				"Trapped Chest": {
+					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+					"waterlogged: false": "<span class='dot OAK_TAN'></span> OAK_TAN"
+				},
 				"Tripwire": "<span class='dot CLEAR'></span> CLEAR",
 				"Tripwire Hook": "<span class='dot CLEAR'></span> CLEAR",
 				"Tuff": "<span class='dot TERRACOTTA_GRAY'></span> TERRACOTTA_GRAY",
@@ -9421,17 +9589,50 @@
 				"Twisting Vines": "<span class='dot CYAN'></span> CYAN",
 				"Vines": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
 				"Walls": {
-					"Cobblestone Wall<br>Mossy Cobblestone Wall<br>Mossy Stone Brick Wall<br>Stone Brick Wall<br>Andesite Wall": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-					"Brick Wall": "<span class='dot RED'></span> RED",
-					"Prismarine Wall": "<span class='dot CYAN'></span> CYAN",
-					"Red Sandstone Wall": "<span class='dot ORANGE'></span> ORANGE",
-					"Granite Wall": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"mud_brick_wall": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY",
-					"Nether Brick Wall<br>Red Nether Brick Wall": "<span class='dot DARK_RED'></span> DARK_RED",
-					"Sandstone Wall<br>End Stone Brick Wall": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Diorite Wall": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
-					"Blackstone Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall": "<span class='dot BLACK'></span> BLACK",
-					"Cobbled Deepslate Wall<br>Polished Deepslate Wall<br>Deepslate Tile Wall<br>Deepslate Brick Wall": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY"
+					"Cobblestone Wall<br>Mossy Cobblestone Wall<br>Mossy Stone Brick Wall<br>Stone Brick Wall<br>Andesite Wall": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot STONE_GRAY'></span> STONE_GRAY"
+					},
+					"Brick Wall": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot RED'></span> RED"
+					},
+					"Prismarine Wall": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot CYAN'></span> CYAN"
+					},
+					"Red Sandstone Wall": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot ORANGE'></span> ORANGE"
+					},
+					"Granite Wall": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN"
+					},
+					"mud_brick_wall": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY"
+					},
+					"Nether Brick Wall<br>Red Nether Brick Wall": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot DARK_RED'></span> DARK_RED"
+					},
+					"Sandstone Wall<br>End Stone Brick Wall": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW"
+					},
+					"Diorite Wall": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot OFF_WHITE'></span> OFF_WHITE"
+					},
+					"Blackstone Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot BLACK'></span> BLACK"
+					},
+					"Cobbled Deepslate Wall<br>Polished Deepslate Wall<br>Deepslate Tile Wall<br>Deepslate Brick Wall": {
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: false": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY"
+					}
 				},
 				"Wart Blocks": {
 					"Nether Wart Block": "<span class='dot RED'></span> RED",
