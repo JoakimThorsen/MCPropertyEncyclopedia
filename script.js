@@ -327,6 +327,9 @@ function display_headers_and_table() {
                         <a role="button" class="btn dropdown-btn btn-default export-csv">
                             <i class="fas fa-file-export"></i>Export CSV
                         </a>
+                        <a role="button" class="btn dropdown-btn btn-default copy-comma-separated">
+                            <i class="fas fa-copy"></i>Copy Comma-Separated List
+                        </a>
                     </div>
                 </li>
             </ul>
@@ -342,6 +345,21 @@ function display_headers_and_table() {
         document.body.appendChild(link); // Required for FireFox
 
         link.click();
+    });
+
+    $('.copy-comma-separated').click(function (e) {
+        let text = exportable_list.join(', ');
+        // from: https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
+        var input = document.createElement('textarea');
+        input.innerHTML = text;
+        document.body.appendChild(input);
+        input.select();
+        var result = document.execCommand('copy');
+        document.body.removeChild(input);
+        if(result) {
+            console.log("List copied successfully");
+        }
+        return result;
     });
 
     selection_arr.forEach(property_id => {
@@ -743,12 +761,14 @@ function display_results() {
         for (let [property_id, value] of Object.entries(entry)) {
             append_string += get_data_cell(value, property_id);
         }
-        ;
+        // append_string += `<td>:<input type="text">,</td>`;
         append_string += "</tr>";
     });
     $('#output_table').children('tbody').append(append_string);
 
-    if(!('ontouchstart' in window)){
+    if(!('ontouchstart' in window)
+    // && false
+    ){
         $('#output_table').DataTable({
             colReorder: {
                 fixedColumnsLeft: 2
