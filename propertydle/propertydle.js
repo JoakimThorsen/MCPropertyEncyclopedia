@@ -3,10 +3,20 @@ function load_data(filename) {
     entry_header = "Blocks";
 
     $.ajax({
-        'url': filename,
+        'url': '../data/block_data.json',
         'dataType': "json",
         'success': function (d) {
-            data = d;
+            data_latest = d;
+            initialize_page();
+            // new_game();
+        }
+    });
+
+    $.ajax({
+        'url': '../data/block_data_1.12.json',
+        'dataType': "json",
+        'success': function (d) {
+            data_12 = d;
             initialize_page();
             // new_game();
         }
@@ -14,7 +24,6 @@ function load_data(filename) {
 }
 
 function initialize_page() {
-    $('datalist#blocks').append(data.key_list.map(block => `<option value="${block}" />`))
 
     $('#search').keyup(function(e){
         if(e.keyCode == 13)
@@ -25,13 +34,23 @@ function initialize_page() {
 
     $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (_e) {
         var $target = $(this).next();
-        // Not sure which one I prefer:
         $target.toggle("toggle"); // With toggle animation/delay
         // $target.toggle(); // No toggle animation/delay
     });
 }
 
 function new_game(daily_game = false) {
+    if(twelve_mode == true){
+        data = data_12;
+        $('.twelve').text('1.12 ');
+    } else {
+        data = data_latest;
+        $('.twelve').text('');
+    }
+    
+    $('datalist#blocks').children().remove();
+    $('datalist#blocks').append(data.key_list.map(block => `<option value="${block}" />`))
+
     // Switch to game controls
     $('#start-game').addClass('display-none');
     $('#game-inputs').removeClass('display-none');
@@ -48,7 +67,7 @@ function new_game(daily_game = false) {
     let random;
     if(daily_game) {
         // get current day by dividing unix time by 1000*60*60*24
-        // then offset it to 18th of july 2022 because who cares about the 1970s?
+        // then offset it to 25th of july 2022 because who cares about the 1970s?
         current_day = Math.floor(Date.now() / 86400000 - 19197);
         random = mulberry32(current_day)
         $("#current-day").text(current_day);
@@ -64,6 +83,15 @@ function new_game(daily_game = false) {
     delete data.properties.variants;
     delete data.properties.wiki_page;
     delete data.properties.onenineteen;
+    delete data.properties.tile_entity_data;
+    
+    delete data.properties.int_rep;
+    delete data.properties.binary_rep;
+    delete data.properties.skyblock_obtainable;
+    
+    // delete data.properties.material;
+    // delete data.properties.map_color;
+    // delete data.properties.instrument;
 
     /* block selection/unique property selector */
     selection: while(true) {
@@ -71,8 +99,8 @@ function new_game(daily_game = false) {
         secret_block = data.key_list[(random() * data.key_list.length) | 0];
         
         var random_order_props = Object.keys(data.properties).sort(() => .5 - random());
-        selection_arr = random_order_props.slice(0,8)
-        random_order_props = random_order_props.slice(8, random_order_props.length)
+        selection_arr = random_order_props.slice(0,8);
+        random_order_props = random_order_props.slice(8, random_order_props.length);
 
         var prev_unique_solutions = unique_solutions(secret_block, selection_arr).length;
         var max_attempts = random_order_props.length;

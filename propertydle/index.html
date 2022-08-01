@@ -47,7 +47,7 @@ input[type=search]::-webkit-search-cancel-button {
 </style>
 
 </head>
-<body data-page="block" onload="load_data('../data/block_data.json')">
+<body data-page="block" onload="load_data()">
 
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -98,8 +98,8 @@ input[type=search]::-webkit-search-cancel-button {
       <p class="about-text">If the solution has multiple values for this property, then each correct value will be marked <span class="cf-neutral" style="color:black;text-shadow: none;">Yellow</span>, until you get them all right.</p>
       <p class="about-text">For numbers, the color denotes wether your guess is <span style="background-color: hsl(276, 55%, 66%);">Lower</span> or <span style="background-color: hsl(212, 100%, 82%);">Higher</span> than the answer, or if your guess is somewhere <span style="background-color: hsl(175, 68%, 78.5%);">in between</span> the values of the answer</p>
     </div>
-    <h2 id="daily-mode" class="text-center display-none" style="font-size: 40px;">Daily Mode: day <span id="current-day">?</span></h1>
-    <h2 id="infinite-mode" class="text-center display-none" style="font-size: 40px;">Infinite Mode</h1>
+    <h2 id="daily-mode" class="text-center display-none" style="font-size: 40px;"><span class="twelve"></span>Daily Mode: day <span id="current-day">?</span></h1>
+    <h2 id="infinite-mode" class="text-center display-none" style="font-size: 40px;"><span class="twelve"></span>Infinite Mode</h1>
   </div>
   <div class="col-md-1 col-lg-3"></div>
   <div class="col-sm-12">
@@ -114,9 +114,15 @@ input[type=search]::-webkit-search-cancel-button {
       </table>
     </div>
     <div id="start-game">
+        <h2>Latest Version</h2>
         <div class="form-inline text-center">
-            <button class="btn btn-primary" onclick="new_game(true)">Daily Propertydle</button>
-            <button class="btn btn-default" onclick="new_game()">Infinite Propertydle</button>
+            <button class="btn btn-primary" onclick="twelve_mode = false; new_game(true)">Daily Propertydle</button>
+            <button class="btn btn-default" onclick="twelve_mode = false; new_game()">Infinite Propertydle</button>
+        </div>
+        <h2>1.12 version</h2>
+        <div class="form-inline text-center">
+            <button class="btn btn-primary" onclick="twelve_mode = true; new_game(true)">Daily 1.12 Propertydle</button>
+            <button class="btn btn-default" onclick="twelve_mode = true; new_game()">Infinite 1.12 Propertydle</button>
         </div>
     </div>
     <div class="display-none" id="game-inputs">
