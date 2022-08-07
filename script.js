@@ -225,10 +225,10 @@ function initialize_page() {
         }
         $(this).siblings('a.radio-settings').removeClass('active');
         $(this).toggleClass('active');
-        update_window_history();
         if(rerender !== "false") {
             display_headers_and_table();
         }
+        update_window_history();
     });
 
     $('#search').val(search);
@@ -746,9 +746,7 @@ function display_results() {
         return split_data;
     }
 
-    console.log(output_data);
     output_data = sort_properties(output_data, sort_arr);
-    console.log(output_data);
 
     // Table outputting
     let append_string = "";
@@ -1062,7 +1060,6 @@ function highlightSearchString(input, search) {
     search.split(' ')
         .filter(e => e !== '')
         .forEach(search_term => {
-            console.log(typeof input);
             input = input.replace(new RegExp(search_term, "ig"), '{$&}');
         });
     input = input.replace(/{/g, '<span class="search-highlight">').replace(/}/g, '</span>');
