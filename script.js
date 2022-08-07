@@ -603,12 +603,14 @@ function display_results() {
     });
 
     // Search filtering:
+    let variantsIsSelected = selection_arr.includes("variants");
     output_data = output_data.filter(row => {
         return Boolean(search.split('|').some(subsearch =>
             subsearch.split(' ').every(term =>
-                row[page].toLowerCase().includes(term.toLowerCase()))
+                row[page].toLowerCase().includes(term.toLowerCase())
+                || (variantsIsSelected && get_all_values(row.variants).some(v => v.toLowerCase().includes(term.toLowerCase())))
             )
-        )
+        ))
     })
 
     // For exporting as CSV:
@@ -744,7 +746,9 @@ function display_results() {
         return split_data;
     }
 
+    console.log(output_data);
     output_data = sort_properties(output_data, sort_arr);
+    console.log(output_data);
 
     // Table outputting
     let append_string = "";
@@ -753,10 +757,10 @@ function display_results() {
         append_string += "<tr>";
         append_string += `<td><span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span></td>`;
         if (search) {
-            search.split(' ')
-                .filter(e => e !== '')
-                .every(term => entry[page] = entry[page].replace(new RegExp(term, "ig"), '{$&}'));
-            entry[page] = entry[page].replace(/{/g, '<span class="search-highlight">').replace(/}/g, '</span>')
+            entry[page] = highlightSearchString(entry[page], search)
+            if(typeof entry.variants !== 'undefined') {
+                entry.variants = highlightSearchString(entry.variants, search)
+            }
         }
         for (let [property_id, value] of Object.entries(entry)) {
             append_string += get_data_cell(value, property_id);
@@ -1042,4 +1046,25 @@ function scrollToTop() {
 
 function stopPromo() {
     localStorage.setItem("MCProperty-discord-promoted", true)
+}
+
+function highlightSearchString(input, search) {
+    if(Array.isArray(input)) {
+        return input.map(v => highlightSearchString(v, search));
+    }
+    if(typeof input === 'object') {
+        for (let key of Object.keys(input)) {
+            input[key] = highlightSearchString(input[key], search);
+        }
+        return input;
+    }
+    if(typeof input === 'undefined') return undefined;
+    search.split(' ')
+        .filter(e => e !== '')
+        .forEach(search_term => {
+            console.log(typeof input);
+            input = input.replace(new RegExp(search_term, "ig"), '{$&}');
+        });
+    input = input.replace(/{/g, '<span class="search-highlight">').replace(/}/g, '</span>');
+    return input;
 }
