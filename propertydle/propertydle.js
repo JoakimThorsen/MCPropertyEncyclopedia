@@ -97,8 +97,9 @@ function new_game(daily_game = false) {
     selection: while(true) {
         // random block
         secret_block = data.key_list[(random() * data.key_list.length) | 0];
-        
-        var random_order_props = Object.keys(data.properties).map(elem => [elem, random()]).sort((a, b) => a[1] < b[1]).map(elem => elem[0]);
+        console.log(Object.keys(data.properties).map(elem => [elem, random()]));
+        console.log(Object.keys(data.properties).map(elem => [elem, random()]).sort((a, b) => a[1] - b[1]));
+        var random_order_props = Object.keys(data.properties).map(elem => [elem, random()]).sort((a, b) => a[1] - b[1]).map(elem => elem[0]);
         selection_arr = random_order_props.slice(0,8);
         random_order_props = random_order_props.slice(8, random_order_props.length);
 
@@ -118,7 +119,7 @@ function new_game(daily_game = false) {
         }
     }
     
-    selection_arr = selection_arr.map(elem => [elem, random()]).sort((a, b) => a[1] < b[1]).map(elem => elem[0]);
+    selection_arr = selection_arr.map(elem => [elem, random()]).sort((a, b) => a[1] - b[1]).map(elem => elem[0]);
 
     function unique_solutions(secret_block, selection_arr) {
         var options_left = deepCopy(data.key_list);
