@@ -190,7 +190,12 @@ function display_selection() {
 
     $('.deselect-all').click(function (e) {
         e.stopPropagation();
-        selection_arr = [];
+        if(typeof data.properties?.variants === 'undefined'
+        || (selection_arr.length === 1 && selection_arr.includes('variants'))) {
+            selection_arr = [];
+        } else {
+            selection_arr = ['variants'];
+        }
         update_window_history();
         display_selection();
         display_headers_and_table();
