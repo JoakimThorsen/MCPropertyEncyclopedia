@@ -271,7 +271,7 @@ function display_headers_and_table() {
                 values = property.entries;
             }
             value_list[property_name] = get_all_values(values, true).map(val => {
-                if (val * 1 == val && property.size_factor !== 1) {
+                if (isNum(val) && property.size_factor !== 1) {
                     val *= property.size_factor;
                 }
                 return String(val)
@@ -458,7 +458,7 @@ function display_headers_and_table() {
         $(this).children().last().toggleClass("display-none")
 
         // Convert to double if applicable
-        // value = (value * 1 == value) ? value * 1 : value;
+        // value = (isNum(value)) ? value * 1 : value;
         if (!Object.keys(filter_obj).includes(property)) {
             filter_obj[property] = [];
         }
@@ -584,7 +584,7 @@ function display_results() {
                     }
                 } else {
                     input_element = input_element ?? property.default_value ?? "No default value has been assigned.";
-                    if (input_element * 1 == input_element && size_factor !== 1) {
+                    if (isNum(input_element) && size_factor !== 1) {
                         input_element *= size_factor;
                     }
                     if ((filter_obj[property_id] || []).includes(String(input_element))) {
@@ -687,6 +687,9 @@ function display_results() {
                 val_0 = get_value(val_0);
                 val_1 = get_value(val_1);
 
+                val_0 = (isNum(val_0) ? Math.abs(val_0) : val_0);
+                val_1 = (isNum(val_1) ? Math.abs(val_1) : val_1);
+
                 function get_value(value) {
                     if (typeof value == 'object') {
                         return get_value(Object.values(value)[0]);
@@ -787,7 +790,7 @@ function display_results() {
         });
     }
 
-    function get_data_cell(entry, property_name, top_level = true) {
+    function get_data_cell(entry, property_id, top_level = true) {
         let return_data;
         if (typeof (entry) == 'object' && entry != null) {
             return_data = `<td class="nested-cell">`;
@@ -800,17 +803,17 @@ function display_results() {
 
             if (Array.isArray(entry)) {
                 entry.forEach(value => {
-                    return_data += `<tr>${get_data_cell(value, property_name, false)}</tr>`;
+                    return_data += `<tr>${get_data_cell(value, property_id, false)}</tr>`;
                 });
             } else {
                 Object.keys(entry).forEach(key => {
-                    return_data += `<tr><td>${key}</td>${get_data_cell(entry[key], property_name, false)}</tr>`;
+                    return_data += `<tr><td>${key}</td>${get_data_cell(entry[key], property_id, false)}</tr>`;
                 });
             }
             return_data += "</tbody></table></td>";
 
         } else {
-            return_data = `<td ${formatting_color(entry, property_name)}>${entry}</td>`;
+            return_data = `<td ${formatting_color(entry, property_id)}>${entry}</td>`;
         }
         return return_data;
     }
@@ -863,11 +866,11 @@ function get_all_values(input, unique_only = false) {
 
 function sort_mixed_types(list) {
     return list.sort((a, b) => {
-        if (typeof a == 'number' && typeof b == 'number') {
+        if (isNum(a) && isNum(b)) {
             return a - b;
-        } else if (typeof a == 'string' && typeof b == 'number') {
+        } else if (isNum(b)) {
             return -1;
-        } else if (typeof a == 'number' && typeof b == 'string') {
+        } else if (isNum(a)) {
             return 1;
         } else {
             return a.localeCompare(b, undefined, {numeric: true, sensitivity: 'base'});
@@ -875,7 +878,7 @@ function sort_mixed_types(list) {
     });
 }
 
-function formatting_color(value, property_name, class_exists = false) {
+function formatting_color(value, property_id, class_exists = false) {
     let color = "";
     // console.log(value, property_name);
 
@@ -888,25 +891,25 @@ function formatting_color(value, property_name, class_exists = false) {
         return color;
     }
 
-    if (typeof data.properties[property_name] !== 'undefined' || value * 1 == value) {
+    if (typeof data.properties[property_id] !== 'undefined' || isNum(value)) {
         let hue, sat, lum;
         let hslA, hslB;
         let scale_value, max;
-        if (value * 1 == value) {
+        if (isNum(value)) {
             scale_value = value * 1;
 
             hslA = [276, 55, 66];
             hslB = [212, 100, 82];
-        } else if (typeof data.properties[property_name].relative_gradient == 'undefined') {
+        } else if (typeof data.properties[property_id].relative_gradient == 'undefined') {
             return "";
-        }
+        };
         hslA ??= [223, 62, 68];
         hslB ??= [159, 70, 82];
-        if (data.properties[property_name].relative_gradient) {
-            scale_value = value_list[property_name].indexOf(value) / value_list[property_name].length;
+        if (data.properties[property_id].relative_gradient) {
+            scale_value = value_list[property_id].indexOf(value.toString()) / value_list[property_id].length;
             max = 1;
         } else {
-            max = (data.properties[property_name].max ?? 17) * (data.properties[property_name].size_factor ?? 1);
+            max = (data.properties[property_id].max ?? 17) * (data.properties[property_id].size_factor ?? 1);
             if (scale_value >= max) {
                 [hue, sat, lum] = hslB;
             }
@@ -999,7 +1002,7 @@ function parse_custom_url(value) {
     if (value === '') {
         return false;
     }
-    // if (value * 1 == value) {
+    // if (isNum(value)) {
     //     return parseFloat(value);
     // }
     return value
@@ -1069,4 +1072,9 @@ function highlightSearchString(input, search) {
         });
     input = input.replace(/{/g, '<span class="search-highlight">').replace(/}/g, '</span>');
     return input;
+}
+
+function isNum(val){
+    if(val === "") return false;
+    return !isNaN(val)
 }
