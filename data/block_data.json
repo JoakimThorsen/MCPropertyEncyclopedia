@@ -638,6 +638,103 @@
 				"material_is_replaceable",
 				"material_blocks_light"
 			]
+		},
+		{
+			"category": "Tags",
+			"contents": [
+				"tag_saplings",
+				"tag_logs_that_burn",
+				"tag_logs",
+				"tag_dark_oak_logs",
+				"tag_oak_logs",
+				"tag_birch_logs",
+				"tag_acacia_logs",
+				"tag_jungle_logs",
+				"tag_spruce_logs",
+				"tag_mangrove_logs",
+				"tag_crimson_stems",
+				"tag_warped_stems",
+				"tag_sand",
+				"tag_rails",
+				"tag_flowers",
+				"tag_piglin_repellents",
+				"tag_gold_ores",
+				"tag_non_flammable_wood",
+				"tag_dirt",
+				"tag_completes_find_tree_tutorial",
+				"tag_enderman_holdable",
+				"tag_ice",
+				"tag_valid_spawn",
+				"tag_impermeable",
+				"tag_underwater_bonemeals",
+				"tag_corals",
+				"tag_bamboo_plantable_on",
+				"tag_dragon_immune",
+				"tag_dragon_transparent",
+				"tag_wither_immune",
+				"tag_wither_summon_base_blocks",
+				"tag_beehives",
+				"tag_bee_growables",
+				"tag_portals",
+				"tag_beacon_base_blocks",
+				"tag_soul_speed_blocks",
+				"tag_wall_post_override",
+				"tag_climbable",
+				"tag_fall_damage_resetting",
+				"tag_hoglin_repellents",
+				"tag_soul_fire_base_blocks",
+				"tag_guarded_by_piglins",
+				"tag_prevent_mob_spawning_inside",
+				"tag_mushroom_grow_block",
+				"tag_infiniburn_overworld",
+				"tag_infiniburn_nether",
+				"tag_infiniburn_end",
+				"tag_base_stone_overworld",
+				"tag_stone_ore_replaceables",
+				"tag_deepslate_ore_replaceables",
+				"tag_base_stone_nether",
+				"tag_overworld_carver_replaceables",
+				"tag_nether_carver_replaceables",
+				"tag_crystal_sound_blocks",
+				"tag_inside_step_sound_blocks",
+				"tag_dampens_vibrations",
+				"tag_dripstone_replaceable_blocks",
+				"tag_moss_replaceable",
+				"tag_lush_ground_replaceable",
+				"tag_azalea_root_replaceable",
+				"tag_small_dripleaf_placeable",
+				"tag_big_dripleaf_placeable",
+				"tag_snow",
+				"tag_axe_mineable",
+				"tag_hoe_mineable",
+				"tag_pickaxe_mineable",
+				"tag_shovel_mineable",
+				"tag_needs_diamond_tool",
+				"tag_needs_iron_tool",
+				"tag_needs_stone_tool",
+				"tag_features_cannot_replace",
+				"tag_lava_pool_stone_cannot_replace",
+				"tag_geode_invalid_blocks",
+				"tag_frog_prefer_jump_to",
+				"tag_sculk_replaceable",
+				"tag_sculk_replaceable_world_gen",
+				"tag_ancient_city_replaceable",
+				"tag_goats_spawnable_on",
+				"tag_parrots_spawnable_on",
+				"tag_rabbits_spawnable_on",
+				"tag_foxes_spawnable_on",
+				"tag_wolves_spawnable_on",
+				"tag_frogs_spawnable_on",
+				"tag_azalea_grows_on",
+				"tag_replaceable_plants",
+				"tag_convertable_to_mud",
+				"tag_mangrove_logs_can_grow_through",
+				"tag_mangrove_roots_can_grow_through",
+				"tag_dead_bush_may_place_on",
+				"tag_snaps_goat_horn",
+				"tag_snow_layer_cannot_survive_on",
+				"tag_snow_layer_can_survive_on"
+			]
 		}
 	],
 	"properties": {
@@ -11077,12 +11174,1868 @@
 			},
 			"default_value": 15
 		},
-		"occlusion_shape": {
-			"property_name": "Occlusion Shape",
-			"property_description": "Used in rendering",
-			"default_value": "undefined",
-			"entries": {}
+		"tag_saplings": {
+			"property_name": "Tag: SAPLINGS",
+			"property_description": "SAPLINGS",
+			"entries": {
+				"Azalea": "Yes",
+				"Mangrove Propagule": "Yes",
+				"Saplings": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_logs_that_burn": {
+			"property_name": "Tag: LOGS_THAT_BURN",
+			"property_description": "LOGS_THAT_BURN",
+			"entries": {
+				"Logs": "Yes",
+				"Wood": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_logs": {
+			"property_name": "Tag: LOGS",
+			"property_description": "LOGS",
+			"entries": {
+				"Hyphae": "Yes",
+				"Logs": "Yes",
+				"Stems": "Yes",
+				"Wood": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_dark_oak_logs": {
+			"property_name": "Tag: DARK_OAK_LOGS",
+			"property_description": "DARK_OAK_LOGS",
+			"entries": {
+				"Logs": {
+					"Oak Log<br>Spruce Log<br>Birch Log<br>Jungle Log<br>Acacia Log<br>mangrove_log<br>Stripped Spruce Log<br>Stripped Birch Log<br>Stripped Jungle Log<br>Stripped Acacia Log<br>Stripped Oak Log<br>stripped_mangrove_log": "No",
+					"Dark Oak Log<br>Stripped Dark Oak Log": "Yes"
+				},
+				"Wood": {
+					"Oak Wood<br>Spruce Wood<br>Birch Wood<br>Jungle Wood<br>Acacia Wood<br>mangrove_wood<br>Stripped Oak Wood<br>Stripped Spruce Wood<br>Stripped Birch Wood<br>Stripped Jungle Wood<br>Stripped Acacia Wood<br>stripped_mangrove_wood": "No",
+					"Dark Oak Wood<br>Stripped Dark Oak Wood": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_oak_logs": {
+			"property_name": "Tag: OAK_LOGS",
+			"property_description": "OAK_LOGS",
+			"entries": {
+				"Logs": {
+					"Oak Log<br>Stripped Oak Log": "Yes",
+					"Spruce Log<br>Birch Log<br>Jungle Log<br>Acacia Log<br>Dark Oak Log<br>mangrove_log<br>Stripped Spruce Log<br>Stripped Birch Log<br>Stripped Jungle Log<br>Stripped Acacia Log<br>Stripped Dark Oak Log<br>stripped_mangrove_log": "No"
+				},
+				"Wood": {
+					"Oak Wood<br>Stripped Oak Wood": "Yes",
+					"Spruce Wood<br>Birch Wood<br>Jungle Wood<br>Acacia Wood<br>Dark Oak Wood<br>mangrove_wood<br>Stripped Spruce Wood<br>Stripped Birch Wood<br>Stripped Jungle Wood<br>Stripped Acacia Wood<br>Stripped Dark Oak Wood<br>stripped_mangrove_wood": "No"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_birch_logs": {
+			"property_name": "Tag: BIRCH_LOGS",
+			"property_description": "BIRCH_LOGS",
+			"entries": {
+				"Logs": {
+					"Oak Log<br>Spruce Log<br>Jungle Log<br>Acacia Log<br>Dark Oak Log<br>mangrove_log<br>Stripped Spruce Log<br>Stripped Jungle Log<br>Stripped Acacia Log<br>Stripped Dark Oak Log<br>Stripped Oak Log<br>stripped_mangrove_log": "No",
+					"Birch Log<br>Stripped Birch Log": "Yes"
+				},
+				"Wood": {
+					"Oak Wood<br>Spruce Wood<br>Jungle Wood<br>Acacia Wood<br>Dark Oak Wood<br>mangrove_wood<br>Stripped Oak Wood<br>Stripped Spruce Wood<br>Stripped Jungle Wood<br>Stripped Acacia Wood<br>Stripped Dark Oak Wood<br>stripped_mangrove_wood": "No",
+					"Birch Wood<br>Stripped Birch Wood": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_acacia_logs": {
+			"property_name": "Tag: ACACIA_LOGS",
+			"property_description": "ACACIA_LOGS",
+			"entries": {
+				"Logs": {
+					"Oak Log<br>Spruce Log<br>Birch Log<br>Jungle Log<br>Dark Oak Log<br>mangrove_log<br>Stripped Spruce Log<br>Stripped Birch Log<br>Stripped Jungle Log<br>Stripped Dark Oak Log<br>Stripped Oak Log<br>stripped_mangrove_log": "No",
+					"Acacia Log<br>Stripped Acacia Log": "Yes"
+				},
+				"Wood": {
+					"Oak Wood<br>Spruce Wood<br>Birch Wood<br>Jungle Wood<br>Dark Oak Wood<br>mangrove_wood<br>Stripped Oak Wood<br>Stripped Spruce Wood<br>Stripped Birch Wood<br>Stripped Jungle Wood<br>Stripped Dark Oak Wood<br>stripped_mangrove_wood": "No",
+					"Acacia Wood<br>Stripped Acacia Wood": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_jungle_logs": {
+			"property_name": "Tag: JUNGLE_LOGS",
+			"property_description": "JUNGLE_LOGS",
+			"entries": {
+				"Logs": {
+					"Oak Log<br>Spruce Log<br>Birch Log<br>Acacia Log<br>Dark Oak Log<br>mangrove_log<br>Stripped Spruce Log<br>Stripped Birch Log<br>Stripped Acacia Log<br>Stripped Dark Oak Log<br>Stripped Oak Log<br>stripped_mangrove_log": "No",
+					"Jungle Log<br>Stripped Jungle Log": "Yes"
+				},
+				"Wood": {
+					"Oak Wood<br>Spruce Wood<br>Birch Wood<br>Acacia Wood<br>Dark Oak Wood<br>mangrove_wood<br>Stripped Oak Wood<br>Stripped Spruce Wood<br>Stripped Birch Wood<br>Stripped Acacia Wood<br>Stripped Dark Oak Wood<br>stripped_mangrove_wood": "No",
+					"Jungle Wood<br>Stripped Jungle Wood": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_spruce_logs": {
+			"property_name": "Tag: SPRUCE_LOGS",
+			"property_description": "SPRUCE_LOGS",
+			"entries": {
+				"Logs": {
+					"Oak Log<br>Birch Log<br>Jungle Log<br>Acacia Log<br>Dark Oak Log<br>mangrove_log<br>Stripped Birch Log<br>Stripped Jungle Log<br>Stripped Acacia Log<br>Stripped Dark Oak Log<br>Stripped Oak Log<br>stripped_mangrove_log": "No",
+					"Spruce Log<br>Stripped Spruce Log": "Yes"
+				},
+				"Wood": {
+					"Oak Wood<br>Birch Wood<br>Jungle Wood<br>Acacia Wood<br>Dark Oak Wood<br>mangrove_wood<br>Stripped Oak Wood<br>Stripped Birch Wood<br>Stripped Jungle Wood<br>Stripped Acacia Wood<br>Stripped Dark Oak Wood<br>stripped_mangrove_wood": "No",
+					"Spruce Wood<br>Stripped Spruce Wood": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_mangrove_logs": {
+			"property_name": "Tag: MANGROVE_LOGS",
+			"property_description": "MANGROVE_LOGS",
+			"entries": {
+				"Logs": {
+					"Oak Log<br>Spruce Log<br>Birch Log<br>Jungle Log<br>Acacia Log<br>Dark Oak Log<br>Stripped Spruce Log<br>Stripped Birch Log<br>Stripped Jungle Log<br>Stripped Acacia Log<br>Stripped Dark Oak Log<br>Stripped Oak Log": "No",
+					"mangrove_log<br>stripped_mangrove_log": "Yes"
+				},
+				"Wood": {
+					"Oak Wood<br>Spruce Wood<br>Birch Wood<br>Jungle Wood<br>Acacia Wood<br>Dark Oak Wood<br>Stripped Oak Wood<br>Stripped Spruce Wood<br>Stripped Birch Wood<br>Stripped Jungle Wood<br>Stripped Acacia Wood<br>Stripped Dark Oak Wood": "No",
+					"mangrove_wood<br>stripped_mangrove_wood": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_crimson_stems": {
+			"property_name": "Tag: CRIMSON_STEMS",
+			"property_description": "CRIMSON_STEMS",
+			"entries": {
+				"Hyphae": {
+					"Warped Hyphae<br>Stripped Warped Hyphae": "No",
+					"Crimson Hyphae<br>Stripped Crimson Hyphae": "Yes"
+				},
+				"Stems": {
+					"Warped Stem<br>Stripped Warped Stem": "No",
+					"Crimson Stem<br>Stripped Crimson Stem": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_warped_stems": {
+			"property_name": "Tag: WARPED_STEMS",
+			"property_description": "WARPED_STEMS",
+			"entries": {
+				"Hyphae": {
+					"Warped Hyphae<br>Stripped Warped Hyphae": "Yes",
+					"Crimson Hyphae<br>Stripped Crimson Hyphae": "No"
+				},
+				"Stems": {
+					"Warped Stem<br>Stripped Warped Stem": "Yes",
+					"Crimson Stem<br>Stripped Crimson Stem": "No"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_sand": {
+			"property_name": "Tag: SAND",
+			"property_description": "SAND",
+			"entries": {
+				"Red Sand": "Yes",
+				"Sand": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_rails": {
+			"property_name": "Tag: RAILS",
+			"property_description": "RAILS",
+			"entries": {
+				"Activator Rail": "Yes",
+				"Detector Rail": "Yes",
+				"Powered Rail": "Yes",
+				"Rail": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_flowers": {
+			"property_name": "Tag: FLOWERS",
+			"property_description": "FLOWERS",
+			"entries": {
+				"Azalea": {
+					"Azalea": "No",
+					"Flowering Azalea": "Yes"
+				},
+				"Flowers": "Yes",
+				"Leaves": {
+					"Oak Leaves<br>Spruce Leaves<br>Birch Leaves<br>Jungle Leaves<br>Acacia Leaves<br>Dark Oak Leaves<br>mangrove_leaves<br>Azalea Leaves": "No",
+					"Flowering Azalea Leaves": "Yes"
+				},
+				"Mangrove Propagule": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_piglin_repellents": {
+			"property_name": "Tag: PIGLIN_REPELLENTS",
+			"property_description": "PIGLIN_REPELLENTS",
+			"entries": {
+				"Campfire": {
+					"Campfire": "No",
+					"Soul Campfire": "Yes"
+				},
+				"Fire": {
+					"Fire": "No",
+					"Soul Fire": "Yes"
+				},
+				"Lantern": {
+					"Lantern": "No",
+					"Soul Lantern": "Yes"
+				},
+				"Torch": {
+					"Torch<br>Wall Torch": "No",
+					"Soul Torch<br>Soul Wall Torch": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_gold_ores": {
+			"property_name": "Tag: GOLD_ORES",
+			"property_description": "GOLD_ORES",
+			"entries": {
+				"Gold Ore": "Yes",
+				"Nether Gold Ore": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_non_flammable_wood": {
+			"property_name": "Tag: NON_FLAMMABLE_WOOD",
+			"property_description": "NON_FLAMMABLE_WOOD",
+			"entries": {
+				"Buttons": {
+					"Stone Button<br>Oak Button<br>Spruce Button<br>Birch Button<br>Jungle Button<br>Acacia Button<br>Dark Oak Button<br>mangrove_button<br>Polished Blackstone Button": "No",
+					"Crimson Button<br>Warped Button": "Yes"
+				},
+				"Doors": {
+					"Oak Door<br>Iron Door<br>Spruce Door<br>Birch Door<br>Jungle Door<br>Acacia Door<br>Dark Oak Door<br>mangrove_door": "No",
+					"Crimson Door<br>Warped Door": "Yes"
+				},
+				"Fence Gates": {
+					"Oak Fence Gate<br>Spruce Fence Gate<br>Birch Fence Gate<br>Jungle Fence Gate<br>Acacia Fence Gate<br>Dark Oak Fence Gate<br>mangrove_fence_gate": "No",
+					"Crimson Fence Gate<br>Warped Fence Gate": "Yes"
+				},
+				"Fences": {
+					"Oak Fence<br>Nether Brick Fence<br>Spruce Fence<br>Birch Fence<br>Jungle Fence<br>Acacia Fence<br>Dark Oak Fence<br>mangrove_fence": "No",
+					"Crimson Fence<br>Warped Fence": "Yes"
+				},
+				"Hyphae": "Yes",
+				"Planks": {
+					"Oak Planks<br>Spruce Planks<br>Birch Planks<br>Jungle Planks<br>Acacia Planks<br>Dark Oak Planks<br>mangrove_planks": "No",
+					"Crimson Planks<br>Warped Planks": "Yes"
+				},
+				"Pressure Plates": {
+					"Stone Pressure Plate<br>Oak Pressure Plate<br>Spruce Pressure Plate<br>Birch Pressure Plate<br>Jungle Pressure Plate<br>Acacia Pressure Plate<br>Dark Oak Pressure Plate<br>Light Weighted Pressure Plate<br>Heavy Weighted Pressure Plate<br>mangrove_pressure_plate<br>Polished Blackstone Pressure Plate": "No",
+					"Crimson Pressure Plate<br>Warped Pressure Plate": "Yes"
+				},
+				"Signs": {
+					"Oak Sign<br>Spruce Sign<br>Birch Sign<br>Acacia Sign<br>Jungle Sign<br>Dark Oak Sign<br>Oak Wall Sign<br>Spruce Wall Sign<br>Birch Wall Sign<br>Acacia Wall Sign<br>Jungle Wall Sign<br>Dark Oak Wall Sign<br>mangrove_sign<br>mangrove_wall_sign": "No",
+					"Crimson Sign<br>Warped Sign<br>Crimson Wall Sign<br>Warped Wall Sign": "Yes"
+				},
+				"Slabs": {
+					"Prismarine Slab<br>Prismarine Brick Slab<br>Dark Prismarine Slab<br>Oak Slab<br>Spruce Slab<br>Birch Slab<br>Jungle Slab<br>Acacia Slab<br>Dark Oak Slab<br>Stone Slab<br>Smooth Stone Slab<br>Sandstone Slab<br>Cut Sandstone Slab<br>Petrified Oak Slab<br>Cobblestone Slab<br>Brick Slab<br>Stone Brick Slab<br>mud_brick_slab<br>Nether Brick Slab<br>Quartz Slab<br>Red Sandstone Slab<br>Cut Red Sandstone Slab<br>Purpur Slab<br>Polished Granite Slab<br>Smooth Red Sandstone Slab<br>Mossy Stone Brick Slab<br>Polished Diorite Slab<br>Mossy Cobblestone Slab<br>End Stone Brick Slab<br>Smooth Sandstone Slab<br>Smooth Quartz Slab<br>Granite Slab<br>Andesite Slab<br>Red Nether Brick Slab<br>Polished Andesite Slab<br>Diorite Slab<br>mangrove_slab<br>Blackstone Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Oxidized Cut Copper Slab<br>Weathered Cut Copper Slab<br>Exposed Cut Copper Slab<br>Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Cut Copper Slab<br>Cobbled Deepslate Slab<br>Polished Deepslate Slab<br>Deepslate Tile Slab<br>Deepslate Brick Slab": "No",
+					"Crimson Slab<br>Warped Slab": "Yes"
+				},
+				"Stairs": {
+					"Oak Stairs<br>Cobblestone Stairs<br>Brick Stairs<br>Stone Brick Stairs<br>mud_brick_stairs<br>Nether Brick Stairs<br>Sandstone Stairs<br>Spruce Stairs<br>Birch Stairs<br>Jungle Stairs<br>Quartz Stairs<br>Acacia Stairs<br>Dark Oak Stairs<br>Prismarine Stairs<br>Prismarine Brick Stairs<br>Dark Prismarine Stairs<br>Red Sandstone Stairs<br>Purpur Stairs<br>Polished Granite Stairs<br>Smooth Red Sandstone Stairs<br>Mossy Stone Brick Stairs<br>Polished Diorite Stairs<br>Mossy Cobblestone Stairs<br>End Stone Brick Stairs<br>Stone Stairs<br>Smooth Sandstone Stairs<br>Smooth Quartz Stairs<br>Granite Stairs<br>Andesite Stairs<br>Red Nether Brick Stairs<br>Polished Andesite Stairs<br>Diorite Stairs<br>mangrove_stairs<br>Blackstone Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Oxidized Cut Copper Stairs<br>Weathered Cut Copper Stairs<br>Exposed Cut Copper Stairs<br>Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Cut Copper Stairs<br>Cobbled Deepslate Stairs<br>Polished Deepslate Stairs<br>Deepslate Tile Stairs<br>Deepslate Brick Stairs": "No",
+					"Crimson Stairs<br>Warped Stairs": "Yes"
+				},
+				"Stems": "Yes",
+				"Trapdoors": {
+					"Oak Trapdoor<br>Spruce Trapdoor<br>Birch Trapdoor<br>Jungle Trapdoor<br>Acacia Trapdoor<br>Dark Oak Trapdoor<br>Iron Trapdoor<br>mangrove_trapdoor": "No",
+					"Crimson Trapdoor<br>Warped Trapdoor": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_dirt": {
+			"property_name": "Tag: DIRT",
+			"property_description": "DIRT",
+			"entries": {
+				"Coarse Dirt": "Yes",
+				"Dirt": "Yes",
+				"Grass Block": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Podzol": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_completes_find_tree_tutorial": {
+			"property_name": "Tag: COMPLETES_FIND_TREE_TUTORIAL",
+			"property_description": "COMPLETES_FIND_TREE_TUTORIAL",
+			"entries": {
+				"Hyphae": "Yes",
+				"Leaves": "Yes",
+				"Logs": "Yes",
+				"Stems": "Yes",
+				"Wart Blocks": "Yes",
+				"Wood": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_enderman_holdable": {
+			"property_name": "Tag: ENDERMAN_HOLDABLE",
+			"property_description": "ENDERMAN_HOLDABLE",
+			"entries": {
+				"Cactus": "Yes",
+				"Clay": "Yes",
+				"Coarse Dirt": "Yes",
+				"Dirt": "Yes",
+				"Flowers": {
+					"Cornflower<br>Dandelion<br>Poppy<br>Blue Orchid<br>Allium<br>Azure Bluet<br>Red Tulip<br>Orange Tulip<br>White Tulip<br>Pink Tulip<br>Oxeye Daisy<br>Wither Rose<br>Lily of the Valley": "Yes",
+					"Sunflower<br>Lilac<br>Rose Bush<br>Peony": "No"
+				},
+				"Fungi": "Yes",
+				"Grass Block": "Yes",
+				"Gravel": "Yes",
+				"Melon": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mushrooms": "Yes",
+				"Mycelium": "Yes",
+				"Nylium": "Yes",
+				"Podzol": "Yes",
+				"Pumpkin": "Yes",
+				"Red Sand": "Yes",
+				"Roots": "Yes",
+				"Sand": "Yes",
+				"TNT": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_ice": {
+			"property_name": "Tag: ICE",
+			"property_description": "ICE",
+			"entries": {
+				"Blue Ice": "Yes",
+				"Frosted Ice": "Yes",
+				"Ice": "Yes",
+				"Packed Ice": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_valid_spawn": {
+			"property_name": "Tag: VALID_SPAWN",
+			"property_description": "VALID_SPAWN",
+			"entries": {
+				"Grass Block": "Yes",
+				"Podzol": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_impermeable": {
+			"property_name": "Tag: IMPERMEABLE",
+			"property_description": "IMPERMEABLE",
+			"entries": {
+				"Glass": "Yes",
+				"Stained Glass": "Yes",
+				"Tinted Glass": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_underwater_bonemeals": {
+			"property_name": "Tag: UNDERWATER_BONEMEALS",
+			"property_description": "UNDERWATER_BONEMEALS",
+			"entries": {
+				"Coral Fans": {
+					"Dead Tube Coral Fan<br>Dead Brain Coral Fan<br>Dead Bubble Coral Fan<br>Dead Fire Coral Fan<br>Dead Horn Coral Fan<br>Dead Tube Coral Wall Fan<br>Dead Brain Coral Wall Fan<br>Dead Bubble Coral Wall Fan<br>Dead Fire Coral Wall Fan<br>Dead Horn Coral Wall Fan": "No",
+					"Tube Coral Fan<br>Brain Coral Fan<br>Bubble Coral Fan<br>Fire Coral Fan<br>Horn Coral Fan<br>Tube Coral Wall Fan<br>Brain Coral Wall Fan<br>Bubble Coral Wall Fan<br>Fire Coral Wall Fan<br>Horn Coral Wall Fan": "Yes"
+				},
+				"Corals": {
+					"Dead Tube Coral<br>Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral": "No",
+					"Tube Coral<br>Brain Coral<br>Bubble Coral<br>Fire Coral<br>Horn Coral": "Yes"
+				},
+				"Seagrass": {
+					"Seagrass": "Yes",
+					"Tall Seagrass": "No"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_corals": {
+			"property_name": "Tag: CORALS",
+			"property_description": "CORALS",
+			"entries": {
+				"Coral Fans": {
+					"Dead Tube Coral Fan<br>Dead Brain Coral Fan<br>Dead Bubble Coral Fan<br>Dead Fire Coral Fan<br>Dead Horn Coral Fan<br>Dead Tube Coral Wall Fan<br>Dead Brain Coral Wall Fan<br>Dead Bubble Coral Wall Fan<br>Dead Fire Coral Wall Fan<br>Dead Horn Coral Wall Fan<br>Tube Coral Wall Fan<br>Brain Coral Wall Fan<br>Bubble Coral Wall Fan<br>Fire Coral Wall Fan<br>Horn Coral Wall Fan": "No",
+					"Tube Coral Fan<br>Brain Coral Fan<br>Bubble Coral Fan<br>Fire Coral Fan<br>Horn Coral Fan": "Yes"
+				},
+				"Corals": {
+					"Dead Tube Coral<br>Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral": "No",
+					"Tube Coral<br>Brain Coral<br>Bubble Coral<br>Fire Coral<br>Horn Coral": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_bamboo_plantable_on": {
+			"property_name": "Tag: BAMBOO_PLANTABLE_ON",
+			"property_description": "BAMBOO_PLANTABLE_ON",
+			"entries": {
+				"Bamboo": "Yes",
+				"Coarse Dirt": "Yes",
+				"Dirt": "Yes",
+				"Grass Block": "Yes",
+				"Gravel": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Podzol": "Yes",
+				"Red Sand": "Yes",
+				"Sand": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_dragon_immune": {
+			"property_name": "Tag: DRAGON_IMMUNE",
+			"property_description": "DRAGON_IMMUNE",
+			"entries": {
+				"Barrier": "Yes",
+				"Bedrock": "Yes",
+				"Command Blocks": "Yes",
+				"Crying Obsidian": "Yes",
+				"End Gateway": "Yes",
+				"End Portal": "Yes",
+				"End Portal Frame": "Yes",
+				"End Stone": "Yes",
+				"Iron Bars": "Yes",
+				"Jigsaw Block": "Yes",
+				"Obsidian": "Yes",
+				"Piston": {
+					"Sticky Piston<br>Piston<br>Piston Head": "No",
+					"Moving Piston": "Yes"
+				},
+				"Reinforced Deepslate": "Yes",
+				"Respawn Anchor": "Yes",
+				"Structure Block": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_dragon_transparent": {
+			"property_name": "Tag: DRAGON_TRANSPARENT",
+			"property_description": "DRAGON_TRANSPARENT",
+			"entries": {
+				"Fire": "Yes",
+				"Light Block": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_wither_immune": {
+			"property_name": "Tag: WITHER_IMMUNE",
+			"property_description": "WITHER_IMMUNE",
+			"entries": {
+				"Barrier": "Yes",
+				"Bedrock": "Yes",
+				"Command Blocks": "Yes",
+				"End Gateway": "Yes",
+				"End Portal": "Yes",
+				"End Portal Frame": "Yes",
+				"Jigsaw Block": "Yes",
+				"Light Block": "Yes",
+				"Piston": {
+					"Sticky Piston<br>Piston<br>Piston Head": "No",
+					"Moving Piston": "Yes"
+				},
+				"Reinforced Deepslate": "Yes",
+				"Structure Block": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_wither_summon_base_blocks": {
+			"property_name": "Tag: WITHER_SUMMON_BASE_BLOCKS",
+			"property_description": "WITHER_SUMMON_BASE_BLOCKS",
+			"entries": {
+				"Soul Sand": "Yes",
+				"Soul Soil": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_beehives": {
+			"property_name": "Tag: BEEHIVES",
+			"property_description": "BEEHIVES",
+			"entries": {
+				"Bee Nest": "Yes",
+				"Beehive": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_bee_growables": {
+			"property_name": "Tag: BEE_GROWABLES",
+			"property_description": "BEE_GROWABLES",
+			"entries": {
+				"Cave Vines": "Yes",
+				"Crops": {
+					"Potatoes<br>Wheat Crops<br>Carrots<br>Beetroots<br>Pumpkin Stem<br>Melon Stem": "Yes",
+					"Attached Pumpkin Stem<br>Attached Melon Stem": "No"
+				},
+				"Sweet Berry Bush": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_portals": {
+			"property_name": "Tag: PORTALS",
+			"property_description": "PORTALS",
+			"entries": {
+				"End Gateway": "Yes",
+				"End Portal": "Yes",
+				"Nether Portal": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_beacon_base_blocks": {
+			"property_name": "Tag: BEACON_BASE_BLOCKS",
+			"property_description": "BEACON_BASE_BLOCKS",
+			"entries": {
+				"Block of Diamond": "Yes",
+				"Block of Emerald": "Yes",
+				"Block of Gold": "Yes",
+				"Block of Iron": "Yes",
+				"Block of Netherite": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_soul_speed_blocks": {
+			"property_name": "Tag: SOUL_SPEED_BLOCKS",
+			"property_description": "SOUL_SPEED_BLOCKS",
+			"entries": {
+				"Soul Sand": "Yes",
+				"Soul Soil": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_wall_post_override": {
+			"property_name": "Tag: WALL_POST_OVERRIDE",
+			"property_description": "WALL_POST_OVERRIDE",
+			"entries": {
+				"Banners": "Yes",
+				"Pressure Plates": "Yes",
+				"Redstone Torch": {
+					"Redstone Torch": "Yes",
+					"Redstone Wall Torch": "No"
+				},
+				"Signs": "Yes",
+				"Torch": {
+					"Torch<br>Soul Torch": "Yes",
+					"Wall Torch<br>Soul Wall Torch": "No"
+				},
+				"Tripwire": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_climbable": {
+			"property_name": "Tag: CLIMBABLE",
+			"property_description": "CLIMBABLE",
+			"entries": {
+				"Cave Vines": "Yes",
+				"Ladder": "Yes",
+				"Scaffolding": "Yes",
+				"Twisting Vines": "Yes",
+				"Vines": "Yes",
+				"Weeping Vines": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_fall_damage_resetting": {
+			"property_name": "Tag: FALL_DAMAGE_RESETTING",
+			"property_description": "FALL_DAMAGE_RESETTING",
+			"entries": {
+				"Cave Vines": "Yes",
+				"Cobweb": "Yes",
+				"Ladder": "Yes",
+				"Scaffolding": "Yes",
+				"Sweet Berry Bush": "Yes",
+				"Twisting Vines": "Yes",
+				"Vines": "Yes",
+				"Weeping Vines": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_hoglin_repellents": {
+			"property_name": "Tag: HOGLIN_REPELLENTS",
+			"property_description": "HOGLIN_REPELLENTS",
+			"entries": {
+				"Flower Pot": {
+					"Flower Pot<br>Potted Fern<br>Potted Azalea<br>Potted Flowering Azalea<br>Potted Cornflower<br>Potted Dandelion<br>Potted Poppy<br>Potted Blue Orchid<br>Potted Allium<br>Potted Azure Bluet<br>Potted Red Tulip<br>Potted Orange Tulip<br>Potted White Tulip<br>Potted Pink Tulip<br>Potted Oxeye Daisy<br>Potted Lily of the Valley<br>Potted Wither Rose<br>Potted Bamboo<br>Potted Cactus<br>Potted Dead Bush<br>Potted Red Mushroom<br>Potted Brown Mushroom<br>Potted Crimson Roots<br>Potted Warped Roots<br>Potted Acacia Sapling<br>Potted Birch Sapling<br>Potted Dark Oak Sapling<br>Potted Jungle Sapling<br>Potted Oak Sapling<br>Potted Spruce Sapling<br>Potted Crimson Fungus<br>potted_mangrove_propagule": "No",
+					"Potted Warped Fungus": "Yes"
+				},
+				"Fungi": {
+					"Warped Fungus": "Yes",
+					"Crimson Fungus": "No"
+				},
+				"Nether Portal": "Yes",
+				"Respawn Anchor": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_soul_fire_base_blocks": {
+			"property_name": "Tag: SOUL_FIRE_BASE_BLOCKS",
+			"property_description": "SOUL_FIRE_BASE_BLOCKS",
+			"entries": {
+				"Soul Sand": "Yes",
+				"Soul Soil": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_guarded_by_piglins": {
+			"property_name": "Tag: GUARDED_BY_PIGLINS",
+			"property_description": "GUARDED_BY_PIGLINS",
+			"entries": {
+				"Barrel": "Yes",
+				"Block of Gold": "Yes",
+				"Block of Raw Gold": "Yes",
+				"Chest": "Yes",
+				"Ender Chest": "Yes",
+				"Gilded Blackstone": "Yes",
+				"Gold Ore": "Yes",
+				"Nether Gold Ore": "Yes",
+				"Shulker Box": "Yes",
+				"Trapped Chest": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_prevent_mob_spawning_inside": {
+			"property_name": "Tag: PREVENT_MOB_SPAWNING_INSIDE",
+			"property_description": "PREVENT_MOB_SPAWNING_INSIDE",
+			"entries": {
+				"Activator Rail": "Yes",
+				"Detector Rail": "Yes",
+				"Powered Rail": "Yes",
+				"Rail": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_mushroom_grow_block": {
+			"property_name": "Tag: MUSHROOM_GROW_BLOCK",
+			"property_description": "MUSHROOM_GROW_BLOCK",
+			"entries": {
+				"Mycelium": "Yes",
+				"Nylium": "Yes",
+				"Podzol": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_infiniburn_overworld": {
+			"property_name": "Tag: INFINIBURN_OVERWORLD",
+			"property_description": "INFINIBURN_OVERWORLD",
+			"entries": {
+				"Magma Block": "Yes",
+				"Netherrack": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_infiniburn_nether": {
+			"property_name": "Tag: INFINIBURN_NETHER",
+			"property_description": "INFINIBURN_NETHER",
+			"entries": {
+				"Magma Block": "Yes",
+				"Netherrack": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_infiniburn_end": {
+			"property_name": "Tag: INFINIBURN_END",
+			"property_description": "INFINIBURN_END",
+			"entries": {
+				"Bedrock": "Yes",
+				"Magma Block": "Yes",
+				"Netherrack": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_base_stone_overworld": {
+			"property_name": "Tag: BASE_STONE_OVERWORLD",
+			"property_description": "BASE_STONE_OVERWORLD",
+			"entries": {
+				"Andesite": {
+					"Andesite": "Yes",
+					"Polished Andesite": "No"
+				},
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Diorite": {
+					"Diorite": "Yes",
+					"Polished Diorite": "No"
+				},
+				"Granite": {
+					"Granite": "Yes",
+					"Polished Granite": "No"
+				},
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				},
+				"Tuff": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_stone_ore_replaceables": {
+			"property_name": "Tag: STONE_ORE_REPLACEABLES",
+			"property_description": "STONE_ORE_REPLACEABLES",
+			"entries": {
+				"Andesite": {
+					"Andesite": "Yes",
+					"Polished Andesite": "No"
+				},
+				"Diorite": {
+					"Diorite": "Yes",
+					"Polished Diorite": "No"
+				},
+				"Granite": {
+					"Granite": "Yes",
+					"Polished Granite": "No"
+				},
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_deepslate_ore_replaceables": {
+			"property_name": "Tag: DEEPSLATE_ORE_REPLACEABLES",
+			"property_description": "DEEPSLATE_ORE_REPLACEABLES",
+			"entries": {
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Tuff": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_base_stone_nether": {
+			"property_name": "Tag: BASE_STONE_NETHER",
+			"property_description": "BASE_STONE_NETHER",
+			"entries": {
+				"Basalt": {
+					"Basalt": "Yes",
+					"Polished Basalt<br>Smooth Basalt": "No"
+				},
+				"Blackstone": {
+					"Blackstone": "Yes",
+					"Polished Blackstone<br>Polished Blackstone Bricks<br>Cracked Polished Blackstone Bricks<br>Chiseled Polished Blackstone": "No"
+				},
+				"Netherrack": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_overworld_carver_replaceables": {
+			"property_name": "Tag: OVERWORLD_CARVER_REPLACEABLES",
+			"property_description": "OVERWORLD_CARVER_REPLACEABLES",
+			"entries": {
+				"Andesite": {
+					"Andesite": "Yes",
+					"Polished Andesite": "No"
+				},
+				"Block of Raw Copper": "Yes",
+				"Block of Raw Iron": "Yes",
+				"Calcite": "Yes",
+				"Coarse Dirt": "Yes",
+				"Copper Ore": "Yes",
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Diorite": {
+					"Diorite": "Yes",
+					"Polished Diorite": "No"
+				},
+				"Dirt": "Yes",
+				"Granite": {
+					"Granite": "Yes",
+					"Polished Granite": "No"
+				},
+				"Grass Block": "Yes",
+				"Gravel": "Yes",
+				"Iron Ore": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Packed Ice": "Yes",
+				"Podzol": "Yes",
+				"Red Sand": "Yes",
+				"Red Sandstone": {
+					"Red Sandstone": "Yes",
+					"Chiseled Red Sandstone<br>Cut Red Sandstone<br>Smooth Red Sandstone": "No"
+				},
+				"Sand": "Yes",
+				"Sandstone": {
+					"Sandstone": "Yes",
+					"Chiseled Sandstone<br>Cut Sandstone<br>Smooth Sandstone": "No"
+				},
+				"Snow": "Yes",
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				},
+				"Terracotta": "Yes",
+				"Tuff": "Yes",
+				"Water": {
+					"Bubble Column": "No",
+					"Water": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_nether_carver_replaceables": {
+			"property_name": "Tag: NETHER_CARVER_REPLACEABLES",
+			"property_description": "NETHER_CARVER_REPLACEABLES",
+			"entries": {
+				"Andesite": {
+					"Andesite": "Yes",
+					"Polished Andesite": "No"
+				},
+				"Basalt": {
+					"Basalt": "Yes",
+					"Polished Basalt<br>Smooth Basalt": "No"
+				},
+				"Blackstone": {
+					"Blackstone": "Yes",
+					"Polished Blackstone<br>Polished Blackstone Bricks<br>Cracked Polished Blackstone Bricks<br>Chiseled Polished Blackstone": "No"
+				},
+				"Coarse Dirt": "Yes",
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Diorite": {
+					"Diorite": "Yes",
+					"Polished Diorite": "No"
+				},
+				"Dirt": "Yes",
+				"Granite": {
+					"Granite": "Yes",
+					"Polished Granite": "No"
+				},
+				"Grass Block": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Netherrack": "Yes",
+				"Nylium": "Yes",
+				"Podzol": "Yes",
+				"Soul Sand": "Yes",
+				"Soul Soil": "Yes",
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				},
+				"Tuff": "Yes",
+				"Wart Blocks": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_crystal_sound_blocks": {
+			"property_name": "Tag: CRYSTAL_SOUND_BLOCKS",
+			"property_description": "CRYSTAL_SOUND_BLOCKS",
+			"entries": {
+				"Block of Amethyst": "Yes",
+				"Budding Amethyst": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_inside_step_sound_blocks": {
+			"property_name": "Tag: INSIDE_STEP_SOUND_BLOCKS",
+			"property_description": "INSIDE_STEP_SOUND_BLOCKS",
+			"entries": {
+				"Powder Snow": "Yes",
+				"Sculk Vein": "Yes",
+				"Snow": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_dampens_vibrations": {
+			"property_name": "Tag: DAMPENS_VIBRATIONS",
+			"property_description": "DAMPENS_VIBRATIONS",
+			"entries": {
+				"Carpets": "Yes",
+				"Wool": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_dripstone_replaceable_blocks": {
+			"property_name": "Tag: DRIPSTONE_REPLACEABLE_BLOCKS",
+			"property_description": "DRIPSTONE_REPLACEABLE_BLOCKS",
+			"entries": {
+				"Andesite": {
+					"Andesite": "Yes",
+					"Polished Andesite": "No"
+				},
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Diorite": {
+					"Diorite": "Yes",
+					"Polished Diorite": "No"
+				},
+				"Granite": {
+					"Granite": "Yes",
+					"Polished Granite": "No"
+				},
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				},
+				"Tuff": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_moss_replaceable": {
+			"property_name": "Tag: MOSS_REPLACEABLE",
+			"property_description": "MOSS_REPLACEABLE",
+			"entries": {
+				"Andesite": {
+					"Andesite": "Yes",
+					"Polished Andesite": "No"
+				},
+				"Cave Vines": "Yes",
+				"Coarse Dirt": "Yes",
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Diorite": {
+					"Diorite": "Yes",
+					"Polished Diorite": "No"
+				},
+				"Dirt": "Yes",
+				"Granite": {
+					"Granite": "Yes",
+					"Polished Granite": "No"
+				},
+				"Grass Block": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Podzol": "Yes",
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				},
+				"Tuff": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_lush_ground_replaceable": {
+			"property_name": "Tag: LUSH_GROUND_REPLACEABLE",
+			"property_description": "LUSH_GROUND_REPLACEABLE",
+			"entries": {
+				"Andesite": {
+					"Andesite": "Yes",
+					"Polished Andesite": "No"
+				},
+				"Cave Vines": "Yes",
+				"Clay": "Yes",
+				"Coarse Dirt": "Yes",
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Diorite": {
+					"Diorite": "Yes",
+					"Polished Diorite": "No"
+				},
+				"Dirt": "Yes",
+				"Granite": {
+					"Granite": "Yes",
+					"Polished Granite": "No"
+				},
+				"Grass Block": "Yes",
+				"Gravel": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Podzol": "Yes",
+				"Sand": "Yes",
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				},
+				"Tuff": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_azalea_root_replaceable": {
+			"property_name": "Tag: AZALEA_ROOT_REPLACEABLE",
+			"property_description": "AZALEA_ROOT_REPLACEABLE",
+			"entries": {
+				"Andesite": {
+					"Andesite": "Yes",
+					"Polished Andesite": "No"
+				},
+				"Clay": "Yes",
+				"Coarse Dirt": "Yes",
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Diorite": {
+					"Diorite": "Yes",
+					"Polished Diorite": "No"
+				},
+				"Dirt": "Yes",
+				"Granite": {
+					"Granite": "Yes",
+					"Polished Granite": "No"
+				},
+				"Grass Block": "Yes",
+				"Gravel": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Podzol": "Yes",
+				"Powder Snow": "Yes",
+				"Red Sand": "Yes",
+				"Sand": "Yes",
+				"Snow Block": "Yes",
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				},
+				"Terracotta": "Yes",
+				"Tuff": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_small_dripleaf_placeable": {
+			"property_name": "Tag: SMALL_DRIPLEAF_PLACEABLE",
+			"property_description": "SMALL_DRIPLEAF_PLACEABLE",
+			"entries": {
+				"Clay": "Yes",
+				"Moss Block": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_big_dripleaf_placeable": {
+			"property_name": "Tag: BIG_DRIPLEAF_PLACEABLE",
+			"property_description": "BIG_DRIPLEAF_PLACEABLE",
+			"entries": {
+				"Clay": "Yes",
+				"Coarse Dirt": "Yes",
+				"Dirt": "Yes",
+				"Farmland": "Yes",
+				"Grass Block": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Podzol": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_snow": {
+			"property_name": "Tag: SNOW",
+			"property_description": "SNOW",
+			"entries": {
+				"Powder Snow": "Yes",
+				"Snow": "Yes",
+				"Snow Block": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_axe_mineable": {
+			"property_name": "Tag: AXE_MINEABLE",
+			"property_description": "AXE_MINEABLE",
+			"entries": {
+				"Azalea": "Yes",
+				"Bamboo": {
+					"Bamboo Shoot": "No",
+					"Bamboo": "Yes"
+				},
+				"Banners": "Yes",
+				"Barrel": "Yes",
+				"Bee Nest": "Yes",
+				"Beehive": "Yes",
+				"Big Dripleaf": "Yes",
+				"Bookshelf": "Yes",
+				"Buttons": {
+					"Stone Button<br>Polished Blackstone Button": "No",
+					"Oak Button<br>Spruce Button<br>Birch Button<br>Jungle Button<br>Acacia Button<br>Dark Oak Button<br>Crimson Button<br>mangrove_button<br>Warped Button": "Yes"
+				},
+				"Campfire": "Yes",
+				"Cartography Table": "Yes",
+				"Cave Vines": "Yes",
+				"Chest": "Yes",
+				"Chorus Flower": "Yes",
+				"Chorus Plant": "Yes",
+				"Cocoa": "Yes",
+				"Composter": "Yes",
+				"Crafting Table": "Yes",
+				"Crops": "Yes",
+				"Daylight Detector": "Yes",
+				"Dead Bush": "Yes",
+				"Doors": {
+					"Oak Door<br>Spruce Door<br>Birch Door<br>Jungle Door<br>Acacia Door<br>Dark Oak Door<br>Crimson Door<br>mangrove_door<br>Warped Door": "Yes",
+					"Iron Door": "No"
+				},
+				"Fence Gates": "Yes",
+				"Fences": {
+					"Oak Fence<br>Spruce Fence<br>Birch Fence<br>Jungle Fence<br>Acacia Fence<br>Dark Oak Fence<br>Crimson Fence<br>mangrove_fence<br>Warped Fence": "Yes",
+					"Nether Brick Fence": "No"
+				},
+				"Fern": "Yes",
+				"Fletching Table": "Yes",
+				"Fungi": "Yes",
+				"Glow Lichen": "Yes",
+				"Grass": "Yes",
+				"Hanging Roots": "Yes",
+				"Hyphae": "Yes",
+				"Jack o'Lantern": "Yes",
+				"Jukebox": "Yes",
+				"Ladder": "Yes",
+				"Lectern": "Yes",
+				"Lily Pad": "Yes",
+				"Logs": "Yes",
+				"Loom": "Yes",
+				"Mangrove Propagule": "Yes",
+				"Mangrove Roots": "Yes",
+				"Melon": "Yes",
+				"Mushroom Blocks": "Yes",
+				"Mushrooms": "Yes",
+				"Nether Wart": "Yes",
+				"Note Block": "Yes",
+				"Planks": "Yes",
+				"Pressure Plates": {
+					"Stone Pressure Plate<br>Light Weighted Pressure Plate<br>Heavy Weighted Pressure Plate<br>Polished Blackstone Pressure Plate": "No",
+					"Oak Pressure Plate<br>Spruce Pressure Plate<br>Birch Pressure Plate<br>Jungle Pressure Plate<br>Acacia Pressure Plate<br>Dark Oak Pressure Plate<br>Crimson Pressure Plate<br>mangrove_pressure_plate<br>Warped Pressure Plate": "Yes"
+				},
+				"Pumpkin": "Yes",
+				"Saplings": "Yes",
+				"Scaffolding": "Yes",
+				"Signs": "Yes",
+				"Slabs": {
+					"Prismarine Slab<br>Prismarine Brick Slab<br>Dark Prismarine Slab<br>Stone Slab<br>Smooth Stone Slab<br>Sandstone Slab<br>Cut Sandstone Slab<br>Petrified Oak Slab<br>Cobblestone Slab<br>Brick Slab<br>Stone Brick Slab<br>mud_brick_slab<br>Nether Brick Slab<br>Quartz Slab<br>Red Sandstone Slab<br>Cut Red Sandstone Slab<br>Purpur Slab<br>Polished Granite Slab<br>Smooth Red Sandstone Slab<br>Mossy Stone Brick Slab<br>Polished Diorite Slab<br>Mossy Cobblestone Slab<br>End Stone Brick Slab<br>Smooth Sandstone Slab<br>Smooth Quartz Slab<br>Granite Slab<br>Andesite Slab<br>Red Nether Brick Slab<br>Polished Andesite Slab<br>Diorite Slab<br>Blackstone Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Oxidized Cut Copper Slab<br>Weathered Cut Copper Slab<br>Exposed Cut Copper Slab<br>Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Cut Copper Slab<br>Cobbled Deepslate Slab<br>Polished Deepslate Slab<br>Deepslate Tile Slab<br>Deepslate Brick Slab": "No",
+					"Oak Slab<br>Spruce Slab<br>Birch Slab<br>Jungle Slab<br>Acacia Slab<br>Dark Oak Slab<br>Crimson Slab<br>mangrove_slab<br>Warped Slab": "Yes"
+				},
+				"Small Dripleaf": "Yes",
+				"Smithing Table": "Yes",
+				"Spore Blossom": "Yes",
+				"Stairs": {
+					"Oak Stairs<br>Spruce Stairs<br>Birch Stairs<br>Jungle Stairs<br>Acacia Stairs<br>Dark Oak Stairs<br>Crimson Stairs<br>mangrove_stairs<br>Warped Stairs": "Yes",
+					"Cobblestone Stairs<br>Brick Stairs<br>Stone Brick Stairs<br>mud_brick_stairs<br>Nether Brick Stairs<br>Sandstone Stairs<br>Quartz Stairs<br>Prismarine Stairs<br>Prismarine Brick Stairs<br>Dark Prismarine Stairs<br>Red Sandstone Stairs<br>Purpur Stairs<br>Polished Granite Stairs<br>Smooth Red Sandstone Stairs<br>Mossy Stone Brick Stairs<br>Polished Diorite Stairs<br>Mossy Cobblestone Stairs<br>End Stone Brick Stairs<br>Stone Stairs<br>Smooth Sandstone Stairs<br>Smooth Quartz Stairs<br>Granite Stairs<br>Andesite Stairs<br>Red Nether Brick Stairs<br>Polished Andesite Stairs<br>Diorite Stairs<br>Blackstone Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Oxidized Cut Copper Stairs<br>Weathered Cut Copper Stairs<br>Exposed Cut Copper Stairs<br>Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Cut Copper Stairs<br>Cobbled Deepslate Stairs<br>Polished Deepslate Stairs<br>Deepslate Tile Stairs<br>Deepslate Brick Stairs": "No"
+				},
+				"Stems": "Yes",
+				"Sugar Cane": "Yes",
+				"Sweet Berry Bush": "Yes",
+				"Trapdoors": {
+					"Oak Trapdoor<br>Spruce Trapdoor<br>Birch Trapdoor<br>Jungle Trapdoor<br>Acacia Trapdoor<br>Dark Oak Trapdoor<br>Crimson Trapdoor<br>mangrove_trapdoor<br>Warped Trapdoor": "Yes",
+					"Iron Trapdoor": "No"
+				},
+				"Trapped Chest": "Yes",
+				"Twisting Vines": "Yes",
+				"Vines": "Yes",
+				"Weeping Vines": "Yes",
+				"Wood": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_hoe_mineable": {
+			"property_name": "Tag: HOE_MINEABLE",
+			"property_description": "HOE_MINEABLE",
+			"entries": {
+				"Dried Kelp Block": "Yes",
+				"Hay Bale": "Yes",
+				"Leaves": "Yes",
+				"Moss Block": "Yes",
+				"Moss Carpet": "Yes",
+				"Sculk": "Yes",
+				"Sculk Catalyst": "Yes",
+				"Sculk Sensor": "Yes",
+				"Sculk Shrieker": "Yes",
+				"Sculk Vein": "Yes",
+				"Shroomlight": "Yes",
+				"Sponge": "Yes",
+				"Target": "Yes",
+				"Wart Blocks": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_pickaxe_mineable": {
+			"property_name": "Tag: PICKAXE_MINEABLE",
+			"property_description": "PICKAXE_MINEABLE",
+			"entries": {
+				"Activator Rail": "Yes",
+				"Amethyst Cluster": "Yes",
+				"Ancient Debris": "Yes",
+				"Andesite": "Yes",
+				"Anvil": "Yes",
+				"Basalt": "Yes",
+				"Bell": "Yes",
+				"Blackstone": "Yes",
+				"Blast Furnace": "Yes",
+				"Block of Amethyst": "Yes",
+				"Block of Coal": "Yes",
+				"Block of Copper": "Yes",
+				"Block of Diamond": "Yes",
+				"Block of Emerald": "Yes",
+				"Block of Gold": "Yes",
+				"Block of Iron": "Yes",
+				"Block of Lapis Lazuli": "Yes",
+				"Block of Netherite": "Yes",
+				"Block of Quartz": "Yes",
+				"Block of Raw Copper": "Yes",
+				"Block of Raw Gold": "Yes",
+				"Block of Raw Iron": "Yes",
+				"Block of Redstone": "Yes",
+				"Blue Ice": "Yes",
+				"Bone Block": "Yes",
+				"Brewing Stand": "Yes",
+				"Bricks": "Yes",
+				"Budding Amethyst": "Yes",
+				"Buttons": {
+					"Stone Button": "Yes",
+					"Oak Button<br>Spruce Button<br>Birch Button<br>Jungle Button<br>Acacia Button<br>Dark Oak Button<br>Crimson Button<br>mangrove_button<br>Warped Button<br>Polished Blackstone Button": "No"
+				},
+				"Calcite": "Yes",
+				"Cauldron": "Yes",
+				"Chain": "Yes",
+				"Coal Ore": "Yes",
+				"Cobbled Deepslate": "Yes",
+				"Cobblestone": "Yes",
+				"Concrete": "Yes",
+				"Conduit": "Yes",
+				"Copper Ore": "Yes",
+				"Coral Blocks": "Yes",
+				"Coral Fans": {
+					"Dead Tube Coral Fan<br>Dead Brain Coral Fan<br>Dead Bubble Coral Fan<br>Dead Fire Coral Fan<br>Dead Horn Coral Fan<br>Dead Tube Coral Wall Fan<br>Dead Brain Coral Wall Fan<br>Dead Bubble Coral Wall Fan<br>Dead Fire Coral Wall Fan<br>Dead Horn Coral Wall Fan": "Yes",
+					"Tube Coral Fan<br>Brain Coral Fan<br>Bubble Coral Fan<br>Fire Coral Fan<br>Horn Coral Fan<br>Tube Coral Wall Fan<br>Brain Coral Wall Fan<br>Bubble Coral Wall Fan<br>Fire Coral Wall Fan<br>Horn Coral Wall Fan": "No"
+				},
+				"Corals": {
+					"Dead Tube Coral<br>Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral": "Yes",
+					"Tube Coral<br>Brain Coral<br>Bubble Coral<br>Fire Coral<br>Horn Coral": "No"
+				},
+				"Crying Obsidian": "Yes",
+				"Deepslate": "Yes",
+				"Detector Rail": "Yes",
+				"Diamond Ore": "Yes",
+				"Diorite": "Yes",
+				"Dispenser": "Yes",
+				"Doors": {
+					"Oak Door<br>Spruce Door<br>Birch Door<br>Jungle Door<br>Acacia Door<br>Dark Oak Door<br>Crimson Door<br>mangrove_door<br>Warped Door": "No",
+					"Iron Door": "Yes"
+				},
+				"Dripstone Block": "Yes",
+				"Dropper": "Yes",
+				"Emerald Ore": "Yes",
+				"Enchanting Table": "Yes",
+				"End Stone": "Yes",
+				"End Stone Bricks": "Yes",
+				"Ender Chest": "Yes",
+				"Fences": {
+					"Oak Fence<br>Spruce Fence<br>Birch Fence<br>Jungle Fence<br>Acacia Fence<br>Dark Oak Fence<br>Crimson Fence<br>mangrove_fence<br>Warped Fence": "No",
+					"Nether Brick Fence": "Yes"
+				},
+				"Furnace": "Yes",
+				"Gilded Blackstone": "Yes",
+				"Glazed Terracotta": "Yes",
+				"Gold Ore": "Yes",
+				"Granite": "Yes",
+				"Grindstone": "Yes",
+				"Hopper": "Yes",
+				"Ice": "Yes",
+				"Iron Bars": "Yes",
+				"Iron Ore": "Yes",
+				"Lantern": "Yes",
+				"Lapis Lazuli Ore": "Yes",
+				"Lightning Rod": "Yes",
+				"Lodestone": "Yes",
+				"Magma Block": "Yes",
+				"Mud Bricks": "Yes",
+				"Nether Bricks": "Yes",
+				"Nether Gold Ore": "Yes",
+				"Nether Quartz Ore": "Yes",
+				"Netherrack": "Yes",
+				"Nylium": "Yes",
+				"Observer": "Yes",
+				"Obsidian": "Yes",
+				"Packed Ice": "Yes",
+				"Packed Mud": "Yes",
+				"Piston": {
+					"Sticky Piston<br>Piston<br>Piston Head": "Yes",
+					"Moving Piston": "No"
+				},
+				"Pointed Dripstone": "Yes",
+				"Powered Rail": "Yes",
+				"Pressure Plates": {
+					"Stone Pressure Plate<br>Light Weighted Pressure Plate<br>Heavy Weighted Pressure Plate<br>Polished Blackstone Pressure Plate": "Yes",
+					"Oak Pressure Plate<br>Spruce Pressure Plate<br>Birch Pressure Plate<br>Jungle Pressure Plate<br>Acacia Pressure Plate<br>Dark Oak Pressure Plate<br>Crimson Pressure Plate<br>mangrove_pressure_plate<br>Warped Pressure Plate": "No"
+				},
+				"Prismarine": "Yes",
+				"Purpur Block": "Yes",
+				"Rail": "Yes",
+				"Red Sandstone": "Yes",
+				"Redstone Ore": "Yes",
+				"Respawn Anchor": "Yes",
+				"Sandstone": "Yes",
+				"Shulker Box": "Yes",
+				"Slabs": {
+					"Prismarine Slab<br>Prismarine Brick Slab<br>Dark Prismarine Slab<br>Stone Slab<br>Smooth Stone Slab<br>Sandstone Slab<br>Cut Sandstone Slab<br>Petrified Oak Slab<br>Cobblestone Slab<br>Brick Slab<br>Stone Brick Slab<br>mud_brick_slab<br>Nether Brick Slab<br>Quartz Slab<br>Red Sandstone Slab<br>Cut Red Sandstone Slab<br>Purpur Slab<br>Polished Granite Slab<br>Smooth Red Sandstone Slab<br>Mossy Stone Brick Slab<br>Polished Diorite Slab<br>Mossy Cobblestone Slab<br>End Stone Brick Slab<br>Smooth Sandstone Slab<br>Smooth Quartz Slab<br>Granite Slab<br>Andesite Slab<br>Red Nether Brick Slab<br>Polished Andesite Slab<br>Diorite Slab<br>Blackstone Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Oxidized Cut Copper Slab<br>Weathered Cut Copper Slab<br>Exposed Cut Copper Slab<br>Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Cut Copper Slab<br>Cobbled Deepslate Slab<br>Polished Deepslate Slab<br>Deepslate Tile Slab<br>Deepslate Brick Slab": "Yes",
+					"Oak Slab<br>Spruce Slab<br>Birch Slab<br>Jungle Slab<br>Acacia Slab<br>Dark Oak Slab<br>Crimson Slab<br>mangrove_slab<br>Warped Slab": "No"
+				},
+				"Smoker": "Yes",
+				"Spawner": "Yes",
+				"Stairs": {
+					"Oak Stairs<br>Spruce Stairs<br>Birch Stairs<br>Jungle Stairs<br>Acacia Stairs<br>Dark Oak Stairs<br>Crimson Stairs<br>mangrove_stairs<br>Warped Stairs": "No",
+					"Cobblestone Stairs<br>Brick Stairs<br>Stone Brick Stairs<br>mud_brick_stairs<br>Nether Brick Stairs<br>Sandstone Stairs<br>Quartz Stairs<br>Prismarine Stairs<br>Prismarine Brick Stairs<br>Dark Prismarine Stairs<br>Red Sandstone Stairs<br>Purpur Stairs<br>Polished Granite Stairs<br>Smooth Red Sandstone Stairs<br>Mossy Stone Brick Stairs<br>Polished Diorite Stairs<br>Mossy Cobblestone Stairs<br>End Stone Brick Stairs<br>Stone Stairs<br>Smooth Sandstone Stairs<br>Smooth Quartz Stairs<br>Granite Stairs<br>Andesite Stairs<br>Red Nether Brick Stairs<br>Polished Andesite Stairs<br>Diorite Stairs<br>Blackstone Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Oxidized Cut Copper Stairs<br>Weathered Cut Copper Stairs<br>Exposed Cut Copper Stairs<br>Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Cut Copper Stairs<br>Cobbled Deepslate Stairs<br>Polished Deepslate Stairs<br>Deepslate Tile Stairs<br>Deepslate Brick Stairs": "Yes"
+				},
+				"Stone": "Yes",
+				"Stone Bricks": "Yes",
+				"Stonecutter": "Yes",
+				"Terracotta": "Yes",
+				"Trapdoors": {
+					"Oak Trapdoor<br>Spruce Trapdoor<br>Birch Trapdoor<br>Jungle Trapdoor<br>Acacia Trapdoor<br>Dark Oak Trapdoor<br>Crimson Trapdoor<br>mangrove_trapdoor<br>Warped Trapdoor": "No",
+					"Iron Trapdoor": "Yes"
+				},
+				"Tuff": "Yes",
+				"Walls": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_shovel_mineable": {
+			"property_name": "Tag: SHOVEL_MINEABLE",
+			"property_description": "SHOVEL_MINEABLE",
+			"entries": {
+				"Clay": "Yes",
+				"Coarse Dirt": "Yes",
+				"Concrete Powder": "Yes",
+				"Dirt": "Yes",
+				"Dirt Path": "Yes",
+				"Farmland": "Yes",
+				"Grass Block": "Yes",
+				"Gravel": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Podzol": "Yes",
+				"Red Sand": "Yes",
+				"Sand": "Yes",
+				"Snow": "Yes",
+				"Snow Block": "Yes",
+				"Soul Sand": "Yes",
+				"Soul Soil": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_needs_diamond_tool": {
+			"property_name": "Tag: NEEDS_DIAMOND_TOOL",
+			"property_description": "NEEDS_DIAMOND_TOOL",
+			"entries": {
+				"Ancient Debris": "Yes",
+				"Block of Netherite": "Yes",
+				"Crying Obsidian": "Yes",
+				"Obsidian": "Yes",
+				"Respawn Anchor": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_needs_iron_tool": {
+			"property_name": "Tag: NEEDS_IRON_TOOL",
+			"property_description": "NEEDS_IRON_TOOL",
+			"entries": {
+				"Block of Diamond": "Yes",
+				"Block of Emerald": "Yes",
+				"Block of Gold": "Yes",
+				"Block of Raw Gold": "Yes",
+				"Diamond Ore": "Yes",
+				"Emerald Ore": "Yes",
+				"Gold Ore": "Yes",
+				"Redstone Ore": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_needs_stone_tool": {
+			"property_name": "Tag: NEEDS_STONE_TOOL",
+			"property_description": "NEEDS_STONE_TOOL",
+			"entries": {
+				"Block of Copper": "Yes",
+				"Block of Iron": "Yes",
+				"Block of Lapis Lazuli": "Yes",
+				"Block of Raw Copper": "Yes",
+				"Block of Raw Iron": "Yes",
+				"Copper Ore": "Yes",
+				"Iron Ore": "Yes",
+				"Lapis Lazuli Ore": "Yes",
+				"Lightning Rod": "Yes",
+				"Slabs": {
+					"Prismarine Slab<br>Prismarine Brick Slab<br>Dark Prismarine Slab<br>Oak Slab<br>Spruce Slab<br>Birch Slab<br>Jungle Slab<br>Acacia Slab<br>Dark Oak Slab<br>Stone Slab<br>Smooth Stone Slab<br>Sandstone Slab<br>Cut Sandstone Slab<br>Petrified Oak Slab<br>Cobblestone Slab<br>Brick Slab<br>Stone Brick Slab<br>mud_brick_slab<br>Nether Brick Slab<br>Quartz Slab<br>Red Sandstone Slab<br>Cut Red Sandstone Slab<br>Purpur Slab<br>Polished Granite Slab<br>Smooth Red Sandstone Slab<br>Mossy Stone Brick Slab<br>Polished Diorite Slab<br>Mossy Cobblestone Slab<br>End Stone Brick Slab<br>Smooth Sandstone Slab<br>Smooth Quartz Slab<br>Granite Slab<br>Andesite Slab<br>Red Nether Brick Slab<br>Polished Andesite Slab<br>Diorite Slab<br>Crimson Slab<br>mangrove_slab<br>Warped Slab<br>Blackstone Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Cobbled Deepslate Slab<br>Polished Deepslate Slab<br>Deepslate Tile Slab<br>Deepslate Brick Slab": "No",
+					"Oxidized Cut Copper Slab<br>Weathered Cut Copper Slab<br>Exposed Cut Copper Slab<br>Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Cut Copper Slab": "Yes"
+				},
+				"Stairs": {
+					"Oak Stairs<br>Cobblestone Stairs<br>Brick Stairs<br>Stone Brick Stairs<br>mud_brick_stairs<br>Nether Brick Stairs<br>Sandstone Stairs<br>Spruce Stairs<br>Birch Stairs<br>Jungle Stairs<br>Quartz Stairs<br>Acacia Stairs<br>Dark Oak Stairs<br>Prismarine Stairs<br>Prismarine Brick Stairs<br>Dark Prismarine Stairs<br>Red Sandstone Stairs<br>Purpur Stairs<br>Polished Granite Stairs<br>Smooth Red Sandstone Stairs<br>Mossy Stone Brick Stairs<br>Polished Diorite Stairs<br>Mossy Cobblestone Stairs<br>End Stone Brick Stairs<br>Stone Stairs<br>Smooth Sandstone Stairs<br>Smooth Quartz Stairs<br>Granite Stairs<br>Andesite Stairs<br>Red Nether Brick Stairs<br>Polished Andesite Stairs<br>Diorite Stairs<br>Crimson Stairs<br>mangrove_stairs<br>Warped Stairs<br>Blackstone Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Cobbled Deepslate Stairs<br>Polished Deepslate Stairs<br>Deepslate Tile Stairs<br>Deepslate Brick Stairs": "No",
+					"Oxidized Cut Copper Stairs<br>Weathered Cut Copper Stairs<br>Exposed Cut Copper Stairs<br>Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Cut Copper Stairs": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_features_cannot_replace": {
+			"property_name": "Tag: FEATURES_CANNOT_REPLACE",
+			"property_description": "FEATURES_CANNOT_REPLACE",
+			"entries": {
+				"Bedrock": "Yes",
+				"Chest": "Yes",
+				"End Portal Frame": "Yes",
+				"Reinforced Deepslate": "Yes",
+				"Spawner": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_lava_pool_stone_cannot_replace": {
+			"property_name": "Tag: LAVA_POOL_STONE_CANNOT_REPLACE",
+			"property_description": "LAVA_POOL_STONE_CANNOT_REPLACE",
+			"entries": {
+				"Bedrock": "Yes",
+				"Chest": "Yes",
+				"End Portal Frame": "Yes",
+				"Hyphae": "Yes",
+				"Leaves": "Yes",
+				"Logs": "Yes",
+				"Reinforced Deepslate": "Yes",
+				"Spawner": "Yes",
+				"Stems": "Yes",
+				"Wood": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_geode_invalid_blocks": {
+			"property_name": "Tag: GEODE_INVALID_BLOCKS",
+			"property_description": "GEODE_INVALID_BLOCKS",
+			"entries": {
+				"Bedrock": "Yes",
+				"Blue Ice": "Yes",
+				"Ice": "Yes",
+				"Lava": "Yes",
+				"Packed Ice": "Yes",
+				"Water": {
+					"Bubble Column": "No",
+					"Water": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_frog_prefer_jump_to": {
+			"property_name": "Tag: FROG_PREFER_JUMP_TO",
+			"property_description": "FROG_PREFER_JUMP_TO",
+			"entries": {
+				"Big Dripleaf": {
+					"Big Dripleaf": "Yes",
+					"Big Dripleaf Stem": "No"
+				},
+				"Lily Pad": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_sculk_replaceable": {
+			"property_name": "Tag: SCULK_REPLACEABLE",
+			"property_description": "SCULK_REPLACEABLE",
+			"entries": {
+				"Andesite": {
+					"Andesite": "Yes",
+					"Polished Andesite": "No"
+				},
+				"Basalt": {
+					"Basalt<br>Smooth Basalt": "Yes",
+					"Polished Basalt": "No"
+				},
+				"Blackstone": {
+					"Blackstone": "Yes",
+					"Polished Blackstone<br>Polished Blackstone Bricks<br>Cracked Polished Blackstone Bricks<br>Chiseled Polished Blackstone": "No"
+				},
+				"Calcite": "Yes",
+				"Clay": "Yes",
+				"Coarse Dirt": "Yes",
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Diorite": {
+					"Diorite": "Yes",
+					"Polished Diorite": "No"
+				},
+				"Dirt": "Yes",
+				"Dripstone Block": "Yes",
+				"End Stone": "Yes",
+				"Granite": {
+					"Granite": "Yes",
+					"Polished Granite": "No"
+				},
+				"Grass Block": "Yes",
+				"Gravel": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Netherrack": "Yes",
+				"Nylium": "Yes",
+				"Podzol": "Yes",
+				"Red Sand": "Yes",
+				"Red Sandstone": {
+					"Red Sandstone": "Yes",
+					"Chiseled Red Sandstone<br>Cut Red Sandstone<br>Smooth Red Sandstone": "No"
+				},
+				"Sand": "Yes",
+				"Sandstone": {
+					"Sandstone": "Yes",
+					"Chiseled Sandstone<br>Cut Sandstone<br>Smooth Sandstone": "No"
+				},
+				"Soul Sand": "Yes",
+				"Soul Soil": "Yes",
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				},
+				"Terracotta": "Yes",
+				"Tuff": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_sculk_replaceable_world_gen": {
+			"property_name": "Tag: SCULK_REPLACEABLE_WORLD_GEN",
+			"property_description": "SCULK_REPLACEABLE_WORLD_GEN",
+			"entries": {
+				"Andesite": {
+					"Andesite": "Yes",
+					"Polished Andesite": "No"
+				},
+				"Basalt": {
+					"Basalt<br>Smooth Basalt": "Yes",
+					"Polished Basalt": "No"
+				},
+				"Blackstone": {
+					"Blackstone": "Yes",
+					"Polished Blackstone<br>Polished Blackstone Bricks<br>Cracked Polished Blackstone Bricks<br>Chiseled Polished Blackstone": "No"
+				},
+				"Calcite": "Yes",
+				"Clay": "Yes",
+				"Coarse Dirt": "Yes",
+				"Cobbled Deepslate": {
+					"Cobbled Deepslate<br>Polished Deepslate<br>Deepslate Tiles<br>Deepslate Bricks<br>Cracked Deepslate Bricks<br>Cracked Deepslate Tiles": "Yes",
+					"Chiseled Deepslate": "No"
+				},
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Diorite": {
+					"Diorite": "Yes",
+					"Polished Diorite": "No"
+				},
+				"Dirt": "Yes",
+				"Dripstone Block": "Yes",
+				"End Stone": "Yes",
+				"Granite": {
+					"Granite": "Yes",
+					"Polished Granite": "No"
+				},
+				"Grass Block": "Yes",
+				"Gravel": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Netherrack": "Yes",
+				"Nylium": "Yes",
+				"Podzol": "Yes",
+				"Red Sand": "Yes",
+				"Red Sandstone": {
+					"Red Sandstone": "Yes",
+					"Chiseled Red Sandstone<br>Cut Red Sandstone<br>Smooth Red Sandstone": "No"
+				},
+				"Sand": "Yes",
+				"Sandstone": {
+					"Sandstone": "Yes",
+					"Chiseled Sandstone<br>Cut Sandstone<br>Smooth Sandstone": "No"
+				},
+				"Soul Sand": "Yes",
+				"Soul Soil": "Yes",
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				},
+				"Terracotta": "Yes",
+				"Tuff": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_ancient_city_replaceable": {
+			"property_name": "Tag: ANCIENT_CITY_REPLACEABLE",
+			"property_description": "ANCIENT_CITY_REPLACEABLE",
+			"entries": {
+				"Cobbled Deepslate": {
+					"Cobbled Deepslate<br>Deepslate Tiles<br>Deepslate Bricks<br>Cracked Deepslate Bricks<br>Cracked Deepslate Tiles": "Yes",
+					"Polished Deepslate<br>Chiseled Deepslate": "No"
+				},
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Slabs": {
+					"Prismarine Slab<br>Prismarine Brick Slab<br>Dark Prismarine Slab<br>Oak Slab<br>Spruce Slab<br>Birch Slab<br>Jungle Slab<br>Acacia Slab<br>Dark Oak Slab<br>Stone Slab<br>Smooth Stone Slab<br>Sandstone Slab<br>Cut Sandstone Slab<br>Petrified Oak Slab<br>Cobblestone Slab<br>Brick Slab<br>Stone Brick Slab<br>mud_brick_slab<br>Nether Brick Slab<br>Quartz Slab<br>Red Sandstone Slab<br>Cut Red Sandstone Slab<br>Purpur Slab<br>Polished Granite Slab<br>Smooth Red Sandstone Slab<br>Mossy Stone Brick Slab<br>Polished Diorite Slab<br>Mossy Cobblestone Slab<br>End Stone Brick Slab<br>Smooth Sandstone Slab<br>Smooth Quartz Slab<br>Granite Slab<br>Andesite Slab<br>Red Nether Brick Slab<br>Polished Andesite Slab<br>Diorite Slab<br>Crimson Slab<br>mangrove_slab<br>Warped Slab<br>Blackstone Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Oxidized Cut Copper Slab<br>Weathered Cut Copper Slab<br>Exposed Cut Copper Slab<br>Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Cut Copper Slab<br>Cobbled Deepslate Slab<br>Polished Deepslate Slab": "No",
+					"Deepslate Tile Slab<br>Deepslate Brick Slab": "Yes"
+				},
+				"Stairs": {
+					"Oak Stairs<br>Cobblestone Stairs<br>Brick Stairs<br>Stone Brick Stairs<br>mud_brick_stairs<br>Nether Brick Stairs<br>Sandstone Stairs<br>Spruce Stairs<br>Birch Stairs<br>Jungle Stairs<br>Quartz Stairs<br>Acacia Stairs<br>Dark Oak Stairs<br>Prismarine Stairs<br>Prismarine Brick Stairs<br>Dark Prismarine Stairs<br>Red Sandstone Stairs<br>Purpur Stairs<br>Polished Granite Stairs<br>Smooth Red Sandstone Stairs<br>Mossy Stone Brick Stairs<br>Polished Diorite Stairs<br>Mossy Cobblestone Stairs<br>End Stone Brick Stairs<br>Stone Stairs<br>Smooth Sandstone Stairs<br>Smooth Quartz Stairs<br>Granite Stairs<br>Andesite Stairs<br>Red Nether Brick Stairs<br>Polished Andesite Stairs<br>Diorite Stairs<br>Crimson Stairs<br>mangrove_stairs<br>Warped Stairs<br>Blackstone Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Oxidized Cut Copper Stairs<br>Weathered Cut Copper Stairs<br>Exposed Cut Copper Stairs<br>Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Cut Copper Stairs<br>Cobbled Deepslate Stairs<br>Polished Deepslate Stairs<br>Deepslate Tile Stairs": "No",
+					"Deepslate Brick Stairs": "Yes"
+				},
+				"Walls": {
+					"Cobblestone Wall<br>Mossy Cobblestone Wall<br>Brick Wall<br>Prismarine Wall<br>Red Sandstone Wall<br>Mossy Stone Brick Wall<br>Granite Wall<br>Stone Brick Wall<br>mud_brick_wall<br>Nether Brick Wall<br>Andesite Wall<br>Red Nether Brick Wall<br>Sandstone Wall<br>End Stone Brick Wall<br>Diorite Wall<br>Blackstone Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall<br>Cobbled Deepslate Wall<br>Polished Deepslate Wall": "No",
+					"Deepslate Tile Wall<br>Deepslate Brick Wall": "Yes"
+				},
+				"Wool": {
+					"White Wool<br>Orange Wool<br>Magenta Wool<br>Light Blue Wool<br>Yellow Wool<br>Lime Wool<br>Pink Wool<br>Light Gray Wool<br>Cyan Wool<br>Purple Wool<br>Blue Wool<br>Brown Wool<br>Green Wool<br>Red Wool<br>Black Wool": "No",
+					"Gray Wool": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_goats_spawnable_on": {
+			"property_name": "Tag: GOATS_SPAWNABLE_ON",
+			"property_description": "GOATS_SPAWNABLE_ON",
+			"entries": {
+				"Gravel": "Yes",
+				"Packed Ice": "Yes",
+				"Snow": "Yes",
+				"Snow Block": "Yes",
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_parrots_spawnable_on": {
+			"property_name": "Tag: PARROTS_SPAWNABLE_ON",
+			"property_description": "PARROTS_SPAWNABLE_ON",
+			"entries": {
+				"Air": {
+					"Air": "Yes",
+					"Void Air<br>Cave Air": "No"
+				},
+				"Grass Block": "Yes",
+				"Hyphae": "Yes",
+				"Leaves": "Yes",
+				"Logs": "Yes",
+				"Stems": "Yes",
+				"Wood": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_rabbits_spawnable_on": {
+			"property_name": "Tag: RABBITS_SPAWNABLE_ON",
+			"property_description": "RABBITS_SPAWNABLE_ON",
+			"entries": {
+				"Grass Block": "Yes",
+				"Sand": "Yes",
+				"Snow": "Yes",
+				"Snow Block": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_foxes_spawnable_on": {
+			"property_name": "Tag: FOXES_SPAWNABLE_ON",
+			"property_description": "FOXES_SPAWNABLE_ON",
+			"entries": {
+				"Coarse Dirt": "Yes",
+				"Grass Block": "Yes",
+				"Podzol": "Yes",
+				"Snow": "Yes",
+				"Snow Block": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_wolves_spawnable_on": {
+			"property_name": "Tag: WOLVES_SPAWNABLE_ON",
+			"property_description": "WOLVES_SPAWNABLE_ON",
+			"entries": {
+				"Grass Block": "Yes",
+				"Snow": "Yes",
+				"Snow Block": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_frogs_spawnable_on": {
+			"property_name": "Tag: FROGS_SPAWNABLE_ON",
+			"property_description": "FROGS_SPAWNABLE_ON",
+			"entries": {
+				"Grass Block": "Yes",
+				"Mangrove Roots": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_azalea_grows_on": {
+			"property_name": "Tag: AZALEA_GROWS_ON",
+			"property_description": "AZALEA_GROWS_ON",
+			"entries": {
+				"Coarse Dirt": "Yes",
+				"Dirt": "Yes",
+				"Grass Block": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Podzol": "Yes",
+				"Powder Snow": "Yes",
+				"Red Sand": "Yes",
+				"Sand": "Yes",
+				"Snow Block": "Yes",
+				"Terracotta": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_replaceable_plants": {
+			"property_name": "Tag: REPLACEABLE_PLANTS",
+			"property_description": "REPLACEABLE_PLANTS",
+			"entries": {
+				"Dead Bush": "Yes",
+				"Fern": "Yes",
+				"Flowers": {
+					"Cornflower<br>Dandelion<br>Poppy<br>Blue Orchid<br>Allium<br>Azure Bluet<br>Red Tulip<br>Orange Tulip<br>White Tulip<br>Pink Tulip<br>Oxeye Daisy<br>Wither Rose<br>Lily of the Valley": "No",
+					"Sunflower<br>Lilac<br>Rose Bush<br>Peony": "Yes"
+				},
+				"Glow Lichen": "Yes",
+				"Grass": "Yes",
+				"Hanging Roots": "Yes",
+				"Vines": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_convertable_to_mud": {
+			"property_name": "Tag: CONVERTABLE_TO_MUD",
+			"property_description": "CONVERTABLE_TO_MUD",
+			"entries": {
+				"Coarse Dirt": "Yes",
+				"Dirt": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_mangrove_logs_can_grow_through": {
+			"property_name": "Tag: MANGROVE_LOGS_CAN_GROW_THROUGH",
+			"property_description": "MANGROVE_LOGS_CAN_GROW_THROUGH",
+			"entries": {
+				"Leaves": {
+					"Oak Leaves<br>Spruce Leaves<br>Birch Leaves<br>Jungle Leaves<br>Acacia Leaves<br>Dark Oak Leaves<br>Azalea Leaves<br>Flowering Azalea Leaves": "No",
+					"mangrove_leaves": "Yes"
+				},
+				"Logs": {
+					"Oak Log<br>Spruce Log<br>Birch Log<br>Jungle Log<br>Acacia Log<br>Dark Oak Log<br>Stripped Spruce Log<br>Stripped Birch Log<br>Stripped Jungle Log<br>Stripped Acacia Log<br>Stripped Dark Oak Log<br>Stripped Oak Log<br>stripped_mangrove_log": "No",
+					"mangrove_log": "Yes"
+				},
+				"Mangrove Propagule": "Yes",
+				"Mangrove Roots": "Yes",
+				"Moss Carpet": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Vines": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_mangrove_roots_can_grow_through": {
+			"property_name": "Tag: MANGROVE_ROOTS_CAN_GROW_THROUGH",
+			"property_description": "MANGROVE_ROOTS_CAN_GROW_THROUGH",
+			"entries": {
+				"Mangrove Propagule": "Yes",
+				"Mangrove Roots": "Yes",
+				"Moss Carpet": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Snow": "Yes",
+				"Vines": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_dead_bush_may_place_on": {
+			"property_name": "Tag: DEAD_BUSH_MAY_PLACE_ON",
+			"property_description": "DEAD_BUSH_MAY_PLACE_ON",
+			"entries": {
+				"Coarse Dirt": "Yes",
+				"Dirt": "Yes",
+				"Grass Block": "Yes",
+				"Moss Block": "Yes",
+				"Mud": "Yes",
+				"Muddy Mangrove Roots": "Yes",
+				"Mycelium": "Yes",
+				"Podzol": "Yes",
+				"Red Sand": "Yes",
+				"Sand": "Yes",
+				"Terracotta": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_snaps_goat_horn": {
+			"property_name": "Tag: SNAPS_GOAT_HORN",
+			"property_description": "SNAPS_GOAT_HORN",
+			"entries": {
+				"Coal Ore": {
+					"Coal Ore": "Yes",
+					"Deepslate Coal Ore": "No"
+				},
+				"Copper Ore": {
+					"Copper Ore": "Yes",
+					"Deepslate Copper Ore": "No"
+				},
+				"Emerald Ore": {
+					"Emerald Ore": "Yes",
+					"Deepslate Emerald Ore": "No"
+				},
+				"Iron Ore": {
+					"Iron Ore": "Yes",
+					"Deepslate Iron Ore": "No"
+				},
+				"Logs": {
+					"Oak Log<br>Spruce Log<br>Birch Log<br>Jungle Log<br>Acacia Log<br>Dark Oak Log<br>mangrove_log": "Yes",
+					"Stripped Spruce Log<br>Stripped Birch Log<br>Stripped Jungle Log<br>Stripped Acacia Log<br>Stripped Dark Oak Log<br>Stripped Oak Log<br>stripped_mangrove_log": "No"
+				},
+				"Packed Ice": "Yes",
+				"Stone": {
+					"Infested Stone<br>Smooth Stone": "No",
+					"Stone": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"tag_snow_layer_cannot_survive_on": {
+			"property_name": "Tag: SNOW_LAYER_CANNOT_SURVIVE_ON",
+			"property_description": "SNOW_LAYER_CANNOT_SURVIVE_ON",
+			"entries": {
+				"Barrier": "Yes",
+				"Ice": "Yes",
+				"Packed Ice": "Yes"
+			},
+			"default_value": "No"
+		},
+		"tag_snow_layer_can_survive_on": {
+			"property_name": "Tag: SNOW_LAYER_CAN_SURVIVE_ON",
+			"property_description": "SNOW_LAYER_CAN_SURVIVE_ON",
+			"entries": {
+				"Honey Block": "Yes",
+				"Mud": "Yes",
+				"Soul Sand": "Yes"
+			},
+			"default_value": "No"
 		}
+		
 	}
 }
 

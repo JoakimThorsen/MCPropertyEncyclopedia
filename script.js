@@ -154,7 +154,7 @@ function display_selection() {
         } else {
             submenu.css('display', 'block');
             submenu.animate({
-                'max-height': '100rem',
+                'max-height': '300rem',
                 'opacity': 1,
             }, 300, function () {
                 submenu.addClass('submenu-open');
