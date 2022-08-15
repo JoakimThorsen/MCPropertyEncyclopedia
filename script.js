@@ -777,7 +777,7 @@ function display_results() {
     $('#output_table').children('tbody').append(append_string);
 
     if(!('ontouchstart' in window)
-    // && false
+    && false
     ){
         $('#output_table').DataTable({
             colReorder: {
@@ -813,7 +813,7 @@ function display_results() {
             return_data += "</tbody></table></td>";
 
         } else {
-            return_data = `<td ${formatting_color(entry, property_id)}>${entry}</td>`;
+            return_data = `<td ${formatting_color(entry, property_id)}>${value_parser(entry)}</td>`;
         }
         return return_data;
     }
@@ -1077,4 +1077,14 @@ function highlightSearchString(input, search) {
 function isNum(val){
     if(val === "") return false;
     return !isNaN(val)
+}
+
+function value_parser(value) {
+    if(isNum(value)) return value;
+    if(typeof value === 'string') {
+        // Basic URL parsing:
+        const url_regexp = /(https?:\/\/(\w*\.)+\w+\/?[^ ]*)/g;
+        return value.replace(url_regexp, `<a target="_blank" href="$1">$1</a>`);
+    }
+    return value;
 }
