@@ -7318,6 +7318,7 @@
 				"Detector Rail": "Yes",
 				"Dispenser": "Yes",
 				"Dropper": "Yes",
+				"End Gateway": "Yes",
 				"End Portal Frame": "Yes",
 				"Furnace": "Yes",
 				"Hopper": "Yes",
@@ -8128,7 +8129,10 @@
 				"Daylight Detector": "To force the daylight sensor to update its output signal strength",
 				"Redstone Comparator": "Output strength",
 				"Conduit": "To check its activation area for valid activation blocks and calculate its effective range.<br>Also used for rendering the block in its active and inactive states",
-				"Bell": "For the render of the swaying animation of the bell"
+				"Bell": "For the render of the swaying animation of the bell",
+				"Sculk Shrieker": "Something",
+				"Sculk Sensor": "Something",
+				"Sculk Catalyst": "Something"
 			}
 		},
 		"comparator_output": {
@@ -8470,10 +8474,9 @@
 					"charges: 4": 15
 				},
 
-				"Sculk Sensor": {
-					"Non-activated": "No",
-					"Activated": "1-15"
-				}
+				"Sculk Sensor": "0-15",
+
+				"Detector Rail": "0-15"
 			}
 		},
 		"material": {
