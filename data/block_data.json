@@ -2350,7 +2350,10 @@
 				"Andesite": "With Haste II",
 				"Anvil": "No",
 				"Azalea": "By Hand",
-				"Bamboo": "No",
+				"Bamboo": {
+					"Bamboo": "With eff. V Diamond",
+					"Bamboo Shoot": "No"
+				},
 				"Banners": "With eff. V Diamond",
 				"Barrel": "No",
 				"Barrier": "Unbreakable",
