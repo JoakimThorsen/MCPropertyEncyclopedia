@@ -3,7 +3,7 @@
 		"Yes": "cf-yes",
 
 		"No": "cf-no",
-		
+
 		"Not Applicable": "cf-invalid"
 	},
 	"key_list": [
@@ -244,6 +244,8 @@
 		"type",
 		"undead",
 		"eye_height",
+		"eye_height_float",
+		"eye_height_double",
 		"health",
 		"explosion_power"
 	],
@@ -1103,7 +1105,7 @@
 					"path_aware",
 					"mob",
 					"living"
-				],	
+				],
 				"Bat": [
 					"ambient",
 					"mob",
@@ -1643,6 +1645,516 @@
 				"Zombified Piglin": "Yes"
 			}
 		},
+		"eye_height_float": {
+			"property_name": "Eye Height (Float)",
+			"default_value": null,
+			"default_selection": false,
+			"entries": {
+				"Area Effect Cloud": "(double) 0.425F",
+				"Armor Stand": {
+					"Adult": "(double) 1.7775F",
+					"Baby": "(double) 0.49375F"
+				},
+				"Arrow": "(double) 0.13F",
+				"Axolotl": {
+					"Adult": "(double) 0.2751F",
+					"Baby": "(double) 0.13755F"
+				},
+				"Bat": "(double) 0.45F",
+				"Bee": {
+					"Adult": "(double) 0.3F",
+					"Baby": "(double) 0.15F"
+				},
+				"Blaze": "(double) 1.53F",
+				"Boat": "0.5625D",
+				"Cat": {
+					"Adult": "(double) 0.35F",
+					"Baby": "(double) 0.175F"
+				},
+				"Cave Spider": "(double) 0.45F",
+				"Chicken": {
+					"Adult": "(double) 0.644F",
+					"Baby": "(double) 0.2975F"
+				},
+				"Cod": "(double) 0.19500001F",
+				"Cow": {
+					"Adult": "(double) 1.3F",
+					"Baby": "(double) 0.66499996F"
+				},
+				"Creeper": "(double) 1.445F",
+				"Dolphin": "(double) 0.3F",
+				"Donkey": {
+					"Adult": "(double) 1.425F",
+					"Baby": "(double) 0.7125F"
+				},
+				"Dragon Fireball": "(double) 0.85F",
+				"Drowned": {
+					"Adult": "(double) 1.74F",
+					"Baby": "(double) 0.93F"
+				},
+				"Elder Guardian": "(double) 0.99875F",
+				"End Crystal": "(double) 1.7F",
+				"Ender Dragon": "(double) 6.8F",
+				"Enderman": "(double) 2.55F",
+				"Endermite": "(double) 0.13F",
+				"Evoker": "(double) 1.6575F",
+				"Evoker Fangs": "(double) 0.68F",
+				"Experience Orb": "(double) 0.425F",
+				"Eye of Ender": "(double) 0.2125",
+				"Falling Block": "(double) 0.83300006F",
+				"Firework Rocket": "(double) 0.2125F",
+				"Fox": {
+					"Adult": "(double) 0.4F",
+					"Baby": "(double) 0.2975F"
+				},
+				"Ghast": "(double) 2.6F",
+				"Giant": "(double) 10.440001F",
+				"Glow Item Frame": {
+					"Bottom": "0D",
+					"Side": "0D",
+					"Top": "0D"
+				},
+				"Glow Squid": "(double) 0.4F",
+				"Goat": {
+					"Adult": "(double) 1.105F",
+					"Baby": "(double) 0.5525F"
+				},
+				"Guardian": "(double) 0.425F",
+				"Hoglin": {
+					"Adult": "(double) 1.19F",
+					"Baby": "(double) 0.595F"
+				},
+				"Horse": {
+					"Adult": "(double) 1.52F",
+					"Baby": "(double) 0.76F"
+				},
+				"Husk": {
+					"Adult": "(double) 1.74F",
+					"Baby": "(double) 0.93F"
+				},
+				"Illusioner": "(double) 1.6575F",
+				"Iron Golem": "(double) 2.295F",
+				"Item": "(double) 0.2125F",
+				"Item Frame": {
+					"Bottom": "0D",
+					"Side": "0D",
+					"Top": "0D"
+				},
+				"Fireball": "(double) 0.85F",
+				"Leash Knot": "0.0625D",
+				"Lightning Bolt": "0D",
+				"Llama": {
+					"Adult": "(double) 1.7765F",
+					"Baby": "(double) 0.88825F"
+				},
+				"Llama Spit": "(double) 0.2125F",
+				"Magma Cube": {
+					"Small (1)": "(double) 0.32512497156858444F",
+					"Medium (2)": "(double) 0.6502499431371689F",
+					"Big (4)": "(double) 1.3004998862743378F"
+				},
+				"Marker": "0D",
+				"Minecart": "(double) 0.595F",
+				"Minecart with Chest": "(double) 0.595F",
+				"Minecart with Command Block": "(double) 0.595F",
+				"Minecart with Furnace": "(double) 0.595F",
+				"Minecart with Hopper": "(double) 0.595F",
+				"Minecart with Spawner": "(double) 0.595F",
+				"Minecart with TNT": "(double) 0.595F",
+				"Mule": {
+					"Adult": "(double) 1.52F",
+					"Baby": "(double) 0.76F"
+				},
+				"Mooshroom": {
+					"Adult": "(double) 1.3F",
+					"Baby": "(double) 0.66499996F"
+				},
+				"Ocelot": {
+					"Adult": "(double) 0.595F",
+					"Baby": "(double) 0.2975F"
+				},
+				"Painting": {
+					"1 Block Tall": "(double) 0.85F",
+					"2 Block Tall": "(double) 1.7F",
+					"3 Block Tall": "(double) 2.5500002F",
+					"4 Block Tall": "(double) 3.4F"
+				},
+				"Panda": {
+					"Adult": "1.0625D",
+					"Baby": "0.53125D"
+				},
+				"Parrot": "(double) 0.54F",
+				"Phantom": "(double) 0.175F",
+				"Pig": {
+					"Adult": "(double) 0.765F",
+					"Baby": "(double) 0.3825F"
+				},
+				"Piglin": {
+					"Adult": "(double) 1.74F",
+					"Baby": "(double) 0.93F"
+				},
+				"Piglin Brute": "(double) 1.6575",
+				"Pillager": "(double) 1.6575",
+				"Polar Bear": {
+					"Adult": "(double) 1.19F",
+					"Baby": "(double) 0.595F"
+				},
+				"Primed TNT": "(double) 0.15F",
+				"Pufferfish": {
+					"Unpuffed": "(double) 0.22749999F",
+					"Semi-puffed": "(double) 0.31849998F",
+					"Fully Puffed": "(double) 0.45499998F"
+				},
+				"Rabbit": {
+					"Adult": "(double) 0.425F",
+					"Baby": "(double) 0.2125F"
+				},
+				"Ravager": "(double) 1.8700001F",
+				"Salmon": "(double) 0.26F",
+				"Sheep": {
+					"Adult": "(double) 1.2349999F",
+					"Baby": "(double) 0.61749995F"
+				},
+				"Shulker": "0.5D",
+				"Shulker Bullet": "0.265625D",
+				"Silverfish": "(double) 0.13F",
+				"Skeleton": "(double) 1.74F",
+				"Skeleton Horse": {
+					"Adult": "(double) 1.52F",
+					"Baby": "(double) 0.76F"
+				},
+				"Slime": {
+					"Small (1)": "(double) 0.32512497156858444F",
+					"Medium (2)": "(double) 0.6502499431371689F",
+					"Big (4)": "(double) 1.3004998862743378F"
+				},
+				"Small Fireball": "0.265625D",
+				"Snow Golem": "(double) 1.7",
+				"Snowball": "(double) 0.2125F",
+				"Spectral Arrow": "(double) 0.13F",
+				"Spider": "(double) 0.65F",
+				"Squid": "(double) 0.4F",
+				"Stray": "(double) 1.74F",
+				"Strider": {
+					"Adult": "(double) 1.445F",
+					"Baby": "(double) 0.7225F"
+				},
+				"Thrown Egg": "(double) 0.2125F",
+				"Thrown Ender Pearl": "(double) 0.2125F",
+				"Thrown Bottle o' Enchanting": "(double) 0.2125F",
+				"Thrown Potion": "(double) 0.2125F",
+				"Trident": "(double) 0.13F",
+				"Trader Llama": {
+					"Adult": "(double) 1.7765F",
+					"Baby": "(double) 0.88825F"
+				},
+				"Tropical Fish": "(double) 0.26F",
+				"Turtle": {
+					"Adult": "(double) 0.34F",
+					"Baby": "(double) 0.102000006F"
+				},
+				"Vex": "(double) 0.68F",
+				"Villager": {
+					"Awake": {
+						"Adult": "(double) 1.62F",
+						"Baby": "(double) 0.81F"
+					},
+					"Sleeping": "(double) 0.2F"
+				},
+				"Vindicator": "(double) 1.6575F",
+				"Wandering Trader": "(double) 1.62F",
+				"Witch": "(double) 1.62F",
+				"Wither": "(double) 2.9750001F",
+				"Wither Skeleton": "(double) 2.1F",
+				"Wither Skull": "0.265625D",
+				"Wolf": {
+					"Adult": "(double) 0.68F",
+					"Baby": "(double) 0.34F"
+				},
+				"Zoglin": {
+					"Adult": "(double) 1.19F",
+					"Baby": "(double) 0.595F"
+				},
+				"Zombie": {
+					"Adult": "(double) 1.74F",
+					"Baby": "(double) 0.93F"
+				},
+				"Zombie Horse": {
+					"Adult": "(double) 1.52F",
+					"Baby": "(double) 0.76F"
+				},
+				"Zombie Villager": {
+					"Adult": "(double) 1.74F",
+					"Baby": "(double) 0.93F"
+				},
+				"Zombified Piglin": {
+					"Adult": "(double) 1.74F",
+					"Baby": "(double) 0.93F"
+				},
+				"Player": {
+					"Standing": "(double) 1.62F",
+					"Crouching": "(double) 1.27F",
+					"Swimming": "(double) 0.4F",
+					"Sleeping": "(double) 0.2F"
+				},
+				"Fishing Bobber": "(double) 0.2125F"
+			}
+		},
+		"eye_height_double": {
+			"property_name": "Eye Height (Double)",
+			"default_value": null,
+			"default_selection": false,
+			"entries": {
+				"Area Effect Cloud": 0.42500001192092896,
+				"Armor Stand": {
+					"Adult": 1.777500033378601,
+					"Baby": 0.4937500059604645
+				},
+				"Arrow": 0.12999999523162842,
+				"Axolotl": {
+					"Adult": 0.2750999927520752,
+					"Baby": 0.1375499963760376
+				},
+				"Bat": 0.44999998807907104,
+				"Bee": {
+					"Adult": 0.30000001192092896,
+					"Baby": 0.15000000596046448
+				},
+				"Blaze": 1.5299999713897705,
+				"Boat": 0.5625,
+				"Cat": {
+					"Adult": 0.3499999940395355,
+					"Baby": 0.17499999701976776
+				},
+				"Cave Spider": 0.44999998807907104,
+				"Chicken": {
+					"Adult": 0.6439999938011169,
+					"Baby": 0.29750001430511475
+				},
+				"Cod": 0.19500000774860382,
+				"Cow": {
+					"Adult": 1.2999999523162842,
+					"Baby": 0.6649999618530273
+				},
+				"Creeper": 1.4450000524520874,
+				"Dolphin": 0.30000001192092896,
+				"Donkey": {
+					"Adult": 1.4249999523162842,
+					"Baby": 0.7124999761581421
+				},
+				"Dragon Fireball": 0.8500000238418579,
+				"Drowned": {
+					"Adult": 1.7400000095367432,
+					"Baby": 0.9300000071525574
+				},
+				"Elder Guardian": 0.9987499713897705,
+				"End Crystal": 1.7000000476837158,
+				"Ender Dragon": 6.800000190734863,
+				"Enderman": 2.549999952316284,
+				"Endermite": 0.12999999523162842,
+				"Evoker": 1.6575000286102295,
+				"Evoker Fangs": 0.6800000071525574,
+				"Experience Orb": 0.42500001192092896,
+				"Eye of Ender": 0.21250000596046448,
+				"Falling Block": 0.8330000638961792,
+				"Firework Rocket": 0.21250000596046448,
+				"Fox": {
+					"Adult": 0.4000000059604645,
+					"Baby": 0.29750001430511475
+				},
+				"Ghast": 2.5999999046325684,
+				"Giant": 10.440000534057617,
+				"Glow Item Frame": {
+					"Bottom": 0,
+					"Side": 0,
+					"Top": 0
+				},
+				"Glow Squid": 0.4000000059604645,
+				"Goat": {
+					"Adult": 1.1050000190734863,
+					"Baby": 0.5525000095367432
+				},
+				"Guardian": 0.42500001192092896,
+				"Hoglin": {
+					"Adult": 1.190000057220459,
+					"Baby": 0.5950000286102295
+				},
+				"Horse": {
+					"Adult": 0.5950000286102295,
+					"Baby": 0.7599999904632568
+				},
+				"Husk": {
+					"Adult": 1.7400000095367432,
+					"Baby": 0.9300000071525574
+				},
+				"Illusioner": 1.6575000286102295,
+				"Iron Golem": 2.2950000762939453,
+				"Item": 0.21250000596046448,
+				"Item Frame": {
+					"Bottom": 0,
+					"Side": 0,
+					"Top": 0
+				},
+				"Fireball": 0.8500000238418579,
+				"Leash Knot": 0.0625,
+				"Lightning Bolt": 0,
+				"Llama": {
+					"Adult": 1.7764999866485596,
+					"Baby": 0.8882499933242798
+				},
+				"Llama Spit": 0.21250000596046448,
+				"Magma Cube": {
+					"Small (1)": 0.32512497901916504,
+					"Medium (2)": 0.6502499580383301,
+					"Big (4)": 1.3004999160766602
+				},
+				"Marker": 0,
+				"Minecart": 0.5950000286102295,
+				"Minecart with Chest": 0.5950000286102295,
+				"Minecart with Command Block": 0.5950000286102295,
+				"Minecart with Furnace": 0.5950000286102295,
+				"Minecart with Hopper": 0.5950000286102295,
+				"Minecart with Spawner": 0.5950000286102295,
+				"Minecart with TNT": 0.5950000286102295,
+				"Mule": {
+					"Adult": 1.5199999809265137,
+					"Baby": 0.7599999904632568
+				},
+				"Mooshroom": {
+					"Adult": 1.2999999523162842,
+					"Baby": 0.6649999618530273
+				},
+				"Ocelot": {
+					"Adult": 0.5950000286102295,
+					"Baby": 0.29750001430511475
+				},
+				"Painting": {
+					"1 Block Tall": 0.8500000238418579,
+					"2 Block Tall": 1.7000000476837158,
+					"3 Block Tall": 2.5500001907348633,
+					"4 Block Tall": 3.4000000953674316
+				},
+				"Panda": {
+					"Adult": 1.0625,
+					"Baby": 0.53125
+				},
+				"Parrot": 0.5400000214576721,
+				"Phantom": 0.17499999701976776,
+				"Pig": {
+					"Adult": 0.7649999856948853,
+					"Baby": 0.3824999928474426
+				},
+				"Piglin": {
+					"Adult": 1.7400000095367432,
+					"Baby": 0.9300000071525574
+				},
+				"Piglin Brute": 1.6575000286102295,
+				"Pillager": 1.6575000286102295,
+				"Polar Bear": {
+					"Adult": 1.190000057220459,
+					"Baby": 0.5950000286102295
+				},
+				"Primed TNT": 0.15000000596046448,
+				"Pufferfish": {
+					"Unpuffed": 0.22749999165534973,
+					"Semi-puffed": 0.31849998235702515,
+					"Fully Puffed": 0.45499998331069946
+				},
+				"Rabbit": {
+					"Adult": 0.42500001192092896,
+					"Baby": 0.21250000596046448
+				},
+				"Ravager": 1.8700001239776611,
+				"Salmon": 0.25999999046325684,
+				"Sheep": {
+					"Adult": 1.2349998950958252,
+					"Baby": 0.6174999475479126
+				},
+				"Shulker": 0.5,
+				"Shulker Bullet": 0.265625,
+				"Silverfish": 0.12999999523162842,
+				"Skeleton": 1.7400000095367432,
+				"Skeleton Horse": {
+					"Adult": 1.5199999809265137,
+					"Baby": 0.7599999904632568
+				},
+				"Slime": {
+					"Small (1)": 0.32512497901916504,
+					"Medium (2)": 0.6502499580383301,
+					"Big (4)": 1.3004999160766602
+				},
+				"Small Fireball": 0.265625,
+				"Snow Golem": 1.7000000476837158,
+				"Snowball": 0.21250000596046448,
+				"Spectral Arrow": 0.12999999523162842,
+				"Spider": 0.6499999761581421,
+				"Squid": 0.4000000059604645,
+				"Stray": 1.7400000095367432,
+				"Strider": {
+					"Adult": 1.4450000524520874,
+					"Baby": 0.7225000262260437
+				},
+				"Thrown Egg": 0.21250000596046448,
+				"Thrown Ender Pearl": 0.21250000596046448,
+				"Thrown Bottle o' Enchanting": 0.21250000596046448,
+				"Thrown Potion": 0.21250000596046448,
+				"Trident": 0.12999999523162842,
+				"Trader Llama": {
+					"Adult": 1.7764999866485596,
+					"Baby": 0.8882499933242798
+				},
+				"Tropical Fish": 0.25999999046325684,
+				"Turtle": {
+					"Adult": 0.3400000035762787,
+					"Baby": 0.10200000554323196
+				},
+				"Vex": 0.6800000071525574,
+				"Villager": {
+					"Awake": {
+						"Adult": 1.6200000047683716,
+						"Baby": 0.8100000023841858
+					},
+					"Sleeping": 0.20000000298023224
+				},
+				"Vindicator": 1.6575000286102295,
+				"Wandering Trader": 1.6200000047683716,
+				"Witch": 1.6200000047683716,
+				"Wither": 2.9750001430511475,
+				"Wither Skeleton": 0.20999999344348907,
+				"Wither Skull": 0.265625,
+				"Wolf": {
+					"Adult": 0.6800000071525574,
+					"Baby": 0.3400000035762787
+				},
+				"Zoglin": {
+					"Adult": 1.190000057220459,
+					"Baby": 0.5950000286102295
+				},
+				"Zombie": {
+					"Adult": 1.7400000095367432,
+					"Baby": 0.9300000071525574
+				},
+				"Zombie Horse": {
+					"Adult": 1.5199999809265137,
+					"Baby": 0.7599999904632568
+				},
+				"Zombie Villager": {
+					"Adult": 1.7400000095367432,
+					"Baby": 0.9300000071525574
+				},
+				"Zombified Piglin": {
+					"Adult": 1.7400000095367432,
+					"Baby": 0.9300000071525574
+				},
+				"Player": {
+					"Standing": 1.6200000047683716,
+					"Crouching": 1.2699999809265137,
+					"Swimming": 0.4000000059604645,
+					"Sleeping": 0.20000000298023224
+				},
+				"Fishing Bobber": 0.21250000596046448
+			}
+		},
 		"eye_height": {
 			"property_name": "Eye Height",
 			"default_value": null,
@@ -1651,7 +2163,10 @@
 			"max": 3,
 			"entries": {
 				"Area Effect Cloud": 0.425,
-				"Armor Stand": 1.7775,
+				"Armor Stand": {
+					"Adult": 1.7775,
+					"Baby": 0.49375
+				},
 				"Arrow": 0.13,
 				"Axolotl": {
 					"Adult": 0.2751,
@@ -1671,12 +2186,12 @@
 				"Cave Spider": 0.45,
 				"Chicken": {
 					"Adult": 0.644,
-					"Baby": 0.322
+					"Baby": 0.2975
 				},
 				"Cod": 0.195,
 				"Cow": {
 					"Adult": 1.3,
-					"Baby": 0.65
+					"Baby": 0.665
 				},
 				"Creeper": 1.445,
 				"Dolphin": 0.3,
@@ -1687,7 +2202,7 @@
 				"Dragon Fireball": 0.85,
 				"Drowned": {
 					"Adult": 1.74,
-					"Baby": 0.87
+					"Baby": 0.93
 				},
 				"Elder Guardian": 0.99875,
 				"End Crystal": 1.7,
@@ -1702,14 +2217,14 @@
 				"Firework Rocket": 0.2125,
 				"Fox": {
 					"Adult": 0.4,
-					"Baby": 0.2
+					"Baby": 0.2975
 				},
 				"Ghast": 2.6,
 				"Giant": 10.44,
 				"Glow Item Frame": {
-					"Bottom": 0.03125,
-					"Side": 0.5,
-					"Top": 0.96875
+					"Bottom": 0,
+					"Side": 0,
+					"Top": 0
 				},
 				"Glow Squid": 0.4,
 				"Goat": {
@@ -1727,15 +2242,15 @@
 				},
 				"Husk": {
 					"Adult": 1.74,
-					"Baby": 0.87
+					"Baby": 0.93
 				},
 				"Illusioner": 1.6575,
 				"Iron Golem": 2.295,
 				"Item": 0.2125,
 				"Item Frame": {
-					"Bottom": 0.03125,
-					"Side": 0.5,
-					"Top": 0.96875
+					"Bottom": 0,
+					"Side": 0,
+					"Top": 0
 				},
 				"Fireball": 0.85,
 				"Leash Knot": 0.0625,
@@ -1747,8 +2262,8 @@
 				"Llama Spit": 0.2125,
 				"Magma Cube": {
 					"Small (1)": 0.325125,
-					"Medium (2)": 0.975375,
-					"Big (4)": 1.625625
+					"Medium (2)": 0.65025,
+					"Big (4)": 1.3005
 				},
 				"Marker": 0,
 				"Minecart": 0.595,
@@ -1764,17 +2279,17 @@
 				},
 				"Mooshroom": {
 					"Adult": 1.3,
-					"Baby": 0.65
+					"Baby": 0.665
 				},
 				"Ocelot": {
 					"Adult": 0.595,
 					"Baby": 0.2975
 				},
 				"Painting": {
-					"1 Block Tall": 0.925,
-					"2 Block Tall": 1.425,
-					"3 Block Tall": 1.925,
-					"4 Block Tall": 2.425
+					"1 Block Tall": 0.85,
+					"2 Block Tall": 1.7,
+					"3 Block Tall": 2.55,
+					"4 Block Tall": 3.4
 				},
 				"Panda": {
 					"Adult": 1.0625,
@@ -1788,7 +2303,7 @@
 				},
 				"Piglin": {
 					"Adult": 1.74,
-					"Baby": 0.87
+					"Baby": 0.93
 				},
 				"Piglin Brute": 1.6575,
 				"Pillager": 1.6575,
@@ -1797,7 +2312,11 @@
 					"Baby": 0.595
 				},
 				"Primed TNT": 0.15,
-				"Pufferfish": 0.2275,
+				"Pufferfish": {
+					"Unpuffed": 0.2275,
+					"Semi-puffed": 0.3185,
+					"Fully Puffed": 0.455
+				},
 				"Rabbit": {
 					"Adult": 0.425,
 					"Baby": 0.2125
@@ -1818,8 +2337,8 @@
 				},
 				"Slime": {
 					"Small (1)": 0.325125,
-					"Medium (2)": 0.975375,
-					"Big (4)": 1.625625
+					"Medium (2)": 0.65025,
+					"Big (4)": 1.3005
 				},
 				"Small Fireball": 0.265625,
 				"Snow Golem": 1.7,
@@ -1827,7 +2346,7 @@
 				"Spectral Arrow": 0.13,
 				"Spider": 0.65,
 				"Squid": 0.4,
-				"Stray": 1.7,
+				"Stray": 1.74,
 				"Strider": {
 					"Adult": 1.445,
 					"Baby": 0.7225
@@ -1870,7 +2389,7 @@
 				},
 				"Zombie": {
 					"Adult": 1.74,
-					"Baby": 0.87
+					"Baby": 0.93
 				},
 				"Zombie Horse": {
 					"Adult": 1.52,
@@ -1878,11 +2397,11 @@
 				},
 				"Zombie Villager": {
 					"Adult": 1.74,
-					"Baby": 0.87
+					"Baby": 0.93
 				},
 				"Zombified Piglin": {
 					"Adult": 1.74,
-					"Baby": 0.87
+					"Baby": 0.93
 				},
 				"Player": {
 					"Standing": 1.62,
