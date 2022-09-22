@@ -77,6 +77,7 @@ function new_game(daily_game = false) {
         $("#daily-mode").addClass('display-none');
         $("#infinite-mode").removeClass('display-none');
         random = Math.random;
+        random = mulberry32(1239);
     }
     
     // exclude "variants" and "wiki page" "properties"
@@ -471,7 +472,8 @@ function formatting_color(latest_guess, value, property_name) {
             color = `style="background-color: hsl(212, 100%, 82%);"` // higher
         }
         if(get_all_values(secret_value).some(v => v < value || v*1 != v) && get_all_values(secret_value).some(v => v > value || v*1 != v)) {
-            color = `style="background-color: hsl(175, 68%, 78.5%);"`; // in between
+            color = `style="background-color: hsl(281, 79%, 85%);"`; // in between
+            color = `class="inbetweencolor"`; // in between
         }
 
     } else {
