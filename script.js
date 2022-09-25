@@ -46,7 +46,7 @@ try {
 }
 
 let search = urlParams.get("search") ?? "";
-let page, entry_header, exportable_list;
+let page, entry_header, exportable_list, exportable_data;
 
 function load_data(filename) {
     page = document.body.dataset.page;
@@ -332,6 +332,9 @@ function display_headers_and_table() {
                         <a role="button" class="btn dropdown-btn btn-default export-csv">
                             <i class="fas fa-file-export"></i>Export CSV
                         </a>
+                        <a role="button" class="btn dropdown-btn btn-default export-json">
+                            <i class="fas fa-file-export"></i>Export JSON
+                        </a>
                         <a role="button" class="btn dropdown-btn btn-default copy-comma-separated">
                             <i class="fas fa-copy"></i>Copy Comma-Separated List
                         </a>
@@ -347,6 +350,16 @@ function display_headers_and_table() {
         const link = document.createElement("a");
         link.setAttribute("href", encodedUri);
         link.setAttribute("download", page + "list.csv");
+        document.body.appendChild(link); // Required for FireFox
+
+        link.click();
+    });
+
+    $('.export-json').click(function (e) {
+        const encodedUri = encodeURI("data:application/json;charset=utf-8," + JSON.stringify(exportable_data));
+        const link = document.createElement("a");
+        link.setAttribute("href", encodedUri);
+        link.setAttribute("download", page + "list.json");
         document.body.appendChild(link); // Required for FireFox
 
         link.click();
@@ -620,6 +633,8 @@ function display_results() {
 
     // For exporting as CSV:
     exportable_list = output_data.map(entry => entry[page]);
+	// For exporting as JSON:
+	exportable_data = output_data;
 
     // // For entry count:
     // $('#entry_count').html(output_data.length.toString());
