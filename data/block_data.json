@@ -9251,7 +9251,7 @@
 						"waterlogged: false": "<span class='dot DULL_PINK'></span> DULL_PINK"
 					},
 					"Mangrove Fence": {
-						"wFrogspawnaterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
+						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
 						"waterlogged: false": "<span class='dot RED'></span> RED"
 					},
 					"Warped Fence": {
