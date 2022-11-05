@@ -4689,6 +4689,7 @@
 				"Ladder": "No",
 				"Lantern": "No",
 				"Lava": "No",
+				"Leaves": "No",
 				"Lever": "No",
 				"Light Block": "No",
 				"Lightning Rod": "No",
@@ -4731,10 +4732,6 @@
 					"type: bottom<br>type: double": "Yes"
 				},
 				"Small Dripleaf": "No",
-				"Snow": {
-					"layers: 1": "No",
-					"layers: 2<br>layers: 3<br>layers: 4<br>layers: 5<br>layers: 6<br>layers: 7<br>layers: 8": "Yes"
-				},
 				"Spore Blossom": "No",
 				"Stained Glass Panes": "No",
 				"Stairs": {
@@ -4830,6 +4827,7 @@
 				"Ladder": "No",
 				"Lantern": "No",
 				"Lava": "No",
+				"Leaves": "No",
 				"Lectern": "No",
 				"Lever": "No",
 				"Light Block": "No",
@@ -4837,7 +4835,6 @@
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
 				"Moss Carpet": "No",
-				"Mud": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
@@ -4878,8 +4875,10 @@
 					"type: bottom": "No"
 				},
 				"Small Dripleaf": "No",
-				"Snow": "No",
-				"Soul Sand": "No",
+				"Snow": {
+					"layers: 1<br>layers: 2<br>layers: 3<br>layers: 4<br>layers: 5<br>layers: 6<br>layers: 7": "No",
+					"layers: 8": "Yes"
+				},
 				"Spore Blossom": "No",
 				"Stained Glass Panes": "No",
 				"Stairs": {
@@ -4911,9 +4910,8 @@
 		},
 		"side_face_has_full_square": {
 			"property_name": "Side Face Has Full Square (North)",
-			"property_description": "This is true if the side face is a full square.",
+			"property_description": "This is true if the north face is a full square.",
 			"default_value": "Yes",
-			"default_selection": false,
 			"entries": {
 				"Activator Rail": "No",
 				"Air": "No",
@@ -5000,6 +4998,7 @@
 				},
 				"Lantern": "No",
 				"Lava": "No",
+				"Leaves": "No",
 				"Lectern": "No",
 				"Lever": "No",
 				"Light Block": "No",
@@ -5007,7 +5006,6 @@
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
 				"Moss Carpet": "No",
-				"Mud": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
@@ -5049,8 +5047,10 @@
 					"type: double": "Yes"
 				},
 				"Small Dripleaf": "No",
-				"Snow": "No",
-				"Soul Sand": "No",
+				"Snow": {
+					"layers: 1<br>layers: 2<br>layers: 3<br>layers: 4<br>layers: 5<br>layers: 6<br>layers: 7": "No",
+					"layers: 8": "Yes"
+				},
 				"Spore Blossom": "No",
 				"Stained Glass Panes": "No",
 				"Stairs": {
@@ -13046,7 +13046,7 @@
 			},
 			"default_value": "No"
 		}
-		
+
 	}
 }
 
