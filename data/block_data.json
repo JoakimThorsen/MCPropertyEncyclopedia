@@ -626,6 +626,7 @@
 			"category": "Availability",
 			"contents": [
 				"survival_available",
+				"generates_in_structures",
 				"peaceful_available (Todo)",
 				"skyblock_available (Todo)"
 			]
@@ -11220,6 +11221,395 @@
 				"Weeping Vines": 0
 			},
 			"default_value": 15
+		},
+		"generates_in_structures": {
+			"property_name": "Generates in Structures",
+			"default_value": null,
+			"default_selection": false,
+			"entries": {
+				"Activator Rail": "No",
+				"Air": {
+					"Air<br>Cave Air": "Yes",
+					"Void Air": "No"
+				},
+				"Amethyst Cluster": "No",
+				"Ancient Debris": "No",
+				"Andesite": {
+					"Andesite": "No",
+					"Polished Andesite": "Yes"
+				},
+				"Anvil": {
+					"Anvil<br>Chipped Anvil": "No",
+					"Damaged Anvil": "Yes"
+				},
+				"Azalea": "No",
+				"Bamboo": "No",
+				"Banners": {
+					"White Banner<br>Orange Banner<br>Magenta Banner<br>Light Blue Banner<br>Yellow Banner<br>Lime Banner<br>Pink Banner<br>Gray Banner<br>Light Gray Banner<br>Cyan Banner<br>Purple Banner<br>Blue Banner<br>Brown Banner<br>Green Banner<br>Red Banner<br>Black Banner<br>Orange wall banner<br>Light blue wall banner<br>Yellow wall banner<br>Lime wall banner<br>Pink wall banner<br>Cyan wall banner<br>Purple wall banner<br>Blue wall banner<br>Green wall banner<br>Red wall banner": "No",
+					"White wall banner<br>Magenta wall banner<br>Gray wall banner<br>Light gray wall banner<br>Brown wall banner<br>Black wall banner": "Yes"
+				},
+				"Barrel": "Yes",
+				"Barrier": "No",
+				"Basalt": "Yes",
+				"Beacon": "No",
+				"Bedrock": "No",
+				"Beds": {
+					"White Bed<br>Orange Bed<br>Yellow Bed<br>Lime Bed<br>Cyan Bed<br>Purple Bed<br>Blue Bed<br>Green Bed<br>Red Bed": "Yes",
+					"Magenta Bed<br>Light Blue Bed<br>Pink Bed<br>Gray Bed<br>Light Gray Bed<br>Brown Bed<br>Black Bed": "No"
+				},
+				"Bee Nest": "No",
+				"Beehive": "No",
+				"Bell": "Yes",
+				"Big Dripleaf": "No",
+				"Blackstone": {
+					"Blackstone<br>Polished Blackstone Bricks<br>Cracked Polished Blackstone Bricks<br>Chiseled Polished Blackstone": "Yes",
+					"Polished Blackstone": "No"
+				},
+				"Blast Furnace": "Yes",
+				"Block of Amethyst": "No",
+				"Block of Coal": "No",
+				"Block of Copper": "No",
+				"Block of Diamond": "Yes",
+				"Block of Emerald": "No",
+				"Block of Gold": "Yes",
+				"Block of Iron": "No",
+				"Block of Lapis Lazuli": "Yes",
+				"Block of Netherite": "No",
+				"Block of Quartz": {
+					"Block of Quartz<br>Smooth Quartz Block": "Yes",
+					"Chiseled Quartz Block<br>Quartz Bricks<br>Quartz Pillar": "No"
+				},
+				"Block of Raw Copper": "No",
+				"Block of Raw Gold": "No",
+				"Block of Raw Iron": "No",
+				"Block of Redstone": "Yes",
+				"Blue Ice": "Yes",
+				"Bone Block": "Yes",
+				"Bookshelf": "Yes",
+				"Brewing Stand": "Yes",
+				"Bricks": "Yes",
+				"Budding Amethyst": "No",
+				"Buttons": {
+					"Stone Button<br>Jungle Button": "Yes",
+					"Oak Button<br>Spruce Button<br>Birch Button<br>Acacia Button<br>Dark Oak Button<br>Crimson Button<br>Mangrove Button<br>Warped Button<br>Polished Blackstone Button": "No"
+				},
+				"Cactus": "Yes",
+				"Cake": "No",
+				"Calcite": "No",
+				"Campfire": {
+					"Campfire": "Yes",
+					"Soul Campfire": "No"
+				},
+				"Candles": {
+					"Candle<br>White Candle": "Yes",
+					"Orange Candle<br>Magenta Candle<br>Light Blue Candle<br>Yellow Candle<br>Lime Candle<br>Pink Candle<br>Gray Candle<br>Light Gray Candle<br>Cyan Candle<br>Purple Candle<br>Blue Candle<br>Brown Candle<br>Green Candle<br>Red Candle<br>Black Candle": "No"
+				},
+				"Carpets": "Yes",
+				"Cartography Table": "Yes",
+				"Cauldron": {
+					"Cauldron<br>Water Cauldron": "Yes",
+					"Lava Cauldron<br>Powder Snow Cauldron": "No"
+				},
+				"Cave Vines": "No",
+				"Chain": "Yes",
+				"Chest": "Yes",
+				"Chorus Flower": "No",
+				"Chorus Plant": "No",
+				"Clay": "Yes",
+				"Coal Ore": {
+					"Coal Ore": "Yes",
+					"Deepslate Coal Ore": "No"
+				},
+				"Coarse Dirt": "Yes",
+				"Cobbled Deepslate": "Yes",
+				"Cobblestone": "Yes",
+				"Cobweb": "Yes",
+				"Cocoa": "No",
+				"Command Blocks": "No",
+				"Composter": "Yes",
+				"Concrete": "No",
+				"Concrete Powder": "No",
+				"Conduit": "No",
+				"Copper Ore": "No",
+				"Coral Blocks": "No",
+				"Coral Fans": "No",
+				"Corals": "No",
+				"Crafting Table": "Yes",
+				"Crops": {
+					"Potatoes<br>Carrots<br>Beetroots": "No",
+					"Wheat Crops<br>Attached Pumpkin Stem<br>Pumpkin Stem<br>Attached Melon Stem<br>Melon Stem": "Yes"
+				},
+				"Crying Obsidian": "No",
+				"Daylight Detector": "No",
+				"Dead Bush": "Yes",
+				"Deepslate": {
+					"Deepslate": "Yes",
+					"Infested Deepslate": "No"
+				},
+				"Detector Rail": "No",
+				"Diamond Ore": "No",
+				"Diorite": "Yes",
+				"Dirt": {
+					"Dirt": "Yes",
+					"Rooted Dirt": "No"
+				},
+				"Dirt Path": "Yes",
+				"Dispenser": "No",
+				"Doors": {
+					"Oak Door<br>Iron Door<br>Spruce Door<br>Jungle Door<br>Acacia Door<br>Dark Oak Door": "Yes",
+					"Birch Door<br>Crimson Door<br>Mangrove Door<br>Warped Door": "No"
+				},
+				"Dragon Egg": "No",
+				"Dried Kelp Block": "No",
+				"Dripstone Block": "No",
+				"Dropper": "No",
+				"Emerald Ore": "No",
+				"Enchanting Table": "No",
+				"End Gateway": "No",
+				"End Portal": "No",
+				"End Portal Frame": "No",
+				"End Rod": "Yes",
+				"End Stone": "No",
+				"End Stone Bricks": "Yes",
+				"Ender Chest": "Yes",
+				"Farmland": "Yes",
+				"Fence Gates": {
+					"Oak Fence Gate<br>Spruce Fence Gate<br>Jungle Fence Gate<br>Acacia Fence Gate<br>Dark Oak Fence Gate": "Yes",
+					"Birch Fence Gate<br>Crimson Fence Gate<br>Mangrove Fence Gate<br>Warped Fence Gate": "No"
+				},
+				"Fences": {
+					"Oak Fence<br>Spruce Fence<br>Birch Fence<br>Jungle Fence<br>Acacia Fence<br>Dark Oak Fence": "Yes",
+					"Nether Brick Fence<br>Crimson Fence<br>Mangrove Fence<br>Warped Fence": "No"
+				},
+				"Fern": "Yes",
+				"Fire": "Yes",
+				"Fletching Table": "Yes",
+				"Flower Pot": {
+					"Flower Pot<br>Potted Fern<br>Potted Azalea<br>Potted Flowering Azalea<br>Potted Cornflower<br>Potted Orange Tulip<br>Potted Pink Tulip<br>Potted Lily of the Valley<br>Potted Wither Rose<br>Potted Bamboo<br>Potted Red Mushroom<br>Potted Brown Mushroom<br>Potted Crimson Roots<br>Potted Warped Roots<br>Potted Acacia Sapling<br>Potted Dark Oak Sapling<br>Potted Jungle Sapling<br>Potted Oak Sapling<br>Potted Crimson Fungus<br>Potted Warped Fungus<br>Potted Mangrove Propagule": "No",
+					"Potted Dandelion<br>Potted Poppy<br>Potted Blue Orchid<br>Potted Allium<br>Potted Azure Bluet<br>Potted Red Tulip<br>Potted White Tulip<br>Potted Oxeye Daisy<br>Potted Cactus<br>Potted Dead Bush<br>Potted Birch Sapling<br>Potted Spruce Sapling": "Yes"
+				},
+				"Flowers": {
+					"Cornflower<br>Blue Orchid<br>Allium<br>Azure Bluet<br>Red Tulip<br>Orange Tulip<br>White Tulip<br>Pink Tulip<br>Wither Rose<br>Lily of the Valley<br>Sunflower<br>Lilac<br>Rose Bush<br>Peony": "No",
+					"Dandelion<br>Poppy<br>Oxeye Daisy": "Yes"
+				},
+				"Froglights": "No",
+				"Frogspawn": "No",
+				"Frosted Ice": "No",
+				"Fungi": "No",
+				"Furnace": "Yes",
+				"Gilded Blackstone": "Yes",
+				"Glass": "Yes",
+				"Glass Pane": "Yes",
+				"Glazed Terracotta": {
+					"White Glazed Terracotta<br>Orange Glazed Terracotta<br>Light Blue Glazed Terracotta<br>Yellow Glazed Terracotta<br>Lime Glazed Terracotta<br>Purple Glazed Terracotta": "Yes",
+					"Magenta Glazed Terracotta<br>Pink Glazed Terracotta<br>Gray Glazed Terracotta<br>Light Gray Glazed Terracotta<br>Cyan Glazed Terracotta<br>Blue Glazed Terracotta<br>Brown Glazed Terracotta<br>Green Glazed Terracotta<br>Red Glazed Terracotta<br>Black Glazed Terracotta": "No"
+				},
+				"Glow Lichen": "No",
+				"Glowstone": "Yes",
+				"Gold Ore": "No",
+				"Granite": "Yes",
+				"Grass": "Yes",
+				"Grass Block": "Yes",
+				"Gravel": "Yes",
+				"Grindstone": "Yes",
+				"Hanging Roots": "No",
+				"Hay Bale": "Yes",
+				"Heads": {
+					"Zombie Head<br>Zombie Wall Head<br>Player Head<br>Player Wall Head<br>Creeper Head<br>Creeper Wall Head<br>Skeleton Wall Skull<br>Wither Skeleton Skull<br>Wither Skeleton Wall Skull<br>Dragon Head": "No",
+					"Skeleton Skull<br>Dragon Wall Head": "Yes"
+				},
+				"Honey Block": "No",
+				"Honeycomb Block": "No",
+				"Hopper": "No",
+				"Hyphae": "No",
+				"Ice": "Yes",
+				"Iron Bars": "Yes",
+				"Iron Ore": "No",
+				"Jack o'Lantern": "No",
+				"Jigsaw Block": "Yes",
+				"Jukebox": "No",
+				"Kelp": "No",
+				"Ladder": "Yes",
+				"Lantern": "Yes",
+				"Lapis Lazuli Ore": "No",
+				"Lava": "Yes",
+				"Leaves": {
+					"Oak Leaves<br>Dark Oak Leaves": "Yes",
+					"Spruce Leaves<br>Birch Leaves<br>Jungle Leaves<br>Acacia Leaves<br>Mangrove Leaves<br>Azalea Leaves<br>Flowering Azalea Leaves": "No"
+				},
+				"Lectern": "Yes",
+				"Lever": "Yes",
+				"Light Block": "No",
+				"Lightning Rod": "No",
+				"Lily Pad": "Yes",
+				"Lodestone": "No",
+				"Logs": {
+					"Oak Log<br>Spruce Log<br>Jungle Log<br>Acacia Log<br>Dark Oak Log<br>Stripped Spruce Log<br>Stripped Acacia Log<br>Stripped Oak Log": "Yes",
+					"Birch Log<br>Mangrove Log<br>Stripped Birch Log<br>Stripped Jungle Log<br>Stripped Dark Oak Log<br>Stripped Mangrove Log": "No"
+				},
+				"Loom": "Yes",
+				"Magma Block": "Yes",
+				"Mangrove Propagule": "No",
+				"Mangrove Roots": "No",
+				"Melon": "Yes",
+				"Moss Block": "No",
+				"Moss Carpet": "No",
+				"Mud": "No",
+				"Muddy Mangrove Roots": "No",
+				"Mud Bricks": "No",
+				"Mushroom Blocks": "No",
+				"Mushrooms": "Yes",
+				"Mycelium": "No",
+				"Nether Bricks": "No",
+				"Nether Gold Ore": "No",
+				"Nether Portal": "No",
+				"Nether Quartz Ore": "No",
+				"Nether Sprouts": "No",
+				"Nether Wart": "Yes",
+				"Netherrack": "Yes",
+				"Note Block": "Yes",
+				"Nylium": "No",
+				"Observer": "No",
+				"Obsidian": "Yes",
+				"Packed Ice": "Yes",
+				"Packed Mud": "No",
+				"Piston": {
+					"Sticky Piston<br>Piston Head": "Yes",
+					"Piston<br>Moving Piston": "No"
+				},
+				"Planks": {
+					"Oak Planks<br>Spruce Planks<br>Birch Planks<br>Jungle Planks<br>Acacia Planks<br>Dark Oak Planks": "Yes",
+					"Crimson Planks<br>Mangrove Planks<br>Warped Planks": "No"
+				},
+				"Podzol": "No",
+				"Pointed Dripstone": "No",
+				"Powder Snow": "No",
+				"Powered Rail": "No",
+				"Pressure Plates": {
+					"Stone Pressure Plate<br>Oak Pressure Plate<br>Spruce Pressure Plate<br>Acacia Pressure Plate": "Yes",
+					"Birch Pressure Plate<br>Jungle Pressure Plate<br>Dark Oak Pressure Plate<br>Light Weighted Pressure Plate<br>Heavy Weighted Pressure Plate<br>Crimson Pressure Plate<br>Mangrove Pressure Plate<br>Warped Pressure Plate<br>Polished Blackstone Pressure Plate": "No"
+				},
+				"Prismarine": {
+					"Prismarine": "Yes",
+					"Prismarine Bricks<br>Dark Prismarine": "No"
+				},
+				"Pumpkin": "Yes",
+				"Purpur Block": "Yes",
+				"Rail": "Yes",
+				"Red Sand": "No",
+				"Red Sandstone": "No",
+				"Redstone Comparator": "Yes",
+				"Redstone Dust": "Yes",
+				"Redstone Lamp": "Yes",
+				"Redstone Ore": "No",
+				"Redstone Repeater": "Yes",
+				"Redstone Torch": "Yes",
+				"Reinforced Deepslate": "Yes",
+				"Respawn Anchor": "No",
+				"Roots": "No",
+				"Sand": "Yes",
+				"Sandstone": "Yes",
+				"Saplings": {
+					"Oak Sapling<br>Spruce Sapling<br>Birch Sapling<br>Jungle Sapling": "No",
+					"Acacia Sapling<br>Dark Oak Sapling": "Yes"
+				},
+				"Scaffolding": "No",
+				"Sculk": "No",
+				"Sculk Catalyst": "No",
+				"Sculk Sensor": "Yes",
+				"Sculk Shrieker": "No",
+				"Sculk Vein": "No",
+				"Sea Lantern": "Yes",
+				"Sea Pickle": "Yes",
+				"Seagrass": "No",
+				"Shroomlight": "No",
+				"Shulker Box": "No",
+				"Signs": {
+					"Oak Sign<br>Spruce Sign<br>Birch Sign<br>Acacia Sign<br>Jungle Sign<br>Dark Oak Sign<br>Birch Wall Sign<br>Acacia Wall Sign<br>Jungle Wall Sign<br>Dark Oak Wall Sign<br>Crimson Sign<br>Mangrove Sign<br>Warped Sign<br>Crimson Wall Sign<br>Mangrove Wall Sign<br>Warped Wall Sign": "No",
+					"Oak Wall Sign<br>Spruce Wall Sign": "Yes"
+				},
+				"Slabs": {
+					"Prismarine Slab<br>Prismarine Brick Slab<br>Dark Prismarine Slab<br>Cut Sandstone Slab<br>Petrified Oak Slab<br>Brick Slab<br>Mud Brick Slab<br>Nether Brick Slab<br>Quartz Slab<br>Red Sandstone Slab<br>Cut Red Sandstone Slab<br>Polished Granite Slab<br>Smooth Red Sandstone Slab<br>Mossy Stone Brick Slab<br>Polished Diorite Slab<br>End Stone Brick Slab<br>Granite Slab<br>Andesite Slab<br>Red Nether Brick Slab<br>Polished Andesite Slab<br>Crimson Slab<br>Mangrove Slab<br>Warped Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Oxidized Cut Copper Slab<br>Weathered Cut Copper Slab<br>Exposed Cut Copper Slab<br>Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Cut Copper Slab": "No",
+					"Oak Slab<br>Spruce Slab<br>Birch Slab<br>Jungle Slab<br>Acacia Slab<br>Dark Oak Slab<br>Stone Slab<br>Smooth Stone Slab<br>Sandstone Slab<br>Cobblestone Slab<br>Stone Brick Slab<br>Purpur Slab<br>Mossy Cobblestone Slab<br>Smooth Sandstone Slab<br>Smooth Quartz Slab<br>Diorite Slab<br>Blackstone Slab<br>Cobbled Deepslate Slab<br>Polished Deepslate Slab<br>Deepslate Tile Slab<br>Deepslate Brick Slab": "Yes"
+				},
+				"Slime Block": "No",
+				"Small Dripleaf": "No",
+				"Smithing Table": "Yes",
+				"Smoker": "Yes",
+				"Snow": "Yes",
+				"Snow Block": "Yes",
+				"Soul Sand": "Yes",
+				"Soul Soil": "No",
+				"Spawner": "Yes",
+				"Sponge": "No",
+				"Spore Blossom": "No",
+				"Stained Glass": {
+					"White Stained Glass<br>Orange Stained Glass<br>Light Blue Stained Glass<br>Yellow Stained Glass<br>Lime Stained Glass<br>Pink Stained Glass<br>Gray Stained Glass<br>Light Gray Stained Glass<br>Cyan Stained Glass<br>Purple Stained Glass<br>Blue Stained Glass<br>Brown Stained Glass<br>Green Stained Glass<br>Red Stained Glass<br>Black Stained Glass": "No",
+					"Magenta Stained Glass": "Yes"
+				},
+				"Stained Glass Panes": {
+					"White Stained Glass Pane<br>Orange Stained Glass Pane<br>Yellow Stained Glass Pane": "Yes",
+					"Magenta Stained Glass Pane<br>Light Blue Stained Glass Pane<br>Lime Stained Glass Pane<br>Pink Stained Glass Pane<br>Gray Stained Glass Pane<br>Light Gray Stained Glass Pane<br>Cyan Stained Glass Pane<br>Purple Stained Glass Pane<br>Blue Stained Glass Pane<br>Brown Stained Glass Pane<br>Green Stained Glass Pane<br>Red Stained Glass Pane<br>Black Stained Glass Pane": "No"
+				},
+				"Stairs": {
+					"Oak Stairs<br>Cobblestone Stairs<br>Stone Brick Stairs<br>Sandstone Stairs<br>Spruce Stairs<br>Birch Stairs<br>Jungle Stairs<br>Acacia Stairs<br>Dark Oak Stairs<br>Purpur Stairs<br>Mossy Cobblestone Stairs<br>Smooth Sandstone Stairs<br>Granite Stairs<br>Diorite Stairs<br>Blackstone Stairs<br>Polished Blackstone Brick Stairs<br>Cobbled Deepslate Stairs<br>Polished Deepslate Stairs<br>Deepslate Tile Stairs<br>Deepslate Brick Stairs": "Yes",
+					"Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Quartz Stairs<br>Prismarine Stairs<br>Prismarine Brick Stairs<br>Dark Prismarine Stairs<br>Red Sandstone Stairs<br>Polished Granite Stairs<br>Smooth Red Sandstone Stairs<br>Mossy Stone Brick Stairs<br>Polished Diorite Stairs<br>End Stone Brick Stairs<br>Stone Stairs<br>Smooth Quartz Stairs<br>Andesite Stairs<br>Red Nether Brick Stairs<br>Polished Andesite Stairs<br>Crimson Stairs<br>Mangrove Stairs<br>Warped Stairs<br>Polished Blackstone Stairs<br>Oxidized Cut Copper Stairs<br>Weathered Cut Copper Stairs<br>Exposed Cut Copper Stairs<br>Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Cut Copper Stairs": "No"
+				},
+				"Stems": "No",
+				"Stone": {
+					"Infested Stone": "No",
+					"Stone<br>Smooth Stone": "Yes"
+				},
+				"Stone Bricks": {
+					"Stone Bricks<br>Mossy Stone Bricks<br>Cracked Stone Bricks<br>Chiseled Stone Bricks<br>Infested Stone Bricks<br>Infested Mossy Stone Bricks<br>Infested Chiseled Stone Bricks": "Yes",
+					"Infested Cracked Stone Bricks": "No"
+				},
+				"Stonecutter": "Yes",
+				"Structure Block": "Yes",
+				"Structure Void": "No",
+				"Sugar Cane": "No",
+				"Sweet Berry Bush": "No",
+				"Target": "Yes",
+				"Terracotta": {
+					"White Terracotta<br>Orange Terracotta<br>Light Blue Terracotta<br>Yellow Terracotta<br>Lime Terracotta<br>Red Terracotta<br>Terracotta": "Yes",
+					"Magenta Terracotta<br>Pink Terracotta<br>Gray Terracotta<br>Light Gray Terracotta<br>Cyan Terracotta<br>Purple Terracotta<br>Blue Terracotta<br>Brown Terracotta<br>Green Terracotta<br>Black Terracotta": "No"
+				},
+				"Tinted Glass": "No",
+				"TNT": "Yes",
+				"Torch": {
+					"Torch<br>Wall Torch": "Yes",
+					"Soul Torch<br>Soul Wall Torch": "No"
+				},
+				"Trapdoors": {
+					"Oak Trapdoor<br>Spruce Trapdoor<br>Jungle Trapdoor<br>Dark Oak Trapdoor<br>Iron Trapdoor": "Yes",
+					"Birch Trapdoor<br>Acacia Trapdoor<br>Crimson Trapdoor<br>Mangrove Trapdoor<br>Warped Trapdoor": "No"
+				},
+				"Trapped Chest": "Yes",
+				"Tripwire": "No",
+				"Tripwire Hook": "No",
+				"Tuff": "No",
+				"Turtle Egg": "No",
+				"Twisting Vines": "No",
+				"Vines": "Yes",
+				"Walls": {
+					"Cobblestone Wall<br>Mossy Cobblestone Wall<br>Granite Wall<br>Stone Brick Wall<br>Sandstone Wall<br>Diorite Wall<br>Blackstone Wall<br>Cobbled Deepslate Wall<br>Polished Deepslate Wall<br>Deepslate Tile Wall<br>Deepslate Brick Wall": "Yes",
+					"Brick Wall<br>Prismarine Wall<br>Red Sandstone Wall<br>Mossy Stone Brick Wall<br>Mud Brick Wall<br>Nether Brick Wall<br>Andesite Wall<br>Red Nether Brick Wall<br>End Stone Brick Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall": "No"
+				},
+				"Wart Blocks": "No",
+				"Water": {
+					"Bubble Column": "No",
+					"Water": "Yes"
+				},
+				"Weeping Vines": "No",
+				"Wood": {
+					"Oak Wood<br>Birch Wood<br>Jungle Wood<br>Dark Oak Wood<br>Mangrove Wood<br>Stripped Birch Wood<br>Stripped Jungle Wood<br>Stripped Acacia Wood<br>Stripped Dark Oak Wood<br>Stripped Mangrove Wood": "No",
+					"Spruce Wood<br>Acacia Wood<br>Stripped Oak Wood<br>Stripped Spruce Wood": "Yes"
+				},
+				"Wool": {
+					"White Wool<br>Orange Wool<br>Light Blue Wool<br>Yellow Wool<br>Lime Wool<br>Gray Wool<br>Light Gray Wool<br>Cyan Wool<br>Blue Wool<br>Brown Wool<br>Green Wool<br>Red Wool<br>Black Wool": "Yes",
+					"Magenta Wool<br>Pink Wool<br>Purple Wool": "No"
+				}
+			}
 		},
 		"tag_saplings": {
 			"property_name": "Tag: SAPLINGS",
