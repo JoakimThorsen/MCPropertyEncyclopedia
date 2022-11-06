@@ -412,6 +412,7 @@ function display_headers_and_table() {
                             <div class="text-center">
                                 <span class="btn-group dropdown-actions" role="group">
                                     <a role="button" 
+                                       title="Sort this column"
                                        class="btn dropdown-btn btn-default modify-sorting${sorted === 1 ? ' active' : ''}" 
                                        property="${property_id}" 
                                        reversed="false"
@@ -419,16 +420,25 @@ function display_headers_and_table() {
                                         <i class="fas fa-sort-amount-down-alt"></i>
                                     </a>
                                     <a role="button" 
+                                       title="Sort this column in reverse"
                                        class="btn dropdown-btn btn-default modify-sorting${sorted === -1 ? ' active' : ''}" 
                                        property="${property_id}" 
                                        reversed="true">
                                         <i class="fas fa-sort-amount-up"></i>
                                     </a>
                                     <a role="button" 
+                                       title="Toggle all filter values"
                                        class="btn dropdown-btn btn-default toggle-select-all"
                                        property="${property_id}"
                                     >
                                         <i class="far fa-check-square"></i>
+                                    </a>
+                                    <a role="button" 
+                                       title="Remove/deselect this property"
+                                       class="btn dropdown-btn btn-default remove-property"
+                                       property="${property_id}"
+                                    >
+                                        <i class="fas fa-trash-alt"></i>
                                     </a>
                                 </span>
                             </div>
@@ -539,10 +549,23 @@ function display_headers_and_table() {
         update_window_history();
         display_results();
     });
+    
+    $('.remove-property').click(function (e) {
+        e.stopPropagation();
+
+        const property = $(this).attr("property");
+
+        selection_arr.splice(selection_arr.indexOf(property), 1);
+
+        update_window_history();
+        display_headers_and_table();
+    });
+
     $('.description-button').click(function (e) {
         e.stopPropagation();
         $(this).parent().toggleClass('open')
     });
+    
     $('.dropdown-submenu>.dropdown-menu').click(function (e) {
         e.stopPropagation();
     });
