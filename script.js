@@ -558,6 +558,7 @@ function display_headers_and_table() {
         selection_arr.splice(selection_arr.indexOf(property), 1);
 
         update_window_history();
+        display_selection();
         display_headers_and_table();
     });
 
