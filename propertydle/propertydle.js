@@ -77,7 +77,6 @@ function new_game(daily_game = false) {
         $("#daily-mode").addClass('display-none');
         $("#infinite-mode").removeClass('display-none');
         random = Math.random;
-        random = mulberry32(1239);
     }
     
     // exclude "variants" and "wiki page" "properties"
