@@ -611,7 +611,7 @@ function display_results() {
                         Object.keys(input_element).forEach(variant => {
                             const value = pivot_element(input_element[variant]);
                             if (value !== undefined) {
-                                output_obj[variant] = pivot_element(input_element[variant]);
+                                output_obj[variant] = value;
                             }
                         });
                         if (Object.keys(output_obj).length === 0) {
