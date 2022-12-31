@@ -919,11 +919,10 @@ function sort_mixed_types(list) {
 
 function formatting_color(value, property_id, class_exists = false) {
     let color = "";
-    // console.log(value, property_name);
+    // console.log(value, property_id);
 
-    let found_key;
-    if (found_key = Object.keys(data.conditional_formatting).find(key_regex => new RegExp(`^${key_regex}$`).test(value))) {
-        color = data.conditional_formatting[found_key];
+    if (Object.hasOwn(data.conditional_formatting, value)) {
+        color = data.conditional_formatting[value];
         if (!class_exists) {
             color = `class="${color}"`;
         }
