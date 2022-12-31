@@ -912,7 +912,7 @@ function sort_mixed_types(list) {
         } else if (isNum(a)) {
             return 1;
         } else {
-            return a.localeCompare(b, undefined, {numeric: true, sensitivity: 'base'});
+            return (a.name < b.name ? -1 : (a.name > b.name ? 1 : 0));
         }
     });
 }
