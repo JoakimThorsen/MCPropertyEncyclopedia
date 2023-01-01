@@ -912,7 +912,7 @@ function sort_mixed_types(list) {
         } else if (isNum(a)) {
             return 1;
         } else {
-            return (a.name < b.name ? -1 : (a.name > b.name ? 1 : 0));
+            return (a < b ? -1 : (a > b ? 1 : 0));
         }
     });
 }
