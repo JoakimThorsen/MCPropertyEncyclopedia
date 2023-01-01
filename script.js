@@ -611,7 +611,7 @@ function display_results() {
                         Object.keys(input_element).forEach(variant => {
                             const value = pivot_element(input_element[variant]);
                             if (value !== undefined) {
-                                output_obj[variant] = pivot_element(input_element[variant]);
+                                output_obj[variant] = value;
                             }
                         });
                         if (Object.keys(output_obj).length === 0) {
@@ -912,18 +912,17 @@ function sort_mixed_types(list) {
         } else if (isNum(a)) {
             return 1;
         } else {
-            return a.localeCompare(b, undefined, {numeric: true, sensitivity: 'base'});
+            return (a < b ? -1 : (a > b ? 1 : 0));
         }
     });
 }
 
 function formatting_color(value, property_id, class_exists = false) {
     let color = "";
-    // console.log(value, property_name);
+    // console.log(value, property_id);
 
-    let found_key;
-    if (found_key = Object.keys(data.conditional_formatting).find(key_regex => new RegExp(`^${key_regex}$`).test(value))) {
-        color = data.conditional_formatting[found_key];
+    if (Object.hasOwn(data.conditional_formatting, value)) {
+        color = data.conditional_formatting[value];
         if (!class_exists) {
             color = `class="${color}"`;
         }
