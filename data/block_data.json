@@ -4597,7 +4597,7 @@
 				"Lily Pad": [".getFluidState() == Fluids.WATER", ".getMaterial() == Material.ICE"],
 				"Mangrove Propagule": {
 					"Hanging": ".isOf(Blocks.MANGROVE_LEAVES)",
-					"On Ground": [".isIn(BlockTags.DIRT)", "floor.isOf(Blocks.FARMLAND)"]
+					"On Ground": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"]
 				},
 				"Moss Carpet": "!.isAir()",
 				"Mushrooms": [".isIn(BlockTags.MUSHROOM_GROW_BLOCK)", ".is_opaque_full_cube"],
@@ -7099,7 +7099,6 @@
 				"Furnace": "Yes",
 				"Gilded Blackstone": "Yes",
 				"Glazed Terracotta": "Yes",
-				"Glowstone": "Yes",
 				"Gold Ore": "Yes",
 				"Granite": "Yes",
 				"Grass Block": "Yes",
@@ -7163,7 +7162,6 @@
 				"Scaffolding": "Yes",
 				"Sculk": "Yes",
 				"Sculk Catalyst": "Yes",
-				"Sea Lantern": "Yes",
 				"Shroomlight": "Yes",
 				"Shulker Box": {
 					"Sideways When Opened": "No",
@@ -10163,7 +10161,7 @@
 				"Buttons": "With hand",
 				"Cake": "Limited",
 				"Campfire": "With hand",
-				"Cauldron": " With item",
+				"Cauldron": "With item",
 				"Coarse Dirt": "Once",
 				"Composter": {
 					"level: 0-7": "With item",
