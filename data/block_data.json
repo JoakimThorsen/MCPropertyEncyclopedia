@@ -1362,6 +1362,7 @@
 				"Lava": "Fluid",
 				"Packed Ice": "Slippery",
 				"Powder Snow": "Slows when intersecting",
+				"Scaffolding": "Climbable",
 				"Slime Block": "Slows when walked on",
 				"Soul Sand": {
 					"Normally": "Slows when walked on",
@@ -2002,10 +2003,7 @@
 					"End Stone Brick Wall": 9
 				},
 				"Wart Blocks": 1,
-				"Water": {
-					"Bubble Column": 0,
-					"Water": 100
-				},
+				"Water": 100,
 				"Weeping Vines": 0,
 				"Wood": 2,
 				"Wool": 0.8
@@ -4589,6 +4587,7 @@
 				},
 				"Frogspawn": ".getFluid() == Fluids.WATER",
 				"Fungi": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
+				"Grass": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
 				"Glow Lichen": ".isFaceFullSquare()",
 				"Hanging Roots": ".isSideSolidFullSquare()",
 				"Ladder": ".isSideSolidFullSquare()",
@@ -6797,6 +6796,7 @@
 				"Powered Rail": "Yes",
 				"Rail": "Yes",
 				"Scaffolding": "Yes",
+				"Sculk Sensor": "Yes",
 				"Sea Pickle": "Yes",
 				"Seagrass": "Inherent",
 				"Signs": "Yes",
@@ -7165,7 +7165,7 @@
 				"Shroomlight": "Yes",
 				"Shulker Box": {
 					"Sideways When Opened": "No",
-					"When Verical Or Cosed": "Yes"
+					"When Verical Or Closed": "Yes"
 				},
 				"Slabs": {
 					"Bottom": "No",
@@ -7252,10 +7252,7 @@
 				"Hay Bale": "Yes",
 				"Leaves": "Yes",
 				"Lectern": "Yes",
-				"Logs": {
-					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
-					"Crimson<br>Warped": "No"
-				},
+				"Logs": "Yes",
 				"Mangrove Roots": "Yes",
 				"Planks": {
 					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
@@ -7314,10 +7311,7 @@
 				"Hanging Roots": "Yes",
 				"Leaves": "Yes",
 				"Lectern": "Yes",
-				"Logs": {
-					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
-					"Crimson<br>Warped": "No"
-				},
+				"Logs": "Yes",
 				"Mangrove Roots": "Yes",
 				"Planks": {
 					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
@@ -7416,6 +7410,8 @@
 			"default_value": "No",
 			"default_selection": false,
 			"entries":{
+				"Air": "Yes",
+				"Azalea": "Yes",
 				"Bamboo": {
 					"Bamboo": "No",
 					"Shoot": "Yes"
