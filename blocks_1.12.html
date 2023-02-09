@@ -119,139 +119,159 @@
                 :)
             </div>
         </div>
-        <h2 style="font-size: 24px;">This is an open source project. View the <a href="about.html">about</a> page for
-            more info.<br>Click the button below to customize your selection:</h2>
+        <h2 style="font-size: 24px;">This is an open source project.
+            View the <a href="about.html">about</a> page for more info.<br>
+            Click the button below to customize your selection:</h2>
         <h2 style="font-size: 24px; color: #ff4040;">Very Work-in-progress, so a lot less polished than the main page.<br>
         There might be errors and there will be jank. Join the discord if you're interested in updates.</h2>
     </div>
     <div class="col-md-1 col-lg-3"></div>
     <div class="col-sm-12">
         <div class="btn-group">
-            <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="dropdown">
+            <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="dropdown" onclick="setTimeout(() => {$('#selection-search').get(0).focus()})">
                 Property Selection <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" id="selection">
+                <div class="text-center">
+                    <span class="btn-group dropdown-actions" role="group">
+                        <a role="button" class="btn dropdown-btn btn-default deselect-all">
+                            <i class="far fa-square"></i>
+                        </a>
+                        <a role="button" class="btn dropdown-btn btn-default select-all">
+                            <i class="far fa-check-square"></i>
+                        </a>
+                    </span>
+                    
+                </div>
+                <div class="text-center">
+                    <span class="btn-group dropdown-actions" role="group">
+                        <input class="form-control "
+                            placeholder="Seach for properties..."
+                            id="selection-search"
+                            type="search"
+                            autocomplete="off"
+                        />
+                    </span>
+                </div>
                 <!-- Selection options are inserted here using jQuery -->
             </ul>
         </div>
         <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="collapse-next">
             <i class="fas fa-tools"></i>
         </button>
-        <div class="display-none">
-            <div class="settings">
+        <div class="settings display-none">
 
-                <div class="settings-box">
-                    <p>Reset:</p>
-                    <button class="btn btn-default"
-                            type="button"
-                            onclick="selection_arr = null; display_selection(); display_headers_and_table(); update_window_history();"
-                    >
-                        Property Selection
-                    </button>
-                    <button class="btn btn-default"
-                            type="button"
-                            onclick="filter_obj = {}; display_headers_and_table(); update_window_history();"
-                    >Filters
-                    </button>
-                    <button class="btn btn-default"
-                            type="button"
-                            onclick="sort_arr = []; display_headers_and_table(); update_window_history();"
-                    >Sorting
-                    </button>
-                </div>
-
-                <div class="settings-box">
-                    <p>Export blocklist:</p>
-                    <a role="button" class="btn dropdown-btn btn-default export-csv">
-                        <i class="fas fa-file-export"></i>Export CSV
-                    </a>
-                    <a role="button" class="btn dropdown-btn btn-default export-json">
-                        <i class="fas fa-file-export"></i>Export JSON
-                    </a>
-                </div>
-
-                <div class="settings-box">
-                    <p>Convert size values to:</p>
-                    <div class="btn-group">
-                        <a role="button"
-                           class="btn btn-default radio-settings"
-                           type="button"
-                           setting="size_type"
-                           value="pixel"
-                        ><i class="fas fa-th-large"></i> Pixel</a>
-                        <a role="button"
-                           class="btn btn-default radio-settings"
-                           type="button"
-                           setting="size_type"
-                           value="block"
-                        ><i class="fas fa-square"></i> Block</a>
-                    </div>
-                </div>
-
-                <div class="settings-box">
-                    <p>Expandable tables:</p>
-                    <a role="button" class="btn btn-default toggle-settings" type="button" setting="expand_tables" rerender="false" onclick="$('table.expandable').toggleClass('display-none');">
-                        Expand All
-                    </a>
-                    <a role="button" class="btn btn-default toggle-settings" type="button" setting="hide_expand_buttons" rerender="false" onclick="$('.expand-btn').toggleClass('display-none');">
-                        Hide Buttons
-                    </a>
-                </div>
-
-                <div class="settings-box">
-                    <p>Font:</p>
-                    <div class="btn-group">
-                        <a role="button" class="btn btn-default" type="button" onclick="document.querySelector('body').style.fontFamily = 'monospace, \'Courier New\''">
-                            Monospaced
-                        </a>
-                        <a role="button" class="btn btn-default" type="button" onclick="document.querySelector('body').style.fontFamily = '\'Montserrat\', sans-serif'">
-                            Normal
-                        </a>
-                    </div>
-                </div>
-
-                <div class="settings-box">
-                    <p>Word tearing:</p>
-                    <p style="font-size: 16px;">13 bit binary sequences (separated by newlines)</p>
-                    <div class="form-inline text-center">
-                        <textarea class="form-control"
-                               id="blockbits"
-                               placeholder="13 bit binary sequence(s)..."
-                               type="search"
-                               autocomplete="off"
-                               style="min-width: 250px;"
-                        >0100010010001</textarea>
-                    </div>
-                    <p style="font-size: 16px; padding-top: 8px">Number of bits from first block: <span id="bitindex">4</span></p>
-                    <input type="range"
-                           min="1"
-                           max="13"
-                           value="4"
-                           class="slider"
-                           id="bitindexslider"
-                           oninput="$('#bitindex').text(this.value);"
-                    >
-                    <p style="font-size: 16px; padding-top: 8px">Find:</p>
-                    <input type="checkbox" checked id="firstbits"></intput><label style="font-weight: normal;" for="firstbits">first block</label>
-                    <input type="checkbox" checked id="lastbits"></intput><label style="font-weight: normal;" for="lastbits">last block</label><br>
-                    <div class="btn-group" style="margin-top: 5px">
-                        <a role="button" class="btn btn-default" type="button" onclick="
-                            blockbits = $('#blockbits').val().split('\n');
-                            if(blockbits.some(state => state.length !== 13)) {
-                                alert('Needs to be 13 long');
-                                return;
-                            }
-                            console.log(blockbits);
-                            index = parseInt($('#bitindexslider').val());
-                            first = $('#firstbits').is(':checked') ? blockbits.map(state => state.substr(0, index)) : [];
-                            last = $('#lastbits').is(':checked') ? blockbits.map(state => state.substr(index, 12)) : [];
-                            filter_obj.binary_rep = value_list.binary_rep.filter(e => !first.includes(e.substr(0, index)) && !last.includes(e.substr(index, 12)));
-                            display_headers_and_table();
-                        ">Find blocks</a>
-                    </div>
-                </div>
-
+            <div class="settings-box">
+                <p>Reset:</p>
+                <button class="btn btn-default"
+                        type="button"
+                        onclick="selection_arr = null; display_selection(); display_headers_and_table(); update_window_history();"
+                >
+                    Property Selection
+                </button>
+                <button class="btn btn-default"
+                        type="button"
+                        onclick="filter_obj = {}; display_headers_and_table(); update_window_history();"
+                >Filters
+                </button>
+                <button class="btn btn-default"
+                        type="button"
+                        onclick="sort_arr = []; display_headers_and_table(); update_window_history();"
+                >Sorting
+                </button>
             </div>
+
+            <div class="settings-box">
+                <p>Export blocklist:</p>
+                <a role="button" class="btn dropdown-btn btn-default export-csv">
+                    <i class="fas fa-file-export"></i>Export CSV
+                </a>
+                <a role="button" class="btn dropdown-btn btn-default export-json">
+                    <i class="fas fa-file-export"></i>Export JSON
+                </a>
+            </div>
+
+            <div class="settings-box">
+                <p>Convert size values to:</p>
+                <div class="btn-group">
+                    <a role="button"
+                        class="btn btn-default radio-settings"
+                        type="button"
+                        setting="size_type"
+                        value="pixel"
+                    ><i class="fas fa-th-large"></i> Pixel</a>
+                    <a role="button"
+                        class="btn btn-default radio-settings"
+                        type="button"
+                        setting="size_type"
+                        value="block"
+                    ><i class="fas fa-square"></i> Block</a>
+                </div>
+            </div>
+
+            <div class="settings-box">
+                <p>Expandable tables:</p>
+                <a role="button" class="btn btn-default toggle-settings" type="button" setting="expand_tables" rerender="false" onclick="$('table.expandable').toggleClass('display-none');">
+                    Expand All
+                </a>
+                <a role="button" class="btn btn-default toggle-settings" type="button" setting="hide_expand_buttons" rerender="false" onclick="$('.expand-btn').toggleClass('display-none');">
+                    Hide Buttons
+                </a>
+            </div>
+
+            <div class="settings-box">
+                <p>Font:</p>
+                <div class="btn-group">
+                    <a role="button" class="btn btn-default" type="button" onclick="document.querySelector('body').style.fontFamily = 'monospace, \'Courier New\''">
+                        Monospaced
+                    </a>
+                    <a role="button" class="btn btn-default" type="button" onclick="document.querySelector('body').style.fontFamily = '\'Montserrat\', sans-serif'">
+                        Normal
+                    </a>
+                </div>
+            </div>
+
+            <div class="settings-box">
+                <p>Word tearing:</p>
+                <p style="font-size: 16px;">13 bit binary sequences (separated by newlines)</p>
+                <div class="form-inline text-center">
+                    <textarea class="form-control"
+                            id="blockbits"
+                            placeholder="13 bit binary sequence(s)..."
+                            type="search"
+                            autocomplete="off"
+                            style="min-width: 250px;"
+                    >0100010010001</textarea>
+                </div>
+                <p style="font-size: 16px; padding-top: 8px">Number of bits from first block: <span id="bitindex">4</span></p>
+                <input type="range"
+                        min="1"
+                        max="13"
+                        value="4"
+                        class="slider"
+                        id="bitindexslider"
+                        oninput="$('#bitindex').text(this.value);"
+                >
+                <p style="font-size: 16px; padding-top: 8px">Find:</p>
+                <input type="checkbox" checked id="firstbits"></intput><label style="font-weight: normal;" for="firstbits">first block</label>
+                <input type="checkbox" checked id="lastbits"></intput><label style="font-weight: normal;" for="lastbits">last block</label><br>
+                <div class="btn-group" style="margin-top: 5px">
+                    <a role="button" class="btn btn-default" type="button" onclick="
+                        blockbits = $('#blockbits').val().split('\n');
+                        if(blockbits.some(state => state.length !== 13)) {
+                            alert('Needs to be 13 long');
+                            return;
+                        }
+                        console.log(blockbits);
+                        index = parseInt($('#bitindexslider').val());
+                        first = $('#firstbits').is(':checked') ? blockbits.map(state => state.substr(0, index)) : [];
+                        last = $('#lastbits').is(':checked') ? blockbits.map(state => state.substr(index, 12)) : [];
+                        filter_obj.binary_rep = value_list.binary_rep.filter(e => !first.includes(e.substr(0, index)) && !last.includes(e.substr(index, 12)));
+                        display_headers_and_table();
+                    ">Find blocks</a>
+                </div>
+            </div>
+
         </div>
         <div class="form-inline text-center">
             <input class="form-control"
@@ -260,15 +280,15 @@
                    autofocus
                    type="search"
                    autocomplete="off"
-            >
+            />
         </div>
         <div class="results">
-            <table class="table table-bordered table-hover text-left" id="output_table">
+            <table class="table table-bordered table-hover text-left" id="output-table">
                 <thead>
                 <tr></tr>
                 </thead>
                 <tbody>
-
+                    <!-- Table contents are inserted here using jQuery -->
                 </tbody>
             </table>
         </div>

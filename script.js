@@ -77,19 +77,7 @@ function load_data(filename) {
 
 
 function display_selection() {
-    $('#selection').children().remove();
-    $('#selection').append(`<li>
-    <div class="text-center">
-        <span class="btn-group dropdown-actions" role="group">
-            <a role="button" class="btn dropdown-btn btn-default deselect-all">
-                <i class="far fa-square"></i>
-            </a>
-            <a role="button" class="btn dropdown-btn btn-default select-all">
-                <i class="far fa-check-square"></i>
-            </a>
-        </span>
-    </div>
-    </li>`);
+    $('#selection').children('li').remove();
     if (selection_arr === null) {
         selection_arr = [];
         for (let [property_name, value] of Object.entries(data.properties)) {
@@ -201,6 +189,43 @@ function display_selection() {
         display_headers_and_table();
     });
 }
+function display_selection_search(selection_search) {
+    selection_search = selection_search.toLowerCase();
+    $('#selection').children('li').each(function () {
+        if (matchesSearch(this, selection_search)) {
+            $(this).removeClass('display-none');
+        } else {
+            $(this).addClass('display-none');
+        }
+    });
+}
+
+function matchesSearch(element, selection_search) {
+    // console.log(element);
+    if ($(element).hasClass('custom-submenu')) {
+        let matches = false;
+        $(element).children('ul').children('li').each(function () {
+            if (matchesSearch(this, selection_search)) {
+                matches = true;
+            }
+        });
+        if(matches) {
+            $(element).removeClass('display-none');
+        } else {
+            $(element).addClass('display-none');
+        }
+        return matches;
+    } else {
+        let matches = $(element).children('a').attr('property')?.toLowerCase()?.includes(selection_search) ||
+                      $(element).children('a').text().toLowerCase().includes(selection_search);
+        if(matches) {
+            $(element).removeClass('display-none');
+        } else {
+            $(element).addClass('display-none');
+        }
+        return matches;
+    }
+}
 
 function initialize_page() {
     if (!localStorage.getItem("MCProperty-discord-promoted")) {
@@ -242,6 +267,10 @@ function initialize_page() {
         update_window_history();
         display_results();
     });
+
+    $('#selection-search').on('input', function () {
+        display_selection_search(this.value);
+    });
 }
 
 // This functions only handles headers, but calls display_results()
@@ -249,7 +278,7 @@ function display_headers_and_table() {
 
     un_datatable();
 
-    $('#output_table').find('thead>tr>th').remove();
+    $('#output-table').find('thead>tr>th').remove();
 
     for (const [_, property] of Object.entries(data.properties).filter(([e, _]) => selection_arr.includes(e))) {
         let size_factor = 1;
@@ -280,7 +309,7 @@ function display_headers_and_table() {
         );
 
     // Table headers
-    $('#output_table').children('thead').children('tr').append(`
+    $('#output-table').children('thead').children('tr').append(`
     <th>
         <div class="text-center">
             <span class="table-header" id="entry_count" title="Number of rows">
@@ -469,7 +498,7 @@ function display_headers_and_table() {
         });
         append_data += `</div></ul></div></th>`;
 
-        $('#output_table').children('thead').children('tr').append(append_data);
+        $('#output-table').children('thead').children('tr').append(append_data);
     });
 
     $('.modify-filter').click(function (e) {
@@ -577,7 +606,7 @@ function display_headers_and_table() {
 // Displays all the table data
 function display_results() {
     un_datatable();
-    $('#output_table').find('tbody>tr').remove();
+    $('#output-table').find('tbody>tr').remove();
 
     // Table data
     let output_data = [];
@@ -725,10 +754,7 @@ function display_results() {
 
                 val_0 = get_value(val_0);
                 val_1 = get_value(val_1);
-
-                val_0 = (isNum(val_0) ? Math.abs(val_0) : val_0);
-                val_1 = (isNum(val_1) ? Math.abs(val_1) : val_1);
-
+                
                 function get_value(value) {
                     if (typeof value == 'object') {
                         return get_value(Object.values(value)[0]);
@@ -736,6 +762,10 @@ function display_results() {
                         return value;
                     }
                 }
+                
+                val_0 = (isNum(val_0) ? Math.abs(val_0) : val_0);
+                val_1 = (isNum(val_1) ? Math.abs(val_1) : val_1);
+
 
                 let result = 0;
                 if (typeof val_0 == 'string' || typeof val_1 == 'string') {
@@ -813,12 +843,12 @@ function display_results() {
         // append_string += `<td>:<input type="text">,</td>`;
         append_string += "</tr>";
     });
-    $('#output_table').children('tbody').append(append_string);
+    $('#output-table').children('tbody').append(append_string);
 
     if(!('ontouchstart' in window)
     && false
     ){
-        $('#output_table').DataTable({
+        $('#output-table').DataTable({
             colReorder: {
                 fixedColumnsLeft: 2
             },
@@ -866,7 +896,7 @@ function display_results() {
         // $target.toggle(); // No toggle animation/delay
         $target.toggleClass("display-none"); // uses a class instead
     });
-    $('#output_table').on('column-reorder.dt', function () {
+    $('#output-table').on('column-reorder.dt', function () {
         reorder_selection_arr();
         update_window_history();
     });
@@ -874,14 +904,14 @@ function display_results() {
 }
 
 function un_datatable() {
-    if ($.fn.dataTable.isDataTable('#output_table')) {
-        $('#output_table').DataTable().destroy();
+    if ($.fn.dataTable.isDataTable('#output-table')) {
+        $('#output-table').DataTable().destroy();
     }
 }
 
 function reorder_selection_arr() {
     selection_arr = [];
-    $('#output_table:not(.DTCR_clonedTable)>thead>tr>th>div>a').each(function () {
+    $('#output-table:not(.DTCR_clonedTable)>thead>tr>th>div>a').each(function () {
         const prop = $(this).attr('property');
         if (typeof prop === 'undefined') return;
         selection_arr.push(prop);

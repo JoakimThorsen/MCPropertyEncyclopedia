@@ -137,7 +137,7 @@ a:hover {
     flex-grow: 1;
 }
 
-#output_table {
+#output-table {
     width: fit-content;
     align-items: center;
     margin-bottom: 0;
@@ -145,7 +145,7 @@ a:hover {
     filter: drop-shadow(0px 0px 4px gray);
 }
 
-#output_table > * > * > td, .table.nested-table > * > * > td {
+#output-table > * > * > td, .table.nested-table > * > * > td {
     padding: 4px 6px;
 }
 
@@ -172,7 +172,7 @@ a.table-header:hover {
     color: #666;
 }
 
-#output_table>tbody>tr>td:first-child {
+#output-table>tbody>tr>td:first-child {
     text-align: center;
 }
 th:first-child>*>* {
