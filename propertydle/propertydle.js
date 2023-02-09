@@ -57,8 +57,8 @@ function new_game(daily_game = false) {
     $('#explanation-toggle-button').removeClass('display-none');
     
     // Clear existing header and table body data
-    $('#output_table').find('thead>tr>th').remove();
-    $('#output_table').find('tbody>tr').remove();
+    $('#output-table').find('thead>tr>th').remove();
+    $('#output-table').find('tbody>tr').remove();
     
     if (localStorage.getItem("Propertydle-hide-explanation") != 'true') {
         $('#about-body').toggle(false);
@@ -246,7 +246,7 @@ function new_game(daily_game = false) {
     );
 
     // Add table headers
-    $('#output_table').children('thead').children('tr').append(`<th></th>
+    $('#output-table').children('thead').children('tr').append(`<th></th>
     <th><div class="dropdown"><a class="table-header dropdown-toggle justify-start" data-toggle="dropdown">${entry_header}</a></div></th>`);
 
     selection_arr.forEach(property_id => {
@@ -285,7 +285,7 @@ function new_game(daily_game = false) {
         });
         append_data += `</div></ul></div></th>`;
 
-        $('#output_table').children('thead').children('tr').append(append_data);
+        $('#output-table').children('thead').children('tr').append(append_data);
     });
 
     if(!daily_game) {
@@ -370,7 +370,7 @@ function guess(latest_guess) {
         };
         append_string += "</tr>";
     });
-    $('#output_table').children('tbody').append(append_string);
+    $('#output-table').children('tbody').append(append_string);
 
     $('body').off('click.collapse-next.data-api');
     $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (_e) {
@@ -379,7 +379,7 @@ function guess(latest_guess) {
         $target.toggle("toggle"); // With toggle animation/delay
         // $target.toggle(); // No toggle animation/delay
     });
-    $('#output_table').on( 'column-reorder.dt', function () {
+    $('#output-table').on( 'column-reorder.dt', function () {
         reorder_selection_arr();
         update_window_history();
     } );
