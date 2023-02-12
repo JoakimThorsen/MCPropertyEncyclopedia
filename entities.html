@@ -197,6 +197,9 @@
                 <a role="button" class="btn dropdown-btn btn-default export-json">
                     <i class="fas fa-file-export"></i>Export JSON
                 </a>
+                <a role="button" class="btn dropdown-btn btn-default copy-comma-separated">
+                    <i class="fas fa-copy"></i>Copy Comma-Separated List
+                </a>
             </div>
 
             <div class="settings-box">
@@ -239,10 +242,18 @@
             <div class="settings-box">
                 <p>Font:</p>
                 <div class="btn-group">
-                    <a role="button" class="btn btn-default" type="button" onclick="document.querySelector('body').style.fontFamily = 'monospace, \'Courier New\''">
+                    <a role="button" 
+                            class="btn btn-default radio-settings"
+                            type="button"
+                            setting="font"
+                            value="monospaced"
+                            rerender="false"
+                            onclick="document.querySelector('body').style.fontFamily = 'monospace, \'Courier New\''"
+                            onload="if (new URLSearchParams(window.location.search).get('font') === 'monospaced') document.querySelector('body').style.fontFamily = 'monospace, \'Courier New\''"
+                    >
                         Monospaced
                     </a>
-                    <a role="button" class="btn btn-default" type="button" onclick="document.querySelector('body').style.fontFamily = '\'Montserrat\', sans-serif'">
+                    <a role="button" class="btn btn-default radio-settings" type="button" setting="font" value="normal" rerender="false" onclick="document.querySelector('body').style.fontFamily = '\'Montserrat\', sans-serif'">
                         Normal
                     </a>
                 </div>
