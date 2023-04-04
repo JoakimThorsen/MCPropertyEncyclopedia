@@ -299,10 +299,11 @@ th:first-child>*>* {
     display: none;
     opacity: 0;
     max-height: 0;
+    border-left: #ccc 1px solid;
 }
 
 .custom-submenu > ul {
-    padding-left: 1.5rem;
+    margin-left: 1.5rem;
 }
 
 .custom-submenu a {

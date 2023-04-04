@@ -525,12 +525,6 @@
 		"movable",
 		"sticky",
 		"waterloggable",
-		"gets_random_ticked",
-		"spawnable",
-		"falling_block",
-		"tile_entity_data",
-		"map_color",
-		"wiki_page",
 		{
 			"category": "Block interaction",
 			"contents": [
@@ -544,6 +538,39 @@
 				"obstructs_cactus",
 				"instrument",
 				"connects_to_panes"
+			]
+		},
+		{
+			"category": "Entity Interaction",
+			"contents": [
+				"affects_movement_speed",
+				"inflicts_damage",
+				"enderman_holdable",
+				"dragon_immune",
+				"wither_immune",
+				"suffocates_mobs"
+			]
+		},
+		{
+			"category": "World Interaction",
+			"contents": [
+				"gets_random_ticked",
+				"spawnable",
+				"falling_block",
+				"map_color"
+			]
+		},
+		"collision",
+		"full_cube",
+		{
+			"category": "Block size",
+			"contents": [
+				"height_all",
+				"height_external",
+				"width_all",
+				"width_external",
+				"collision_bottom_all",
+				"collision_bottom_external"
 			]
 		},
 		"placement_condition",
@@ -578,17 +605,8 @@
 				"is_opaque_full_cube"
 			]
 		},
-		{
-			"category": "Entity Interaction",
-			"contents": [
-				"affects_movement_speed",
-				"inflicts_damage",
-				"enderman_holdable",
-				"dragon_immune",
-				"wither_immune",
-				"suffocates_mobs"
-			]
-		},
+		"tile_entity_data",
+		"wiki_page",
 		{
 			"category": "Light",
 			"contents": [
@@ -607,19 +625,6 @@
 				"flammable",
 				"catches_fire_from_lava",
 				"gets_flushed"
-			]
-		},
-		"collision",
-		"full_cube",
-		{
-			"category": "Block size",
-			"contents": [
-				"height_all",
-				"height_external",
-				"width_all",
-				"width_external",
-				"collision_bottom_all",
-				"collision_bottom_external"
 			]
 		},
 		{
