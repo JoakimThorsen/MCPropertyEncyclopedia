@@ -286,8 +286,9 @@ function initialize_page() {
 
     $('#search').val(search);
     $('#search').on('input', function () {
+        let override_history = Boolean(search);
         search = $(this).val();
-        update_window_history();
+        update_window_history(override_history);
         display_results();
     });
 
@@ -1052,7 +1053,7 @@ function scale(number, inMax, outMin, outMax) {
     return Math.round(((number) * (outMax - outMin) / (inMax) + outMin) * 100) / 100;
 }
 
-function update_window_history() {
+function update_window_history(override_history = false) {
     let url = "";
 
     // if(selection_arr != undefined)              url += "&selection=" + JSON.stringify(selection_arr);
@@ -1082,7 +1083,11 @@ function update_window_history() {
     }
     url = window.location.origin + window.location.pathname + url;
 
-    window.history.pushState("", "", url);
+    if(override_history) {
+        window.history.replaceState("", "", url);
+    } else {
+        window.history.pushState("", "", url);
+    }
 }
 
 // Constructs the custom url parameters:
