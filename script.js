@@ -191,6 +191,23 @@ function display_selection() {
 }
 function display_selection_search(selection_search) {
     selection_search = selection_search.toLowerCase();
+    if(selection_search == "") {
+        console.log("test");
+        console.log($('.custom-collapsible'));
+        $('.custom-collapsible').css({
+            'display': 'none',
+            'max-height': 0,
+            'opacity': 0,
+        });
+        $('.custom-collapsible').removeClass('submenu-open');
+    } else {
+        $('.custom-collapsible').css({
+            'display': 'block',
+            'max-height': '300rem',
+            'opacity': 1,
+        });
+        $('.custom-collapsible').addClass('submenu-open');
+    }
     $('#selection').children('li').each(function () {
         if (matchesSearch(this, selection_search)) {
             $(this).removeClass('display-none');
