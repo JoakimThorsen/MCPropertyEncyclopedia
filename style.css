@@ -480,8 +480,18 @@ td .nested-table {
 
 .expand-btn {
     color: #333;
-    background-color: #A3D6FC;
+    /* background-color: #A3D6FC; */
+    background-color: #ddd;
     border-color: #aaa;
+    cursor: pointer;
+}
+
+table.expand-btn.table {
+    background-color: #ddd;
+    width: fit-content;
+}
+a.expand-btn {
+    color: #333;
 }
 
 .settings {

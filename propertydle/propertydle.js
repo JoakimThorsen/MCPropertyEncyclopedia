@@ -8,7 +8,6 @@ function load_data(filename) {
         'success': function (d) {
             data_latest = d;
             initialize_page();
-            // new_game();
         }
     });
 
@@ -17,8 +16,6 @@ function load_data(filename) {
         'dataType': "json",
         'success': function (d) {
             data_12 = d;
-            initialize_page();
-            // new_game();
         }
     });
 }
@@ -373,19 +370,21 @@ function guess(latest_guess) {
     $('#output-table').children('tbody').append(append_string);
 
     $('body').off('click.collapse-next.data-api');
-    $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (_e) {
+    $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (e) {
+        e.preventDefault();
         var $target = $(this).next();
         // Not sure which one I prefer:
-        $target.toggle("toggle"); // With toggle animation/delay
+        $target.toggle(); // With toggle animation/delay
         // $target.toggle(); // No toggle animation/delay
     });
-    $('#output-table').on( 'column-reorder.dt', function () {
-        reorder_selection_arr();
-        update_window_history();
-    } );
 
     if(latest_guess == secret_block) {
-        alert(`You did it! You got it in ${guesses.length} ${guesses.length === 1 ? 'guess' : 'guesses'}`)
+        $('#modalLabel').text(`You did it!`);
+        $('#modalBody').text(`You got the answer in ${guesses.length} ${guesses.length === 1 ? 'guess' : 'guesses'}.`)
+        $('#modal').modal('show');
+        setTimeout(function () {
+            $('#modalButton').focus();
+        }, 500);
     }
 }
 function deepCopy(obj) {

@@ -236,6 +236,12 @@ function initialize_page() {
         location.reload(true);
     });
 
+    window.onerror = function (msg, url, lineNo, columnNo, error) {
+        if(settings_obj['debug']) {
+            alert("ERROR:\n" + JSON.stringify({msg, url, lineNo, columnNo, error}, undefined, ' '));
+        }
+    };
+
     $('.radio-settings, .toggle-settings').each(function () {
         const setting = $(this).attr("setting");
         const value = $(this).attr("value") ?? "true";
@@ -838,7 +844,7 @@ function display_results() {
             }
         }
         for (let [property_id, value] of Object.entries(entry)) {
-            append_string += get_data_cell(value, property_id);
+            append_string += get_data_cell_contents(value, property_id);
         }
         // append_string += `<td>:<input type="text">,</td>`;
         append_string += "</tr>";
@@ -859,26 +865,28 @@ function display_results() {
         });
     }
 
-    function get_data_cell(entry, property_id, top_level = true) {
+    function get_data_cell_contents(entry, property_id, top_level = true) {
         let return_data;
         if (typeof (entry) == 'object' && entry != null) {
             return_data = `<td class="nested-cell">`;
             if (top_level && (get_all_values(entry).length > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2)) {
-                return_data += `<button class="btn expand-btn ${settings_obj.hide_expand_buttons ? `display-none` : ""}" type="button" data-toggle="collapse-next">Expand</button>\n`
+                // return_data += `<button class="btn expand-btn ${settings_obj.hide_expand_buttons ? `display-none` : ""}" type="button" data-toggle="collapse-siblings">Expand</button>\n`
+                return_data += `<a class="expand-btn ${settings_obj.hide_expand_buttons ? `display-none` : ""}" type="button" data-toggle="collapse-siblings"><table class="table table-bordered nested-table expand-btn"><tbody><tr><td>Expand...</td></tr></tbody></table></a>\n`
+                
+                if(get_all_values(entry, true).join("  ").length <= 40) {
+                    return_data += `<table class="table table-bordered table-hover nested-table expandable preview-table ${settings_obj.expand_tables ? "display-none" : ""}">
+                        <tbody>
+                            <tr>${get_multi_cell_contents(sort_mixed_types(get_all_values(entry, true)), property_id, true)}</tr>
+                        </tbody>
+                    </table>`;
+                }
+                
                 return_data += `<table class="table table-bordered table-hover nested-table expandable ${settings_obj.expand_tables ? "" : `display-none`}"><tbody>`;
             } else {
                 return_data += `<table class="table table-bordered table-hover nested-table"><tbody>`;
             }
-
-            if (Array.isArray(entry)) {
-                entry.forEach(value => {
-                    return_data += `<tr>${get_data_cell(value, property_id, false)}</tr>`;
-                });
-            } else {
-                Object.keys(entry).forEach(key => {
-                    return_data += `<tr><td>${key}</td>${get_data_cell(entry[key], property_id, false)}</tr>`;
-                });
-            }
+            return_data += get_multi_cell_contents(entry, property_id);
+            
             return_data += "</tbody></table></td>";
 
         } else {
@@ -887,10 +895,37 @@ function display_results() {
         return return_data;
     }
 
+    function get_multi_cell_contents(entry, property_id, horizontal_arr = false) {
+        let return_data = "";
+        if (Array.isArray(entry)) {
+            if(horizontal_arr) {
+                entry.forEach(value => {
+                    return_data += get_data_cell_contents(value, property_id, false);
+                });
+            } else {
+                entry.forEach(value => {
+                    return_data += `<tr>${get_data_cell_contents(value, property_id, false)}</tr>`;
+                });
+            }
+        } else {
+            Object.keys(entry).forEach(key => {
+                return_data += `<tr><td>${key}</td>${get_data_cell_contents(entry[key], property_id, false)}</tr>`;
+            });
+        }
+        return return_data;
+    }
+
     // Toggle functionality of 'Expand' buttons 
     $('body').off('click.collapse-next.data-api');
     $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (_e) {
         const $target = $(this).next();
+        // Not sure which one I prefer:
+        // $target.toggle("toggle"); // With toggle animation/delay
+        // $target.toggle(); // No toggle animation/delay
+        $target.toggleClass("display-none"); // uses a class instead
+    });
+    $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-siblings]', function (_e) {
+        const $target = $(this).siblings();
         // Not sure which one I prefer:
         // $target.toggle("toggle"); // With toggle animation/delay
         // $target.toggle(); // No toggle animation/delay
