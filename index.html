@@ -59,10 +59,21 @@
 
     <!-- Main css/js -->
     <link rel="stylesheet" href="style.css">
+    <script src="test.mjs" type="module"></script>
+    <script type="module">
+        import { hello } from './test.mjs'
+        window.hello = hello;
+    </script>
+    <script>
+        setTimeout(() => {
+            hello();
+        }, 1000);
+    </script>
     <script src="script.js" defer></script>
 
 </head>
 <body data-page="block" onload="load_data('data/block_data.json')">
+<!-- <body data-page="block" onload="load_data('data/block_data_1.20.json')"> -->
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -154,7 +165,7 @@
                 <!-- Selection options are inserted here using jQuery -->
             </ul>
         </div>
-        <button class="btn btn-default light-blue dropdown-toggle" type="button" data-toggle="collapse-next">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="collapse-next" title="Open settings panel">
             <i class="fas fa-tools"></i>
         </button>
         <div class="display-none settings">
@@ -164,30 +175,36 @@
                 <button class="btn btn-default"
                         type="button"
                         onclick="selection_arr = null; display_selection(); display_headers_and_table(); update_window_history();"
+                        title="Reset the chosen properties back to page default"
                 >
                     Property Selection
                 </button>
                 <button class="btn btn-default"
                         type="button"
                         onclick="filter_obj = {}; display_headers_and_table(); update_window_history();"
+                        title="Disable all enabled filters"
                 >Filters
                 </button>
                 <button class="btn btn-default"
                         type="button"
                         onclick="sort_arr = []; display_headers_and_table(); update_window_history();"
+                        title="Disable all enabled sorting"
                 >Sorting
                 </button>
             </div>
 
             <div class="settings-box">
                 <p>Export blocklist:</p>
-                <a role="button" class="btn dropdown-btn btn-default export-csv">
+                <a role="button" class="btn dropdown-btn btn-default export-csv"
+                    title="Download a newline-separated list of all blocks that are currently shown">
                     <i class="fas fa-file-export"></i>Export CSV
                 </a>
-                <a role="button" class="btn dropdown-btn btn-default export-json">
+                <a role="button" class="btn dropdown-btn btn-default export-json"
+                    title="Download a JSON string-array-formatted list of all blocks that are currently shown">
                     <i class="fas fa-file-export"></i>Export JSON
                 </a>
-                <a role="button" class="btn dropdown-btn btn-default copy-comma-separated">
+                <a role="button"class="btn dropdown-btn btn-default copy-comma-separated"
+                    title="Copy a Comma-Separated list of all blocks that are currently shown to clipboard.">
                     <i class="fas fa-copy"></i>Copy Comma-Separated List
                 </a>
             </div>
@@ -200,12 +217,14 @@
                         type="button"
                         setting="size_type"
                         value="pixel"
+                        title="Convert size units to pixels (1/16 blocks)"
                     ><i class="fas fa-th-large"></i> Pixel</a>
                     <a role="button"
                         class="btn btn-default radio-settings"
                         type="button"
                         setting="size_type"
                         value="block"
+                        title="Convert size units to blocks (16 pixels)"
                     ><i class="fas fa-square"></i> Block</a>
                 </div>
             </div>
@@ -213,7 +232,7 @@
             <div class="settings-box">
                 <p>Expandable tables:</p>
                 <div class="btn-group">
-                    <a role="button" class="btn btn-default toggle-settings" type="button" setting="expand_tables" rerender="false" onclick="$('table.expandable').toggleClass('display-none');">
+                    <a role="button" class="btn btn-default toggle-settings" type="button" setting="expand_tables" rerender="false" onclick="settings_obj['expand_tables'] ? $('table.expandable').addClass('display-none') : $('table.expandable').removeClass('display-none'); $('table.expandable.preview-table').toggleClass('display-none')">
                         Expand All
                     </a>
                     <a role="button" class="btn btn-default toggle-settings" type="button" setting="hide_expand_buttons" rerender="false" onclick="$('.expand-btn').toggleClass('display-none');">
