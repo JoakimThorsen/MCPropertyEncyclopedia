@@ -59,21 +59,10 @@
 
     <!-- Main css/js -->
     <link rel="stylesheet" href="style.css">
-    <script src="test.mjs" type="module"></script>
-    <script type="module">
-        import { hello } from './test.mjs'
-        window.hello = hello;
-    </script>
-    <script>
-        setTimeout(() => {
-            hello();
-        }, 1000);
-    </script>
     <script src="script.js" defer></script>
 
 </head>
 <body data-page="block" onload="load_data('data/block_data.json')">
-<!-- <body data-page="block" onload="load_data('data/block_data_1.20.json')"> -->
 
 <nav class="navbar navbar-default">
     <div class="container-fluid">
