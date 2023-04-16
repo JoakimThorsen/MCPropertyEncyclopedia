@@ -469,7 +469,7 @@ function formatting_color(latest_guess, value, property_name) {
         if(get_all_values(secret_value).every(v => v < value || v*1 != v)) {
             color = `style="background-color: hsl(212, 100%, 82%);"` // higher
         }
-        if(get_all_values(secret_value).some(v => v < value || v*1 != v) && get_all_values(secret_value).some(v => v > value || v*1 != v)) {
+        if(get_all_values(secret_value).some(v => v < value || v*1 != v) && get_all_values(secret_value).filter(v => !isNaN(v)).some(v => v > value || v*1 != v)) {
             color = `style="background-color: hsl(281, 79%, 85%);"`; // in between
             color = `class="inbetweencolor"`; // in between
         }
