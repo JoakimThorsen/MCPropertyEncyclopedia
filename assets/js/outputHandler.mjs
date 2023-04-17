@@ -329,13 +329,13 @@ function headerOutputter(page, entry_header) {
 function tableBodyGenerator(output_data, page, search) {
     let append_string = "";
     output_data.forEach(entry => {
+        const sprite = data.sprites[entry[page]] ?? ["block-sprite", -240, -16]; // defaluts to the air sprite
         if (search) {
             entry[page] = highlightSearchString(entry[page], search)
             if(typeof entry.variants !== 'undefined') {
                 entry.variants = highlightSearchString(entry.variants, search)
             }
         }
-        const sprite = data.sprites[entry[page]] ?? ["block-sprite", -240, -16]; // defaluts to the air sprite
         append_string += `
             <tr>
                 <td>
