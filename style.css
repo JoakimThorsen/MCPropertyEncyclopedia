@@ -487,10 +487,14 @@ td .nested-table {
     cursor: pointer;
 }
 
-table.expand-btn.table {
+table.table.expand-btn {
     background-color: #ddd;
     width: fit-content;
 }
+table.table.expand-btn>tbody>tr>td {
+    padding: 4px 6px 3px 6px;
+}
+
 a.expand-btn {
     color: #333;
 }
