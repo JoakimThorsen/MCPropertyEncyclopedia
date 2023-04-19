@@ -99,6 +99,7 @@ function headerOutputter(page, entry_header) {
     </th>
     `);
 
+    $('.export-csv').off();
     $('.export-csv').click(function (e) {
         const encodedUri = encodeURI("data:text/csv;charset=utf-8," + exportable_list.join('\n'));
         const link = document.createElement("a");
@@ -109,6 +110,7 @@ function headerOutputter(page, entry_header) {
         link.click();
     });
 
+    $('.export-json').off();
     $('.export-json').click(function (e) {
         const encodedUri = encodeURI("data:application/json;charset=utf-8," + JSON.stringify(exportable_data));
         const link = document.createElement("a");
@@ -119,6 +121,7 @@ function headerOutputter(page, entry_header) {
         link.click();
     });
 
+    $('.copy-comma-separated').off();
     $('.copy-comma-separated').click(function (e) {
         let text = exportable_list.join(', ');
         // from: https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript

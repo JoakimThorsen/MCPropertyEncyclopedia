@@ -151,8 +151,33 @@ async function initialize_page() {
     });
 
     display_selection();
+    
+    if(selection_arr.some(prop => !Object.keys(data.properties).includes(prop))) {
+        make_popup(
+            "Invalid selection",
+            "The selection you have specified is invalid. The following properties were not recognized: "
+                + selection_arr.filter(prop => !Object.keys(data.properties).includes(prop)).join(", ")
+        );
+        selection_arr = selection_arr.filter(prop => Object.keys(data.properties).includes(prop))
+        update_window_history(true);
+    }
+
     display_headers_and_table();
 
+}
+
+
+function make_popup(title, content) {
+    let html = /*html*/`<div class="panel panel-default popup-panel collapse in">
+        <div class="panel-heading">
+            ${title}
+            <a role="button" style="float:right; color:gray" onclick="$(this).parent().parent().collapse('hide');">X</a>
+        </div>
+        <div class="panel-body">
+            ${content}
+        </div>
+    </div>`;
+    $('#popups').append(html);
 }
 
 function display_selection() {
@@ -313,10 +338,10 @@ function display_results() {
     $('#output-table').find('tbody>tr').remove();
 
     // Table data
-    let { output_data, _exportable_list, _exportable_data, entry_count } = dataProcessor(data, selection_arr, sort_arr, filter_obj, search, page);
+    let { output_data, exportable_list: _list, exportable_data: _data, entry_count } = dataProcessor(data, selection_arr, sort_arr, filter_obj, search, page);
 
-    exportable_list = _exportable_list;
-    exportable_data = _exportable_data;
+    exportable_list = _list;
+    exportable_data = _data;
     
     $('#entry_count').html(entry_count);
 
@@ -489,10 +514,6 @@ function deepCopy(obj) {
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
-    scrollFunction()
-};
-
-function scrollFunction() {
     let scrollButton = document.getElementById("scrollButton");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         scrollButton.style.display = "block";

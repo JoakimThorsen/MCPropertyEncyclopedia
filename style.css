@@ -93,6 +93,18 @@ a:hover {
     color: #05447c;
 }
 
+.popup-panel {
+    width: fit-content;
+    margin: 10px auto;
+}
+.popup-panel>.panel-heading {
+    font-size: 20px;
+    width: 100%;
+}
+.popup-panel>.panel-body {
+    font-size: 16px;
+}
+
 .select-option, .selection-category {
     font-size: 14px;
     padding: 6px 16px !important;
