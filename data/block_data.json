@@ -607,7 +607,8 @@
 				"supports_redstone_dust"
 			]
 		},
-		"tile_entity_data",
+		"block_entity",
+		"block_entity_data",
 		"wiki_page",
 		{
 			"category": "Light",
@@ -8735,7 +8736,7 @@
 				}
 			}
 		},
-		"tile_entity_data": {
+		"block_entity_data": {
 			"property_name": "Tile Entity Data",
 			"property_description": "Whether the block is a tile entity, and if so, what the tile entity stores",
 			"default_value": "No",
@@ -8785,6 +8786,58 @@
 				"Sculk Sensor": "Something",
 				"Sculk Catalyst": "Something"
 			}
+		},
+		"block_entity": {
+			"property_name": "Block Entity",
+			"property_description": "",
+			"relative_gradient": true,
+			"entries": {
+				"Banners": "Non-Ticking",
+				"Barrel": "Non-Ticking",
+				"Beacon": "Ticking",
+				"Beds": "Non-Ticking",
+				"Bee Nest": "Ticking",
+				"Beehive": "Ticking",
+				"Bell": "Ticking",
+				"Blast Furnace": "Ticking",
+				"Brewing Stand": "Ticking",
+				"Campfire": "Ticking",
+				"Chest": "Ticking",
+				"Chiseled Bookshelf": "Non-Ticking",
+				"Command Blocks": "Non-Ticking",
+				"Conduit": "Ticking",
+				"Daylight Detector": "Ticking",
+				"Decorated Pot": "Non-Ticking",
+				"Dispenser": "Non-Ticking",
+				"Dropper": "Non-Ticking",
+				"Enchanting Table": "Ticking",
+				"End Gateway": "Ticking",
+				"End Portal": "Non-Ticking",
+				"Ender Chest": "Ticking",
+				"Furnace": "Ticking",
+				"Hanging Signs": "Non-Ticking",
+				"Heads": "Ticking",
+				"Hopper": "Ticking",
+				"Jigsaw Block": "Non-Ticking",
+				"Jukebox": "Ticking",
+				"Lectern": "Non-Ticking",
+				"Piston": {
+					"Moving Piston": "Ticking",
+					"Piston<br>Piston Head<br>Sticky Piston": "No"
+				},
+				"Redstone Comparator": "Non-Ticking",
+				"Sculk Catalyst": "Ticking",
+				"Sculk Sensor": "Ticking",
+				"Sculk Shrieker": "Ticking",
+				"Shulker Box": "Ticking",
+				"Signs": "Non-Ticking",
+				"Smoker": "Ticking",
+				"Spawner": "Ticking",
+				"Structure Block": "Non-Ticking",
+				"Suspicious Sand": "Non-Ticking",
+				"Trapped Chest": "Ticking"
+			},
+			"default_value": "No"
 		},
 		"comparator_output": {
 			"property_name": "Comparator Output",
@@ -10704,29 +10757,29 @@
 			"default_value": "No",
 			"default_selection": false,
 			"entries": {
-				"Redstone Comparator": "When Powered",
 				"Block of Redstone": "Yes",
-				"Daylight Detector": "Yes",
-				"Observer": "When Powered",
-				"Detector Rail": "Yes",
-				"Redstone Dust": "When Powered",
-				"Redstone Torch": "When Powered",
 				"Buttons": "Yes",
+				"Daylight Detector": "Yes",
+				"Detector Rail": "Yes",
 				"Lectern": "Yes",
 				"Lever": "Yes",
 				"Lightning Rod": "Yes",
+				"Observer": "When Powered",
 				"Pressure Plates": "Yes",
-				"Sculk Sensor": "Yes",
-				"Trapped Chest": "Yes",
-				"Target": "Yes",
-				"Tripwire Hook": "Yes",
+				"Redstone Comparator": "When Powered",
+				"Redstone Dust": "When Powered",
 				"Redstone Repeater": {
 					"locked: false": "When Powered",
 					"locked: true": {
 						"powered: false": "No",
 						"powered: true": "Yes"
 					}
-				}
+				},
+				"Redstone Torch": "When Powered",
+				"Sculk Sensor": "Yes",
+				"Target": "Yes",
+				"Trapped Chest": "Yes",
+				"Tripwire Hook": "Yes"
 			}
 		},
 		"shape_update_when_powered": {
@@ -10780,14 +10833,14 @@
 				},
 				"Crops": "Limited",
 				"Daylight Detector": "With hand",
-                "Detector Rail": "Touching entity",
+				"Detector Rail": "Touching entity",
 				"Dirt": "Once",
 				"Doors": {
 					"Iron": "No",
 					"Wooden": "With hand"
 				},
-                "Dragon Egg": "With hand",
-                "End Portal Frame": "Once with item",
+				"Dragon Egg": "With hand",
+				"End Portal Frame": "Once with item",
 				"Farmland": "Once",
 				"Fence Gates": "With hand",
 				"Flower Pot": {
