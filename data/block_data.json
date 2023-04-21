@@ -8737,8 +8737,8 @@
 			}
 		},
 		"block_entity_data": {
-			"property_name": "Tile Entity Data",
-			"property_description": "Whether the block is a tile entity, and if so, what the tile entity stores",
+			"property_name": "Block Entity Data",
+			"property_description": "Whether the block is a block entity (or \"tile entity\"), and if so, what data the tile entity stores",
 			"default_value": "No",
 			"default_selection": false,
 			"relative_gradient": true,
@@ -8789,7 +8789,7 @@
 		},
 		"block_entity": {
 			"property_name": "Block Entity",
-			"property_description": "",
+			"property_description": "Whether the block is a block entity (\"tile entity\"), and if so, whether it ticks.",
 			"relative_gradient": true,
 			"entries": {
 				"Banners": "Non-Ticking",
