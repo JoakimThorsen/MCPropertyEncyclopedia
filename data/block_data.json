@@ -537,7 +537,8 @@
 				"shape_update_from_environment",
 				"obstructs_cactus",
 				"instrument",
-				"connects_to_panes"
+				"connects_to_panes",
+				"kills_grass"
 			]
 		},
 		{
@@ -602,7 +603,8 @@
 						"side_face_has_collision"
 					]
 				},
-				"is_opaque_full_cube"
+				"is_opaque_full_cube",
+				"supports_redstone_dust"
 			]
 		},
 		"tile_entity_data",
@@ -624,6 +626,8 @@
 				"instant_mineable",
 				"flammable",
 				"catches_fire_from_lava",
+				"ignite_odds",
+				"burn_odds",
 				"gets_flushed"
 			]
 		},
@@ -4648,6 +4652,158 @@
 				"Weeping Vines": [".isOf(this.getStem())", ".isOf(this.getPlant())", ".isSideSolidFullSquare()"]
 			}
 		},
+		"supports_redstone_dust": {
+			"property_name": "Supports Redstone Dust",
+			"property_description": "Whether redstone dust (\"wire\") can be placed on top of this block.",
+			"entries": {
+				"Activator Rail": "No",
+				"Air": "No",
+				"Amethyst Cluster": "No",
+				"Anvil": "No",
+				"Bamboo": "No",
+				"Banners": "No",
+				"Beds": "No",
+				"Bell": "No",
+				"Big Dripleaf": "No",
+				"Brewing Stand": "No",
+				"Buttons": "No",
+				"Cactus": "No",
+				"Cake": "No",
+				"Campfire": "No",
+				"Candles": "No",
+				"Carpets": "No",
+				"Cauldron": "No",
+				"Cave Vines": "No",
+				"Chain": "No",
+				"Chest": "No",
+				"Chorus Plant": "No",
+				"Cobweb": "No",
+				"Cocoa": "No",
+				"Composter": "No",
+				"Conduit": "No",
+				"Coral Fans": "No",
+				"Corals": "No",
+				"Crops": "No",
+				"Daylight Detector": "No",
+				"Dead Bush": "No",
+				"Decorated Pot": "No",
+				"Detector Rail": "No",
+				"Dirt Path": "No",
+				"Doors": "No",
+				"Dragon Egg": "No",
+				"Enchanting Table": "No",
+				"End Gateway": "No",
+				"End Portal": "No",
+				"End Portal Frame": "No",
+				"End Rod": "No",
+				"Ender Chest": "No",
+				"Farmland": "No",
+				"Fence Gates": "No",
+				"Fences": "No",
+				"Fern": "No",
+				"Fire": "No",
+				"Flower Pot": "No",
+				"Flowers": "No",
+				"Frogspawn": "No",
+				"Fungi": "No",
+				"Glass Pane": "No",
+				"Glow Lichen": "No",
+				"Grass": "No",
+				"Grindstone": "No",
+				"Hanging Roots": "No",
+				"Hanging Signs": "No",
+				"Heads": "No",
+				"Honey Block": "No",
+				"Iron Bars": "No",
+				"Kelp": "No",
+				"Ladder": "No",
+				"Lantern": "No",
+				"Lava": "No",
+				"Leaves": "No",
+				"Lectern": "No",
+				"Lever": "No",
+				"Light Block": "No",
+				"Lightning Rod": "No",
+				"Lily Pad": "No",
+				"Mangrove Propagule": "No",
+				"Moss Carpet": "No",
+				"Mushrooms": "No",
+				"Nether Portal": "No",
+				"Nether Sprouts": "No",
+				"Nether Wart": "No",
+				"Pink Petals": "No",
+				"Piston": {
+					"Moving Piston": "No",
+					"Piston<br>Sticky Piston": {
+						"extended: false": "Yes",
+						"extended: true": {
+							"facing: down": "Yes",
+							"facing: east<br>facing: north<br>facing: south<br>facing: up<br>facing: west": "No"
+						}
+					},
+					"Piston Head": {
+						"facing: down<br>facing: east<br>facing: north<br>facing: south<br>facing: west": "No",
+						"facing: up": "Yes"
+					}
+				},
+				"Pointed Dripstone": "No",
+				"Powder Snow": "No",
+				"Powered Rail": "No",
+				"Pressure Plates": "No",
+				"Rail": "No",
+				"Redstone Comparator": "No",
+				"Redstone Dust": "No",
+				"Redstone Repeater": "No",
+				"Redstone Torch": "No",
+				"Roots": "No",
+				"Saplings": "No",
+				"Sculk Sensor": "No",
+				"Sculk Shrieker": "No",
+				"Sculk Vein": "No",
+				"Sea Pickle": "No",
+				"Seagrass": "No",
+				"Signs": "No",
+				"Slabs": {
+					"type: bottom": "No",
+					"type: double<br>type: top": "Yes"
+				},
+				"Small Dripleaf": "No",
+				"Snow": {
+					"layers: 1<br>layers: 2<br>layers: 3<br>layers: 4<br>layers: 5<br>layers: 6<br>layers: 7": "No",
+					"layers: 8": "Yes"
+				},
+				"Spore Blossom": "No",
+				"Stained Glass Panes": "No",
+				"Stairs": {
+					"half: bottom": "No",
+					"half: top": "Yes"
+				},
+				"Stonecutter": "No",
+				"Structure Void": "No",
+				"Sugar Cane": "No",
+				"Sweet Berry Bush": "No",
+				"Torch": "No",
+				"Torchflower": "No",
+				"Torchflower Crop": "No",
+				"Trapdoors": {
+					"half: bottom": "No",
+					"half: top": {
+						"open: false": "Yes",
+						"open: true": "No"
+					}
+				},
+				"Trapped Chest": "No",
+				"Tripwire": "No",
+				"Tripwire Hook": "No",
+				"Turtle Egg": "No",
+				"Twisting Vines": "No",
+				"Vines": "No",
+				"Walls": "No",
+				"Water": "No",
+				"Weeping Vines": "No"
+			},
+			"default_value": "Yes"
+		},
 		"bottom_face_has_full_square": {
 			"property_name": "Bottom Face Has Full Square",
 			"property_description": "This is true if the bottom face is a full square.",
@@ -7338,6 +7494,196 @@
 				"Wool": "Yes"
 			}
 		},
+		"ignite_odds": {
+			"property_name": "Ignite Odds",
+			"property_description": "The higher the ignite odds, the more likely a block is to catch fire (if it is able to spread there).",
+			"entries": {
+				"Azalea": 60,
+				"Bamboo": {
+					"Bamboo": 60,
+					"Bamboo Shoot": 0
+				},
+				"Bamboo Block": 5,
+				"Bamboo Mosaic": 20,
+				"Bee Nest": 20,
+				"Beehive": 20,
+				"Big Dripleaf": {
+					"waterlogged: false": 100,
+					"waterlogged: true": 0
+				},
+				"Block of Coal": 5,
+				"Bookshelf": 20,
+				"Carpets": 20,
+				"Cave Vines": 60,
+				"Composter": 20,
+				"Dead Bush": 100,
+				"Dried Kelp Block": 60,
+				"Fence Gates": {
+					"Acacia Fence Gate<br>bamboo_fence_gate<br>Birch Fence Gate<br>cherry_fence_gate<br>Dark Oak Fence Gate<br>Jungle Fence Gate<br>mangrove_fence_gate<br>Oak Fence Gate<br>Spruce Fence Gate": 20,
+					"Crimson Fence Gate<br>Warped Fence Gate": 0
+				},
+				"Fences": {
+					"Acacia Fence<br>bamboo_fence<br>Birch Fence<br>cherry_fence<br>Dark Oak Fence<br>Jungle Fence<br>mangrove_fence<br>Oak Fence<br>Spruce Fence": {
+						"waterlogged: false": 20,
+						"waterlogged: true": 0
+					},
+					"Crimson Fence<br>Nether Brick Fence<br>Warped Fence": 0
+				},
+				"Fern": 100,
+				"Flowers": 100,
+				"Glow Lichen": {
+					"waterlogged: false": 100,
+					"waterlogged: true": 0
+				},
+				"Grass": 100,
+				"Hanging Roots": {
+					"waterlogged: false": 60,
+					"waterlogged: true": 0
+				},
+				"Hay Bale": 20,
+				"Leaves": {
+					"waterlogged: false": 60,
+					"waterlogged: true": 0
+				},
+				"Lectern": 20,
+				"Logs": 5,
+				"Mangrove Roots": {
+					"waterlogged: false": 20,
+					"waterlogged: true": 0
+				},
+				"Pink Petals": 100,
+				"Planks": {
+					"Acacia Planks<br>bamboo_planks<br>Birch Planks<br>cherry_planks<br>Dark Oak Planks<br>Jungle Planks<br>mangrove_planks<br>Oak Planks<br>Spruce Planks": 20,
+					"Crimson Planks<br>Warped Planks": 0
+				},
+				"Scaffolding": {
+					"waterlogged: false": 60,
+					"waterlogged: true": 0
+				},
+				"Slabs": {
+					"Acacia Slab<br>bamboo_mosaic_slab<br>bamboo_slab<br>Birch Slab<br>cherry_slab<br>Dark Oak Slab<br>Jungle Slab<br>mangrove_slab<br>Oak Slab<br>Spruce Slab": {
+						"waterlogged: false": 20,
+						"waterlogged: true": 0
+					},
+					"Andesite Slab<br>Blackstone Slab<br>Brick Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Crimson Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>mud_brick_slab<br>Nether Brick Slab<br>Oxidized Cut Copper Slab<br>Petrified Oak Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Stone Brick Slab<br>Stone Slab<br>Warped Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": 0
+				},
+				"Small Dripleaf": {
+					"waterlogged: false": 100,
+					"waterlogged: true": 0
+				},
+				"Spore Blossom": 100,
+				"Stairs": {
+					"Acacia Stairs<br>bamboo_mosaic_stairs<br>bamboo_stairs<br>Birch Stairs<br>cherry_stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>mangrove_stairs<br>Oak Stairs<br>Spruce Stairs": {
+						"waterlogged: false": 20,
+						"waterlogged: true": 0
+					},
+					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Crimson Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>mud_brick_stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Warped Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": 0
+				},
+				"Stripped Bamboo Block": 5,
+				"Sweet Berry Bush": 100,
+				"Target": 20,
+				"TNT": 100,
+				"Vines": 100,
+				"Wood": 5,
+				"Wool": 60
+			},
+			"default_value": 0
+		},
+		"burn_odds": {
+			"property_name": "Burn Odds",
+			"property_description": "The higher the burn odds, the quicker a block burns away (when on fire). 0 means it is non-flammable.",
+			"entries": {
+				"Azalea": 30,
+				"Bamboo": {
+					"Bamboo": 60,
+					"Bamboo Shoot": 0
+				},
+				"Bamboo Block": 5,
+				"Bamboo Mosaic": 5,
+				"Bee Nest": 30,
+				"Beehive": 5,
+				"Big Dripleaf": {
+					"waterlogged: false": 60,
+					"waterlogged: true": 0
+				},
+				"Block of Coal": 5,
+				"Bookshelf": 30,
+				"Carpets": 60,
+				"Cave Vines": 15,
+				"Composter": 5,
+				"Dead Bush": 60,
+				"Dried Kelp Block": 30,
+				"Fence Gates": {
+					"Acacia Fence Gate<br>bamboo_fence_gate<br>Birch Fence Gate<br>cherry_fence_gate<br>Dark Oak Fence Gate<br>Jungle Fence Gate<br>mangrove_fence_gate<br>Oak Fence Gate<br>Spruce Fence Gate": 5,
+					"Crimson Fence Gate<br>Warped Fence Gate": 0
+				},
+				"Fences": {
+					"Acacia Fence<br>bamboo_fence<br>Birch Fence<br>cherry_fence<br>Dark Oak Fence<br>Jungle Fence<br>mangrove_fence<br>Oak Fence<br>Spruce Fence": {
+						"waterlogged: false": 5,
+						"waterlogged: true": 0
+					},
+					"Crimson Fence<br>Nether Brick Fence<br>Warped Fence": 0
+				},
+				"Fern": 60,
+				"Flowers": 60,
+				"Glow Lichen": {
+					"waterlogged: false": 15,
+					"waterlogged: true": 0
+				},
+				"Grass": 60,
+				"Hanging Roots": {
+					"waterlogged: false": 30,
+					"waterlogged: true": 0
+				},
+				"Hay Bale": 60,
+				"Leaves": {
+					"waterlogged: false": 30,
+					"waterlogged: true": 0
+				},
+				"Lectern": 30,
+				"Logs": 5,
+				"Mangrove Roots": {
+					"waterlogged: false": 5,
+					"waterlogged: true": 0
+				},
+				"Pink Petals": 60,
+				"Planks": {
+					"Acacia Planks<br>bamboo_planks<br>Birch Planks<br>cherry_planks<br>Dark Oak Planks<br>Jungle Planks<br>mangrove_planks<br>Oak Planks<br>Spruce Planks": 5,
+					"Crimson Planks<br>Warped Planks": 0
+				},
+				"Scaffolding": {
+					"waterlogged: false": 60,
+					"waterlogged: true": 0
+				},
+				"Slabs": {
+					"Acacia Slab<br>bamboo_mosaic_slab<br>bamboo_slab<br>Birch Slab<br>cherry_slab<br>Dark Oak Slab<br>Jungle Slab<br>mangrove_slab<br>Oak Slab<br>Spruce Slab": {
+						"waterlogged: false": 5,
+						"waterlogged: true": 0
+					},
+					"Andesite Slab<br>Blackstone Slab<br>Brick Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Crimson Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>mud_brick_slab<br>Nether Brick Slab<br>Oxidized Cut Copper Slab<br>Petrified Oak Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Stone Brick Slab<br>Stone Slab<br>Warped Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": 0
+				},
+				"Small Dripleaf": {
+					"waterlogged: false": 60,
+					"waterlogged: true": 0
+				},
+				"Spore Blossom": 60,
+				"Stairs": {
+					"Acacia Stairs<br>bamboo_mosaic_stairs<br>bamboo_stairs<br>Birch Stairs<br>cherry_stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>mangrove_stairs<br>Oak Stairs<br>Spruce Stairs": {
+						"waterlogged: false": 5,
+						"waterlogged: true": 0
+					},
+					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Crimson Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>mud_brick_stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Warped Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": 0
+				},
+				"Stripped Bamboo Block": 5,
+				"Sweet Berry Bush": 60,
+				"Target": 15,
+				"TNT": 15,
+				"Vines": 15,
+				"Wood": 5,
+				"Wool": 30
+			},
+			"default_value": 0
+		},
 		"send_comparator_updates": {
 			"property_name": "Sends Comparator Updates",
 			"property_description": "Whether interactions with this block sends updates to comparators up to 2 blocks away (manhattan distance).",
@@ -7411,23 +7757,21 @@
 		},
 		"gets_flushed": {
 			"property_name": "Gets Flushed",
-			"property_description": "Whether this block will get destroyed by flowing water.",
-			"default_value": "No",
-			"default_selection": false,
-			"entries":{
+			"property_description": "Whether this block will get destroyed by flowing water or lava.",
+			"entries": {
 				"Air": "Yes",
 				"Azalea": "Yes",
 				"Bamboo": {
 					"Bamboo": "No",
-					"Shoot": "Yes"
+					"Bamboo Shoot": "Yes"
 				},
 				"Buttons": "Yes",
 				"Carpets": "Yes",
-				"Crops": "Yes",
 				"Cave Vines": "Yes",
 				"Chorus Plant": "Yes",
 				"Cobweb": "Yes",
 				"Cocoa": "Yes",
+				"Crops": "Yes",
 				"Dead Bush": "Yes",
 				"End Rod": "Yes",
 				"Fern": "Yes",
@@ -7437,32 +7781,298 @@
 				"Frogspawn": "Yes",
 				"Fungi": "Yes",
 				"Grass": "Yes",
-				"Hanging Roots": "Yes",
 				"Heads": "Yes",
-				"Lava": "Not Applicable",
 				"Lever": "Yes",
 				"Lily Pad": "Yes",
 				"Moss Carpet": "Yes",
 				"Mushrooms": "Yes",
 				"Nether Sprouts": "Yes",
 				"Nether Wart": "Yes",
+				"Pink Petals": "Yes",
 				"Powder Snow": "Yes",
 				"Redstone Comparator": "Yes",
 				"Redstone Dust": "Yes",
 				"Redstone Repeater": "Yes",
 				"Redstone Torch": "Yes",
+				"Roots": "Yes",
 				"Saplings": "Yes",
 				"Snow": "Yes",
 				"Spore Blossom": "Yes",
 				"Sweet Berry Bush": "Yes",
 				"Torch": "Yes",
+				"Torchflower": "Yes",
+				"Torchflower Crop": "Yes",
 				"Tripwire": "Yes",
 				"Tripwire Hook": "Yes",
 				"Twisting Vines": "Yes",
 				"Vines": "Yes",
-				"Water": "Not Applicable",
 				"Weeping Vines": "Yes"
-			}
+			},
+			"default_value": "No"
+		},
+		"kills_grass": {
+			"property_name": "Kills Grass",
+			"property_description": "Whether grass will die when placed underneath.",
+			"entries": {
+				"Activator Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Air": "No",
+				"Amethyst Cluster": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Anvil": "No",
+				"Azalea": "No",
+				"Bamboo": "No",
+				"Banners": "No",
+				"Barrier": "No",
+				"Beacon": "No",
+				"Beds": "No",
+				"Bell": "No",
+				"Big Dripleaf": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Brewing Stand": "No",
+				"Buttons": "No",
+				"Cactus": "No",
+				"Cake": "No",
+				"Campfire": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Candles": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Carpets": "No",
+				"Cauldron": "No",
+				"Cave Vines": "No",
+				"Chain": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Chest": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Chorus Flower": "No",
+				"Chorus Plant": "No",
+				"Cobweb": "No",
+				"Cocoa": "No",
+				"Composter": "No",
+				"Conduit": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Coral Fans": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Corals": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Crops": "No",
+				"Dead Bush": "No",
+				"Decorated Pot": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Detector Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Doors": "No",
+				"Dragon Egg": "No",
+				"End Gateway": "No",
+				"End Portal": "No",
+				"End Rod": "No",
+				"Ender Chest": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Fence Gates": "No",
+				"Fences": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Fern": "No",
+				"Fire": "No",
+				"Flower Pot": "No",
+				"Flowers": "No",
+				"Frogspawn": "No",
+				"Frosted Ice": "No",
+				"Fungi": "No",
+				"Glass": "No",
+				"Glass Pane": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Glow Lichen": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Grass": "No",
+				"Grindstone": "No",
+				"Hanging Roots": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Hanging Signs": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Heads": "No",
+				"Honey Block": "No",
+				"Hopper": "No",
+				"Ice": "No",
+				"Iron Bars": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Ladder": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Lantern": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Lava": {
+					"level: 0<br>level: 10<br>level: 11<br>level: 12<br>level: 13<br>level: 14<br>level: 15<br>level: 8<br>level: 9": "Yes",
+					"level: 1<br>level: 2<br>level: 3<br>level: 4<br>level: 5<br>level: 6<br>level: 7": "No"
+				},
+				"Leaves": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Lever": "No",
+				"Light Block": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Lightning Rod": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Lily Pad": "No",
+				"Mangrove Propagule": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Mangrove Roots": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Moss Carpet": "No",
+				"Mushrooms": "No",
+				"Nether Portal": "No",
+				"Nether Sprouts": "No",
+				"Nether Wart": "No",
+				"Pink Petals": "No",
+				"Piston": {
+					"Moving Piston": "No",
+					"Piston<br>Sticky Piston": {
+						"extended: false": "Yes",
+						"extended: true": {
+							"facing: down<br>facing: up": "Yes",
+							"facing: east<br>facing: north<br>facing: south<br>facing: west": "No"
+						}
+					},
+					"Piston Head": {
+						"facing: down<br>facing: up": "Yes",
+						"facing: east<br>facing: north<br>facing: south<br>facing: west": "No"
+					}
+				},
+				"Pointed Dripstone": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Powder Snow": "No",
+				"Powered Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Pressure Plates": "No",
+				"Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Redstone Comparator": "No",
+				"Redstone Dust": "No",
+				"Redstone Repeater": "No",
+				"Redstone Torch": "No",
+				"Roots": "No",
+				"Saplings": "No",
+				"Scaffolding": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Sculk Vein": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Sea Pickle": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Shulker Box": "No",
+				"Signs": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Slime Block": "No",
+				"Small Dripleaf": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Snow": {
+					"layers: 1": "No",
+					"layers: 2<br>layers: 3<br>layers: 4<br>layers: 5<br>layers: 6<br>layers: 7<br>layers: 8": "Yes"
+				},
+				"Spawner": "No",
+				"Spore Blossom": "No",
+				"Stained Glass": "No",
+				"Stained Glass Panes": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Structure Void": "No",
+				"Sugar Cane": "No",
+				"Sweet Berry Bush": "No",
+				"Torch": "No",
+				"Torchflower": "No",
+				"Torchflower Crop": "No",
+				"Trapdoors": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Trapped Chest": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Tripwire": "No",
+				"Tripwire Hook": "No",
+				"Turtle Egg": "No",
+				"Twisting Vines": "No",
+				"Vines": "No",
+				"Walls": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Water": {
+					"Bubble Column": "Yes",
+					"Water": {
+						"level: 0<br>level: 10<br>level: 11<br>level: 12<br>level: 13<br>level: 14<br>level: 15<br>level: 8<br>level: 9": "Yes",
+						"level: 1<br>level: 2<br>level: 3<br>level: 4<br>level: 5<br>level: 6<br>level: 7": "No"
+					}
+				},
+				"Weeping Vines": "No"
+			},
+			"default_value": "Yes"
 		},
 		"instrument": {
 			"property_name": "Note Block Instrument",
