@@ -80,7 +80,7 @@ function new_game(daily_game = false) {
     delete data.properties.variants;
     delete data.properties.wiki_page;
     delete data.properties.onenineteen;
-    delete data.properties.tile_entity_data;
+    delete data.properties.block_entity_data;
     
     delete data.properties.int_rep;
     delete data.properties.binary_rep;
