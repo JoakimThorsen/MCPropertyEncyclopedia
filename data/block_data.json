@@ -1287,6 +1287,13 @@
 					"Shoot": "No"
 				},
 				"Banners": "No",
+				"Big Dripleaf": {
+					"Big Dripleaf": {
+						"tilt: none<br>tilt: unstable<br>tilt: partial": "Yes",
+						"tilt: full": "No"
+					},
+					"Big Dripleaf Stem": "No"
+				},
 				"Buttons": "No",
 				"Crops": "No",
 				"Cave Vines": "No",
@@ -1298,8 +1305,8 @@
 				"End Gateway": "No",
 				"End Portal": "No",
 				"Fence Gates": {
-					"Closed": "Yes",
-					"Open": "No"
+					"open: false": "Yes",
+					"open: true": "No"
 				},
 				"Fern": "No",
 				"Frogspawn": "No",
@@ -1341,8 +1348,8 @@
 				"Signs": "No",
 				"Small Dripleaf": "No",
 				"Snow": {
-					"1 Layer": "No",
-					"2-8 Layers": "Yes"
+					"layers: 1": "No",
+					"layers: 2-8": "Yes"
 				},
 				"Spore Blossom": "No",
 				"Structure Void": "No",
@@ -1405,7 +1412,7 @@
 				"Beds": "Explodes",
 				"Cactus": "Damage When Touched",
 				"Campfire": {
-					"Wen Lit": "Fire Damage When Touched",
+					"When Lit": "Fire Damage When Touched",
 					"When Unlit": "No"
 				},
 				"Cauldron": {
@@ -1681,11 +1688,14 @@
 				"Redstone Dust": "No",
 				"Redstone Repeater": "No",
 				"Redstone Torch": "No",
+				"Reinforced Deepslate": "No",
 				"Respawn Anchor": "No",
 				"Roots": "No",
 				"Saplings": "No",
 				"Scaffolding": "No",
+				"Sculk Catalyst": "No",
 				"Sculk Sensor": "No",
+				"Sculk Shrieker": "No",
 				"Sculk Vein": "No",
 				"Sea Pickle": "No",
 				"Seagrass": "No",
@@ -1703,8 +1713,8 @@
 				"Sweet Berry Bush": "No",
 				"Torch": "No",
 				"Trapped Chest": "No",
-				"Tripwire": "No",
 				"Tripwire Hook": "No",
+				"Tripwire": "No",
 				"Turtle Egg": "No",
 				"Twisting Vines": "No",
 				"Vines": "No",
@@ -7509,18 +7519,6 @@
 					"Mob skulls": "Creatable",
 					"Player heads": "No"
 				},
-				"Cobblestone": {
-					"Normal": "Creatable",
-					"Infested": "Uncreatable"
-				},
-				"Stone": {
-					"Normal": "Creatable",
-					"Infested": "Uncreatable"
-				},
-				"Stone Bricks": {
-					"Normal": "Creatable",
-					"Infested": "Uncreatable"
-				},
 				"Jigsaw Block": "No",
 				"Light Block": "No",
 				"Reinforced Deepslate": "Uncreatable",
@@ -10904,7 +10902,10 @@
 				"Lectern": "Once with item",
 				"Lever": "With hand",
 				"Lodestone": "With item",
-				"Logs": "Once with item",
+				"Logs": {
+					"Non-stripped": "Once with item",
+					"Stripped": "No"
+				},
 				"Mycelium": "Once with item",
 				"Note Block": "With hand",
 				"Podzol": "Once with item",
@@ -10928,7 +10929,11 @@
 					"Wooden": "With hand"
 				},
 				"Trapped Chest": "With hand",
-				"Tripwire": "Touching entity"
+				"Tripwire": "Touching entity",
+				"Wood": {
+					"Non-stripped": "Once with item",
+					"Stripped": "No"
+				}
 			}
 		},
 		"shape_update_from_environment": {
@@ -10959,7 +10964,6 @@
 				"Frosted Ice": "Weather Tick",
 				"Glass Pane": "On reaction",
 				"Ice": "Weather Tick",
-				"Iron Bars": "Weather Tick",
 				"Lava": "On reaction",
 				"Leaves": "On reaction",
 				"Lightning Rod": "Weather Tick",
