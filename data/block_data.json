@@ -4587,14 +4587,12 @@
 				"Cocoa": ".isIn(BlockTags.JUNGLE_LOGS)",
 				"Coral Fans": ".isSideSolidFullSquare()",
 				"Corals": ".isSideSolidFullSquare()",
-				"Dead Bush": "isIn(BlockTags.DEAD_BUSH_MAY_PLACE_ON)",
+				"Dead Bush": ".isIn(BlockTags.DEAD_BUSH_MAY_PLACE_ON)",
 				"Detector Rail": ".top_face_has_rim()",
-				"Dirt Path": [".getMaterial().isSolid()", ".getBlock() instanceof FenceGateBlock"],
 				"Doors": {
 					"Bottom Half": ".isSideSolidFullSquare()", 
 					"Top Half": ".isOf(this)"
 				},
-				"Farmland": [".getMaterial().isSolid()", ".getBlock() instanceof FenceGateBlock", ".getBlock() instanceof PistonExtensionBlock"],
 				"Fern": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
 				"Fire": {
 					"Fire": [".isSideSolidFullSquare()", ".areBlocksAroundFlammable()"],
@@ -4624,7 +4622,10 @@
 				"Mushrooms": [".isIn(BlockTags.MUSHROOM_GROW_BLOCK)", ".is_opaque_full_cube"],
 				"Nether Sprouts": [".isIn(BlockTags.DIRT)", ".isOf(Blocks.FARMLAND)"],
 				"Nether Wart": ".isOf(Blocks.SOUL_SAND)",
-				"Piston": ".isOf(Blocks.MOVING_PISTON)",
+				"Piston": {
+					"Base": ".isOf(Blocks.MOVING_PISTON)",
+					"Head": [".isOf(Blocks.PISTON)", ".isOf(Blocks.STICKY_PISTON)"]
+				},
 				"Pointed Dripstone": [".isSideSolidFullSquare()", ".isOf(Blocks.POINTED_DRIPSTONE)"],
 				"Powered Rail": ".top_face_has_rim()",
 				"Pressure Plates": [".top_face_has_rim()", ".sideCoversSmallSquare()"],
