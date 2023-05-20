@@ -7,6 +7,7 @@
 		"Not Applicable": "cf-invalid"
 	},
 	"key_list": [
+		"Allay",
 		"Area Effect Cloud",
 		"Armor Stand",
 		"Arrow",
@@ -14,29 +15,41 @@
 		"Bat",
 		"Bee",
 		"Blaze",
+		"Block Display",
 		"Boat",
+		"Camel",
 		"Cat",
 		"Cave Spider",
+		"Boat with Chest",
+		"Minecart with Chest",
 		"Chicken",
 		"Cod",
+		"Minecart with Command Block",
 		"Cow",
 		"Creeper",
 		"Dolphin",
 		"Donkey",
 		"Dragon Fireball",
 		"Drowned",
+		"Thrown Egg",
 		"Elder Guardian",
 		"End Crystal",
 		"Ender Dragon",
+		"Thrown Ender Pearl",
 		"Enderman",
 		"Endermite",
 		"Evoker",
 		"Evoker Fangs",
+		"Thrown Bottle o' Enchanting",
 		"Experience Orb",
 		"Eye of Ender",
 		"Falling Block",
+		"Fireball",
 		"Firework Rocket",
+		"Fishing Bobber",
 		"Fox",
+		"Frog",
+		"Minecart with Furnace",
 		"Ghast",
 		"Giant",
 		"Glow Item Frame",
@@ -44,13 +57,15 @@
 		"Goat",
 		"Guardian",
 		"Hoglin",
+		"Minecart with Hopper",
 		"Horse",
 		"Husk",
 		"Illusioner",
+		"Interaction",
 		"Iron Golem",
 		"Item",
+		"Item Display",
 		"Item Frame",
-		"Fireball",
 		"Leash Knot",
 		"Lightning Bolt",
 		"Llama",
@@ -58,14 +73,8 @@
 		"Magma Cube",
 		"Marker",
 		"Minecart",
-		"Minecart with Chest",
-		"Minecart with Command Block",
-		"Minecart with Furnace",
-		"Minecart with Hopper",
-		"Minecart with Spawner",
-		"Minecart with TNT",
-		"Mule",
 		"Mooshroom",
+		"Mule",
 		"Ocelot",
 		"Painting",
 		"Panda",
@@ -75,8 +84,9 @@
 		"Piglin",
 		"Piglin Brute",
 		"Pillager",
+		"Player",
 		"Polar Bear",
-		"Primed TNT",
+		"Thrown Potion",
 		"Pufferfish",
 		"Rabbit",
 		"Ravager",
@@ -89,25 +99,28 @@
 		"Skeleton Horse",
 		"Slime",
 		"Small Fireball",
+		"Sniffer",
 		"Snow Golem",
 		"Snowball",
+		"Minecart with Spawner",
 		"Spectral Arrow",
 		"Spider",
 		"Squid",
 		"Stray",
 		"Strider",
-		"Thrown Egg",
-		"Thrown Ender Pearl",
-		"Thrown Bottle o' Enchanting",
-		"Thrown Potion",
-		"Trident",
+		"Tadpole",
+		"Text Display",
+		"Primed TNT",
+		"Minecart with TNT",
 		"Trader Llama",
+		"Trident",
 		"Tropical Fish",
 		"Turtle",
 		"Vex",
 		"Villager",
 		"Vindicator",
 		"Wandering Trader",
+		"Warden",
 		"Witch",
 		"Wither",
 		"Wither Skeleton",
@@ -117,9 +130,7 @@
 		"Zombie",
 		"Zombie Horse",
 		"Zombie Villager",
-		"Zombified Piglin",
-		"Player",
-		"Fishing Bobber"
+		"Zombified Piglin"
 	],
 	"sprites": {
 		"Area Effect Cloud": ["entity-sprite", -112, -576],
@@ -247,7 +258,30 @@
 		"eye_height_float",
 		"eye_height_double",
 		"health",
-		"explosion_power"
+		"explosion_power",
+		"spawns_inside_hazards",
+		"base_armor",
+		"base_attack_damage",
+		"base_attack_knockback",
+		"bucketable",
+		"can_be_ridden_in_water",
+		"can_be_saddled",
+		"can_breathe_in_water",
+		"can_open_doors",
+		"can_ride_boat",
+		"can_ride_minecart",
+		"entity_group",
+		"fire_immune",
+		"height_offset",
+		"hurt_by_water",
+		"leadable",
+		"living",
+		"max_health",
+		"mounted_height_offset",
+		"saved_on_reload",
+		"shearable",
+		"step_height",
+		"summonable"
 	],
 	"properties": {
 		"id": {
@@ -255,6 +289,7 @@
 			"default_value": null,
 			"default_selection": true,
 			"entries": {
+				"Allay": "allay",
 				"Area Effect Cloud": "area_effect_cloud",
 				"Armor Stand": "armor_stand",
 				"Arrow": "arrow",
@@ -262,29 +297,41 @@
 				"Bat": "bat",
 				"Bee": "bee",
 				"Blaze": "blaze",
+				"Block Display": "block_display",
 				"Boat": "boat",
+				"Camel": "camel",
 				"Cat": "cat",
 				"Cave Spider": "cave_spider",
+				"Boat with Chest": "chest_boat",
+				"Minecart with Chest": "chest_minecart",
 				"Chicken": "chicken",
 				"Cod": "cod",
+				"Minecart with Command Block": "command_block_minecart",
 				"Cow": "cow",
 				"Creeper": "creeper",
 				"Dolphin": "dolphin",
 				"Donkey": "donkey",
 				"Dragon Fireball": "dragon_fireball",
 				"Drowned": "drowned",
+				"Thrown Egg": "egg",
 				"Elder Guardian": "elder_guardian",
 				"End Crystal": "end_crystal",
 				"Ender Dragon": "ender_dragon",
+				"Thrown Ender Pearl": "ender_pearl",
 				"Enderman": "enderman",
 				"Endermite": "endermite",
 				"Evoker": "evoker",
 				"Evoker Fangs": "evoker_fangs",
+				"Thrown Bottle o' Enchanting": "experience_bottle",
 				"Experience Orb": "experience_orb",
 				"Eye of Ender": "eye_of_ender",
 				"Falling Block": "falling_block",
+				"Fireball": "fireball",
 				"Firework Rocket": "firework_rocket",
+				"Fishing Bobber": "fishing_bobber",
 				"Fox": "fox",
+				"Frog": "frog",
+				"Minecart with Furnace": "furnace_minecart",
 				"Ghast": "ghast",
 				"Giant": "giant",
 				"Glow Item Frame": "glow_item_frame",
@@ -292,13 +339,15 @@
 				"Goat": "goat",
 				"Guardian": "guardian",
 				"Hoglin": "hoglin",
+				"Minecart with Hopper": "hopper_minecart",
 				"Horse": "horse",
 				"Husk": "husk",
 				"Illusioner": "illusioner",
+				"Interaction": "interaction",
 				"Iron Golem": "iron_golem",
 				"Item": "item",
+				"Item Display": "item_display",
 				"Item Frame": "item_frame",
-				"Fireball": "fireball",
 				"Leash Knot": "leash_knot",
 				"Lightning Bolt": "lightning_bolt",
 				"Llama": "llama",
@@ -306,14 +355,8 @@
 				"Magma Cube": "magma_cube",
 				"Marker": "marker",
 				"Minecart": "minecart",
-				"Minecart with Chest": "chest_minecart",
-				"Minecart with Command Block": "command_block_minecart",
-				"Minecart with Furnace": "furnace_minecart",
-				"Minecart with Hopper": "hopper_minecart",
-				"Minecart with Spawner": "spawner_minecart",
-				"Minecart with TNT": "tnt_minecart",
-				"Mule": "mule",
 				"Mooshroom": "mooshroom",
+				"Mule": "mule",
 				"Ocelot": "ocelot",
 				"Painting": "painting",
 				"Panda": "panda",
@@ -323,8 +366,9 @@
 				"Piglin": "piglin",
 				"Piglin Brute": "piglin_brute",
 				"Pillager": "pillager",
+				"Player": "player",
 				"Polar Bear": "polar_bear",
-				"Primed TNT": "tnt",
+				"Thrown Potion": "potion",
 				"Pufferfish": "pufferfish",
 				"Rabbit": "rabbit",
 				"Ravager": "ravager",
@@ -337,25 +381,28 @@
 				"Skeleton Horse": "skeleton_horse",
 				"Slime": "slime",
 				"Small Fireball": "small_fireball",
+				"Sniffer": "sniffer",
 				"Snow Golem": "snow_golem",
 				"Snowball": "snowball",
+				"Minecart with Spawner": "spawner_minecart",
 				"Spectral Arrow": "spectral_arrow",
 				"Spider": "spider",
 				"Squid": "squid",
 				"Stray": "stray",
 				"Strider": "strider",
-				"Thrown Egg": "egg",
-				"Thrown Ender Pearl": "ender_pearl",
-				"Thrown Bottle o' Enchanting": "experience_bottle",
-				"Thrown Potion": "potion",
-				"Trident": "trident",
+				"Tadpole": "tadpole",
+				"Text Display": "text_display",
+				"Primed TNT": "tnt",
+				"Minecart with TNT": "tnt_minecart",
 				"Trader Llama": "trader_llama",
+				"Trident": "trident",
 				"Tropical Fish": "tropical_fish",
 				"Turtle": "turtle",
 				"Vex": "vex",
 				"Villager": "villager",
 				"Vindicator": "vindicator",
 				"Wandering Trader": "wandering_trader",
+				"Warden": "warden",
 				"Witch": "witch",
 				"Wither": "wither",
 				"Wither Skeleton": "wither_skeleton",
@@ -365,9 +412,7 @@
 				"Zombie": "zombie",
 				"Zombie Horse": "zombie_horse",
 				"Zombie Villager": "zombie_villager",
-				"Zombified Piglin": "zombified_piglin",
-				"Player": "player",
-				"Fishing Bobber": "fishing_bobber"
+				"Zombified Piglin": "zombified_piglin"
 			}
 		},
 		"width": {
@@ -377,241 +422,265 @@
 			"default_selection": true,
 			"max": 3,
 			"entries": {
+				"Allay": 0.35,
 				"Area Effect Cloud": 6,
-				"Armor Stand": 0.5,
+				"Armor Stand": {
+					"small: true, marker: true<br>small: false, marker: true": 0,
+					"small: false, marker: false": 0.5,
+					"small: true, marker: false": 0.25
+				},
 				"Arrow": 0.5,
 				"Axolotl": {
-					"Adult": 0.75,
-					"Baby": 0.375
+					"is_baby: true": 0.375,
+					"is_baby: false": 0.75
 				},
 				"Bat": 0.5,
 				"Bee": {
-					"Adult": 0.7,
-					"Baby": 0.35
+					"is_baby: true": 0.35,
+					"is_baby: false": 0.7
 				},
 				"Blaze": 0.6,
+				"Block Display": 0,
 				"Boat": 1.375,
+				"Camel": {
+					"is_baby: true": 0.85,
+					"is_baby: false": 1.7
+				},
 				"Cat": {
-					"Adult": 0.6,
-					"Baby": 0.3
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
 				},
 				"Cave Spider": 0.7,
+				"Boat with Chest": 1.375,
+				"Minecart with Chest": 0.98,
 				"Chicken": {
-					"Adult": 0.4,
-					"Baby": 0.2
+					"is_baby: true": 0.2,
+					"is_baby: false": 0.4
 				},
 				"Cod": 0.5,
+				"Minecart with Command Block": 0.98,
 				"Cow": {
-					"Adult": 0.9,
-					"Baby": 0.45
+					"is_baby: true": 0.45,
+					"is_baby: false": 0.9
 				},
 				"Creeper": 0.6,
 				"Dolphin": 0.9,
 				"Donkey": {
-					"Adult": 1.3964844,
-					"Baby": 0.6982422
+					"is_baby: true": 0.6982422,
+					"is_baby: false": 1.3964844
 				},
 				"Dragon Fireball": 1,
 				"Drowned": {
-					"Adult": 0.6,
-					"Baby": 0.3
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
 				},
+				"Thrown Egg": 0.25,
 				"Elder Guardian": 1.9975,
 				"End Crystal": 2,
 				"Ender Dragon": 16,
+				"Thrown Ender Pearl": 0.25,
 				"Enderman": 0.6,
 				"Endermite": 0.4,
 				"Evoker": 0.6,
 				"Evoker Fangs": 0.5,
+				"Thrown Bottle o' Enchanting": 0.25,
 				"Experience Orb": 0.5,
 				"Eye of Ender": 0.25,
 				"Falling Block": 0.98,
+				"Fireball": 1,
 				"Firework Rocket": 0.25,
+				"Fishing Bobber": 0.25,
 				"Fox": {
-					"Adult": 0.6,
-					"Baby": 0.3
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
 				},
+				"Frog": 0.5,
+				"Minecart with Furnace": 0.98,
 				"Ghast": 4,
 				"Giant": 3.6,
 				"Glow Item Frame": 0.5,
 				"Glow Squid": 0.8,
 				"Goat": {
-					"Adult": 0.9,
-					"Baby": 0.45
+					"is_baby: false, pose: standing": 0.9,
+					"is_baby: false, pose: long_jumping": 0.63,
+					"is_baby: true, pose: long_jumping": 0.315,
+					"is_baby: true, pose: standing": 0.45
 				},
 				"Guardian": 0.85,
 				"Hoglin": {
-					"Adult": 1.3964844,
-					"Baby": 0.6982422
+					"is_baby: true": 0.6982422,
+					"is_baby: false": 1.3964844
 				},
+				"Minecart with Hopper": 0.98,
 				"Horse": {
-					"Adult": 1.3964844,
-					"Baby": 0.6982422
+					"is_baby: true": 0.6982422,
+					"is_baby: false": 1.3964844
 				},
 				"Husk": {
-					"Adult": 0.6,
-					"Baby": 0.3
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
 				},
 				"Illusioner": 0.6,
+				"Interaction": 0,
 				"Iron Golem": 1.4,
 				"Item": 0.25,
+				"Item Display": 0,
 				"Item Frame": 0.5,
-				"Fireball": 1,
 				"Leash Knot": 0.375,
 				"Lightning Bolt": 0,
 				"Llama": {
-					"Adult": 0.9,
-					"Baby": 0.45
+					"is_baby: true": 0.45,
+					"is_baby: false": 0.9
 				},
 				"Llama Spit": 0.25,
 				"Magma Cube": {
-					"Big (4)": 2.0808,
-					"Medium (2)": 1.0404,
-					"Small (1)": 0.5202
+					"size: 1": 0.52019995,
+					"size: 4": 2.0807998,
+					"size: 2": 1.0403999
 				},
 				"Marker": 0,
 				"Minecart": 0.98,
-				"Minecart with Chest": 0.98,
-				"Minecart with Command Block": 0.98,
-				"Minecart with Furnace": 0.98,
-				"Minecart with Hopper": 0.98,
-				"Minecart with Spawner": 0.98,
-				"Minecart with TNT": 0.98,
-				"Mule": {
-					"Adult": 1.3964844,
-					"Baby": 0.6982422
-				},
 				"Mooshroom": {
-					"Adult": 0.9,
-					"Baby": 0.45
+					"is_baby: true": 0.45,
+					"is_baby: false": 0.9
+				},
+				"Mule": {
+					"is_baby: true": 0.6982422,
+					"is_baby: false": 1.3964844
 				},
 				"Ocelot": {
-					"Adult": 0.6,
-					"Baby": 0.3
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
 				},
 				"Painting": 0.5,
 				"Panda": {
-					"Adult": 1.3,
-					"Baby": 0.65
+					"is_baby: true": 0.65,
+					"is_baby: false": 1.3
 				},
 				"Parrot": 0.5,
 				"Phantom": 0.9,
 				"Pig": {
-					"Adult": 0.9,
-					"Baby": 0.45
+					"is_baby: true": 0.45,
+					"is_baby: false": 0.9
 				},
 				"Piglin": {
-					"Adult": 0.6,
-					"Baby": 0.3
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
 				},
 				"Piglin Brute": 0.6,
 				"Pillager": 0.6,
-				"Polar Bear": {
-					"Adult": 1.4,
-					"Baby": 0.7
+				"Player": {
+					"pose: standing<br>pose: spin_attack<br>pose: crouching<br>pose: fall_flying<br>pose: swimming": 0.6,
+					"pose: dying<br>pose: sleeping": 0.2
 				},
-				"Primed TNT": 0.98,
+				"Polar Bear": {
+					"is_baby: true": 0.7,
+					"is_baby: false": 1.4
+				},
+				"Thrown Potion": 0.25,
 				"Pufferfish": {
-					"Unpuffed": 0.35,
-					"Semi-puffed": 0.49,
-					"Fully Puffed": 0.7
+					"puff_state: 1": 0.48999998,
+					"puff_state: 2": 0.7,
+					"puff_state: 0": 0.35
 				},
 				"Rabbit": {
-					"Adult": 0.4,
-					"Baby": 0.2
+					"is_baby: true": 0.2,
+					"is_baby: false": 0.4
 				},
 				"Ravager": 1.95,
 				"Salmon": 0.7,
 				"Sheep": {
-					"Adult": 0.9,
-					"Baby": 0.45
+					"is_baby: true": 0.45,
+					"is_baby: false": 0.9
 				},
 				"Shulker": 1,
 				"Shulker Bullet": 0.3125,
 				"Silverfish": 0.4,
 				"Skeleton": 0.6,
 				"Skeleton Horse": {
-					"Adult": 1.3964844,
-					"Baby": 0.6982422
+					"is_baby: true": 0.6982422,
+					"is_baby: false": 1.3964844
 				},
 				"Slime": {
-					"Big (4)": 2.0808,
-					"Medium (2)": 1.0404,
-					"Small (1)": 0.5202
+					"size: 1": 0.52019995,
+					"size: 4": 2.0807998,
+					"size: 2": 1.0403999
 				},
 				"Small Fireball": 0.3125,
+				"Sniffer": {
+					"is_baby: true": 0.95,
+					"is_baby: false": 1.9
+				},
 				"Snow Golem": 0.7,
 				"Snowball": 0.25,
+				"Minecart with Spawner": 0.98,
 				"Spectral Arrow": 0.5,
 				"Spider": 1.4,
 				"Squid": 0.8,
 				"Stray": 0.6,
 				"Strider": {
-					"Adult": 0.9,
-					"Baby": 0.45
+					"is_baby: true": 0.45,
+					"is_baby: false": 0.9
 				},
-				"Thrown Egg": 0.25,
-				"Thrown Ender Pearl": 0.25,
-				"Thrown Bottle o' Enchanting": 0.25,
-				"Thrown Potion": 0.25,
-				"Trident": 0.5,
+				"Tadpole": 0.4,
+				"Text Display": 0,
+				"Primed TNT": 0.98,
+				"Minecart with TNT": 0.98,
 				"Trader Llama": {
-					"Adult": 0.9,
-					"Baby": 0.45
+					"is_baby: true": 0.45,
+					"is_baby: false": 0.9
 				},
+				"Trident": 0.5,
 				"Tropical Fish": 0.5,
 				"Turtle": {
-					"Adult": 1.2,
-					"Baby": 0.36
+					"is_baby: true": 0.36,
+					"is_baby: false": 1.2
 				},
 				"Vex": 0.4,
 				"Villager": {
-					"Awake": {
-						"Adult": 0.6,
-						"Baby": 0.3
-					},
-					"Sleeping": 0.2
+					"is_baby: false, pose: standing": 0.6,
+					"is_baby: true, pose: sleeping<br>is_baby: false, pose: sleeping": 0.2,
+					"is_baby: true, pose: standing": 0.3
 				},
 				"Vindicator": 0.6,
-				"Wandering Trader": 0.6,
+				"Wandering Trader": {
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
+				},
+				"Warden": 0.9,
 				"Witch": 0.6,
 				"Wither": 0.9,
 				"Wither Skeleton": 0.7,
 				"Wither Skull": 0.3125,
 				"Wolf": {
-					"Adult": 0.6,
-					"Baby": 0.3
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
 				},
 				"Zoglin": {
-					"Adult": 1.3964844,
-					"Baby": 0.6982422
+					"is_baby: true": 0.6982422,
+					"is_baby: false": 1.3964844
 				},
 				"Zombie": {
-					"Adult": 0.6,
-					"Baby": 0.3
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
 				},
 				"Zombie Horse": {
-					"Adult": 1.3964844,
-					"Baby": 0.6982422
+					"is_baby: true": 0.6982422,
+					"is_baby: false": 1.3964844
 				},
 				"Zombie Villager": {
-					"Adult": 0.6,
-					"Baby": 0.3
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
 				},
 				"Zombified Piglin": {
-					"Adult": 0.6,
-					"Baby": 0.3
-				},
-				"Player": {
-					"Awake": 0.6,
-					"Sleeping": 0.2
-				},
-				"Fishing Bobber": 0.25
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
+				}
 			}
 		},
 		"width_float": {
 			"property_name": "Width (Float Precision)",
-			"default_value": null,
+			"default_value": "Unspecified",
 			"size_type": "block",
 			"default_selection": false,
 			"max": 3,
@@ -855,239 +924,267 @@
 			"default_selection": true,
 			"max": 3,
 			"entries": {
+				"Allay": 0.6,
 				"Area Effect Cloud": 0.5,
-				"Armor Stand": 1.975,
+				"Armor Stand": {
+					"small: true, marker: true<br>small: false, marker: true": 0,
+					"small: false, marker: false": 1.975,
+					"small: true, marker: false": 0.9875
+				},
 				"Arrow": 0.5,
 				"Axolotl": {
-					"Adult": 0.42,
-					"Baby": 0.21
+					"is_baby: true": 0.21,
+					"is_baby: false": 0.42
 				},
 				"Bat": 0.9,
 				"Bee": {
-					"Adult": 0.6,
-					"Baby": 0.3
+					"is_baby: true": 0.3,
+					"is_baby: false": 0.6
 				},
 				"Blaze": 1.8,
+				"Block Display": 0,
 				"Boat": 0.5625,
+				"Camel": {
+					"is_baby: true, pose: sitting": 0.47250003,
+					"is_baby: false, pose: standing": 2.375,
+					"is_baby: true, pose: standing": 1.1875,
+					"is_baby: false, pose: sitting": 0.94500005
+				},
 				"Cat": {
-					"Adult": 0.7,
-					"Baby": 0.35
+					"is_baby: true": 0.35,
+					"is_baby: false": 0.7
 				},
 				"Cave Spider": 0.5,
+				"Boat with Chest": 0.5625,
+				"Minecart with Chest": 0.7,
 				"Chicken": {
-					"Adult": 0.7,
-					"Baby": 0.35
+					"is_baby: true": 0.35,
+					"is_baby: false": 0.7
 				},
 				"Cod": 0.3,
+				"Minecart with Command Block": 0.7,
 				"Cow": {
-					"Adult": 1.4,
-					"Baby": 0.7
+					"is_baby: true": 0.7,
+					"is_baby: false": 1.4
 				},
 				"Creeper": 1.7,
 				"Dolphin": 0.6,
 				"Donkey": {
-					"Adult": 1.5,
-					"Baby": 0.75
+					"is_baby: true": 0.75,
+					"is_baby: false": 1.5
 				},
 				"Dragon Fireball": 1,
 				"Drowned": {
-					"Adult": 1.95,
-					"Baby": 0.975
+					"is_baby: true": 0.975,
+					"is_baby: false": 1.95
 				},
+				"Thrown Egg": 0.25,
 				"Elder Guardian": 1.9975,
 				"End Crystal": 2,
 				"Ender Dragon": 8,
+				"Thrown Ender Pearl": 0.25,
 				"Enderman": 2.9,
 				"Endermite": 0.3,
 				"Evoker": 1.95,
 				"Evoker Fangs": 0.8,
+				"Thrown Bottle o' Enchanting": 0.25,
 				"Experience Orb": 0.5,
 				"Eye of Ender": 0.25,
 				"Falling Block": 0.98,
+				"Fireball": 1,
 				"Firework Rocket": 0.25,
+				"Fishing Bobber": 0.25,
 				"Fox": {
-					"Adult": 0.7,
-					"Baby": 0.35
+					"is_baby: true": 0.35,
+					"is_baby: false": 0.7
 				},
+				"Frog": 0.5,
+				"Minecart with Furnace": 0.7,
 				"Ghast": 4,
 				"Giant": 12,
 				"Glow Item Frame": 0.5,
 				"Glow Squid": 0.8,
 				"Goat": {
-					"Adult": 1.3,
-					"Baby": 0.65
+					"is_baby: false, pose: standing": 1.3,
+					"is_baby: false, pose: long_jumping": 0.90999997,
+					"is_baby: true, pose: long_jumping": 0.45499998,
+					"is_baby: true, pose: standing": 0.65
 				},
 				"Guardian": 0.85,
 				"Hoglin": {
-					"Adult": 1.4,
-					"Baby": 0.7
+					"is_baby: true": 0.7,
+					"is_baby: false": 1.4
 				},
+				"Minecart with Hopper": 0.7,
 				"Horse": {
-					"Adult": 1.6,
-					"Baby": 0.8
+					"is_baby: true": 0.8,
+					"is_baby: false": 1.6
 				},
 				"Husk": {
-					"Adult": 1.95,
-					"Baby": 0.975
+					"is_baby: true": 0.975,
+					"is_baby: false": 1.95
 				},
 				"Illusioner": 1.95,
+				"Interaction": 0,
 				"Iron Golem": 2.7,
 				"Item": 0.25,
+				"Item Display": 0,
 				"Item Frame": 0.5,
-				"Fireball": 1,
 				"Leash Knot": 0.5,
 				"Lightning Bolt": 0,
 				"Llama": {
-					"Adult": 1.87,
-					"Baby": 0.935
+					"is_baby: true": 0.935,
+					"is_baby: false": 1.87
 				},
 				"Llama Spit": 0.25,
 				"Magma Cube": {
-					"Big (4)": 2.0808,
-					"Medium (2)": 1.0404,
-					"Small (1)": 0.5202
+					"size: 1": 0.52019995,
+					"size: 4": 2.0807998,
+					"size: 2": 1.0403999
 				},
 				"Marker": 0,
 				"Minecart": 0.7,
-				"Minecart with Chest": 0.7,
-				"Minecart with Command Block": 0.7,
-				"Minecart with Furnace": 0.7,
-				"Minecart with Hopper": 0.7,
-				"Minecart with Spawner": 0.7,
-				"Minecart with TNT": 0.7,
-				"Mule": {
-					"Adult": 1.6,
-					"Baby": 0.8
-				},
 				"Mooshroom": {
-					"Adult": 1.4,
-					"Baby": 0.7
+					"is_baby: true": 0.7,
+					"is_baby: false": 1.4
+				},
+				"Mule": {
+					"is_baby: true": 0.8,
+					"is_baby: false": 1.6
 				},
 				"Ocelot": {
-					"Adult": 0.7,
-					"Baby": 0.35
+					"is_baby: true": 0.35,
+					"is_baby: false": 0.7
 				},
 				"Painting": 0.5,
 				"Panda": {
-					"Adult": 1.25,
-					"Baby": 0.625
+					"is_baby: true": 0.625,
+					"is_baby: false": 1.25
 				},
 				"Parrot": 0.9,
 				"Phantom": 0.5,
 				"Pig": {
-					"Adult": 0.9,
-					"Baby": 0.45
+					"is_baby: true": 0.45,
+					"is_baby: false": 0.9
 				},
 				"Piglin": {
-					"Adult": 1.95,
-					"Baby": 0.975
+					"is_baby: true": 0.975,
+					"is_baby: false": 1.95
 				},
 				"Piglin Brute": 1.95,
 				"Pillager": 1.95,
-				"Polar Bear": {
-					"Adult": 1.4,
-					"Baby": 0.7
+				"Player": {
+					"pose: standing": 1.8,
+					"pose: spin_attack<br>pose: fall_flying<br>pose: swimming": 0.6,
+					"pose: crouching": 1.5,
+					"pose: dying<br>pose: sleeping": 0.2
 				},
-				"Primed TNT": 0.98,
+				"Polar Bear": {
+					"is_baby: true": 0.7,
+					"is_baby: false": 1.4
+				},
+				"Thrown Potion": 0.25,
 				"Pufferfish": {
-					"Unpuffed": 0.35,
-					"Semi-puffed": 0.49,
-					"Fully Puffed": 0.7
+					"puff_state: 1": 0.48999998,
+					"puff_state: 2": 0.7,
+					"puff_state: 0": 0.35
 				},
 				"Rabbit": {
-					"Adult": 0.5,
-					"Baby": 0.25
+					"is_baby: true": 0.25,
+					"is_baby: false": 0.5
 				},
 				"Ravager": 2.2,
 				"Salmon": 0.4,
 				"Sheep": {
-					"Adult": 1.3,
-					"Baby": 0.65
+					"is_baby: true": 0.65,
+					"is_baby: false": 1.3
 				},
 				"Shulker": 1,
 				"Shulker Bullet": 0.3125,
 				"Silverfish": 0.3,
 				"Skeleton": 1.99,
 				"Skeleton Horse": {
-					"Adult": 1.6,
-					"Baby": 0.8
+					"is_baby: true": 0.8,
+					"is_baby: false": 1.6
 				},
 				"Slime": {
-					"Big (4)": 2.0808,
-					"Medium (2)": 1.0404,
-					"Small (1)": 0.5202
+					"size: 1": 0.52019995,
+					"size: 4": 2.0807998,
+					"size: 2": 1.0403999
 				},
 				"Small Fireball": 0.3125,
+				"Sniffer": {
+					"is_baby: true": 0.875,
+					"is_baby: false": 1.75
+				},
 				"Snow Golem": 1.9,
 				"Snowball": 0.25,
+				"Minecart with Spawner": 0.7,
 				"Spectral Arrow": 0.5,
 				"Spider": 0.9,
 				"Squid": 0.8,
 				"Stray": 1.99,
 				"Strider": {
-					"Adult": 1.7,
-					"Baby": 0.85
+					"is_baby: true": 0.85,
+					"is_baby: false": 1.7
 				},
-				"Thrown Egg": 0.25,
-				"Thrown Ender Pearl": 0.25,
-				"Thrown Bottle o' Enchanting": 0.25,
-				"Thrown Potion": 0.25,
-				"Trident": 0.5,
+				"Tadpole": 0.3,
+				"Text Display": 0,
+				"Primed TNT": 0.98,
+				"Minecart with TNT": 0.7,
 				"Trader Llama": {
-					"Adult": 1.87,
-					"Baby": 0.935
+					"is_baby: true": 0.935,
+					"is_baby: false": 1.87
 				},
+				"Trident": 0.5,
 				"Tropical Fish": 0.4,
 				"Turtle": {
-					"Adult": 0.4,
-					"Baby": 0.12
+					"is_baby: true": 0.120000005,
+					"is_baby: false": 0.4
 				},
 				"Vex": 0.8,
 				"Villager": {
-					"Awake": {
-						"Adult": 1.95,
-						"Baby": 0.975
-					},
-					"Sleeping": 0.2
+					"is_baby: false, pose: standing": 1.95,
+					"is_baby: true, pose: sleeping<br>is_baby: false, pose: sleeping": 0.2,
+					"is_baby: true, pose: standing": 0.975
 				},
 				"Vindicator": 1.95,
-				"Wandering Trader": 1.95,
+				"Wandering Trader": {
+					"is_baby: true": 0.975,
+					"is_baby: false": 1.95
+				},
+				"Warden": {
+					"pose: roaring<br>pose: sniffing<br>pose: standing": 2.9,
+					"pose: digging<br>pose: emerging": 1
+				},
 				"Witch": 1.95,
 				"Wither": 3.5,
 				"Wither Skeleton": 2.4,
 				"Wither Skull": 0.3125,
 				"Wolf": {
-					"Adult": 0.85,
-					"Baby": 0.425
+					"is_baby: true": 0.425,
+					"is_baby: false": 0.85
 				},
 				"Zoglin": {
-					"Adult": 1.4,
-					"Baby": 0.7
+					"is_baby: true": 0.7,
+					"is_baby: false": 1.4
 				},
 				"Zombie": {
-					"Adult": 1.95,
-					"Baby": 0.975
+					"is_baby: true": 0.975,
+					"is_baby: false": 1.95
 				},
 				"Zombie Horse": {
-					"Adult": 1.6,
-					"Baby": 0.8
+					"is_baby: true": 0.8,
+					"is_baby: false": 1.6
 				},
 				"Zombie Villager": {
-					"Adult": 1.95,
-					"Baby": 0.975
+					"is_baby: true": 0.975,
+					"is_baby: false": 1.95
 				},
 				"Zombified Piglin": {
-					"Adult": 1.95,
-					"Baby": 0.975
-				},
-				"Player": {
-					"Standing": 1.8,
-					"Crouching": 1.5,
-					"Swimming": 0.6,
-					"Sleeping": 0.2,
-					"Dying": 0.2
-				},
-				"Fishing Bobber": 0.25
+					"is_baby: true": 0.975,
+					"is_baby: false": 1.95
+				}
 			}
 		},
 		"type": {
@@ -1096,6 +1193,17 @@
 			"default_selection": true,
 			"relative_gradient": true,
 			"entries": {
+				"Allay": "Unspecified",
+				"Block Display": "Unspecified",
+				"Camel": "Unspecified",
+				"Boat with Chest": "Unspecified",
+				"Frog": "Unspecified",
+				"Interaction": "Unspecified",
+				"Item Display": "Unspecified",
+				"Sniffer": "Unspecified",
+				"Tadpole": "Unspecified",
+				"Text Display": "Unspecified",
+				"Warden": "Unspecified",
 				"Area Effect Cloud": "other",
 				"Armor Stand": "living",
 				"Arrow": "projectile",
@@ -1645,9 +1753,279 @@
 				"Zombified Piglin": "Yes"
 			}
 		},
+		"eye_height": {
+			"property_name": "Eye Height",
+			"default_value": null,
+			"size_type": "block",
+			"default_selection": true,
+			"max": 3,
+			"entries": {
+				"Allay": 0.36,
+				"Area Effect Cloud": 0.425,
+				"Armor Stand": {
+					"small: true, marker: true<br>small: false, marker: true": 0,
+					"small: false, marker: false": 1.7775,
+					"small: true, marker: false": 0.49375
+				},
+				"Arrow": 0.13,
+				"Axolotl": {
+					"is_baby: true": 0.13755,
+					"is_baby: false": 0.2751
+				},
+				"Bat": 0.45,
+				"Bee": {
+					"is_baby: true": 0.15,
+					"is_baby: false": 0.3
+				},
+				"Blaze": 1.53,
+				"Block Display": 0,
+				"Boat": 0.5625,
+				"Camel": {
+					"is_baby: true, pose: sitting": 0.37250003,
+					"is_baby: false, pose: standing": 2.275,
+					"is_baby: true, pose: standing": 1.0875,
+					"is_baby: false, pose: sitting": 0.845
+				},
+				"Cat": {
+					"is_baby: true": 0.175,
+					"is_baby: false": 0.35
+				},
+				"Cave Spider": 0.45,
+				"Boat with Chest": 0.5625,
+				"Minecart with Chest": 0.595,
+				"Chicken": {
+					"is_baby: true": 0.2975,
+					"is_baby: false": 0.644
+				},
+				"Cod": 0.19500001,
+				"Minecart with Command Block": 0.595,
+				"Cow": {
+					"is_baby: true": 0.66499996,
+					"is_baby: false": 1.3
+				},
+				"Creeper": 1.445,
+				"Dolphin": 0.3,
+				"Donkey": {
+					"is_baby: true": 0.7125,
+					"is_baby: false": 1.425
+				},
+				"Dragon Fireball": 0.85,
+				"Drowned": {
+					"is_baby: true": 0.93,
+					"is_baby: false": 1.74
+				},
+				"Thrown Egg": 0.2125,
+				"Elder Guardian": 0.99875,
+				"End Crystal": 1.7,
+				"Ender Dragon": 6.8,
+				"Thrown Ender Pearl": 0.2125,
+				"Enderman": 2.55,
+				"Endermite": 0.13,
+				"Evoker": 1.6575,
+				"Evoker Fangs": 0.68,
+				"Thrown Bottle o' Enchanting": 0.2125,
+				"Experience Orb": 0.425,
+				"Eye of Ender": 0.2125,
+				"Falling Block": 0.83300006,
+				"Fireball": 0.85,
+				"Firework Rocket": 0.2125,
+				"Fishing Bobber": 0.2125,
+				"Fox": {
+					"is_baby: true": 0.2975,
+					"is_baby: false": 0.4
+				},
+				"Frog": 0.425,
+				"Minecart with Furnace": 0.595,
+				"Ghast": 2.6,
+				"Giant": 10.440001,
+				"Glow Item Frame": 0,
+				"Glow Squid": 0.4,
+				"Goat": {
+					"is_baby: false, pose: standing": 1.105,
+					"is_baby: false, pose: long_jumping": 0.77349997,
+					"is_baby: true, pose: long_jumping": 0.38674998,
+					"is_baby: true, pose: standing": 0.5525
+				},
+				"Guardian": 0.425,
+				"Hoglin": {
+					"is_baby: true": 0.595,
+					"is_baby: false": 1.19
+				},
+				"Minecart with Hopper": 0.595,
+				"Horse": {
+					"is_baby: true": 0.76,
+					"is_baby: false": 1.52
+				},
+				"Husk": {
+					"is_baby: true": 0.93,
+					"is_baby: false": 1.74
+				},
+				"Illusioner": 1.6575,
+				"Interaction": 0.85,
+				"Iron Golem": 2.295,
+				"Item": 0.2125,
+				"Item Display": 0,
+				"Item Frame": 0,
+				"Leash Knot": 0.0625,
+				"Lightning Bolt": 0,
+				"Llama": {
+					"is_baby: true": 0.88825,
+					"is_baby: false": 1.7765
+				},
+				"Llama Spit": 0.2125,
+				"Magma Cube": {
+					"size: 1": 0.32512498,
+					"size: 4": 1.3004999,
+					"size: 2": 0.65024996
+				},
+				"Marker": 0,
+				"Minecart": 0.595,
+				"Mooshroom": {
+					"is_baby: true": 0.66499996,
+					"is_baby: false": 1.3
+				},
+				"Mule": {
+					"is_baby: true": 0.76,
+					"is_baby: false": 1.52
+				},
+				"Ocelot": {
+					"is_baby: true": 0.2975,
+					"is_baby: false": 0.595
+				},
+				"Painting": 0.425,
+				"Panda": {
+					"is_baby: true": 0.53125,
+					"is_baby: false": 1.0625
+				},
+				"Parrot": 0.54,
+				"Phantom": 0.175,
+				"Pig": {
+					"is_baby: true": 0.3825,
+					"is_baby: false": 0.765
+				},
+				"Piglin": {
+					"is_baby: true": 0.96999997,
+					"is_baby: false": 1.79
+				},
+				"Piglin Brute": 1.79,
+				"Pillager": 1.6575,
+				"Player": {
+					"pose: standing<br>pose: dying": 1.62,
+					"pose: spin_attack<br>pose: fall_flying<br>pose: swimming": 0.4,
+					"pose: crouching": 1.27,
+					"pose: sleeping": 0.2
+				},
+				"Polar Bear": {
+					"is_baby: true": 0.595,
+					"is_baby: false": 1.19
+				},
+				"Thrown Potion": 0.2125,
+				"Pufferfish": {
+					"puff_state: 1": 0.31849998,
+					"puff_state: 2": 0.45499998,
+					"puff_state: 0": 0.22749999
+				},
+				"Rabbit": {
+					"is_baby: true": 0.2125,
+					"is_baby: false": 0.425
+				},
+				"Ravager": 1.8700001,
+				"Salmon": 0.26,
+				"Sheep": {
+					"is_baby: true": 0.61749995,
+					"is_baby: false": 1.2349999
+				},
+				"Shulker": 0.5,
+				"Shulker Bullet": 0.265625,
+				"Silverfish": 0.13,
+				"Skeleton": 1.74,
+				"Skeleton Horse": {
+					"is_baby: true": 0.76,
+					"is_baby: false": 1.52
+				},
+				"Slime": {
+					"size: 1": 0.32512498,
+					"size: 4": 1.3004999,
+					"size: 2": 0.65024996
+				},
+				"Small Fireball": 0.265625,
+				"Sniffer": {
+					"is_baby: true": 0.52500004,
+					"is_baby: false": 1.0500001
+				},
+				"Snow Golem": 1.7,
+				"Snowball": 0.2125,
+				"Minecart with Spawner": 0.595,
+				"Spectral Arrow": 0.13,
+				"Spider": 0.65,
+				"Squid": 0.4,
+				"Stray": 1.74,
+				"Strider": {
+					"is_baby: true": 0.7225,
+					"is_baby: false": 1.445
+				},
+				"Tadpole": 0.19500001,
+				"Text Display": 0,
+				"Primed TNT": 0.15,
+				"Minecart with TNT": 0.595,
+				"Trader Llama": {
+					"is_baby: true": 0.88825,
+					"is_baby: false": 1.7765
+				},
+				"Trident": 0.13,
+				"Tropical Fish": 0.26,
+				"Turtle": {
+					"is_baby: true": 0.102000006,
+					"is_baby: false": 0.34
+				},
+				"Vex": 0.51875,
+				"Villager": {
+					"is_baby: false, pose: standing": 1.62,
+					"is_baby: true, pose: sleeping<br>is_baby: false, pose: sleeping": 0.2,
+					"is_baby: true, pose: standing": 0.81
+				},
+				"Vindicator": 1.6575,
+				"Wandering Trader": {
+					"is_baby: true": 0.81,
+					"is_baby: false": 1.62
+				},
+				"Warden": {
+					"pose: roaring<br>pose: sniffing<br>pose: standing": 2.4650002,
+					"pose: digging<br>pose: emerging": 0.85
+				},
+				"Witch": 1.62,
+				"Wither": 2.9750001,
+				"Wither Skeleton": 2.1,
+				"Wither Skull": 0.265625,
+				"Wolf": {
+					"is_baby: true": 0.34,
+					"is_baby: false": 0.68
+				},
+				"Zoglin": {
+					"is_baby: true": 0.595,
+					"is_baby: false": 1.19
+				},
+				"Zombie": {
+					"is_baby: true": 0.93,
+					"is_baby: false": 1.74
+				},
+				"Zombie Horse": {
+					"is_baby: true": 0.76,
+					"is_baby: false": 1.52
+				},
+				"Zombie Villager": {
+					"is_baby: true": 0.93,
+					"is_baby: false": 1.74
+				},
+				"Zombified Piglin": {
+					"is_baby: true": 0.96999997,
+					"is_baby: false": 1.79
+				}
+			}
+		},
 		"eye_height_float": {
 			"property_name": "Eye Height (Float)",
-			"default_value": null,
+			"default_value": "Unspecified",
 			"default_selection": false,
 			"entries": {
 				"Area Effect Cloud": "(double) 0.425F",
@@ -1902,7 +2280,7 @@
 		},
 		"eye_height_double": {
 			"property_name": "Eye Height (Double)",
-			"default_value": null,
+			"default_value": "Unspecified",
 			"default_selection": false,
 			"entries": {
 				"Area Effect Cloud": 0.42500001192092896,
@@ -2155,268 +2533,17 @@
 				"Fishing Bobber": 0.21250000596046448
 			}
 		},
-		"eye_height": {
-			"property_name": "Eye Height",
-			"default_value": null,
-			"size_type": "block",
-			"default_selection": true,
-			"max": 3,
-			"entries": {
-				"Area Effect Cloud": 0.425,
-				"Armor Stand": {
-					"Adult": 1.7775,
-					"Baby": 0.49375
-				},
-				"Arrow": 0.13,
-				"Axolotl": {
-					"Adult": 0.2751,
-					"Baby": 0.13755
-				},
-				"Bat": 0.45,
-				"Bee": {
-					"Adult": 0.3,
-					"Baby": 0.15
-				},
-				"Blaze": 1.53,
-				"Boat": 0.5625,
-				"Cat": {
-					"Adult": 0.35,
-					"Baby": 0.175
-				},
-				"Cave Spider": 0.45,
-				"Chicken": {
-					"Adult": 0.644,
-					"Baby": 0.2975
-				},
-				"Cod": 0.195,
-				"Cow": {
-					"Adult": 1.3,
-					"Baby": 0.665
-				},
-				"Creeper": 1.445,
-				"Dolphin": 0.3,
-				"Donkey": {
-					"Adult": 1.425,
-					"Baby": 0.7125
-				},
-				"Dragon Fireball": 0.85,
-				"Drowned": {
-					"Adult": 1.74,
-					"Baby": 0.93
-				},
-				"Elder Guardian": 0.99875,
-				"End Crystal": 1.7,
-				"Ender Dragon": 6.8,
-				"Enderman": 2.55,
-				"Endermite": 0.13,
-				"Evoker": 1.6575,
-				"Evoker Fangs": 0.68,
-				"Experience Orb": 0.425,
-				"Eye of Ender": 0.2125,
-				"Falling Block": 0.833,
-				"Firework Rocket": 0.2125,
-				"Fox": {
-					"Adult": 0.4,
-					"Baby": 0.2975
-				},
-				"Ghast": 2.6,
-				"Giant": 10.44,
-				"Glow Item Frame": {
-					"Bottom": 0,
-					"Side": 0,
-					"Top": 0
-				},
-				"Glow Squid": 0.4,
-				"Goat": {
-					"Adult": 1.105,
-					"Baby": 0.5525
-				},
-				"Guardian": 0.425,
-				"Hoglin": {
-					"Adult": 1.19,
-					"Baby": 0.595
-				},
-				"Horse": {
-					"Adult": 1.52,
-					"Baby": 0.76
-				},
-				"Husk": {
-					"Adult": 1.74,
-					"Baby": 0.93
-				},
-				"Illusioner": 1.6575,
-				"Iron Golem": 2.295,
-				"Item": 0.2125,
-				"Item Frame": {
-					"Bottom": 0,
-					"Side": 0,
-					"Top": 0
-				},
-				"Fireball": 0.85,
-				"Leash Knot": 0.0625,
-				"Lightning Bolt": 0,
-				"Llama": {
-					"Adult": 1.7765,
-					"Baby": 0.88825
-				},
-				"Llama Spit": 0.2125,
-				"Magma Cube": {
-					"Small (1)": 0.325125,
-					"Medium (2)": 0.65025,
-					"Big (4)": 1.3005
-				},
-				"Marker": 0,
-				"Minecart": 0.595,
-				"Minecart with Chest": 0.595,
-				"Minecart with Command Block": 0.595,
-				"Minecart with Furnace": 0.595,
-				"Minecart with Hopper": 0.595,
-				"Minecart with Spawner": 0.595,
-				"Minecart with TNT": 0.595,
-				"Mule": {
-					"Adult": 1.52,
-					"Baby": 0.76
-				},
-				"Mooshroom": {
-					"Adult": 1.3,
-					"Baby": 0.665
-				},
-				"Ocelot": {
-					"Adult": 0.595,
-					"Baby": 0.2975
-				},
-				"Painting": {
-					"1 Block Tall": 0.85,
-					"2 Block Tall": 1.7,
-					"3 Block Tall": 2.55,
-					"4 Block Tall": 3.4
-				},
-				"Panda": {
-					"Adult": 1.0625,
-					"Baby": 0.53125
-				},
-				"Parrot": 0.54,
-				"Phantom": 0.175,
-				"Pig": {
-					"Adult": 0.765,
-					"Baby": 0.3825
-				},
-				"Piglin": {
-					"Adult": 1.74,
-					"Baby": 0.93
-				},
-				"Piglin Brute": 1.6575,
-				"Pillager": 1.6575,
-				"Polar Bear": {
-					"Adult": 1.19,
-					"Baby": 0.595
-				},
-				"Primed TNT": 0.15,
-				"Pufferfish": {
-					"Unpuffed": 0.2275,
-					"Semi-puffed": 0.3185,
-					"Fully Puffed": 0.455
-				},
-				"Rabbit": {
-					"Adult": 0.425,
-					"Baby": 0.2125
-				},
-				"Ravager": 1.875,
-				"Salmon": 0.26,
-				"Sheep": {
-					"Adult": 1.235,
-					"Baby": 0.6175
-				},
-				"Shulker": 0.5,
-				"Shulker Bullet": 0.265625,
-				"Silverfish": 0.13,
-				"Skeleton": 1.74,
-				"Skeleton Horse": {
-					"Adult": 1.52,
-					"Baby": 0.76
-				},
-				"Slime": {
-					"Small (1)": 0.325125,
-					"Medium (2)": 0.65025,
-					"Big (4)": 1.3005
-				},
-				"Small Fireball": 0.265625,
-				"Snow Golem": 1.7,
-				"Snowball": 0.2125,
-				"Spectral Arrow": 0.13,
-				"Spider": 0.65,
-				"Squid": 0.4,
-				"Stray": 1.74,
-				"Strider": {
-					"Adult": 1.445,
-					"Baby": 0.7225
-				},
-				"Thrown Egg": 0.2125,
-				"Thrown Ender Pearl": 0.2125,
-				"Thrown Bottle o' Enchanting": 0.2125,
-				"Thrown Potion": 0.2125,
-				"Trident": 0.13,
-				"Trader Llama": {
-					"Adult": 1.7765,
-					"Baby": 0.88825
-				},
-				"Tropical Fish": 0.26,
-				"Turtle": {
-					"Adult": 0.34,
-					"Baby": 0.102
-				},
-				"Vex": 0.68,
-				"Villager": {
-					"Awake": {
-						"Adult": 1.62,
-						"Baby": 0.81
-					},
-					"Sleeping": 0.2
-				},
-				"Vindicator": 1.6575,
-				"Wandering Trader": 1.62,
-				"Witch": 1.62,
-				"Wither": 2.975,
-				"Wither Skeleton": 2.1,
-				"Wither Skull": 0.265625,
-				"Wolf": {
-					"Adult": 0.68,
-					"Baby": 0.34
-				},
-				"Zoglin": {
-					"Adult": 1.19,
-					"Baby": 0.595
-				},
-				"Zombie": {
-					"Adult": 1.74,
-					"Baby": 0.93
-				},
-				"Zombie Horse": {
-					"Adult": 1.52,
-					"Baby": 0.76
-				},
-				"Zombie Villager": {
-					"Adult": 1.74,
-					"Baby": 0.93
-				},
-				"Zombified Piglin": {
-					"Adult": 1.74,
-					"Baby": 0.93
-				},
-				"Player": {
-					"Standing": 1.62,
-					"Crouching": 1.27,
-					"Swimming": 0.4,
-					"Sleeping": 0.2
-				},
-				"Fishing Bobber": 0.2125
-			}
-		},
 		"health": {
 			"property_name": "Health",
 			"default_value": "Not Applicable",
 			"default_selection": true,
 			"entries": {
+				"Allay": 20,
+				"Camel": 32,
+				"Frog": 10,
+				"Sniffer": 14,
+				"Tadpole": 6,
+				"Warden": 500,
 				"Armor Stand": 20,
 				"Axolotl": 14,
 				"Bat": 6,
@@ -2535,6 +2662,1234 @@
 				},
 				"Minecart with TNT": "4-11.5"
 			}
+		},
+		"spawns_inside_hazards": {
+			"property_name": "Spawns Inside Hazards",
+			"property_description": "Normally dangerous blocks that this entity can spawn inside.\nThis only includes wither roses, sweet berry bushes, and powder snow.\nSee Fire Immune for entities that can spawn inside of fire.",
+			"entries": {
+				"Fox": "minecraft:sweet_berry_bush",
+				"Polar Bear": "minecraft:powder_snow",
+				"Snow Golem": "minecraft:powder_snow",
+				"Stray": "minecraft:powder_snow",
+				"Wither": "minecraft:wither_rose",
+				"Wither Skeleton": "minecraft:wither_rose"
+			},
+			"default_value": "None"
+		},
+		"base_armor": {
+			"property_name": "Base Armor",
+			"property_description": "The amount of armor points this has without wearing anything.",
+			"entries": {
+				"Area Effect Cloud": "N/A",
+				"Arrow": "N/A",
+				"Block Display": "N/A",
+				"Boat": "N/A",
+				"Boat with Chest": "N/A",
+				"Minecart with Chest": "N/A",
+				"Minecart with Command Block": "N/A",
+				"Dragon Fireball": "N/A",
+				"Drowned": 2,
+				"Thrown Egg": "N/A",
+				"End Crystal": "N/A",
+				"Thrown Ender Pearl": "N/A",
+				"Evoker Fangs": "N/A",
+				"Thrown Bottle o' Enchanting": "N/A",
+				"Experience Orb": "N/A",
+				"Eye of Ender": "N/A",
+				"Falling Block": "N/A",
+				"Fireball": "N/A",
+				"Firework Rocket": "N/A",
+				"Fishing Bobber": "N/A",
+				"Minecart with Furnace": "N/A",
+				"Glow Item Frame": "N/A",
+				"Minecart with Hopper": "N/A",
+				"Husk": 2,
+				"Interaction": "N/A",
+				"Item": "N/A",
+				"Item Display": "N/A",
+				"Item Frame": "N/A",
+				"Leash Knot": "N/A",
+				"Lightning Bolt": "N/A",
+				"Llama Spit": "N/A",
+				"Magma Cube": {
+					"size: 1": 3,
+					"size: 4": 12,
+					"size: 2": 6
+				},
+				"Marker": "N/A",
+				"Minecart": "N/A",
+				"Painting": "N/A",
+				"Thrown Potion": "N/A",
+				"Shulker Bullet": "N/A",
+				"Small Fireball": "N/A",
+				"Snowball": "N/A",
+				"Minecart with Spawner": "N/A",
+				"Spectral Arrow": "N/A",
+				"Text Display": "N/A",
+				"Primed TNT": "N/A",
+				"Minecart with TNT": "N/A",
+				"Trident": "N/A",
+				"Wither": 4,
+				"Wither Skull": "N/A",
+				"Zombie": 2,
+				"Zombie Villager": 2,
+				"Zombified Piglin": 2
+			},
+			"default_value": 0
+		},
+		"base_attack_damage": {
+			"property_name": "Base Attack Damage",
+			"property_description": "",
+			"entries": {
+				"Allay": 2,
+				"Axolotl": 2,
+				"Bee": 2,
+				"Blaze": 6,
+				"Cat": 3,
+				"Cave Spider": 2,
+				"Creeper": 2,
+				"Dolphin": 3,
+				"Drowned": 3,
+				"Elder Guardian": 8,
+				"Enderman": 7,
+				"Endermite": 2,
+				"Evoker": 2,
+				"Fox": 2,
+				"Frog": 10,
+				"Giant": 50,
+				"Goat": {
+					"is_baby: true": 1,
+					"is_baby: false": 2
+				},
+				"Guardian": 6,
+				"Hoglin": {
+					"is_baby: true": 0.5,
+					"is_baby: false": 6
+				},
+				"Husk": 3,
+				"Illusioner": 2,
+				"Iron Golem": 15,
+				"Magma Cube": {
+					"size: 1": 1,
+					"size: 4": 4,
+					"size: 2": 2
+				},
+				"Ocelot": 3,
+				"Panda": 6,
+				"Phantom": 2,
+				"Piglin": 5,
+				"Piglin Brute": 7,
+				"Pillager": 5,
+				"Player": 1,
+				"Polar Bear": 6,
+				"Ravager": 12,
+				"Silverfish": 1,
+				"Skeleton": 2,
+				"Slime": {
+					"size: 1": 1,
+					"size: 4": 4,
+					"size: 2": 2
+				},
+				"Spider": 2,
+				"Stray": 2,
+				"Vex": 4,
+				"Vindicator": 5,
+				"Warden": 30,
+				"Witch": 2,
+				"Wither": 2,
+				"Wither Skeleton": 2,
+				"Wolf": 4,
+				"Zoglin": {
+					"is_baby: true": 0.5,
+					"is_baby: false": 6
+				},
+				"Zombie": 3,
+				"Zombie Villager": 3,
+				"Zombified Piglin": 5
+			},
+			"default_value": "N/A"
+		},
+		"base_attack_knockback": {
+			"property_name": "Base Attack Knockback",
+			"property_description": "",
+			"entries": {
+				"Area Effect Cloud": "N/A",
+				"Armor Stand": "N/A",
+				"Arrow": "N/A",
+				"Block Display": "N/A",
+				"Boat": "N/A",
+				"Boat with Chest": "N/A",
+				"Minecart with Chest": "N/A",
+				"Minecart with Command Block": "N/A",
+				"Dragon Fireball": "N/A",
+				"Thrown Egg": "N/A",
+				"End Crystal": "N/A",
+				"Thrown Ender Pearl": "N/A",
+				"Evoker Fangs": "N/A",
+				"Thrown Bottle o' Enchanting": "N/A",
+				"Experience Orb": "N/A",
+				"Eye of Ender": "N/A",
+				"Falling Block": "N/A",
+				"Fireball": "N/A",
+				"Firework Rocket": "N/A",
+				"Fishing Bobber": "N/A",
+				"Minecart with Furnace": "N/A",
+				"Glow Item Frame": "N/A",
+				"Hoglin": 1,
+				"Minecart with Hopper": "N/A",
+				"Interaction": "N/A",
+				"Item": "N/A",
+				"Item Display": "N/A",
+				"Item Frame": "N/A",
+				"Leash Knot": "N/A",
+				"Lightning Bolt": "N/A",
+				"Llama Spit": "N/A",
+				"Marker": "N/A",
+				"Minecart": "N/A",
+				"Painting": "N/A",
+				"Player": "N/A",
+				"Thrown Potion": "N/A",
+				"Ravager": 1.5,
+				"Shulker Bullet": "N/A",
+				"Small Fireball": "N/A",
+				"Snowball": "N/A",
+				"Minecart with Spawner": "N/A",
+				"Spectral Arrow": "N/A",
+				"Text Display": "N/A",
+				"Primed TNT": "N/A",
+				"Minecart with TNT": "N/A",
+				"Trident": "N/A",
+				"Warden": 1.5,
+				"Wither Skull": "N/A",
+				"Zoglin": 1
+			},
+			"default_value": 0
+		},
+		"bucketable": {
+			"property_name": "Bucketable",
+			"property_description": "",
+			"entries": {
+				"Axolotl": "Yes",
+				"Cod": "Yes",
+				"Pufferfish": "Yes",
+				"Salmon": "Yes",
+				"Tadpole": "Yes",
+				"Tropical Fish": "Yes"
+			},
+			"default_value": "No"
+		},
+		"can_be_ridden_in_water": {
+			"property_name": "Can Be Ridden In Water",
+			"property_description": "",
+			"entries": {
+				"Camel": "No",
+				"Chicken": "No",
+				"Donkey": "No",
+				"Horse": "No",
+				"Llama": "No",
+				"Mule": "No",
+				"Pig": "No",
+				"Ravager": "No",
+				"Spider": "No",
+				"Strider": "No",
+				"Trader Llama": "No",
+				"Zombie Horse": "No"
+			},
+			"default_value": "Yes"
+		},
+		"can_be_saddled": {
+			"property_name": "Can Be Saddled",
+			"property_description": "",
+			"entries": {
+				"Camel": {
+					"is_baby: true": "No",
+					"is_baby: false": "Yes"
+				},
+				"Donkey": {
+					"is_baby: true, is_tamed: true<br>is_baby: false, is_tamed: false<br>is_baby: true, is_tamed: false": "No",
+					"is_baby: false, is_tamed: true": "Yes"
+				},
+				"Horse": {
+					"is_baby: true, is_tamed: true<br>is_baby: false, is_tamed: false<br>is_baby: true, is_tamed: false": "No",
+					"is_baby: false, is_tamed: true": "Yes"
+				},
+				"Mule": {
+					"is_baby: true, is_tamed: true<br>is_baby: false, is_tamed: false<br>is_baby: true, is_tamed: false": "No",
+					"is_baby: false, is_tamed: true": "Yes"
+				},
+				"Pig": {
+					"is_baby: true": "No",
+					"is_baby: false": "Yes"
+				},
+				"Skeleton Horse": {
+					"is_baby: true, is_tamed: true<br>is_baby: false, is_tamed: false<br>is_baby: true, is_tamed: false": "No",
+					"is_baby: false, is_tamed: true": "Yes"
+				},
+				"Strider": {
+					"is_baby: true": "No",
+					"is_baby: false": "Yes"
+				},
+				"Zombie Horse": {
+					"is_baby: true, is_tamed: true<br>is_baby: false, is_tamed: false<br>is_baby: true, is_tamed: false": "No",
+					"is_baby: false, is_tamed: true": "Yes"
+				}
+			},
+			"default_value": "No"
+		},
+		"can_breathe_in_water": {
+			"property_name": "Can Breathe In Water",
+			"property_description": "",
+			"entries": {
+				"Axolotl": "Yes",
+				"Cod": "Yes",
+				"Drowned": "Yes",
+				"Elder Guardian": "Yes",
+				"Frog": "Yes",
+				"Glow Squid": "Yes",
+				"Guardian": "Yes",
+				"Husk": "Yes",
+				"Phantom": "Yes",
+				"Pufferfish": "Yes",
+				"Salmon": "Yes",
+				"Skeleton": "Yes",
+				"Skeleton Horse": "Yes",
+				"Squid": "Yes",
+				"Stray": "Yes",
+				"Tadpole": "Yes",
+				"Tropical Fish": "Yes",
+				"Turtle": "Yes",
+				"Wither": "Yes",
+				"Wither Skeleton": "Yes",
+				"Zoglin": "Yes",
+				"Zombie": "Yes",
+				"Zombie Horse": "Yes",
+				"Zombie Villager": "Yes",
+				"Zombified Piglin": "Yes"
+			},
+			"default_value": "No"
+		},
+		"can_open_doors": {
+			"property_name": "Can Open Doors",
+			"property_description": "",
+			"entries": {
+				"Piglin": "Yes",
+				"Piglin Brute": "Yes",
+				"Villager": "Yes",
+				"Vindicator": "Yes"
+			},
+			"default_value": "No"
+		},
+		"can_ride_boat": {
+			"property_name": "Can Ride Boat",
+			"property_description": "",
+			"entries": {
+				"Allay": "Yes",
+				"Axolotl": "Yes",
+				"Bee": "Yes",
+				"Blaze": "Yes",
+				"Camel": {
+					"is_baby: true": "Yes",
+					"is_baby: false": "No"
+				},
+				"Cat": "Yes",
+				"Cave Spider": "Yes",
+				"Chicken": "Yes",
+				"Cow": "Yes",
+				"Creeper": "Yes",
+				"Donkey": {
+					"is_baby: true": "Yes",
+					"is_baby: false": "No"
+				},
+				"Drowned": "Yes",
+				"Enderman": "Yes",
+				"Endermite": "Yes",
+				"Evoker": "Yes",
+				"Fox": "Yes",
+				"Frog": "Yes",
+				"Goat": "Yes",
+				"Guardian": "Yes",
+				"Hoglin": {
+					"is_baby: true": "Yes",
+					"is_baby: false": "No"
+				},
+				"Horse": {
+					"is_baby: true": "Yes",
+					"is_baby: false": "No"
+				},
+				"Husk": "Yes",
+				"Illusioner": "Yes",
+				"Llama": "Yes",
+				"Magma Cube": {
+					"size: 1<br>size: 2": "Yes",
+					"size: 4": "No"
+				},
+				"Mooshroom": "Yes",
+				"Mule": {
+					"is_baby: true": "Yes",
+					"is_baby: false": "No"
+				},
+				"Ocelot": "Yes",
+				"Panda": "Yes",
+				"Parrot": "Yes",
+				"Phantom": "Yes",
+				"Pig": "Yes",
+				"Piglin": "Yes",
+				"Piglin Brute": "Yes",
+				"Pillager": "Yes",
+				"Polar Bear": {
+					"is_baby: true": "Yes",
+					"is_baby: false": "No"
+				},
+				"Rabbit": "Yes",
+				"Sheep": "Yes",
+				"Shulker": "Yes",
+				"Silverfish": "Yes",
+				"Skeleton": "Yes",
+				"Skeleton Horse": {
+					"is_baby: true": "Yes",
+					"is_baby: false": "No"
+				},
+				"Slime": {
+					"size: 1<br>size: 2": "Yes",
+					"size: 4": "No"
+				},
+				"Sniffer": {
+					"is_baby: true": "Yes",
+					"is_baby: false": "No"
+				},
+				"Snow Golem": "Yes",
+				"Stray": "Yes",
+				"Strider": "Yes",
+				"Trader Llama": "Yes",
+				"Turtle": "Yes",
+				"Vex": "Yes",
+				"Villager": "Yes",
+				"Vindicator": "Yes",
+				"Wandering Trader": "Yes",
+				"Warden": {
+					"pose: roaring<br>pose: sniffing<br>pose: standing": "Yes",
+					"pose: digging<br>pose: emerging": "No"
+				},
+				"Witch": "Yes",
+				"Wither": "Yes",
+				"Wither Skeleton": "Yes",
+				"Wolf": "Yes",
+				"Zoglin": {
+					"is_baby: true": "Yes",
+					"is_baby: false": "No"
+				},
+				"Zombie": "Yes",
+				"Zombie Horse": {
+					"is_baby: true": "Yes",
+					"is_baby: false": "No"
+				},
+				"Zombie Villager": "Yes",
+				"Zombified Piglin": "Yes"
+			},
+			"default_value": "No"
+		},
+		"can_ride_minecart": {
+			"property_name": "Can Ride Minecart",
+			"property_description": "",
+			"entries": {
+				"Area Effect Cloud": "No",
+				"Armor Stand": "No",
+				"Arrow": "No",
+				"Bat": "No",
+				"Block Display": "No",
+				"Minecart with Chest": "No",
+				"Minecart with Command Block": "No",
+				"Dragon Fireball": "No",
+				"Thrown Egg": "No",
+				"End Crystal": "No",
+				"Thrown Ender Pearl": "No",
+				"Evoker Fangs": "No",
+				"Thrown Bottle o' Enchanting": "No",
+				"Experience Orb": "No",
+				"Eye of Ender": "No",
+				"Falling Block": "No",
+				"Fireball": "No",
+				"Firework Rocket": "No",
+				"Fishing Bobber": "No",
+				"Minecart with Furnace": "No",
+				"Glow Item Frame": "No",
+				"Minecart with Hopper": "No",
+				"Interaction": "No",
+				"Iron Golem": "No",
+				"Item": "No",
+				"Item Display": "No",
+				"Item Frame": "No",
+				"Leash Knot": "No",
+				"Lightning Bolt": "No",
+				"Llama Spit": "No",
+				"Marker": "No",
+				"Minecart": "No",
+				"Painting": "No",
+				"Player": "No",
+				"Thrown Potion": "No",
+				"Shulker Bullet": "No",
+				"Small Fireball": "No",
+				"Snowball": "No",
+				"Minecart with Spawner": "No",
+				"Spectral Arrow": "No",
+				"Text Display": "No",
+				"Primed TNT": "No",
+				"Minecart with TNT": "No",
+				"Trident": "No",
+				"Warden": {
+					"pose: roaring<br>pose: sniffing<br>pose: standing": "Yes",
+					"pose: digging<br>pose: emerging": "No"
+				},
+				"Wither Skull": "No"
+			},
+			"default_value": "Yes"
+		},
+		"entity_group": {
+			"property_name": "Entity Group",
+			"property_description": "",
+			"entries": {
+				"Area Effect Cloud": "NONE",
+				"Arrow": "NONE",
+				"Axolotl": "AQUATIC",
+				"Bee": "ARTHROPOD",
+				"Block Display": "NONE",
+				"Boat": "NONE",
+				"Cave Spider": "ARTHROPOD",
+				"Boat with Chest": "NONE",
+				"Minecart with Chest": "NONE",
+				"Cod": "AQUATIC",
+				"Minecart with Command Block": "NONE",
+				"Dolphin": "AQUATIC",
+				"Dragon Fireball": "NONE",
+				"Drowned": "UNDEAD",
+				"Thrown Egg": "NONE",
+				"Elder Guardian": "AQUATIC",
+				"End Crystal": "NONE",
+				"Thrown Ender Pearl": "NONE",
+				"Endermite": "ARTHROPOD",
+				"Evoker": "ILLAGER",
+				"Evoker Fangs": "NONE",
+				"Thrown Bottle o' Enchanting": "NONE",
+				"Experience Orb": "NONE",
+				"Eye of Ender": "NONE",
+				"Falling Block": "NONE",
+				"Fireball": "NONE",
+				"Firework Rocket": "NONE",
+				"Fishing Bobber": "NONE",
+				"Minecart with Furnace": "NONE",
+				"Glow Item Frame": "NONE",
+				"Glow Squid": "AQUATIC",
+				"Guardian": "AQUATIC",
+				"Minecart with Hopper": "NONE",
+				"Husk": "UNDEAD",
+				"Illusioner": "ILLAGER",
+				"Interaction": "NONE",
+				"Item": "NONE",
+				"Item Display": "NONE",
+				"Item Frame": "NONE",
+				"Leash Knot": "NONE",
+				"Lightning Bolt": "NONE",
+				"Llama Spit": "NONE",
+				"Marker": "NONE",
+				"Minecart": "NONE",
+				"Painting": "NONE",
+				"Phantom": "UNDEAD",
+				"Pillager": "ILLAGER",
+				"Thrown Potion": "NONE",
+				"Pufferfish": "AQUATIC",
+				"Salmon": "AQUATIC",
+				"Shulker Bullet": "NONE",
+				"Silverfish": "ARTHROPOD",
+				"Skeleton": "UNDEAD",
+				"Skeleton Horse": "UNDEAD",
+				"Small Fireball": "NONE",
+				"Snowball": "NONE",
+				"Minecart with Spawner": "NONE",
+				"Spectral Arrow": "NONE",
+				"Spider": "ARTHROPOD",
+				"Squid": "AQUATIC",
+				"Stray": "UNDEAD",
+				"Tadpole": "AQUATIC",
+				"Text Display": "NONE",
+				"Primed TNT": "NONE",
+				"Minecart with TNT": "NONE",
+				"Trident": "NONE",
+				"Tropical Fish": "AQUATIC",
+				"Turtle": "AQUATIC",
+				"Vindicator": "ILLAGER",
+				"Wither": "UNDEAD",
+				"Wither Skeleton": "UNDEAD",
+				"Wither Skull": "NONE",
+				"Zoglin": "UNDEAD",
+				"Zombie": "UNDEAD",
+				"Zombie Horse": "UNDEAD",
+				"Zombie Villager": "UNDEAD",
+				"Zombified Piglin": "UNDEAD"
+			},
+			"default_value": "DEFAULT"
+		},
+		"fire_immune": {
+			"property_name": "Fire Immune",
+			"property_description": "",
+			"entries": {
+				"Area Effect Cloud": "Yes",
+				"Blaze": "Yes",
+				"Ender Dragon": "Yes",
+				"Ghast": "Yes",
+				"Magma Cube": "Yes",
+				"Shulker": "Yes",
+				"Strider": "Yes",
+				"Primed TNT": "Yes",
+				"Vex": "Yes",
+				"Warden": "Yes",
+				"Wither": "Yes",
+				"Wither Skeleton": "Yes",
+				"Zoglin": "Yes",
+				"Zombified Piglin": "Yes"
+			},
+			"default_value": "No"
+		},
+		"height_offset": {
+			"property_name": "Height Offset",
+			"property_description": "The height offset this entity adds to itself when riding a vehicle.",
+			"entries": {
+				"Allay": 0.4,
+				"Armor Stand": {
+					"marker: true": 0,
+					"marker: false": 0.10000000149011612
+				},
+				"Axolotl": 0.14,
+				"Bee": 0.14,
+				"Camel": 0.14,
+				"Cat": 0.14,
+				"Chicken": 0.14,
+				"Cow": 0.14,
+				"Donkey": 0.14,
+				"Drowned": {
+					"is_baby: true": 0,
+					"is_baby: false": -0.45
+				},
+				"Endermite": 0.1,
+				"Evoker": -0.45,
+				"Fox": 0.14,
+				"Frog": 0.14,
+				"Goat": 0.14,
+				"Hoglin": 0.14,
+				"Horse": 0.14,
+				"Husk": {
+					"is_baby: true": 0,
+					"is_baby: false": -0.45
+				},
+				"Illusioner": -0.45,
+				"Llama": 0.14,
+				"Mooshroom": 0.14,
+				"Mule": 0.14,
+				"Ocelot": 0.14,
+				"Panda": 0.14,
+				"Parrot": 0.14,
+				"Pig": 0.14,
+				"Piglin": {
+					"is_baby: true": -0.05,
+					"is_baby: false": -0.45
+				},
+				"Piglin Brute": -0.45,
+				"Pillager": -0.45,
+				"Player": -0.35,
+				"Polar Bear": 0.14,
+				"Rabbit": 0.14,
+				"Ravager": -0.45,
+				"Sheep": 0.14,
+				"Shulker": "1.875 - vehicle's mounted height offset",
+				"Silverfish": 0.1,
+				"Skeleton": -0.6,
+				"Skeleton Horse": 0.14,
+				"Sniffer": 0.14,
+				"Stray": -0.6,
+				"Strider": 0.14,
+				"Trader Llama": 0.14,
+				"Turtle": 0.14,
+				"Vex": 0.4,
+				"Vindicator": -0.45,
+				"Witch": -0.45,
+				"Wither Skeleton": -0.6,
+				"Wolf": 0.14,
+				"Zombie": {
+					"is_baby: true": 0,
+					"is_baby: false": -0.45
+				},
+				"Zombie Horse": 0.14,
+				"Zombie Villager": {
+					"is_baby: true": 0,
+					"is_baby: false": -0.45
+				},
+				"Zombified Piglin": {
+					"is_baby: true": -0.05,
+					"is_baby: false": -0.45
+				}
+			},
+			"default_value": 0
+		},
+		"hurt_by_water": {
+			"property_name": "Hurt By Water",
+			"property_description": "Whether this is hurt by water, rain, and splash/lingering water bottles.",
+			"entries": {
+				"Blaze": "Yes",
+				"Enderman": "Yes",
+				"Snow Golem": "Yes",
+				"Strider": "Yes"
+			},
+			"default_value": "No"
+		},
+		"leadable": {
+			"property_name": "Leadable",
+			"property_description": "",
+			"entries": {
+				"Allay": "Yes",
+				"Axolotl": "Yes",
+				"Bee": "Yes",
+				"Camel": "Yes",
+				"Cat": "Yes",
+				"Chicken": "Yes",
+				"Cow": "Yes",
+				"Dolphin": "Yes",
+				"Donkey": "Yes",
+				"Fox": "Yes",
+				"Frog": "Yes",
+				"Glow Squid": "Yes",
+				"Goat": "Yes",
+				"Hoglin": "Yes",
+				"Horse": "Yes",
+				"Iron Golem": "Yes",
+				"Llama": "Yes",
+				"Mooshroom": "Yes",
+				"Mule": "Yes",
+				"Ocelot": "Yes",
+				"Parrot": "Yes",
+				"Pig": "Yes",
+				"Polar Bear": "Yes",
+				"Rabbit": "Yes",
+				"Sheep": "Yes",
+				"Skeleton Horse": "Yes",
+				"Sniffer": "Yes",
+				"Snow Golem": "Yes",
+				"Squid": "Yes",
+				"Strider": "Yes",
+				"Trader Llama": "Yes",
+				"Wolf": "Yes",
+				"Zoglin": "Yes",
+				"Zombie Horse": "Yes"
+			},
+			"default_value": "No"
+		},
+		"living": {
+			"property_name": "Living",
+			"property_description": "Whether this is a LivingEntity. Includes armor stands.",
+			"entries": {
+				"Area Effect Cloud": "No",
+				"Arrow": "No",
+				"Block Display": "No",
+				"Boat": "No",
+				"Boat with Chest": "No",
+				"Minecart with Chest": "No",
+				"Minecart with Command Block": "No",
+				"Dragon Fireball": "No",
+				"Thrown Egg": "No",
+				"End Crystal": "No",
+				"Thrown Ender Pearl": "No",
+				"Evoker Fangs": "No",
+				"Thrown Bottle o' Enchanting": "No",
+				"Experience Orb": "No",
+				"Eye of Ender": "No",
+				"Falling Block": "No",
+				"Fireball": "No",
+				"Firework Rocket": "No",
+				"Fishing Bobber": "No",
+				"Minecart with Furnace": "No",
+				"Glow Item Frame": "No",
+				"Minecart with Hopper": "No",
+				"Interaction": "No",
+				"Item": "No",
+				"Item Display": "No",
+				"Item Frame": "No",
+				"Leash Knot": "No",
+				"Lightning Bolt": "No",
+				"Llama Spit": "No",
+				"Marker": "No",
+				"Minecart": "No",
+				"Painting": "No",
+				"Thrown Potion": "No",
+				"Shulker Bullet": "No",
+				"Small Fireball": "No",
+				"Snowball": "No",
+				"Minecart with Spawner": "No",
+				"Spectral Arrow": "No",
+				"Text Display": "No",
+				"Primed TNT": "No",
+				"Minecart with TNT": "No",
+				"Trident": "No",
+				"Wither Skull": "No"
+			},
+			"default_value": "Yes"
+		},
+		"max_health": {
+			"property_name": "Max Health",
+			"property_description": "",
+			"entries": {
+				"Allay": 20,
+				"Armor Stand": 20,
+				"Axolotl": 14,
+				"Bat": 6,
+				"Bee": 10,
+				"Blaze": 20,
+				"Camel": 32,
+				"Cat": 10,
+				"Cave Spider": 12,
+				"Chicken": 4,
+				"Cod": 3,
+				"Cow": 10,
+				"Creeper": 20,
+				"Dolphin": 10,
+				"Donkey": "15.0 - 30.0",
+				"Drowned": "20.0 and 40.0 - 100.0 (Spawns with 20.0 health due to MC-219981)",
+				"Elder Guardian": 80,
+				"Ender Dragon": 200,
+				"Enderman": 40,
+				"Endermite": 8,
+				"Evoker": 24,
+				"Fox": 10,
+				"Frog": 10,
+				"Ghast": 10,
+				"Giant": 100,
+				"Glow Squid": 10,
+				"Goat": 10,
+				"Guardian": 30,
+				"Hoglin": 40,
+				"Horse": "15.0 - 30.0",
+				"Husk": "20.0 and 40.0 - 100.0 (Spawns with 20.0 health due to MC-219981)",
+				"Illusioner": 32,
+				"Iron Golem": 100,
+				"Llama": "15.0 - 30.0",
+				"Magma Cube": {
+					"size: 1": 1,
+					"size: 4": 16,
+					"size: 2": 4
+				},
+				"Mooshroom": 10,
+				"Mule": "15.0 - 30.0",
+				"Ocelot": 10,
+				"Panda": 20,
+				"Parrot": 6,
+				"Phantom": 20,
+				"Pig": 10,
+				"Piglin": 16,
+				"Piglin Brute": 50,
+				"Pillager": 24,
+				"Player": 20,
+				"Polar Bear": 30,
+				"Pufferfish": 3,
+				"Rabbit": 3,
+				"Ravager": 100,
+				"Salmon": 3,
+				"Sheep": 8,
+				"Shulker": 30,
+				"Silverfish": 8,
+				"Skeleton": 20,
+				"Skeleton Horse": 15,
+				"Slime": {
+					"size: 1": 1,
+					"size: 4": 16,
+					"size: 2": 4
+				},
+				"Sniffer": 14,
+				"Snow Golem": 4,
+				"Spider": 16,
+				"Squid": 10,
+				"Stray": 20,
+				"Strider": 20,
+				"Tadpole": 6,
+				"Trader Llama": "15.0 - 30.0",
+				"Tropical Fish": 3,
+				"Turtle": 30,
+				"Vex": 14,
+				"Villager": 20,
+				"Vindicator": 24,
+				"Wandering Trader": 20,
+				"Warden": 500,
+				"Witch": 26,
+				"Wither": 300,
+				"Wither Skeleton": 20,
+				"Wolf": {
+					"is_tamed: true": 20,
+					"is_tamed: false": 8
+				},
+				"Zoglin": 40,
+				"Zombie": "20.0 and 40.0 - 100.0 (Spawns with 20.0 health due to MC-219981)",
+				"Zombie Horse": 15,
+				"Zombie Villager": "20.0 and 40.0 - 100.0 (Spawns with 20.0 health due to MC-219981)",
+				"Zombified Piglin": "20.0 and 40.0 - 100.0 (Spawns with 20.0 health due to MC-219981)"
+			},
+			"default_value": "N/A"
+		},
+		"mounted_height_offset": {
+			"property_name": "Mounted Height Offset",
+			"property_description": "The height offset this entity adds to its passengers.",
+			"entries": {
+				"Allay": 0.45000001788139343,
+				"Area Effect Cloud": 0.375,
+				"Armor Stand": {
+					"small: true, marker: true<br>small: false, marker: true": 0,
+					"small: false, marker: false": 1.4812500178813934,
+					"small: true, marker: false": 0.7406250089406967
+				},
+				"Arrow": 0.375,
+				"Axolotl": {
+					"is_baby: true": 0.1574999950826168,
+					"is_baby: false": 0.3149999901652336
+				},
+				"Bat": 0.6749999821186066,
+				"Bee": {
+					"is_baby: true": 0.22500000894069672,
+					"is_baby: false": 0.45000001788139343
+				},
+				"Blaze": 1.3499999642372131,
+				"Boat": {
+					"variant: birch<br>variant: oak<br>variant: acacia<br>variant: jungle<br>variant: cherry<br>variant: dark_oak<br>variant: mangrove<br>variant: spruce": -0.1,
+					"variant: bamboo": 0.3
+				},
+				"Camel": "TODO",
+				"Cat": {
+					"is_baby: true": 0.26249999552965164,
+					"is_baby: false": 0.5249999910593033
+				},
+				"Cave Spider": 0.25,
+				"Boat with Chest": {
+					"variant: birch<br>variant: oak<br>variant: acacia<br>variant: jungle<br>variant: cherry<br>variant: dark_oak<br>variant: mangrove<br>variant: spruce": -0.1,
+					"variant: bamboo": 0.3
+				},
+				"Chicken": {
+					"is_baby: true": 0.26249999552965164,
+					"is_baby: false": 0.5249999910593033
+				},
+				"Cod": 0.22500000894069672,
+				"Cow": {
+					"is_baby: true": 0.5249999910593033,
+					"is_baby: false": 1.0499999821186066
+				},
+				"Creeper": 1.2750000357627869,
+				"Dolphin": 0.45000001788139343,
+				"Donkey": {
+					"is_baby: true": 0.3125,
+					"is_baby: false": 0.875
+				},
+				"Dragon Fireball": 0.75,
+				"Drowned": {
+					"is_baby: true": 0.7312500178813934,
+					"is_baby: false": 1.4625000357627869
+				},
+				"Thrown Egg": 0.1875,
+				"Elder Guardian": 1.4981249570846558,
+				"End Crystal": 1.5,
+				"Ender Dragon": 3,
+				"Thrown Ender Pearl": 0.1875,
+				"Enderman": 2.1750000715255737,
+				"Endermite": 0.22500000894069672,
+				"Evoker": 1.4625000357627869,
+				"Evoker Fangs": 0.6000000089406967,
+				"Thrown Bottle o' Enchanting": 0.1875,
+				"Experience Orb": 0.375,
+				"Eye of Ender": 0.1875,
+				"Falling Block": 0.7350000143051147,
+				"Fireball": 0.75,
+				"Firework Rocket": 0.1875,
+				"Fishing Bobber": 0.1875,
+				"Fox": {
+					"is_baby: true": 0.26249999552965164,
+					"is_baby: false": 0.5249999910593033
+				},
+				"Frog": 0.375,
+				"Ghast": 3,
+				"Giant": 9,
+				"Glow Item Frame": 0.375,
+				"Glow Squid": 0.6000000089406967,
+				"Goat": {
+					"is_baby: false, pose: standing": 0.9749999642372131,
+					"is_baby: false, pose: long_jumping": 0.6824999749660492,
+					"is_baby: true, pose: long_jumping": 0.3412499874830246,
+					"is_baby: true, pose: standing": 0.48749998211860657
+				},
+				"Guardian": 0.6375000178813934,
+				"Hoglin": {
+					"is_baby: true": 0.49999998807907103,
+					"is_baby: false": 1.2499999761581422
+				},
+				"Horse": {
+					"is_baby: true": 0.6000000089406967,
+					"is_baby: false": 1.2000000178813934
+				},
+				"Husk": {
+					"is_baby: true": 0.7312500178813934,
+					"is_baby: false": 1.4625000357627869
+				},
+				"Illusioner": 1.4625000357627869,
+				"Iron Golem": 2.025000035762787,
+				"Item": 0.1875,
+				"Item Frame": 0.375,
+				"Leash Knot": 0.375,
+				"Llama": {
+					"is_baby: true": 0.5610000014305114,
+					"is_baby: false": 1.1220000028610229
+				},
+				"Llama Spit": 0.1875,
+				"Magma Cube": {
+					"size: 1": 0.39014996588230133,
+					"size: 4": 1.5605998635292053,
+					"size: 2": 0.7802999317646027
+				},
+				"Mooshroom": {
+					"is_baby: true": 0.5249999910593033,
+					"is_baby: false": 1.0499999821186066
+				},
+				"Mule": {
+					"is_baby: true": 0.3500000089406967,
+					"is_baby: false": 0.9500000178813934
+				},
+				"Ocelot": {
+					"is_baby: true": 0.26249999552965164,
+					"is_baby: false": 0.5249999910593033
+				},
+				"Painting": 0.375,
+				"Panda": {
+					"is_baby: true": 0.46875,
+					"is_baby: false": 0.9375
+				},
+				"Parrot": 0.6749999821186066,
+				"Phantom": 0.17499999701976776,
+				"Pig": {
+					"is_baby: true": 0.3374999910593033,
+					"is_baby: false": 0.6749999821186066
+				},
+				"Piglin": {
+					"is_baby: true": 0.8970000219345093,
+					"is_baby: false": 1.7940000438690187
+				},
+				"Piglin Brute": 1.4625000357627869,
+				"Pillager": 1.4625000357627869,
+				"Player": {
+					"pose: standing": 1.3499999642372131,
+					"pose: spin_attack<br>pose: fall_flying<br>pose: swimming": 0.45000001788139343,
+					"pose: crouching": 1.125,
+					"pose: dying<br>pose: sleeping": 0.15000000223517418
+				},
+				"Polar Bear": {
+					"is_baby: true": 0.5249999910593033,
+					"is_baby: false": 1.0499999821186066
+				},
+				"Thrown Potion": 0.1875,
+				"Pufferfish": {
+					"puff_state: 1": 0.3674999848008156,
+					"puff_state: 2": 0.5249999910593033,
+					"puff_state: 0": 0.26249999552965164
+				},
+				"Rabbit": {
+					"is_baby: true": 0.1875,
+					"is_baby: false": 0.375
+				},
+				"Ravager": 2.1,
+				"Salmon": 0.30000000447034836,
+				"Sheep": {
+					"is_baby: true": 0.48749998211860657,
+					"is_baby: false": 0.9749999642372131
+				},
+				"Shulker": 0.75,
+				"Shulker Bullet": 0.234375,
+				"Silverfish": 0.22500000894069672,
+				"Skeleton": 1.4925000071525574,
+				"Skeleton Horse": {
+					"is_baby: true": 0.4125000089406967,
+					"is_baby: false": 1.0125000178813934
+				},
+				"Slime": {
+					"size: 1": 0.39014996588230133,
+					"size: 4": 1.5605998635292053,
+					"size: 2": 0.7802999317646027
+				},
+				"Small Fireball": 0.234375,
+				"Sniffer": {
+					"is_baby: true": 0.65625,
+					"is_baby: false": 1.3125
+				},
+				"Snow Golem": 1.4249999821186066,
+				"Snowball": 0.1875,
+				"Spectral Arrow": 0.375,
+				"Spider": 0.44999998807907104,
+				"Squid": 0.6000000089406967,
+				"Stray": 1.4925000071525574,
+				"Strider": {
+					"is_baby: true": "0.660000023841858 ± 0.06 if its limbs are moving",
+					"is_baby: false": "1.5100000476837159 ± 0.06 if its limbs are moving"
+				},
+				"Tadpole": 0.22500000894069672,
+				"Primed TNT": 0.7350000143051147,
+				"Trader Llama": {
+					"is_baby: true": 0.5610000014305114,
+					"is_baby: false": 1.1220000028610229
+				},
+				"Trident": 0.375,
+				"Tropical Fish": 0.30000000447034836,
+				"Turtle": {
+					"is_baby: true": 0.09000000357627869,
+					"is_baby: false": 0.30000000447034836
+				},
+				"Vex": 0.6000000089406967,
+				"Villager": {
+					"is_baby: false, pose: standing": 1.4625000357627869,
+					"is_baby: true, pose: sleeping<br>is_baby: false, pose: sleeping": 0.15000000223517418,
+					"is_baby: true, pose: standing": 0.7312500178813934
+				},
+				"Vindicator": 1.4625000357627869,
+				"Wandering Trader": {
+					"is_baby: true": 0.7312500178813934,
+					"is_baby: false": 1.4625000357627869
+				},
+				"Warden": {
+					"pose: roaring<br>pose: sniffing<br>pose: standing": 2.1750000715255737,
+					"pose: digging<br>pose: emerging": 0.75
+				},
+				"Witch": 1.4625000357627869,
+				"Wither": 2.625,
+				"Wither Skeleton": 1.8000000715255737,
+				"Wither Skull": 0.234375,
+				"Wolf": {
+					"is_baby: true": 0.3187500089406967,
+					"is_baby: false": 0.6375000178813934
+				},
+				"Zoglin": {
+					"is_baby: true": 0.49999998807907103,
+					"is_baby: false": 1.2499999761581422
+				},
+				"Zombie": {
+					"is_baby: true": 0.7312500178813934,
+					"is_baby: false": 1.4625000357627869
+				},
+				"Zombie Horse": {
+					"is_baby: true": 0.6000000089406967,
+					"is_baby: false": 1.2000000178813934
+				},
+				"Zombie Villager": {
+					"is_baby: true": 0.7312500178813934,
+					"is_baby: false": 1.4625000357627869
+				},
+				"Zombified Piglin": {
+					"is_baby: true": 0.7312500178813934,
+					"is_baby: false": 1.4625000357627869
+				}
+			},
+			"default_value": 0
+		},
+		"saved_on_reload": {
+			"property_name": "Saved On Reload",
+			"property_description": "Whether this is saved to the world. Entities that are not saved are lost when unloaded.",
+			"entries": {
+				"Fishing Bobber": "No",
+				"Leash Knot": "No",
+				"Lightning Bolt": "No",
+				"Player": "No"
+			},
+			"default_value": "Yes"
+		},
+		"shearable": {
+			"property_name": "Shearable",
+			"property_description": "",
+			"entries": {
+				"Mooshroom": {
+					"is_baby: true": "No",
+					"is_baby: false": "Yes"
+				},
+				"Sheep": {
+					"is_baby: true, sheared: false<br>is_baby: false, sheared: true<br>is_baby: true, sheared: true": "No",
+					"is_baby: false, sheared: false": "Yes"
+				},
+				"Snow Golem": {
+					"has_pumpkin: true": "Yes",
+					"has_pumpkin: false": "No"
+				}
+			},
+			"default_value": "No"
+		},
+		"step_height": {
+			"property_name": "Step Height",
+			"property_description": "",
+			"entries": {
+				"Area Effect Cloud": 0,
+				"Armor Stand": 0,
+				"Arrow": 0,
+				"Axolotl": 1,
+				"Block Display": 0,
+				"Boat": 0,
+				"Camel": 1.5,
+				"Boat with Chest": 0,
+				"Minecart with Chest": 0,
+				"Minecart with Command Block": 0,
+				"Donkey": 1,
+				"Dragon Fireball": 0,
+				"Drowned": 1,
+				"Thrown Egg": 0,
+				"End Crystal": 0,
+				"Thrown Ender Pearl": 0,
+				"Enderman": 1,
+				"Evoker Fangs": 0,
+				"Thrown Bottle o' Enchanting": 0,
+				"Experience Orb": 0,
+				"Eye of Ender": 0,
+				"Falling Block": 0,
+				"Fireball": 0,
+				"Firework Rocket": 0,
+				"Fishing Bobber": 0,
+				"Frog": 1,
+				"Minecart with Furnace": 0,
+				"Glow Item Frame": 0,
+				"Minecart with Hopper": 0,
+				"Horse": 1,
+				"Interaction": 0,
+				"Iron Golem": 1,
+				"Item": 0,
+				"Item Display": 0,
+				"Item Frame": 0,
+				"Leash Knot": 0,
+				"Lightning Bolt": 0,
+				"Llama": 1,
+				"Llama Spit": 0,
+				"Marker": 0,
+				"Minecart": 0,
+				"Mule": 1,
+				"Painting": 0,
+				"Thrown Potion": 0,
+				"Ravager": 1,
+				"Shulker Bullet": 0,
+				"Skeleton Horse": 1,
+				"Small Fireball": 0,
+				"Snowball": 0,
+				"Minecart with Spawner": 0,
+				"Spectral Arrow": 0,
+				"Text Display": 0,
+				"Primed TNT": 0,
+				"Minecart with TNT": 0,
+				"Trader Llama": 1,
+				"Trident": 0,
+				"Turtle": 1,
+				"Wither Skull": 0,
+				"Zombie Horse": 1
+			},
+			"default_value": 0.6
+		},
+		"summonable": {
+			"property_name": "Summonable",
+			"property_description": "",
+			"entries": {
+				"Fishing Bobber": "No",
+				"Player": "No"
+			},
+			"default_value": "Yes"
 		}
 	}
 }
