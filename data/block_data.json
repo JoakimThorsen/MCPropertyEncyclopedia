@@ -10504,19 +10504,20 @@
 				"Buttons": "Yes",
 				"Daylight Detector": "Yes",
 				"Detector Rail": "Yes",
+				"Jukebox": "Yes",
 				"Lectern": "Yes",
 				"Lever": "Yes",
 				"Lightning Rod": "Yes",
 				"Observer": {
-					"facing: north<br>facing: east<br>facing: west<br>facing: up<br>facing: down": "No",
+					"facing: down<br>facing: east<br>facing: north<br>facing: up<br>facing: west": "No",
 					"facing: south": "Yes"
 				},
 				"Pressure Plates": "Yes",
 				"Redstone Comparator": "Yes",
 				"Redstone Dust": "Yes",
 				"Redstone Repeater": {
-					"facing: north<br>facing: south": "Yes",
-					"facing: west<br>facing: east": "No"
+					"facing: east<br>facing: west": "No",
+					"facing: north<br>facing: south": "Yes"
 				},
 				"Redstone Torch": "Yes",
 				"Sculk Sensor": "Yes",
