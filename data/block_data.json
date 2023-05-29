@@ -14186,6 +14186,290 @@
 				"Soul Sand": "Yes"
 			},
 			"default_value": "No"
+		},
+		"block_render_type": {
+			"property_name": "Block Render Type",
+			"property_description": "",
+			"relative_gradient": true,
+			"entries": {
+				"Activator Rail": "cutout",
+				"Amethyst Cluster": "cutout",
+				"Azalea": "cutout",
+				"Bamboo": "cutout",
+				"Beacon": "cutout",
+				"Beds": "cutout",
+				"Big Dripleaf": "cutout",
+				"Brewing Stand": "cutout",
+				"Cactus": "cutout",
+				"Campfire": "cutout",
+				"Cave Vines": "cutout",
+				"Chain": "cutout_mipped",
+				"Chorus Flower": "cutout",
+				"Chorus Plant": "cutout",
+				"Cobweb": "cutout",
+				"Cocoa": "cutout",
+				"Conduit": "cutout",
+				"Coral Fans": "cutout",
+				"Corals": "cutout",
+				"Crops": "cutout",
+				"Dead Bush": "cutout",
+				"Detector Rail": "cutout",
+				"Doors": "cutout",
+				"End Rod": "cutout",
+				"Fern": "cutout",
+				"Fire": "cutout",
+				"Flower Pot": "cutout",
+				"Flowers": "cutout",
+				"Frogspawn": "cutout",
+				"Frosted Ice": "translucent",
+				"Fungi": "cutout",
+				"Glass": "cutout",
+				"Glass Pane": "cutout_mipped",
+				"Glow Lichen": "cutout",
+				"Grass": "cutout",
+				"Grass Block": "cutout_mipped",
+				"Hanging Roots": "cutout",
+				"Honey Block": "translucent",
+				"Hopper": "cutout_mipped",
+				"Ice": "translucent",
+				"Iron Bars": "cutout_mipped",
+				"Kelp": "cutout",
+				"Ladder": "cutout",
+				"Lantern": "cutout",
+				"Lightning Rod": "cutout",
+				"Lily Pad": "cutout",
+				"Logs": {
+					"Acacia Log<br>Birch Log<br>Cherry Log<br>Dark Oak Log<br>Jungle Log<br>Oak Log<br>Spruce Log<br>Stripped Acacia Log<br>Stripped Birch Log<br>Stripped Cherry Log<br>Stripped Dark Oak Log<br>Stripped Jungle Log<br>Stripped Mangrove Log<br>Stripped Oak Log<br>Stripped Spruce Log": "solid",
+					"Mangrove Log": "cutout"
+				},
+				"Mangrove Propagule": "cutout",
+				"Mangrove Roots": "cutout_mipped",
+				"Moss Carpet": "cutout",
+				"Mushrooms": "cutout",
+				"Nether Portal": "translucent",
+				"Nether Sprouts": "cutout",
+				"Nether Wart": "cutout",
+				"Pink Petals": "cutout",
+				"Pointed Dripstone": "cutout",
+				"Powered Rail": "cutout",
+				"Rail": "cutout",
+				"Redstone Comparator": "cutout",
+				"Redstone Dust": "cutout",
+				"Redstone Repeater": "cutout",
+				"Redstone Torch": "cutout",
+				"Roots": "cutout",
+				"Saplings": "cutout",
+				"Scaffolding": "cutout",
+				"Sculk Sensor": "cutout",
+				"Sculk Shrieker": "cutout",
+				"Sculk Vein": "cutout",
+				"Sea Pickle": "cutout",
+				"Seagrass": "cutout",
+				"Slime Block": "translucent",
+				"Small Dripleaf": "cutout",
+				"Spawner": "cutout",
+				"Spore Blossom": "cutout",
+				"Stained Glass": "translucent",
+				"Stained Glass Panes": "translucent",
+				"Stonecutter": "cutout",
+				"Sugar Cane": "cutout",
+				"Sweet Berry Bush": "cutout",
+				"Tinted Glass": "translucent",
+				"Torch": "cutout",
+				"Torchflower": "cutout",
+				"Torchflower Crop": "cutout",
+				"Trapdoors": "cutout",
+				"Tripwire": "tripwire",
+				"Tripwire Hook": "cutout_mipped",
+				"Turtle Egg": "cutout",
+				"Twisting Vines": "cutout",
+				"Vines": "cutout",
+				"Water": {
+					"Bubble Column": "translucent",
+					"Water": "solid"
+				},
+				"Weeping Vines": "cutout"
+			},
+			"default_value": "solid"
+		},
+		"fluid_render_type": {
+			"property_name": "Fluid Render Type",
+			"property_description": "",
+			"relative_gradient": true,
+			"entries": {
+				"Activator Rail": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Amethyst Cluster": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Big Dripleaf": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Campfire": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Candles": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Chain": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Chest": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Conduit": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Coral Fans": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Corals": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Decorated Pot": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Detector Rail": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Ender Chest": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Fences": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Glass Pane": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Glow Lichen": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Hanging Roots": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Hanging Signs": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Iron Bars": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Kelp": "translucent",
+				"Ladder": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Lantern": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Leaves": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Light Block": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Lightning Rod": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Mangrove Propagule": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Mangrove Roots": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Pointed Dripstone": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Powered Rail": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Rail": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Scaffolding": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Sculk Sensor": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Sculk Shrieker": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Sculk Vein": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Sea Pickle": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Seagrass": "translucent",
+				"Signs": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Slabs": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Small Dripleaf": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Stained Glass Panes": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Stairs": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Trapdoors": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Trapped Chest": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Walls": {
+					"waterlogged: false": "solid",
+					"waterlogged: true": "translucent"
+				},
+				"Water": "translucent"
+			},
+			"default_value": "solid"
 		}
 	}
 }
