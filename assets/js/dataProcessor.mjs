@@ -1,5 +1,6 @@
-export function dataProcessor(data, selection_arr, sort_arr, filter_obj, search, page) {
-    
+import { getFirstValue, getSortIndex, isNum } from './dataUtilities.mjs';
+
+export function dataProcessor(data, selection_arr, sort_arr, filter_obj, search, page, invert_filter = false) {
     let output_data = [];
     
     // Filtering and "pivoting" (from data to output_data)
@@ -11,7 +12,7 @@ export function dataProcessor(data, selection_arr, sort_arr, filter_obj, search,
             const selected_element = property.entries[entry];
             const size_factor = property.size_factor ?? 1;
 
-            output_entry[property_id] = pivot_element(selected_element, property, property_id, size_factor);
+            output_entry[property_id] = pivot_element(selected_element, property, property_id, size_factor, filter_obj, invert_filter);
 
             if (output_entry[property_id] === undefined) {
                 filtered = true;
@@ -74,8 +75,8 @@ export function dataProcessor(data, selection_arr, sort_arr, filter_obj, search,
                 let a = first[property];
                 let b = second[property];
 
-                a = get_nested_value(a);
-                b = get_nested_value(b);
+                a = getFirstValue(a);
+                b = getFirstValue(b);
                 
                 let i = getSortIndex(a, b);
                 
@@ -135,13 +136,13 @@ export function dataProcessor(data, selection_arr, sort_arr, filter_obj, search,
     return { output_data, exportable_list, exportable_data, entry_count };
 }
 
-function pivot_element(input_element, property, property_id, size_factor) {
+function pivot_element(input_element, property, property_id, size_factor, filter_obj, invert_filter) {
     if (typeof input_element == 'object') {
         if (Array.isArray(input_element)) {
             const output_arr = [];
 
             input_element.forEach(element => {
-                const value = pivot_element(element, property, property_id, size_factor);
+                const value = pivot_element(element, property, property_id, size_factor, filter_obj, invert_filter);
                 if (value !== undefined) {
                     output_arr.push(value);
                 }
@@ -153,7 +154,7 @@ function pivot_element(input_element, property, property_id, size_factor) {
         } else {
             const output_obj = {};
             Object.keys(input_element).forEach(variant => {
-                const value = pivot_element(input_element[variant], property, property_id, size_factor);
+                const value = pivot_element(input_element[variant], property, property_id, size_factor, filter_obj, invert_filter);
                 if (value !== undefined) {
                     output_obj[variant] = value;
                 }
@@ -168,7 +169,7 @@ function pivot_element(input_element, property, property_id, size_factor) {
         if (isNum(input_element) && size_factor !== 1) {
             input_element *= size_factor;
         }
-        if ((filter_obj[property_id] || []).includes(String(input_element))) {
+        if ((filter_obj[property_id] || []).includes(String(input_element)) ^ invert_filter) {
             return;
         } else {
             return input_element;
@@ -200,25 +201,5 @@ function split(row, path, property, split_element_next) {
         }
     } else {
         split_element_next.push(row_copy);
-    }
-}
-
-function get_nested_value(value) {
-    if (typeof value == 'object') {
-        return get_nested_value(Object.values(value)[0]);
-    } else {
-        return value;
-    }
-}
-
-function getSortIndex(a, b) {
-    if (isNum(a) && isNum(b)) {
-        return a - b;
-    } else if (isNum(b)) {
-        return -1;
-    } else if (isNum(a)) {
-        return 1;
-    } else {
-        return (a < b ? -1 : (a > b ? 1 : 0));
     }
 }
