@@ -644,6 +644,13 @@
 			]
 		},
 		{
+			"category": "Render Type",
+			"contents": [
+				"block_render_type",
+				"fluid_render_type"
+			]
+		},
+		{
 			"category": "Material Properties",
 			"contents": [
 				"material",
