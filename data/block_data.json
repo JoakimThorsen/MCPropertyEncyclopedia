@@ -549,7 +549,6 @@
 			"contents": [
 				"affects_movement_speed",
 				"inflicts_damage",
-				"enderman_holdable",
 				"dragon_immune",
 				"wither_immune",
 				"suffocates_mobs"
@@ -6725,38 +6724,6 @@
 				"Trapped Chest": "Yes",
 				"Walls": "Yes",
 				"Water": "Inherent"
-			}
-		},
-		"enderman_holdable": {
-			"property_name": "Enderman holdable",
-			"property_description": "Whether endermen can pick up and hold this block.",
-			"default_value": "No",
-			"default_selection": false,
-			"entries":{
-				"Cactus": "Yes",
-				"Clay": "Yes",
-				"Coarse Dirt": "Yes",
-				"Dirt": "Yes",
-				"Flowers": {
-					"Small": "Yes",
-					"Tall": "No"
-				},
-				"Fungi": "Yes",
-				"Grass Block": "Yes",
-				"Gravel": "Yes",
-				"Melon": "Yes",
-				"Moss Block": "Yes",
-				"Mud": "Yes",
-				"Muddy Mangrove Roots": "Yes",
-				"Mushrooms": "Yes",
-				"Mycelium": "Yes",
-				"Nylium": "Yes",
-				"Podzol": "Yes",
-				"Pumpkin": "Yes",
-				"Red Sand": "Yes",
-				"Roots": "Yes",
-				"Sand": "Yes",
-				"TNT": "Yes"
 			}
 		},
 		"dragon_immune": {
