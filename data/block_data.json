@@ -521,7 +521,7 @@
 	},
 	"property_structure": [
 		"variants",
-		"conductivity",
+		"conductive",
 		"movable",
 		"sticky",
 		"waterloggable",
@@ -564,7 +564,7 @@
 				"map_color"
 			]
 		},
-		"collision",
+		"has_collision",
 		"full_cube",
 		{
 			"category": "Block size",
@@ -615,7 +615,7 @@
 		{
 			"category": "Light",
 			"contents": [
-				"luminosity",
+				"luminance",
 				"opaque",
 				"opacity",
 				"blocks_beacon_beam"
@@ -1139,7 +1139,7 @@
 				"Wool": "Wool"
 			}
 		},
-		"conductivity": { 
+		"conductive": { 
 			"property_name": "Conductive",
 			"property_description": "Whether or not a redstone component can be powered through this block.",
 			"default_value": "No",
@@ -1280,7 +1280,7 @@
 				"Wool": "Yes"
 			}
 		},
-		"collision": { 
+		"has_collision": { 
 			"property_name": "Has Collision",
 			"property_description": "Whether the block has a solid collision that stops entities like players.</p><p>Fluids are listed with a separate value.",
 			"default_value": "Yes",
@@ -2613,8 +2613,8 @@
 				"Wool": "No"
 			}
 		},
-		"luminosity": {
-			"property_name": "Luminosity",
+		"luminance": {
+			"property_name": "Luminance",
 			"property_description": "How much light the block emits.",
 			"default_value": "No",
 			"default_selection": true,
@@ -10550,6 +10550,7 @@
 		},
 		"emits_power": {
 			"property_name": "Emits Power",
+			"property_description": "Whether this block can emit redstone signals.",
 			"default_value": "No",
 			"default_selection": false,
 			"entries": {
@@ -11566,6 +11567,7 @@
 				"Crops": "No",
 				"Daylight Detector": "No",
 				"Dead Bush": "No",
+				"Decorated Pot": "No",
 				"Detector Rail": "No",
 				"Dirt Path": "No",
 				"Doors": "No",
@@ -11592,6 +11594,7 @@
 				"Grass": "No",
 				"Grindstone": "No",
 				"Hanging Roots": "No",
+				"Hanging Signs": "No",
 				"Heads": "No",
 				"Honey Block": "No",
 				"Hopper": "No",
@@ -11614,12 +11617,13 @@
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
+				"Pink Petals": "No",
 				"Piston": {
-					"Sticky Piston<br>Piston": {
-						"extended: true": "No",
-						"extended: false": "Yes"
-					},
-					"Piston Head<br>Moving Piston": "No"
+					"Moving Piston<br>Piston Head": "No",
+					"Piston<br>Sticky Piston": {
+						"extended: false": "Yes",
+						"extended: true": "No"
+					}
 				},
 				"Pointed Dripstone": "No",
 				"Powder Snow": "No",
@@ -11641,7 +11645,7 @@
 				"Shulker Box": "No",
 				"Signs": "No",
 				"Slabs": {
-					"type: top<br>type: bottom": "No",
+					"type: bottom<br>type: top": "No",
 					"type: double": "Yes"
 				},
 				"Slime Block": "No",
@@ -11660,6 +11664,8 @@
 				"Sugar Cane": "No",
 				"Sweet Berry Bush": "No",
 				"Torch": "No",
+				"Torchflower": "No",
+				"Torchflower Crop": "No",
 				"Trapdoors": "No",
 				"Trapped Chest": "No",
 				"Tripwire": "No",
