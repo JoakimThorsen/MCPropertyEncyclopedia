@@ -639,8 +639,7 @@
 			"contents": [
 				"survival_available",
 				"generates_in_structures",
-				"peaceful_available (Todo)",
-				"skyblock_available (Todo)"
+				"exists_as_item"
 			]
 		},
 		{
@@ -7508,6 +7507,61 @@
 				"Shulker Box": "Yes",
 				"Smoker": "Yes",
 				"Trapped Chest": "Yes"
+			}
+		},
+		"exists_as_item": {
+			"property_name": "Exists As Item",
+			"property_description": "Whether this block has a direct item-equivalent.",
+			"default_value": "Yes",
+			"entries": {
+				"Air": "No",
+				"Bamboo": {
+					"Bamboo": "Yes",
+					"Bamboo Shoot": "No"
+				},
+				"Cake": {
+					"Cake": "Yes",
+					"Cake with Black Candle<br>Cake with Blue Candle<br>Cake with Brown Candle<br>Cake with Candle<br>Cake with Cyan Candle<br>Cake with Gray Candle<br>Cake with Green Candle<br>Cake with Light Blue Candle<br>Cake with Light Gray Candle<br>Cake with Lime Candle<br>Cake with Magenta Candle<br>Cake with Orange Candle<br>Cake with Pink Candle<br>Cake with Purple Candle<br>Cake with Red Candle<br>Cake with White Candle<br>Cake with Yellow Candle": "No"
+				},
+				"Cave Vines": {
+					"Cave Vines": "Yes",
+					"Cave Vines Plant": "No"
+				},
+				"Crops": {
+					"Attached Melon Stem<br>Attached Pumpkin Stem": "No",
+					"Beetroots<br>Carrots<br>Melon Stem<br>Potatoes<br>Pumpkin Stem<br>Wheat Crops": "Yes"
+				},
+				"End Gateway": "No",
+				"End Portal": "No",
+				"Fire": "No",
+				"Flower Pot": {
+					"Flower Pot": "Yes",
+					"Potted Acacia Sapling<br>Potted Allium<br>Potted Azalea<br>Potted Azure Bluet<br>Potted Bamboo<br>Potted Birch Sapling<br>Potted Blue Orchid<br>Potted Brown Mushroom<br>Potted Cactus<br>Potted Cherry Sapling<br>Potted Cornflower<br>Potted Crimson Fungus<br>Potted Crimson Roots<br>Potted Dandelion<br>Potted Dark Oak Sapling<br>Potted Dead Bush<br>Potted Fern<br>Potted Flowering Azalea<br>Potted Jungle Sapling<br>Potted Lily of the Valley<br>Potted Mangrove Propagule<br>Potted Oak Sapling<br>Potted Orange Tulip<br>Potted Oxeye Daisy<br>Potted Pink Tulip<br>Potted Poppy<br>Potted Red Mushroom<br>Potted Red Tulip<br>Potted Spruce Sapling<br>Potted Torchflower<br>Potted Warped Fungus<br>Potted Warped Roots<br>Potted White Tulip<br>Potted Wither Rose": "No"
+				},
+				"Frosted Ice": "No",
+				"Kelp": {
+					"Kelp": "Yes",
+					"Kelp Plant": "No"
+				},
+				"Lava": "No",
+				"Nether Portal": "No",
+				"Piston": {
+					"Moving Piston<br>Piston Head": "No",
+					"Piston<br>Sticky Piston": "Yes"
+				},
+				"Seagrass": {
+					"Seagrass": "Yes",
+					"Tall Seagrass": "No"
+				},
+				"Twisting Vines": {
+					"Twisting Vines": "Yes",
+					"Twisting Vines Plant": "No"
+				},
+				"Water": "No",
+				"Weeping Vines": {
+					"Weeping Vines": "Yes",
+					"Weeping Vines Plant": "No"
+				}
 			}
 		},
 		"survival_available": {
