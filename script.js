@@ -184,9 +184,13 @@ function display_selection() {
     $('#selection').children('li').remove();
     if (selection_arr === null) {
         selection_arr = [];
-        for (let [property_name, value] of Object.entries(data.properties)) {
-            if (value.default_selection ?? false) {
-                selection_arr.push(property_name);
+        if(typeof data.default_selection !== undefined) {
+            selection_arr = data.default_selection;
+        } else {
+            for (let [property_name, value] of Object.entries(data.properties)) {
+                if (value.default_selection ?? false) {
+                    selection_arr.push(property_name);
+                }
             }
         }
     }
