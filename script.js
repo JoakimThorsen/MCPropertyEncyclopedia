@@ -81,6 +81,9 @@ async function initialize_page() {
     if (!localStorage.getItem("MCProperty-discord-promoted")) {
         $(".shameless-self-promo").removeClass("display-none")
     }
+    if (!localStorage.getItem("MCProperty-1-20-announcement")) {
+        $(".MCProperty-1-20-announcement").removeClass("display-none")
+    }
     
     $(window).on('popstate', function () {
         location.reload(true);
@@ -184,7 +187,7 @@ function display_selection() {
     $('#selection').children('li').remove();
     if (selection_arr === null) {
         selection_arr = [];
-        if(typeof data.default_selection !== undefined) {
+        if(data.default_selection !== undefined) {
             selection_arr = data.default_selection;
         } else {
             for (let [property_name, value] of Object.entries(data.properties)) {
@@ -532,8 +535,8 @@ function scrollToTop() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-function stopPromo() {
-    localStorage.setItem("MCProperty-discord-promoted", true)
+function stopPromo(popup_type = "MCProperty-discord-promoted") {
+    localStorage.setItem(popup_type, true)
 }
 
 function highlightSearchString(input, search) {
