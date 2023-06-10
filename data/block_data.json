@@ -2225,7 +2225,7 @@
 				"Chest": 16,
 				"Chorus Plant": {
 					"Connected Bottom": 16,
-					"Connected Top (Internal)": 3,
+					"Connected Top": 3,
 					"Main Body": 13
 				},
 				"Cobweb": "Not Applicable",
@@ -2537,7 +2537,7 @@
 				"Weeping Vines": "Not Applicable"
 			},
 			"property_description": "The block's downwards-facing collision surfaces.</p><p>Includes internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
-			"property_name": "Collision Bottom (All)",
+			"property_name": "Collision Bottom (All) (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
 			"size_type": "pixel"
 		},
 		"collision_bottom_external": {
@@ -5085,7 +5085,7 @@
 				},
 				"Chest": 14,
 				"Chorus Plant": {
-					"Connected Bottom (Internal)": 3,
+					"Connected Bottom": 3,
 					"Connected Top": 16,
 					"Main Body": 13
 				},
@@ -5708,7 +5708,7 @@
 				"Weeping Vines": "Not Applicable"
 			},
 			"property_description": "The block's upwards-facing collision surfaces.</p><p>Does not include internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
-			"property_name": "Height (External)",
+			"property_name": "Height (External) (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
 			"size_type": "pixel"
 		},
 		"ignite_odds": {
@@ -5914,6 +5914,8 @@
 					"Bamboo": "With Any Sword",
 					"Bamboo Shoot": "With Any Sword"
 				},
+				"Bamboo Block": "No",
+				"Bamboo Mosaic": "No",
 				"Banners": "With eff. V Diamond",
 				"Barrel": "No",
 				"Barrier": "Unbreakable",
@@ -5951,6 +5953,7 @@
 				"Cactus": "No",
 				"Cake": "No",
 				"Calcite": "With eff. V Diamond",
+				"Calibrated Sculk Sensor": "With Haste II",
 				"Campfire": "No",
 				"Candles": "No",
 				"Carpets": "No",
@@ -5959,6 +5962,7 @@
 				"Cave Vines": "By Hand",
 				"Chain": "No",
 				"Chest": "No",
+				"Chiseled Bookshelf": "With Haste II",
 				"Chorus Flower": "With eff. V Diamond",
 				"Chorus Plant": "With eff. V Diamond",
 				"Clay": "With eff. V Diamond",
@@ -5982,6 +5986,7 @@
 				"Crying Obsidian": "No",
 				"Daylight Detector": "With eff. V Diamond",
 				"Dead Bush": "By Hand",
+				"Decorated Pot": "By Hand",
 				"Deepslate": "No",
 				"Detector Rail": "With eff. V Diamond",
 				"Diamond Ore": "No",
@@ -6029,6 +6034,7 @@
 				"Gravel": "With eff. V Diamond",
 				"Grindstone": "No",
 				"Hanging Roots": "By Hand",
+				"Hanging Signs": "With eff. V Diamond",
 				"Hay Bale": "With eff. V Diamond",
 				"Heads": "No",
 				"Honey Block": "By Hand",
@@ -6080,7 +6086,10 @@
 				"Obsidian": "No",
 				"Packed Ice": "With eff. V Diamond",
 				"Packed Mud": "With eff. V Diamond",
+				"Pink Petals": "By Hand",
 				"Piston": "With Haste II",
+				"Pitcher Crop": "By Hand",
+				"Pitcher Plant": "By Hand",
 				"Planks": "No",
 				"Podzol": "With eff. V Diamond",
 				"Pointed Dripstone": "With Haste II",
@@ -6125,6 +6134,7 @@
 				"Small Dripleaf": "By Hand",
 				"Smithing Table": "No",
 				"Smoker": "No",
+				"Sniffer Egg": "No",
 				"Snow": "With eff. V Diamond",
 				"Snow Block": "With eff. V Diamond",
 				"Soul Sand": "With eff. V Diamond",
@@ -6143,15 +6153,20 @@
 				"Stone": "With Haste II",
 				"Stone Bricks": "With Haste II",
 				"Stonecutter": "No",
+				"Stripped Bamboo Block": "No",
 				"Structure Block": "Unbreakable",
 				"Structure Void": "By Hand",
 				"Sugar Cane": "By Hand",
+				"Suspicious Gravel": "With eff. V Diamond",
+				"Suspicious Sand": "With eff. V Diamond",
 				"Sweet Berry Bush": "By Hand",
 				"Target": "With eff. V Diamond",
 				"Terracotta": "With eff. V Gold",
 				"Tinted Glass": "No",
 				"TNT": "By Hand",
 				"Torch": "By Hand",
+				"Torchflower": "With eff. V Diamond",
+				"Torchflower Crop": "With eff. V Diamond",
 				"Trapdoors": "No",
 				"Trapped Chest": "No",
 				"Tripwire": "By Hand",
@@ -6172,7 +6187,7 @@
 				"Wool": "No"
 			},
 			"property_description": "Whether this block can be instant-mined when using at least:</p><p>-Efficiency V Diamond/<wbr>Netherite (Yes)</p><p>-Efficiency V Gold (With Gold)</p><p>-Haste 2 with Diamond or greater (With Haste)",
-			"property_name": "Instant-Mineable (NOT UPDATED TO 1.20; DEFAULT VALUE USED)"
+			"property_name": "Instant-Mineable"
 		},
 		"instant_shape_updater": {
 			"default_value": "No",
@@ -10358,6 +10373,12 @@
 		"spawnable": {
 			"default_value": "No",
 			"entries": {
+				"Bamboo Block": "Yes",
+				"Bamboo Mosaic": "Yes",
+				"Chiseled Bookshelf": "Yes",
+				"Stripped Bamboo Block": "Yes",
+				"Suspicious Gravel": "Yes",
+				"Suspicious Sand": "Yes",
 				"Ancient Debris": "Yes",
 				"Andesite": "Yes",
 				"Azalea": "Yes",
@@ -10515,7 +10536,7 @@
 				"Wool": "Yes"
 			},
 			"property_description": "Whether mobs can spawn on this block.",
-			"property_name": "Spawnable (NOT UPDATED TO 1.20; DEFAULT VALUE USED)"
+			"property_name": "Spawnable"
 		},
 		"sticky": {
 			"default_value": "Yes",
@@ -15893,7 +15914,7 @@
 				},
 				"Chest": 15,
 				"Chorus Plant": {
-					"Connected Back (Internal)": 3,
+					"Connected Back": 3,
 					"Connected Front": 16,
 					"Main Body": 13
 				},
@@ -15955,7 +15976,7 @@
 					"Open": "Not Applicable"
 				},
 				"Fences": {
-					"Connected Back (Internal)": 10,
+					"Connected Back": 10,
 					"Connected Front": 16,
 					"Middle": 10
 				},
@@ -15966,7 +15987,7 @@
 				"Frogspawn": "Not Applicable",
 				"Fungi": "Not Applicable",
 				"Glass Pane": {
-					"Connected Back (Internal)": 7,
+					"Connected Back": 7,
 					"Connected Front": 16,
 					"Main Body": 9
 				},
@@ -16205,7 +16226,7 @@
 				"Twisting Vines": "Not Applicable",
 				"Vines": "Not Applicable",
 				"Walls": {
-					"Connected Back (Unless Columnless)(Internal)": 4,
+					"Connected Back (Unless Columnless)": 4,
 					"Connected Front": 16,
 					"Connected Side": [
 						5,
@@ -16556,7 +16577,7 @@
 				"Weeping Vines": "Not Applicable"
 			},
 			"property_description": "The block's side-facing collision surfaces.</p><p>Does not include internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
-			"property_name": "Width (External)",
+			"property_name": "Width (External) (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
 			"size_type": "pixel"
 		},
 		"wiki_page": {
