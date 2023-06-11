@@ -10122,6 +10122,13 @@
 					".isOf(Blocks.FARMLAND)"
 				],
 				"Hanging Roots": ".isSideSolidFullSquare()",
+				"Hanging Signs": {
+					"Ceiling": ".isSideSolidFullSquare()",
+					"Wall": [
+						".isSideSolidFullSquare()",
+						".isIn(BlockTags.WALL_SIGNS)"
+					]
+				},
 				"Ladder": ".isSideSolidFullSquare()",
 				"Lantern": ".sideCoversSmallSquare()",
 				"Lever": ".isSideSolidFullSquare()",
@@ -10146,12 +10153,24 @@
 					".isOf(Blocks.FARMLAND)"
 				],
 				"Nether Wart": ".isOf(Blocks.SOUL_SAND)",
+				"Pink Petals": [
+					".isIn(BlockTags.DIRT)",
+					".isOf(Blocks.FARMLAND)"
+				],
 				"Piston": {
 					"Base": ".isOf(Blocks.MOVING_PISTON)",
 					"Head": [
 						".isOf(Blocks.PISTON)",
 						".isOf(Blocks.STICKY_PISTON)"
 					]
+				},
+				"Pitcher Crop": ".isOf(Blocks.FARMLAND)",
+				"Pitcher Plant": {
+					"Bottom": [
+						".isIn(BlockTags.DIRT)",
+						".isOf(Blocks.FARMLAND)"
+					],
+					"Top": ".isOf(this)"
 				},
 				"Pointed Dripstone": [
 					".isSideSolidFullSquare()",
@@ -10232,6 +10251,14 @@
 					".isOf(Blocks.FARMLAND)"
 				],
 				"Torch": ".sideCoversSmallSquare()",
+				"Torchflower": [
+					".isIn(BlockTags.DIRT)",
+					".isOf(Blocks.FARMLAND)"
+				],
+				"Torchflower Crop": [
+					".isIn(BlockTags.DIRT)",
+					".isOf(Blocks.FARMLAND)"
+				],
 				"Tripwire Hook": ".isSideSolidFullSquare()",
 				"Twisting Vines": [
 					".isOf(this.getStem())",
@@ -10256,7 +10283,7 @@
 					".isSideSolidFullSquare()"
 				]
 			},
-			"property_name": "Placement conditions (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
+			"property_name": "Placement conditions",
 			"relative_gradient": true
 		},
 		"redirects_redstone": {
