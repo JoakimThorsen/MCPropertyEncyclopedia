@@ -2766,6 +2766,10 @@
 					}
 				},
 				"Hanging Roots": "Not Applicable",
+				"Hanging Signs": {
+					"Hanging": 2,
+					"Wall": "Not Applicable"
+				},
 				"Heads": {
 					"Floor": 16,
 					"Wall": [
@@ -2838,6 +2842,7 @@
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
 				"Nether Wart": "Not Applicable",
+				"Pink Petals": "Not Applicable",
 				"Piston": {
 					"Base": {
 						"Downwards": [
@@ -2873,6 +2878,14 @@
 					},
 					"Retracted": 16
 				},
+				"Pitcher Crop": {
+					"age: 0": 17,
+					"age: 1<br>age: 2<br>age: 3<br>age: 4": {
+						"half: lower": 17,
+						"half: upper": "Not Applicable"
+					}
+				},
+				"Pitcher Plant": "Not Applicable",
 				"Pointed Dripstone": {
 					"Downwards Tip": 11,
 					"Not Tip Or Upwards": 16
@@ -2956,6 +2969,8 @@
 				"Sugar Cane": "Not Applicable",
 				"Sweet Berry Bush": "Not Applicable",
 				"Torch": "Not Applicable",
+				"Torchflower": "Not Applicable",
+				"Torchflower Crop": "Not Applicable",
 				"Trapdoors": {
 					"Bottom Or Opened": 16,
 					"Top, Closed": 3
@@ -2971,7 +2986,7 @@
 				"Weeping Vines": "Not Applicable"
 			},
 			"property_description": "The block's downwards-facing collision surfaces.</p><p>Includes internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
-			"property_name": "Collision Bottom (All) (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
+			"property_name": "Collision Bottom (All)",
 			"size_type": "pixel"
 		},
 		"collision_bottom_external": {
@@ -3095,6 +3110,10 @@
 					}
 				},
 				"Hanging Roots": "Not Applicable",
+				"Hanging Signs": {
+					"Hanging": 2,
+					"Wall": "Not Applicable"
+				},
 				"Heads": {
 					"Floor": 16,
 					"Wall": 12
@@ -3127,6 +3146,7 @@
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
 				"Nether Wart": "Not Applicable",
+				"Pink Petals": "Not Applicable",
 				"Piston": {
 					"Base": {
 						"Downwards": 12,
@@ -3146,6 +3166,14 @@
 					},
 					"Retracted": 16
 				},
+				"Pitcher Crop": {
+					"age: 0": 17,
+					"age: 1<br>age: 2<br>age: 3<br>age: 4": {
+						"half: lower": 17,
+						"half: upper": "Not Applicable"
+					}
+				},
+				"Pitcher Plant": "Not Applicable",
 				"Pointed Dripstone": {
 					"Downwards Tip": 11,
 					"Not Tip Or Upwards": 16
@@ -3190,6 +3218,8 @@
 				"Sugar Cane": "Not Applicable",
 				"Sweet Berry Bush": "Not Applicable",
 				"Torch": "Not Applicable",
+				"Torchflower": "Not Applicable",
+				"Torchflower Crop": "Not Applicable",
 				"Trapdoors": {
 					"Bottom Or Opened": 16,
 					"Top, Closed": 3
@@ -3205,7 +3235,7 @@
 				"Weeping Vines": "Not Applicable"
 			},
 			"property_description": "The block's downwards-facing collision surfaces.</p><p>Does not include internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
-			"property_name": "Collision Bottom (External) (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
+			"property_name": "Collision Bottom (External)",
 			"size_type": "pixel"
 		},
 		"comparator_output": {
@@ -5504,6 +5534,7 @@
 					"Cake": 8,
 					"Candle On Cake": 14
 				},
+				"Calibrated Sculk Sensor": 8,
 				"Campfire": 7,
 				"Candles": 6,
 				"Carpets": 1,
@@ -5635,6 +5666,10 @@
 					}
 				},
 				"Hanging Roots": "Not Applicable",
+				"Hanging Signs": {
+					"Hanging": "Not Applicable",
+					"Wall": 16
+				},
 				"Heads": {
 					"On Ground": 8,
 					"On Wall": [
@@ -5718,6 +5753,7 @@
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
 				"Nether Wart": "Not Applicable",
+				"Pink Petals": "Not Applicable",
 				"Piston": {
 					"Base": {
 						"Downwards": [
@@ -5753,6 +5789,14 @@
 					},
 					"Retracted": 16
 				},
+				"Pitcher Crop": {
+					"age: 0": 3,
+					"age: 1<br>age: 2<br>age: 3<br>age: 4": {
+						"half: lower": 5,
+						"half: upper": "Not Applicable"
+					}
+				},
+				"Pitcher Plant": "Not Applicable",
 				"Pointed Dripstone": {
 					"Not Tip Or Downwards": 16,
 					"Upwards Tip": 11
@@ -5846,6 +5890,8 @@
 				"Sugar Cane": "Not Applicable",
 				"Sweet Berry Bush": "Not Applicable",
 				"Torch": "Not Applicable",
+				"Torchflower": "Not Applicable",
+				"Torchflower Crop": "Not Applicable",
 				"Trapdoors": {
 					"Bottom, Closed": 3,
 					"Top Or Opened": 16
@@ -5864,7 +5910,7 @@
 				"Weeping Vines": "Not Applicable"
 			},
 			"property_description": "The block's upwards-facing collision surfaces.</p><p>Includes internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
-			"property_name": "Height (All) (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
+			"property_name": "Height (All)",
 			"size_type": "pixel"
 		},
 		"height_external": {
@@ -5925,6 +5971,7 @@
 					"Cake": 8,
 					"Candle On Cake": 14
 				},
+				"Calibrated Sculk Sensor": 8,
 				"Campfire": 7,
 				"Candles": 6,
 				"Carpets": 1,
@@ -6008,6 +6055,10 @@
 					}
 				},
 				"Hanging Roots": "Not Applicable",
+				"Hanging Signs": {
+					"Hanging": "Not Applicable",
+					"Wall": 16
+				},
 				"Heads": {
 					"On Ground": 8,
 					"On Wall": 12
@@ -6049,6 +6100,7 @@
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
 				"Nether Wart": "Not Applicable",
+				"Pink Petals": "Not Applicable",
 				"Piston": {
 					"Base": {
 						"Downwards & Horizontal": 16,
@@ -6068,6 +6120,14 @@
 					},
 					"Retracted": 16
 				},
+				"Pitcher Crop": {
+					"age: 0": 3,
+					"age: 1<br>age: 2<br>age: 3<br>age: 4": {
+						"half: lower": 5,
+						"half: upper": "Not Applicable"
+					}
+				},
+				"Pitcher Plant": "Not Applicable",
 				"Pointed Dripstone": {
 					"Not Tip Or Downwards": 16,
 					"Upwards Tip": 11
@@ -6126,6 +6186,8 @@
 				"Sugar Cane": "Not Applicable",
 				"Sweet Berry Bush": "Not Applicable",
 				"Torch": "Not Applicable",
+				"Torchflower": "Not Applicable",
+				"Torchflower Crop": "Not Applicable",
 				"Trapdoors": {
 					"Bottom, Closed": 3,
 					"Top Or Opened": 16
@@ -6144,7 +6206,7 @@
 				"Weeping Vines": "Not Applicable"
 			},
 			"property_description": "The block's upwards-facing collision surfaces.</p><p>Does not include internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
-			"property_name": "Height (External) (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
+			"property_name": "Height (External)",
 			"size_type": "pixel"
 		},
 		"ignite_odds": {
@@ -16648,6 +16710,7 @@
 				"Crops": "Not Applicable",
 				"Daylight Detector": 16,
 				"Dead Bush": "Not Applicable",
+				"Decorated Pot": 15,
 				"Detector Rail": "Not Applicable",
 				"Dirt Path": 16,
 				"Doors": {
@@ -16738,6 +16801,10 @@
 					}
 				},
 				"Hanging Roots": "Not Applicable",
+				"Hanging Signs": {
+					"Front": 10,
+					"Side": 16
+				},
 				"Heads": {
 					"Floor": [
 						8,
@@ -16823,6 +16890,7 @@
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
 				"Nether Wart": "Not Applicable",
+				"Pink Petals": "Not Applicable",
 				"Piston": {
 					"Base": {
 						"Back": [
@@ -16859,6 +16927,14 @@
 					},
 					"Retracted": 16
 				},
+				"Pitcher Crop": {
+					"age: 0": 11,
+					"age: 1<br>age: 2<br>age: 3<br>age: 4": {
+						"half: lower": 13,
+						"half: upper": "Not Applicable"
+					}
+				},
+				"Pitcher Plant": "Not Applicable",
 				"Pointed Dripstone": "Locational",
 				"Powder Snow": "Not Applicable",
 				"Powered Rail": "Not Applicable",
@@ -16893,6 +16969,10 @@
 				"Signs": "Not Applicable",
 				"Slabs": 16,
 				"Small Dripleaf": "Not Applicable",
+				"Sniffer Egg": {
+					"East & West": 15,
+					"North & South": 14
+				},
 				"Snow": {
 					"1 Layer": "Not Applicable",
 					"2-8 Layers": 16
@@ -16909,6 +16989,8 @@
 				"Sugar Cane": "Not Applicable",
 				"Sweet Berry Bush": "Not Applicable",
 				"Torch": "Not Applicable",
+				"Torchflower": "Not Applicable",
+				"Torchflower Crop": "Not Applicable",
 				"Trapdoors": {
 					"Closed": 16,
 					"Front When Opened": 3
@@ -16938,7 +17020,7 @@
 				"Weeping Vines": "Not Applicable"
 			},
 			"property_description": "The block's side-facing collision surfaces.</p><p>Includes internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
-			"property_name": "Width (All) (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
+			"property_name": "Width (All)",
 			"size_type": "pixel"
 		},
 		"width_external": {
@@ -17085,6 +17167,7 @@
 				"Crops": "Not Applicable",
 				"Daylight Detector": 16,
 				"Dead Bush": "Not Applicable",
+				"Decorated Pot": 15,
 				"Detector Rail": "Not Applicable",
 				"Dirt Path": 16,
 				"Doors": {
@@ -17150,6 +17233,10 @@
 					}
 				},
 				"Hanging Roots": "Not Applicable",
+				"Hanging Signs": {
+					"Front": 10,
+					"Side": 16
+				},
 				"Heads": {
 					"Floor": 12,
 					"Wall": {
@@ -17195,6 +17282,7 @@
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
 				"Nether Wart": "Not Applicable",
+				"Pink Petals": "Not Applicable",
 				"Piston": {
 					"Base": {
 						"Back, Side & Vertical": 16,
@@ -17212,6 +17300,14 @@
 					},
 					"Retracted": 16
 				},
+				"Pitcher Crop": {
+					"age: 0": 11,
+					"age: 1<br>age: 2<br>age: 3<br>age: 4": {
+						"half: lower": 13,
+						"half: upper": "Not Applicable"
+					}
+				},
+				"Pitcher Plant": "Not Applicable",
 				"Pointed Dripstone": "Locational",
 				"Powder Snow": "Not Applicable",
 				"Powered Rail": "Not Applicable",
@@ -17236,6 +17332,10 @@
 				"Signs": "Not Applicable",
 				"Slabs": 16,
 				"Small Dripleaf": "Not Applicable",
+				"Sniffer Egg": {
+					"East & West": 15,
+					"North & South": 14
+				},
 				"Snow": {
 					"1 Layer": "Not Applicable",
 					"2-8 Layers": 16
@@ -17252,6 +17352,8 @@
 				"Sugar Cane": "Not Applicable",
 				"Sweet Berry Bush": "Not Applicable",
 				"Torch": "Not Applicable",
+				"Torchflower": "Not Applicable",
+				"Torchflower Crop": "Not Applicable",
 				"Trapdoors": {
 					"Closed": 16,
 					"Front When Opened": 3
@@ -17277,7 +17379,7 @@
 				"Weeping Vines": "Not Applicable"
 			},
 			"property_description": "The block's side-facing collision surfaces.</p><p>Does not include internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
-			"property_name": "Width (External) (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
+			"property_name": "Width (External)",
 			"size_type": "pixel"
 		},
 		"wiki_page": {
