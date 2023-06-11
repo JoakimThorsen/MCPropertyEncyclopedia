@@ -3281,6 +3281,7 @@
 					"4s 42": 14,
 					"5s": 15
 				},
+				"Calibrated Sculk Sensor": "0-15",
 				"Cake": {
 					"bites: 0": 14,
 					"bites: 1": 12,
@@ -3337,6 +3338,7 @@
 						"27s": 15
 					}
 				},
+				"Chiseled Bookshelf": "0-6",
 				"Command Blocks": {
 					"Success Count": "Any"
 				},
@@ -3534,7 +3536,7 @@
 				}
 			},
 			"property_description": "What value a comparator will read from this block. Obtained from the wiki.<br>Chest- or Hopper Minecarts placed on detector rails will also give an output identical to their respective blocks.<br>Item frames can also give an output of 0 if there is no item inside, or a value from 1 to 8 depending on the item rotation.",
-			"property_name": "Comparator Output (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
+			"property_name": "Comparator Output",
 			"relative_gradient": true
 		},
 		"conductive": {
@@ -10342,7 +10344,7 @@
 			"property_description": "",
 			"property_name": "Replaceable"
 		},
-		"send_comparator_updates": {
+		"sends_comparator_updates": {
 			"default_value": "No",
 			"entries": {
 				"Barrel": "Yes",
@@ -10351,9 +10353,11 @@
 				"Blast Furnace": "Yes",
 				"Brewing Stand": "Yes",
 				"Cake": "Yes",
+				"Calibrated Sculk Sensor": "Yes",
 				"Campfire": "Yes",
 				"Cauldron": "Yes",
 				"Chest": "Yes",
+				"Chiseled Bookshelf": "Yes",
 				"Command Blocks": "Yes",
 				"Composter": "Yes",
 				"Detector Rail": "Yes",
@@ -10372,7 +10376,7 @@
 				"Trapped Chest": "Yes"
 			},
 			"property_description": "Whether interactions with this block sends updates to comparators up to 2 blocks away (manhattan distance).",
-			"property_name": "Sends Comparator Updates (NOT UPDATED TO 1.20; DEFAULT VALUE USED)"
+			"property_name": "Sends Comparator Updates"
 		},
 		"shape_update_from_environment": {
 			"default_value": "No",
