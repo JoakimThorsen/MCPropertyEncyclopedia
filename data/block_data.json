@@ -660,7 +660,8 @@
 				"luminance",
 				"opaque",
 				"opacity",
-				"blocks_beacon_beam"
+				"blocks_beacon_beam",
+				"blocks_skylight"
 			]
 		},
 		{
@@ -670,10 +671,11 @@
 				"hardness",
 				"instant_mineable",
 				"flammable",
-				"catches_fire_from_lava",
+				"ignited_by_lava",
 				"ignite_odds",
 				"burn_odds",
-				"gets_flushed"
+				"gets_flushed",
+				"replaceable"
 			]
 		},
 		{
@@ -692,7 +694,7 @@
 			]
 		},
 		{
-			"category": "Material Properties",
+			"category": "Material Properties (Pre-1.20)",
 			"contents": [
 				"material",
 				"material_is_liquid",
@@ -704,100 +706,185 @@
 			]
 		},
 		{
+			"category": "\"Deprecated\" properties",
+			"contents": [
+				"blocks_motion",
+				"solid"
+			]
+		},
+		{
 			"category": "Tags",
 			"contents": [
-				"tag_saplings",
-				"tag_logs_that_burn",
-				"tag_logs",
-				"tag_dark_oak_logs",
-				"tag_oak_logs",
-				"tag_birch_logs",
 				"tag_acacia_logs",
-				"tag_jungle_logs",
-				"tag_spruce_logs",
-				"tag_mangrove_logs",
-				"tag_crimson_stems",
-				"tag_warped_stems",
-				"tag_sand",
-				"tag_rails",
-				"tag_flowers",
-				"tag_piglin_repellents",
-				"tag_gold_ores",
-				"tag_non_flammable_wood",
-				"tag_dirt",
-				"tag_completes_find_tree_tutorial",
-				"tag_enderman_holdable",
-				"tag_ice",
-				"tag_valid_spawn",
-				"tag_impermeable",
-				"tag_underwater_bonemeals",
-				"tag_corals",
+				"tag_all_hanging_signs",
+				"tag_all_signs",
+				"tag_ancient_city_replaceable",
+				"tag_animals_spawnable_on",
+				"tag_anvil",
+				"tag_axolotls_spawnable_on",
+				"tag_azalea_grows_on",
+				"tag_azalea_root_replaceable",
+				"tag_bamboo_blocks",
 				"tag_bamboo_plantable_on",
+				"tag_banners",
+				"tag_base_stone_nether",
+				"tag_base_stone_overworld",
+				"tag_beacon_base_blocks",
+				"tag_beds",
+				"tag_bee_growables",
+				"tag_beehives",
+				"tag_big_dripleaf_placeable",
+				"tag_birch_logs",
+				"tag_buttons",
+				"tag_campfires",
+				"tag_candle_cakes",
+				"tag_candles",
+				"tag_cauldrons",
+				"tag_cave_vines",
+				"tag_ceiling_hanging_signs",
+				"tag_cherry_logs",
+				"tag_climbable",
+				"tag_coal_ores",
+				"tag_combination_step_sound_blocks",
+				"tag_completes_find_tree_tutorial",
+				"tag_convertable_to_mud",
+				"tag_copper_ores",
+				"tag_coral_blocks",
+				"tag_coral_plants",
+				"tag_corals",
+				"tag_crimson_stems",
+				"tag_crops",
+				"tag_crystal_sound_blocks",
+				"tag_dampens_vibrations",
+				"tag_dark_oak_logs",
+				"tag_dead_bush_may_place_on",
+				"tag_deepslate_ore_replaceables",
+				"tag_diamond_ores",
+				"tag_dirt",
+				"tag_doors",
 				"tag_dragon_immune",
 				"tag_dragon_transparent",
-				"tag_wither_immune",
-				"tag_wither_summon_base_blocks",
-				"tag_beehives",
-				"tag_bee_growables",
-				"tag_portals",
-				"tag_beacon_base_blocks",
-				"tag_soul_speed_blocks",
-				"tag_wall_post_override",
-				"tag_climbable",
+				"tag_dripstone_replaceable",
+				"tag_emerald_ores",
+				"tag_enchantment_power_provider",
+				"tag_enchantment_power_transmitter",
+				"tag_enderman_holdable",
 				"tag_fall_damage_resetting",
-				"tag_hoglin_repellents",
-				"tag_soul_fire_base_blocks",
+				"tag_features_cannot_replace",
+				"tag_fence_gates",
+				"tag_fences",
+				"tag_fire",
+				"tag_flower_pots",
+				"tag_flowers",
+				"tag_foxes_spawnable_on",
+				"tag_frog_prefer_jump_to",
+				"tag_frogs_spawnable_on",
+				"tag_geode_invalid_blocks",
+				"tag_goats_spawnable_on",
+				"tag_gold_ores",
 				"tag_guarded_by_piglins",
-				"tag_prevent_mob_spawning_inside",
-				"tag_mushroom_grow_block",
-				"tag_infiniburn_overworld",
-				"tag_infiniburn_nether",
+				"tag_hoglin_repellents",
+				"tag_ice",
+				"tag_impermeable",
 				"tag_infiniburn_end",
-				"tag_base_stone_overworld",
-				"tag_stone_ore_replaceables",
-				"tag_deepslate_ore_replaceables",
-				"tag_base_stone_nether",
-				"tag_overworld_carver_replaceables",
-				"tag_nether_carver_replaceables",
-				"tag_crystal_sound_blocks",
+				"tag_infiniburn_nether",
+				"tag_infiniburn_overworld",
 				"tag_inside_step_sound_blocks",
-				"tag_dampens_vibrations",
-				"tag_dripstone_replaceable_blocks",
-				"tag_moss_replaceable",
+				"tag_invalid_spawn_inside",
+				"tag_iron_ores",
+				"tag_jungle_logs",
+				"tag_lapis_ores",
+				"tag_lava_pool_stone_cannot_replace",
+				"tag_leaves",
+				"tag_logs",
+				"tag_logs_that_burn",
 				"tag_lush_ground_replaceable",
-				"tag_azalea_root_replaceable",
-				"tag_small_dripleaf_placeable",
-				"tag_big_dripleaf_placeable",
-				"tag_snow",
-				"tag_axe_mineable",
-				"tag_hoe_mineable",
-				"tag_pickaxe_mineable",
-				"tag_shovel_mineable",
+				"tag_maintains_farmland",
+				"tag_mangrove_logs",
+				"tag_mangrove_logs_can_grow_through",
+				"tag_mangrove_roots_can_grow_through",
+				"tag_mineable_with_axe",
+				"tag_mineable_with_hoe",
+				"tag_mineable_with_pickaxe",
+				"tag_mineable_with_shovel",
+				"tag_mooshrooms_spawnable_on",
+				"tag_moss_replaceable",
+				"tag_mushroom_grow_block",
 				"tag_needs_diamond_tool",
 				"tag_needs_iron_tool",
 				"tag_needs_stone_tool",
-				"tag_features_cannot_replace",
-				"tag_lava_pool_stone_cannot_replace",
-				"tag_geode_invalid_blocks",
-				"tag_frog_prefer_jump_to",
+				"tag_nether_carver_replaceables",
+				"tag_nylium",
+				"tag_oak_logs",
+				"tag_occludes_vibration_signals",
+				"tag_overworld_carver_replaceables",
+				"tag_overworld_natural_logs",
+				"tag_parrots_spawnable_on",
+				"tag_piglin_repellents",
+				"tag_planks",
+				"tag_polar_bears_spawnable_on_alternate",
+				"tag_portals",
+				"tag_pressure_plates",
+				"tag_prevent_mob_spawning_inside",
+				"tag_rabbits_spawnable_on",
+				"tag_rails",
+				"tag_redstone_ores",
+				"tag_replaceable",
+				"tag_replaceable_by_trees",
+				"tag_sand",
+				"tag_saplings",
 				"tag_sculk_replaceable",
 				"tag_sculk_replaceable_world_gen",
-				"tag_ancient_city_replaceable",
-				"tag_goats_spawnable_on",
-				"tag_parrots_spawnable_on",
-				"tag_rabbits_spawnable_on",
-				"tag_foxes_spawnable_on",
-				"tag_wolves_spawnable_on",
-				"tag_frogs_spawnable_on",
-				"tag_azalea_grows_on",
-				"tag_replaceable_plants",
-				"tag_convertable_to_mud",
-				"tag_mangrove_logs_can_grow_through",
-				"tag_mangrove_roots_can_grow_through",
-				"tag_dead_bush_may_place_on",
+				"tag_shulker_boxes",
+				"tag_signs",
+				"tag_slabs",
+				"tag_small_dripleaf_placeable",
+				"tag_small_flowers",
+				"tag_smelts_to_glass",
 				"tag_snaps_goat_horn",
+				"tag_sniffer_diggable_block",
+				"tag_sniffer_egg_hatch_boost",
+				"tag_snow",
+				"tag_snow_layer_can_survive_on",
 				"tag_snow_layer_cannot_survive_on",
-				"tag_snow_layer_can_survive_on"
+				"tag_soul_fire_base_blocks",
+				"tag_soul_speed_blocks",
+				"tag_spruce_logs",
+				"tag_stairs",
+				"tag_standing_signs",
+				"tag_stone_bricks",
+				"tag_stone_buttons",
+				"tag_stone_ore_replaceables",
+				"tag_stone_pressure_plates",
+				"tag_strider_warm_blocks",
+				"tag_sword_efficient",
+				"tag_tall_flowers",
+				"tag_terracotta",
+				"tag_trail_ruins_replaceable",
+				"tag_trapdoors",
+				"tag_underwater_bonemeals",
+				"tag_unstable_bottom_center",
+				"tag_valid_spawn",
+				"tag_vibration_resonators",
+				"tag_wall_corals",
+				"tag_wall_hanging_signs",
+				"tag_wall_post_override",
+				"tag_wall_signs",
+				"tag_walls",
+				"tag_warped_stems",
+				"tag_wart_blocks",
+				"tag_wither_immune",
+				"tag_wither_summon_base_blocks",
+				"tag_wolves_spawnable_on",
+				"tag_wooden_buttons",
+				"tag_wooden_doors",
+				"tag_wooden_fences",
+				"tag_wooden_pressure_plates",
+				"tag_wooden_slabs",
+				"tag_wooden_stairs",
+				"tag_wooden_trapdoors",
+				"tag_wool",
+				"tag_wool_carpets"
 			]
 		}
 	],
@@ -1526,6 +1613,380 @@
 			"property_description": "Whether placing this block above a beacon will prevent its beam from forming, or stop its current one.",
 			"property_name": "Blocks Beacon Beam"
 		},
+		"blocks_motion": {
+			"default_value": "Yes",
+			"entries": {
+				"Activator Rail": "No",
+				"Air": "No",
+				"Azalea": "No",
+				"Bamboo": {
+					"Bamboo": "Yes",
+					"Bamboo Shoot": "No"
+				},
+				"Big Dripleaf": "No",
+				"Buttons": "No",
+				"Candles": "No",
+				"Carpets": "No",
+				"Cave Vines": "No",
+				"Chorus Flower": "No",
+				"Chorus Plant": "No",
+				"Cobweb": "No",
+				"Cocoa": "No",
+				"Coral Fans": {
+					"Brain Coral Fan<br>Brain Coral Wall Fan<br>Bubble Coral Fan<br>Bubble Coral Wall Fan<br>Fire Coral Fan<br>Fire Coral Wall Fan<br>Horn Coral Fan<br>Horn Coral Wall Fan<br>Tube Coral Fan<br>Tube Coral Wall Fan": "No",
+					"Dead Brain Coral Fan<br>Dead Brain Coral Wall Fan<br>Dead Bubble Coral Fan<br>Dead Bubble Coral Wall Fan<br>Dead Fire Coral Fan<br>Dead Fire Coral Wall Fan<br>Dead Horn Coral Fan<br>Dead Horn Coral Wall Fan<br>Dead Tube Coral Fan<br>Dead Tube Coral Wall Fan": "Yes"
+				},
+				"Corals": {
+					"Brain Coral<br>Bubble Coral<br>Fire Coral<br>Horn Coral<br>Tube Coral": "No",
+					"Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral<br>Dead Tube Coral": "Yes"
+				},
+				"Crops": "No",
+				"Dead Bush": "No",
+				"Detector Rail": "No",
+				"End Gateway": "No",
+				"End Portal": "No",
+				"End Rod": "No",
+				"Fern": "No",
+				"Fire": "No",
+				"Flower Pot": "No",
+				"Flowers": "No",
+				"Frogspawn": "No",
+				"Fungi": "No",
+				"Glow Lichen": "No",
+				"Grass": "No",
+				"Hanging Roots": "No",
+				"Heads": "No",
+				"Kelp": "No",
+				"Ladder": "No",
+				"Lava": "No",
+				"Lever": "No",
+				"Light Block": "No",
+				"Lily Pad": "No",
+				"Mangrove Propagule": "No",
+				"Moss Carpet": "No",
+				"Mushrooms": "No",
+				"Nether Portal": "No",
+				"Nether Sprouts": "No",
+				"Nether Wart": "No",
+				"Pink Petals": "No",
+				"Pitcher Crop": "No",
+				"Pitcher Plant": "No",
+				"Powder Snow": "No",
+				"Powered Rail": "No",
+				"Rail": "No",
+				"Redstone Comparator": "No",
+				"Redstone Dust": "No",
+				"Redstone Repeater": "No",
+				"Redstone Torch": "No",
+				"Roots": "No",
+				"Saplings": "No",
+				"Scaffolding": "No",
+				"Sea Pickle": "No",
+				"Seagrass": "No",
+				"Small Dripleaf": "No",
+				"Snow": "No",
+				"Spore Blossom": "No",
+				"Structure Void": "No",
+				"Sugar Cane": "No",
+				"Sweet Berry Bush": "No",
+				"Torch": "No",
+				"Torchflower": "No",
+				"Torchflower Crop": "No",
+				"Tripwire": "No",
+				"Tripwire Hook": "No",
+				"Twisting Vines": "No",
+				"Vines": "No",
+				"Water": "No",
+				"Weeping Vines": "No"
+			},
+			"property_description": "blockState.blocksMotion()",
+			"property_name": "(Deprecated) Blocks Motion"
+		},
+		"blocks_skylight": {
+			"default_value": "Yes",
+			"entries": {
+				"Activator Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Air": "No",
+				"Amethyst Cluster": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Anvil": "No",
+				"Azalea": "No",
+				"Bamboo": "No",
+				"Banners": "No",
+				"Barrier": "No",
+				"Beds": "No",
+				"Bell": "No",
+				"Big Dripleaf": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Brewing Stand": "No",
+				"Buttons": "No",
+				"Cactus": "No",
+				"Cake": "No",
+				"Calibrated Sculk Sensor": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Campfire": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Candles": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Carpets": "No",
+				"Cauldron": "No",
+				"Cave Vines": "No",
+				"Chain": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Chest": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Cocoa": "No",
+				"Composter": "No",
+				"Conduit": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Coral Fans": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Corals": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Crops": "No",
+				"Daylight Detector": "No",
+				"Dead Bush": "No",
+				"Decorated Pot": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Detector Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Dirt Path": "No",
+				"Doors": "No",
+				"Dragon Egg": "No",
+				"Enchanting Table": "No",
+				"End Portal": "No",
+				"End Portal Frame": "No",
+				"End Rod": "No",
+				"Ender Chest": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Farmland": "No",
+				"Fence Gates": "No",
+				"Fences": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Fern": "No",
+				"Fire": "No",
+				"Flower Pot": "No",
+				"Flowers": "No",
+				"Frogspawn": "No",
+				"Fungi": "No",
+				"Glass": "No",
+				"Glass Pane": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Glow Lichen": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Grass": "No",
+				"Grindstone": "No",
+				"Hanging Roots": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Hanging Signs": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Heads": "No",
+				"Hopper": "No",
+				"Iron Bars": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Ladder": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Lantern": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Lectern": "No",
+				"Lever": "No",
+				"Light Block": "No",
+				"Lightning Rod": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Lily Pad": "No",
+				"Mangrove Propagule": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Moss Carpet": "No",
+				"Mushrooms": "No",
+				"Nether Portal": "No",
+				"Nether Sprouts": "No",
+				"Nether Wart": "No",
+				"Pink Petals": "No",
+				"Piston": {
+					"Moving Piston<br>Piston Head": "No",
+					"Piston<br>Sticky Piston": {
+						"extended: false": "Yes",
+						"extended: true": "No"
+					}
+				},
+				"Pitcher Crop": "No",
+				"Pitcher Plant": "No",
+				"Pointed Dripstone": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Powered Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Pressure Plates": "No",
+				"Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Redstone Comparator": "No",
+				"Redstone Dust": "No",
+				"Redstone Repeater": "No",
+				"Redstone Torch": "No",
+				"Roots": "No",
+				"Saplings": "No",
+				"Scaffolding": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Sculk Sensor": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Sculk Vein": {
+					"down: false": {
+						"east: false": {
+							"north: false": {
+								"south: false": {
+									"up: false": {
+										"waterlogged: false": {
+											"west: false": "Yes",
+											"west: true": "No"
+										},
+										"waterlogged: true": "Yes"
+									},
+									"up: true": {
+										"waterlogged: false": "No",
+										"waterlogged: true": "Yes"
+									}
+								},
+								"south: true": {
+									"waterlogged: false": "No",
+									"waterlogged: true": "Yes"
+								}
+							},
+							"north: true": {
+								"waterlogged: false": "No",
+								"waterlogged: true": "Yes"
+							}
+						},
+						"east: true": {
+							"waterlogged: false": "No",
+							"waterlogged: true": "Yes"
+						}
+					},
+					"down: true": {
+						"waterlogged: false": "No",
+						"waterlogged: true": "Yes"
+					}
+				},
+				"Sea Pickle": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Signs": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Slabs": {
+					"type: bottom<br>type: top": {
+						"waterlogged: false": "No",
+						"waterlogged: true": "Yes"
+					},
+					"type: double": "Yes"
+				},
+				"Small Dripleaf": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Sniffer Egg": "No",
+				"Snow": {
+					"layers: 1<br>layers: 2<br>layers: 3<br>layers: 4<br>layers: 5<br>layers: 6<br>layers: 7": "No",
+					"layers: 8": "Yes"
+				},
+				"Spore Blossom": "No",
+				"Stained Glass": "No",
+				"Stained Glass Panes": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Stairs": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Stonecutter": "No",
+				"Structure Void": "No",
+				"Sugar Cane": "No",
+				"Sweet Berry Bush": "No",
+				"Torch": "No",
+				"Torchflower": "No",
+				"Torchflower Crop": "No",
+				"Trapdoors": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Trapped Chest": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Tripwire": "No",
+				"Tripwire Hook": "No",
+				"Turtle Egg": "No",
+				"Twisting Vines": "No",
+				"Vines": "No",
+				"Walls": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Weeping Vines": "No"
+			},
+			"property_description": "",
+			"property_name": "Blocks Skylight"
+		},
 		"bottom_face_has_collision": {
 			"default_value": "Yes",
 			"entries": {
@@ -2118,61 +2579,6 @@
 			},
 			"property_description": "The higher the burn odds, the quicker a block burns away (when on fire). 0 means it is non-flammable.",
 			"property_name": "Burn Odds"
-		},
-		"catches_fire_from_lava": {
-			"default_value": "No",
-			"entries": {
-				"Azalea": "Yes",
-				"Bamboo": "Yes",
-				"Bee Nest": "Yes",
-				"Beehive": "Yes",
-				"Big Dripleaf": "Yes",
-				"Bookshelf": "Yes",
-				"Carpets": "Yes",
-				"Cave Vines": "Yes",
-				"Composter": "Yes",
-				"Dead Bush": "Yes",
-				"Fence Gates": {
-					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
-					"Crimson<br>Warped": "No"
-				},
-				"Fences": {
-					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
-					"Crimson<br>Nether Brick<br>Warped": "No"
-				},
-				"Fern": "Yes",
-				"Flowers": {
-					"Small": "No",
-					"Tall": "Yes"
-				},
-				"Glow Lichen": "Yes",
-				"Grass": "Yes",
-				"Hanging Roots": "Yes",
-				"Leaves": "Yes",
-				"Lectern": "Yes",
-				"Logs": "Yes",
-				"Mangrove Roots": "Yes",
-				"Planks": {
-					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
-					"Crimson<br>Warped": "No"
-				},
-				"Slabs": {
-					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
-					"Other": "No"
-				},
-				"Small Dripleaf": "Yes",
-				"Spore Blossom": "Yes",
-				"Stairs": {
-					"Acacia<br>Birch<br>Dark Oak<br>Jungle<br>Oak<br>Spruce": "Yes",
-					"Other": "No"
-				},
-				"TNT": "Yes",
-				"Vines": "Yes",
-				"Wood": "Yes",
-				"Wool": "Yes"
-			},
-			"property_description": "Whether this block will catch fire from nearby lava.",
-			"property_name": "Catches&nbsp;fire from&nbsp;lava (NOT UPDATED TO 1.20; DEFAULT VALUE USED)"
 		},
 		"collision_bottom_all": {
 			"default_value": 16,
@@ -5837,6 +6243,96 @@
 			"property_description": "The higher the ignite odds, the more likely a block is to catch fire (if it is able to spread there).",
 			"property_name": "Ignite Odds"
 		},
+		"ignited_by_lava": {
+			"default_value": "No",
+			"entries": {
+				"Bamboo": "Yes",
+				"Bamboo Block": "Yes",
+				"Bamboo Mosaic": "Yes",
+				"Banners": "Yes",
+				"Barrel": "Yes",
+				"Beds": "Yes",
+				"Bee Nest": "Yes",
+				"Beehive": "Yes",
+				"Bookshelf": "Yes",
+				"Campfire": "Yes",
+				"Carpets": "Yes",
+				"Cartography Table": "Yes",
+				"Chest": "Yes",
+				"Chiseled Bookshelf": "Yes",
+				"Composter": "Yes",
+				"Crafting Table": "Yes",
+				"Daylight Detector": "Yes",
+				"Dead Bush": "Yes",
+				"Doors": {
+					"Acacia Door<br>Bamboo Door<br>Birch Door<br>Cherry Door<br>Dark Oak Door<br>Jungle Door<br>Mangrove Door<br>Oak Door<br>Spruce Door": "Yes",
+					"Crimson Door<br>Iron Door<br>Warped Door": "No"
+				},
+				"Fence Gates": {
+					"Acacia Fence Gate<br>Bamboo Fence Gate<br>Birch Fence Gate<br>Cherry Fence Gate<br>Dark Oak Fence Gate<br>Jungle Fence Gate<br>Mangrove Fence Gate<br>Oak Fence Gate<br>Spruce Fence Gate": "Yes",
+					"Crimson Fence Gate<br>Warped Fence Gate": "No"
+				},
+				"Fences": {
+					"Acacia Fence<br>Bamboo Fence<br>Birch Fence<br>Cherry Fence<br>Dark Oak Fence<br>Jungle Fence<br>Mangrove Fence<br>Oak Fence<br>Spruce Fence": "Yes",
+					"Crimson Fence<br>Nether Brick Fence<br>Warped Fence": "No"
+				},
+				"Fern": "Yes",
+				"Fletching Table": "Yes",
+				"Flowers": {
+					"Allium<br>Azure Bluet<br>Blue Orchid<br>Cornflower<br>Dandelion<br>Lily of the Valley<br>Orange Tulip<br>Oxeye Daisy<br>Pink Tulip<br>Poppy<br>Red Tulip<br>White Tulip<br>Wither Rose": "No",
+					"Lilac<br>Peony<br>Rose Bush<br>Sunflower": "Yes"
+				},
+				"Glow Lichen": "Yes",
+				"Grass": "Yes",
+				"Hanging Roots": "Yes",
+				"Hanging Signs": {
+					"Acacia Hanging Sign<br>Acacia Wall Hanging Sign<br>Bamboo Hanging Sign<br>Bamboo Wall Hanging Sign<br>Birch Hanging Sign<br>Birch Wall Hanging Sign<br>Cherry Hanging Sign<br>Cherry Wall Hanging Sign<br>Dark Oak Hanging Sign<br>Dark Oak Wall Hanging Sign<br>Jungle Hanging Sign<br>Jungle Wall Hanging Sign<br>Mangrove Hanging Sign<br>Mangrove Wall Hanging Sign<br>Oak Hanging Sign<br>Oak Wall Hanging Sign<br>Spruce Hanging Sign<br>Spruce Wall Hanging Sign": "Yes",
+					"Crimson Hanging Sign<br>Crimson Wall Hanging Sign<br>Warped Hanging Sign<br>Warped Wall Hanging Sign": "No"
+				},
+				"Jukebox": "Yes",
+				"Leaves": "Yes",
+				"Lectern": "Yes",
+				"Logs": "Yes",
+				"Loom": "Yes",
+				"Mangrove Roots": "Yes",
+				"Mushroom Blocks": "Yes",
+				"Note Block": "Yes",
+				"Pitcher Plant": "Yes",
+				"Planks": {
+					"Acacia Planks<br>Bamboo Planks<br>Birch Planks<br>Cherry Planks<br>Dark Oak Planks<br>Jungle Planks<br>Mangrove Planks<br>Oak Planks<br>Spruce Planks": "Yes",
+					"Crimson Planks<br>Warped Planks": "No"
+				},
+				"Pressure Plates": {
+					"Acacia Pressure Plate<br>Bamboo Pressure Plate<br>Birch Pressure Plate<br>Cherry Pressure Plate<br>Dark Oak Pressure Plate<br>Jungle Pressure Plate<br>Mangrove Pressure Plate<br>Oak Pressure Plate<br>Spruce Pressure Plate": "Yes",
+					"Crimson Pressure Plate<br>Heavy Weighted Pressure Plate<br>Light Weighted Pressure Plate<br>Polished Blackstone Pressure Plate<br>Stone Pressure Plate<br>Warped Pressure Plate": "No"
+				},
+				"Signs": {
+					"Acacia Sign<br>Acacia Wall Sign<br>Bamboo Sign<br>Bamboo Wall Sign<br>Birch Sign<br>Birch Wall Sign<br>Cherry Sign<br>Cherry Wall Sign<br>Dark Oak Sign<br>Dark Oak Wall Sign<br>Jungle Sign<br>Jungle Wall Sign<br>Mangrove Sign<br>Mangrove Wall Sign<br>Oak Sign<br>Oak Wall Sign<br>Spruce Sign<br>Spruce Wall Sign": "Yes",
+					"Crimson Sign<br>Crimson Wall Sign<br>Warped Sign<br>Warped Wall Sign": "No"
+				},
+				"Slabs": {
+					"Acacia Slab<br>Bamboo Mosaic Slab<br>Bamboo Slab<br>Birch Slab<br>Cherry Slab<br>Dark Oak Slab<br>Jungle Slab<br>Mangrove Slab<br>Oak Slab<br>Spruce Slab": "Yes",
+					"Andesite Slab<br>Blackstone Slab<br>Brick Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Crimson Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Mud Brick Slab<br>Nether Brick Slab<br>Oxidized Cut Copper Slab<br>Petrified Oak Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Stone Brick Slab<br>Stone Slab<br>Warped Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "No"
+				},
+				"Smithing Table": "Yes",
+				"Stairs": {
+					"Acacia Stairs<br>Bamboo Mosaic Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Cherry Stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Oak Stairs<br>Spruce Stairs": "Yes",
+					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Crimson Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Warped Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "No"
+				},
+				"Stripped Bamboo Block": "Yes",
+				"TNT": "Yes",
+				"Trapdoors": {
+					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Dark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor": "Yes",
+					"Crimson Trapdoor<br>Iron Trapdoor<br>Warped Trapdoor": "No"
+				},
+				"Trapped Chest": "Yes",
+				"Vines": "Yes",
+				"Wood": "Yes",
+				"Wool": "Yes"
+			},
+			"property_description": "",
+			"property_name": "Ignited By Lava"
+		},
 		"inflicts_damage": {
 			"default_value": "No",
 			"entries": {
@@ -6622,7 +7118,7 @@
 				"Wool": "GUITAR"
 			},
 			"property_description": "Which instrument a noteblock will play if this block is placed below it (or above, in the case of heads).",
-			"property_name": "Note Block Instrument",
+			"property_name": "Instrument",
 			"relative_gradient": true
 		},
 		"is_opaque_full_cube": {
@@ -9044,12 +9540,12 @@
 				"Chorus Plant": "No",
 				"Cocoa": "No",
 				"Coral Fans": {
-					"Alive": "No",
-					"Dead": "Yes"
+					"Brain Coral Fan<br>Brain Coral Wall Fan<br>Bubble Coral Fan<br>Bubble Coral Wall Fan<br>Fire Coral Fan<br>Fire Coral Wall Fan<br>Horn Coral Fan<br>Horn Coral Wall Fan<br>Tube Coral Fan<br>Tube Coral Wall Fan": "No",
+					"Dead Brain Coral Fan<br>Dead Brain Coral Wall Fan<br>Dead Bubble Coral Fan<br>Dead Bubble Coral Wall Fan<br>Dead Fire Coral Fan<br>Dead Fire Coral Wall Fan<br>Dead Horn Coral Fan<br>Dead Horn Coral Wall Fan<br>Dead Tube Coral Fan<br>Dead Tube Coral Wall Fan": "Yes"
 				},
 				"Corals": {
-					"Alive": "No",
-					"Dead": "Yes"
+					"Brain Coral<br>Bubble Coral<br>Fire Coral<br>Horn Coral<br>Tube Coral": "No",
+					"Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral<br>Dead Tube Coral": "Yes"
 				},
 				"Crops": "No",
 				"Dead Bush": "No",
@@ -9069,6 +9565,7 @@
 				"Heads": "No",
 				"Kelp": "No",
 				"Ladder": "No",
+				"Lava": "No",
 				"Lever": "No",
 				"Light Block": "No",
 				"Lily Pad": "No",
@@ -9078,6 +9575,9 @@
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
+				"Pink Petals": "No",
+				"Pitcher Crop": "No",
+				"Pitcher Plant": "No",
 				"Powder Snow": "No",
 				"Powered Rail": "No",
 				"Rail": "No",
@@ -9097,6 +9597,8 @@
 				"Sugar Cane": "No",
 				"Sweet Berry Bush": "No",
 				"Torch": "No",
+				"Torchflower": "No",
+				"Torchflower Crop": "No",
 				"Tripwire": "No",
 				"Tripwire Hook": "No",
 				"Twisting Vines": "No",
@@ -9105,7 +9607,7 @@
 				"Weeping Vines": "No"
 			},
 			"property_description": "Whether placing this block next to cactus destroys it.",
-			"property_name": "Obstructs Cactus (NOT UPDATED TO 1.20; DEFAULT VALUE USED)"
+			"property_name": "Obstructs Cactus"
 		},
 		"opacity": {
 			"default_value": 15,
@@ -9790,6 +10292,29 @@
 			"property_description": "This is true if the North side connects to/redirects adjacent redstone dust",
 			"property_name": "Redirects Redstone Wire (North)"
 		},
+		"replaceable": {
+			"default_value": "No",
+			"entries": {
+				"Air": "Yes",
+				"Dead Bush": "Yes",
+				"Fern": "Yes",
+				"Fire": "Yes",
+				"Glow Lichen": "Yes",
+				"Grass": "Yes",
+				"Hanging Roots": "Yes",
+				"Lava": "Yes",
+				"Light Block": "Yes",
+				"Nether Sprouts": "Yes",
+				"Roots": "Yes",
+				"Seagrass": "Yes",
+				"Snow": "Yes",
+				"Structure Void": "Yes",
+				"Vines": "Yes",
+				"Water": "Yes"
+			},
+			"property_description": "",
+			"property_name": "Replaceable"
+		},
 		"send_comparator_updates": {
 			"default_value": "No",
 			"entries": {
@@ -10429,6 +10954,90 @@
 			},
 			"property_description": "This is true if the north face is a full square.",
 			"property_name": "Side Face Has Full Square (North)"
+		},
+		"solid": {
+			"default_value": "Yes",
+			"entries": {
+				"Activator Rail": "No",
+				"Air": "No",
+				"Azalea": "No",
+				"Big Dripleaf": "No",
+				"Buttons": "No",
+				"Candles": "No",
+				"Carpets": "No",
+				"Cave Vines": "No",
+				"Chorus Flower": "No",
+				"Chorus Plant": "No",
+				"Cocoa": "No",
+				"Coral Fans": {
+					"Brain Coral Fan<br>Brain Coral Wall Fan<br>Bubble Coral Fan<br>Bubble Coral Wall Fan<br>Fire Coral Fan<br>Fire Coral Wall Fan<br>Horn Coral Fan<br>Horn Coral Wall Fan<br>Tube Coral Fan<br>Tube Coral Wall Fan": "No",
+					"Dead Brain Coral Fan<br>Dead Brain Coral Wall Fan<br>Dead Bubble Coral Fan<br>Dead Bubble Coral Wall Fan<br>Dead Fire Coral Fan<br>Dead Fire Coral Wall Fan<br>Dead Horn Coral Fan<br>Dead Horn Coral Wall Fan<br>Dead Tube Coral Fan<br>Dead Tube Coral Wall Fan": "Yes"
+				},
+				"Corals": {
+					"Brain Coral<br>Bubble Coral<br>Fire Coral<br>Horn Coral<br>Tube Coral": "No",
+					"Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral<br>Dead Tube Coral": "Yes"
+				},
+				"Crops": "No",
+				"Dead Bush": "No",
+				"Detector Rail": "No",
+				"End Gateway": "No",
+				"End Portal": "No",
+				"End Rod": "No",
+				"Fern": "No",
+				"Fire": "No",
+				"Flower Pot": "No",
+				"Flowers": "No",
+				"Frogspawn": "No",
+				"Fungi": "No",
+				"Glow Lichen": "No",
+				"Grass": "No",
+				"Hanging Roots": "No",
+				"Heads": "No",
+				"Kelp": "No",
+				"Ladder": "No",
+				"Lava": "No",
+				"Lever": "No",
+				"Light Block": "No",
+				"Lily Pad": "No",
+				"Mangrove Propagule": "No",
+				"Moss Carpet": "No",
+				"Mushrooms": "No",
+				"Nether Portal": "No",
+				"Nether Sprouts": "No",
+				"Nether Wart": "No",
+				"Pink Petals": "No",
+				"Pitcher Crop": "No",
+				"Pitcher Plant": "No",
+				"Powder Snow": "No",
+				"Powered Rail": "No",
+				"Rail": "No",
+				"Redstone Comparator": "No",
+				"Redstone Dust": "No",
+				"Redstone Repeater": "No",
+				"Redstone Torch": "No",
+				"Roots": "No",
+				"Saplings": "No",
+				"Scaffolding": "No",
+				"Sea Pickle": "No",
+				"Seagrass": "No",
+				"Small Dripleaf": "No",
+				"Snow": "No",
+				"Spore Blossom": "No",
+				"Structure Void": "No",
+				"Sugar Cane": "No",
+				"Sweet Berry Bush": "No",
+				"Torch": "No",
+				"Torchflower": "No",
+				"Torchflower Crop": "No",
+				"Tripwire": "No",
+				"Tripwire Hook": "No",
+				"Twisting Vines": "No",
+				"Vines": "No",
+				"Water": "No",
+				"Weeping Vines": "No"
+			},
+			"property_description": "blockState.isSolid()",
+			"property_name": "(Deprecated) Solid"
 		},
 		"spawnable": {
 			"default_value": "No",
