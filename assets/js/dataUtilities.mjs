@@ -1,4 +1,4 @@
-export { getFirstValue, getSortIndex, isNum, getAllValues, levDist };
+export { getFirstValue, getSortIndex, isNum, getAllValues, levDist, getClosestLevDistFromList };
 
 function getFirstValue(value) {
     if (typeof value == 'object') {
@@ -95,3 +95,8 @@ function levDist(s, t) {
 	// Step 7
 	return d[n][m];
 }
+
+function getClosestLevDistFromList(word, list) {
+	return list.sort((a, b) => levDist(word, a) - levDist(word, b))[0]
+}
+

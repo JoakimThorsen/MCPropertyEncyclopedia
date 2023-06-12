@@ -73,10 +73,11 @@ function load_data(filename) {
     });
 }
 
-let dataProcessor, headerOutputter, tableBodyGenerator;
+let dataProcessor, headerOutputter, tableBodyGenerator, getClosestLevDistFromList;
 async function initialize_page() {
     ({ dataProcessor } = await import('./assets/js/dataProcessor.mjs'));
     ({ headerOutputter, tableBodyGenerator } = await import('./assets/js/outputHandler.mjs'));
+    ({ getClosestLevDistFromList } = await import('./assets/js/dataUtilities.mjs'));
 
     if (!localStorage.getItem("MCProperty-discord-promoted")) {
         $(".shameless-self-promo").removeClass("display-none")
@@ -158,11 +159,14 @@ async function initialize_page() {
     if(selection_arr.some(prop => !Object.keys(data.properties).includes(prop))) {
         make_popup(
             "Invalid selection",
-            "The selection you have specified is invalid. The following properties were not recognized: "
-                + selection_arr.filter(prop => !Object.keys(data.properties).includes(prop)).join(", ")
+            `The selection you have specified [${selection_arr.join(', ')}] is invalid. The following properties were not recognized: <ul>`
+                + selection_arr.filter(prop => !Object.keys(data.properties).includes(prop)).map(unknown_prop => {
+                    return `<li>'${unknown_prop}': Did you mean '${getClosestLevDistFromList(unknown_prop, Object.keys(data.properties))}'?</li>`;
+                }).join('') +
+            "</ul>"
         );
         selection_arr = selection_arr.filter(prop => Object.keys(data.properties).includes(prop))
-        update_window_history(true);
+        update_window_history(false);
     }
 
     display_headers_and_table();
@@ -473,7 +477,10 @@ function serialize_custom_url(value) {
 }
 
 // Only supports objects at the top level, nested objects will break parsing.
-function parse_custom_url(value) {
+function parse_custom_url(value, fallback) {
+    if (value === '' || value === null || value === undefined) {
+        return fallback;
+    }
     if (value.charAt(0) === '(') {
         const split = value.split(';');
         const result = {};
@@ -487,9 +494,6 @@ function parse_custom_url(value) {
     const split = value.split(',');
     if (split.length > 1) {
         return split.map(v => parse_custom_url(v))
-    }
-    if (value === '') {
-        return false;
     }
     // if (isNum(value)) {
     //     return parseFloat(value);
