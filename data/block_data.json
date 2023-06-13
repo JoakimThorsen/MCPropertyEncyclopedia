@@ -9489,7 +9489,10 @@
 				"Decorated Pot": "Breaks",
 				"Dispenser": "No",
 				"Doors": "Breaks",
-				"Dragon Egg": "Breaks",
+				"Dragon Egg": {
+					"Normally": "Breaks",
+					"When Falling": "Yes"
+				},
 				"Dropper": "No",
 				"Enchanting Table": "No",
 				"End Gateway": "No",
@@ -9554,7 +9557,10 @@
 				"Respawn Anchor": "No",
 				"Roots": "Breaks",
 				"Saplings": "Breaks",
-				"Scaffolding": "Breaks",
+				"Scaffolding": {
+					"Normally": "Breaks",
+					"When Falling": "Yes"
+				},
 				"Sculk Catalyst": "No",
 				"Sculk Sensor": "No",
 				"Sculk Shrieker": "No",
@@ -9571,8 +9577,14 @@
 				"Structure Block": "No",
 				"Structure Void": "Breaks",
 				"Sugar Cane": "Breaks",
-				"Suspicious Gravel": "Breaks",
-				"Suspicious Sand": "Breaks",
+				"Suspicious Gravel": {
+					"Normally": "Breaks",
+					"When Falling": "Yes"
+				},
+				"Suspicious Sand": {
+					"Normally": "Breaks",
+					"When Falling": "Yes"
+				},
 				"Sweet Berry Bush": "Breaks",
 				"Torch": "Breaks",
 				"Torchflower": "Breaks",
@@ -11367,7 +11379,10 @@
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
-				"Piston": "No",
+				"Piston": {
+					"Extended": "No",
+					"Retracted": "Yes"
+				},
 				"Pitcher Crop": "No",
 				"Pitcher Plant": "No",
 				"Pointed Dripstone": "No",
