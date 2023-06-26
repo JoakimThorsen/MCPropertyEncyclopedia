@@ -10264,7 +10264,10 @@
 					".isOf(Blocks.HOPPER)"
 				],
 				"Redstone Repeater": ".top_face_has_rim()",
-				"Redstone Torch": ".sideCoversSmallSquare()",
+				"Redstone Torch": {
+					"Floor": ".sideCoversSmallSquare()",
+					"Wall": ".isSideSolidFullSquare()"
+				},
 				"Roots": [
 					".isIn(BlockTags.NYLIUM)",
 					".isOf(Blocks.SOUL_SOIL)",
@@ -10326,7 +10329,10 @@
 					".isIn(BlockTags.DIRT)",
 					".isOf(Blocks.FARMLAND)"
 				],
-				"Torch": ".sideCoversSmallSquare()",
+				"Torch": {
+					"Floor": ".sideCoversSmallSquare()",
+					"Wall": ".isSideSolidFullSquare()"
+				},
 				"Torchflower": [
 					".isIn(BlockTags.DIRT)",
 					".isOf(Blocks.FARMLAND)"
