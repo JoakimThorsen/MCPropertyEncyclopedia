@@ -11785,7 +11785,7 @@
 				"Structure Block": "No",
 				"Structure Void": "No"
 			},
-			"property_description": "Whether the block is avalible in normal survival gameplay.</p><p>Yes means the block is either obtainable as an item, or can easily be created anywhere in the world.</p><p>Uncreatable means the block cannot be created or obtained in conventional ways, but the block is still avalible in the world.</p><p>No means the block is exclusive to creative mode/cheats.",
+			"property_description": "Whether the block is available in normal survival gameplay.</p><p>Yes means the block is either obtainable as an item, or can easily be created anywhere in the world.</p><p>Uncreatable means the block cannot be created or obtained in conventional ways, but the block is still avalible in the world.</p><p>No means the block is exclusive to creative mode/cheats.",
 			"property_name": "Survival Available"
 		},
 		"tag_acacia_logs": {
