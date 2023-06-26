@@ -1202,10 +1202,7 @@
 					"Red Sandstone Wall<br>Sandstone Wall": 0.8
 				},
 				"Wart Blocks": 1,
-				"Water": {
-					"Bubble Column": 0,
-					"Water": 100
-				},
+				"Water": 100,
 				"Wood": 2,
 				"Wool": 0.8
 			},
@@ -16778,7 +16775,10 @@
 				"Enchanting Table": 16,
 				"End Gateway": "Not Applicable",
 				"End Portal": "Not Applicable",
-				"End Portal Frame": 16,
+				"End Portal Frame": {
+					"With Eye": [16, 12],
+					"Without Eye": 16
+				},
 				"End Rod": {
 					"End": 16,
 					"Side": [
@@ -17235,7 +17235,13 @@
 				"Enchanting Table": 16,
 				"End Gateway": "Not Applicable",
 				"End Portal": "Not Applicable",
-				"End Portal Frame": 16,
+				"End Portal Frame": {
+					"With Eye": {
+						"Base": 16, 
+						"Eye": 12
+					},
+					"Without Eye": 16
+				},
 				"End Rod": {
 					"End": 16,
 					"Side": 10
