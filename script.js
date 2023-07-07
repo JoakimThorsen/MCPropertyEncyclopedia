@@ -247,6 +247,9 @@ function display_selection() {
 
     $('.selection-category').siblings('ul').has('a.selected').siblings('a').addClass('selected');
 
+    if(selection_search !== "") {
+        display_selection_search(selection_search);
+    }
 
     $('.selection-category').click(function (e) {
         e.stopPropagation();
@@ -292,8 +295,9 @@ function display_selection() {
     });
 
 }
-function display_selection_search(selection_search) {
-    selection_search = selection_search.toLowerCase();
+let selection_search = "";
+function display_selection_search(_selection_search = selection_search) {
+    selection_search = _selection_search.toLowerCase();
     if(selection_search == "") {
         $('.custom-collapsible').css({
             'display': 'none',
