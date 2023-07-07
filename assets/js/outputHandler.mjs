@@ -205,7 +205,7 @@ function headerOutputter(page, entry_header) {
             append_data += `<li class="dropdown-submenu">
                                 <a role="button" class="description-button">Description...</a>
                                 <ul class="dropdown-menu">
-                                    <p>${data.properties[property_id].property_description}</p>
+                                    <p>${value_parser(data.properties[property_id].property_description)}</p>
                                 </ul>
                             </li>`;
         }
@@ -449,11 +449,14 @@ function formatting_color(value, property_id, class_exists = false) {
 }
 
 function value_parser(value) {
+    console.log(value);
     if(isNum(value)) return value;
     if(typeof value === 'string') {
         // Basic URL parsing:
         const url_regexp = /(https?:\/\/(\w*\.)+\w+\/?[^ ]*)/g;
-        return value.replace(url_regexp, `<a target="_blank" href="$1">$1</a>`);
+        value = value.replace(url_regexp, `<a target="_blank" href="$1">$1</a>`);
+        
+        value = value.replace(/\n/g, "<br>\n");
     }
     return value;
 }

@@ -1270,14 +1270,14 @@
 			"entries": {
 				"Banners": "Patterns",
 				"Barrel": "Item contents",
-				"Beacon": "The pyramid level, active effects, and contents.<br>Also uses the block's position for the beacon beam",
+				"Beacon": "The pyramid level, active effects, and contents.\nAlso uses the block's position for the beacon beam",
 				"Beds": "Something",
 				"Bee Nest": "Bees",
 				"Beehive": "Bees",
 				"Bell": "For the render of the swaying animation of the bell",
 				"Blast Furnace": [
 					"Item contents",
-					"-Time until the current item is smelted,<br>-The time until the furnace's current fuel item is exhausted,<br>-All of the items that have been smelted since a player emptied the output slot"
+					"-Time until the current item is smelted,\n-The time until the furnace's current fuel item is exhausted,\n-All of the items that have been smelted since a player emptied the output slot"
 				],
 				"Brewing Stand": [
 					"Item contents",
@@ -1291,7 +1291,7 @@
 				],
 				"Chiseled Bookshelf": "Something",
 				"Command Blocks": "Command text, its output strength, and the output text",
-				"Conduit": "To check its activation area for valid activation blocks and calculate its effective range.<br>Also used for rendering the block in its active and inactive states",
+				"Conduit": "To check its activation area for valid activation blocks and calculate its effective range.\nAlso used for rendering the block in its active and inactive states",
 				"Daylight Detector": "To force the daylight sensor to update its output signal strength",
 				"Decorated Pot": "Something",
 				"Dispenser": "Item contents",
@@ -1302,7 +1302,7 @@
 				"Ender Chest": "Particle field effect",
 				"Furnace": [
 					"Item contents",
-					"-Time until the current item is smelted,<br>-The time until the furnace's current fuel item is exhausted,<br>-All of the items that have been smelted since a player emptied the output slot"
+					"-Time until the current item is smelted,\n-The time until the furnace's current fuel item is exhausted,\n-All of the items that have been smelted since a player emptied the output slot"
 				],
 				"Hanging Signs": "Something",
 				"Heads": {
@@ -1320,7 +1320,7 @@
 					"Page the book is currently on"
 				],
 				"Piston": {
-					"Moving piston": "-Offset of the block,<br>-Direction of movement,<br>-ID (and data value, if applicable) of the moving block",
+					"Moving piston": "-Offset of the block,\n-Direction of movement,\n-ID (and data value, if applicable) of the moving block",
 					"Piston": "No"
 				},
 				"Redstone Comparator": "Output strength",
@@ -1334,9 +1334,9 @@
 				"Signs": "Written text",
 				"Smoker": [
 					"Item contents",
-					"-Time until the current item is smelted,<br>-The time until the furnace's current fuel item is exhausted,<br>-All of the items that have been smelted since a player emptied the output slot"
+					"-Time until the current item is smelted,\n-The time until the furnace's current fuel item is exhausted,\n-All of the items that have been smelted since a player emptied the output slot"
 				],
-				"Spawner": "-The entity to be spawned,<br>-The delay until the next entity is spawned, and the min and max values for the next spawn delay<br>-How many entities to spawn per spawn attempt<br>-Additional data about the entity to be spawned (such as position, status effects, and entities stacked on top of it)<br>Also uses the block's position to display the spinning mob inside",
+				"Spawner": "-The entity to be spawned,\n-The delay until the next entity is spawned, and the min and max values for the next spawn delay\n-How many entities to spawn per spawn attempt\n-Additional data about the entity to be spawned (such as position, status effects, and entities stacked on top of it)\nAlso uses the block's position to display the spinning mob inside",
 				"Structure Block": "Information about the structure",
 				"Suspicious Gravel": "Something",
 				"Suspicious Sand": "Something",
@@ -2982,7 +2982,7 @@
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
 			},
-			"property_description": "The block's downwards-facing collision surfaces.</p><p>Includes internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
+			"property_description": "The block's downwards-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"property_name": "Collision Bottom (All)",
 			"size_type": "pixel"
 		},
@@ -3231,7 +3231,7 @@
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
 			},
-			"property_description": "The block's downwards-facing collision surfaces.</p><p>Does not include internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
+			"property_description": "The block's downwards-facing collision surfaces.\nDoes not include internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"property_name": "Collision Bottom (External)",
 			"size_type": "pixel"
 		},
@@ -3562,7 +3562,7 @@
 					}
 				}
 			},
-			"property_description": "What value a comparator will read from this block. Obtained from the wiki.<br>Chest- or Hopper Minecarts placed on detector rails will also give an output identical to their respective blocks.<br>Item frames can also give an output of 0 if there is no item inside, or a value from 1 to 8 depending on the item rotation.",
+			"property_description": "What value a comparator will read from this block. Obtained from the wiki.\nChest- or Hopper Minecarts placed on detector rails will also give an output identical to their respective blocks.\nItem frames can also give an output of 0 if there is no item inside, or a value from 1 to 8 depending on the item rotation.",
 			"property_name": "Comparator Output",
 			"relative_gradient": true
 		},
@@ -5906,7 +5906,7 @@
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
 			},
-			"property_description": "The block's upwards-facing collision surfaces.</p><p>Includes internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
+			"property_description": "The block's upwards-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"property_name": "Height (All)",
 			"size_type": "pixel"
 		},
@@ -6202,7 +6202,7 @@
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
 			},
-			"property_description": "The block's upwards-facing collision surfaces.</p><p>Does not include internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
+			"property_description": "The block's upwards-facing collision surfaces.\nDoes not include internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"property_name": "Height (External)",
 			"size_type": "pixel"
 		},
@@ -6429,7 +6429,7 @@
 				"TNT": "Explodes",
 				"Water": "Drowning"
 			},
-			"property_description": "Whether the block inflicts damage in any way.<br>Obtained manually",
+			"property_description": "Whether the block inflicts damage in any way.\nObtained manually",
 			"property_name": "Inflicts Damage",
 			"relative_gradient": true
 		},
@@ -6771,7 +6771,7 @@
 				"Wood": "No",
 				"Wool": "No"
 			},
-			"property_description": "Whether this block can be instant-mined when using at least:</p><p>-Efficiency V Diamond/<wbr>Netherite (Yes)</p><p>-Efficiency V Gold (With Gold)</p><p>-Haste 2 with Diamond or greater (With Haste)",
+			"property_description": "Whether this block can be instant-mined when using at least:\n-Efficiency V Diamond/<wbr>Netherite (Yes)\n-Efficiency V Gold (With Gold)\n-Haste 2 with Diamond or greater (With Haste)",
 			"property_name": "Instant-Mineable"
 		},
 		"instant_shape_updater": {
@@ -11458,7 +11458,7 @@
 				"Water": "No",
 				"Weeping Vines": "No"
 			},
-			"property_description": "If the block can be pulled by a sticky piston or an adjacent slime/honey block.</p><p>Slime and honey are listed as 'partially' as they are not sticky when pulled by one another.",
+			"property_description": "If the block can be pulled by a sticky piston or an adjacent slime/honey block.\nSlime and honey are listed as 'partially' as they are not sticky when pulled by one another.",
 			"property_name": "Sticky"
 		},
 		"suffocates_mobs": {
@@ -11782,7 +11782,7 @@
 				"Structure Block": "No",
 				"Structure Void": "No"
 			},
-			"property_description": "Whether the block is available in normal survival gameplay.</p><p>Yes means the block is either obtainable as an item, or can easily be created anywhere in the world.</p><p>Uncreatable means the block cannot be created or obtained in conventional ways, but the block is still avalible in the world.</p><p>No means the block is exclusive to creative mode/cheats.",
+			"property_description": "Whether the block is available in normal survival gameplay.\nYes means the block is either obtainable as an item, or can easily be created anywhere in the world.\nUncreatable means the block cannot be created or obtained in conventional ways, but the block is still avalible in the world.\nNo means the block is exclusive to creative mode/cheats.",
 			"property_name": "Survival Available"
 		},
 		"tag_acacia_logs": {
@@ -17076,7 +17076,7 @@
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
 			},
-			"property_description": "The block's side-facing collision surfaces.</p><p>Includes internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
+			"property_description": "The block's side-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"property_name": "Width (All)",
 			"size_type": "pixel"
 		},
@@ -17441,7 +17441,7 @@
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
 			},
-			"property_description": "The block's side-facing collision surfaces.</p><p>Does not include internal collisions.</p><p>Defaults to pixel values, this can be converted in the settings.",
+			"property_description": "The block's side-facing collision surfaces.\nDoes not include internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"property_name": "Width (External)",
 			"size_type": "pixel"
 		},
