@@ -161,12 +161,20 @@ async function initialize_page() {
             "Invalid selection",
             `The selection you have specified [${selection_arr.join(', ')}] is invalid. The following properties were not recognized: <ul>`
                 + selection_arr.filter(prop => !Object.keys(data.properties).includes(prop)).map(unknown_prop => {
-                    return `<li>'${unknown_prop}': Did you mean '${getClosestLevDistFromList(unknown_prop, Object.keys(data.properties))}'?</li>`;
+                    const found_prop = getClosestLevDistFromList(unknown_prop, Object.keys(data.properties));
+                    return `<li>'${unknown_prop}': Did you mean '${found_prop}'? <a class="found-prop-correction" unknown-property="${unknown_prop}" found-property="${found_prop}" role="button" style="text-decoration: underline">Yes</a> </li>`;
                 }).join('') +
             "</ul>"
         );
-        selection_arr = selection_arr.filter(prop => Object.keys(data.properties).includes(prop))
-        update_window_history(false);
+        $('.found-prop-correction').click(function (e) {
+            e.stopPropagation();
+            const unknown_prop = $(this).attr("unknown-property");
+            const found_prop = $(this).attr("found-property");
+            selection_arr = selection_arr.map(prop => prop === unknown_prop ? found_prop : prop);
+    
+            update_window_history();
+            location.reload(true);
+        });
     }
 
     display_headers_and_table();
@@ -349,7 +357,7 @@ function display_results() {
     $('#output-table').find('tbody>tr').remove();
 
     // Table data
-    let { output_data, exportable_list: _list, exportable_data: _data, entry_count } = dataProcessor(data, selection_arr, sort_arr, filter_obj, search, page);
+    let { output_data, exportable_list: _list, exportable_data: _data, entry_count } = dataProcessor(data, selection_arr.filter(prop => Object.keys(data.properties).includes(prop)), sort_arr, filter_obj, search, page);
 
     exportable_list = _list;
     exportable_data = _data;

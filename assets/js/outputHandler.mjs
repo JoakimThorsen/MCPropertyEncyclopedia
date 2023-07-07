@@ -137,7 +137,7 @@ function headerOutputter(page, entry_header) {
         return result;
     });
 
-    selection_arr.forEach(property_id => {
+    selection_arr.filter(property_id => Object.keys(data.properties).includes(property_id)).forEach(property_id => {
 
         let sorted = 0;
         if (sort_arr.some(e => e.property === property_id)) {
