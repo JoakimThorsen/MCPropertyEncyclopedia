@@ -34,6 +34,17 @@ function initialize_page() {
         $target.toggle("toggle"); // With toggle animation/delay
         // $target.toggle(); // No toggle animation/delay
     });
+
+    countdown();
+    function countdown() {
+        setTimeout(countdown, 999);
+        // 60 * 60 * 24 = 86400
+        let time = 86400 - Math.floor(Date.now() / 1000 % 86400);
+        let h = time / 60 / 60 | 0;
+        let m = time / 60 % 60 | 0;
+        let s = time % 60;
+        document.getElementById("countdown").innerHTML = h+":"+m+":"+s;
+    }
 }
 
 function new_game(daily_game = false) {
@@ -60,6 +71,7 @@ function new_game(daily_game = false) {
     if (localStorage.getItem("Propertydle-hide-explanation") != 'true') {
         $('#about-body').toggle(false);
     }
+    $("#countdown-text").addClass('display-none');
 
     let random;
     if(daily_game) {
@@ -295,6 +307,7 @@ function guess(latest_guess) {
         $('#modalLabel').text(`You did it!`);
         $('#modalBody').text(`You got the answer in ${guesses.length} ${guesses.length === 1 ? 'guess' : 'guesses'}.`)
         $('#modal').modal('show');
+        $("#countdown-text").removeClass('display-none');
         setTimeout(function () {
             $('#modalButton').focus();
         }, 500);
