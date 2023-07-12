@@ -156,13 +156,18 @@ a:hover {
 .popup-panel {
     width: fit-content;
     margin: 10px auto;
+    border-color: var(--border-color);
 }
 .popup-panel>.panel-heading {
+    color: var(--text-color);
+    background-color: var(--secondary-background-color);
+    border-color: var(--border-color);
     font-size: 20px;
     width: 100%;
 }
 .popup-panel>.panel-body {
     font-size: 16px;
+    background-color: var(--background-color);
 }
 
 .select-option, .selection-category {

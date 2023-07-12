@@ -90,9 +90,6 @@ async function initialize_page() {
     if (!localStorage.getItem("MCProperty-discord-promoted")) {
         $(".shameless-self-promo").removeClass("display-none")
     }
-    if (!localStorage.getItem("MCProperty-1-20-announcement")) {
-        $(".MCProperty-1-20-announcement").removeClass("display-none")
-    }
     
     $(window).on('popstate', function () {
         location.reload(true);
