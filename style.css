@@ -14,6 +14,7 @@
     --background-image: url("assets/propertythingy_light_compressed.jpg");
     --expand-btn-background-color: #ddd;
     --about-background-color: rgba(255, 255, 255, 0.856);
+    --highlight-color: yellow;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +34,7 @@
         --background-image: url("assets/propertythingy_dark_compressed.jpg");
         --expand-btn-background-color: #333;
         --about-background-color: rgba(0, 0, 0, 0.4);
+        --highlight-color: #880;
     }
 }
 /* Duplicated from above^ */
@@ -51,6 +53,7 @@
     --background-image: url("assets/propertythingy_dark_compressed.jpg");
     --expand-btn-background-color: #333;
     --about-background-color: rgba(0, 0, 0, 0.4);
+    --highlight-color: #880;
 }
 
 body {
@@ -467,7 +470,7 @@ th:first-child>*>* {
 }
 
 .search-highlight {
-    background-color: yellow;
+    background-color: var(--highlight-color);
 }
 
 .display-none {
