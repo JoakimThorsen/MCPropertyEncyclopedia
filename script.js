@@ -126,7 +126,7 @@ async function initialize_page() {
         update_window_history();
     });
 
-    $('#search').val(search);
+    if(search) $('#search').val(search);
     $('#search').on('input', function () {
         let override_history = Boolean(search);
         search = $(this).val();
