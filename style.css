@@ -11,7 +11,7 @@
     --hover-text-color: #262626;
     --hover-selected-color: #AED6C3;
     
-    --background-image: url("assets/propertythingy_light_compressed.jpg");
+    --background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("assets/propertythingy_light_compressed.jpg") no-repeat center center fixed;
     --expand-btn-background-color: #ddd;
     --about-background-color: rgba(255, 255, 255, 0.856);
     --highlight-color: yellow;
@@ -31,7 +31,7 @@
         --hover-text-color: #eee;
         --hover-selected-color: hsl(151, 25%, 30%);
         
-        --background-image: url("assets/propertythingy_dark_compressed.jpg");
+        --background-image: url("assets/propertythingy_dark_compressed.jpg") no-repeat center center fixed;;
         --expand-btn-background-color: #333;
         --about-background-color: rgba(0, 0, 0, 0.4);
         --highlight-color: #880;
@@ -50,7 +50,7 @@
     --hover-text-color: #eee;
     --hover-selected-color: hsl(151, 25%, 30%);
     
-    --background-image: url("assets/propertythingy_dark_compressed.jpg");
+    --background-image: url("assets/propertythingy_dark_compressed.jpg") no-repeat center center fixed;;
     --expand-btn-background-color: #333;
     --about-background-color: rgba(0, 0, 0, 0.4);
     --highlight-color: #880;
@@ -59,7 +59,7 @@
 body {
     /* padding-bottom: 70px; */
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), var(--background-image) no-repeat center center fixed;
+    background: var(--background-image);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
