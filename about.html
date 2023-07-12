@@ -91,6 +91,11 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li role="separator" class="horizontal-divider visible-xs"></li>
+                <li><a class="navbar-item" title="Toggle UI Theme" role="button" id="dark-mode-toggle" onclick="toggleTheme();">
+                    <img width="20" src="assets/moon_sprite.png" class="display-none" />
+                    <img width="20" src="assets/sun_sprite.png" />
+                </a></li>
+                <li role="separator" class="vertical-divider hidden-xs"></li>
                 <li><a class="navbar-item" href="https://discord.gg/RUEVmTahYg"><i class="fab fa-discord"></i></a></li>
                 <li role="separator" class="vertical-divider hidden-xs"></li>
                 <li><a class="navbar-item" href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia"><i class="fab fa-github"></i></a></li>
@@ -104,7 +109,7 @@
 <div class="container-fluid text-center">
     <div class="col-md-2 col-lg-3"></div>
     <div class="col-md-8 col-lg-6" id="about-body">
-        <h1 class="black-text">About</h1>
+        <h1 class="card-text">About</h1>
         <hr>
         <br><br>
         <p class="about-text">
@@ -112,7 +117,7 @@
         </p>
         <br>
         <p class="about-text">
-            The information in this encyclopedia is intended to be accurate as of Minecraft Java Edition version 1.19, unless stated otherwise.
+            The information in this encyclopedia is intended to be accurate as of Minecraft Java Edition version 1.20, with the exception of the items page which has not yet been updated.
         </p>
         <br>
         <p class="about-text">
@@ -120,7 +125,7 @@
             <a class="lighter-hyperlink" href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia">
                 Github Page&nbsp;<i class="fab fa-github"></i>
             </a>
-            for the (messy) source code, the raw data, and (eventually) info about contributing to this project.
+            for the (messy) source code, the raw data, and info about contributing to this project.
         </p>
         <p class="about-text">
             For discussion, updates, suggestions, questions or whatever else, be sure to visit the
@@ -130,13 +135,13 @@
         </p>
         <br>
 
-        <h1 class="black-text">Contributions</h1>
+        <h1 class="card-text">Contributions</h1>
         <hr>
         <p class="about-text">JoaBro | Founder &amp; Lead developer</p>
         <br><br>
 
         <div class="col-lg-6">
-            <h1 class="black-text">Contributors</h1>
+            <h1 class="card-text">Contributors</h1>
             <hr>
             <ul class="text-left written-list">
                 <li>1190an</li>
@@ -155,7 +160,7 @@
                 <li>T727</li>
             </ul>
         </div>
-        <div class="col-lg-6"><h1 class="black-text">Sources</h1>
+        <div class="col-lg-6"><h1 class="card-text">Sources</h1>
             <hr>
             <ul class="text-left written-list">
                 <li>
@@ -185,7 +190,7 @@
                 </li>
                 <li>
                     <a class="lighter-hyperlink" href="https://github.com/JoakimThorsen/joa-mama">
-                        Joa Mama, a property extraction tool spearheaded by bldhf, forked by JoaBro
+                        Joa Mama, a property extraction by bldhf and JoaBro
                     </a>
                 </li>
                 <li>Code digging by contributors&nbsp;:]</li>

@@ -201,7 +201,7 @@ function headerOutputter(page, entry_header) {
                             </div>
                         </li>`;
 
-        if (typeof data.properties[property_id].property_description !== 'undefined') {
+        if (typeof data.properties[property_id].property_description !== 'undefined' || data.properties[property_id].property_description !== "") {
             append_data += `<li class="dropdown-submenu">
                                 <a role="button" class="description-button">Description...</a>
                                 <ul class="dropdown-menu">
@@ -417,15 +417,24 @@ function formatting_color(value, property_id, class_exists = false) {
         let hslA, hslB;
         let scale_value, max;
         if (isNum(value)) {
-            scale_value = value * 1;
-
-            hslA = [276, 55, 66];
-            hslB = [212, 100, 82];
+            scale_value = value;
+            if(localStorage.getItem("theme") == "light") {
+                hslA = [276, 55, 66];
+                hslB = [212, 100, 82];
+            } else {
+                hslA = [276, 41.25, 19.8];
+                hslB = [212, 75, 25];
+            }
         } else if (typeof data.properties[property_id].relative_gradient == 'undefined') {
             return "";
         };
-        hslA ??= [223, 62, 68];
-        hslB ??= [159, 70, 82];
+        if(localStorage.getItem("theme") == "light") {
+            hslA ??= [223, 62, 68];
+            hslB ??= [159, 70, 82];
+        } else {
+            hslA ??= [223, 46.5, 20.4];
+            hslB ??= [159, 52.5, 25];
+        }
         if (data.properties[property_id].relative_gradient) {
             scale_value = value_list[property_id].indexOf(value.toString()) / value_list[property_id].length;
             max = 1;
@@ -444,12 +453,11 @@ function formatting_color(value, property_id, class_exists = false) {
         if (class_exists) {
             color = '"' + color;
         }
-        return color;
     }
+    return color;
 }
 
 function value_parser(value) {
-    console.log(value);
     if(isNum(value)) return value;
     if(typeof value === 'string') {
         // Basic URL parsing:

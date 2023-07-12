@@ -94,6 +94,11 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li role="separator" class="horizontal-divider visible-xs"></li>
+                <li><a class="navbar-item" title="Toggle UI Theme" role="button" id="dark-mode-toggle" onclick="toggleTheme();display_results()">
+                    <img width="20" src="assets/moon_sprite.png" class="display-none" />
+                    <img width="20" src="assets/sun_sprite.png" />
+                </a></li>
+                <li role="separator" class="vertical-divider hidden-xs"></li>
                 <li><a class="navbar-item" href="https://discord.gg/RUEVmTahYg"><i class="fab fa-discord"></i></a></li>
                 <li role="separator" class="vertical-divider hidden-xs"></li>
                 <li><a class="navbar-item" href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia"><i class="fab fa-github"></i></a></li>
@@ -145,7 +150,7 @@
                 </div>
                 <div class="text-center">
                     <span class="btn-group dropdown-actions" role="group">
-                        <input class="form-control "
+                        <input class="form-control search"
                             placeholder="Seach for properties..."
                             id="selection-search"
                             type="search"
@@ -254,7 +259,7 @@
 
         </div>
         <div class="form-inline text-center">
-            <input class="form-control"
+            <input class="form-control search"
                    id="search"
                    placeholder="Seach for block(s)..."
                    autofocus

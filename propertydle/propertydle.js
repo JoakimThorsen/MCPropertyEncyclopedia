@@ -35,6 +35,8 @@ function initialize_page() {
         // $target.toggle(); // No toggle animation/delay
     });
 
+    document.documentElement.setAttribute('data-theme', 'light');
+
     countdown();
     function countdown() {
         setTimeout(countdown, 999);

@@ -1,17 +1,73 @@
+
+:root {
+    --background-color: white;
+    --secondary-background-color: #f5f5f5;
+    --tetriary-background-color: #a8a8a8;
+    --border-color: #aaa;
+    --text-color: #333;
+    --selected-color: #B7E1CD;
+    
+    --hover-background-color: #e6e6e6;
+    --hover-text-color: #262626;
+    --hover-selected-color: #AED6C3;
+    
+    --background-image: url("assets/propertythingy_light_compressed.jpg");
+    --expand-btn-background-color: #ddd;
+    --about-background-color: rgba(255, 255, 255, 0.856);
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Must be duplicated to below */
+    :root:not([data-theme="light"]) {
+        --background-color: #111;
+        --secondary-background-color: #222;
+        --tetriary-background-color: #5c5c5c;
+        --border-color: #444;
+        --text-color: #d9d9d9;
+        --selected-color: hsl(151, 30.75%, 25%);
+        
+        --hover-background-color: #222;
+        --hover-text-color: #eee;
+        --hover-selected-color: hsl(151, 25%, 30%);
+        
+        --background-image: url("assets/propertythingy_dark_compressed.jpg");
+        --expand-btn-background-color: #333;
+        --about-background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+/* Duplicated from above^ */
+:root[data-theme="dark"] {
+    --background-color: #111;
+    --secondary-background-color: #222;
+    --tetriary-background-color: #5c5c5c;
+    --border-color: #444;
+    --text-color: #d9d9d9;
+    --selected-color: hsl(151, 30.75%, 25%);
+    
+    --hover-background-color: #222;
+    --hover-text-color: #eee;
+    --hover-selected-color: hsl(151, 25%, 30%);
+    
+    --background-image: url("assets/propertythingy_dark_compressed.jpg");
+    --expand-btn-background-color: #333;
+    --about-background-color: rgba(0, 0, 0, 0.4);
+}
+
 body {
     /* padding-bottom: 70px; */
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("assets/blockpropertythingy_255kb.jpg") no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), var(--background-image) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
     overflow-x: auto;
+    color: var(--text-color);
 }
 
 #about-body {
-    background-color: rgba(255, 255, 255, 0.856);
+    background-color: var(--about-background-color);
     padding: 10px 5px 5px 5px;
     margin: 5px;
 }
@@ -61,15 +117,19 @@ body {
     background-color: white;
     box-shadow: 0 0 5px black, 1px 1px 2px black;
 }
-
+#dark-mode-toggle>img {
+    height: 20px;
+    width: 20px;
+    image-rendering: pixelated;
+}
 
 h1, h2, h3 {
     color: white;
     text-shadow: 0 0 5px black, 2px 2px 3px black;
 }
 
-:is(h1, h2, h3).black-text {
-    color: black;
+:is(h1, h2, h3).card-text {
+    color: var(--text-color);
     text-shadow: none;
 }
 
@@ -116,16 +176,21 @@ a:hover {
 }
 
 .selected {
-    background-color: #B7E1CD;
+    background-color: var(--selected-color);
 }
 
 .selected:hover {
-    background-color: #AED6C3 !important;
+    background-color: var(--hover-selected-color) !important;
 }
 
 #search {
     margin: 6px;
     width: 100%;
+}
+.search {    
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-color: var(--border-color);
 }
 
 @media (min-width: 768px) {
@@ -153,12 +218,16 @@ a:hover {
     width: fit-content;
     align-items: center;
     margin-bottom: 10;
-    background-color: white;
+    background-color: var(--background-color);
     filter: drop-shadow(0px 0px 4px gray);
+    @media (prefers-color-scheme: dark) {
+        filter: drop-shadow(0px 0px 4px black);
+    }
 }
 
 #output-table > * > * > td, .table.nested-table > * > * > td {
     padding: 4px 6px;
+    background-color: var(--background-color);
 }
 
 li {
@@ -169,7 +238,8 @@ li {
     display: flex;
     justify-content: space-between;
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
+    background-color: var(--secondary-background-color);
     margin: 0 auto;
     padding: 6px 8px;
     height: 100%;
@@ -213,9 +283,9 @@ th:first-child>*>* {
 }
 
 .dropdown-scrollable > li > a:focus, .dropdown-scrollable > li > a:hover {
-    color: #262626;
+    color: var(--text-color);
     text-decoration: none;
-    background-color: #f5f5f5;
+    background-color: var(--secondary-background-color);
 }
 
 .dropdown-scrollable > li > a {
@@ -224,7 +294,7 @@ th:first-child>*>* {
     clear: both;
     font-weight: 400;
     line-height: 1.42857143;
-    color: #333;
+    color: var(--text-color);
     white-space: nowrap;
 }
 
@@ -244,6 +314,7 @@ th:first-child>*>* {
 
 .dropdown-menu {
     min-width: 21.1rem; /* To match with the width of buttons, this weird width is required */
+    background-color: var(--background-color);
 }
 
 .dropdown-menu > p {
@@ -286,7 +357,7 @@ th:first-child>*>* {
     border-color: transparent;
     border-style: solid;
     border-width: 5px 0 5px 5px;
-    border-left-color: #aaa;
+    border-left-color: var(--border-color);
     margin-top: 5px;
     margin-right: -10px;
 }
@@ -307,6 +378,26 @@ th:first-child>*>* {
     border-radius: 6px 0 6px 6px;
 }
 
+.dropdown-menu>li>a,
+.custom-submenu>li>a {
+    color: var(--text-color);
+}
+.dropdown-menu>li>a:hover,
+.custom-submenu>li>a:hover {
+    color: var(--hover-text-color);
+    background-color: var(--hover-background-color);
+}
+
+.dropdown-menu>li>a.description-button,
+.custom-submenu>li>a.description-button {
+    color: var(--text-color);
+}
+
+.dropdown-menu > .divider,
+.custom-submenu > .divider {
+    background-color: var(--border-color);
+}
+
 .custom-collapsible {
     display: none;
     opacity: 0;
@@ -319,7 +410,7 @@ th:first-child>*>* {
 }
 
 .custom-submenu a {
-    color: #000;
+    color: var(--text-color);
     overflow: hidden;
     white-space: nowrap;
     display: block;
@@ -327,7 +418,7 @@ th:first-child>*>* {
 
 .custom-submenu a:hover {
     text-decoration: none;
-    background: #f5f5f5;
+    background: var(--secondary-background-color);
 }
 
 .dot {
@@ -385,13 +476,13 @@ th:first-child>*>* {
 .table-bordered > tbody > tr > td,
 .table-bordered > thead > tr > th,
 .table-bordered {
-    border-color: #AAA;
+    border-color: var(--border-color);
 }
 
 th {
-    background-color: #f5f5f5;
+    background-color: var(--secondary-background-color);
     border-bottom-width: 0 !important;
-    box-shadow: inset 0 -1px 0 #AAA;
+    box-shadow: inset 0 -1px 0 var(--border-color);
     padding: 2px 0 !important;
     position: sticky;
     top: -1px;
@@ -399,14 +490,31 @@ th {
 }
 
 /* Conditional formatting: */
-.cf-yes { background-color: #B7E1CD !important; }
-.cf-no { background-color: #F4C7C3 !important; }
-.cf-neutral { background-color: #FCE8B2 !important; }
+.cf-yes         { background-color: #B7E1CD !important; }
+.cf-no          { background-color: #F4C7C3 !important; }
+.cf-neutral     { background-color: #FCE8B2 !important; }
 .cf-neutral-yes { background-color: #DDE6BA !important; }
-.cf-neutral-no { background-color: #F9D9B8 !important; }
-.cf-invalid { background-color: #CCC !important; }
-/* .cf-numeric { background-color: #D0EBFB;} */
+.cf-neutral-no  { background-color: #F9D9B8 !important; }
+.cf-invalid     { background-color: #CCC !important; }
 
+@media (prefers-color-scheme: dark) {
+    
+    .cf-yes         :not([data-theme="light"]) { background-color: hsl(151, 30.75%, 25%) !important; }
+    .cf-no          :not([data-theme="light"]) { background-color: hsl(5, 51.75%, 25%) !important; }
+    .cf-neutral     :not([data-theme="light"]) { background-color: hsl(44, 69.75%, 25%) !important; }
+    .cf-neutral-yes :not([data-theme="light"]) { background-color: hsl(72, 35.25%, 25%) !important; }
+    .cf-neutral-no  :not([data-theme="light"]) { background-color: hsl(30, 63%, 25%) !important; }
+    .cf-invalid     :not([data-theme="light"]) { background-color: hsl(0, 0%, 25%) !important; }
+}
+
+[data-theme="dark"] {
+    .cf-yes         { background-color: hsl(151, 30.75%, 25%) !important; }
+    .cf-no          { background-color: hsl(5, 51.75%, 25%) !important; }
+    .cf-neutral     { background-color: hsl(44, 69.75%, 25%) !important; }
+    .cf-neutral-yes { background-color: hsl(72, 35.25%, 25%) !important; }
+    .cf-neutral-no  { background-color: hsl(30, 63%, 25%) !important; }
+    .cf-invalid     { background-color: hsl(0, 0%, 25%) !important; }
+}
 .CLEAR { background-color: rgb(0 0 0) }
 .PALE_GREEN { background-color: rgb(127 178 56) }
 .PALE_YELLOW { background-color: rgb(247 233 163) }
@@ -495,23 +603,19 @@ td .nested-table {
 }
 
 .expand-btn {
-    color: #333;
+    color: var(--text-color);
     /* background-color: #A3D6FC; */
-    background-color: #ddd;
-    border-color: #aaa;
+    background-color: var(--expand-btn-background-color);
+    border-color: var(--border-color);
     cursor: pointer;
 }
 
 table.table.expand-btn {
-    background-color: #ddd;
     width: fit-content;
 }
 table.table.expand-btn>tbody>tr>td {
     padding: 4px 6px 3px 6px;
-}
-
-a.expand-btn {
-    color: #333;
+    background-color: var(--expand-btn-background-color);
 }
 
 .settings {
@@ -525,13 +629,13 @@ a.expand-btn {
     min-width: fit-content;
     margin: 5px;
     padding: 7px;
-    background-color: #f5f5f5;
+    background-color: var(--secondary-background-color);
     box-shadow: 0 0 4px black;
     height: fit-content;
 }
 
 .settings-box > p {
-    color: black;
+    color: var(--text-color);
     text-shadow: none;
     font-size: 24px;
 }
@@ -539,6 +643,16 @@ a.expand-btn {
 .settings-box > button, .settings-box > .btn-group, .settings-box > a {
     border-radius: 4px;
     box-shadow: 1px 1px 4px rgba(47, 47, 47, 0.828);
+}
+
+.btn-default {
+    background-color: var(--background-color);
+    color: var(--text-color) !important;
+    border-color: var(--border-color);
+}
+.btn-default:hover,
+.btn-default.active {
+    background-color: var(--hover-background-color) !important;
 }
 
 #scrollButton {
@@ -568,14 +682,14 @@ a.expand-btn {
 }
 
 ::-webkit-scrollbar-track {
-    background: #ffffff; /* Dark mode: #000000 */
+    background: var(--background-color);
 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #a8a8a8; /*Dark mode: #5c5c5c */
+    background: var(--tetriary-background-color);
     border-radius: 90vw;
-    border: 2px solid #ffffff; /* Dark mode: #000000 */
+    border: 2px solid var(--background-color);
 }
 
 html {
