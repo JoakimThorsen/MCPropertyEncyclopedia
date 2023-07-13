@@ -201,7 +201,7 @@ function headerOutputter(page, entry_header) {
                             </div>
                         </li>`;
 
-        if (typeof data.properties[property_id].property_description !== 'undefined' || data.properties[property_id].property_description !== "") {
+        if (typeof data.properties[property_id].property_description !== 'undefined' && data.properties[property_id].property_description !== "") {
             append_data += `<li class="dropdown-submenu">
                                 <a role="button" class="description-button">Description...</a>
                                 <ul class="dropdown-menu">
