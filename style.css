@@ -141,11 +141,17 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 35px;
 }
 
-h3, .about-text, .written-list {
-    font-size: 24px;
+h3 {
+    font-size: 30px;
+}
+.about-text, .written-list {
+    font-size: 22px;
+}
+.written-list>li {
+    margin: 10px 0;
 }
 
 a {

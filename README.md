@@ -1,5 +1,4 @@
 # The Minecraft Property Encyclopedia
-**(the name is still being debated. ~~Felt cute might change later~~)*  
 A comprehensive repository of information about blocks, entities and items, compiled in a powerful and easy-to-use online tool.  
 The website can be found at [https://JoakimThorsen.github.io/MCPropertyEncyclopedia](https://JoakimThorsen.github.io/MCPropertyEncyclopedia).
 
@@ -9,12 +8,19 @@ There exists a public discord server (mostly) dedicated to this project at [http
 Additions, corrections and suggestions via pull requests and reports on the issue tracker are also welcome.
 
 ## A Note of caution
-This project is in-development by a small group of volunteers. Some properties are either not yet automated, or are virtually impossible to automate, and are therefore manually curated. This means that some of the information may be incomplete, or even incorrect, despite the efforts of our contributors. Again, corrections and suggestions welcome :)
+This project is in-development by a small group of volunteers. Some properties are either not yet automated, or are virtually impossible to automate, and are therefore manually curated. This means that some of the information may be incomplete, or even incorrect, despite the efforts of our contributors. Again, corrections and suggestions are welcome :)
 
 For the full list of contributors, make sure to check out the [About Page](https://JoakimThorsen.github.io/MCPropertyEncyclopedia/about.html).
 
+## How to use
+- Property selection: You can select from a long list of properties for each page by expanding this dropdown. It also has a basic case-insensitive search feature.
+- Filtering: The values of properties can be used to filter and narrow down the list of entries that will be displayed. If a given entry has multiple values for this property (i.e. a stair block has both a full- and a half-block height), then only the values that match your filter are shown; if none match, the entry will be hidden.
+- Sorting: You can sort the list by any property, including both number and text values. If an entry has multiple values, then it will attempt to split up into individual entries for each value, and can therefore show up in multiple places where applicable.
+- Search: The main search bar lets you search through the entry names, as well as anything listed under "variants", given that that property is selected. Spaces (" ") in the search function as AND operators: typing "ca vi" will match "__Ca__ve __Vi__nes", despite not matching a continuous string. Pipe symbols ("|") also function as OR operators: "honey|slime" will show results for both honey and slime blocks. The search function is case-insensitive.
+- Settings: Various other actions and options are available under the collapsing "settings", including reset buttons, size conversions, and exporting options.
+
 ## Joa mama
-In order to effectivize the compiling of different properties, ensure accuracy, and speed up the updating of the website's information for new game versions, a mod named [Joa mama](https://github.com/JoakimThorsen/joa-mama) is being developed in order to extract the properties from the game code directly, though solely focused on blocks for the time being. It works by checking every block in the registry against each property, and compiles a list of the results of each check. This is then converted to the format described below via an external tool. Originally developed by bldhf, later forked by JoaBro
+In order to effectivize the compiling of different properties, ensure accuracy, and speed up the updating process of the website's information for new game versions, a mod named [Joa mama](https://github.com/JoakimThorsen/joa-mama) (heh) is being developed in order to extract the properties from the game code directly. It works by checking every block in the registry against a check for each property, and compiles a list of the results. This is then converted to the format described below via an external tool. Originally developed by bldhf, later forked by Joa
 
 ## Technical details
 The project is hosted through GitHub Pages. It operates entirely clientside and written in vanilla js, with [jQuery 3.6](https://jquery.com/) and [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/) being used for the interface. Most icons used are from [Font Awesome](https://fontawesome.com/).  

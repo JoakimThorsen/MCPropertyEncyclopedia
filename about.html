@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About - Minecraft Property Thingy</title>
+    <title>About - Minecraft Property Encyclopedia</title>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw=="
@@ -113,35 +113,45 @@
         <hr>
         <br><br>
         <p class="about-text">
-            The Minecraft Property Encyclopedia is a comprehensive repository of information about blocks, entities and items, compiled in a powerful and easy&zwj;-&zwj;to&zwj;-&zwj;use online tool. This project is open source and is being developed by a group of volunteer contributors.
+            The Minecraft Property Encyclopedia is a comprehensive repository of information about blocks, entities and items, compiled in a powerful and easy&zwj;-&zwj;to&zwj;-&zwj;use online tool. This project is open source and is being developed by a group of volunteer contributors. You can check out the
+            <a class="lighter-hyperlink" href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia">
+                Github Page&nbsp;<i class="fab fa-github"></i>
+            </a> for the (messy) source code and raw data.
         </p>
         <br>
         <p class="about-text">
             The information in this encyclopedia is intended to be accurate as of Minecraft Java Edition version 1.20, with the exception of the items page which has not yet been updated.
         </p>
-        <br>
-        <p class="about-text">
-            You can check out the
-            <a class="lighter-hyperlink" href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia">
-                Github Page&nbsp;<i class="fab fa-github"></i>
-            </a>
-            for the (messy) source code, the raw data, and info about contributing to this project.
         </p>
         <p class="about-text">
-            For discussion, updates, suggestions, questions or whatever else, be sure to visit the
+            For discussion, updates, suggestions, questions, or if you are interested in contributing, feel free to join the
             <a href="https://discord.gg/RUEVmTahYg">
                 Discord server!&nbsp;<i class="fab fa-discord"></i>
             </a>
         </p>
         <br>
-
-        <h1 class="card-text">Contributions</h1>
+        <h2 class="card-text">How to use</h2>
         <hr>
-        <p class="about-text">JoaBro | Founder &amp; Lead developer</p>
-        <br><br>
+        <ul class="text-left written-list">
+            <li><b>Property selection</b>: You can select from a long list of properties for each page by expanding this dropdown. It also has a basic case-insensitive search feature.</li>
+            <li><b>Filtering</b>: The values of properties can be used to filter and narrow down the list of entries that will be displayed. If a given entry has multiple values for this property (i.e. a stair block has both a full- and a half-block height), then only the values that match your filter are shown; if none match, the entry will be hidden.</li>
+            <li><b>Sorting</b>: You can sort the list by any property, including both number and text values. If an entry has multiple values, then it will attempt to split up into individual entries for each value, and can therefore show up in multiple places where applicable.</li>
+            <li><b>Search</b>: The main search bar lets you search through the entry names, as well as anything listed under "variants", given that that property is selected. Spaces (" ") in the search function as AND operators: typing "ca vi" will match "<u>Ca</u>ve <u>Vi</u>nes", despite not matching a continuous string. Pipe symbols ("|") also function as OR operators: "honey|slime" will show results for both honey and slime blocks. The search function is case-insensitive.</li>
+            <li><b>Settings</b>: Various other actions and options are available under the collapsing "settings" (<i class="fas fa-tools"></i>&zwj;), including reset buttons, size conversions, and exporting options.</li>
+        </ul>
+        <br>
+        <h2 class="card-text">Joa Mama</h2>
+        <hr>
+        <p class="about-text">
+            In order to effectivize the compiling of different properties, ensure accuracy, and speed up the updating process of the website's information for new game versions, a mod named <a href="https://github.com/bldhf/joa-mama">Joa mama</a> (heh) is being developed in order to extract the properties from the game code directly. It works by checking every block in the registry against a check for each property, and compiles a list of the results. This is then converted to the format described below via an external tool. Originally created by bldhf.</p>
+        <br>
 
+        <h2 class="card-text">Contributions</h2>
+        <hr>
+        <p class="about-text">Joa | Founder &amp; Lead developer</p>
+        <br><br>
         <div class="col-lg-6">
-            <h1 class="card-text">Contributors</h1>
+            <h3 class="card-text">Contributors</h3>
             <hr>
             <ul class="text-left written-list">
                 <li>1190an</li>
@@ -154,15 +164,19 @@
                 <li>Firigion</li>
                 <li>FX - PR0CESS</li>
                 <li>jjl21</li>
-                <li>JoaBro</li>
                 <li>Limmelime</li>
                 <li>lntricate</li>
                 <li>T727</li>
             </ul>
         </div>
-        <div class="col-lg-6"><h1 class="card-text">Sources</h1>
+        <div class="col-lg-6"><h3 class="card-text">Sources</h3>
             <hr>
             <ul class="text-left written-list">
+                <li>
+                    <a class="lighter-hyperlink" href="https://github.com/JoakimThorsen/joa-mama">
+                        Joa Mama, a property extraction mod by bldhf and Joa
+                    </a>
+                </li>
                 <li>
                     <a class="lighter-hyperlink" href="https://github.com/lntricate1/BlockSizeScript">
                         BlockSizeScript by enbyd & Intricate
@@ -180,17 +194,12 @@
                 </li>
                 <li>
                     <a class="lighter-hyperlink" href="https://minecraft.fandom.com/wiki">
-                        The minecraft wiki
+                        The Minecraft Wiki
                     </a>
                 </li>
                 <li>
                     <a class="lighter-hyperlink" href="https://github.com/PrismarineJS/minecraft-data/">
                         PrismarineJS
-                    </a>
-                </li>
-                <li>
-                    <a class="lighter-hyperlink" href="https://github.com/JoakimThorsen/joa-mama">
-                        Joa Mama, a property extraction by bldhf and JoaBro
                     </a>
                 </li>
                 <li>Code digging by contributors&nbsp;:]</li>
