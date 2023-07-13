@@ -61,7 +61,7 @@ function headerOutputter(page, entry_header) {
                 <li>
                     <div class="text-center">
                         <span class="btn-group dropdown-actions" role="group">
-                            <a role="button" class="btn dropdown-btn btn-default modify-sorting${
+                            <button class="btn dropdown-btn btn-default modify-sorting${
                                 (sort_arr.some(e => e.property === page) 
                                     && !sort_arr.filter(e => e.property === page)[0].reversed) 
                                     ? ' active' 
@@ -69,8 +69,8 @@ function headerOutputter(page, entry_header) {
                                 }" property="${page}" reversed="false"
                             >
                                 <i class="fas fa-sort-amount-down-alt"></i>
-                            </a>
-                            <a role="button" class="btn dropdown-btn btn-default modify-sorting${
+                            </button>
+                            <button class="btn dropdown-btn btn-default modify-sorting${
                                 (sort_arr.some(e => e.property === page) 
                                     && sort_arr.filter(e => e.property === page)[0].reversed) 
                                     ? ' active' 
@@ -78,17 +78,17 @@ function headerOutputter(page, entry_header) {
                                 }" property="${page}" reversed="true"
                             >
                                 <i class="fas fa-sort-amount-up"></i>
-                            </a>
+                            </button>
                         </span>
-                        <a role="button" class="btn dropdown-btn btn-default export-csv"
+                        <button class="btn dropdown-btn btn-default export-csv"
                             title="Download a newline-separated list of all blocks that are currently shown">
                             <i class="fas fa-file-export"></i>Export CSV
                         </a>
-                        <a role="button" class="btn dropdown-btn btn-default export-json"
+                        <button class="btn dropdown-btn btn-default export-json"
                             title="Download a JSON string-array-formatted list of all blocks that are currently shown">
                             <i class="fas fa-file-export"></i>Export JSON
                         </a>
-                        <a role="button" class="btn dropdown-btn btn-default copy-comma-separated"
+                        <button class="btn dropdown-btn btn-default copy-comma-separated"
                             title="Copy a Comma-Separated list of all blocks that are currently shown to clipboard.">
                             <i class="fas fa-copy"></i>Copy Comma-Separated List
                         </a>
@@ -168,35 +168,35 @@ function headerOutputter(page, entry_header) {
                         <li>
                             <div class="text-center">
                                 <span class="btn-group dropdown-actions" role="group">
-                                    <a role="button" 
+                                    <button
                                        title="Sort this column"
                                        class="btn dropdown-btn btn-default modify-sorting${sorted === 1 ? ' active' : ''}" 
                                        property="${property_id}" 
                                        reversed="false"
                                     >
                                         <i class="fas fa-sort-amount-down-alt"></i>
-                                    </a>
-                                    <a role="button" 
+                                    </button>
+                                    <button
                                        title="Sort this column in reverse"
                                        class="btn dropdown-btn btn-default modify-sorting${sorted === -1 ? ' active' : ''}" 
                                        property="${property_id}" 
                                        reversed="true">
                                         <i class="fas fa-sort-amount-up"></i>
-                                    </a>
-                                    <a role="button" 
+                                    </button>
+                                    <button
                                        title="Toggle all filter values"
                                        class="btn dropdown-btn btn-default toggle-select-all"
                                        property="${property_id}"
                                     >
                                         <i class="far fa-check-square"></i>
-                                    </a>
-                                    <a role="button" 
+                                    </button>
+                                    <button
                                        title="Remove/deselect this property"
                                        class="btn dropdown-btn btn-default remove-property"
                                        property="${property_id}"
                                     >
                                         <i class="fas fa-trash-alt"></i>
-                                    </a>
+                                    </button>
                                 </span>
                             </div>
                         </li>`;

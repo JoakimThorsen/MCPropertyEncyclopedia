@@ -167,7 +167,7 @@ async function initialize_page() {
             `The selection you have specified [${selection_arr.join(', ')}] is invalid. The following properties were not recognized: <ul>`
                 + selection_arr.filter(prop => !Object.keys(data.properties).includes(prop)).map(unknown_prop => {
                     const found_prop = getClosestLevDistFromList(unknown_prop, Object.keys(data.properties));
-                    return `<li>'${unknown_prop}': Did you mean '${found_prop}'? <a class="found-prop-correction" unknown-property="${unknown_prop}" found-property="${found_prop}" role="button" style="text-decoration: underline">Yes</a> </li>`;
+                    return `<li>'${unknown_prop}': Did you mean '${found_prop}'? <button class="btn btn-default found-prop-correction" unknown-property="${unknown_prop}" found-property="${found_prop}" style="text-decoration: underline">Yes</button> </li>`;
                 }).join('') +
             "</ul>"
         );

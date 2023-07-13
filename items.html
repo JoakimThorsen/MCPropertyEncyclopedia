@@ -138,12 +138,12 @@
             <ul class="dropdown-menu" id="selection">
                 <div class="text-center">
                     <span class="btn-group dropdown-actions" role="group">
-                        <a role="button" class="btn dropdown-btn btn-default deselect-all">
+                        <button class="btn dropdown-btn btn-default deselect-all">
                             <i class="far fa-square"></i>
-                        </a>
-                        <a role="button" class="btn dropdown-btn btn-default select-all">
+                        </button>
+                        <button class="btn dropdown-btn btn-default select-all">
                             <i class="far fa-check-square"></i>
-                        </a>
+                        </button>
                     </span>
                         
                 </div>
@@ -185,24 +185,24 @@
 
             <div class="settings-box">
                 <p>Export itemlist:</p>
-                <a role="button" class="btn dropdown-btn btn-default export-csv"
+                <button class="btn dropdown-btn btn-default export-csv"
                     title="Download a newline-separated list of all blocks that are currently shown">
                     <i class="fas fa-file-export"></i>Export CSV
-                </a>
-                <a role="button" class="btn dropdown-btn btn-default export-json"
+                </button>
+                <button class="btn dropdown-btn btn-default export-json"
                     title="Download a JSON string-array-formatted list of all blocks that are currently shown">
                     <i class="fas fa-file-export"></i>Export JSON
-                </a>
-                <a role="button" class="btn dropdown-btn btn-default copy-comma-separated"
+                </button>
+                <button class="btn dropdown-btn btn-default copy-comma-separated"
                     title="Copy a Comma-Separated list of all blocks that are currently shown to clipboard.">
                     <i class="fas fa-copy"></i>Copy Comma-Separated List
-                </a>
+                </button>
             </div>
 
             <div class="settings-box">
                 <p>Font:</p>
                 <div class="btn-group">
-                    <a role="button" 
+                   <button
                             class="btn btn-default radio-settings"
                             type="button"
                             setting="font"
@@ -212,10 +212,10 @@
                             onload="if (new URLSearchParams(window.location.search).get('font') === 'monospaced') document.querySelector('body').style.fontFamily = 'monospace, \'Courier New\''"
                     >
                         Monospaced
-                    </a>
-                    <a role="button" class="btn btn-default radio-settings" type="button" setting="font" value="normal" rerender="false" onclick="document.querySelector('body').style.fontFamily = '\'Montserrat\', sans-serif'">
+                    </button>
+                    <button class="btn btn-default radio-settings" type="button" setting="font" value="normal" rerender="false" onclick="document.querySelector('body').style.fontFamily = '\'Montserrat\', sans-serif'">
                         Normal
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
