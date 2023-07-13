@@ -33,7 +33,7 @@
         
         --background-image: url("assets/propertythingy_dark_compressed.jpg") no-repeat center center fixed;;
         --expand-btn-background-color: #333;
-        --about-background-color: rgba(0, 0, 0, 0.4);
+        --about-background-color: rgba(0, 0, 0, 0.6);
         --highlight-color: #880;
     }
 }
@@ -52,7 +52,7 @@
     
     --background-image: url("assets/propertythingy_dark_compressed.jpg") no-repeat center center fixed;;
     --expand-btn-background-color: #333;
-    --about-background-color: rgba(0, 0, 0, 0.4);
+    --about-background-color: rgba(0, 0, 0, 0.6);
     --highlight-color: #880;
 }
 
@@ -151,7 +151,7 @@ h3 {
 .about-text, .written-list {
     font-size: 22px;
 }
-.written-list>li {
+.written-list:not(.compact-list)>li {
     margin: 10px 0;
 }
 
