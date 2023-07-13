@@ -191,7 +191,7 @@ function make_popup(title, content) {
     let html = /*html*/`<div class="panel panel-default popup-panel collapse in">
         <div class="panel-heading">
             ${title}
-            <a role="button" style="float:right; color:gray" onclick="$(this).parent().parent().collapse('hide');">X</a>
+            <a role="button" style="float:right; color:gray" onclick="$(this).parent().parent().collapse('hide');" title="Close this popup">X</a>
         </div>
         <div class="panel-body">
             ${content}
@@ -543,6 +543,7 @@ function deepCopy(obj) {
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
     let scrollButton = document.getElementById("scrollButton");
+    if(scrollButton === null) return;
     if (document.documentElement.scrollTop > 20 && document.documentElement.scrollTop + document.documentElement.clientHeight < document.documentElement.scrollHeight) {
         scrollButton.style.display = "block";
     } else {
