@@ -94,6 +94,7 @@ body {
 
 .navbar-nav > li > a.navbar-disabled {
     color: #a8a8a8;
+    text-decoration: underline;
 }
 
 .navbar-nav > li > a.navbar-item:hover {
