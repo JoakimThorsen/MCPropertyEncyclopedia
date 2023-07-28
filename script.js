@@ -569,6 +569,8 @@ function toggleTheme() {
             break
         case 'light':
             theme = 'dark';
+        default:
+            theme = 'dark';
     }
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);

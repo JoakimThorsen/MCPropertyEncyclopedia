@@ -152,7 +152,7 @@ h3 {
     font-size: 22px;
 }
 .written-list:not(.compact-list)>li {
-    margin: 10px 0;
+    margin: 10px 40px 0 0;
 }
 
 a {

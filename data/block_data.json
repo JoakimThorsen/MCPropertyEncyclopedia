@@ -11282,7 +11282,7 @@
 				"Shroomlight": "Yes",
 				"Shulker Box": {
 					"Sideways When Opened": "No",
-					"When Verical Or Closed": "Yes"
+					"When Vertical Or Closed": "Yes"
 				},
 				"Slabs": {
 					"Bottom": "No",
