@@ -220,7 +220,7 @@ function headerOutputter(page, entry_header) {
             append_data += `<li>
                     <a role="button" class="dropdown-option modify-filter" property="${property_id}" value="${option}">
                         <span class="dot ${color ? color : 'display-none'}"></span>
-                        <span class="justify-start">${option}</span>
+                        <span class="justify-start">${value_parser(option)}</span>
                         <span class="glyphicon glyphicon-ok${filter_obj[property_id]?.includes(String(option)) ? ' display-none' : ''}">
                         </span></a></li>`
         });
@@ -463,8 +463,20 @@ function value_parser(value) {
         // Basic URL parsing:
         const url_regexp = /(https?:\/\/(\w*\.)+\w+\/?[^ ]*)/g;
         value = value.replace(url_regexp, `<a target="_blank" href="$1">$1</a>`);
+        const curly_syntax_regex = /\{\{([^\}]+?)\}\}/g
+        value = value.replace(curly_syntax_regex, curly_syntax_handler)
         
         value = value.replace(/\n/g, "<br>\n");
     }
     return value;
+}
+
+function curly_syntax_handler(string, args) {
+    // console.log(string, JSON.stringify(args));
+    args = args.split('|');
+    switch(args[0]) {
+        case "mapColor":
+            return `<span class='dot ${args[1]}'></span> ${args[1]}`;
+    }
+    return string;
 }

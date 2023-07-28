@@ -204,7 +204,7 @@ function new_game(daily_game = false) {
             append_data += `<li>
                     <a role="button" class="dropdown-option modify-filter" property="${property_id}" value="${option}">
                     <span class="dot ${color ? color : 'display-none'}"></span>
-                    <span class="justify-start">${option}</span>
+                    <span class="justify-start">${value_parser(option)}</span>
                     </span></a></li>`
         });
         append_data += `</div></ul></div></th>`;
@@ -358,7 +358,7 @@ function get_data_cell(latest_guess, entry, property_name, top_level = true) {
         return_data += "</tbody></table></td>";
 
     } else {
-        return_data = `<td ${formatting_color(latest_guess, entry, property_name)}>${entry}</td>`;
+        return_data = `<td ${formatting_color(latest_guess, entry, property_name)}>${value_parser(entry)}</td>`;
     }
     return return_data;
 }
@@ -441,4 +441,24 @@ function mulberry32(a) {
       t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
       return ((t ^ t >>> 14) >>> 0) / 4294967296;
     }
+}
+
+function value_parser(value) {
+    if(typeof value === 'string') {
+        const curly_syntax_regex = /\{\{([^\}]+?)\}\}/g
+        value = value.replace(curly_syntax_regex, curly_syntax_handler)
+        
+        value = value.replace(/\n/g, "<br>\n");
+    }
+    return value;
+}
+
+function curly_syntax_handler(string, args) {
+    // console.log(string, JSON.stringify(args));
+    args = args.split('|');
+    switch(args[0]) {
+        case "mapColor":
+            return `<span class='dot ${args[1]}'></span> ${args[1]}`;
+    }
+    return string;
 }

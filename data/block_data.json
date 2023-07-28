@@ -7789,955 +7789,818 @@
 		},
 		"map_color": {
 			"entries": {
-				"Activator Rail": "<span class='dot CLEAR'></span> CLEAR",
-				"Air": "<span class='dot CLEAR'></span> CLEAR",
-				"Amethyst Cluster": {
-					"waterlogged: false": "<span class='dot PURPLE'></span> PURPLE",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-				},
-				"Ancient Debris": "<span class='dot BLACK'></span> BLACK",
-				"Andesite": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-				"Anvil": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
-				"Azalea": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
+				"Activator Rail": "{{mapColor|NONE}}",
+				"Air": "{{mapColor|NONE}}",
+				"Amethyst Cluster": "{{mapColor|COLOR_PURPLE}}",
+				"Ancient Debris": "{{mapColor|COLOR_BLACK}}",
+				"Andesite": "{{mapColor|STONE}}",
+				"Anvil": "{{mapColor|METAL}}",
+				"Azalea": "{{mapColor|PLANT}}",
 				"Bamboo": {
-					"Bamboo": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-					"Bamboo Shoot": "<span class='dot OAK_TAN'></span> OAK_TAN"
+					"Bamboo": "{{mapColor|PLANT}}",
+					"Bamboo Shoot": "{{mapColor|WOOD}}"
 				},
-				"Banners": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Barrel": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Barrier": "<span class='dot CLEAR'></span> CLEAR",
-				"Basalt": "<span class='dot BLACK'></span> BLACK",
-				"Beacon": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE",
-				"Bedrock": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
+				"Bamboo Mosaic": "{{mapColor|COLOR_YELLOW}}",
+				"Banners": "{{mapColor|WOOD}}",
+				"Barrel": "{{mapColor|WOOD}}",
+				"Barrier": "{{mapColor|NONE}}",
+				"Basalt": "{{mapColor|COLOR_BLACK}}",
+				"Beacon": "{{mapColor|DIAMOND}}",
+				"Bedrock": "{{mapColor|STONE}}",
 				"Beds": {
 					"Black Bed": {
-						"part: foot": "<span class='dot BLACK'></span> BLACK",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_BLACK}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Blue Bed": {
-						"part: foot": "<span class='dot BLUE'></span> BLUE",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_BLUE}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Brown Bed": {
-						"part: foot": "<span class='dot BROWN'></span> BROWN",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_BROWN}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Cyan Bed": {
-						"part: foot": "<span class='dot CYAN'></span> CYAN",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_CYAN}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Gray Bed": {
-						"part: foot": "<span class='dot GRAY'></span> GRAY",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_GRAY}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Green Bed": {
-						"part: foot": "<span class='dot GREEN'></span> GREEN",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_GREEN}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Light Blue Bed": {
-						"part: foot": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_LIGHT_BLUE}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Light Gray Bed": {
-						"part: foot": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_LIGHT_GRAY}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Lime Bed": {
-						"part: foot": "<span class='dot LIME'></span> LIME",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_LIGHT_GREEN}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Magenta Bed": {
-						"part: foot": "<span class='dot MAGENTA'></span> MAGENTA",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_MAGENTA}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Orange Bed": {
-						"part: foot": "<span class='dot ORANGE'></span> ORANGE",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_ORANGE}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Pink Bed": {
-						"part: foot": "<span class='dot PINK'></span> PINK",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_PINK}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Purple Bed": {
-						"part: foot": "<span class='dot PURPLE'></span> PURPLE",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_PURPLE}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Red Bed": {
-						"part: foot": "<span class='dot RED'></span> RED",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_RED}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"White Bed": {
-						"part: foot": "<span class='dot WHITE'></span> WHITE",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|SNOW}}",
+						"part: head": "{{mapColor|WOOL}}"
 					},
 					"Yellow Bed": {
-						"part: foot": "<span class='dot YELLOW'></span> YELLOW",
-						"part: head": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY"
+						"part: foot": "{{mapColor|COLOR_YELLOW}}",
+						"part: head": "{{mapColor|WOOL}}"
 					}
 				},
-				"Bee Nest": "<span class='dot YELLOW'></span> YELLOW",
-				"Beehive": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Bell": "<span class='dot GOLD'></span> GOLD",
-				"Big Dripleaf": {
-					"waterlogged: false": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
+				"Bee Nest": "{{mapColor|COLOR_YELLOW}}",
+				"Beehive": "{{mapColor|WOOD}}",
+				"Bell": "{{mapColor|GOLD}}",
+				"Big Dripleaf": "{{mapColor|PLANT}}",
+				"Blackstone": "{{mapColor|COLOR_BLACK}}",
+				"Blast Furnace": "{{mapColor|STONE}}",
+				"Block of Amethyst": "{{mapColor|COLOR_PURPLE}}",
+				"Block of Bamboo": {
+					"axis: x<br>axis: z": "{{mapColor|PLANT}}",
+					"axis: y": "{{mapColor|COLOR_YELLOW}}"
 				},
-				"Blackstone": "<span class='dot BLACK'></span> BLACK",
-				"Blast Furnace": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-				"Block of Amethyst": "<span class='dot PURPLE'></span> PURPLE",
-				"Block of Coal": "<span class='dot BLACK'></span> BLACK",
+				"Block of Coal": "{{mapColor|COLOR_BLACK}}",
 				"Block of Copper": {
-					"Block of Copper<br>Cut Copper<br>Waxed Block of Copper<br>Waxed Cut Copper": "<span class='dot ORANGE'></span> ORANGE",
-					"Exposed Copper<br>Exposed Cut Copper<br>Waxed Exposed Copper<br>Waxed Exposed Cut Copper": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY",
-					"Oxidized Copper<br>Oxidized Cut Copper<br>Waxed Oxidized Copper<br>Waxed Oxidized Cut Copper": "<span class='dot TEAL'></span> TEAL",
-					"Weathered Copper<br>Weathered Cut Copper<br>Waxed Weathered Copper<br>Waxed Weathered Cut Copper": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+					"Block of Copper<br>Cut Copper<br>Waxed Block of Copper<br>Waxed Cut Copper": "{{mapColor|COLOR_ORANGE}}",
+					"Exposed Copper<br>Exposed Cut Copper<br>Waxed Exposed Copper<br>Waxed Exposed Cut Copper": "{{mapColor|TERRACOTTA_LIGHT_GRAY}}",
+					"Oxidized Copper<br>Oxidized Cut Copper<br>Waxed Oxidized Copper<br>Waxed Oxidized Cut Copper": "{{mapColor|WARPED_NYLIUM}}",
+					"Waxed Weathered Copper<br>Waxed Weathered Cut Copper<br>Weathered Copper<br>Weathered Cut Copper": "{{mapColor|WARPED_STEM}}"
 				},
-				"Block of Diamond": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE",
-				"Block of Emerald": "<span class='dot EMERALD_GREEN'></span> EMERALD_GREEN",
-				"Block of Gold": "<span class='dot GOLD'></span> GOLD",
-				"Block of Iron": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
-				"Block of Lapis Lazuli": "<span class='dot LAPIS_BLUE'></span> LAPIS_BLUE",
-				"Block of Netherite": "<span class='dot BLACK'></span> BLACK",
-				"Block of Quartz": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
-				"Block of Raw Copper": "<span class='dot ORANGE'></span> ORANGE",
-				"Block of Raw Gold": "<span class='dot GOLD'></span> GOLD",
-				"Block of Raw Iron": "<span class='dot RAW_IRON_PINK'></span> RAW_IRON_PINK",
-				"Block of Redstone": "<span class='dot BRIGHT_RED'></span> BRIGHT_RED",
-				"Blue Ice": "<span class='dot PALE_PURPLE'></span> PALE_PURPLE",
-				"Bone Block": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-				"Bookshelf": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Brewing Stand": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
-				"Bricks": "<span class='dot RED'></span> RED",
-				"Budding Amethyst": "<span class='dot PURPLE'></span> PURPLE",
-				"Buttons": "<span class='dot CLEAR'></span> CLEAR",
-				"Cactus": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-				"Cake": "<span class='dot CLEAR'></span> CLEAR",
-				"Calcite": "<span class='dot TERRACOTTA_WHITE'></span> TERRACOTTA_WHITE",
-				"Campfire": {
-					"waterlogged: false": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-				},
+				"Block of Diamond": "{{mapColor|DIAMOND}}",
+				"Block of Emerald": "{{mapColor|EMERALD}}",
+				"Block of Gold": "{{mapColor|GOLD}}",
+				"Block of Iron": "{{mapColor|METAL}}",
+				"Block of Lapis Lazuli": "{{mapColor|LAPIS}}",
+				"Block of Netherite": "{{mapColor|COLOR_BLACK}}",
+				"Block of Quartz": "{{mapColor|QUARTZ}}",
+				"Block of Raw Copper": "{{mapColor|COLOR_ORANGE}}",
+				"Block of Raw Gold": "{{mapColor|GOLD}}",
+				"Block of Raw Iron": "{{mapColor|RAW_IRON}}",
+				"Block of Redstone": "{{mapColor|FIRE}}",
+				"Block of Stripped Bamboo": "{{mapColor|COLOR_YELLOW}}",
+				"Blue Ice": "{{mapColor|ICE}}",
+				"Bone Block": "{{mapColor|SAND}}",
+				"Bookshelf": "{{mapColor|WOOD}}",
+				"Brewing Stand": "{{mapColor|METAL}}",
+				"Bricks": "{{mapColor|COLOR_RED}}",
+				"Budding Amethyst": "{{mapColor|COLOR_PURPLE}}",
+				"Buttons": "{{mapColor|NONE}}",
+				"Cactus": "{{mapColor|PLANT}}",
+				"Cake": "{{mapColor|NONE}}",
+				"Calcite": "{{mapColor|TERRACOTTA_WHITE}}",
+				"Calibrated Sculk Sensor": "{{mapColor|COLOR_CYAN}}",
+				"Campfire": "{{mapColor|PODZOL}}",
 				"Candles": {
-					"Black Candle": {
-						"waterlogged: false": "<span class='dot BLACK'></span> BLACK",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Blue Candle": {
-						"waterlogged: false": "<span class='dot BLUE'></span> BLUE",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Brown Candle": {
-						"waterlogged: false": "<span class='dot BROWN'></span> BROWN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Candle": {
-						"waterlogged: false": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Cyan Candle": {
-						"waterlogged: false": "<span class='dot CYAN'></span> CYAN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Gray Candle": {
-						"waterlogged: false": "<span class='dot GRAY'></span> GRAY",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Green Candle": {
-						"waterlogged: false": "<span class='dot GREEN'></span> GREEN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Light Blue Candle": {
-						"waterlogged: false": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Light Gray Candle": {
-						"waterlogged: false": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Lime Candle": {
-						"waterlogged: false": "<span class='dot LIME'></span> LIME",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Magenta Candle": {
-						"waterlogged: false": "<span class='dot MAGENTA'></span> MAGENTA",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Orange Candle": {
-						"waterlogged: false": "<span class='dot ORANGE'></span> ORANGE",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Pink Candle": {
-						"waterlogged: false": "<span class='dot PINK'></span> PINK",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Purple Candle": {
-						"waterlogged: false": "<span class='dot PURPLE'></span> PURPLE",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Red Candle": {
-						"waterlogged: false": "<span class='dot RED'></span> RED",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"White Candle": {
-						"waterlogged: false": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Yellow Candle": {
-						"waterlogged: false": "<span class='dot YELLOW'></span> YELLOW",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					}
+					"Black Candle": "{{mapColor|COLOR_BLACK}}",
+					"Blue Candle": "{{mapColor|COLOR_BLUE}}",
+					"Brown Candle": "{{mapColor|COLOR_BROWN}}",
+					"Candle": "{{mapColor|SAND}}",
+					"Cyan Candle": "{{mapColor|COLOR_CYAN}}",
+					"Gray Candle": "{{mapColor|COLOR_GRAY}}",
+					"Green Candle": "{{mapColor|COLOR_GREEN}}",
+					"Light Blue Candle": "{{mapColor|COLOR_LIGHT_BLUE}}",
+					"Light Gray Candle": "{{mapColor|COLOR_LIGHT_GRAY}}",
+					"Lime Candle": "{{mapColor|COLOR_LIGHT_GREEN}}",
+					"Magenta Candle": "{{mapColor|COLOR_MAGENTA}}",
+					"Orange Candle": "{{mapColor|COLOR_ORANGE}}",
+					"Pink Candle": "{{mapColor|COLOR_PINK}}",
+					"Purple Candle": "{{mapColor|COLOR_PURPLE}}",
+					"Red Candle": "{{mapColor|COLOR_RED}}",
+					"White Candle": "{{mapColor|WOOL}}",
+					"Yellow Candle": "{{mapColor|COLOR_YELLOW}}"
 				},
 				"Carpets": {
-					"Black Carpet": "<span class='dot BLACK'></span> BLACK",
-					"Blue Carpet": "<span class='dot BLUE'></span> BLUE",
-					"Brown Carpet": "<span class='dot BROWN'></span> BROWN",
-					"Cyan Carpet": "<span class='dot CYAN'></span> CYAN",
-					"Gray Carpet": "<span class='dot GRAY'></span> GRAY",
-					"Green Carpet": "<span class='dot GREEN'></span> GREEN",
-					"Light Blue Carpet": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE",
-					"Light Gray Carpet": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-					"Lime Carpet": "<span class='dot LIME'></span> LIME",
-					"Magenta Carpet": "<span class='dot MAGENTA'></span> MAGENTA",
-					"Orange Carpet": "<span class='dot ORANGE'></span> ORANGE",
-					"Pink Carpet": "<span class='dot PINK'></span> PINK",
-					"Purple Carpet": "<span class='dot PURPLE'></span> PURPLE",
-					"Red Carpet": "<span class='dot RED'></span> RED",
-					"White Carpet": "<span class='dot WHITE'></span> WHITE",
-					"Yellow Carpet": "<span class='dot YELLOW'></span> YELLOW"
+					"Black Carpet": "{{mapColor|COLOR_BLACK}}",
+					"Blue Carpet": "{{mapColor|COLOR_BLUE}}",
+					"Brown Carpet": "{{mapColor|COLOR_BROWN}}",
+					"Cyan Carpet": "{{mapColor|COLOR_CYAN}}",
+					"Gray Carpet": "{{mapColor|COLOR_GRAY}}",
+					"Green Carpet": "{{mapColor|COLOR_GREEN}}",
+					"Light Blue Carpet": "{{mapColor|COLOR_LIGHT_BLUE}}",
+					"Light Gray Carpet": "{{mapColor|COLOR_LIGHT_GRAY}}",
+					"Lime Carpet": "{{mapColor|COLOR_LIGHT_GREEN}}",
+					"Magenta Carpet": "{{mapColor|COLOR_MAGENTA}}",
+					"Orange Carpet": "{{mapColor|COLOR_ORANGE}}",
+					"Pink Carpet": "{{mapColor|COLOR_PINK}}",
+					"Purple Carpet": "{{mapColor|COLOR_PURPLE}}",
+					"Red Carpet": "{{mapColor|COLOR_RED}}",
+					"White Carpet": "{{mapColor|SNOW}}",
+					"Yellow Carpet": "{{mapColor|COLOR_YELLOW}}"
 				},
-				"Cartography Table": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Cauldron": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-				"Cave Vines": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-				"Chain": "<span class='dot CLEAR'></span> CLEAR",
-				"Chest": {
-					"waterlogged: false": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-				},
-				"Chorus Flower": "<span class='dot PURPLE'></span> PURPLE",
-				"Chorus Plant": "<span class='dot PURPLE'></span> PURPLE",
-				"Clay": "<span class='dot LIGHT_BLUE_GRAY'></span> LIGHT_BLUE_GRAY",
+				"Cartography Table": "{{mapColor|WOOD}}",
+				"Cauldron": "{{mapColor|STONE}}",
+				"Cave Vines": "{{mapColor|PLANT}}",
+				"Chain": "{{mapColor|NONE}}",
+				"Chest": "{{mapColor|WOOD}}",
+				"Chiseled Bookshelf": "{{mapColor|WOOD}}",
+				"Chorus Flower": "{{mapColor|COLOR_PURPLE}}",
+				"Chorus Plant": "{{mapColor|COLOR_PURPLE}}",
+				"Clay": "{{mapColor|CLAY}}",
 				"Coal Ore": {
-					"Coal Ore": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-					"Deepslate Coal Ore": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY"
+					"Coal Ore": "{{mapColor|STONE}}",
+					"Deepslate Coal Ore": "{{mapColor|DEEPSLATE}}"
 				},
-				"Coarse Dirt": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-				"Cobbled Deepslate": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
+				"Coarse Dirt": "{{mapColor|DIRT}}",
+				"Cobbled Deepslate": "{{mapColor|DEEPSLATE}}",
 				"Cobblestone": {
-					"Cobblestone<br>Mossy Cobblestone": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-					"Infested Cobblestone": "<span class='dot LIGHT_BLUE_GRAY'></span> LIGHT_BLUE_GRAY"
+					"Cobblestone<br>Mossy Cobblestone": "{{mapColor|STONE}}",
+					"Infested Cobblestone": "{{mapColor|CLAY}}"
 				},
-				"Cobweb": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY",
-				"Cocoa": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
+				"Cobweb": "{{mapColor|WOOL}}",
+				"Cocoa": "{{mapColor|PLANT}}",
 				"Command Blocks": {
-					"Chain Command Block": "<span class='dot GREEN'></span> GREEN",
-					"Command Block": "<span class='dot BROWN'></span> BROWN",
-					"Repeating Command Block": "<span class='dot PURPLE'></span> PURPLE"
+					"Chain Command Block": "{{mapColor|COLOR_GREEN}}",
+					"Command Block": "{{mapColor|COLOR_BROWN}}",
+					"Repeating Command Block": "{{mapColor|COLOR_PURPLE}}"
 				},
-				"Composter": "<span class='dot OAK_TAN'></span> OAK_TAN",
+				"Composter": "{{mapColor|WOOD}}",
 				"Concrete": {
-					"Black Concrete": "<span class='dot BLACK'></span> BLACK",
-					"Blue Concrete": "<span class='dot BLUE'></span> BLUE",
-					"Brown Concrete": "<span class='dot BROWN'></span> BROWN",
-					"Cyan Concrete": "<span class='dot CYAN'></span> CYAN",
-					"Gray Concrete": "<span class='dot GRAY'></span> GRAY",
-					"Green Concrete": "<span class='dot GREEN'></span> GREEN",
-					"Light Blue Concrete": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE",
-					"Light Gray Concrete": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-					"Lime Concrete": "<span class='dot LIME'></span> LIME",
-					"Magenta Concrete": "<span class='dot MAGENTA'></span> MAGENTA",
-					"Orange Concrete": "<span class='dot ORANGE'></span> ORANGE",
-					"Pink Concrete": "<span class='dot PINK'></span> PINK",
-					"Purple Concrete": "<span class='dot PURPLE'></span> PURPLE",
-					"Red Concrete": "<span class='dot RED'></span> RED",
-					"White Concrete": "<span class='dot WHITE'></span> WHITE",
-					"Yellow Concrete": "<span class='dot YELLOW'></span> YELLOW"
+					"Black Concrete": "{{mapColor|COLOR_BLACK}}",
+					"Blue Concrete": "{{mapColor|COLOR_BLUE}}",
+					"Brown Concrete": "{{mapColor|COLOR_BROWN}}",
+					"Cyan Concrete": "{{mapColor|COLOR_CYAN}}",
+					"Gray Concrete": "{{mapColor|COLOR_GRAY}}",
+					"Green Concrete": "{{mapColor|COLOR_GREEN}}",
+					"Light Blue Concrete": "{{mapColor|COLOR_LIGHT_BLUE}}",
+					"Light Gray Concrete": "{{mapColor|COLOR_LIGHT_GRAY}}",
+					"Lime Concrete": "{{mapColor|COLOR_LIGHT_GREEN}}",
+					"Magenta Concrete": "{{mapColor|COLOR_MAGENTA}}",
+					"Orange Concrete": "{{mapColor|COLOR_ORANGE}}",
+					"Pink Concrete": "{{mapColor|COLOR_PINK}}",
+					"Purple Concrete": "{{mapColor|COLOR_PURPLE}}",
+					"Red Concrete": "{{mapColor|COLOR_RED}}",
+					"White Concrete": "{{mapColor|SNOW}}",
+					"Yellow Concrete": "{{mapColor|COLOR_YELLOW}}"
 				},
 				"Concrete Powder": {
-					"Black Concrete Powder": "<span class='dot BLACK'></span> BLACK",
-					"Blue Concrete Powder": "<span class='dot BLUE'></span> BLUE",
-					"Brown Concrete Powder": "<span class='dot BROWN'></span> BROWN",
-					"Cyan Concrete Powder": "<span class='dot CYAN'></span> CYAN",
-					"Gray Concrete Powder": "<span class='dot GRAY'></span> GRAY",
-					"Green Concrete Powder": "<span class='dot GREEN'></span> GREEN",
-					"Light Blue Concrete Powder": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE",
-					"Light Gray Concrete Powder": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-					"Lime Concrete Powder": "<span class='dot LIME'></span> LIME",
-					"Magenta Concrete Powder": "<span class='dot MAGENTA'></span> MAGENTA",
-					"Orange Concrete Powder": "<span class='dot ORANGE'></span> ORANGE",
-					"Pink Concrete Powder": "<span class='dot PINK'></span> PINK",
-					"Purple Concrete Powder": "<span class='dot PURPLE'></span> PURPLE",
-					"Red Concrete Powder": "<span class='dot RED'></span> RED",
-					"White Concrete Powder": "<span class='dot WHITE'></span> WHITE",
-					"Yellow Concrete Powder": "<span class='dot YELLOW'></span> YELLOW"
+					"Black Concrete Powder": "{{mapColor|COLOR_BLACK}}",
+					"Blue Concrete Powder": "{{mapColor|COLOR_BLUE}}",
+					"Brown Concrete Powder": "{{mapColor|COLOR_BROWN}}",
+					"Cyan Concrete Powder": "{{mapColor|COLOR_CYAN}}",
+					"Gray Concrete Powder": "{{mapColor|COLOR_GRAY}}",
+					"Green Concrete Powder": "{{mapColor|COLOR_GREEN}}",
+					"Light Blue Concrete Powder": "{{mapColor|COLOR_LIGHT_BLUE}}",
+					"Light Gray Concrete Powder": "{{mapColor|COLOR_LIGHT_GRAY}}",
+					"Lime Concrete Powder": "{{mapColor|COLOR_LIGHT_GREEN}}",
+					"Magenta Concrete Powder": "{{mapColor|COLOR_MAGENTA}}",
+					"Orange Concrete Powder": "{{mapColor|COLOR_ORANGE}}",
+					"Pink Concrete Powder": "{{mapColor|COLOR_PINK}}",
+					"Purple Concrete Powder": "{{mapColor|COLOR_PURPLE}}",
+					"Red Concrete Powder": "{{mapColor|COLOR_RED}}",
+					"White Concrete Powder": "{{mapColor|SNOW}}",
+					"Yellow Concrete Powder": "{{mapColor|COLOR_YELLOW}}"
 				},
-				"Conduit": {
-					"waterlogged: false": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-				},
+				"Conduit": "{{mapColor|DIAMOND}}",
 				"Copper Ore": {
-					"Copper Ore": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-					"Deepslate Copper Ore": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY"
+					"Copper Ore": "{{mapColor|STONE}}",
+					"Deepslate Copper Ore": "{{mapColor|DEEPSLATE}}"
 				},
 				"Coral Blocks": {
-					"Brain Coral Block": "<span class='dot PINK'></span> PINK",
-					"Bubble Coral Block": "<span class='dot PURPLE'></span> PURPLE",
-					"Dead Tube Coral Block<br>Dead Brain Coral Block<br>Dead Bubble Coral Block<br>Dead Fire Coral Block<br>Dead Horn Coral Block": "<span class='dot GRAY'></span> GRAY",
-					"Fire Coral Block": "<span class='dot RED'></span> RED",
-					"Horn Coral Block": "<span class='dot YELLOW'></span> YELLOW",
-					"Tube Coral Block": "<span class='dot BLUE'></span> BLUE"
+					"Brain Coral Block": "{{mapColor|COLOR_PINK}}",
+					"Bubble Coral Block": "{{mapColor|COLOR_PURPLE}}",
+					"Dead Brain Coral Block<br>Dead Bubble Coral Block<br>Dead Fire Coral Block<br>Dead Horn Coral Block<br>Dead Tube Coral Block": "{{mapColor|COLOR_GRAY}}",
+					"Fire Coral Block": "{{mapColor|COLOR_RED}}",
+					"Horn Coral Block": "{{mapColor|COLOR_YELLOW}}",
+					"Tube Coral Block": "{{mapColor|COLOR_BLUE}}"
 				},
 				"Coral Fans": {
-					"Brain Coral Fan<br>Brain Coral Wall Fan": "<span class='dot PINK'></span> PINK",
-					"Bubble Coral Fan<br>Bubble Coral Wall Fan": "<span class='dot PURPLE'></span> PURPLE",
-					"Dead Tube Coral Fan<br>Dead Brain Coral Fan<br>Dead Bubble Coral Fan<br>Dead Fire Coral Fan<br>Dead Horn Coral Fan<br>Dead Tube Coral Wall Fan<br>Dead Brain Coral Wall Fan<br>Dead Bubble Coral Wall Fan<br>Dead Fire Coral Wall Fan<br>Dead Horn Coral Wall Fan": "<span class='dot GRAY'></span> GRAY",
-					"Fire Coral Fan<br>Fire Coral Wall Fan": "<span class='dot RED'></span> RED",
-					"Horn Coral Fan<br>Horn Coral Wall Fan": "<span class='dot YELLOW'></span> YELLOW",
-					"Tube Coral Fan<br>Tube Coral Wall Fan": "<span class='dot BLUE'></span> BLUE"
+					"Brain Coral Fan<br>Brain Coral Wall Fan": "{{mapColor|COLOR_PINK}}",
+					"Bubble Coral Fan<br>Bubble Coral Wall Fan": "{{mapColor|COLOR_PURPLE}}",
+					"Dead Brain Coral Fan<br>Dead Brain Coral Wall Fan<br>Dead Bubble Coral Fan<br>Dead Bubble Coral Wall Fan<br>Dead Fire Coral Fan<br>Dead Fire Coral Wall Fan<br>Dead Horn Coral Fan<br>Dead Horn Coral Wall Fan<br>Dead Tube Coral Fan<br>Dead Tube Coral Wall Fan": "{{mapColor|COLOR_GRAY}}",
+					"Fire Coral Fan<br>Fire Coral Wall Fan": "{{mapColor|COLOR_RED}}",
+					"Horn Coral Fan<br>Horn Coral Wall Fan": "{{mapColor|COLOR_YELLOW}}",
+					"Tube Coral Fan<br>Tube Coral Wall Fan": "{{mapColor|COLOR_BLUE}}"
 				},
 				"Corals": {
-					"Brain Coral": "<span class='dot PINK'></span> PINK",
-					"Bubble Coral": "<span class='dot PURPLE'></span> PURPLE",
-					"Dead Tube Coral<br>Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral": "<span class='dot GRAY'></span> GRAY",
-					"Fire Coral": "<span class='dot RED'></span> RED",
-					"Horn Coral": "<span class='dot YELLOW'></span> YELLOW",
-					"Tube Coral": "<span class='dot BLUE'></span> BLUE"
+					"Brain Coral": "{{mapColor|COLOR_PINK}}",
+					"Bubble Coral": "{{mapColor|COLOR_PURPLE}}",
+					"Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral<br>Dead Tube Coral": "{{mapColor|COLOR_GRAY}}",
+					"Fire Coral": "{{mapColor|COLOR_RED}}",
+					"Horn Coral": "{{mapColor|COLOR_YELLOW}}",
+					"Tube Coral": "{{mapColor|COLOR_BLUE}}"
 				},
-				"Crafting Table": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Crops": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-				"Crying Obsidian": "<span class='dot BLACK'></span> BLACK",
-				"Daylight Detector": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Dead Bush": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Deepslate": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
-				"Detector Rail": "<span class='dot CLEAR'></span> CLEAR",
+				"Crafting Table": "{{mapColor|WOOD}}",
+				"Crops": "{{mapColor|PLANT}}",
+				"Crying Obsidian": "{{mapColor|COLOR_BLACK}}",
+				"Daylight Detector": "{{mapColor|WOOD}}",
+				"Dead Bush": "{{mapColor|WOOD}}",
+				"Decorated Pot": "{{mapColor|TERRACOTTA_RED}}",
+				"Deepslate": "{{mapColor|DEEPSLATE}}",
+				"Detector Rail": "{{mapColor|NONE}}",
 				"Diamond Ore": {
-					"Deepslate Diamond Ore": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
-					"Diamond Ore": "<span class='dot STONE_GRAY'></span> STONE_GRAY"
+					"Deepslate Diamond Ore": "{{mapColor|DEEPSLATE}}",
+					"Diamond Ore": "{{mapColor|STONE}}"
 				},
-				"Diorite": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
-				"Dirt": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-				"Dirt Path": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-				"Dispenser": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
+				"Diorite": "{{mapColor|QUARTZ}}",
+				"Dirt": "{{mapColor|DIRT}}",
+				"Dirt Path": "{{mapColor|DIRT}}",
+				"Dispenser": "{{mapColor|STONE}}",
 				"Doors": {
-					"Acacia Door": "<span class='dot ORANGE'></span> ORANGE",
-					"Birch Door": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Crimson Door": "<span class='dot DULL_PINK'></span> DULL_PINK",
-					"Dark Oak Door": "<span class='dot BROWN'></span> BROWN",
-					"Iron Door": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
-					"Jungle Door": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Mangrove Door": "<span class='dot RED'></span> RED",
-					"Oak Door": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"Spruce Door": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-					"Warped Door": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+					"Acacia Door": "{{mapColor|COLOR_ORANGE}}",
+					"Bamboo Door": "{{mapColor|COLOR_YELLOW}}",
+					"Birch Door": "{{mapColor|SAND}}",
+					"Cherry Door": "{{mapColor|TERRACOTTA_WHITE}}",
+					"Crimson Door": "{{mapColor|CRIMSON_STEM}}",
+					"Dark Oak Door": "{{mapColor|COLOR_BROWN}}",
+					"Iron Door": "{{mapColor|METAL}}",
+					"Jungle Door": "{{mapColor|DIRT}}",
+					"Mangrove Door": "{{mapColor|COLOR_RED}}",
+					"Oak Door": "{{mapColor|WOOD}}",
+					"Spruce Door": "{{mapColor|PODZOL}}",
+					"Warped Door": "{{mapColor|WARPED_STEM}}"
 				},
-				"Dragon Egg": "<span class='dot BLACK'></span> BLACK",
-				"Dried Kelp Block": "<span class='dot GREEN'></span> GREEN",
-				"Dripstone Block": "<span class='dot TERRACOTTA_BROWN'></span> TERRACOTTA_BROWN",
-				"Dropper": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
+				"Dragon Egg": "{{mapColor|COLOR_BLACK}}",
+				"Dried Kelp Block": "{{mapColor|COLOR_GREEN}}",
+				"Dripstone Block": "{{mapColor|TERRACOTTA_BROWN}}",
+				"Dropper": "{{mapColor|STONE}}",
 				"Emerald Ore": {
-					"Deepslate Emerald Ore": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
-					"Emerald Ore": "<span class='dot STONE_GRAY'></span> STONE_GRAY"
+					"Deepslate Emerald Ore": "{{mapColor|DEEPSLATE}}",
+					"Emerald Ore": "{{mapColor|STONE}}"
 				},
-				"Enchanting Table": "<span class='dot RED'></span> RED",
-				"End Gateway": "<span class='dot BLACK'></span> BLACK",
-				"End Portal": "<span class='dot BLACK'></span> BLACK",
-				"End Portal Frame": "<span class='dot GREEN'></span> GREEN",
-				"End Rod": "<span class='dot CLEAR'></span> CLEAR",
-				"End Stone": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-				"End Stone Bricks": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-				"Ender Chest": {
-					"waterlogged: false": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-				},
-				"Farmland": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
+				"Enchanting Table": "{{mapColor|COLOR_RED}}",
+				"End Gateway": "{{mapColor|COLOR_BLACK}}",
+				"End Portal": "{{mapColor|COLOR_BLACK}}",
+				"End Portal Frame": "{{mapColor|COLOR_GREEN}}",
+				"End Rod": "{{mapColor|NONE}}",
+				"End Stone": "{{mapColor|SAND}}",
+				"End Stone Bricks": "{{mapColor|SAND}}",
+				"Ender Chest": "{{mapColor|STONE}}",
+				"Farmland": "{{mapColor|DIRT}}",
 				"Fence Gates": {
-					"Acacia Fence Gate": "<span class='dot ORANGE'></span> ORANGE",
-					"Birch Fence Gate": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Crimson Fence Gate": "<span class='dot DULL_PINK'></span> DULL_PINK",
-					"Dark Oak Fence Gate": "<span class='dot BROWN'></span> BROWN",
-					"Jungle Fence Gate": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Mangrove Fence gate": "<span class='dot RED'></span> RED",
-					"Oak Fence Gate": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"Spruce Fence Gate": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-					"Warped Fence Gate": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+					"Acacia Fence Gate": "{{mapColor|COLOR_ORANGE}}",
+					"Bamboo Fence Gate": "{{mapColor|COLOR_YELLOW}}",
+					"Birch Fence Gate": "{{mapColor|SAND}}",
+					"Cherry Fence Gate": "{{mapColor|TERRACOTTA_WHITE}}",
+					"Crimson Fence Gate": "{{mapColor|CRIMSON_STEM}}",
+					"Dark Oak Fence Gate": "{{mapColor|COLOR_BROWN}}",
+					"Jungle Fence Gate": "{{mapColor|DIRT}}",
+					"Mangrove Fence Gate": "{{mapColor|COLOR_RED}}",
+					"Oak Fence Gate": "{{mapColor|WOOD}}",
+					"Spruce Fence Gate": "{{mapColor|PODZOL}}",
+					"Warped Fence Gate": "{{mapColor|WARPED_STEM}}"
 				},
 				"Fences": {
-					"Acacia Fence": {
-						"waterlogged: false": "<span class='dot ORANGE'></span> ORANGE",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Birch Fence": {
-						"waterlogged: false": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Crimson Fence": {
-						"waterlogged: false": "<span class='dot DULL_PINK'></span> DULL_PINK",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Dark Oak Fence": {
-						"waterlogged: false": "<span class='dot BROWN'></span> BROWN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Jungle Fence": {
-						"waterlogged: false": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Mangrove Fence": {
-						"waterlogged: false": "<span class='dot RED'></span> RED",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Nether Brick Fence": {
-						"waterlogged: false": "<span class='dot DARK_RED'></span> DARK_RED",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Oak Fence": {
-						"waterlogged: false": "<span class='dot OAK_TAN'></span> OAK_TAN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Spruce Fence": {
-						"waterlogged: false": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Warped Fence": {
-						"waterlogged: false": "<span class='dot DARK_AQUA'></span> DARK_AQUA",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					}
+					"Acacia Fence": "{{mapColor|COLOR_ORANGE}}",
+					"Bamboo Fence": "{{mapColor|COLOR_YELLOW}}",
+					"Birch Fence": "{{mapColor|SAND}}",
+					"Cherry Fence": "{{mapColor|TERRACOTTA_WHITE}}",
+					"Crimson Fence": "{{mapColor|CRIMSON_STEM}}",
+					"Dark Oak Fence": "{{mapColor|COLOR_BROWN}}",
+					"Jungle Fence": "{{mapColor|DIRT}}",
+					"Mangrove Fence": "{{mapColor|COLOR_RED}}",
+					"Nether Brick Fence": "{{mapColor|NETHER}}",
+					"Oak Fence": "{{mapColor|WOOD}}",
+					"Spruce Fence": "{{mapColor|PODZOL}}",
+					"Warped Fence": "{{mapColor|WARPED_STEM}}"
 				},
-				"Fern": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
+				"Fern": "{{mapColor|PLANT}}",
 				"Fire": {
-					"Fire": "<span class='dot BRIGHT_RED'></span> BRIGHT_RED",
-					"Soul Fire": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE"
+					"Fire": "{{mapColor|FIRE}}",
+					"Soul Fire": "{{mapColor|COLOR_LIGHT_BLUE}}"
 				},
-				"Fletching Table": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Flower Pot": "<span class='dot CLEAR'></span> CLEAR",
-				"Flowers": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
+				"Fletching Table": "{{mapColor|WOOD}}",
+				"Flower Pot": "{{mapColor|NONE}}",
+				"Flowers": "{{mapColor|PLANT}}",
 				"Froglights": {
-					"Ochre Froglight": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Pearlescent Froglight": "<span class='dot PINK'></span> PINK",
-					"Verdant Froglight": "<span class='dot LICHEN_GREEN'></span> LICHEN_GREEN"
+					"Ochre Froglight": "{{mapColor|SAND}}",
+					"Pearlescent Froglight": "{{mapColor|COLOR_PINK}}",
+					"Verdant Froglight": "{{mapColor|GLOW_LICHEN}}"
 				},
-				"Frogspawn": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
-				"Frosted Ice": "<span class='dot PALE_PURPLE'></span> PALE_PURPLE",
+				"Frogspawn": "{{mapColor|WATER}}",
+				"Frosted Ice": "{{mapColor|ICE}}",
 				"Fungi": {
-					"Crimson Fungus": "<span class='dot DARK_RED'></span> DARK_RED",
-					"Warped Fungus": "<span class='dot CYAN'></span> CYAN"
+					"Crimson Fungus": "{{mapColor|NETHER}}",
+					"Warped Fungus": "{{mapColor|COLOR_CYAN}}"
 				},
-				"Furnace": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-				"Gilded Blackstone": "<span class='dot BLACK'></span> BLACK",
-				"Glass": "<span class='dot CLEAR'></span> CLEAR",
-				"Glass Pane": "<span class='dot CLEAR'></span> CLEAR",
+				"Furnace": "{{mapColor|STONE}}",
+				"Gilded Blackstone": "{{mapColor|COLOR_BLACK}}",
+				"Glass": "{{mapColor|NONE}}",
+				"Glass Pane": "{{mapColor|NONE}}",
 				"Glazed Terracotta": {
-					"Black Glazed Terracotta": "<span class='dot BLACK'></span> BLACK",
-					"Blue Glazed Terracotta": "<span class='dot BLUE'></span> BLUE",
-					"Brown Glazed Terracotta": "<span class='dot BROWN'></span> BROWN",
-					"Cyan Glazed Terracotta": "<span class='dot CYAN'></span> CYAN",
-					"Gray Glazed Terracotta": "<span class='dot GRAY'></span> GRAY",
-					"Green Glazed Terracotta": "<span class='dot GREEN'></span> GREEN",
-					"Light Blue Glazed Terracotta": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE",
-					"Light Gray Glazed Terracotta": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-					"Lime Glazed Terracotta": "<span class='dot LIME'></span> LIME",
-					"Magenta Glazed Terracotta": "<span class='dot MAGENTA'></span> MAGENTA",
-					"Orange Glazed Terracotta": "<span class='dot ORANGE'></span> ORANGE",
-					"Pink Glazed Terracotta": "<span class='dot PINK'></span> PINK",
-					"Purple Glazed Terracotta": "<span class='dot PURPLE'></span> PURPLE",
-					"Red Glazed Terracotta": "<span class='dot RED'></span> RED",
-					"White Glazed Terracotta": "<span class='dot WHITE'></span> WHITE",
-					"Yellow Glazed Terracotta": "<span class='dot YELLOW'></span> YELLOW"
+					"Black Glazed Terracotta": "{{mapColor|COLOR_BLACK}}",
+					"Blue Glazed Terracotta": "{{mapColor|COLOR_BLUE}}",
+					"Brown Glazed Terracotta": "{{mapColor|COLOR_BROWN}}",
+					"Cyan Glazed Terracotta": "{{mapColor|COLOR_CYAN}}",
+					"Gray Glazed Terracotta": "{{mapColor|COLOR_GRAY}}",
+					"Green Glazed Terracotta": "{{mapColor|COLOR_GREEN}}",
+					"Light Blue Glazed Terracotta": "{{mapColor|COLOR_LIGHT_BLUE}}",
+					"Light Gray Glazed Terracotta": "{{mapColor|COLOR_LIGHT_GRAY}}",
+					"Lime Glazed Terracotta": "{{mapColor|COLOR_LIGHT_GREEN}}",
+					"Magenta Glazed Terracotta": "{{mapColor|COLOR_MAGENTA}}",
+					"Orange Glazed Terracotta": "{{mapColor|COLOR_ORANGE}}",
+					"Pink Glazed Terracotta": "{{mapColor|COLOR_PINK}}",
+					"Purple Glazed Terracotta": "{{mapColor|COLOR_PURPLE}}",
+					"Red Glazed Terracotta": "{{mapColor|COLOR_RED}}",
+					"White Glazed Terracotta": "{{mapColor|SNOW}}",
+					"Yellow Glazed Terracotta": "{{mapColor|COLOR_YELLOW}}"
 				},
-				"Glow Lichen": "<span class='dot LICHEN_GREEN'></span> LICHEN_GREEN",
-				"Glowstone": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
+				"Glow Lichen": "{{mapColor|GLOW_LICHEN}}",
+				"Glowstone": "{{mapColor|SAND}}",
 				"Gold Ore": {
-					"Deepslate Gold Ore": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
-					"Gold Ore": "<span class='dot STONE_GRAY'></span> STONE_GRAY"
+					"Deepslate Gold Ore": "{{mapColor|DEEPSLATE}}",
+					"Gold Ore": "{{mapColor|STONE}}"
 				},
-				"Granite": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-				"Grass": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-				"Grass Block": "<span class='dot PALE_GREEN'></span> PALE_GREEN",
-				"Gravel": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-				"Grindstone": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
-				"Hanging Roots": {
-					"waterlogged: false": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
+				"Granite": "{{mapColor|DIRT}}",
+				"Grass": "{{mapColor|PLANT}}",
+				"Grass Block": "{{mapColor|GRASS}}",
+				"Gravel": "{{mapColor|STONE}}",
+				"Grindstone": "{{mapColor|METAL}}",
+				"Hanging Roots": "{{mapColor|DIRT}}",
+				"Hanging Signs": {
+					"Acacia Hanging Sign<br>Acacia Wall Hanging Sign": "{{mapColor|COLOR_ORANGE}}",
+					"Bamboo Hanging Sign<br>Bamboo Wall Hanging Sign": "{{mapColor|COLOR_YELLOW}}",
+					"Birch Hanging Sign<br>Birch Wall Hanging Sign": "{{mapColor|SAND}}",
+					"Cherry Hanging Sign<br>Cherry Wall Hanging Sign": "{{mapColor|TERRACOTTA_PINK}}",
+					"Crimson Hanging Sign<br>Crimson Wall Hanging Sign": "{{mapColor|CRIMSON_STEM}}",
+					"Dark Oak Hanging Sign<br>Dark Oak Wall Hanging Sign": "{{mapColor|COLOR_BROWN}}",
+					"Jungle Hanging Sign<br>Jungle Wall Hanging Sign": "{{mapColor|DIRT}}",
+					"Mangrove Hanging Sign<br>Mangrove Wall Hanging Sign": "{{mapColor|COLOR_RED}}",
+					"Oak Hanging Sign<br>Oak Wall Hanging Sign<br>Spruce Wall Hanging Sign": "{{mapColor|WOOD}}",
+					"Spruce Hanging Sign": "{{mapColor|PODZOL}}",
+					"Warped Hanging Sign<br>Warped Wall Hanging Sign": "{{mapColor|WARPED_STEM}}"
 				},
-				"Hay Bale": "<span class='dot YELLOW'></span> YELLOW",
-				"Heads": "<span class='dot CLEAR'></span> CLEAR",
-				"Honey Block": "<span class='dot ORANGE'></span> ORANGE",
-				"Honeycomb Block": "<span class='dot ORANGE'></span> ORANGE",
-				"Hopper": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
+				"Hay Bale": "{{mapColor|COLOR_YELLOW}}",
+				"Heads": "{{mapColor|NONE}}",
+				"Honey Block": "{{mapColor|COLOR_ORANGE}}",
+				"Honeycomb Block": "{{mapColor|COLOR_ORANGE}}",
+				"Hopper": "{{mapColor|STONE}}",
 				"Hyphae": {
-					"Crimson Hyphae<br>Stripped Crimson Hyphae": "<span class='dot DARK_CRIMSON'></span> DARK_CRIMSON",
-					"Warped Hyphae<br>Stripped Warped Hyphae": "<span class='dot DARK_DULL_PINK'></span> DARK_DULL_PINK"
+					"Crimson Hyphae<br>Stripped Crimson Hyphae": "{{mapColor|CRIMSON_HYPHAE}}",
+					"Stripped Warped Hyphae<br>Warped Hyphae": "{{mapColor|WARPED_HYPHAE}}"
 				},
-				"Ice": "<span class='dot PALE_PURPLE'></span> PALE_PURPLE",
-				"Iron Bars": "<span class='dot CLEAR'></span> CLEAR",
+				"Ice": "{{mapColor|ICE}}",
+				"Iron Bars": "{{mapColor|NONE}}",
 				"Iron Ore": {
-					"Deepslate Iron Ore": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
-					"Iron Ore": "<span class='dot STONE_GRAY'></span> STONE_GRAY"
+					"Deepslate Iron Ore": "{{mapColor|DEEPSLATE}}",
+					"Iron Ore": "{{mapColor|STONE}}"
 				},
-				"Jack o'Lantern": "<span class='dot ORANGE'></span> ORANGE",
-				"Jigsaw Block": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-				"Jukebox": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-				"Kelp": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
-				"Ladder": "<span class='dot CLEAR'></span> CLEAR",
-				"Lantern": {
-					"waterlogged: false": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-				},
+				"Jack o'Lantern": "{{mapColor|COLOR_ORANGE}}",
+				"Jigsaw Block": "{{mapColor|COLOR_LIGHT_GRAY}}",
+				"Jukebox": "{{mapColor|DIRT}}",
+				"Kelp": "{{mapColor|WATER}}",
+				"Ladder": "{{mapColor|NONE}}",
+				"Lantern": "{{mapColor|METAL}}",
 				"Lapis Lazuli Ore": {
-					"Deepslate Lapis Lazuli Ore": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
-					"Lapis Lazuli Ore": "<span class='dot STONE_GRAY'></span> STONE_GRAY"
+					"Deepslate Lapis Lazuli Ore": "{{mapColor|DEEPSLATE}}",
+					"Lapis Lazuli Ore": "{{mapColor|STONE}}"
 				},
-				"Lava": "<span class='dot BRIGHT_RED'></span> BRIGHT_RED",
+				"Lava": "{{mapColor|FIRE}}",
 				"Leaves": {
-					"waterlogged: false": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
+					"Acacia Leaves<br>Azalea Leaves<br>Birch Leaves<br>Dark Oak Leaves<br>Flowering Azalea Leaves<br>Jungle Leaves<br>Mangrove Leaves<br>Oak Leaves<br>Spruce Leaves": "{{mapColor|PLANT}}",
+					"Cherry Leaves": "{{mapColor|COLOR_PINK}}"
 				},
-				"Lectern": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Lever": "<span class='dot CLEAR'></span> CLEAR",
-				"Light Block": "<span class='dot CLEAR'></span> CLEAR",
-				"Lightning Rod": {
-					"waterlogged: false": "<span class='dot ORANGE'></span> ORANGE",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-				},
-				"Lily Pad": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-				"Lodestone": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
+				"Lectern": "{{mapColor|WOOD}}",
+				"Lever": "{{mapColor|NONE}}",
+				"Light Block": "{{mapColor|NONE}}",
+				"Lightning Rod": "{{mapColor|COLOR_ORANGE}}",
+				"Lily Pad": "{{mapColor|PLANT}}",
+				"Lodestone": "{{mapColor|METAL}}",
 				"Logs": {
 					"Acacia Log": {
-						"axis: x<br>axis: z": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-						"axis: y": "<span class='dot ORANGE'></span> ORANGE"
+						"axis: x<br>axis: z": "{{mapColor|STONE}}",
+						"axis: y": "{{mapColor|COLOR_ORANGE}}"
 					},
 					"Birch Log": {
-						"axis: x<br>axis: z": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
-						"axis: y": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW"
+						"axis: x<br>axis: z": "{{mapColor|QUARTZ}}",
+						"axis: y": "{{mapColor|SAND}}"
 					},
-					"Dark Oak Log<br>Stripped Dark Oak Log": "<span class='dot BROWN'></span> BROWN",
+					"Cherry Log": {
+						"axis: x<br>axis: z": "{{mapColor|TERRACOTTA_GRAY}}",
+						"axis: y": "{{mapColor|TERRACOTTA_WHITE}}"
+					},
+					"Dark Oak Log<br>Stripped Dark Oak Log": "{{mapColor|COLOR_BROWN}}",
 					"Jungle Log": {
-						"axis: x<br>axis: z": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-						"axis: y": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN"
+						"axis: x<br>axis: z": "{{mapColor|PODZOL}}",
+						"axis: y": "{{mapColor|DIRT}}"
 					},
 					"Mangrove Log": {
-						"axis: x<br>axis: z": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-						"axis: y": "<span class='dot RED'></span> RED"
+						"axis: x<br>axis: z": "{{mapColor|PODZOL}}",
+						"axis: y": "{{mapColor|COLOR_RED}}"
 					},
 					"Oak Log": {
-						"axis: x<br>axis: z": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-						"axis: y": "<span class='dot OAK_TAN'></span> OAK_TAN"
+						"axis: x<br>axis: z": "{{mapColor|PODZOL}}",
+						"axis: y": "{{mapColor|WOOD}}"
 					},
 					"Spruce Log": {
-						"axis: x<br>axis: z": "<span class='dot BROWN'></span> BROWN",
-						"axis: y": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN"
+						"axis: x<br>axis: z": "{{mapColor|COLOR_BROWN}}",
+						"axis: y": "{{mapColor|PODZOL}}"
 					},
-					"Stripped Acacia Log": "<span class='dot ORANGE'></span> ORANGE",
-					"Stripped Birch Log": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Stripped Jungle Log": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Stripped Mangrove Log": "<span class='dot RED'></span> RED",
-					"Stripped Oak Log": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"Stripped Spruce Log": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN"
+					"Stripped Acacia Log": "{{mapColor|COLOR_ORANGE}}",
+					"Stripped Birch Log": "{{mapColor|SAND}}",
+					"Stripped Cherry Log": {
+						"axis: x<br>axis: z": "{{mapColor|TERRACOTTA_PINK}}",
+						"axis: y": "{{mapColor|TERRACOTTA_WHITE}}"
+					},
+					"Stripped Jungle Log": "{{mapColor|DIRT}}",
+					"Stripped Mangrove Log": "{{mapColor|COLOR_RED}}",
+					"Stripped Oak Log": "{{mapColor|WOOD}}",
+					"Stripped Spruce Log": "{{mapColor|PODZOL}}"
 				},
-				"Loom": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Magma Block": "<span class='dot DARK_RED'></span> DARK_RED",
-				"Mangrove Propagule": {
-					"waterlogged: false": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-				},
-				"Mangrove Roots": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-				"Melon": "<span class='dot LIME'></span> LIME",
-				"Moss Block": "<span class='dot GREEN'></span> GREEN",
-				"Moss Carpet": "<span class='dot GREEN'></span> GREEN",
-				"Mud": "<span class='dot TERRACOTTA_CYAN'></span> TERRACOTTA_CYAN",
-				"Mud Bricks": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY",
-				"Muddy Mangrove Roots": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
+				"Loom": "{{mapColor|WOOD}}",
+				"Magma Block": "{{mapColor|NETHER}}",
+				"Mangrove Propagule": "{{mapColor|PLANT}}",
+				"Mangrove Roots": "{{mapColor|PODZOL}}",
+				"Melon": "{{mapColor|COLOR_LIGHT_GREEN}}",
+				"Moss Block": "{{mapColor|COLOR_GREEN}}",
+				"Moss Carpet": "{{mapColor|COLOR_GREEN}}",
+				"Mud": "{{mapColor|TERRACOTTA_CYAN}}",
+				"Mud Bricks": "{{mapColor|TERRACOTTA_LIGHT_GRAY}}",
+				"Muddy Mangrove Roots": "{{mapColor|PODZOL}}",
 				"Mushroom Blocks": {
-					"Brown Mushroom Block": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Mushroom Stem": "<span class='dot WHITE_GRAY'></span> WHITE_GRAY",
-					"Red Mushroom Block": "<span class='dot RED'></span> RED"
+					"Brown Mushroom Block": "{{mapColor|DIRT}}",
+					"Mushroom Stem": "{{mapColor|WOOL}}",
+					"Red Mushroom Block": "{{mapColor|COLOR_RED}}"
 				},
 				"Mushrooms": {
-					"Brown Mushroom": "<span class='dot BROWN'></span> BROWN",
-					"Red Mushroom": "<span class='dot RED'></span> RED"
+					"Brown Mushroom": "{{mapColor|COLOR_BROWN}}",
+					"Red Mushroom": "{{mapColor|COLOR_RED}}"
 				},
-				"Mycelium": "<span class='dot PURPLE'></span> PURPLE",
-				"Nether Bricks": "<span class='dot DARK_RED'></span> DARK_RED",
-				"Nether Gold Ore": "<span class='dot DARK_RED'></span> DARK_RED",
-				"Nether Portal": "<span class='dot CLEAR'></span> CLEAR",
-				"Nether Quartz Ore": "<span class='dot DARK_RED'></span> DARK_RED",
-				"Nether Sprouts": "<span class='dot CYAN'></span> CYAN",
-				"Nether Wart": "<span class='dot RED'></span> RED",
-				"Netherrack": "<span class='dot DARK_RED'></span> DARK_RED",
-				"Note Block": "<span class='dot OAK_TAN'></span> OAK_TAN",
+				"Mycelium": "{{mapColor|COLOR_PURPLE}}",
+				"Nether Bricks": "{{mapColor|NETHER}}",
+				"Nether Gold Ore": "{{mapColor|NETHER}}",
+				"Nether Portal": "{{mapColor|NONE}}",
+				"Nether Quartz Ore": "{{mapColor|NETHER}}",
+				"Nether Sprouts": "{{mapColor|COLOR_CYAN}}",
+				"Nether Wart": "{{mapColor|COLOR_RED}}",
+				"Netherrack": "{{mapColor|NETHER}}",
+				"Note Block": "{{mapColor|WOOD}}",
 				"Nylium": {
-					"Crimson Nylium": "<span class='dot DULL_RED'></span> DULL_RED",
-					"Warped Nylium": "<span class='dot TEAL'></span> TEAL"
+					"Crimson Nylium": "{{mapColor|CRIMSON_NYLIUM}}",
+					"Warped Nylium": "{{mapColor|WARPED_NYLIUM}}"
 				},
-				"Observer": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-				"Obsidian": "<span class='dot BLACK'></span> BLACK",
-				"Packed Ice": "<span class='dot PALE_PURPLE'></span> PALE_PURPLE",
-				"Packed Mud": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-				"Piston": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
+				"Observer": "{{mapColor|STONE}}",
+				"Obsidian": "{{mapColor|COLOR_BLACK}}",
+				"Packed Ice": "{{mapColor|ICE}}",
+				"Packed Mud": "{{mapColor|DIRT}}",
+				"Pink Petals": "{{mapColor|PLANT}}",
+				"Piston": "{{mapColor|STONE}}",
+				"Pitcher Crop": "{{mapColor|PLANT}}",
+				"Pitcher Plant": "{{mapColor|PLANT}}",
 				"Planks": {
-					"Acacia Planks": "<span class='dot ORANGE'></span> ORANGE",
-					"Birch Planks": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Crimson Planks": "<span class='dot DULL_PINK'></span> DULL_PINK",
-					"Dark Oak Planks": "<span class='dot BROWN'></span> BROWN",
-					"Jungle Planks": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Mangrove Planks": "<span class='dot RED'></span> RED",
-					"Oak Planks": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"Spruce Planks": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-					"Warped Planks": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+					"Acacia Planks": "{{mapColor|COLOR_ORANGE}}",
+					"Bamboo Planks": "{{mapColor|COLOR_YELLOW}}",
+					"Birch Planks": "{{mapColor|SAND}}",
+					"Cherry Planks": "{{mapColor|TERRACOTTA_WHITE}}",
+					"Crimson Planks": "{{mapColor|CRIMSON_STEM}}",
+					"Dark Oak Planks": "{{mapColor|COLOR_BROWN}}",
+					"Jungle Planks": "{{mapColor|DIRT}}",
+					"Mangrove Planks": "{{mapColor|COLOR_RED}}",
+					"Oak Planks": "{{mapColor|WOOD}}",
+					"Spruce Planks": "{{mapColor|PODZOL}}",
+					"Warped Planks": "{{mapColor|WARPED_STEM}}"
 				},
-				"Podzol": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-				"Pointed Dripstone": {
-					"waterlogged: false": "<span class='dot TERRACOTTA_BROWN'></span> TERRACOTTA_BROWN",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-				},
-				"Powder Snow": "<span class='dot WHITE'></span> WHITE",
-				"Powered Rail": "<span class='dot CLEAR'></span> CLEAR",
+				"Podzol": "{{mapColor|PODZOL}}",
+				"Pointed Dripstone": "{{mapColor|TERRACOTTA_BROWN}}",
+				"Powder Snow": "{{mapColor|SNOW}}",
+				"Powered Rail": "{{mapColor|NONE}}",
 				"Pressure Plates": {
-					"Acacia Pressure Plate": "<span class='dot ORANGE'></span> ORANGE",
-					"Birch Pressure Plate": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Crimson Pressure Plate": "<span class='dot DULL_PINK'></span> DULL_PINK",
-					"Dark Oak Pressure Plate": "<span class='dot BROWN'></span> BROWN",
-					"Heavy Weighted Pressure Plate": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
-					"Jungle Pressure Plate": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Light Weighted Pressure Plate": "<span class='dot GOLD'></span> GOLD",
-					"Mangrove Pressure Plate": "<span class='dot RED'></span> RED",
-					"Oak Pressure Plate": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"Polished Blackstone Pressure Plate": "<span class='dot BLACK'></span> BLACK",
-					"Spruce Pressure Plate": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-					"Stone Pressure Plate": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-					"Warped Pressure Plate": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+					"Acacia Pressure Plate": "{{mapColor|COLOR_ORANGE}}",
+					"Bamboo Pressure Plate": "{{mapColor|COLOR_YELLOW}}",
+					"Birch Pressure Plate": "{{mapColor|SAND}}",
+					"Cherry Pressure Plate": "{{mapColor|TERRACOTTA_WHITE}}",
+					"Crimson Pressure Plate": "{{mapColor|CRIMSON_STEM}}",
+					"Dark Oak Pressure Plate": "{{mapColor|COLOR_BROWN}}",
+					"Heavy Weighted Pressure Plate": "{{mapColor|METAL}}",
+					"Jungle Pressure Plate": "{{mapColor|DIRT}}",
+					"Light Weighted Pressure Plate": "{{mapColor|GOLD}}",
+					"Mangrove Pressure Plate": "{{mapColor|COLOR_RED}}",
+					"Oak Pressure Plate": "{{mapColor|WOOD}}",
+					"Polished Blackstone Pressure Plate": "{{mapColor|COLOR_BLACK}}",
+					"Spruce Pressure Plate": "{{mapColor|PODZOL}}",
+					"Stone Pressure Plate": "{{mapColor|STONE}}",
+					"Warped Pressure Plate": "{{mapColor|WARPED_STEM}}"
 				},
 				"Prismarine": {
-					"Prismarine": "<span class='dot CYAN'></span> CYAN",
-					"Prismarine Bricks<br>Dark Prismarine": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE"
+					"Dark Prismarine<br>Prismarine Bricks": "{{mapColor|DIAMOND}}",
+					"Prismarine": "{{mapColor|COLOR_CYAN}}"
 				},
-				"Pumpkin": "<span class='dot ORANGE'></span> ORANGE",
-				"Purpur Block": "<span class='dot MAGENTA'></span> MAGENTA",
-				"Rail": "<span class='dot CLEAR'></span> CLEAR",
-				"Red Sand": "<span class='dot ORANGE'></span> ORANGE",
-				"Red Sandstone": "<span class='dot ORANGE'></span> ORANGE",
-				"Redstone Comparator": "<span class='dot CLEAR'></span> CLEAR",
-				"Redstone Dust": "<span class='dot CLEAR'></span> CLEAR",
-				"Redstone Lamp": "<span class='dot CLEAR'></span> CLEAR",
+				"Pumpkin": "{{mapColor|COLOR_ORANGE}}",
+				"Purpur Block": "{{mapColor|COLOR_MAGENTA}}",
+				"Rail": "{{mapColor|NONE}}",
+				"Red Sand": "{{mapColor|COLOR_ORANGE}}",
+				"Red Sandstone": "{{mapColor|COLOR_ORANGE}}",
+				"Redstone Comparator": "{{mapColor|NONE}}",
+				"Redstone Dust": "{{mapColor|NONE}}",
+				"Redstone Lamp": "{{mapColor|NONE}}",
 				"Redstone Ore": {
-					"Deepslate Redstone Ore": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
-					"Redstone Ore": "<span class='dot STONE_GRAY'></span> STONE_GRAY"
+					"Deepslate Redstone Ore": "{{mapColor|DEEPSLATE}}",
+					"Redstone Ore": "{{mapColor|STONE}}"
 				},
-				"Redstone Repeater": "<span class='dot CLEAR'></span> CLEAR",
-				"Redstone Torch": "<span class='dot CLEAR'></span> CLEAR",
-				"Reinforced Deepslate": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
-				"Respawn Anchor": "<span class='dot BLACK'></span> BLACK",
+				"Redstone Repeater": "{{mapColor|NONE}}",
+				"Redstone Torch": "{{mapColor|NONE}}",
+				"Reinforced Deepslate": "{{mapColor|DEEPSLATE}}",
+				"Respawn Anchor": "{{mapColor|COLOR_BLACK}}",
 				"Roots": {
-					"Crimson Roots": "<span class='dot DARK_RED'></span> DARK_RED",
-					"Warped Roots": "<span class='dot CYAN'></span> CYAN"
+					"Crimson Roots": "{{mapColor|NETHER}}",
+					"Warped Roots": "{{mapColor|COLOR_CYAN}}"
 				},
-				"Sand": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-				"Sandstone": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-				"Saplings": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-				"Scaffolding": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-				"Sculk": "<span class='dot BLACK'></span> BLACK",
-				"Sculk Catalyst": "<span class='dot BLACK'></span> BLACK",
-				"Sculk Sensor": "<span class='dot CYAN'></span> CYAN",
-				"Sculk Shrieker": "<span class='dot BLACK'></span> BLACK",
-				"Sculk Vein": "<span class='dot BLACK'></span> BLACK",
-				"Sea Lantern": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
-				"Sea Pickle": {
-					"waterlogged: false": "<span class='dot GREEN'></span> GREEN",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
+				"Sand": "{{mapColor|SAND}}",
+				"Sandstone": "{{mapColor|SAND}}",
+				"Saplings": {
+					"Acacia Sapling<br>Birch Sapling<br>Dark Oak Sapling<br>Jungle Sapling<br>Oak Sapling<br>Spruce Sapling": "{{mapColor|PLANT}}",
+					"Cherry Sapling": "{{mapColor|COLOR_PINK}}"
 				},
-				"Seagrass": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
-				"Shroomlight": "<span class='dot RED'></span> RED",
+				"Scaffolding": "{{mapColor|SAND}}",
+				"Sculk": "{{mapColor|COLOR_BLACK}}",
+				"Sculk Catalyst": "{{mapColor|COLOR_BLACK}}",
+				"Sculk Sensor": "{{mapColor|COLOR_CYAN}}",
+				"Sculk Shrieker": "{{mapColor|COLOR_BLACK}}",
+				"Sculk Vein": "{{mapColor|COLOR_BLACK}}",
+				"Sea Lantern": "{{mapColor|QUARTZ}}",
+				"Sea Pickle": "{{mapColor|COLOR_GREEN}}",
+				"Seagrass": "{{mapColor|WATER}}",
+				"Shroomlight": "{{mapColor|COLOR_RED}}",
 				"Shulker Box": {
-					"Black Shulker Box": "<span class='dot BLACK'></span> BLACK",
-					"Blue Shulker Box": "<span class='dot BLUE'></span> BLUE",
-					"Brown Shulker Box": "<span class='dot BROWN'></span> BROWN",
-					"Cyan Shulker Box": "<span class='dot CYAN'></span> CYAN",
-					"Gray Shulker Box": "<span class='dot GRAY'></span> GRAY",
-					"Green Shulker Box": "<span class='dot GREEN'></span> GREEN",
-					"Light Blue Shulker Box": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE",
-					"Light Gray Shulker Box": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-					"Lime Shulker Box": "<span class='dot LIME'></span> LIME",
-					"Magenta Shulker Box": "<span class='dot MAGENTA'></span> MAGENTA",
-					"Orange Shulker Box": "<span class='dot ORANGE'></span> ORANGE",
-					"Pink Shulker Box": "<span class='dot PINK'></span> PINK",
-					"Purple Shulker Box": "<span class='dot TERRACOTTA_PURPLE'></span> TERRACOTTA_PURPLE",
-					"Red Shulker Box": "<span class='dot RED'></span> RED",
-					"Shulker Box": "<span class='dot PURPLE'></span> PURPLE",
-					"White Shulker Box": "<span class='dot WHITE'></span> WHITE",
-					"Yellow Shulker Box": "<span class='dot YELLOW'></span> YELLOW"
+					"Black Shulker Box": "{{mapColor|COLOR_BLACK}}",
+					"Blue Shulker Box": "{{mapColor|COLOR_BLUE}}",
+					"Brown Shulker Box": "{{mapColor|COLOR_BROWN}}",
+					"Cyan Shulker Box": "{{mapColor|COLOR_CYAN}}",
+					"Gray Shulker Box": "{{mapColor|COLOR_GRAY}}",
+					"Green Shulker Box": "{{mapColor|COLOR_GREEN}}",
+					"Light Blue Shulker Box": "{{mapColor|COLOR_LIGHT_BLUE}}",
+					"Light Gray Shulker Box": "{{mapColor|COLOR_LIGHT_GRAY}}",
+					"Lime Shulker Box": "{{mapColor|COLOR_LIGHT_GREEN}}",
+					"Magenta Shulker Box": "{{mapColor|COLOR_MAGENTA}}",
+					"Orange Shulker Box": "{{mapColor|COLOR_ORANGE}}",
+					"Pink Shulker Box": "{{mapColor|COLOR_PINK}}",
+					"Purple Shulker Box": "{{mapColor|TERRACOTTA_PURPLE}}",
+					"Red Shulker Box": "{{mapColor|COLOR_RED}}",
+					"Shulker Box": "{{mapColor|COLOR_PURPLE}}",
+					"White Shulker Box": "{{mapColor|SNOW}}",
+					"Yellow Shulker Box": "{{mapColor|COLOR_YELLOW}}"
 				},
 				"Signs": {
-					"Acacia Sign<br>Acacia Wall Sign": {
-						"waterlogged: false": "<span class='dot ORANGE'></span> ORANGE",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Birch Sign<br>Birch Wall Sign": {
-						"waterlogged: false": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Crimson Sign<br>Crimson Wall Sign": {
-						"waterlogged: false": "<span class='dot DULL_PINK'></span> DULL_PINK",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Dark Oak Sign<br>Dark Oak Wall Sign": {
-						"waterlogged: false": "<span class='dot BROWN'></span> BROWN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Jungle Sign<br>Jungle Wall Sign": {
-						"waterlogged: false": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Mangrove Sign<br>Mangrove Wall Sign": {
-						"waterlogged: false": "<span class='dot RED'></span> RED",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Oak Sign<br>Oak Wall Sign": {
-						"waterlogged: false": "<span class='dot OAK_TAN'></span> OAK_TAN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Spruce Sign<br>Spruce Wall Sign": {
-						"waterlogged: false": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Warped Sign<br>Warped Wall Sign": {
-						"waterlogged: false": "<span class='dot DARK_AQUA'></span> DARK_AQUA",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					}
+					"Acacia Sign<br>Acacia Wall Sign": "{{mapColor|COLOR_ORANGE}}",
+					"Bamboo Sign<br>Bamboo Wall Sign": "{{mapColor|COLOR_YELLOW}}",
+					"Birch Sign<br>Birch Wall Sign": "{{mapColor|SAND}}",
+					"Cherry Sign<br>Cherry Wall Sign": "{{mapColor|TERRACOTTA_WHITE}}",
+					"Crimson Sign<br>Crimson Wall Sign": "{{mapColor|CRIMSON_STEM}}",
+					"Dark Oak Sign<br>Dark Oak Wall Sign": "{{mapColor|COLOR_BROWN}}",
+					"Jungle Sign<br>Jungle Wall Sign": "{{mapColor|DIRT}}",
+					"Mangrove Sign<br>Mangrove Wall Sign": "{{mapColor|COLOR_RED}}",
+					"Oak Sign<br>Oak Wall Sign": "{{mapColor|WOOD}}",
+					"Spruce Sign<br>Spruce Wall Sign": "{{mapColor|PODZOL}}",
+					"Warped Sign<br>Warped Wall Sign": "{{mapColor|WARPED_STEM}}"
 				},
 				"Slabs": {
-					"waterlogged: false": {
-						"half: bottom": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
-						"half: double<br>half: top": {
-							"Acacia Slab<br>Red Sandstone Slab<br>Cut Red Sandstone Slab<br>Smooth Red Sandstone Slab<br>Cut Copper Slab<br>Waxed Cut Copper Slab": "<span class='dot ORANGE'></span> ORANGE",
-							"Birch Slab<br>Sandstone Slab<br>Cut Sandstone Slab<br>End Stone Brick Slab<br>Smooth Sandstone Slab": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-							"Blackstone Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab": "<span class='dot BLACK'></span> BLACK",
-							"Brick Slab<br>Mangrove Slab": "<span class='dot RED'></span> RED",
-							"Cobbled Deepslate Slab<br>Polished Deepslate Slab<br>Deepslate Tile Slab<br>Deepslate Brick Slab": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
-							"Crimson Slab": "<span class='dot DULL_PINK'></span> DULL_PINK",
-							"Dark Oak Slab<br>Mud Brick Slab": "<span class='dot BROWN'></span> BROWN",
-							"Exposed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY",
-							"Jungle Slab<br>Polished Granite Slab<br>Granite Slab": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-							"Nether Brick Slab<br>Red Nether Brick Slab": "<span class='dot DARK_RED'></span> DARK_RED",
-							"Oak Slab<br>Petrified Oak Slab": "<span class='dot OAK_TAN'></span> OAK_TAN",
-							"Oxidized Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab": "<span class='dot TEAL'></span> TEAL",
-							"Prismarine Brick Slab<br>Dark Prismarine Slab": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE",
-							"Prismarine Slab": "<span class='dot CYAN'></span> CYAN",
-							"Purpur Slab": "<span class='dot MAGENTA'></span> MAGENTA",
-							"Quartz Slab<br>Polished Diorite Slab<br>Smooth Quartz Slab<br>Diorite Slab": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
-							"Spruce Slab": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-							"Stone Slab<br>Smooth Stone Slab<br>Cobblestone Slab<br>Stone Brick Slab<br>Mossy Stone Brick Slab<br>Mossy Cobblestone Slab<br>Andesite Slab<br>Polished Andesite Slab": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-							"Warped Slab<br>Weathered Cut Copper Slab<br>Waxed Weathered Cut Copper Slab": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
-						}
-					},
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
+					"Acacia Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Red Sandstone Slab<br>Smooth Red Sandstone Slab<br>Waxed Cut Copper Slab": "{{mapColor|COLOR_ORANGE}}",
+					"Andesite Slab<br>Cobblestone Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Polished Andesite Slab<br>Smooth Stone Slab<br>Stone Brick Slab<br>Stone Slab": "{{mapColor|STONE}}",
+					"Bamboo Mosaic Slab<br>Bamboo Slab": "{{mapColor|COLOR_YELLOW}}",
+					"Birch Slab<br>Cut Sandstone Slab<br>End Stone Brick Slab<br>Sandstone Slab<br>Smooth Sandstone Slab": "{{mapColor|SAND}}",
+					"Blackstone Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab": "{{mapColor|COLOR_BLACK}}",
+					"Brick Slab<br>Mangrove Slab": "{{mapColor|COLOR_RED}}",
+					"Cherry Slab": "{{mapColor|TERRACOTTA_WHITE}}",
+					"Cobbled Deepslate Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Polished Deepslate Slab": "{{mapColor|DEEPSLATE}}",
+					"Crimson Slab": "{{mapColor|CRIMSON_STEM}}",
+					"Dark Oak Slab": "{{mapColor|COLOR_BROWN}}",
+					"Dark Prismarine Slab<br>Prismarine Brick Slab": "{{mapColor|DIAMOND}}",
+					"Diorite Slab<br>Polished Diorite Slab<br>Quartz Slab<br>Smooth Quartz Slab": "{{mapColor|QUARTZ}}",
+					"Exposed Cut Copper Slab<br>Mud Brick Slab<br>Waxed Exposed Cut Copper Slab": "{{mapColor|TERRACOTTA_LIGHT_GRAY}}",
+					"Granite Slab<br>Jungle Slab<br>Polished Granite Slab": "{{mapColor|DIRT}}",
+					"Nether Brick Slab<br>Red Nether Brick Slab": "{{mapColor|NETHER}}",
+					"Oak Slab<br>Petrified Oak Slab": "{{mapColor|WOOD}}",
+					"Oxidized Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab": "{{mapColor|WARPED_NYLIUM}}",
+					"Prismarine Slab": "{{mapColor|COLOR_CYAN}}",
+					"Purpur Slab": "{{mapColor|COLOR_MAGENTA}}",
+					"Spruce Slab": "{{mapColor|PODZOL}}",
+					"Warped Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "{{mapColor|WARPED_STEM}}"
 				},
-				"Slime Block": "<span class='dot PALE_GREEN'></span> PALE_GREEN",
-				"Small Dripleaf": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-				"Smithing Table": "<span class='dot OAK_TAN'></span> OAK_TAN",
-				"Smoker": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-				"Snow": "<span class='dot WHITE'></span> WHITE",
-				"Snow Block": "<span class='dot WHITE'></span> WHITE",
-				"Soul Sand": "<span class='dot BROWN'></span> BROWN",
-				"Soul Soil": "<span class='dot BROWN'></span> BROWN",
-				"Spawner": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-				"Sponge": "<span class='dot YELLOW'></span> YELLOW",
-				"Spore Blossom": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
+				"Slime Block": "{{mapColor|GRASS}}",
+				"Small Dripleaf": "{{mapColor|PLANT}}",
+				"Smithing Table": "{{mapColor|WOOD}}",
+				"Smoker": "{{mapColor|STONE}}",
+				"Sniffer Egg": "{{mapColor|COLOR_RED}}",
+				"Snow": "{{mapColor|SNOW}}",
+				"Snow Block": "{{mapColor|SNOW}}",
+				"Soul Sand": "{{mapColor|COLOR_BROWN}}",
+				"Soul Soil": "{{mapColor|COLOR_BROWN}}",
+				"Spawner": "{{mapColor|STONE}}",
+				"Sponge": "{{mapColor|COLOR_YELLOW}}",
+				"Spore Blossom": "{{mapColor|PLANT}}",
 				"Stained Glass": {
-					"Black Stained Glass": "<span class='dot BLACK'></span> BLACK",
-					"Blue Stained Glass": "<span class='dot BLUE'></span> BLUE",
-					"Brown Stained Glass": "<span class='dot BROWN'></span> BROWN",
-					"Cyan Stained Glass": "<span class='dot CYAN'></span> CYAN",
-					"Gray Stained Glass": "<span class='dot GRAY'></span> GRAY",
-					"Green Stained Glass": "<span class='dot GREEN'></span> GREEN",
-					"Light Blue Stained Glass": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE",
-					"Light Gray Stained Glass": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-					"Lime Stained Glass": "<span class='dot LIME'></span> LIME",
-					"Magenta Stained Glass": "<span class='dot MAGENTA'></span> MAGENTA",
-					"Orange Stained Glass": "<span class='dot ORANGE'></span> ORANGE",
-					"Pink Stained Glass": "<span class='dot PINK'></span> PINK",
-					"Purple Stained Glass": "<span class='dot PURPLE'></span> PURPLE",
-					"Red Stained Glass": "<span class='dot RED'></span> RED",
-					"White Stained Glass": "<span class='dot WHITE'></span> WHITE",
-					"Yellow Stained Glass": "<span class='dot YELLOW'></span> YELLOW"
+					"Black Stained Glass": "{{mapColor|COLOR_BLACK}}",
+					"Blue Stained Glass": "{{mapColor|COLOR_BLUE}}",
+					"Brown Stained Glass": "{{mapColor|COLOR_BROWN}}",
+					"Cyan Stained Glass": "{{mapColor|COLOR_CYAN}}",
+					"Gray Stained Glass": "{{mapColor|COLOR_GRAY}}",
+					"Green Stained Glass": "{{mapColor|COLOR_GREEN}}",
+					"Light Blue Stained Glass": "{{mapColor|COLOR_LIGHT_BLUE}}",
+					"Light Gray Stained Glass": "{{mapColor|COLOR_LIGHT_GRAY}}",
+					"Lime Stained Glass": "{{mapColor|COLOR_LIGHT_GREEN}}",
+					"Magenta Stained Glass": "{{mapColor|COLOR_MAGENTA}}",
+					"Orange Stained Glass": "{{mapColor|COLOR_ORANGE}}",
+					"Pink Stained Glass": "{{mapColor|COLOR_PINK}}",
+					"Purple Stained Glass": "{{mapColor|COLOR_PURPLE}}",
+					"Red Stained Glass": "{{mapColor|COLOR_RED}}",
+					"White Stained Glass": "{{mapColor|SNOW}}",
+					"Yellow Stained Glass": "{{mapColor|COLOR_YELLOW}}"
 				},
-				"Stained Glass Panes": "<span class='dot CLEAR'></span> CLEAR",
+				"Stained Glass Panes": "{{mapColor|NONE}}",
 				"Stairs": {
-					"waterlogged: false": {
-						"half: bottom": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
-						"half: top": {
-							"Acacia Stairs<br>Red Sandstone Stairs<br>Smooth Red Sandstone Stairs<br>Cut Copper Stairs<br>Waxed Cut Copper Stairs": "<span class='dot ORANGE'></span> ORANGE",
-							"Blackstone Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs": "<span class='dot BLACK'></span> BLACK",
-							"Brick Stairs<br>Mangrove Stairs": "<span class='dot RED'></span> RED",
-							"Cobbled Deepslate Stairs<br>Polished Deepslate Stairs<br>Deepslate Tile Stairs<br>Deepslate Brick Stairs": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
-							"Cobblestone Stairs<br>Stone Brick Stairs<br>Mossy Stone Brick Stairs<br>Mossy Cobblestone Stairs<br>Stone Stairs<br>Andesite Stairs<br>Polished Andesite Stairs": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-							"Crimson Stairs": "<span class='dot DULL_PINK'></span> DULL_PINK",
-							"Dark Oak Stairs": "<span class='dot BROWN'></span> BROWN",
-							"Jungle Stairs<br>Polished Granite Stairs<br>Granite Stairs": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-							"Mud Brick Stairs<br>Exposed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY",
-							"Nether Brick Stairs<br>Red Nether Brick Stairs": "<span class='dot DARK_RED'></span> DARK_RED",
-							"Oak Stairs": "<span class='dot OAK_TAN'></span> OAK_TAN",
-							"Oxidized Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs": "<span class='dot TEAL'></span> TEAL",
-							"Prismarine Brick Stairs<br>Dark Prismarine Stairs": "<span class='dot DIAMOND_BLUE'></span> DIAMOND_BLUE",
-							"Prismarine Stairs": "<span class='dot CYAN'></span> CYAN",
-							"Purpur Stairs": "<span class='dot MAGENTA'></span> MAGENTA",
-							"Quartz Stairs<br>Polished Diorite Stairs<br>Smooth Quartz Stairs<br>Diorite Stairs": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
-							"Sandstone Stairs<br>Birch Stairs<br>End Stone Brick Stairs<br>Smooth Sandstone Stairs": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-							"Spruce Stairs": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-							"Warped Stairs<br>Weathered Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
-						}
-					},
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
+					"Acacia Stairs<br>Cut Copper Stairs<br>Red Sandstone Stairs<br>Smooth Red Sandstone Stairs<br>Waxed Cut Copper Stairs": "{{mapColor|COLOR_ORANGE}}",
+					"Andesite Stairs<br>Cobblestone Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Polished Andesite Stairs<br>Stone Brick Stairs<br>Stone Stairs": "{{mapColor|STONE}}",
+					"Bamboo Mosaic Stairs<br>Bamboo Stairs": "{{mapColor|COLOR_YELLOW}}",
+					"Birch Stairs<br>End Stone Brick Stairs<br>Sandstone Stairs<br>Smooth Sandstone Stairs": "{{mapColor|SAND}}",
+					"Blackstone Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs": "{{mapColor|COLOR_BLACK}}",
+					"Brick Stairs<br>Mangrove Stairs": "{{mapColor|COLOR_RED}}",
+					"Cherry Stairs": "{{mapColor|TERRACOTTA_WHITE}}",
+					"Cobbled Deepslate Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Polished Deepslate Stairs": "{{mapColor|DEEPSLATE}}",
+					"Crimson Stairs": "{{mapColor|CRIMSON_STEM}}",
+					"Dark Oak Stairs": "{{mapColor|COLOR_BROWN}}",
+					"Dark Prismarine Stairs<br>Prismarine Brick Stairs": "{{mapColor|DIAMOND}}",
+					"Diorite Stairs<br>Polished Diorite Stairs<br>Quartz Stairs<br>Smooth Quartz Stairs": "{{mapColor|QUARTZ}}",
+					"Exposed Cut Copper Stairs<br>Mud Brick Stairs<br>Waxed Exposed Cut Copper Stairs": "{{mapColor|TERRACOTTA_LIGHT_GRAY}}",
+					"Granite Stairs<br>Jungle Stairs<br>Polished Granite Stairs": "{{mapColor|DIRT}}",
+					"Nether Brick Stairs<br>Red Nether Brick Stairs": "{{mapColor|NETHER}}",
+					"Oak Stairs": "{{mapColor|WOOD}}",
+					"Oxidized Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs": "{{mapColor|WARPED_NYLIUM}}",
+					"Prismarine Stairs": "{{mapColor|COLOR_CYAN}}",
+					"Purpur Stairs": "{{mapColor|COLOR_MAGENTA}}",
+					"Spruce Stairs": "{{mapColor|PODZOL}}",
+					"Warped Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "{{mapColor|WARPED_STEM}}"
 				},
 				"Stems": {
-					"Crimson Stem<br>Stripped Crimson Stem": "<span class='dot DULL_PINK'></span> DULL_PINK",
-					"Warped Stem<br>Stripped Warped Stem": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
+					"Crimson Stem<br>Stripped Crimson Stem": "{{mapColor|CRIMSON_STEM}}",
+					"Stripped Warped Stem<br>Warped Stem": "{{mapColor|WARPED_STEM}}"
 				},
 				"Stone": {
-					"Infested Stone": "<span class='dot LIGHT_BLUE_GRAY'></span> LIGHT_BLUE_GRAY",
-					"Stone<br>Smooth Stone": "<span class='dot STONE_GRAY'></span> STONE_GRAY"
+					"Infested Stone": "{{mapColor|CLAY}}",
+					"Smooth Stone<br>Stone": "{{mapColor|STONE}}"
 				},
 				"Stone Bricks": {
-					"Infested Stone Bricks<br>Infested Mossy Stone Bricks<br>Infested Cracked Stone Bricks<br>Infested Chiseled Stone Bricks": "<span class='dot LIGHT_BLUE_GRAY'></span> LIGHT_BLUE_GRAY",
-					"Stone Bricks<br>Mossy Stone Bricks<br>Cracked Stone Bricks<br>Chiseled Stone Bricks": "<span class='dot STONE_GRAY'></span> STONE_GRAY"
+					"Chiseled Stone Bricks<br>Cracked Stone Bricks<br>Mossy Stone Bricks<br>Stone Bricks": "{{mapColor|STONE}}",
+					"Infested Chiseled Stone Bricks<br>Infested Cracked Stone Bricks<br>Infested Mossy Stone Bricks<br>Infested Stone Bricks": "{{mapColor|CLAY}}"
 				},
-				"Stonecutter": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-				"Structure Block": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-				"Structure Void": "<span class='dot CLEAR'></span> CLEAR",
-				"Sugar Cane": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-				"Sweet Berry Bush": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
-				"Target": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
+				"Stonecutter": "{{mapColor|STONE}}",
+				"Structure Block": "{{mapColor|COLOR_LIGHT_GRAY}}",
+				"Structure Void": "{{mapColor|NONE}}",
+				"Sugar Cane": "{{mapColor|PLANT}}",
+				"Suspicious Gravel": "{{mapColor|STONE}}",
+				"Suspicious Sand": "{{mapColor|SAND}}",
+				"Sweet Berry Bush": "{{mapColor|PLANT}}",
+				"Target": "{{mapColor|QUARTZ}}",
 				"Terracotta": {
-					"Black Terracotta": "<span class='dot TERRACOTTA_BLACK'></span> TERRACOTTA_BLACK",
-					"Blue Terracotta": "<span class='dot TERRACOTTA_BLUE'></span> TERRACOTTA_BLUE",
-					"Brown Terracotta": "<span class='dot TERRACOTTA_BROWN'></span> TERRACOTTA_BROWN",
-					"Cyan Terracotta": "<span class='dot TERRACOTTA_CYAN'></span> TERRACOTTA_CYAN",
-					"Gray Terracotta": "<span class='dot TERRACOTTA_GRAY'></span> TERRACOTTA_GRAY",
-					"Green Terracotta": "<span class='dot TERRACOTTA_GREEN'></span> TERRACOTTA_GREEN",
-					"Light Blue Terracotta": "<span class='dot TERRACOTTA_LIGHT_BLUE'></span> TERRACOTTA_LIGHT_BLUE",
-					"Light Gray Terracotta": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY",
-					"Lime Terracotta": "<span class='dot TERRACOTTA_LIME'></span> TERRACOTTA_LIME",
-					"Magenta Terracotta": "<span class='dot TERRACOTTA_MAGENTA'></span> TERRACOTTA_MAGENTA",
-					"Orange Terracotta": "<span class='dot TERRACOTTA_ORANGE'></span> TERRACOTTA_ORANGE",
-					"Pink Terracotta": "<span class='dot TERRACOTTA_PINK'></span> TERRACOTTA_PINK",
-					"Purple Terracotta": "<span class='dot TERRACOTTA_PURPLE'></span> TERRACOTTA_PURPLE",
-					"Red Terracotta": "<span class='dot TERRACOTTA_RED'></span> TERRACOTTA_RED",
-					"Terracotta": "<span class='dot ORANGE'></span> ORANGE",
-					"White Terracotta": "<span class='dot TERRACOTTA_WHITE'></span> TERRACOTTA_WHITE",
-					"Yellow Terracotta": "<span class='dot TERRACOTTA_YELLOW'></span> TERRACOTTA_YELLOW"
+					"Black Terracotta": "{{mapColor|TERRACOTTA_BLACK}}",
+					"Blue Terracotta": "{{mapColor|TERRACOTTA_BLUE}}",
+					"Brown Terracotta": "{{mapColor|TERRACOTTA_BROWN}}",
+					"Cyan Terracotta": "{{mapColor|TERRACOTTA_CYAN}}",
+					"Gray Terracotta": "{{mapColor|TERRACOTTA_GRAY}}",
+					"Green Terracotta": "{{mapColor|TERRACOTTA_GREEN}}",
+					"Light Blue Terracotta": "{{mapColor|TERRACOTTA_LIGHT_BLUE}}",
+					"Light Gray Terracotta": "{{mapColor|TERRACOTTA_LIGHT_GRAY}}",
+					"Lime Terracotta": "{{mapColor|TERRACOTTA_LIGHT_GREEN}}",
+					"Magenta Terracotta": "{{mapColor|TERRACOTTA_MAGENTA}}",
+					"Orange Terracotta": "{{mapColor|TERRACOTTA_ORANGE}}",
+					"Pink Terracotta": "{{mapColor|TERRACOTTA_PINK}}",
+					"Purple Terracotta": "{{mapColor|TERRACOTTA_PURPLE}}",
+					"Red Terracotta": "{{mapColor|TERRACOTTA_RED}}",
+					"Terracotta": "{{mapColor|COLOR_ORANGE}}",
+					"White Terracotta": "{{mapColor|TERRACOTTA_WHITE}}",
+					"Yellow Terracotta": "{{mapColor|TERRACOTTA_YELLOW}}"
 				},
-				"Tinted Glass": "<span class='dot GRAY'></span> GRAY",
-				"TNT": "<span class='dot BRIGHT_RED'></span> BRIGHT_RED",
-				"Torch": "<span class='dot CLEAR'></span> CLEAR",
+				"Tinted Glass": "{{mapColor|COLOR_GRAY}}",
+				"TNT": "{{mapColor|FIRE}}",
+				"Torch": "{{mapColor|NONE}}",
+				"Torchflower": "{{mapColor|PLANT}}",
+				"Torchflower Crop": "{{mapColor|PLANT}}",
 				"Trapdoors": {
-					"waterlogged: false": {
-						"half: bottom": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
-						"half: top": {
-							"Acacia Trapdoor": "<span class='dot ORANGE'></span> ORANGE",
-							"Birch Trapdoor": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-							"Crimson Trapdoor": "<span class='dot DULL_PINK'></span> DULL_PINK",
-							"Dark Oak Trapdoor": "<span class='dot BROWN'></span> BROWN",
-							"Iron Trapdoor": "<span class='dot IRON_GRAY'></span> IRON_GRAY",
-							"Jungle Trapdoor": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-							"Mangrove Trapdoor": "<span class='dot RED'></span> RED",
-							"Oak Trapdoor": "<span class='dot OAK_TAN'></span> OAK_TAN",
-							"Spruce Trapdoor": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-							"Warped Trapdoor": "<span class='dot DARK_AQUA'></span> DARK_AQUA"
-						}
-					},
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
+					"Acacia Trapdoor": "{{mapColor|COLOR_ORANGE}}",
+					"Bamboo Trapdoor": "{{mapColor|COLOR_YELLOW}}",
+					"Birch Trapdoor": "{{mapColor|SAND}}",
+					"Cherry Trapdoor": "{{mapColor|TERRACOTTA_WHITE}}",
+					"Crimson Trapdoor": "{{mapColor|CRIMSON_STEM}}",
+					"Dark Oak Trapdoor": "{{mapColor|COLOR_BROWN}}",
+					"Iron Trapdoor": "{{mapColor|METAL}}",
+					"Jungle Trapdoor": "{{mapColor|DIRT}}",
+					"Mangrove Trapdoor": "{{mapColor|COLOR_RED}}",
+					"Oak Trapdoor": "{{mapColor|WOOD}}",
+					"Spruce Trapdoor": "{{mapColor|PODZOL}}",
+					"Warped Trapdoor": "{{mapColor|WARPED_STEM}}"
 				},
-				"Trapped Chest": {
-					"waterlogged: false": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-				},
-				"Tripwire": "<span class='dot CLEAR'></span> CLEAR",
-				"Tripwire Hook": "<span class='dot CLEAR'></span> CLEAR",
-				"Tuff": "<span class='dot TERRACOTTA_GRAY'></span> TERRACOTTA_GRAY",
-				"Turtle Egg": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-				"Twisting Vines": "<span class='dot CYAN'></span> CYAN",
-				"Vines": "<span class='dot DARK_GREEN'></span> DARK_GREEN",
+				"Trapped Chest": "{{mapColor|WOOD}}",
+				"Tripwire": "{{mapColor|NONE}}",
+				"Tripwire Hook": "{{mapColor|NONE}}",
+				"Tuff": "{{mapColor|TERRACOTTA_GRAY}}",
+				"Turtle Egg": "{{mapColor|SAND}}",
+				"Twisting Vines": "{{mapColor|COLOR_CYAN}}",
+				"Vines": "{{mapColor|PLANT}}",
 				"Walls": {
-					"Blackstone Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall": {
-						"waterlogged: false": "<span class='dot BLACK'></span> BLACK",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Brick Wall": {
-						"waterlogged: false": "<span class='dot RED'></span> RED",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Cobbled Deepslate Wall<br>Polished Deepslate Wall<br>Deepslate Tile Wall<br>Deepslate Brick Wall": {
-						"waterlogged: false": "<span class='dot DEEPSLATE_GRAY'></span> DEEPSLATE_GRAY",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Cobblestone Wall<br>Mossy Cobblestone Wall<br>Mossy Stone Brick Wall<br>Stone Brick Wall<br>Andesite Wall": {
-						"waterlogged: false": "<span class='dot STONE_GRAY'></span> STONE_GRAY",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Diorite Wall": {
-						"waterlogged: false": "<span class='dot OFF_WHITE'></span> OFF_WHITE",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Granite Wall": {
-						"waterlogged: false": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Mud Brick Wall": {
-						"waterlogged: false": "<span class='dot TERRACOTTA_LIGHT_GRAY'></span> TERRACOTTA_LIGHT_GRAY",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Nether Brick Wall<br>Red Nether Brick Wall": {
-						"waterlogged: false": "<span class='dot DARK_RED'></span> DARK_RED",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Prismarine Wall": {
-						"waterlogged: false": "<span class='dot CYAN'></span> CYAN",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Red Sandstone Wall": {
-						"waterlogged: false": "<span class='dot ORANGE'></span> ORANGE",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					},
-					"Sandstone Wall<br>End Stone Brick Wall": {
-						"waterlogged: false": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-						"waterlogged: true": "<span class='dot WATER_BLUE'></span> WATER_BLUE"
-					}
+					"Andesite Wall<br>Cobblestone Wall<br>Mossy Cobblestone Wall<br>Mossy Stone Brick Wall<br>Stone Brick Wall": "{{mapColor|STONE}}",
+					"Blackstone Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall": "{{mapColor|COLOR_BLACK}}",
+					"Brick Wall": "{{mapColor|COLOR_RED}}",
+					"Cobbled Deepslate Wall<br>Deepslate Brick Wall<br>Deepslate Tile Wall<br>Polished Deepslate Wall": "{{mapColor|DEEPSLATE}}",
+					"Diorite Wall": "{{mapColor|QUARTZ}}",
+					"End Stone Brick Wall<br>Sandstone Wall": "{{mapColor|SAND}}",
+					"Granite Wall": "{{mapColor|DIRT}}",
+					"Mud Brick Wall": "{{mapColor|TERRACOTTA_LIGHT_GRAY}}",
+					"Nether Brick Wall<br>Red Nether Brick Wall": "{{mapColor|NETHER}}",
+					"Prismarine Wall": "{{mapColor|COLOR_CYAN}}",
+					"Red Sandstone Wall": "{{mapColor|COLOR_ORANGE}}"
 				},
 				"Wart Blocks": {
-					"Nether Wart Block": "<span class='dot RED'></span> RED",
-					"Warped Wart Block": "<span class='dot BRIGHT_TEAL'></span> BRIGHT_TEAL"
+					"Nether Wart Block": "{{mapColor|COLOR_RED}}",
+					"Warped Wart Block": "{{mapColor|WARPED_WART_BLOCK}}"
 				},
-				"Water": "<span class='dot WATER_BLUE'></span> WATER_BLUE",
-				"Weeping Vines": "<span class='dot DARK_RED'></span> DARK_RED",
+				"Water": "{{mapColor|WATER}}",
+				"Weeping Vines": "{{mapColor|NETHER}}",
 				"Wood": {
-					"Acacia Wood": "<span class='dot GRAY'></span> GRAY",
-					"Birch Wood<br>Stripped Birch Wood": "<span class='dot PALE_YELLOW'></span> PALE_YELLOW",
-					"Dark Oak Wood<br>Stripped Dark Oak Wood": "<span class='dot BROWN'></span> BROWN",
-					"Jungle Wood<br>Stripped Jungle Wood": "<span class='dot DIRT_BROWN'></span> DIRT_BROWN",
-					"Mangrove Wood<br>Stripped Mangrove Wood": "<span class='dot RED'></span> RED",
-					"Oak Wood<br>Stripped Oak Wood": "<span class='dot OAK_TAN'></span> OAK_TAN",
-					"Spruce Wood<br>Stripped Spruce Wood": "<span class='dot SPRUCE_BROWN'></span> SPRUCE_BROWN",
-					"Stripped Acacia Wood": "<span class='dot ORANGE'></span> ORANGE"
+					"Acacia Wood": "{{mapColor|COLOR_GRAY}}",
+					"Birch Wood<br>Stripped Birch Wood": "{{mapColor|SAND}}",
+					"Cherry Wood": "{{mapColor|TERRACOTTA_GRAY}}",
+					"Dark Oak Wood<br>Stripped Dark Oak Wood": "{{mapColor|COLOR_BROWN}}",
+					"Jungle Wood<br>Stripped Jungle Wood": "{{mapColor|DIRT}}",
+					"Mangrove Wood<br>Stripped Mangrove Wood": "{{mapColor|COLOR_RED}}",
+					"Oak Wood<br>Stripped Oak Wood": "{{mapColor|WOOD}}",
+					"Spruce Wood<br>Stripped Spruce Wood": "{{mapColor|PODZOL}}",
+					"Stripped Acacia Wood": "{{mapColor|COLOR_ORANGE}}",
+					"Stripped Cherry Wood": "{{mapColor|TERRACOTTA_PINK}}"
 				},
 				"Wool": {
-					"Black Wool": "<span class='dot BLACK'></span> BLACK",
-					"Blue Wool": "<span class='dot BLUE'></span> BLUE",
-					"Brown Wool": "<span class='dot BROWN'></span> BROWN",
-					"Cyan Wool": "<span class='dot CYAN'></span> CYAN",
-					"Gray Wool": "<span class='dot GRAY'></span> GRAY",
-					"Green Wool": "<span class='dot GREEN'></span> GREEN",
-					"Light Blue Wool": "<span class='dot LIGHT_BLUE'></span> LIGHT_BLUE",
-					"Light Gray Wool": "<span class='dot LIGHT_GRAY'></span> LIGHT_GRAY",
-					"Lime Wool": "<span class='dot LIME'></span> LIME",
-					"Magenta Wool": "<span class='dot MAGENTA'></span> MAGENTA",
-					"Orange Wool": "<span class='dot ORANGE'></span> ORANGE",
-					"Pink Wool": "<span class='dot PINK'></span> PINK",
-					"Purple Wool": "<span class='dot PURPLE'></span> PURPLE",
-					"Red Wool": "<span class='dot RED'></span> RED",
-					"White Wool": "<span class='dot WHITE'></span> WHITE",
-					"Yellow Wool": "<span class='dot YELLOW'></span> YELLOW"
+					"Black Wool": "{{mapColor|COLOR_BLACK}}",
+					"Blue Wool": "{{mapColor|COLOR_BLUE}}",
+					"Brown Wool": "{{mapColor|COLOR_BROWN}}",
+					"Cyan Wool": "{{mapColor|COLOR_CYAN}}",
+					"Gray Wool": "{{mapColor|COLOR_GRAY}}",
+					"Green Wool": "{{mapColor|COLOR_GREEN}}",
+					"Light Blue Wool": "{{mapColor|COLOR_LIGHT_BLUE}}",
+					"Light Gray Wool": "{{mapColor|COLOR_LIGHT_GRAY}}",
+					"Lime Wool": "{{mapColor|COLOR_LIGHT_GREEN}}",
+					"Magenta Wool": "{{mapColor|COLOR_MAGENTA}}",
+					"Orange Wool": "{{mapColor|COLOR_ORANGE}}",
+					"Pink Wool": "{{mapColor|COLOR_PINK}}",
+					"Purple Wool": "{{mapColor|COLOR_PURPLE}}",
+					"Red Wool": "{{mapColor|COLOR_RED}}",
+					"White Wool": "{{mapColor|SNOW}}",
+					"Yellow Wool": "{{mapColor|COLOR_YELLOW}}"
 				}
 			},
-			"property_description": "The color of this block when viewed on a map. CLEAR is transparent, meaning it is simply ignored.",
-			"property_name": "Map Color (NOT UPDATED TO 1.20; DEFAULT VALUE USED)"
+			"property_description": "The color of this block when viewed on a map. NONE is transparent, meaning it is simply ignored.",
+			"property_name": "Map Color"
 		},
 		"material": {
 			"default_value": null,
