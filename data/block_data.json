@@ -17640,7 +17640,7 @@
 					"Water": "Black skulls only"
 				}
 			},
-			"property_description": "Whether this block is immune to the wither's block breaking attack.",
+			"property_description": "Whether this block is immune to the wither's skull attacks.",
 			"property_name": "Wither Skull Immune",
 			"relative_gradient": true
 		}
