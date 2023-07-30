@@ -4483,8 +4483,8 @@
 					"Damaged Anvil": "Yes"
 				},
 				"Banners": {
-					"Black Banner<br>Blue Banner<br>blue_wall_banner<br>Brown Banner<br>Cyan Banner<br>cyan_wall_banner<br>Gray Banner<br>Green Banner<br>green_wall_banner<br>Light Blue Banner<br>light_blue_wall_banner<br>Light Gray Banner<br>Lime Banner<br>lime_wall_banner<br>Magenta Banner<br>Orange Banner<br>orange_wall_banner<br>Pink Banner<br>pink_wall_banner<br>Purple Banner<br>purple_wall_banner<br>Red Banner<br>red_wall_banner<br>White Banner<br>Yellow Banner<br>yellow_wall_banner": "No",
-					"black_wall_banner<br>brown_wall_banner<br>gray_wall_banner<br>light_gray_wall_banner<br>magenta_wall_banner<br>white_wall_banner": "Yes"
+					"Black Banner<br>Blue Banner<br>No Translation Key: blue_wall_banner<br>Brown Banner<br>Cyan Banner<br>No Translation Key: cyan_wall_banner<br>Gray Banner<br>Green Banner<br>No Translation Key: green_wall_banner<br>Light Blue Banner<br>No Translation Key: light_blue_wall_banner<br>Light Gray Banner<br>Lime Banner<br>No Translation Key: lime_wall_banner<br>Magenta Banner<br>Orange Banner<br>No Translation Key: orange_wall_banner<br>Pink Banner<br>No Translation Key: pink_wall_banner<br>Purple Banner<br>No Translation Key: purple_wall_banner<br>Red Banner<br>No Translation Key: red_wall_banner<br>White Banner<br>Yellow Banner<br>No Translation Key: yellow_wall_banner": "No",
+					"No Translation Key: black_wall_banner<br>No Translation Key: brown_wall_banner<br>No Translation Key: gray_wall_banner<br>No Translation Key: light_gray_wall_banner<br>No Translation Key: magenta_wall_banner<br>No Translation Key: white_wall_banner": "Yes"
 				},
 				"Barrel": "Yes",
 				"Basalt": "Yes",
@@ -17529,119 +17529,120 @@
 		"wither_skull_immune": {
 			"default_value": "No",
 			"entries": {
-				"Ancient Debris": "Only to black skulls",
-				"Andesite": "Only to black skulls",
-				"Anvil": "Only to black skulls",
+				"Ancient Debris": "Black skulls only",
+				"Andesite": "Black skulls only",
+				"Anvil": "Black skulls only",
 				"Barrier": "Yes",
-				"Basalt": "Only to black skulls",
+				"Basalt": "Black skulls only",
 				"Bedrock": "Yes",
-				"Bell": "Only to black skulls",
-				"Blackstone": "Only to black skulls",
-				"Block of Coal": "Only to black skulls",
-				"Block of Copper": "Only to black skulls",
-				"Block of Diamond": "Only to black skulls",
-				"Block of Emerald": "Only to black skulls",
-				"Block of Gold": "Only to black skulls",
-				"Block of Iron": "Only to black skulls",
-				"Block of Netherite": "Only to black skulls",
+				"Bell": "Black skulls only",
+				"Blackstone": "Black skulls only",
+				"Block of Coal": "Black skulls only",
+				"Block of Copper": "Black skulls only",
+				"Block of Diamond": "Black skulls only",
+				"Block of Emerald": "Black skulls only",
+				"Block of Gold": "Black skulls only",
+				"Block of Iron": "Black skulls only",
+				"Block of Netherite": "Black skulls only",
 				"Block of Quartz": {
 					"Chiseled Quartz Block<br>Block of Quartz<br>Quartz Bricks<br>Quartz Pillar": "No",
-					"Smooth Quartz Block": "Only to black skulls"
+					"Smooth Quartz Block": "Black skulls only"
 				},
-				"Block of Raw Copper": "Only to black skulls",
-				"Block of Raw Gold": "Only to black skulls",
-				"Block of Raw Iron": "Only to black skulls",
-				"Block of Redstone": "Only to black skulls",
-				"Bricks": "Only to black skulls",
-				"Chain": "Only to black skulls",
-				"Cobbled Deepslate": "Only to black skulls",
+				"Block of Raw Copper": "Black skulls only",
+				"Block of Raw Gold": "Black skulls only",
+				"Block of Raw Iron": "Black skulls only",
+				"Block of Redstone": "Black skulls only",
+				"Bricks": "Black skulls only",
+				"Chain": "Black skulls only",
+				"Cobbled Deepslate": "Black skulls only",
 				"Cobblestone": {
-					"Cobblestone<br>Mossy Cobblestone": "Only to black skulls",
+					"Cobblestone<br>Mossy Cobblestone": "Black skulls only",
 					"Infested Cobblestone": "No"
 				},
 				"Command Blocks": "Yes",
-				"Coral Blocks": "Only to black skulls",
-				"Crying Obsidian": "Only to black skulls",
+				"Coral Blocks": "Black skulls only",
+				"Crying Obsidian": "Black skulls only",
 				"Deepslate": {
-					"Deepslate": "Only to black skulls",
+					"Deepslate": "Black skulls only",
 					"Infested Deepslate": "No"
 				},
-				"Diorite": "Only to black skulls",
+				"Diorite": "Black skulls only",
 				"Doors": {
 					"Acacia Door<br>Bamboo Door<br>Birch Door<br>Cherry Door<br>Crimson Door<br>Dark Oak Door<br>Jungle Door<br>Mangrove Door<br>Oak Door<br>Spruce Door<br>Warped Door": "No",
-					"Iron Door": "Only to black skulls"
+					"Iron Door": "Black skulls only"
 				},
-				"Dragon Egg": "Only to black skulls",
-				"Enchanting Table": "Only to black skulls",
+				"Dragon Egg": "Black skulls only",
+				"Enchanting Table": "Black skulls only",
 				"End Gateway": "Yes",
 				"End Portal": "Yes",
 				"End Portal Frame": "Yes",
-				"End Stone": "Only to black skulls",
-				"End Stone Bricks": "Only to black skulls",
-				"Ender Chest": "Only to black skulls",
+				"End Stone": "Black skulls only",
+				"End Stone Bricks": "Black skulls only",
+				"Ender Chest": "Black skulls only",
 				"Fences": {
 					"Acacia Fence<br>Bamboo Fence<br>Birch Fence<br>Cherry Fence<br>Crimson Fence<br>Dark Oak Fence<br>Jungle Fence<br>Mangrove Fence<br>Oak Fence<br>Spruce Fence<br>Warped Fence": "No",
-					"Nether Brick Fence": "Only to black skulls"
+					"Nether Brick Fence": "Black skulls only"
 				},
-				"Gilded Blackstone": "Only to black skulls",
-				"Granite": "Only to black skulls",
-				"Grindstone": "Only to black skulls",
-				"Hopper": "Only to black skulls",
-				"Iron Bars": "Only to black skulls",
+				"Gilded Blackstone": "Black skulls only",
+				"Granite": "Black skulls only",
+				"Grindstone": "Black skulls only",
+				"Hopper": "Black skulls only",
+				"Iron Bars": "Black skulls only",
 				"Jigsaw Block": "Yes",
-				"Jukebox": "Only to black skulls",
-				"Lava": "Only to black skulls",
+				"Jukebox": "Black skulls only",
+				"Lava": "Black skulls only",
 				"Light Block": "Yes",
-				"Lightning Rod": "Only to black skulls",
-				"Nether Bricks": "Only to black skulls",
-				"Obsidian": "Only to black skulls",
-				"Prismarine": "Only to black skulls",
-				"Purpur Block": "Only to black skulls",
+				"Lightning Rod": "Black skulls only",
+				"Nether Bricks": "Black skulls only",
+				"Obsidian": "Black skulls only",
+				"Prismarine": "Black skulls only",
+				"Purpur Block": "Black skulls only",
 				"Red Sandstone": {
 					"Chiseled Red Sandstone<br>Cut Red Sandstone<br>Red Sandstone": "No",
-					"Smooth Red Sandstone": "Only to black skulls"
+					"Smooth Red Sandstone": "Black skulls only"
 				},
 				"Reinforced Deepslate": "Yes",
-				"Respawn Anchor": "Only to black skulls",
+				"Respawn Anchor": "Black skulls only",
 				"Sandstone": {
 					"Chiseled Sandstone<br>Cut Sandstone<br>Sandstone": "No",
-					"Smooth Sandstone": "Only to black skulls"
+					"Smooth Sandstone": "Black skulls only"
 				},
 				"Slabs": {
 					"Acacia Slab<br>Bamboo Mosaic Slab<br>Bamboo Slab<br>Birch Slab<br>Cherry Slab<br>Crimson Slab<br>Dark Oak Slab<br>Jungle Slab<br>Mangrove Slab<br>Mud Brick Slab<br>Oak Slab<br>Spruce Slab<br>Warped Slab": "No",
-					"Andesite Slab<br>Blackstone Slab<br>Brick Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Nether Brick Slab<br>Oxidized Cut Copper Slab<br>Petrified Oak Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Stone Brick Slab<br>Stone Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "Only to black skulls"
+					"Andesite Slab<br>Blackstone Slab<br>Brick Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Nether Brick Slab<br>Oxidized Cut Copper Slab<br>Petrified Oak Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Stone Brick Slab<br>Stone Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "Black skulls only"
 				},
-				"Spawner": "Only to black skulls",
+				"Spawner": "Black skulls only",
 				"Stairs": {
 					"Acacia Stairs<br>Bamboo Mosaic Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Cherry Stairs<br>Crimson Stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Mud Brick Stairs<br>Oak Stairs<br>Quartz Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Spruce Stairs<br>Warped Stairs": "No",
-					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Red Nether Brick Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "Only to black skulls"
+					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Red Nether Brick Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "Black skulls only"
 				},
 				"Stone": {
 					"Infested Stone": "No",
-					"Smooth Stone<br>Stone": "Only to black skulls"
+					"Smooth Stone<br>Stone": "Black skulls only"
 				},
 				"Stone Bricks": {
-					"Chiseled Stone Bricks<br>Cracked Stone Bricks<br>Mossy Stone Bricks<br>Stone Bricks": "Only to black skulls",
+					"Chiseled Stone Bricks<br>Cracked Stone Bricks<br>Mossy Stone Bricks<br>Stone Bricks": "Black skulls only",
 					"Infested Chiseled Stone Bricks<br>Infested Cracked Stone Bricks<br>Infested Mossy Stone Bricks<br>Infested Stone Bricks": "No"
 				},
 				"Structure Block": "Yes",
-				"Terracotta": "Only to black skulls",
+				"Terracotta": "Black skulls only",
 				"Trapdoors": {
 					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<br>Dark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": "No",
-					"Iron Trapdoor": "Only to black skulls"
+					"Iron Trapdoor": "Black skulls only"
 				},
-				"Tuff": "Only to black skulls",
+				"Tuff": "Black skulls only",
 				"Walls": {
-					"Andesite Wall<br>Blackstone Wall<br>Brick Wall<br>Cobbled Deepslate Wall<br>Cobblestone Wall<br>Deepslate Brick Wall<br>Deepslate Tile Wall<br>Diorite Wall<br>End Stone Brick Wall<br>Granite Wall<br>Mossy Cobblestone Wall<br>Mossy Stone Brick Wall<br>Nether Brick Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall<br>Polished Deepslate Wall<br>Prismarine Wall<br>Red Nether Brick Wall<br>Stone Brick Wall": "Only to black skulls",
+					"Andesite Wall<br>Blackstone Wall<br>Brick Wall<br>Cobbled Deepslate Wall<br>Cobblestone Wall<br>Deepslate Brick Wall<br>Deepslate Tile Wall<br>Diorite Wall<br>End Stone Brick Wall<br>Granite Wall<br>Mossy Cobblestone Wall<br>Mossy Stone Brick Wall<br>Nether Brick Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall<br>Polished Deepslate Wall<br>Prismarine Wall<br>Red Nether Brick Wall<br>Stone Brick Wall": "Black skulls only",
 					"Mud Brick Wall<br>Red Sandstone Wall<br>Sandstone Wall": "No"
 				},
 				"Water": {
 					"Bubble Column": "No",
-					"Water": "Only to black skulls"
+					"Water": "Black skulls only"
 				}
 			},
 			"property_description": "Whether this block is immune to the wither's block breaking attack.",
-			"property_name": "Wither Skull Immune"
+			"property_name": "Wither Skull Immune",
+			"relative_gradient": true
 		}
 	}
 }
