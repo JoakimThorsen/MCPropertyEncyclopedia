@@ -11,7 +11,7 @@
     --hover-text-color: #262626;
     --hover-selected-color: #AED6C3;
     
-    --background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("assets/propertythingy_light_compressed.jpg") no-repeat center center fixed;
+    --background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("assets/img/propertythingy_light_compressed.jpg") no-repeat center center fixed;
     --expand-btn-background-color: #ddd;
     --about-background-color: rgba(255, 255, 255, 0.856);
     --highlight-color: yellow;
@@ -31,7 +31,7 @@
         --hover-text-color: #eee;
         --hover-selected-color: hsl(151, 25%, 30%);
         
-        --background-image: url("assets/propertythingy_dark_compressed.jpg") no-repeat center center fixed;;
+        --background-image: url("assets/img/propertythingy_dark_compressed.jpg") no-repeat center center fixed;;
         --expand-btn-background-color: #333;
         --about-background-color: rgba(0, 0, 0, 0.6);
         --highlight-color: #880;
@@ -50,7 +50,7 @@
     --hover-text-color: #eee;
     --hover-selected-color: hsl(151, 25%, 30%);
     
-    --background-image: url("assets/propertythingy_dark_compressed.jpg") no-repeat center center fixed;;
+    --background-image: url("assets/img/propertythingy_dark_compressed.jpg") no-repeat center center fixed;;
     --expand-btn-background-color: #333;
     --about-background-color: rgba(0, 0, 0, 0.6);
     --highlight-color: #880;
@@ -455,25 +455,25 @@ th:first-child>*>* {
 }
 
 .block-sprite {
-    background-image: url(assets/BlockCSS.png);
+    background-image: url(assets/img/BlockCSS.png);
 }
 .block-sprite2 {
-    background-image: url(assets/BlockCSS2.png);
+    background-image: url(assets/img/BlockCSS2.png);
 }
 .block-sprite3 {
-    background-image: url(assets/BlockCSS_1.20.png);
+    background-image: url(assets/img/BlockCSS_1.20.png);
 }
 
 .entity-sprite {
-    background-image: url(assets/EntityCSS.png);
+    background-image: url(assets/img/EntityCSS.png);
 }
 
 .item-sprite {
-    background-image: url(assets/ItemCSS.png);
+    background-image: url(assets/img/ItemCSS.png);
 }
 
 .unicolor-block-sprite {
-    background-image: url(assets/UnicolorBlockCSS.png);
+    background-image: url(assets/img/UnicolorBlockCSS.png);
 }
 
 .search-highlight {
