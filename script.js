@@ -79,14 +79,6 @@ async function initialize_page() {
     ({ headerOutputter, tableBodyGenerator } = await import('./assets/js/outputHandler.mjs'));
     ({ getClosestLevDistFromList } = await import('./assets/js/dataUtilities.mjs'));
 
-    if(!localStorage.getItem('theme')) {
-        localStorage.setItem('theme', window?.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    }
-    document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
-    if(localStorage.getItem('theme') === 'dark') {
-        $('#dark-mode-toggle').children().toggleClass('display-none');
-    }
-
     if (!localStorage.getItem("MCProperty-discord-promoted")) {
         $(".shameless-self-promo").removeClass("display-none")
     }
@@ -559,22 +551,6 @@ function scrollToTop() {
 
 function stopPromo(popup_type = "MCProperty-discord-promoted") {
     localStorage.setItem(popup_type, true)
-}
-
-function toggleTheme() {
-    let theme;
-    switch (localStorage.getItem('theme')) {
-        case 'dark':
-            theme = 'light';
-            break
-        case 'light':
-            theme = 'dark';
-        default:
-            theme = 'dark';
-    }
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    $('#dark-mode-toggle').children().toggleClass('display-none');
 }
 
 function highlightSearchString(input, search) {

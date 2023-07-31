@@ -35,8 +35,6 @@ function initialize_page() {
         // $target.toggle(); // No toggle animation/delay
     });
 
-    document.documentElement.setAttribute('data-theme', 'light');
-
     countdown();
     function countdown() {
         setTimeout(countdown, 999);
@@ -392,13 +390,12 @@ function formatting_color(latest_guess, value, property_name) {
 
     } else if(value*1 == value && get_all_values(secret_value).some(v => v*1 == v)){
         if(get_all_values(secret_value).every(v => v > value || v*1 != v)) {
-            color = `style="background-color: hsl(276, 55%, 66%);"` // lower
+            color = `class="lowercolor"`; // lower
         }
         if(get_all_values(secret_value).every(v => v < value || v*1 != v)) {
-            color = `style="background-color: hsl(212, 100%, 82%);"` // higher
+            color = `class="highercolor"`; // higher
         }
         if(get_all_values(secret_value).some(v => v < value || v*1 != v) && get_all_values(secret_value).filter(v => !isNaN(v)).some(v => v > value || v*1 != v)) {
-            color = `style="background-color: hsl(281, 79%, 85%);"`; // in between
             color = `class="inbetweencolor"`; // in between
         }
 

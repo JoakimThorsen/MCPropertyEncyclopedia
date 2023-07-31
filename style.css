@@ -179,6 +179,16 @@ a:hover {
     font-size: 16px;
     background-color: var(--background-color);
 }
+.modal-content {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+.modal-footer>button.btn-secondary {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
 
 .select-option, .selection-category {
     font-size: 14px;
@@ -624,6 +634,9 @@ td .nested-table {
     background-color: var(--expand-btn-background-color);
     border-color: var(--border-color);
     cursor: pointer;
+}
+.expand-btn:hover {
+    color: var(--hover-text-color);
 }
 
 table.table.expand-btn {

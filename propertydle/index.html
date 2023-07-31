@@ -39,16 +39,48 @@
 <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
 
 <!-- Main css/js -->
+<script src="../assets/js/darkmode.js"></script>
 <link rel="stylesheet" href="../style.css">
 <script src="propertydle.js"></script>
 
 <style>
 input[type=search]::-webkit-search-cancel-button {
-    -webkit-appearance: searchfield-cancel-button;
+  -webkit-appearance: searchfield-cancel-button;
+}
+.lowercolor {
+  background-color: hsl(276, 55%, 66%);
+}
+.highercolor {
+  background-color: hsl(212, 100%, 82%);
 }
 .inbetweencolor {
-    background-color: hsl(170, 81%, 79%);
+  background-color: hsl(170, 81%, 79%);
 }
+
+@media (prefers-color-scheme: dark) {
+  .lowercolor :not([data-theme="light"]) {
+    background-color: hsl(276, 41.25%, 19.8%);
+  }
+  .highercolor :not([data-theme="light"]) {
+    background-color: hsl(212, 75%, 25%);
+  }
+  .inbetweencolor :not([data-theme="light"]) {
+    background-color: hsl(170, 60.75%, 23.7%);
+  }
+}
+
+[data-theme="dark"] {
+  .lowercolor {
+    background-color: hsl(276, 41.25%, 19.8%);
+  }
+  .highercolor {
+    background-color: hsl(212, 75%, 25%);
+  }
+  .inbetweencolor {
+    background-color: hsl(170, 60.75%, 23.7%);
+  }
+}
+
 </style>
 
 </head>
@@ -104,7 +136,7 @@ input[type=search]::-webkit-search-cancel-button {
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="modalLabel" style="display: inline;">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" style="color:var(--text-color)" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -123,10 +155,10 @@ input[type=search]::-webkit-search-cancel-button {
     <div id="about-body" class="panel panel-default collapse in">
       <p class="about-text">Yes. This is a thing now.</p>
       <p class="about-text">Your goal is to find the solution by guessing different Minecraft blocks and getting clues based on which properties match the target block.</p>
-      <p class="about-text">If the cell is <span class="cf-yes" style="color:black;text-shadow: none;">Green</span>, then this property's value matches that of the solution.</p>
-      <p class="about-text">If it is <span class="cf-no" style="color:black;text-shadow: none;">Red</span>, then this is not the case.</p>
-      <p class="about-text">If the solution has multiple values for this property, then each correct value will be marked <span class="cf-neutral" style="color:black;text-shadow: none;">Yellow</span>, until you get them all right.</p>
-      <p class="about-text">For numbers, the color denotes whether your guess is <span style="background-color: hsl(276, 55%, 66%);">Lower</span> or <span style="background-color: hsl(212, 100%, 82%);">Higher</span> than the answer, or if your guess is somewhere <span class="inbetweencolor">in between</span> the values of the answer.</p>
+      <p class="about-text">If the cell is <span class="cf-yes" style="text-shadow: none;">Green</span>, then this property's value matches that of the solution.</p>
+      <p class="about-text">If it is <span class="cf-no" style="text-shadow: none;">Red</span>, then this is not the case.</p>
+      <p class="about-text">If the solution has multiple values for this property, then each correct value will be marked <span class="cf-neutral" style="text-shadow: none;">Yellow</span>, until you get them all right.</p>
+      <p class="about-text">For numbers, the color denotes whether your guess is <span class="lowercolor">Lower</span> or <span class="highercolor">Higher</span> than the answer, or if your guess is somewhere <span class="inbetweencolor">in between</span> the values of the answer.</p>
     </div>
     <h2 id="daily-mode" class="text-center display-none" style="font-size: 40px;"><span class="twelve"></span>Daily Mode: day <span id="current-day">?</span></h1>
     <h2 id="infinite-mode" class="text-center display-none" style="font-size: 40px;"><span class="twelve"></span>Infinite Mode</h1>
@@ -158,7 +190,7 @@ input[type=search]::-webkit-search-cancel-button {
     <div class="display-none" id="game-inputs">
         <div class="form-inline text-center">
             <span id="sprite-hint"></span>
-            <input list="blocks" class="form-control" id="search" placeholder="Guess a block..." autofocus type="search" autocomplete="off">
+            <input list="blocks" class="form-control search" id="search" placeholder="Guess a block..." autofocus type="search" autocomplete="off">
             <datalist id="blocks"></datalist>
             <button class="btn btn-primary" onclick="guess($(this).siblings('input')[0].value)">Guess (Enter)</button>
         </div>
