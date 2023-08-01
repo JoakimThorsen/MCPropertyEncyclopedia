@@ -574,7 +574,7 @@
 				"redirects_redstone",
 				"emits_power",
 				"comparator_output",
-				"send_comparator_updates",
+				"sends_comparator_updates",
 				"instant_shape_updater",
 				"instant_block_updater",
 				"instant_updater",
@@ -17643,6 +17643,37 @@
 			"property_description": "Whether this block is immune to the wither's skull attacks.",
 			"property_name": "Wither Skull Immune",
 			"relative_gradient": true
+		},
+		"comparator2": {
+			"property_name": "Comparator2",
+			"default_value": "No",
+			"entries": {
+				"Barrel": "Yes",
+				"Bee Nest": "Yes",
+				"Beehive": "Yes",
+				"Blast Furnace": "Yes",
+				"Brewing Stand": "Yes",
+				"Cake": "Yes",
+				"Calibrated Sculk Sensor": "Yes",
+				"Cauldron": "Yes",
+				"Chest": "Yes",
+				"Chiseled Bookshelf": "Yes",
+				"Command Blocks": "Yes",
+				"Composter": "Yes",
+				"Detector Rail": "Yes",
+				"Dispenser": "Yes",
+				"Dropper": "Yes",
+				"End Portal Frame": "Yes",
+				"Furnace": "Yes",
+				"Hopper": "Yes",
+				"Jukebox": "Yes",
+				"Lectern": "Yes",
+				"Respawn Anchor": "Yes",
+				"Sculk Sensor": "Yes",
+				"Shulker Box": "Yes",
+				"Smoker": "Yes",
+				"Trapped Chest": "Yes"
+			}
 		}
 	}
 }

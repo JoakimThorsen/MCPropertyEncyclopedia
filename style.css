@@ -105,6 +105,11 @@ body {
 .navbar-nav > li > a.navbar-item.navbar-disabled:hover {
     color: #a8a8a8;
 }
+@media (max-width: 768px) {
+    .nav>li>a {
+        padding: 10px 25px;
+    }
+}
 
 .vertical-divider {
     height: 40px;

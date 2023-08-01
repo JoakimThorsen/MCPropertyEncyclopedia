@@ -59,7 +59,7 @@
     <link rel="shortcut icon" href="assets/favicon/favicon.ico">
 
     <!-- Main css/js -->
-    <script src="assets/js/darkmode.js"></script>
+    <script src="assets/js/darkmode.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
@@ -100,11 +100,18 @@
                 <li><a class="navbar-item" title="Toggle UI Theme" role="button" id="dark-mode-toggle" onclick="toggleTheme();display_results()">
                     <img width="20" src="assets/img/moon_sprite.png" class="display-none" />
                     <img width="20" src="assets/img/sun_sprite.png" />
+                    <span class="visible-xs-inline-block">Toggle light/dark mode</span>
+                    <span class="visible-xs-inline-block display-none">Toggle light/dark mode</span>
                 </a></li>
+                <li role="separator" class="vertical-divider hidden-xs"></li>                <li>
+                    <a class="navbar-item" href="https://discord.gg/RUEVmTahYg" title="Discord server link">
+                        <i class="fab fa-discord"></i> <span class="visible-xs-inline-block">Discord</span>
+                    </a>
+                </li>
                 <li role="separator" class="vertical-divider hidden-xs"></li>
-                <li><a class="navbar-item" href="https://discord.gg/RUEVmTahYg" title="Discord server link"><i class="fab fa-discord"></i></a></li>
-                <li role="separator" class="vertical-divider hidden-xs"></li>
-                <li><a class="navbar-item" href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia" title="Github Repository link"><i class="fab fa-github"></i></a></li>
+                <li><a class="navbar-item" href="https://github.com/JoakimThorsen/MCPropertyEncyclopedia" title="GitHub Repository link">
+                    <i class="fab fa-github"></i> <span class="visible-xs-inline-block">GitHub</span>
+                </a></li>
                 <li role="separator" class="vertical-divider hidden-xs"></li>
                 <li><a class="navbar-item" href="about.html">About</a></li>
             </ul>
