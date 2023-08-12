@@ -248,6 +248,33 @@
                     </button>
                 </div>
             </div>
+
+            <div class="settings-box">
+                <p>Share this configuration:</p>
+                <button class="btn btn-default" style="margin-bottom: 7px" type="button" onclick="
+                    navigator.clipboard.writeText(window.location.href);
+                    let urlCheck = $('#copy-url-check');
+                    urlCheck.css('display', 'inline-block');
+                    urlCheck.css('opacity', 0);
+                    urlCheck.animate({opacity: 1}, 200)
+                ">
+                    <i class="fas fa-link"></i> Copy URL <i id="copy-url-check" class="fas fa-check" style=" display: none;"></i>
+                </button>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="markdown-link-text" placeholder="Link Text" value="Your Link Text Here" aria-describedby="copy-markdown" onclick="this.select();">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" id="copy-markdown" onclick="
+                            navigator.clipboard.writeText(`[${document.getElementById('markdown-link-text').value}](${window.location.href})`);
+                            let mdCheck = $('#copy-markdown-check')
+                            mdCheck.css('display', 'inline-block');
+                            mdCheck.css('opacity', 0);
+                            mdCheck.animate({opacity: 1}, 200)
+                        ">
+                            <i class="fab fa-markdown"></i> Copy markdown <i id="copy-markdown-check" class="fas fa-check" style=" display: none;"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
             
 
             <div class="settings-box">

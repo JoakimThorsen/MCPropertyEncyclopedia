@@ -217,7 +217,7 @@ a:hover {
     margin: 6px;
     width: 100%;
 }
-.search {    
+.search, .form-control {    
     color: var(--text-color);
     background-color: var(--background-color);
     border-color: var(--border-color);
