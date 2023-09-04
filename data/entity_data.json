@@ -281,7 +281,8 @@
 		"saved_on_reload",
 		"shearable",
 		"step_height",
-		"summonable"
+		"summonable",
+		"can_pickup_items"
 	],
 	"properties": {
 		"base_armor": {
@@ -342,7 +343,7 @@
 				"Zombie Villager": 2,
 				"Zombified Piglin": 2
 			},
-			"property_description": "The amount of armor points this has without wearing anything.",
+			"property_description": "The amount of armor points this entity has when not wearing anything else.",
 			"property_name": "Base Armor"
 		},
 		"base_attack_damage": {
@@ -483,7 +484,7 @@
 				"Tadpole": "Yes",
 				"Tropical Fish": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can be picked up with waterbuckets.",
 			"property_name": "Bucketable"
 		},
 		"can_be_ridden_in_water": {
@@ -502,7 +503,7 @@
 				"Trader Llama": "No",
 				"Zombie Horse": "No"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can be ridden in water.",
 			"property_name": "Can Be Ridden In Water"
 		},
 		"can_be_saddled": {
@@ -541,7 +542,7 @@
 					"is_baby: true, is_tamed: true<br>is_baby: false, is_tamed: false<br>is_baby: true, is_tamed: false": "No"
 				}
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can be saddled.",
 			"property_name": "Can Be Saddled"
 		},
 		"can_breathe_in_water": {
@@ -573,7 +574,7 @@
 				"Zombie Villager": "Yes",
 				"Zombified Piglin": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can breathe when under water.",
 			"property_name": "Can Breathe In Water"
 		},
 		"can_open_doors": {
@@ -584,7 +585,7 @@
 				"Villager": "Yes",
 				"Vindicator": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can open doors.",
 			"property_name": "Can Open Doors"
 		},
 		"can_ride_boat": {
@@ -693,7 +694,7 @@
 				"Zombie Villager": "Yes",
 				"Zombified Piglin": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity has the ability to mount boats.",
 			"property_name": "Can Ride Boat"
 		},
 		"can_ride_minecart": {
@@ -749,7 +750,7 @@
 				},
 				"Wither Skull": "No"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity has the ability to mount minecarts.",
 			"property_name": "Can Ride Minecart"
 		},
 		"entity_group": {
@@ -1653,7 +1654,7 @@
 				"Zoglin": "Yes",
 				"Zombified Piglin": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity is immune to fire damage.",
 			"property_name": "Fire Immune"
 		},
 		"health": {
@@ -2125,7 +2126,7 @@
 				"Snow Golem": "Yes",
 				"Strider": "Yes"
 			},
-			"property_description": "Whether this is hurt by water, rain, and splash/lingering water bottles.",
+			"property_description": "Whether this entity is hurt by water, rain and splash/lingering water bottles.",
 			"property_name": "Hurt By Water"
 		},
 		"id": {
@@ -2297,7 +2298,7 @@
 				"Zoglin": "Yes",
 				"Zombie Horse": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can be leashed with leads.",
 			"property_name": "Leadable"
 		},
 		"living": {
@@ -2347,7 +2348,7 @@
 				"Trident": "No",
 				"Wither Skull": "No"
 			},
-			"property_description": "Whether this is a LivingEntity. Includes armor stands.",
+			"property_description": "Whether this entity is living or not. \nThis includes armor stands.",
 			"property_name": "Living"
 		},
 		"max_health": {
@@ -2713,7 +2714,7 @@
 				"Lightning Bolt": "No",
 				"Player": "No"
 			},
-			"property_description": "Whether this is saved to the world. Entities that are not saved are lost when unloaded.",
+			"property_description": "Whether this entity is saved to the world. \nEntities that are not saved are lost when unloaded.",
 			"property_name": "Saved On Reload"
 		},
 		"shearable": {
@@ -2732,7 +2733,7 @@
 					"has_pumpkin: true": "Yes"
 				}
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can be sheared",
 			"property_name": "Shearable"
 		},
 		"spawns_inside_hazards": {
@@ -3890,6 +3891,30 @@
 			"max": 3,
 			"property_name": "Width (Float Precision)",
 			"size_type": "block"
+		},
+		"can_pickup_items": {
+		  "default_selection": false,
+		  "default_value": "No",
+		  "entries": {
+			"Allay": "Yes",
+			"Dolphin": "Yes",
+			"Enderman": "Yes",
+			"Fox": "Yes",
+			"Giant": "Yes",
+			"Husk": "Yes",
+			"Panda": "Yes",
+			"Piglin": "Yes",
+			"Piglin Brute": "Yes",
+			"Player": "Yes",
+			"Skeleton": "Yes",
+			"Stray": "Yes",
+			"Wither Skeleton": "Yes",
+			"Zombie": "Yes",
+			"Zombie Villager": "Yes",
+			"Zombified Piglin": "Yes"
+		  },
+		  "property_description": "Whether this entity has the ability to pickup items that are beside it.",
+		  "property_name": "Can Pickup Items"
 		}
 	}
 }
