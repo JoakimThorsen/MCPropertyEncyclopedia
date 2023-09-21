@@ -715,6 +715,7 @@
 		},
 		"requires_silk_touch",
 		"intended_tool",
+		"xp_dropped_when_mined",
 		{
 			"category": "Tags",
 			"contents": [
@@ -17921,6 +17922,24 @@
 				"Weeping Vines":"Shears",
 				"Wood":"Axe",
 				"Wool":"Shears"
+			}
+		},
+		"xp_dropped_when_mined":{
+			"property_name":"Xp Dropped When Mined",
+			"property_description":"The amount of experience points this block drops upon mining.",
+			"default_value":"None",
+			"entries":{
+				"Coal Ore":"0-2",
+				"Diamond Ore":"3-7",
+				"Emerald Ore":"3-7",
+				"Lapis Lazuli Ore":"2-5",
+				"Nether Gold Ore":"0-1",
+				"Nether Quartz Ore":"2-5",
+				"Spawner":"15–43",
+				"Sculk":"1",
+				"Sculk Catalyst":"5",
+				"Sculk Sensor":"5",
+				"Sculk Shrieker":"5"
 			}
 		}
 	}
