@@ -281,7 +281,10 @@
 		"saved_on_reload",
 		"shearable",
 		"step_height",
-		"summonable"
+		"summonable",
+		"can_pickup_items",
+		"persistency",
+		"xp_dropped"
 	],
 	"properties": {
 		"base_armor": {
@@ -342,7 +345,7 @@
 				"Zombie Villager": 2,
 				"Zombified Piglin": 2
 			},
-			"property_description": "The amount of armor points this has without wearing anything.",
+			"property_description": "The amount of armor points this entity has when not wearing anything else.",
 			"property_name": "Base Armor"
 		},
 		"base_attack_damage": {
@@ -483,7 +486,7 @@
 				"Tadpole": "Yes",
 				"Tropical Fish": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can be picked up with waterbuckets.",
 			"property_name": "Bucketable"
 		},
 		"can_be_ridden_in_water": {
@@ -502,7 +505,7 @@
 				"Trader Llama": "No",
 				"Zombie Horse": "No"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can be ridden in water.",
 			"property_name": "Can Be Ridden In Water"
 		},
 		"can_be_saddled": {
@@ -541,7 +544,7 @@
 					"is_baby: true, is_tamed: true<br>is_baby: false, is_tamed: false<br>is_baby: true, is_tamed: false": "No"
 				}
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can be saddled.",
 			"property_name": "Can Be Saddled"
 		},
 		"can_breathe_in_water": {
@@ -573,7 +576,7 @@
 				"Zombie Villager": "Yes",
 				"Zombified Piglin": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can breathe when under water.",
 			"property_name": "Can Breathe In Water"
 		},
 		"can_open_doors": {
@@ -584,7 +587,7 @@
 				"Villager": "Yes",
 				"Vindicator": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can open doors.",
 			"property_name": "Can Open Doors"
 		},
 		"can_ride_boat": {
@@ -693,7 +696,7 @@
 				"Zombie Villager": "Yes",
 				"Zombified Piglin": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity has the ability to mount boats.",
 			"property_name": "Can Ride Boat"
 		},
 		"can_ride_minecart": {
@@ -749,7 +752,7 @@
 				},
 				"Wither Skull": "No"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity has the ability to mount minecarts.",
 			"property_name": "Can Ride Minecart"
 		},
 		"entity_group": {
@@ -1653,7 +1656,7 @@
 				"Zoglin": "Yes",
 				"Zombified Piglin": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity is immune to fire damage.",
 			"property_name": "Fire Immune"
 		},
 		"health": {
@@ -2125,7 +2128,7 @@
 				"Snow Golem": "Yes",
 				"Strider": "Yes"
 			},
-			"property_description": "Whether this is hurt by water, rain, and splash/lingering water bottles.",
+			"property_description": "Whether this entity is hurt by water, rain and splash/lingering water bottles.",
 			"property_name": "Hurt By Water"
 		},
 		"id": {
@@ -2297,7 +2300,7 @@
 				"Zoglin": "Yes",
 				"Zombie Horse": "Yes"
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can be leashed with leads.",
 			"property_name": "Leadable"
 		},
 		"living": {
@@ -2347,7 +2350,7 @@
 				"Trident": "No",
 				"Wither Skull": "No"
 			},
-			"property_description": "Whether this is a LivingEntity. Includes armor stands.",
+			"property_description": "Whether this entity is living or not. \nThis includes armor stands.",
 			"property_name": "Living"
 		},
 		"max_health": {
@@ -2713,7 +2716,7 @@
 				"Lightning Bolt": "No",
 				"Player": "No"
 			},
-			"property_description": "Whether this is saved to the world. Entities that are not saved are lost when unloaded.",
+			"property_description": "Whether this entity is saved to the world. \nEntities that are not saved are lost when unloaded.",
 			"property_name": "Saved On Reload"
 		},
 		"shearable": {
@@ -2732,7 +2735,7 @@
 					"has_pumpkin: true": "Yes"
 				}
 			},
-			"property_description": "",
+			"property_description": "Whether this entity can be sheared",
 			"property_name": "Shearable"
 		},
 		"spawns_inside_hazards": {
@@ -3890,6 +3893,199 @@
 			"max": 3,
 			"property_name": "Width (Float Precision)",
 			"size_type": "block"
+		},
+		"can_pickup_items": {
+		  "default_selection": false,
+		  "default_value": "No",
+		  "entries": {
+			"Allay": "Yes",
+			"Dolphin": "Yes",
+			"Enderman": "Yes",
+			"Fox": "Yes",
+			"Giant": "Yes",
+			"Husk": "Yes",
+			"Panda": "Yes",
+			"Piglin": "Yes",
+			"Piglin Brute": "Yes",
+			"Player": "Yes",
+			"Skeleton": "Yes",
+			"Stray": "Yes",
+			"Wither Skeleton": "Yes",
+			"Zombie": "Yes",
+			"Zombie Villager": "Yes",
+			"Zombified Piglin": "Yes"
+		  },
+		  "property_description": "Whether this entity has the ability to pickup items that are beside it.",
+		  "property_name": "Can Pickup Items"
+		},
+		"persistency":{
+			"default_selection":true,
+			"default_value":"Yes",
+			"property_name": "Persistency",
+			"property_description": "Whether this entity is persistent or can despawn.",
+			"entries":{
+				"Arrow":"Will despawn after one minute of not moving",
+				"Axolotl": "Can despawn",
+				"Bat": "Can despawn",
+				"Blaze": "Can despawn",
+				"Block Display": "Yes",
+				"Cave Spider": "Can despawn",
+				"Cod":"Can despawn unless they were bucketed once",
+				"Creeper": "Can despawn",
+				"Dragon Fireball": "Not applicable",
+				"Drowned": "Can despawn",
+				"Thrown Egg": "Not applicable",
+				"Thrown Ender Pearl":"Can despawn if the owner dies when the pearl is loaded",
+				"Enderman": "Can despawn",
+				"Endermite": "Can despawn",
+				"Evoker":"Can despawn unless part of a raid or spawned in with a woodland mansion",
+				"Evoker Fangs": "Not applicable",
+				"Thrown Bottle o' Enchanting": "Not applicable",
+				"Experience Orb": "Can despawn",
+				"Eye of Ender": "Not applicable",
+				"Falling Block": "Can despawn",
+				"Fireball": "Not applicable",
+				"Firework Rocket": "Not applicable",
+				"Fishing Bobber": "Not applicable",
+				"Ghast": "Can despawn",
+				"Giant": "Can despawn",
+				"Glow Squid": "Can despawn" ,
+  				"Guardian": "Can despawn" ,
+				"Hoglin":"Can despawn unless spawned in with bastions or are bred",
+				"Husk": "Can despawn" ,
+				"Illusioner": "Can despawn" ,
+				"Item": "Can despawn after five minutes" ,
+				"Leash Knot": "Not applicable" ,
+				"Lightning Bolt": "Not applicable",
+				"Llama Spit": "Not applicable" ,
+				"Magma Cube": "Can despawn" ,
+				"Marker": "Not applicable" ,
+				"Ocelot": "Can despawn" ,
+				"Phantom": "Can despawn" ,
+				"Piglin":"Can despawn unless spawned in with bastions",
+				"Pillager": "Can despawn" ,
+				"Player": "Not applicable" ,
+				"Thrown Potion": "Not applicable" ,
+				"Pufferfish":"Can despawn unless they were bucketed once",
+				"Ravager": "Can despawn" ,
+				"Salmon":"Can despawn unless they were bucketed once",
+				"Shulker Bullet": "Not applicable" ,
+				"Silverfish": "Can despawn" ,
+				"Skeleton":"Can despawn unless spawned in with skeleton traps during thunderstorms",
+				"Slime": "Can despawn" ,
+				"Small Fireball": "Not applicable" ,
+				"Snowball": "Not applicable" ,
+				"Spectral Arrow": "Can despawn after one minute" ,
+				"Spider": "Can despawn" ,
+				"Squid": "Can despawn" ,
+				"Stray": "Can despawn" ,
+				"Trader Llama": "Can despawn" ,
+				"Trident": "Can despawn after one minute" ,
+				"Tropical Fish":"Can despawn unless they were bucketed once",
+				"Vex": "Can despawn",
+				"Vindicator":"Can despawn unless part of a raid or spawned in with a woodland mansion",
+				"Wandering Trader":"Will depsawn after 40 minutes",
+				"Warden": "Can despawn after one minute of not being angered",
+				"Witch":"Can despawn unless spawned in with witch huts or converted from villagers with lightning",
+				"Wither Skeleton": "Can despawn" ,
+				"Wither Skull": "Not applicable" ,
+				"Wolf": "Can despawn if angered and untamed" ,
+				"Zoglin": "Can despawn" ,
+				"Zombie": "Can despawn" ,
+				"Zombie Horse": "Can despawn" ,
+				"Zombie Villager": "Can despawn",
+				"Zombified Piglin":"Can despawn unless they were converted from pigs with lightning"
+			}
+		},
+		"xp_dropped":{
+			"default_selection":false,
+			"default_value":"Not Applicable",
+			"property_name": "Xp Dropped",
+			"property_description": "The amount of experience points this entity drops upon its death. <br>Note that the mobs do not drop experience orbs unless it dies within five seconds (100 game ticks) of an attack registered as a player hit.",
+			"entries":{
+				"Allay":"0",
+				"Axolotl":"1–3",
+				"Bat":"0",
+				"Bee":"1–3",
+				"Blaze":"10",
+				"Camel":"1–3",
+				"Cat":"1–3",
+				"Cave Spider":"5 + 1–3 (per equipment)",
+				"Chicken":"1–3",
+				"Cod":"1–3",
+				"Cow":"1–3",
+				"Creeper":"5 + 1–3 (per equipment)",
+				"Dolphin":"1–3",
+				"Donkey":"1–3",
+				"Drowned":"5 + 1–3 (per equipment)",
+				"Elder Guardian":"10",
+				"Ender Dragon":"12,000 (500 if respawned with end crystals)",
+				"Enderman":"5 + 1–3 (per equipment)",
+				"Endermite":"3",
+				"Evoker":"10",
+				"Fox":"1–3",
+				"Frog":"1–3",
+				"Ghast":"5 + 1–3 (per equipment)",
+				"Glow Squid":"1–3",
+				"Goat":"1–3",
+				"Guardian":"10",
+				"Hoglin":"5 + 1–3 (per equipment)",
+				"Horse":"1–3",
+				"Husk":"5 + 1–3 (per equipment)",
+				"Illusioner":"5 + 1–3 (per equipment)",
+				"Iron Golem":"0",
+				"Llama":"1–3",
+				"Magma Cube":{
+					"Large Magma Cube":"4",
+					"Medium Magma Cube":"2",
+					"Small Magma Cube":"1"
+				},
+				"Mooshroom":"1–3",
+				"Ocelot":"1–3",
+				"Panda":"1–3",
+				"Parrot":"1–3",
+				"Phantom":"5 + 1–3 (per equipment)",
+				"Pig":"1–3",
+				"Piglin":"5 + 1–3 (per equipment)",
+				"Piglin Brute":"20",
+				"Pillager":"5 + 1–3 (per equipment)",
+				"Player":"7 per level, up to 100",
+				"Polar Bear":"1–3",
+				"Pufferfish":"1–3",
+				"Rabbit":"1–3",
+				"Ravager":"20",
+				"Salmon":"1–3",
+				"Sheep":"1–3",
+				"Shulker":"5 + 1–3 (per equipment)",
+				"Silverfish":"5 + 1–3 (per equipment)",
+				"Skeleton":"5 + 1–3 (per equipment)",
+				"Skeleton Horse":"1–3",
+				"Slime":{
+					"Large Slime":"4",
+					"Medium Slime":"2",
+					"Small Slime":"1"
+				},
+				"Sniffer":"1–3",
+				"Snow Golem":"0",
+				"Spider":"5 + 1–3 (per equipment)",
+				"Squid":"1–3",
+				"Stray":"5 + 1–3 (per equipment)",
+				"Strider":"1–2",
+				"Tadpole":"0",
+				"Trader Llama":"1–3",
+				"Tropical Fish":"1–3",
+				"Turtle":"1–3",
+				"Villager":"0",
+				"Vindicator":"5 + 1–3 (per equipment)",
+				"Wandering Trader":"0",
+				"Wither":"50",
+				"Wolf":"1–3",
+				"Zoglin":"5 + 1–3 (per equipment)",
+				"Zombie":"5 + 1–3 (per equipment)",
+				"Zombie Horse":"1–3",
+				"Zombified Piglin":"5 + 1–3 (per equipment)",
+				"Zombie Villager":"5 + 1–3 (per equipment)"
+			}
 		}
 	}
 }
