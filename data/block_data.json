@@ -17681,7 +17681,7 @@
 		"requires_silk_touch":{
 			"property_name":"Requires Silk Touch",
 			"property_description":"Whether this block requires a silk touch enchanted tool to drop as an item form.",
-			"default_value":"Yes",
+			"default_value":"No",
 			"entries":{
 				"Air":"Not Applicable",
 				"Amethyst Cluster":"Yes",
@@ -17720,7 +17720,7 @@
 				"Iron Ore":"Yes",
 				"Lapis Lazuli Ore":"Yes",
 				"Lava":"Not Applicable",
-				"Light Block":"No",
+				"Light Block":"Not Applicable",
 				"Leaves":"Yes",
 				"Melon":"Yes",
 				"Mushroom Blocks":"Yes",
