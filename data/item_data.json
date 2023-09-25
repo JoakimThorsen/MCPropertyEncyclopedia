@@ -5028,7 +5028,7 @@
 		},
 		"is_weapon": {
 			"property_name": "Is Weapon",
-			"property_description": "Obtained from the wiki. For further information, see: https://minecraft.fandom.com/wiki/Breaking#Speed",
+			"property_description": "Obtained from the wiki. For further information, see: https://minecraft.wiki/Breaking#Speed",
 			"default_value": "No",
 			"default_selection": false,
 			"entries": {
@@ -5067,7 +5067,7 @@
 		},
 		"attack_speed": {
 			"property_name": "Attack Speed",
-			"property_description": "Obtained from the wiki. For further information, see: https://minecraft.fandom.com/wiki/Breaking#Speed",
+			"property_description": "Obtained from the wiki. For further information, see: https://minecraft.wiki/Breaking#Speed",
 			"default_value": 4,
 			"default_selection": false,
 			"max": 4,
@@ -5107,7 +5107,7 @@
 		},
 		"attack_damage": {
 			"property_name": "Attack Damage",
-			"property_description": "Obtained from the wiki. For further information, see: https://minecraft.fandom.com/wiki/Breaking#Speed",
+			"property_description": "Obtained from the wiki. For further information, see: https://minecraft.wiki/Breaking#Speed",
 			"default_value": 1,
 			"default_selection": false,
 			"max": 10,
@@ -5147,7 +5147,7 @@
 		},
 		"damage_per_second": {
 			"property_name": "Damage Per Second",
-			"property_description": "Obtained from the wiki. For further information, see: https://minecraft.fandom.com/wiki/Breaking#Speed",
+			"property_description": "Obtained from the wiki. For further information, see: https://minecraft.wiki/Breaking#Speed",
 			"default_value": 4,
 			"default_selection": false,
 			"max": 12.8,
@@ -5187,7 +5187,7 @@
 		},
 		"breaking_speed": {
 			"property_name": "Breaking Speed",
-			"property_description": "If the tool has efficiency, then you get an additional (1+level^2) when using the proper tool\nIf you have haste, then your mining speed increases by (20*level)% per level of Haste\nIf the player is not on ground, or if the player's head is under water and not using aqua affinity, then additional 5x penalties are added.\nObtained from the wiki. For further information, see: https://minecraft.fandom.com/wiki/Breaking#Speed",
+			"property_description": "If the tool has efficiency, then you get an additional (1+level^2) when using the proper tool\nIf you have haste, then your mining speed increases by (20*level)% per level of Haste\nIf the player is not on ground, or if the player's head is under water and not using aqua affinity, then additional 5x penalties are added.\nObtained from the wiki. For further information, see: https://minecraft.wiki/Breaking#Speed",
 			"default_value": 1,
 			"default_selection": false,
 			"max": 15,
