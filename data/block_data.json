@@ -17205,6 +17205,7 @@
 			"size_type": "pixel"
 		},
 		"wiki_page": {
+			"property_name": "Wiki page",
 			"default_value": null,
 			"entries": {
 				"Activator Rail": "https://minecraft.wiki/w/Activator_Rail",
@@ -17215,6 +17216,7 @@
 				"Anvil": "https://minecraft.wiki/w/Anvil",
 				"Azalea": "https://minecraft.wiki/w/Azalea",
 				"Bamboo": "https://minecraft.wiki/w/Bamboo",
+				"Bamboo Mosaic": "https://minecraft.wiki/w/Bamboo_Mosaic",
 				"Banners": "https://minecraft.wiki/w/Banner",
 				"Barrel": "https://minecraft.wiki/w/Barrel",
 				"Barrier": "https://minecraft.wiki/w/Barrier",
@@ -17233,6 +17235,7 @@
 				},
 				"Blast Furnace": "https://minecraft.wiki/w/Blast_Furnace",
 				"Block of Amethyst": "https://minecraft.wiki/w/Block_of_Amethyst",
+				"Block of Bamboo": "https://minecraft.wiki/w/Block_of_Bamboo",
 				"Block of Coal": "https://minecraft.wiki/w/Block_of_Coal",
 				"Block of Copper": "https://minecraft.wiki/w/Block_of_Copper",
 				"Block of Diamond": "https://minecraft.wiki/w/Block_of_Diamond",
@@ -17242,13 +17245,14 @@
 				"Block of Lapis Lazuli": "https://minecraft.wiki/w/Block_of_Lapis_Lazuli",
 				"Block of Netherite": "https://minecraft.wiki/w/Block_of_Netherite",
 				"Block of Quartz": {
-					"Block of Quartz<br>Quartz Bricks<br>Chiseled Quartz Block<br>Quartz Pillar": "https://minecraft.wiki/w/Block_of_Quartz",
-					"Smooth Quartz": "https://minecraft.wiki/w/Smooth_Quartz_Block"
+					"Chiseled Quartz Block<br>Block of Quartz<br>Quartz Bricks<br>Quartz Pillar": "https://minecraft.wiki/w/Block_of_Quartz",
+					"Smooth Quartz Block": "https://minecraft.wiki/w/Smooth_Quartz_Block"
 				},
 				"Block of Raw Copper": "https://minecraft.wiki/w/Block_of_Raw_Copper",
 				"Block of Raw Gold": "https://minecraft.wiki/w/Block_of_Raw_Gold",
 				"Block of Raw Iron": "https://minecraft.wiki/w/Block_of_Raw_Iron",
 				"Block of Redstone": "https://minecraft.wiki/w/Block_of_Redstone",
+				"Block of Stripped Bamboo": "https://minecraft.wiki/w/Block_of_Bamboo",
 				"Blue Ice": "https://minecraft.wiki/w/Blue_Ice",
 				"Bone Block": "https://minecraft.wiki/w/Bone_Block",
 				"Bookshelf": "https://minecraft.wiki/w/Bookshelf",
@@ -17259,6 +17263,7 @@
 				"Cactus": "https://minecraft.wiki/w/Cactus",
 				"Cake": "https://minecraft.wiki/w/Cake",
 				"Calcite": "https://minecraft.wiki/w/Calcite",
+				"Calibrated Sculk Sensor": "https://minecraft.wiki/w/Calibrated_Sculk_Sensor",
 				"Campfire": "https://minecraft.wiki/w/Campfire",
 				"Candles": "https://minecraft.wiki/w/Candle",
 				"Carpets": "https://minecraft.wiki/w/Carpet",
@@ -17267,6 +17272,7 @@
 				"Cave Vines": "https://minecraft.wiki/w/Glow_Berries",
 				"Chain": "https://minecraft.wiki/w/Chain",
 				"Chest": "https://minecraft.wiki/w/Chest",
+				"Chiseled Bookshelf": "https://minecraft.wiki/w/Chiseled_Bookshelf",
 				"Chorus Flower": "https://minecraft.wiki/w/Chorus_Flower",
 				"Chorus Plant": "https://minecraft.wiki/w/Chorus_plant",
 				"Clay": "https://minecraft.wiki/w/Clay",
@@ -17275,14 +17281,14 @@
 				"Cobbled Deepslate": {
 					"Chiseled Deepslate": "https://minecraft.wiki/w/Chiseled_Deepslate",
 					"Cobbled Deepslate": "https://minecraft.wiki/w/Cobbled_Deepslate",
-					"Deepslate Bricks<br>Cracked Deepslate Bricks": "https://minecraft.wiki/w/Deepslate_Bricks",
-					"Deepslate Tiles<br>Cracked Deepslate Tiles": "https://minecraft.wiki/w/Deepslate_Tiles",
+					"Cracked Deepslate Bricks<br>Deepslate Bricks": "https://minecraft.wiki/w/Deepslate_Bricks",
+					"Cracked Deepslate Tiles<br>Deepslate Tiles": "https://minecraft.wiki/w/Deepslate_Tiles",
 					"Polished Deepslate": "https://minecraft.wiki/w/Polished_Deepslate"
 				},
 				"Cobblestone": {
-					"minecraft:cobblestone": "https://minecraft.wiki/w/Cobblestone",
-					"minecraft:infested_cobblestone": "https://minecraft.wiki/w/Infested_Block",
-					"minecraft:mossy_cobblestone": "https://minecraft.wiki/w/Mossy_Cobblestone"
+					"Cobblestone": "https://minecraft.wiki/w/Cobblestone",
+					"Infested Cobblestone": "https://minecraft.wiki/w/Infested_Block",
+					"Mossy Cobblestone": "https://minecraft.wiki/w/Mossy_Cobblestone"
 				},
 				"Cobweb": "https://minecraft.wiki/w/Cobweb",
 				"Cocoa": "https://minecraft.wiki/w/Cocoa_Beans",
@@ -17297,16 +17303,17 @@
 				"Corals": "https://minecraft.wiki/w/Coral",
 				"Crafting Table": "https://minecraft.wiki/w/Crafting_Table",
 				"Crops": {
+					"Attached Melon Stem<br>Melon Stem": "https://minecraft.wiki/w/Melon_Seeds",
+					"Attached Pumpkin Stem<br>Pumpkin Stem": "https://minecraft.wiki/w/Pumpkin_Seeds",
 					"Beetroots": "https://minecraft.wiki/w/Beetroot_Seeds",
 					"Carrots": "https://minecraft.wiki/w/Carrot",
-					"Melon Stem<br>Attached Melon Stem": "https://minecraft.wiki/w/Melon_Seeds",
 					"Potatoes": "https://minecraft.wiki/w/Potato",
-					"Pumpkin Stem<br>Attached Pumpkin Stem": "https://minecraft.wiki/w/Pumpkin_Seeds",
-					"Wheat": "https://minecraft.wiki/w/Wheat"
+					"Wheat Crops": "https://minecraft.wiki/w/Wheat_Seeds"
 				},
 				"Crying Obsidian": "https://minecraft.wiki/w/Crying_Obsidian",
 				"Daylight Detector": "https://minecraft.wiki/w/Daylight_Detector",
 				"Dead Bush": "https://minecraft.wiki/w/Dead_Bush",
+				"Decorated Pot": "https://minecraft.wiki/w/Decorated_Pot",
 				"Deepslate": {
 					"Deepslate": "https://minecraft.wiki/w/Deepslate",
 					"Infested Deepslate": "https://minecraft.wiki/w/Infested_Block"
@@ -17360,6 +17367,7 @@
 				"Gravel": "https://minecraft.wiki/w/Gravel",
 				"Grindstone": "https://minecraft.wiki/w/Grindstone",
 				"Hanging Roots": "https://minecraft.wiki/w/Hanging_Roots",
+				"Hanging Signs": "https://minecraft.wiki/w/Sign",
 				"Hay Bale": "https://minecraft.wiki/w/Hay_Bale",
 				"Heads": "https://minecraft.wiki/w/Head",
 				"Honey Block": "https://minecraft.wiki/w/Honey_Block",
@@ -17387,7 +17395,7 @@
 				"Logs": "https://minecraft.wiki/w/Log",
 				"Loom": "https://minecraft.wiki/w/Loom",
 				"Magma Block": "https://minecraft.wiki/w/Magma_Block",
-				"Mangrove Propagule": "https://minecraft.wiki/w/Sapling",
+				"Mangrove Propagule": "https://minecraft.wiki/w/Mangrove_Propagule",
 				"Mangrove Roots": "https://minecraft.wiki/w/Mangrove_Roots",
 				"Melon": "https://minecraft.wiki/w/Melon",
 				"Moss Block": "https://minecraft.wiki/w/Moss_Block",
@@ -17411,7 +17419,10 @@
 				"Obsidian": "https://minecraft.wiki/w/Obsidian",
 				"Packed Ice": "https://minecraft.wiki/w/Packed_Ice",
 				"Packed Mud": "https://minecraft.wiki/w/Packed_Mud",
+				"Pink Petals": "https://minecraft.wiki/w/Pink_Petals",
 				"Piston": "https://minecraft.wiki/w/Piston",
+				"Pitcher Crop": "https://minecraft.wiki/w/Pitcher_Pod",
+				"Pitcher Plant": "https://minecraft.wiki/w/Pitcher_Plant",
 				"Planks": "https://minecraft.wiki/w/Planks",
 				"Podzol": "https://minecraft.wiki/w/Podzol",
 				"Pointed Dripstone": "https://minecraft.wiki/w/Pointed_Dripstone",
@@ -17449,18 +17460,19 @@
 				"Shulker Box": "https://minecraft.wiki/w/Shulker_Box",
 				"Signs": "https://minecraft.wiki/w/Sign",
 				"Slabs": {
-					"Petrified Oak Slab": "https://minecraft.wiki/w/Petrified_Oak_Slab",
-					"Prismarine Slab<br>Prismarine Brick Slab<br>Dark Prismarine Slab<br>Mud Brick Slab<br>Crimson Slab<br>Warped Slab<br>Oxidized Cut Copper Slab<br>Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Polished Deepslate Slab<br>Cobbled Deepslate Slab<br>Oak Slab<br>Spruce Slab<br>Birch Slab<br>Acacia Slab<br>Jungle Slab<br>Dark Oak Slab<br>Sandstone Slab<br>Smooth Stone Slab<br>Cut Sandstone Slab<br>Stone Slab<br>Cobblestone Slab<br>Stone Brick Slab<br>Nether Brick Slab<br>Quartz Slab<br>Red Sandstone Slab<br>Cut Red Sandstone Slab<br>Polished Granite Slab<br>Purpur Slab<br>Smooth Red Sandstone Slab<br>Mossy Stone Brick Slab<br>Brick Slab<br>End Stone Brick Slab<br>Mossy Cobblestone Slab<br>Smooth Sandstone Slab<br>Smooth Quartz Slab<br>Granite Slab<br>Andesite Slab<br>Red Nether Brick Slab<br>Polished Andesite Slab<br>Diorite Slab<br>Blackstone Slab<br>Mangrove Slab<br>Polished Blackstone Brick Slab<br>Weathered Cut Copper Slab<br>Cut Copper Slab<br>Polished Blackstone Slab<br>Deepslate Tile Slab<br>Waxed Cut Copper Slab<br>Deepslate Brick Slab<br>Polished Diorite Slab": "https://minecraft.wiki/w/Slab"
+					"Acacia Slab<br>Andesite Slab<br>Bamboo Slab<br>Bamboo Mosaic Slab<br>Birch Slab<br>Blackstone Slab<br>Brick Slab<br>Cobbled Deepslate Slab<br>Cherry Slab<br>Cobblestone Slab<br>Crimson Slab<br>Cut Red Sandstone Slab<br>Cut Copper Slab<br>Cut Sandstone Slab<br>Dark Prismarine Slab<br>Dark Oak Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Jungle Slab<br>Mangrove Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Mud Brick Slab<br>Nether Brick Slab<br>Oak Slab<br>Oxidized Cut Copper Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Granite Slab<br>Polished Diorite Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Prismarine Brick Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Spruce Slab<br>Stone Brick Slab<br>Stone Slab<br>Waxed Cut Copper Slab<br>Warped Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "https://minecraft.wiki/w/Slab",
+					"Petrified Oak Slab": "https://minecraft.wiki/w/Petrified_Oak_Slab"
 				},
 				"Slime Block": "https://minecraft.wiki/w/Slime_Block",
 				"Small Dripleaf": "https://minecraft.wiki/w/Small_Dripleaf",
 				"Smithing Table": "https://minecraft.wiki/w/Smithing_Table",
 				"Smoker": "https://minecraft.wiki/w/Smoker",
+				"Sniffer Egg": "https://minecraft.wiki/w/Sniffer_Egg",
 				"Snow": "https://minecraft.wiki/w/Snow",
 				"Snow Block": "https://minecraft.wiki/w/Snow_Block",
 				"Soul Sand": "https://minecraft.wiki/w/Soul_Sand",
 				"Soul Soil": "https://minecraft.wiki/w/Soul_Soil",
-				"Spawner": "https://minecraft.wiki/w/Spawner",
+				"Spawner": "https://minecraft.wiki/w/Monster_Spawner",
 				"Sponge": "https://minecraft.wiki/w/Sponge",
 				"Spore Blossom": "https://minecraft.wiki/w/Spore_Blossom",
 				"Stained Glass": "https://minecraft.wiki/w/Glass",
@@ -17469,23 +17481,27 @@
 				"Stems": "https://minecraft.wiki/w/Log",
 				"Stone": {
 					"Infested Stone": "https://minecraft.wiki/w/Infested_Block",
-					"Smooth Stone": "https://minecraft.wiki/w/Smooth_Stone",
-					"Stone": "https://minecraft.wiki/w/Stone"
+					"Stone": "https://minecraft.wiki/w/Stone",
+					"Smooth Stone": "https://minecraft.wiki/w/Smooth_Stone"
 				},
 				"Stone Bricks": {
-					"Infested Stone Bricks<br>Infested Mossy Stone Bricks<br>Infested Cracked Stone Bricks<br>Infested Chiseled Stone Bricks": "https://minecraft.wiki/w/Infested_Block",
-					"Stone Bricks<br>Mossy Stone Bricks<br>Cracked Stone Bricks<br>Chiseled Stone Bricks": "https://minecraft.wiki/w/Stone_Bricks"
+					"Chiseled Stone Bricks<br>Cracked Stone Bricks<br>Mossy Stone Bricks<br>Stone Bricks": "https://minecraft.wiki/w/Stone_Bricks",
+					"Infested Chiseled Stone Bricks<br>Infested Cracked Stone Bricks<br>Infested Mossy Stone Bricks<br>Infested Stone Bricks": "https://minecraft.wiki/w/Infested_Block"
 				},
 				"Stonecutter": "https://minecraft.wiki/w/Stonecutter",
 				"Structure Block": "https://minecraft.wiki/w/Structure_Block",
 				"Structure Void": "https://minecraft.wiki/w/Structure_Void",
 				"Sugar Cane": "https://minecraft.wiki/w/Sugar_Cane",
+				"Suspicious Gravel": "https://minecraft.wiki/w/Suspicious_Block",
+				"Suspicious Sand": "https://minecraft.wiki/w/Suspicious_Block",
 				"Sweet Berry Bush": "https://minecraft.wiki/w/Sweet_Berries",
 				"Target": "https://minecraft.wiki/w/Target",
 				"Terracotta": "https://minecraft.wiki/w/Terracotta",
 				"Tinted Glass": "https://minecraft.wiki/w/Tinted_Glass",
 				"TNT": "https://minecraft.wiki/w/TNT",
 				"Torch": "https://minecraft.wiki/w/Torch",
+				"Torchflower": "https://minecraft.wiki/w/Flower",
+				"Torchflower Crop": "https://minecraft.wiki/w/Torchflower_Seeds",
 				"Trapdoors": "https://minecraft.wiki/w/Trapdoor",
 				"Trapped Chest": "https://minecraft.wiki/w/Trapped_Chest",
 				"Tripwire": "https://minecraft.wiki/w/String",
@@ -17502,9 +17518,8 @@
 				},
 				"Weeping Vines": "https://minecraft.wiki/w/Weeping_Vines",
 				"Wood": "https://minecraft.wiki/w/Wood",
-				"Wool": "https://minecraft.wiki/w/https://minecraft.wiki/w/Wool"
-			},
-			"property_name": "Wiki Page Link"
+				"Wool": "https://minecraft.wiki/w/Wool"
+			}
 		},
 		"wither_block_break_immune": {
 			"default_value": "No",
