@@ -652,9 +652,6 @@
 				"supports_redstone_dust"
 			]
 		},
-		"block_entity",
-		"block_entity_data",
-		"wiki_page",
 		{
 			"category": "Light",
 			"contents": [
@@ -676,7 +673,10 @@
 				"ignite_odds",
 				"burn_odds",
 				"gets_flushed",
-				"replaceable"
+				"replaceable",
+				"requires_silk_touch",
+				"intended_tool",
+				"xp_dropped_when_mined"
 			]
 		},
 		{
@@ -713,9 +713,15 @@
 				"solid"
 			]
 		},
-		"requires_silk_touch",
-		"intended_tool",
-		"xp_dropped_when_mined",
+		{
+			"category": "Meta Info",
+			"contents": [
+				"block_entity",
+				"block_entity_data",
+				"numerical_id",
+				"wiki_page"
+			]
+		},
 		{
 			"category": "Tags",
 			"contents": [
@@ -9353,6 +9359,1414 @@
 			},
 			"property_description": "Whether it can be pushed by a piston, stops the piston from extending, or whether attempting to push it destroys the block.",
 			"property_name": "Movable"
+		},
+		"numerical_id": {
+			"property_name": "World Edit Numerical ID",
+			"relative_gradient": true,
+			"entries": {
+				"Air": {
+					"Air": "0:0"
+				},
+				"Andesite": {
+					"Andesite": "1:5",
+					"Polished Andesite": "1:6"
+				},
+				"Anvil": {
+					"Anvil": {
+						"facing: east": "145:3",
+						"facing: north": "145:2",
+						"facing: south": "145:0",
+						"facing: west": "145:1"
+					},
+					"Chipped Anvil": {
+						"facing: east": "145:7",
+						"facing: north": "145:6",
+						"facing: south": "145:4",
+						"facing: west": "145:5"
+					},
+					"Damaged Anvil": {
+						"facing: east": "145:11",
+						"facing: north": "145:10",
+						"facing: south": "145:8",
+						"facing: west": "145:9"
+					}
+				},
+				"Banners": {
+					"White Banner": {
+						"rotation: 0": "176:0",
+						"rotation: 10": "176:10",
+						"rotation: 11": "176:11",
+						"rotation: 12": "176:12",
+						"rotation: 13": "176:13",
+						"rotation: 14": "176:14",
+						"rotation: 15": "176:15",
+						"rotation: 1": "176:1",
+						"rotation: 2": "176:2",
+						"rotation: 3": "176:3",
+						"rotation: 4": "176:4",
+						"rotation: 5": "176:5",
+						"rotation: 6": "176:6",
+						"rotation: 7": "176:7",
+						"rotation: 8": "176:8",
+						"rotation: 9": "176:9"
+					},
+					"No Translation Key: white_wall_banner": {
+						"facing: east": "177:5",
+						"facing: north": "177:2",
+						"facing: south": "177:3",
+						"facing: west": "177:4"
+					}
+				},
+				"Barrier": "166:0",
+				"Beacon": "138:0",
+				"Bedrock": "7:0",
+				"Block of Coal": "173:0",
+				"Block of Diamond": "57:0",
+				"Block of Emerald": "133:0",
+				"Block of Gold": "41:0",
+				"Block of Iron": "42:0",
+				"Block of Lapis Lazuli": "22:0",
+				"Block of Quartz": {
+					"Chiseled Quartz Block": "155:1",
+					"Block of Quartz": "155:0",
+					"Quartz Pillar": {
+						"axis: x": [
+							"155:3",
+							"155:6"
+						],
+						"axis: y": "155:2",
+						"axis: z": [
+							"155:10",
+							"155:4"
+						]
+					},
+					"Smooth Quartz Block": "43:15"
+				},
+				"Block of Redstone": "152:0",
+				"Bone Block": {
+					"axis: x": "216:4",
+					"axis: y": "216:0",
+					"axis: z": "216:8"
+				},
+				"Bookshelf": "47:0",
+				"Brewing Stand": {
+					"has_bottle_0: false": {
+						"has_bottle_1: false": {
+							"has_bottle_2: false": "117:0",
+							"has_bottle_2: true": "117:4"
+						},
+						"has_bottle_1: true": {
+							"has_bottle_2: false": "117:2",
+							"has_bottle_2: true": "117:6"
+						}
+					},
+					"has_bottle_0: true": {
+						"has_bottle_1: false": {
+							"has_bottle_2: false": "117:1",
+							"has_bottle_2: true": "117:5"
+						},
+						"has_bottle_1: true": {
+							"has_bottle_2: false": "117:3",
+							"has_bottle_2: true": "117:7"
+						}
+					}
+				},
+				"Bricks": "45:0",
+				"Cactus": {
+					"age: 0": "81:0",
+					"age: 10": "81:10",
+					"age: 11": "81:11",
+					"age: 12": "81:12",
+					"age: 13": "81:13",
+					"age: 14": "81:14",
+					"age: 15": "81:15",
+					"age: 1": "81:1",
+					"age: 2": "81:2",
+					"age: 3": "81:3",
+					"age: 4": "81:4",
+					"age: 5": "81:5",
+					"age: 6": "81:6",
+					"age: 7": "81:7",
+					"age: 8": "81:8",
+					"age: 9": "81:9"
+				},
+				"Cake": {
+					"Cake": {
+						"bites: 0": "92:0",
+						"bites: 1": "92:1",
+						"bites: 2": "92:2",
+						"bites: 3": "92:3",
+						"bites: 4": "92:4",
+						"bites: 5": "92:5",
+						"bites: 6": "92:6"
+					}
+				},
+				"Carpets": {
+					"Black Carpet": "171:15",
+					"Blue Carpet": "171:11",
+					"Brown Carpet": "171:12",
+					"Cyan Carpet": "171:9",
+					"Gray Carpet": "171:7",
+					"Green Carpet": "171:13",
+					"Light Blue Carpet": "171:3",
+					"Light Gray Carpet": "171:8",
+					"Lime Carpet": "171:5",
+					"Magenta Carpet": "171:2",
+					"Orange Carpet": "171:1",
+					"Pink Carpet": "171:6",
+					"Purple Carpet": "171:10",
+					"Red Carpet": "171:14",
+					"White Carpet": "171:0",
+					"Yellow Carpet": "171:4"
+				},
+				"Chorus Flower": {
+					"age: 0": "200:0",
+					"age: 1": "200:1",
+					"age: 2": "200:2",
+					"age: 3": "200:3",
+					"age: 4": "200:4",
+					"age: 5": "200:5"
+				},
+				"Clay": "82:0",
+				"Coal Ore": {
+					"Coal Ore": "16:0"
+				},
+				"Coarse Dirt": "3:1",
+				"Cobblestone": {
+					"Cobblestone": "4:0",
+					"Infested Cobblestone": "97:1",
+					"Mossy Cobblestone": "48:0"
+				},
+				"Cobweb": "30:0",
+				"Command Blocks": {
+					"Chain Command Block": {
+						"conditional: false": {
+							"facing: down": "211:0",
+							"facing: east": "211:5",
+							"facing: north": "211:2",
+							"facing: south": "211:3",
+							"facing: up": "211:1",
+							"facing: west": "211:4"
+						},
+						"conditional: true": {
+							"facing: down": "211:8",
+							"facing: east": "211:13",
+							"facing: north": "211:10",
+							"facing: south": "211:11",
+							"facing: up": "211:9",
+							"facing: west": "211:12"
+						}
+					},
+					"Command Block": {
+						"conditional: false": {
+							"facing: down": "137:0",
+							"facing: east": "137:5",
+							"facing: north": "137:2",
+							"facing: south": "137:3",
+							"facing: up": "137:1",
+							"facing: west": "137:4"
+						},
+						"conditional: true": {
+							"facing: down": "137:8",
+							"facing: east": "137:13",
+							"facing: north": "137:10",
+							"facing: south": "137:11",
+							"facing: up": "137:9",
+							"facing: west": "137:12"
+						}
+					},
+					"Repeating Command Block": {
+						"conditional: false": {
+							"facing: down": "210:0",
+							"facing: east": "210:5",
+							"facing: north": "210:2",
+							"facing: south": "210:3",
+							"facing: up": "210:1",
+							"facing: west": "210:4"
+						},
+						"conditional: true": {
+							"facing: down": "210:8",
+							"facing: east": "210:13",
+							"facing: north": "210:10",
+							"facing: south": "210:11",
+							"facing: up": "210:9",
+							"facing: west": "210:12"
+						}
+					}
+				},
+				"Concrete": {
+					"Black Concrete": "251:15",
+					"Blue Concrete": "251:11",
+					"Brown Concrete": "251:12",
+					"Cyan Concrete": "251:9",
+					"Gray Concrete": "251:7",
+					"Green Concrete": "251:13",
+					"Light Blue Concrete": "251:3",
+					"Light Gray Concrete": "251:8",
+					"Lime Concrete": "251:5",
+					"Magenta Concrete": "251:2",
+					"Orange Concrete": "251:1",
+					"Pink Concrete": "251:6",
+					"Purple Concrete": "251:10",
+					"Red Concrete": "251:14",
+					"White Concrete": "251:0",
+					"Yellow Concrete": "251:4"
+				},
+				"Concrete Powder": {
+					"Black Concrete Powder": "252:15",
+					"Blue Concrete Powder": "252:11",
+					"Brown Concrete Powder": "252:12",
+					"Cyan Concrete Powder": "252:9",
+					"Gray Concrete Powder": "252:7",
+					"Green Concrete Powder": "252:13",
+					"Light Blue Concrete Powder": "252:3",
+					"Light Gray Concrete Powder": "252:8",
+					"Lime Concrete Powder": "252:5",
+					"Magenta Concrete Powder": "252:2",
+					"Orange Concrete Powder": "252:1",
+					"Pink Concrete Powder": "252:6",
+					"Purple Concrete Powder": "252:10",
+					"Red Concrete Powder": "252:14",
+					"White Concrete Powder": "252:0",
+					"Yellow Concrete Powder": "252:4"
+				},
+				"Crafting Table": "58:0",
+				"Crops": {
+					"Beetroots": {
+						"age: 0": "207:0",
+						"age: 1": "207:1",
+						"age: 2": "207:2",
+						"age: 3": "207:3"
+					},
+					"Carrots": {
+						"age: 0": "141:0",
+						"age: 1": "141:1",
+						"age: 2": "141:2",
+						"age: 3": "141:3",
+						"age: 4": "141:4",
+						"age: 5": "141:5",
+						"age: 6": "141:6",
+						"age: 7": "141:7"
+					},
+					"Melon Stem": {
+						"age: 0": "105:0",
+						"age: 1": "105:1",
+						"age: 2": "105:2",
+						"age: 3": "105:3",
+						"age: 4": "105:4",
+						"age: 5": "105:5",
+						"age: 6": "105:6",
+						"age: 7": "105:7"
+					},
+					"Potatoes": {
+						"age: 0": "142:0",
+						"age: 1": "142:1",
+						"age: 2": "142:2",
+						"age: 3": "142:3",
+						"age: 4": "142:4",
+						"age: 5": "142:5",
+						"age: 6": "142:6",
+						"age: 7": "142:7"
+					},
+					"Pumpkin Stem": {
+						"age: 0": "104:0",
+						"age: 1": "104:1",
+						"age: 2": "104:2",
+						"age: 3": "104:3",
+						"age: 4": "104:4",
+						"age: 5": "104:5",
+						"age: 6": "104:6",
+						"age: 7": "104:7"
+					},
+					"Wheat Crops": {
+						"age: 0": "59:0",
+						"age: 1": "59:1",
+						"age: 2": "59:2",
+						"age: 3": "59:3",
+						"age: 4": "59:4",
+						"age: 5": "59:5",
+						"age: 6": "59:6",
+						"age: 7": "59:7"
+					}
+				},
+				"Daylight Detector": {
+					"inverted: false": {
+						"power: 0": "151:0",
+						"power: 10": "151:10",
+						"power: 11": "151:11",
+						"power: 12": "151:12",
+						"power: 13": "151:13",
+						"power: 14": "151:14",
+						"power: 15": "151:15",
+						"power: 1": "151:1",
+						"power: 2": "151:2",
+						"power: 3": "151:3",
+						"power: 4": "151:4",
+						"power: 5": "151:5",
+						"power: 6": "151:6",
+						"power: 7": "151:7",
+						"power: 8": "151:8",
+						"power: 9": "151:9"
+					},
+					"inverted: true": {
+						"power: 0": "178:0",
+						"power: 10": "178:10",
+						"power: 11": "178:11",
+						"power: 12": "178:12",
+						"power: 13": "178:13",
+						"power: 14": "178:14",
+						"power: 15": "178:15",
+						"power: 1": "178:1",
+						"power: 2": "178:2",
+						"power: 3": "178:3",
+						"power: 4": "178:4",
+						"power: 5": "178:5",
+						"power: 6": "178:6",
+						"power: 7": "178:7",
+						"power: 8": "178:8",
+						"power: 9": "178:9"
+					}
+				},
+				"Dead Bush": [
+					"31:0",
+					"32:0"
+				],
+				"Diamond Ore": {
+					"Diamond Ore": "56:0"
+				},
+				"Diorite": {
+					"Diorite": "1:3",
+					"Polished Diorite": "1:4"
+				},
+				"Dirt": {
+					"Dirt": "3:0"
+				},
+				"Dragon Egg": "122:0",
+				"Emerald Ore": {
+					"Emerald Ore": "129:0"
+				},
+				"Enchanting Table": "116:0",
+				"End Gateway": "209:0",
+				"End Portal": "119:0",
+				"End Portal Frame": {
+					"eye: false": {
+						"facing: east": "120:3",
+						"facing: north": "120:2",
+						"facing: south": "120:0",
+						"facing: west": "120:1"
+					},
+					"eye: true": {
+						"facing: east": "120:7",
+						"facing: north": "120:6",
+						"facing: south": "120:4",
+						"facing: west": "120:5"
+					}
+				},
+				"End Rod": {
+					"facing: down": "198:0",
+					"facing: east": "198:5",
+					"facing: north": "198:2",
+					"facing: south": "198:3",
+					"facing: up": "198:1",
+					"facing: west": "198:4"
+				},
+				"End Stone": "121:0",
+				"End Stone Bricks": "206:0",
+				"Farmland": {
+					"moisture: 0": "60:0",
+					"moisture: 1": "60:1",
+					"moisture: 2": "60:2",
+					"moisture: 3": "60:3",
+					"moisture: 4": "60:4",
+					"moisture: 5": "60:5",
+					"moisture: 6": "60:6",
+					"moisture: 7": "60:7"
+				},
+				"Fern": {
+					"Fern": "31:2",
+					"Large Fern": {
+						"half: lower": "175:3",
+						"half: upper": "175:11"
+					}
+				},
+				"Flower Pot": {
+					"Flower Pot": "140:0",
+					"Potted Acacia Sapling": "140:12",
+					"Potted Allium": "140:15",
+					"Potted Birch Sapling": "140:5",
+					"Potted Blue Orchid": "140:14",
+					"Potted Brown Mushroom": "140:8",
+					"Potted Cactus": "140:9",
+					"Potted Dandelion": "140:2",
+					"Potted Dark Oak Sapling": "140:13",
+					"Potted Dead Bush": "140:10",
+					"Potted Fern": "140:11",
+					"Potted Jungle Sapling": "140:6",
+					"Potted Oak Sapling": "140:3",
+					"Potted Poppy": "140:1",
+					"Potted Red Mushroom": "140:7",
+					"Potted Spruce Sapling": "140:4"
+				},
+				"Flowers": {
+					"Allium": "38:2",
+					"Azure Bluet": "38:3",
+					"Blue Orchid": "38:1",
+					"Dandelion": "37:0",
+					"Lilac": {
+						"half: lower": "175:1",
+						"half: upper": "175:9"
+					},
+					"Orange Tulip": "38:5",
+					"Oxeye Daisy": "38:8",
+					"Peony": {
+						"half: lower": "175:5",
+						"half: upper": "175:13"
+					},
+					"Pink Tulip": "38:7",
+					"Poppy": "38:0",
+					"Red Tulip": "38:4",
+					"Rose Bush": {
+						"half: lower": "175:4",
+						"half: upper": "175:12"
+					},
+					"Sunflower": {
+						"half: lower": "175:0",
+						"half: upper": "175:8"
+					},
+					"White Tulip": "38:6"
+				},
+				"Frosted Ice": {
+					"age: 0": "212:0",
+					"age: 1": "212:1",
+					"age: 2": "212:2",
+					"age: 3": "212:3"
+				},
+				"Furnace": {
+					"facing: east": {
+						"lit: false": "61:5",
+						"lit: true": "62:5"
+					},
+					"facing: north": {
+						"lit: false": "61:2",
+						"lit: true": "62:2"
+					},
+					"facing: south": {
+						"lit: false": "61:3",
+						"lit: true": "62:3"
+					},
+					"facing: west": {
+						"lit: false": "61:4",
+						"lit: true": "62:4"
+					}
+				},
+				"Glass": "20:0",
+				"Glazed Terracotta": {
+					"Black Glazed Terracotta": {
+						"facing: east": "250:3",
+						"facing: north": "250:2",
+						"facing: south": "250:0",
+						"facing: west": "250:1"
+					},
+					"Blue Glazed Terracotta": {
+						"facing: east": "246:3",
+						"facing: north": "246:2",
+						"facing: south": "246:0",
+						"facing: west": "246:1"
+					},
+					"Brown Glazed Terracotta": {
+						"facing: east": "247:3",
+						"facing: north": "247:2",
+						"facing: south": "247:0",
+						"facing: west": "247:1"
+					},
+					"Cyan Glazed Terracotta": {
+						"facing: east": "244:3",
+						"facing: north": "244:2",
+						"facing: south": "244:0",
+						"facing: west": "244:1"
+					},
+					"Gray Glazed Terracotta": {
+						"facing: east": "242:3",
+						"facing: north": "242:2",
+						"facing: south": "242:0",
+						"facing: west": "242:1"
+					},
+					"Green Glazed Terracotta": {
+						"facing: east": "248:3",
+						"facing: north": "248:2",
+						"facing: south": "248:0",
+						"facing: west": "248:1"
+					},
+					"Light Blue Glazed Terracotta": {
+						"facing: east": "238:3",
+						"facing: north": "238:2",
+						"facing: south": "238:0",
+						"facing: west": "238:1"
+					},
+					"Light Gray Glazed Terracotta": {
+						"facing: east": "243:3",
+						"facing: north": "243:2",
+						"facing: south": "243:0",
+						"facing: west": "243:1"
+					},
+					"Lime Glazed Terracotta": {
+						"facing: east": "240:3",
+						"facing: north": "240:2",
+						"facing: south": "240:0",
+						"facing: west": "240:1"
+					},
+					"Magenta Glazed Terracotta": {
+						"facing: east": "237:3",
+						"facing: north": "237:2",
+						"facing: south": "237:0",
+						"facing: west": "237:1"
+					},
+					"Orange Glazed Terracotta": {
+						"facing: east": "236:3",
+						"facing: north": "236:2",
+						"facing: south": "236:0",
+						"facing: west": "236:1"
+					},
+					"Pink Glazed Terracotta": {
+						"facing: east": "241:3",
+						"facing: north": "241:2",
+						"facing: south": "241:0",
+						"facing: west": "241:1"
+					},
+					"Purple Glazed Terracotta": {
+						"facing: east": "245:3",
+						"facing: north": "245:2",
+						"facing: south": "245:0",
+						"facing: west": "245:1"
+					},
+					"Red Glazed Terracotta": {
+						"facing: east": "249:3",
+						"facing: north": "249:2",
+						"facing: south": "249:0",
+						"facing: west": "249:1"
+					},
+					"White Glazed Terracotta": {
+						"facing: east": "235:3",
+						"facing: north": "235:2",
+						"facing: south": "235:0",
+						"facing: west": "235:1"
+					},
+					"Yellow Glazed Terracotta": {
+						"facing: east": "239:3",
+						"facing: north": "239:2",
+						"facing: south": "239:0",
+						"facing: west": "239:1"
+					}
+				},
+				"Glowstone": "89:0",
+				"Gold Ore": {
+					"Gold Ore": "14:0"
+				},
+				"Granite": {
+					"Granite": "1:1",
+					"Polished Granite": "1:2"
+				},
+				"Grass": {
+					"Grass": "31:1",
+					"Tall Grass": {
+						"half: lower": "175:2",
+						"half: upper": "175:10"
+					}
+				},
+				"Grass Block": {
+					"snowy: false": "2:0"
+				},
+				"Gravel": "13:0",
+				"Hay Bale": {
+					"axis: x": "170:4",
+					"axis: y": "170:0",
+					"axis: z": "170:8"
+				},
+				"Heads": {
+					"Skeleton Skull": {
+						"rotation: 0": "144:0",
+						"rotation: 12": "144:9",
+						"rotation: 4": "144:1",
+						"rotation: 8": "144:8"
+					},
+					"Skeleton Wall Skull": {
+						"facing: east": [
+							"144:13",
+							"144:5"
+						],
+						"facing: north": [
+							"144:10",
+							"144:2"
+						],
+						"facing: south": [
+							"144:11",
+							"144:3"
+						],
+						"facing: west": [
+							"144:12",
+							"144:4"
+						]
+					}
+				},
+				"Ice": "79:0",
+				"Iron Ore": {
+					"Iron Ore": "15:0"
+				},
+				"Jack o'Lantern": {
+					"facing: east": "91:3",
+					"facing: north": "91:2",
+					"facing: south": "91:0",
+					"facing: west": "91:1"
+				},
+				"Jukebox": {
+					"has_record: false": "84:0",
+					"has_record: true": "84:1"
+				},
+				"Lapis Lazuli Ore": {
+					"Lapis Lazuli Ore": "21:0"
+				},
+				"Lava": {
+					"level: 0": [
+						"10:0",
+						"11:0"
+					],
+					"level: 10": [
+						"10:10",
+						"11:10"
+					],
+					"level: 11": [
+						"10:11",
+						"11:11"
+					],
+					"level: 12": [
+						"10:12",
+						"11:12"
+					],
+					"level: 13": [
+						"10:13",
+						"11:13"
+					],
+					"level: 14": [
+						"10:14",
+						"11:14"
+					],
+					"level: 15": [
+						"10:15",
+						"11:15"
+					],
+					"level: 1": [
+						"10:1",
+						"11:1"
+					],
+					"level: 2": [
+						"10:2",
+						"11:2"
+					],
+					"level: 3": [
+						"10:3",
+						"11:3"
+					],
+					"level: 4": [
+						"10:4",
+						"11:4"
+					],
+					"level: 5": [
+						"10:5",
+						"11:5"
+					],
+					"level: 6": [
+						"10:6",
+						"11:6"
+					],
+					"level: 7": [
+						"10:7",
+						"11:7"
+					],
+					"level: 8": [
+						"10:8",
+						"11:8"
+					],
+					"level: 9": [
+						"10:9",
+						"11:9"
+					]
+				},
+				"Lily Pad": "111:0",
+				"Logs": {
+					"Acacia Log": {
+						"axis: x": "162:4",
+						"axis: y": "162:0",
+						"axis: z": "162:8"
+					},
+					"Birch Log": {
+						"axis: x": "17:6",
+						"axis: y": "17:2",
+						"axis: z": "17:10"
+					},
+					"Dark Oak Log": {
+						"axis: x": "162:5",
+						"axis: y": "162:1",
+						"axis: z": "162:9"
+					},
+					"Jungle Log": {
+						"axis: x": "17:7",
+						"axis: y": "17:3",
+						"axis: z": "17:11"
+					},
+					"Oak Log": {
+						"axis: x": "17:4",
+						"axis: y": "17:0",
+						"axis: z": "17:8"
+					},
+					"Spruce Log": {
+						"axis: x": "17:5",
+						"axis: y": "17:1",
+						"axis: z": "17:9"
+					}
+				},
+				"Magma Block": "213:0",
+				"Melon": "103:0",
+				"Mushrooms": {
+					"Brown Mushroom": "39:0",
+					"Red Mushroom": "40:0"
+				},
+				"Mycelium": {
+					"snowy: false": "110:0"
+				},
+				"Nether Bricks": {
+					"Nether Bricks": "112:0",
+					"Red Nether Bricks": "215:0"
+				},
+				"Nether Portal": {
+					"axis: x": "90:1",
+					"axis: z": "90:2"
+				},
+				"Nether Quartz Ore": "153:0",
+				"Nether Wart": {
+					"age: 0": "115:0",
+					"age: 1": "115:1",
+					"age: 2": "115:2",
+					"age: 3": "115:3"
+				},
+				"Netherrack": "87:0",
+				"Obsidian": "49:0",
+				"Packed Ice": "174:0",
+				"Piston": {
+					"Moving Piston": {
+						"facing: down": {
+							"type: normal": "36:0",
+							"type: sticky": "36:8"
+						},
+						"facing: east": {
+							"type: normal": "36:5",
+							"type: sticky": "36:13"
+						},
+						"facing: north": {
+							"type: normal": "36:2",
+							"type: sticky": "36:10"
+						},
+						"facing: south": {
+							"type: normal": "36:3",
+							"type: sticky": "36:11"
+						},
+						"facing: up": {
+							"type: normal": "36:1",
+							"type: sticky": "36:9"
+						},
+						"facing: west": {
+							"type: normal": "36:4",
+							"type: sticky": "36:12"
+						}
+					}
+				},
+				"Planks": {
+					"Acacia Planks": "5:4",
+					"Birch Planks": "5:2",
+					"Dark Oak Planks": "5:5",
+					"Jungle Planks": "5:3",
+					"Oak Planks": "5:0",
+					"Spruce Planks": "5:1"
+				},
+				"Podzol": {
+					"snowy: false": "3:2"
+				},
+				"Pressure Plates": {
+					"Heavy Weighted Pressure Plate": {
+						"power: 0": "148:0",
+						"power: 10": "148:10",
+						"power: 11": "148:11",
+						"power: 12": "148:12",
+						"power: 13": "148:13",
+						"power: 14": "148:14",
+						"power: 15": "148:15",
+						"power: 1": "148:1",
+						"power: 2": "148:2",
+						"power: 3": "148:3",
+						"power: 4": "148:4",
+						"power: 5": "148:5",
+						"power: 6": "148:6",
+						"power: 7": "148:7",
+						"power: 8": "148:8",
+						"power: 9": "148:9"
+					},
+					"Light Weighted Pressure Plate": {
+						"power: 0": "147:0",
+						"power: 10": "147:10",
+						"power: 11": "147:11",
+						"power: 12": "147:12",
+						"power: 13": "147:13",
+						"power: 14": "147:14",
+						"power: 15": "147:15",
+						"power: 1": "147:1",
+						"power: 2": "147:2",
+						"power: 3": "147:3",
+						"power: 4": "147:4",
+						"power: 5": "147:5",
+						"power: 6": "147:6",
+						"power: 7": "147:7",
+						"power: 8": "147:8",
+						"power: 9": "147:9"
+					},
+					"Oak Pressure Plate": {
+						"powered: false": "72:0",
+						"powered: true": "72:1"
+					},
+					"Stone Pressure Plate": {
+						"powered: false": "70:0",
+						"powered: true": "70:1"
+					}
+				},
+				"Prismarine": {
+					"Dark Prismarine": "168:2",
+					"Prismarine": "168:0",
+					"Prismarine Bricks": "168:1"
+				},
+				"Pumpkin": {
+					"Carved Pumpkin": {
+						"facing: east": "86:3",
+						"facing: north": "86:2",
+						"facing: south": "86:0",
+						"facing: west": "86:1"
+					}
+				},
+				"Purpur Block": {
+					"Purpur Block": "201:0",
+					"Purpur Pillar": {
+						"axis: x": "202:4",
+						"axis: y": "202:0",
+						"axis: z": "202:8"
+					}
+				},
+				"Red Sand": "12:1",
+				"Red Sandstone": {
+					"Chiseled Red Sandstone": "179:1",
+					"Cut Red Sandstone": "179:2",
+					"Red Sandstone": "179:0",
+					"Smooth Red Sandstone": "181:8"
+				},
+				"Redstone Lamp": {
+					"lit: false": "123:0",
+					"lit: true": "124:0"
+				},
+				"Redstone Ore": {
+					"Redstone Ore": {
+						"lit: false": "73:0",
+						"lit: true": "74:0"
+					}
+				},
+				"Redstone Repeater": {
+					"delay: 1": {
+						"facing: east": {
+							"locked: false": {
+								"powered: false": "93:3",
+								"powered: true": "94:3"
+							}
+						},
+						"facing: north": {
+							"locked: false": {
+								"powered: false": "93:2",
+								"powered: true": "94:2"
+							}
+						},
+						"facing: south": {
+							"locked: false": {
+								"powered: false": "93:0",
+								"powered: true": "94:0"
+							}
+						},
+						"facing: west": {
+							"locked: false": {
+								"powered: false": "93:1",
+								"powered: true": "94:1"
+							}
+						}
+					},
+					"delay: 2": {
+						"facing: east": {
+							"locked: false": {
+								"powered: false": "93:7",
+								"powered: true": "94:7"
+							}
+						},
+						"facing: north": {
+							"locked: false": {
+								"powered: false": "93:6",
+								"powered: true": "94:6"
+							}
+						},
+						"facing: south": {
+							"locked: false": {
+								"powered: false": "93:4",
+								"powered: true": "94:4"
+							}
+						},
+						"facing: west": {
+							"locked: false": {
+								"powered: false": "93:5",
+								"powered: true": "94:5"
+							}
+						}
+					},
+					"delay: 3": {
+						"facing: east": {
+							"locked: false": {
+								"powered: false": "93:11",
+								"powered: true": "94:11"
+							}
+						},
+						"facing: north": {
+							"locked: false": {
+								"powered: false": "93:10",
+								"powered: true": "94:10"
+							}
+						},
+						"facing: south": {
+							"locked: false": {
+								"powered: false": "93:8",
+								"powered: true": "94:8"
+							}
+						},
+						"facing: west": {
+							"locked: false": {
+								"powered: false": "93:9",
+								"powered: true": "94:9"
+							}
+						}
+					},
+					"delay: 4": {
+						"facing: east": {
+							"locked: false": {
+								"powered: false": "93:15",
+								"powered: true": "94:15"
+							}
+						},
+						"facing: north": {
+							"locked: false": {
+								"powered: false": "93:14",
+								"powered: true": "94:14"
+							}
+						},
+						"facing: south": {
+							"locked: false": {
+								"powered: false": "93:12",
+								"powered: true": "94:12"
+							}
+						},
+						"facing: west": {
+							"locked: false": {
+								"powered: false": "93:13",
+								"powered: true": "94:13"
+							}
+						}
+					}
+				},
+				"Redstone Torch": {
+					"Redstone Torch": {
+						"lit: false": "75:5",
+						"lit: true": "76:5"
+					},
+					"Redstone Wall Torch": {
+						"facing: east": {
+							"lit: false": "75:1",
+							"lit: true": "76:1"
+						},
+						"facing: north": {
+							"lit: false": "75:4",
+							"lit: true": "76:4"
+						},
+						"facing: south": {
+							"lit: false": "75:3",
+							"lit: true": "76:3"
+						},
+						"facing: west": {
+							"lit: false": "75:2",
+							"lit: true": "76:2"
+						}
+					}
+				},
+				"Sand": "12:0",
+				"Sandstone": {
+					"Chiseled Sandstone": "24:1",
+					"Cut Sandstone": "24:2",
+					"Sandstone": "24:0",
+					"Smooth Sandstone": "43:9"
+				},
+				"Saplings": {
+					"Acacia Sapling": {
+						"stage: 0": "6:4",
+						"stage: 1": "6:12"
+					},
+					"Birch Sapling": {
+						"stage: 0": "6:2",
+						"stage: 1": "6:10"
+					},
+					"Dark Oak Sapling": {
+						"stage: 0": "6:5",
+						"stage: 1": "6:13"
+					},
+					"Jungle Sapling": {
+						"stage: 0": "6:3",
+						"stage: 1": "6:11"
+					},
+					"Oak Sapling": {
+						"stage: 0": "6:0",
+						"stage: 1": "6:8"
+					},
+					"Spruce Sapling": {
+						"stage: 0": "6:1",
+						"stage: 1": "6:9"
+					}
+				},
+				"Sea Lantern": "169:0",
+				"Shulker Box": {
+					"Black Shulker Box": {
+						"facing: down": "234:0",
+						"facing: east": "234:5",
+						"facing: north": "234:2",
+						"facing: south": "234:3",
+						"facing: up": "234:1",
+						"facing: west": "234:4"
+					},
+					"Blue Shulker Box": {
+						"facing: down": "230:0",
+						"facing: east": "230:5",
+						"facing: north": "230:2",
+						"facing: south": "230:3",
+						"facing: up": "230:1",
+						"facing: west": "230:4"
+					},
+					"Brown Shulker Box": {
+						"facing: down": "231:0",
+						"facing: east": "231:5",
+						"facing: north": "231:2",
+						"facing: south": "231:3",
+						"facing: up": "231:1",
+						"facing: west": "231:4"
+					},
+					"Cyan Shulker Box": {
+						"facing: down": "228:0",
+						"facing: east": "228:5",
+						"facing: north": "228:2",
+						"facing: south": "228:3",
+						"facing: up": "228:1",
+						"facing: west": "228:4"
+					},
+					"Gray Shulker Box": {
+						"facing: down": "226:0",
+						"facing: east": "226:5",
+						"facing: north": "226:2",
+						"facing: south": "226:3",
+						"facing: up": "226:1",
+						"facing: west": "226:4"
+					},
+					"Green Shulker Box": {
+						"facing: down": "232:0",
+						"facing: east": "232:5",
+						"facing: north": "232:2",
+						"facing: south": "232:3",
+						"facing: up": "232:1",
+						"facing: west": "232:4"
+					},
+					"Light Blue Shulker Box": {
+						"facing: down": "222:0",
+						"facing: east": "222:5",
+						"facing: north": "222:2",
+						"facing: south": "222:3",
+						"facing: up": "222:1",
+						"facing: west": "222:4"
+					},
+					"Light Gray Shulker Box": {
+						"facing: down": "227:0",
+						"facing: east": "227:5",
+						"facing: north": "227:2",
+						"facing: south": "227:3",
+						"facing: up": "227:1",
+						"facing: west": "227:4"
+					},
+					"Lime Shulker Box": {
+						"facing: down": "224:0",
+						"facing: east": "224:5",
+						"facing: north": "224:2",
+						"facing: south": "224:3",
+						"facing: up": "224:1",
+						"facing: west": "224:4"
+					},
+					"Magenta Shulker Box": {
+						"facing: down": "221:0",
+						"facing: east": "221:5",
+						"facing: north": "221:2",
+						"facing: south": "221:3",
+						"facing: up": "221:1",
+						"facing: west": "221:4"
+					},
+					"Orange Shulker Box": {
+						"facing: down": "220:0",
+						"facing: east": "220:5",
+						"facing: north": "220:2",
+						"facing: south": "220:3",
+						"facing: up": "220:1",
+						"facing: west": "220:4"
+					},
+					"Pink Shulker Box": {
+						"facing: down": "225:0",
+						"facing: east": "225:5",
+						"facing: north": "225:2",
+						"facing: south": "225:3",
+						"facing: up": "225:1",
+						"facing: west": "225:4"
+					},
+					"Purple Shulker Box": {
+						"facing: down": "229:0",
+						"facing: east": "229:5",
+						"facing: north": "229:2",
+						"facing: south": "229:3",
+						"facing: up": "229:1",
+						"facing: west": "229:4"
+					},
+					"Red Shulker Box": {
+						"facing: down": "233:0",
+						"facing: east": "233:5",
+						"facing: north": "233:2",
+						"facing: south": "233:3",
+						"facing: up": "233:1",
+						"facing: west": "233:4"
+					},
+					"White Shulker Box": {
+						"facing: down": "219:0",
+						"facing: east": "219:5",
+						"facing: north": "219:2",
+						"facing: south": "219:3",
+						"facing: up": "219:1",
+						"facing: west": "219:4"
+					},
+					"Yellow Shulker Box": {
+						"facing: down": "223:0",
+						"facing: east": "223:5",
+						"facing: north": "223:2",
+						"facing: south": "223:3",
+						"facing: up": "223:1",
+						"facing: west": "223:4"
+					}
+				},
+				"Slime Block": "165:0",
+				"Snow": {
+					"layers: 1": "78:0",
+					"layers: 2": "78:1",
+					"layers: 3": "78:2",
+					"layers: 4": "78:3",
+					"layers: 5": "78:4",
+					"layers: 6": "78:5",
+					"layers: 7": "78:6",
+					"layers: 8": "78:7"
+				},
+				"Snow Block": "80:0",
+				"Soul Sand": "88:0",
+				"Spawner": "52:0",
+				"Sponge": {
+					"Sponge": "19:0",
+					"Wet Sponge": "19:1"
+				},
+				"Stained Glass": {
+					"Black Stained Glass": "95:15",
+					"Blue Stained Glass": "95:11",
+					"Brown Stained Glass": "95:12",
+					"Cyan Stained Glass": "95:9",
+					"Gray Stained Glass": "95:7",
+					"Green Stained Glass": "95:13",
+					"Light Blue Stained Glass": "95:3",
+					"Light Gray Stained Glass": "95:8",
+					"Lime Stained Glass": "95:5",
+					"Magenta Stained Glass": "95:2",
+					"Orange Stained Glass": "95:1",
+					"Pink Stained Glass": "95:6",
+					"Purple Stained Glass": "95:10",
+					"Red Stained Glass": "95:14",
+					"White Stained Glass": "95:0",
+					"Yellow Stained Glass": "95:4"
+				},
+				"Stone": {
+					"Infested Stone": "97:0",
+					"Smooth Stone": "43:8",
+					"Stone": "1:0"
+				},
+				"Stone Bricks": {
+					"Chiseled Stone Bricks": "98:3",
+					"Cracked Stone Bricks": "98:2",
+					"Infested Chiseled Stone Bricks": "97:5",
+					"Infested Cracked Stone Bricks": "97:4",
+					"Infested Mossy Stone Bricks": "97:3",
+					"Infested Stone Bricks": "97:2",
+					"Mossy Stone Bricks": "98:1",
+					"Stone Bricks": "98:0"
+				},
+				"Structure Block": {
+					"mode: corner": "255:2",
+					"mode: data": "255:3",
+					"mode: load": "255:1",
+					"mode: save": "255:0"
+				},
+				"Structure Void": "217:0",
+				"Sugar Cane": {
+					"age: 0": "83:0",
+					"age: 10": "83:10",
+					"age: 11": "83:11",
+					"age: 12": "83:12",
+					"age: 13": "83:13",
+					"age: 14": "83:14",
+					"age: 15": "83:15",
+					"age: 1": "83:1",
+					"age: 2": "83:2",
+					"age: 3": "83:3",
+					"age: 4": "83:4",
+					"age: 5": "83:5",
+					"age: 6": "83:6",
+					"age: 7": "83:7",
+					"age: 8": "83:8",
+					"age: 9": "83:9"
+				},
+				"Terracotta": {
+					"Black Terracotta": "159:15",
+					"Blue Terracotta": "159:11",
+					"Brown Terracotta": "159:12",
+					"Cyan Terracotta": "159:9",
+					"Gray Terracotta": "159:7",
+					"Green Terracotta": "159:13",
+					"Light Blue Terracotta": "159:3",
+					"Light Gray Terracotta": "159:8",
+					"Lime Terracotta": "159:5",
+					"Magenta Terracotta": "159:2",
+					"Orange Terracotta": "159:1",
+					"Pink Terracotta": "159:6",
+					"Purple Terracotta": "159:10",
+					"Red Terracotta": "159:14",
+					"Terracotta": "172:0",
+					"White Terracotta": "159:0",
+					"Yellow Terracotta": "159:4"
+				},
+				"TNT": {
+					"unstable: false": "46:0",
+					"unstable: true": "46:1"
+				},
+				"Torch": {
+					"Torch": "50:5",
+					"Wall Torch": {
+						"facing: east": "50:1",
+						"facing: north": "50:4",
+						"facing: south": "50:3",
+						"facing: west": "50:2"
+					}
+				},
+				"Wart Blocks": {
+					"Nether Wart Block": "214:0"
+				},
+				"Water": {
+					"Water": {
+						"level: 0": [
+							"8:0",
+							"9:0"
+						],
+						"level: 10": [
+							"8:10",
+							"9:10"
+						],
+						"level: 11": [
+							"8:11",
+							"9:11"
+						],
+						"level: 12": [
+							"8:12",
+							"9:12"
+						],
+						"level: 13": [
+							"8:13",
+							"9:13"
+						],
+						"level: 14": [
+							"8:14",
+							"9:14"
+						],
+						"level: 15": [
+							"8:15",
+							"9:15"
+						],
+						"level: 1": [
+							"8:1",
+							"9:1"
+						],
+						"level: 2": [
+							"8:2",
+							"9:2"
+						],
+						"level: 3": [
+							"8:3",
+							"9:3"
+						],
+						"level: 4": [
+							"8:4",
+							"9:4"
+						],
+						"level: 5": [
+							"8:5",
+							"9:5"
+						],
+						"level: 6": [
+							"8:6",
+							"9:6"
+						],
+						"level: 7": [
+							"8:7",
+							"9:7"
+						],
+						"level: 8": [
+							"8:8",
+							"9:8"
+						],
+						"level: 9": [
+							"8:9",
+							"9:9"
+						]
+					}
+				},
+				"Wool": {
+					"Black Wool": "35:15",
+					"Blue Wool": "35:11",
+					"Brown Wool": "35:12",
+					"Cyan Wool": "35:9",
+					"Gray Wool": "35:7",
+					"Green Wool": "35:13",
+					"Light Blue Wool": "35:3",
+					"Light Gray Wool": "35:8",
+					"Lime Wool": "35:5",
+					"Magenta Wool": "35:2",
+					"Orange Wool": "35:1",
+					"Pink Wool": "35:6",
+					"Purple Wool": "35:10",
+					"Red Wool": "35:14",
+					"White Wool": "35:0",
+					"Yellow Wool": "35:4"
+				}
+			},
+			"default_value": "None"
 		},
 		"obstructs_cactus": {
 			"default_value": "Yes",
