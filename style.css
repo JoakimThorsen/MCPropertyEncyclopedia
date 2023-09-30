@@ -184,6 +184,10 @@ a:hover {
     font-size: 16px;
     background-color: var(--background-color);
 }
+.panel-body>ul {
+    padding-inline-start: 0;
+}
+
 .modal-content {
     background-color: var(--background-color);
     color: var(--text-color);

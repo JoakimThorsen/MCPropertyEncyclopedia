@@ -173,6 +173,17 @@ async function initialize_page() {
             location.reload(true);
         });
     }
+    let duplicates = selection_arr.filter((item, index) => selection_arr.indexOf(item) !== index)
+    if(duplicates.length) {
+        make_popup(
+            "Duplicate property in selection",
+            `The selection you have specified [${selection_arr.join(', ')}] contains duplicate mentions of the same property. The following properties have been removed: <ul>`
+            + duplicates.map(duplicate_prop => `<li>'${duplicate_prop}'</li>`).join('') +
+            "</ul>"
+        );
+        selection_arr = selection_arr.filter((item, index) => selection_arr.indexOf(item) === index);
+        update_window_history();
+    }
 
     display_headers_and_table();
 
