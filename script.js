@@ -159,7 +159,7 @@ async function initialize_page() {
             `The selection you have specified [${selection_arr.join(', ')}] is invalid. The following properties were not recognized: <ul>`
                 + selection_arr.filter(prop => !Object.keys(data.properties).includes(prop)).map(unknown_prop => {
                     const found_prop = getClosestLevDistFromList(unknown_prop, Object.keys(data.properties));
-                    return `<li>'${unknown_prop}': Did you mean '${found_prop}'? <button class="btn btn-default found-prop-correction" unknown-property="${unknown_prop}" found-property="${found_prop}" style="text-decoration: underline">Yes</button> </li>`;
+                    return /*html*/`<li>'${unknown_prop}': Did you mean '${found_prop}'? <button class="btn btn-default found-prop-correction" unknown-property="${unknown_prop}" found-property="${found_prop}" style="text-decoration: underline">Yes</button> </li>`;
                 }).join('') +
             "</ul>"
         );
@@ -177,9 +177,9 @@ async function initialize_page() {
     if(duplicates.length) {
         make_popup(
             "Duplicate property in selection",
-            `The selection you have specified [${selection_arr.join(', ')}] contains duplicate mentions of the same property. The following properties have been removed: <ul>`
-            + duplicates.map(duplicate_prop => `<li>'${duplicate_prop}'</li>`).join('') +
-            "</ul>"
+            `The selection you have specified [${selection_arr.join(', ')}] contains duplicate mentions of the same property. The following properties have been removed: <ul>
+            ${duplicates.map(duplicate_prop => `<li>'${duplicate_prop}'</li>`).join('')}
+            </ul>`
         );
         selection_arr = selection_arr.filter((item, index) => selection_arr.indexOf(item) === index);
         update_window_history();
@@ -222,7 +222,7 @@ function display_selection() {
             if (Array.isArray(entry)) { // arr
                 return entry.reduce((result, ent) => result + selection_dropdown(ent), "");
             } else { // obj
-                return `
+                return /*html*/`
                 <li class="custom-submenu">
                     <a role="button" class="selection-category submenu disabled">
                         <i class="fas fa-folder-open"></i> ${entry.category}&hellip;
@@ -235,7 +235,7 @@ function display_selection() {
             }
         } else { // entry
             const isSelected = selection_arr.includes(entry);
-            return `
+            return /*html*/`
                 <li>
                     <a 
                         role="button" 

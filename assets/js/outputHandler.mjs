@@ -31,7 +31,7 @@ function headerOutputter(page, entry_header) {
         );
 
     // Table headers
-    $('#output-table').children('thead').children('tr').append(`
+    $('#output-table').children('thead').children('tr').append(/*html*/`
     <th>
         <div class="text-center">
             <span class="table-header" id="entry_count" title="Number of rows">
@@ -151,7 +151,7 @@ function headerOutputter(page, entry_header) {
         }
 
         // Header and dropdown buttons
-        let append_data = `
+        let append_data = /*html*/`
             <th>
                 <div class="dropdown noselect">
                     <a property="${property_id}" 
@@ -204,14 +204,14 @@ function headerOutputter(page, entry_header) {
                         </li>`;
 
         if (typeof data.properties[property_id].property_description !== 'undefined' && data.properties[property_id].property_description !== "") {
-            append_data += `<li class="dropdown-submenu">
+            append_data += /*html*/`<li class="dropdown-submenu">
                                 <a role="button" class="description-button">Description...</a>
                                 <ul class="dropdown-menu">
                                     <p>${value_parser(data.properties[property_id].property_description)}</p>
                                 </ul>
                             </li>`;
         }
-        append_data += `<li class="divider"></li><div class="dropdown-scrollable">`;
+        append_data += /*html*/`<li class="divider"></li><div class="dropdown-scrollable">`;
 
         // Filter menu
         if (filter_obj[property_id] !== undefined) {
@@ -219,14 +219,14 @@ function headerOutputter(page, entry_header) {
         }
         sort_mixed_types(value_list[property_id]).forEach(option => {
             const color = formatting_color(option, property_id, true);
-            append_data += `<li>
+            append_data += /*html*/`<li>
                     <a role="button" class="dropdown-option modify-filter" property="${property_id}" value="${option}">
                         <span class="dot ${color ? color : 'display-none'}"></span>
                         <span class="justify-start">${value_parser(option)}</span>
                         <span class="glyphicon glyphicon-ok${filter_obj[property_id]?.includes(String(option)) ? ' display-none' : ''}">
                         </span></a></li>`
         });
-        append_data += `</div></ul></div></th>`;
+        append_data += /*html*/`</div></ul></div></th>`;
 
         $('#output-table').children('thead').children('tr').append(append_data);
     });
@@ -341,7 +341,7 @@ function tableBodyGenerator(output_data, page, search) {
                 entry.variants = highlightSearchString(entry.variants, search)
             }
         }
-        append_string += `
+        append_string += /*html*/`
             <tr>
                 <td>
                     <span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span>
@@ -358,29 +358,29 @@ function tableBodyGenerator(output_data, page, search) {
 function get_data_cell_contents(entry, property_id, top_level = true) {
     let return_data;
     if (typeof (entry) == 'object' && entry != null) {
-        return_data = `<td class="nested-cell">`;
+        return_data = /*html*/`<td class="nested-cell">`;
         if (top_level && (get_all_values(entry).length > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2)) {
-            // return_data += `<button class="btn expand-btn ${settings_obj.hide_expand_buttons ? `display-none` : ""}" type="button" data-toggle="collapse-siblings">Expand</button>\n`
-            return_data += `<a class="expand-btn ${settings_obj.hide_expand_buttons ? `display-none` : ""}" type="button" data-toggle="collapse-siblings"><table class="table table-bordered nested-table expand-btn"><tbody><tr><td>Expand...</td></tr></tbody></table></a>\n`
+            // return_data += /*html*/`<button class="btn expand-btn ${settings_obj.hide_expand_buttons ? `display-none` : ""}" type="button" data-toggle="collapse-siblings">Expand</button>\n`
+            return_data += /*html*/`<a class="expand-btn ${settings_obj.hide_expand_buttons ? `display-none` : ""}" type="button" data-toggle="collapse-siblings"><table class="table table-bordered nested-table expand-btn"><tbody><tr><td>Expand...</td></tr></tbody></table></a>\n`
             
             if(get_all_values(entry, true).join("  ").length <= 40) {
-                return_data += `<table class="table table-bordered table-hover nested-table expandable preview-table ${settings_obj.expand_tables ? "display-none" : ""}">
+                return_data += /*html*/`<table class="table table-bordered table-hover nested-table expandable preview-table ${settings_obj.expand_tables ? "display-none" : ""}">
                     <tbody>
                         <tr>${get_nested_table_contents(sort_mixed_types(get_all_values(entry, true)), property_id, true)}</tr>
                     </tbody>
                 </table>`;
             }
             
-            return_data += `<table class="table table-bordered table-hover nested-table expandable ${settings_obj.expand_tables ? "" : `display-none`}"><tbody>`;
+            return_data += /*html*/`<table class="table table-bordered table-hover nested-table expandable ${settings_obj.expand_tables ? "" : `display-none`}"><tbody>`;
         } else {
-            return_data += `<table class="table table-bordered table-hover nested-table"><tbody>`;
+            return_data += /*html*/`<table class="table table-bordered table-hover nested-table"><tbody>`;
         }
         return_data += get_nested_table_contents(entry, property_id);
         
         return_data += "</tbody></table></td>";
 
     } else {
-        return_data = `<td ${formatting_color(entry, property_id)}>${value_parser(entry)}</td>`;
+        return_data = /*html*/`<td ${formatting_color(entry, property_id)}>${value_parser(entry)}</td>`;
     }
     return return_data;
 }
@@ -409,7 +409,7 @@ function formatting_color(value, property_id, class_exists = false) {
     if (Object.hasOwn(data.conditional_formatting, value)) {
         color = data.conditional_formatting[value];
         if (!class_exists) {
-            color = `class="${color}"`;
+            color = /*html*/`class="${color}"`;
         }
         return color;
     }
@@ -451,7 +451,7 @@ function formatting_color(value, property_id, class_exists = false) {
         sat ??= scale(scale_value, max, hslA[1], hslB[1]);
         lum ??= scale(scale_value, max, hslA[2], hslB[2]);
 
-        color = `style="background-color: hsl(${hue},${sat}%,${lum}%)!important"`;
+        color = /*html*/`style="background-color: hsl(${hue},${sat}%,${lum}%)!important"`;
         if (class_exists) {
             color = '"' + color;
         }
@@ -478,7 +478,7 @@ function curly_syntax_handler(string, args) {
     args = args.split('|');
     switch(args[0]) {
         case "mapColor":
-            return `<span class='dot ${args[1]}'></span> ${args[1]}`;
+            return /*html*/`<span class='dot ${args[1]}'></span> ${args[1]}`;
     }
     return string;
 }
