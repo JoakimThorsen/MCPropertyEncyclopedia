@@ -388,6 +388,13 @@ function display_results() {
         // $target.toggle("toggle"); // With toggle animation/delay
         // $target.toggle(); // No toggle animation/delay
         $target.toggleClass("display-none"); // uses a class instead
+
+        let label = $(this).find('td');
+        if(label.text() === "Expand...") {
+            label.text("Collapse...");
+        } else if (label.text() === "Collapse...") {
+            label.text("Expand...");
+        }
     });
     $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-siblings]', function (_e) {
         const $target = $(this).siblings();
@@ -395,6 +402,13 @@ function display_results() {
         // $target.toggle("toggle"); // With toggle animation/delay
         // $target.toggle(); // No toggle animation/delay
         $target.toggleClass("display-none"); // uses a class instead
+        
+        let label = $(this).find('td');
+        if(label.text() === "Expand...") {
+            label.text("Collapse...");
+        } else if (label.text() === "Collapse...") {
+            label.text("Expand...");
+        }
     });
 
 }
