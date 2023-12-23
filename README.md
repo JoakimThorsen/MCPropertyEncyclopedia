@@ -20,7 +20,7 @@ For the full list of contributors, make sure to check out the [About Page](https
 - Settings: Various other actions and options are available under the collapsing "settings", including reset buttons, size conversions, and exporting options.
 
 ## Joa mama
-In order to effectivize the compiling of different properties, ensure accuracy, and speed up the updating process of the website's information for new game versions, a mod named [Joa mama](https://github.com/JoakimThorsen/joa-mama) (heh) is being developed in order to extract the properties from the game code directly. It works by checking every block in the registry against a check for each property, and compiles a list of the results. This is then converted to the format described below via an external tool. Originally developed by bldhf, later forked by Joa
+In order to effectivize the compiling of different properties, ensure accuracy, and speed up the updating process of the website's information for new game versions, a mod named [Joa mama](https://github.com/bldhf/joa-mama) (heh) is being developed in order to extract the properties from the game code directly. It works by checking every block in the registry against a check for each property, and compiles a list of the results. This is then converted to the format described below via an external tool. Originally developed by bldhf, later forked by Joa
 
 ## Technical details
 The project is hosted through GitHub Pages. It operates entirely clientside and written in vanilla js, with [jQuery 3.6](https://jquery.com/) and [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/) being used for the interface. Most icons used are from [Font Awesome](https://fontawesome.com/).  
