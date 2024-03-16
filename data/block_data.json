@@ -3862,6 +3862,7 @@
 				"Sculk Vein": "No",
 				"Sea Pickle": "No",
 				"Seagrass": "No",
+				"Shulker Box": "No",
 				"Signs": "No",
 				"Slabs": {
 					"type: bottom<br>type: top": "No",
@@ -10808,7 +10809,6 @@
 				"Heads": "No",
 				"Kelp": "No",
 				"Ladder": "No",
-				"Lava": "No",
 				"Lever": "No",
 				"Light Block": "No",
 				"Lily Pad": "No",
@@ -12441,12 +12441,10 @@
 				"Redstone Lamp": "Yes",
 				"Redstone Ore": "Yes",
 				"Reinforced Deepslate": "Yes",
-				"Respawn Anchor": "Yes",
 				"Sand": "Yes",
 				"Sandstone": "Yes",
 				"Sculk": "Yes",
 				"Sculk Catalyst": "Yes",
-				"Shroomlight": "Yes",
 				"Shulker Box": {
 					"Sideways When Opened": "No",
 					"When Vertical Or Closed": "Yes"
@@ -12477,7 +12475,6 @@
 				"Terracotta": "Yes",
 				"TNT": "Yes",
 				"Tuff": "Yes",
-				"Wart Blocks": "Yes",
 				"Wood": "Yes",
 				"Wool": "Yes"
 			},
@@ -12948,7 +12945,7 @@
 				"Light Block": "No",
 				"Reinforced Deepslate": "Uncreatable",
 				"Slabs": {
-					"Acacia Slab<br>Andesite Slab<br>Bamboo Mosaic Slab<br>Bamboo Slab<br>Birch Slab<br>Blackstone Slab<br>Brick Slab<br>Cherry Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Crimson Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Oak Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Jungle Slab<br>Mangrove Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Mud Brick Slab<br>Nether Brick Slab<br>Oak Slab<br>Oxidized Cut Copper Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Spruce Slab<br>Stone Brick Slab<br>Stone Slab<br>Warped Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "Yes",
+					"Acacia Slab<br>Andesite Slab<br>Bamboo Mosaic Slab<br>Bamboo Slab<br>Birch Slab<br>Blackstone Slab<br>Brick Slab<br>Cherry Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Crimson Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Oak Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Jungle Slab<br>Mangrove Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Mud Brick Slab<br>Nether Brick Slab<br>Oak Slab<br>Oxidized Cut Copper Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Spruce Slab<br>Stone Brick Slab<br>Stone Slab<br>Warped Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "Creatable",
 					"Petrified Oak Slab": "No"
 				},
 				"Spawner": "Uncreatable",
@@ -18209,6 +18206,11 @@
 				},
 				"Soul Sand": 16,
 				"Spore Blossom": "Not Applicable",
+				"Stained Glass Panes": {
+					"Connected Back": 7,
+					"Connected Front": 16,
+					"Main Body": 9
+				},
 				"Stairs": {
 					"Side": 16,
 					"Thin Part": 8,
