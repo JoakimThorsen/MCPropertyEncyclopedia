@@ -5926,6 +5926,7 @@
 				"Iron Ore": "No",
 				"Lapis Lazuli Ore": "No",
 				"Large Fern": "No",
+				"Lodestone": "No",
 				"Nether Gold Ore": "No",
 				"Nether Quartz Ore": "No",
 				"Netherite Axe": "No",
@@ -5941,12 +5942,19 @@
 				"Netherite Sword": "No",
 				"Otherside Disc": "No",
 				"Pigstep Disc": "No",
+				"Raw Copper": "No",
+				"Raw Gold": "No",
+				"Raw Iron": "No",
 				"Redstone Ore": "No",
 				"Snout Banner Pattern": "No",
 				"Sponge": "No",
 				"Spore Blossom": "No",
 				"Tall Grass": "No",
-				"Wet Sponge": "No"
+				"Wet Sponge": "No",
+				"calcite": "No",
+				"netherrack": "No",
+				"nylium": "No",
+				"tuff": "No"
 			}
 		}
 	}
