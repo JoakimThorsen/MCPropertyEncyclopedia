@@ -101,6 +101,7 @@ function new_game(daily_game = false) {
     delete data.properties.material;
     // delete data.properties.map_color;
     // delete data.properties.instrument;
+    delete data.properties.numerical_id;
 
     Object.keys(data.properties).forEach(key => {
         if(key.startsWith("tag_")) {
