@@ -10,40 +10,23 @@ let sort_arr;
 let selection_arr;
 let settings_obj;
 
-// Try-catch spam is for "legacy" purposes, old JSON-links will still work for a while
-try {
-    filter_obj = JSON.parse(urlParams.get("filter")) ?? {};
-} catch {
-    filter_obj = parse_custom_url(urlParams.get("filter")) ?? {};
+filter_obj = parse_custom_url(urlParams.get("filter")) ?? {};
+
+sort_arr = urlParams.get("sort")
+        ?.split(',')
+        ?.map(prop => {
+            let reversed = prop.charAt(0) === '!';
+            return {property: prop.substr(reversed), reversed: reversed}
+        })
+    ?? [];
+
+if (urlParams.has("selection")) {
+    selection_arr = [parse_custom_url(urlParams.get("selection")) || []].flat();
+} else {
+    selection_arr = null;
 }
 
-try {
-    sort_arr = JSON.parse(urlParams.get("sort")) ?? [];
-} catch {
-    sort_arr = urlParams.get("sort")
-            .split(',')
-            .map(prop => {
-                let reversed = prop.charAt(0) === '!';
-                return {property: prop.substr(reversed), reversed: reversed}
-            })
-        ?? [];
-}
-
-try {
-    selection_arr = JSON.parse(urlParams.get("selection")) ?? null;
-} catch {
-    if (urlParams.has("selection")) {
-        selection_arr = [parse_custom_url(urlParams.get("selection")) || []].flat();
-    } else {
-        selection_arr = null;
-    }
-}
-
-try {
-    settings_obj = JSON.parse(urlParams.get("settings")) ?? {};
-} catch {
-    settings_obj = parse_custom_url(urlParams.get("settings")) ?? {};
-}
+settings_obj = parse_custom_url(urlParams.get("settings")) ?? {};
 
 let search = urlParams.get("search") ?? "";
 let page, entry_header, exportable_list, exportable_data;
