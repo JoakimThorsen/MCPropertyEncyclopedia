@@ -80,19 +80,21 @@ function headerOutputter(page, entry_header) {
                                 <i class="fas fa-sort-amount-up"></i>
                             </button>
                         </span>
-                        <button class="btn dropdown-btn btn-default export-csv"
-                            title="Download a newline-separated list of all blocks that are currently shown">
-                            <i class="fas fa-file-export"></i>Export CSV
-                        </a>
-                        <button class="btn dropdown-btn btn-default export-json"
-                            title="Download a JSON string-array-formatted list of all blocks that are currently shown">
-                            <i class="fas fa-file-export"></i>Export JSON
-                        </a>
-                        <button class="btn dropdown-btn btn-default copy-comma-separated"
-                            title="Copy a Comma-Separated list of all blocks that are currently shown to clipboard.">
-                            <i class="fas fa-copy"></i>Copy Comma-Separated List
-                        </a>
                     </div>
+                </li>
+                <li class="text-center">
+                    <button class="btn dropdown-btn btn-default export-csv"
+                        title="Download a newline-separated list of all blocks that are currently shown">
+                        <i class="fas fa-file-export"></i>Export CSV
+                    </a>
+                    <button class="btn dropdown-btn btn-default export-json"
+                        title="Download a JSON string-array-formatted list of all blocks that are currently shown">
+                        <i class="fas fa-file-export"></i>Export JSON
+                    </a>
+                    <button class="btn dropdown-btn btn-default copy-comma-separated"
+                        title="Copy a Comma-Separated list of all blocks that are currently shown to clipboard.">
+                        <i class="fas fa-copy"></i>Copy Comma-Separated List
+                    </a>
                 </li>
             </ul>
         </div>

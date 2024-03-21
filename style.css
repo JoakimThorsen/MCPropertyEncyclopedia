@@ -21,13 +21,13 @@
     /* Must be duplicated to below */
     :root:not([data-theme="light"]) {
         --background-color: #111;
-        --secondary-background-color: #222;
+        --secondary-background-color: #1f1f1f;
         --tetriary-background-color: #5c5c5c;
         --border-color: #444;
         --text-color: #d9d9d9;
         --selected-color: hsl(151, 30.75%, 25%);
         
-        --hover-background-color: #222;
+        --hover-background-color: #282828;
         --hover-text-color: #eee;
         --hover-selected-color: hsl(151, 25%, 30%);
         
@@ -40,13 +40,13 @@
 /* Duplicated from above^ */
 :root[data-theme="dark"] {
     --background-color: #111;
-    --secondary-background-color: #222;
+    --secondary-background-color: #1f1f1f;
     --tetriary-background-color: #5c5c5c;
     --border-color: #444;
     --text-color: #d9d9d9;
     --selected-color: hsl(151, 30.75%, 25%);
     
-    --hover-background-color: #222;
+    --hover-background-color: #282828;
     --hover-text-color: #eee;
     --hover-selected-color: hsl(151, 25%, 30%);
     
@@ -379,7 +379,7 @@ th:first-child>*>* {
 }
 
 .dropdown-menu > li.dropdown-submenu.open > a {
-    background-color: #dbdbdb;
+    background-color: var(--secondary-background-color);
 }
 
 .dropdown-submenu > a:after {
