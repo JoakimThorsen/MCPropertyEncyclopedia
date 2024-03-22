@@ -7,7 +7,6 @@ document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'
 
 if(localStorage.getItem('theme') === 'dark') {
     $('#dark-mode-toggle').children().toggleClass('display-none');
-    console.log($('#dark-mode-toggle').children());
 }
 
 function toggleTheme() {
