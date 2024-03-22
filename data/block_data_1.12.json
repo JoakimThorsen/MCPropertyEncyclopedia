@@ -1552,36 +1552,56 @@
 				"skyblock_obtainable"
 			]
 		},
-		"hardness",
-		"is_full_cube",
-		"is_full_block",
-		"is_block_normal_cube",
-		"is_opaque_cube",
-		"is_normal_cube",
-		"is_top_solid",
+		{
+			"category": "Block Shape",
+			"contents": [
+				"is_full_cube",
+				"is_full_block",
+				"is_block_normal_cube",
+				"is_opaque_cube",
+				"is_normal_cube",
+				"is_top_solid"
+			]
+		},
+		{
+			"category": "Destruction",
+			"contents": [
+				"hardness",
+				"blast_resistance",
+				"flammable",
+				"gets_flushed",
+				"get_push_reaction",
+				"is_replacable"
+			]
+		},
+		{
+			"category": "Material",
+			"contents": [
+				"material",
+				"material_is_replaceable",
+				"material_blocks_movement",
+				"material_is_liquid",
+				"material_is_solid",
+				"material_is_burnable",
+				"material_is_opaque",
+				"material_blocks_light"
+			]
+		},
+		{
+			"category": "Block Interaction",
+			"contents": [
+				"emits_power",
+				"redirects_dust",
+				"instrument",
+				"sends_comparator_updates"
+			]
+		},
 		"get_light_opacity",
 		"get_light_value",
-		"get_push_reaction",
 		"get_render_type",
-		"is_replacable",
-		"slipperiness",
-		"blast_resistance",
-		"suffocates_mobs",
-		"emits_power",
 		"gets_random_ticked",
-		"material_is_replaceable",
-		"material_blocks_movement",
-		"material_is_liquid",
-		"material_is_solid",
-		"material_is_burnable",
-		"material_is_opaque",
-		"material_blocks_light",
-		"material",
-		"gets_flushed",
-		"redirects_dust",
-		"flammable",
-		"instrument",
-		"sends_comparator_updates"
+		"slipperiness",
+		"suffocates_mobs"
 	],
 	"properties": {
 		"hardness": {
