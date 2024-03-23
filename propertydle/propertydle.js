@@ -102,7 +102,20 @@ function new_game(daily_game = false) {
     // delete data.properties.map_color;
     // delete data.properties.instrument;
     delete data.properties.numerical_id;
-
+    
+    delete data.properties.instant_shape_updater;
+    delete data.properties.instant_block_updater;
+    delete data.properties.instant_updater;
+    delete data.properties.shape_update_on_interaction;
+    delete data.properties.shape_update_from_environment;
+    delete data.properties.material;
+    delete data.properties.material_is_liquid;
+    delete data.properties.material_is_solid;
+    delete data.properties.material_blocks_movement;
+    delete data.properties.material_is_burnable;
+    delete data.properties.material_is_replaceable;
+    delete data.properties.material_blocks_light;
+    
     Object.keys(data.properties).forEach(key => {
         if(key.startsWith("tag_")) {
             delete data.properties[key];
@@ -295,13 +308,29 @@ function guess(latest_guess) {
     });
     $('#output-table').children('tbody').append(append_string);
 
+    // Toggle functionality of 'Expand' buttons 
     $('body').off('click.collapse-next.data-api');
-    $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (e) {
-        e.preventDefault();
-        var $target = $(this).next();
-        // Not sure which one I prefer:
-        $target.toggle(); // With toggle animation/delay
-        // $target.toggle(); // No toggle animation/delay
+    $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (_e) {
+        const $target = $(this).next();
+        $target.toggle();
+
+        let label = $(this).find('td');
+        if(label.text() === "Expand...") {
+            label.text("Collapse...");
+        } else if (label.text() === "Collapse...") {
+            label.text("Expand...");
+        }
+    });
+    $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-siblings]', function (_e) {
+        const $target = $(this).siblings();
+        $target.toggleClass("display-none");
+        
+        let label = $(this).find('td');
+        if(label.text() === "Expand...") {
+            label.text("Collapse...");
+        } else if (label.text() === "Collapse...") {
+            label.text("Expand...");
+        }
     });
 
     if(latest_guess == secret_block) {
@@ -336,30 +365,57 @@ function deepCopy(obj) {
     return obj;
 }
 
-function get_data_cell(latest_guess, entry, property_name, top_level = true) {
+function get_data_cell(latest_guess, entry, property_id, top_level = true) {
     var return_data;
     if(typeof(entry) == 'object' && entry != null) {
         if(top_level && (get_all_values(entry).length > 2 || (Object.keys(entry).join().match(/<br>/g) || []).length > 2)) {
-            return_data = `<td class="nested-cell"><button class="btn expand-btn" type="button" data-toggle="collapse-next">Expand</button>\n<table class="table table-bordered table-hover nested-table collapse"><tbody>`;
+            return_data = `<td class="nested-cell"><a class="expand-btn type="button" data-toggle="collapse-siblings"><table class="table table-bordered nested-table expand-btn"><tbody><tr><td>Expand...</td></tr></tbody></table></a>`
+            
+            if(get_all_values(entry, true).join("  ").length <= 40) {
+                return_data += /*html*/`<table class="table table-bordered table-hover nested-table expandable preview-table">
+                    <tbody>
+                        <tr>${get_nested_table_contents(latest_guess, sort_mixed_types(get_all_values(entry, true)), property_id, true)}</tr>
+                    </tbody>
+                </table>`;
+            }
+            
+            return_data += /*html*/`<table class="table table-bordered table-hover nested-table expandable display-none"><tbody>`;
         } else {
             return_data = `<td class="nested-cell"><table class="table table-bordered table-hover nested-table"><tbody>`;
         }
         
         if(Array.isArray(entry)) {
             entry.forEach(value => {
-                return_data += `<tr>${get_data_cell(latest_guess, value, property_name, false)}</tr>`;
+                return_data += `<tr>${get_data_cell(latest_guess, value, property_id, false)}</tr>`;
             });
         } else {
             Object.keys(entry).forEach(key => {
-                return_data += `<tr><td>${key}</td>${get_data_cell(latest_guess, entry[key], property_name, false)}</tr>`;
+                return_data += `<tr><td>${key}</td>${get_data_cell(latest_guess, entry[key], property_id, false)}</tr>`;
             });
         }
         return_data += "</tbody></table></td>";
 
     } else {
-        return_data = `<td ${formatting_color(latest_guess, entry, property_name)}>${value_parser(entry)}</td>`;
+        return_data = `<td ${formatting_color(latest_guess, entry, property_id)}>${value_parser(entry)}</td>`;
     }
     return return_data;
+}
+
+function get_nested_table_contents(latest_guess, nested_data, property_name, horizontal_arr = false) {
+    if (Array.isArray(nested_data)) {
+        if(horizontal_arr) {
+            return nested_data.reduce((acc, sub_entry) => {
+                return acc + get_data_cell(latest_guess, sub_entry, property_name, false);
+            }, "");
+        } else {
+            return nested_data.reduce((acc, sub_entry) => {
+                return acc + `<tr>${get_data_cell(latest_guess, sub_entry, property_name, false)}</tr>`;
+            }, "");
+        }
+    }
+    return Object.keys(nested_data).reduce((acc, key) => {
+        return acc + `<tr><td>${key}</td>${get_data_cell(latest_guess, nested_data[key], property_name, false)}</tr>`;
+    }, "");
 }
 
 function sort_mixed_types(list) {
@@ -376,13 +432,13 @@ function sort_mixed_types(list) {
     });
 }
 
-function formatting_color(latest_guess, value, property_name) {
+function formatting_color(latest_guess, value, property_id) {
     var color = "";
-    if(property_name == "block") return "";
+    if(property_id == "block") return "";
     
-    property_entries = data.properties[property_name].entries
+    property_entries = data.properties[property_id].entries
     
-    var secret_value = property_entries[secret_block] ?? data.properties[property_name].default_value ?? "no default";
+    var secret_value = property_entries[secret_block] ?? data.properties[property_id].default_value ?? "no default";
     if(value == secret_value || JSON.stringify(property_entries[latest_guess]) === JSON.stringify(property_entries[secret_block])) {
         color = `class="cf-yes"`;
         
