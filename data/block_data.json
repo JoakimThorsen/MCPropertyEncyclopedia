@@ -916,7 +916,10 @@
 	],
 	"properties": {
 		"affects_movement_speed": {
+			"property_name": "Affects Movement Speed",
+			"property_description": "Whether walking on/through this block affects the movement of players or certain other entities.",
 			"default_value": "No",
+			"relative_gradient": true,
 			"entries": {
 				"Blue Ice": "Slippery",
 				"Cave Vines": "Climbable",
@@ -946,13 +949,13 @@
 				"Vines": "Climbable",
 				"Water": "Fluid",
 				"Weeping Vines": "Climbable"
-			},
-			"property_description": "Whether walking on/through this block affects the movement of players or certain other entities.",
-			"property_name": "Affects Movement Speed",
-			"relative_gradient": true
+			}
 		},
 		"blast_resistance": {
+			"property_name": "Blast Resistance",
+			"property_description": "Determines how likely this block is to break from exposure to an explosion",
 			"default_value": 0,
+			"relative_gradient": true,
 			"entries": {
 				"Activator Rail": 0.7,
 				"Amethyst Cluster": 1.5,
@@ -1219,13 +1222,13 @@
 				"Water": 100,
 				"Wood": 2,
 				"Wool": 0.8
-			},
-			"property_description": "Determines how likely this block is to break from exposure to an explosion",
-			"property_name": "Blast Resistance",
-			"relative_gradient": true
+			}
 		},
 		"block_entity": {
+			"property_name": "Block Entity",
+			"property_description": "Whether the block is a block entity (\"tile entity\"), and if so, whether it ticks.",
 			"default_value": "No",
+			"relative_gradient": true,
 			"entries": {
 				"Banners": "Non-Ticking",
 				"Barrel": "Non-Ticking",
@@ -1274,13 +1277,13 @@
 				"Suspicious Sand": "Non-Ticking",
 				"Torchflower Crop": "No",
 				"Trapped Chest": "Ticking"
-			},
-			"property_description": "Whether the block is a block entity (\"tile entity\"), and if so, whether it ticks.",
-			"property_name": "Block Entity",
-			"relative_gradient": true
+			}
 		},
 		"block_entity_data": {
+			"property_name": "Block Entity Data",
+			"property_description": "Whether the block is a block entity (or \"tile entity\"), and if so, what data the tile entity stores",
 			"default_value": "No",
+			"relative_gradient": true,
 			"entries": {
 				"Banners": "Patterns",
 				"Barrel": "Item contents",
@@ -1358,12 +1361,11 @@
 					"Item contents",
 					"Opening/closing animation"
 				]
-			},
-			"property_description": "Whether the block is a block entity (or \"tile entity\"), and if so, what data the tile entity stores",
-			"property_name": "Block Entity Data",
-			"relative_gradient": true
+			}
 		},
 		"block_render_type": {
+			"property_name": "Block Render Type",
+			"property_description": "",
 			"default_value": "solid",
 			"entries": {
 				"Activator Rail": "cutout",
@@ -1466,11 +1468,11 @@
 					"Water": "solid"
 				},
 				"Weeping Vines": "cutout"
-			},
-			"property_description": "",
-			"property_name": "Block Render Type"
+			}
 		},
 		"blocks_beacon_beam": {
+			"property_name": "Blocks Beacon Beam",
+			"property_description": "Whether placing this block above a beacon will prevent its beam from forming, or stop its current one.",
 			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
@@ -1612,19 +1614,19 @@
 				"Structure Block": "Yes",
 				"Suspicious Gravel": "Yes",
 				"Suspicious Sand": "Yes",
+				"TNT": "Yes",
 				"Target": "Yes",
 				"Terracotta": "Yes",
 				"Tinted Glass": "Yes",
-				"TNT": "Yes",
 				"Tuff": "Yes",
 				"Wart Blocks": "Yes",
 				"Wood": "Yes",
 				"Wool": "Yes"
-			},
-			"property_description": "Whether placing this block above a beacon will prevent its beam from forming, or stop its current one.",
-			"property_name": "Blocks Beacon Beam"
+			}
 		},
 		"blocks_motion": {
+			"property_name": "(Legacy) Blocks Motion",
+			"property_description": "blockState.blocksMotion()",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -1709,11 +1711,11 @@
 				"Vines": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "blockState.blocksMotion()",
-			"property_name": "(Legacy) Blocks Motion"
+			}
 		},
 		"blocks_skylight": {
+			"property_name": "Blocks Skylight",
+			"property_description": "",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": {
@@ -1994,11 +1996,11 @@
 					"waterlogged: true": "Yes"
 				},
 				"Weeping Vines": "No"
-			},
-			"property_description": "",
-			"property_name": "Blocks Skylight"
+			}
 		},
 		"bottom_face_has_collision": {
+			"property_name": "Bottom Face Has Collision",
+			"property_description": "This is true if the bottom side has collision at the outer face (meaning it has a hard hitbox that aligns with the block grid).",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -2166,11 +2168,11 @@
 				},
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "This is true if the bottom side has collision at the outer face (meaning it has a hard hitbox that aligns with the block grid).",
-			"property_name": "Bottom Face Has Collision"
+			}
 		},
 		"bottom_face_has_full_square": {
+			"property_name": "Bottom Face Has Full Square",
+			"property_description": "This is true if the bottom face is a full square.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -2305,11 +2307,11 @@
 				"Walls": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "This is true if the bottom face is a full square.",
-			"property_name": "Bottom Face Has Full Square"
+			}
 		},
 		"bottom_face_has_small_square": {
+			"property_name": "Bottom Face Has Small Square",
+			"property_description": "This is true if the bottom face contains a square of length 2 at its center.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -2489,11 +2491,11 @@
 				},
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "This is true if the bottom face contains a square of length 2 at its center.",
-			"property_name": "Bottom Face Has Small Square"
+			}
 		},
 		"burn_odds": {
+			"property_name": "Burn Odds",
+			"property_description": "The higher the burn odds, the quicker a block burns away (when on fire). 0 means it is non-flammable.",
 			"default_value": 0,
 			"entries": {
 				"Azalea": 60,
@@ -2580,19 +2582,20 @@
 					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Crimson Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Warped Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": 0
 				},
 				"Sweet Berry Bush": 100,
-				"Target": 20,
 				"TNT": 100,
+				"Target": 20,
 				"Torchflower": 100,
 				"Torchflower Crop": 0,
 				"Vines": 100,
 				"Wood": 5,
 				"Wool": 60
-			},
-			"property_description": "The higher the burn odds, the quicker a block burns away (when on fire). 0 means it is non-flammable.",
-			"property_name": "Burn Odds"
+			}
 		},
 		"collision_bottom_all": {
+			"property_name": "Collision Bottom (All)",
+			"property_description": "The block's downwards-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"default_value": 16,
+			"size_type": "pixel",
 			"entries": {
 				"Activator Rail": "Not Applicable",
 				"Air": "Not Applicable",
@@ -2931,8 +2934,8 @@
 				"Small Dripleaf": "Not Applicable",
 				"Snow": {
 					"1 Layer": "Not Applicable",
-					"2-8 Layers": 16,
 					"2&3&5 Layers": 16,
+					"2-8 Layers": 16,
 					"4 Layers": [
 						12,
 						14,
@@ -2995,13 +2998,13 @@
 				"Walls": 16,
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
-			},
-			"property_description": "The block's downwards-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
-			"property_name": "Collision Bottom (All)",
-			"size_type": "pixel"
+			}
 		},
 		"collision_bottom_external": {
+			"property_name": "Collision Bottom (External)",
+			"property_description": "The block's downwards-facing collision surfaces.\nDoes not include internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"default_value": 16,
+			"size_type": "pixel",
 			"entries": {
 				"Activator Rail": "Not Applicable",
 				"Air": "Not Applicable",
@@ -3244,31 +3247,31 @@
 				"Walls": 16,
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
-			},
-			"property_description": "The block's downwards-facing collision surfaces.\nDoes not include internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
-			"property_name": "Collision Bottom (External)",
-			"size_type": "pixel"
+			}
 		},
 		"comparator_output": {
+			"property_name": "Comparator Output",
+			"property_description": "What value a comparator will read from this block. Obtained from the wiki.\nChest- or Hopper Minecarts placed on detector rails will also give an output identical to their respective blocks.\nItem frames can also give an output of 0 if there is no item inside, or a value from 1 to 8 depending on the item rotation.",
 			"default_value": "No",
+			"relative_gradient": true,
 			"entries": {
 				"Barrel": {
 					"0": 0,
 					"1": 1,
-					"1s 60": 2,
-					"3s 55": 3,
-					"5s 51": 4,
-					"7s 46": 5,
-					"9s 42": 6,
 					"11s 37": 7,
 					"13s 32": 8,
 					"15s 28": 9,
 					"17s 23": 10,
 					"19s 19": 11,
+					"1s 60": 2,
 					"21s 14": 12,
 					"23s 10": 13,
 					"25s 5": 14,
-					"27s": 15
+					"27s": 15,
+					"3s 55": 3,
+					"5s 51": 4,
+					"7s 46": 5,
+					"9s 42": 6
 				},
 				"Bee Nest": {
 					"honey_level: 0": 0,
@@ -3293,10 +3296,10 @@
 					"28": 3,
 					"42": 4,
 					"55": 5,
-					"1s 5": 6,
 					"1s 19": 7,
 					"1s 32": 8,
 					"1s 46": 9,
+					"1s 5": 6,
 					"1s 60": 10,
 					"2s 10": 11,
 					"2s 23": 12,
@@ -3309,8 +3312,8 @@
 					"1": 1,
 					"23": 2,
 					"46": 3,
-					"1s 5": 4,
 					"1s 28": 5,
+					"1s 5": 4,
 					"1s 51": 6,
 					"2s 10": 7,
 					"2s 32": 8,
@@ -3322,7 +3325,6 @@
 					"4s 42": 14,
 					"5s": 15
 				},
-				"Calibrated Sculk Sensor": "0-15",
 				"Cake": {
 					"bites: 0": 14,
 					"bites: 1": 12,
@@ -3332,6 +3334,7 @@
 					"bites: 5": 4,
 					"bites: 6": 2
 				},
+				"Calibrated Sculk Sensor": "0-15",
 				"Cauldron": {
 					"Empty Cauldron": 0,
 					"Lava Cauldron": 3,
@@ -3345,8 +3348,6 @@
 					"Double": {
 						"0": 0,
 						"1": 1,
-						"3s 55": 2,
-						"7s 46": 3,
 						"11s 37": 4,
 						"15s 28": 5,
 						"19s 19": 6,
@@ -3355,28 +3356,30 @@
 						"30s 55": 9,
 						"34s 46": 10,
 						"38s 37": 11,
+						"3s 55": 2,
 						"42s 28": 12,
 						"46s 19": 13,
 						"50s 10": 14,
-						"54s": 15
+						"54s": 15,
+						"7s 46": 3
 					},
 					"Single": {
 						"0": 0,
 						"1": 1,
-						"1s 60": 2,
-						"3s 55": 3,
-						"5s 51": 4,
-						"7s 46": 5,
-						"9s 42": 6,
 						"11s 37": 7,
 						"13s 32": 8,
 						"15s 28": 9,
 						"17s 23": 10,
 						"19s 19": 11,
+						"1s 60": 2,
 						"21s 14": 12,
 						"23s 10": 13,
 						"25s 5": 14,
-						"27s": 15
+						"27s": 15,
+						"3s 55": 3,
+						"5s 51": 4,
+						"7s 46": 5,
+						"9s 42": 6
 					}
 				},
 				"Chiseled Bookshelf": "0-6",
@@ -3408,8 +3411,8 @@
 					"5s 10": 9,
 					"5s 51": 10,
 					"6s 28": 11,
-					"7s 5": 12,
 					"7s 46": 13,
+					"7s 5": 12,
 					"8s 23": 14,
 					"9s": 15
 				},
@@ -3426,8 +3429,8 @@
 					"5s 10": 9,
 					"5s 51": 10,
 					"6s 28": 11,
-					"7s 5": 12,
 					"7s 46": 13,
+					"7s 5": 12,
 					"8s 23": 14,
 					"9s": 15
 				},
@@ -3442,10 +3445,10 @@
 					"28": 3,
 					"42": 4,
 					"55": 5,
-					"1s 5": 6,
 					"1s 19": 7,
 					"1s 32": 8,
 					"1s 46": 9,
+					"1s 5": 6,
 					"1s 60": 10,
 					"2s 10": 11,
 					"2s 23": 12,
@@ -3458,8 +3461,8 @@
 					"1": 1,
 					"23": 2,
 					"46": 3,
-					"1s 5": 4,
 					"1s 28": 5,
+					"1s 5": 4,
 					"1s 51": 6,
 					"2s 10": 7,
 					"2s 32": 8,
@@ -3472,18 +3475,18 @@
 					"5s": 15
 				},
 				"Jukebox": {
-					"\"5\"": 15,
 					"\"11\"": 11,
 					"\"13\"": 1,
+					"\"5\"": 15,
+					"No disc": 0,
+					"Otherside": 14,
+					"Pigstep": 13,
 					"blocks": 3,
 					"cat": 2,
 					"chirp": 4,
 					"far": 5,
 					"mall": 6,
 					"mellohi": 7,
-					"No disc": 0,
-					"Otherside": 14,
-					"Pigstep": 13,
 					"stal": 8,
 					"strad": 9,
 					"wait": 12,
@@ -3504,20 +3507,20 @@
 				"Shulker Box": {
 					"0": 0,
 					"1": 1,
-					"1s 60": 2,
-					"3s 55": 3,
-					"5s 51": 4,
-					"7s 46": 5,
-					"9s 42": 6,
 					"11s 37": 7,
 					"13s 32": 8,
 					"15s 28": 9,
 					"17s 23": 10,
 					"19s 19": 11,
+					"1s 60": 2,
 					"21s 14": 12,
 					"23s 10": 13,
 					"25s 5": 14,
-					"27s": 15
+					"27s": 15,
+					"3s 55": 3,
+					"5s 51": 4,
+					"7s 46": 5,
+					"9s 42": 6
 				},
 				"Smoker": {
 					"0": 0,
@@ -3526,10 +3529,10 @@
 					"28": 3,
 					"42": 4,
 					"55": 5,
-					"1s 5": 6,
 					"1s 19": 7,
 					"1s 32": 8,
 					"1s 46": 9,
+					"1s 5": 6,
 					"1s 60": 10,
 					"2s 10": 11,
 					"2s 23": 12,
@@ -3541,8 +3544,6 @@
 					"Double": {
 						"0": 0,
 						"1": 1,
-						"3s 55": 2,
-						"7s 46": 3,
 						"11s 37": 4,
 						"15s 28": 5,
 						"19s 19": 6,
@@ -3551,36 +3552,38 @@
 						"30s 55": 9,
 						"34s 46": 10,
 						"38s 37": 11,
+						"3s 55": 2,
 						"42s 28": 12,
 						"46s 19": 13,
 						"50s 10": 14,
-						"54s": 15
+						"54s": 15,
+						"7s 46": 3
 					},
 					"Single": {
 						"0": 0,
 						"1": 1,
-						"1s 60": 2,
-						"3s 55": 3,
-						"5s 51": 4,
-						"7s 46": 5,
-						"9s 42": 6,
 						"11s 37": 7,
 						"13s 32": 8,
 						"15s 28": 9,
 						"17s 23": 10,
 						"19s 19": 11,
+						"1s 60": 2,
 						"21s 14": 12,
 						"23s 10": 13,
 						"25s 5": 14,
-						"27s": 15
+						"27s": 15,
+						"3s 55": 3,
+						"5s 51": 4,
+						"7s 46": 5,
+						"9s 42": 6
 					}
 				}
-			},
-			"property_description": "What value a comparator will read from this block. Obtained from the wiki.\nChest- or Hopper Minecarts placed on detector rails will also give an output identical to their respective blocks.\nItem frames can also give an output of 0 if there is no item inside, or a value from 1 to 8 depending on the item rotation.",
-			"property_name": "Comparator Output",
-			"relative_gradient": true
+			}
 		},
 		"conductive": {
+			"property_name": "Conductive",
+			"property_description": "Whether or not a redstone component can be powered through this block.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isRedstoneConductor",
 			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
@@ -3723,11 +3726,11 @@
 				"Wart Blocks": "Yes",
 				"Wood": "Yes",
 				"Wool": "Yes"
-			},
-			"property_description": "Whether or not a redstone component can be powered through this block.",
-			"property_name": "Conductive"
+			}
 		},
 		"connects_to_panes": {
+			"property_name": "Connects To Panes (North)",
+			"property_description": "Whether a glass pane block to the north will connect to this block",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -3917,13 +3920,12 @@
 				"Walls": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "Whether a glass pane block to the north will connect to this block",
-			"property_name": "Connects To Panes (North)"
+			}
 		},
 		"connects_to_walls": {
 			"property_name": "Connects To Walls (North)",
 			"property_description": "Whether a wall block to the north will connect to this block.",
+			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
 				"Air": "No",
@@ -4032,16 +4034,16 @@
 				"Pink Petals": "No",
 				"Piston": {
 					"Moving Piston": "No",
+					"Piston Head": {
+						"facing: down<br>facing: east<br>facing: south<br>facing: up<br>facing: west": "No",
+						"facing: north": "Yes"
+					},
 					"Piston<br>Sticky Piston": {
 						"extended: false": "Yes",
 						"extended: true": {
 							"facing: down<br>facing: east<br>facing: north<br>facing: up<br>facing: west": "No",
 							"facing: south": "Yes"
 						}
-					},
-					"Piston Head": {
-						"facing: down<br>facing: east<br>facing: south<br>facing: up<br>facing: west": "No",
-						"facing: north": "Yes"
 					}
 				},
 				"Pitcher Crop": "No",
@@ -4114,10 +4116,11 @@
 				"Vines": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"default_value": "Yes"
+			}
 		},
 		"dragon_immune": {
+			"property_name": "Dragon immune",
+			"property_description": "Whether this block is immune to The Ender Dragon flying through it.",
 			"default_value": "No",
 			"entries": {
 				"Air": "Not Applicable",
@@ -4143,11 +4146,11 @@
 				"Respawn Anchor": "Yes",
 				"Structure Block": "Yes",
 				"Water": "Yes"
-			},
-			"property_description": "Whether this block is immune to The Ender Dragon flying through it.",
-			"property_name": "Dragon immune"
+			}
 		},
 		"emits_power": {
+			"property_name": "Emits Power",
+			"property_description": "Whether this block can emit redstone signals.",
 			"default_value": "No",
 			"entries": {
 				"Block of Redstone": "Yes",
@@ -4169,11 +4172,11 @@
 				"Target": "Yes",
 				"Trapped Chest": "Yes",
 				"Tripwire Hook": "Yes"
-			},
-			"property_description": "Whether this block can emit redstone signals.",
-			"property_name": "Emits Power"
+			}
 		},
 		"exists_as_item": {
+			"property_name": "Exists As Item",
+			"property_description": "Whether this block has a direct item-equivalent.",
 			"default_value": "Yes",
 			"entries": {
 				"Air": "No",
@@ -4224,11 +4227,11 @@
 					"Weeping Vines": "Yes",
 					"Weeping Vines Plant": "No"
 				}
-			},
-			"property_description": "Whether this block has a direct item-equivalent.",
-			"property_name": "Exists As Item"
+			}
 		},
 		"falling_block": {
+			"property_name": "Falling Block",
+			"property_description": "Whether the block can fall when unsupported (as a falling_block entity).",
 			"default_value": "No",
 			"entries": {
 				"Anvil": "Yes",
@@ -4247,11 +4250,11 @@
 				},
 				"Suspicious Gravel": "Yes",
 				"Suspicious Sand": "Yes"
-			},
-			"property_description": "Whether the block can fall when unsupported (as a falling_block entity).",
-			"property_name": "Falling Block"
+			}
 		},
 		"flammable": {
+			"property_name": "Flammable",
+			"property_description": "",
 			"default_value": "No",
 			"entries": {
 				"Azalea": "Yes",
@@ -4338,18 +4341,18 @@
 					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Crimson Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Warped Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "No"
 				},
 				"Sweet Berry Bush": "Yes",
-				"Target": "Yes",
 				"TNT": "Yes",
+				"Target": "Yes",
 				"Torchflower": "Yes",
 				"Torchflower Crop": "No",
 				"Vines": "Yes",
 				"Wood": "Yes",
 				"Wool": "Yes"
-			},
-			"property_description": "",
-			"property_name": "Flammable"
+			}
 		},
 		"fluid_render_type": {
+			"property_name": "Fluid Render Type",
+			"property_description": "",
 			"default_value": "solid",
 			"entries": {
 				"Activator Rail": {
@@ -4528,11 +4531,11 @@
 					"waterlogged: true": "translucent"
 				},
 				"Water": "translucent"
-			},
-			"property_description": "",
-			"property_name": "Fluid Render Type"
+			}
 		},
 		"full_cube": {
+			"property_name": "Full Cube",
+			"property_description": "Whether the block has a normal cube shape and has full block collision on all sides.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -4673,11 +4676,11 @@
 				"Walls": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "Whether the block has a normal cube shape and has full block collision on all sides.",
-			"property_name": "Full Cube"
+			}
 		},
 		"generates_in_structures": {
+			"property_name": "Generates in Structures",
+			"property_description": "Based off of what blocks show up in the standard structure palletes. Does not include all complex structures.",
 			"default_value": "No",
 			"entries": {
 				"Air": {
@@ -4713,8 +4716,8 @@
 				"Block of Gold": "Yes",
 				"Block of Lapis Lazuli": "Yes",
 				"Block of Quartz": {
-					"Chiseled Quartz Block<br>Quartz Bricks<br>Quartz Pillar": "No",
-					"Block of Quartz<br>Smooth Quartz Block": "Yes"
+					"Block of Quartz<br>Smooth Quartz Block": "Yes",
+					"Chiseled Quartz Block<br>Quartz Bricks<br>Quartz Pillar": "No"
 				},
 				"Block of Redstone": "Yes",
 				"Blue Ice": "Yes",
@@ -4914,12 +4917,12 @@
 				},
 				"Stonecutter": "Yes",
 				"Structure Block": "Yes",
+				"TNT": "Yes",
 				"Target": "Yes",
 				"Terracotta": {
 					"Black Terracotta<br>Green Terracotta<br>Magenta Terracotta<br>Pink Terracotta<br>Purple Terracotta": "No",
 					"Blue Terracotta<br>Brown Terracotta<br>Cyan Terracotta<br>Gray Terracotta<br>Light Blue Terracotta<br>Light Gray Terracotta<br>Lime Terracotta<br>Orange Terracotta<br>Red Terracotta<br>Terracotta<br>White Terracotta<br>Yellow Terracotta": "Yes"
 				},
-				"TNT": "Yes",
 				"Torch": {
 					"Soul Torch<br>Soul Wall Torch": "No",
 					"Torch<br>Wall Torch": "Yes"
@@ -4946,11 +4949,11 @@
 					"Black Wool<br>Blue Wool<br>Brown Wool<br>Cyan Wool<br>Gray Wool<br>Green Wool<br>Light Blue Wool<br>Light Gray Wool<br>Lime Wool<br>Orange Wool<br>Red Wool<br>White Wool<br>Yellow Wool": "Yes",
 					"Magenta Wool<br>Pink Wool<br>Purple Wool": "No"
 				}
-			},
-			"property_name": "Generates in Structures",
-			"property_description": "Based off of what blocks show up in the standard structure palletes. Does not include all complex structures."
+			}
 		},
 		"gets_flushed": {
+			"property_name": "Gets Flushed",
+			"property_description": "Whether this block will get destroyed by flowing water or lava.",
 			"default_value": "No",
 			"entries": {
 				"Air": "Yes",
@@ -5003,11 +5006,11 @@
 				"Twisting Vines": "Yes",
 				"Vines": "Yes",
 				"Weeping Vines": "Yes"
-			},
-			"property_description": "Whether this block will get destroyed by flowing water or lava.",
-			"property_name": "Gets Flushed"
+			}
 		},
 		"gets_random_ticked": {
+			"property_name": "Gets Random Ticked",
+			"property_description": "Whether the block gets affected by random ticks.",
 			"default_value": "No",
 			"entries": {
 				"Amethyst Cluster": "Yes",
@@ -5124,12 +5127,13 @@
 					},
 					"Weeping Vines Plant": "No"
 				}
-			},
-			"property_description": "Whether the block gets affected by random ticks.",
-			"property_name": "Gets Random Ticked"
+			}
 		},
 		"hardness": {
+			"property_name": "Hardness",
+			"property_description": "Determines how fast the block can be mined",
 			"default_value": 0,
+			"relative_gradient": true,
 			"entries": {
 				"Activator Rail": 0.7,
 				"Air": "Not Applicable",
@@ -5426,12 +5430,11 @@
 				"Water": "Not Applicable",
 				"Wood": 2,
 				"Wool": 0.8
-			},
-			"property_description": "Determines how fast the block can be mined",
-			"property_name": "Hardness",
-			"relative_gradient": true
+			}
 		},
 		"has_collision": {
+			"property_name": "Has Collision",
+			"property_description": "Whether the block has any solid collision box.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -5547,12 +5550,13 @@
 				},
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "Whether the block has any solid collision box.",
-			"property_name": "Has Collision"
+			}
 		},
 		"height_all": {
+			"property_name": "Height (All)",
+			"property_description": "The block's upwards-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"default_value": 16,
+			"size_type": "pixel",
 			"entries": {
 				"Activator Rail": "Not Applicable",
 				"Air": "Not Applicable",
@@ -6002,13 +6006,13 @@
 				},
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
-			},
-			"property_description": "The block's upwards-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
-			"property_name": "Height (All)",
-			"size_type": "pixel"
+			}
 		},
 		"height_external": {
+			"property_name": "Height (External)",
+			"property_description": "The block's upwards-facing collision surfaces.\nDoes not include internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"default_value": 16,
+			"size_type": "pixel",
 			"entries": {
 				"Activator Rail": "Not Applicable",
 				"Air": "Not Applicable",
@@ -6298,12 +6302,11 @@
 				},
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
-			},
-			"property_description": "The block's upwards-facing collision surfaces.\nDoes not include internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
-			"property_name": "Height (External)",
-			"size_type": "pixel"
+			}
 		},
 		"ignite_odds": {
+			"property_name": "Ignite Odds",
+			"property_description": "The higher the ignite odds, the more likely a block is to catch fire (if it is able to spread there).",
 			"default_value": 0,
 			"entries": {
 				"Azalea": 30,
@@ -6390,18 +6393,18 @@
 					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Crimson Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Warped Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": 0
 				},
 				"Sweet Berry Bush": 60,
-				"Target": 15,
 				"TNT": 15,
+				"Target": 15,
 				"Torchflower": 60,
 				"Torchflower Crop": 0,
 				"Vines": 15,
 				"Wood": 5,
 				"Wool": 30
-			},
-			"property_description": "The higher the ignite odds, the more likely a block is to catch fire (if it is able to spread there).",
-			"property_name": "Ignite Odds"
+			}
 		},
 		"ignited_by_lava": {
+			"property_name": "Ignited By Lava",
+			"property_description": "",
 			"default_value": "No",
 			"entries": {
 				"Bamboo": "Yes",
@@ -6487,12 +6490,13 @@
 				"Vines": "Yes",
 				"Wood": "Yes",
 				"Wool": "Yes"
-			},
-			"property_description": "",
-			"property_name": "Ignited By Lava"
+			}
 		},
 		"inflicts_damage": {
+			"property_name": "Inflicts Damage",
+			"property_description": "Whether the block inflicts damage in any way.\nObtained manually",
 			"default_value": "No",
+			"relative_gradient": true,
 			"entries": {
 				"Anvil": {
 					"Normally": "No",
@@ -6525,12 +6529,11 @@
 				"Sweet Berry Bush": "Damage When Moving Through",
 				"TNT": "Explodes",
 				"Water": "Drowning"
-			},
-			"property_description": "Whether the block inflicts damage in any way.\nObtained manually",
-			"property_name": "Inflicts Damage",
-			"relative_gradient": true
+			}
 		},
 		"instant_block_updater": {
+			"property_name": "Instant Block Updater (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
+			"property_description": "",
 			"default_value": "No",
 			"entries": {
 				"Activator Rail": "Yes",
@@ -6578,11 +6581,11 @@
 					"Bubble Column": "No",
 					"Water": "Yes"
 				}
-			},
-			"property_description": "",
-			"property_name": "Instant Block Updater (NOT UPDATED TO 1.20; DEFAULT VALUE USED)"
+			}
 		},
 		"instant_mineable": {
+			"property_name": "Instant-Mineable",
+			"property_description": "Whether this block can be instant-mined when using at least:\n-Efficiency V Diamond/<wbr>Netherite (Yes)\n-Efficiency V Gold (With Gold)\n-Haste 2 with Diamond or greater (With Haste)",
 			"default_value": null,
 			"entries": {
 				"Activator Rail": "With eff. V Diamond",
@@ -6842,10 +6845,10 @@
 				"Suspicious Gravel": "With eff. V Diamond",
 				"Suspicious Sand": "With eff. V Diamond",
 				"Sweet Berry Bush": "By Hand",
+				"TNT": "By Hand",
 				"Target": "With eff. V Diamond",
 				"Terracotta": "With eff. V Gold",
 				"Tinted Glass": "No",
-				"TNT": "By Hand",
 				"Torch": "By Hand",
 				"Torchflower": "With eff. V Diamond",
 				"Torchflower Crop": "With eff. V Diamond",
@@ -6867,11 +6870,11 @@
 				"Weeping Vines": "By Hand",
 				"Wood": "No",
 				"Wool": "No"
-			},
-			"property_description": "Whether this block can be instant-mined when using at least:\n-Efficiency V Diamond/<wbr>Netherite (Yes)\n-Efficiency V Gold (With Gold)\n-Haste 2 with Diamond or greater (With Haste)",
-			"property_name": "Instant-Mineable"
+			}
 		},
 		"instant_shape_updater": {
+			"property_name": "Instant Shape Updater (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
+			"property_description": "",
 			"default_value": "No",
 			"entries": {
 				"Amethyst Cluster": "Yes",
@@ -6964,11 +6967,11 @@
 					"Bubble Column": "No",
 					"Water": "Yes"
 				}
-			},
-			"property_description": "",
-			"property_name": "Instant Shape Updater (NOT UPDATED TO 1.20; DEFAULT VALUE USED)"
+			}
 		},
 		"instant_updater": {
+			"property_name": "Instant Updater (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
+			"property_description": "",
 			"default_value": "No",
 			"entries": {
 				"Activator Rail": "Yes",
@@ -7087,12 +7090,13 @@
 					"Bubble Column": "No",
 					"Water": "Yes"
 				}
-			},
-			"property_description": "",
-			"property_name": "Instant Updater (NOT UPDATED TO 1.20; DEFAULT VALUE USED)"
+			}
 		},
 		"instrument": {
+			"property_name": "Instrument",
+			"property_description": "Which instrument a noteblock will play if this block is placed below it (or above, in the case of heads).",
 			"default_value": "HARP",
+			"relative_gradient": true,
 			"entries": {
 				"Andesite": "BASEDRUM",
 				"Bamboo Mosaic": "BASS",
@@ -7274,12 +7278,187 @@
 				"Walls": "BASEDRUM",
 				"Wood": "BASS",
 				"Wool": "GUITAR"
-			},
-			"property_description": "Which instrument a noteblock will play if this block is placed below it (or above, in the case of heads).",
-			"property_name": "Instrument",
-			"relative_gradient": true
+			}
+		},
+		"intended_tool": {
+			"property_name": "Intended Tool",
+			"property_description": "What is the intended tool to use to interact with this block.",
+			"default_value": "Pickaxe",
+			"entries": {
+				"Air": "Not Applicable",
+				"Azalea": "By Hand",
+				"Bamboo": "Sword",
+				"Bamboo Block": "Axe",
+				"Bamboo Mosaic": "Axe",
+				"Banners": "Axe",
+				"Barrel": "Axe",
+				"Barrier": "Not Applicable",
+				"Bedrock": "Not Applicable",
+				"Beds": "Axe",
+				"Bee Nest": "Axe",
+				"Beehive": "Axe",
+				"Block of Bamboo": "Axe",
+				"Block of Stripped Bamboo": "Axe",
+				"Bookshelf": "Axe",
+				"Buttons": {
+					"Acacia Button<br>Bamboo Button<br>Birch Button<br>Cherry Button<br>Crimson Button<>brDark Oak Button<br>Jungle Button<br>Mangrove Button<br>Oak Button<br>Spruce Button<br>Warped Button": "Axe",
+					"Stone Button<br>Polished Blacstone Button": "Pickaxe"
+				},
+				"Cactus": "By Hand",
+				"Cake": "None",
+				"Calibrated Sculk Sensor": "Hoe",
+				"Campfire": "Axe",
+				"Carpets": "By Hand",
+				"Cartography Table": "Axe",
+				"Cave Vines": "Shears",
+				"Chest": "Axe",
+				"Chiseled Bookshelf": "Axe",
+				"Chorus Flower": "Axe",
+				"Chorus Plant": "Axe",
+				"Clay": "Shovel",
+				"Coarse Dirt": "Shovel",
+				"Cobweb": "Shears or Sword",
+				"Cocoa": "Axe",
+				"Command Blocks": "Not Applicable",
+				"Composter": "Axe",
+				"Concrete Powder": "Shovel",
+				"Coral Fans": "By Hand",
+				"Crafting Table": "Axe",
+				"Crops": "Hoe",
+				"Dead Bush": "Shears",
+				"Dirt": "Shovel",
+				"Dirt Path": "Shovel",
+				"Doors": {
+					"Acacia Door<br>Bamboo Door<br>Birch Door<br>Cherry Door<br>Crimson Door<>brDark Oak Door<br>Jungle Door<br>Mangrove Door<br>Oak Door<br>Spruce Door<br>Warped Door": "Axe",
+					"Iron Door": "Pickaxe"
+				},
+				"Dragon Egg": "By Hand",
+				"Dried Kelp Block": "Hoe",
+				"End Gateway": "Not Applicable",
+				"End Portal": "Not Applicable",
+				"End Portal Frame": "Not Applicable",
+				"End Rod": "By Hand",
+				"Farmland": "Shovel",
+				"Fence Gates": "Axe",
+				"Fences": "Axe",
+				"Fern": "By Hand",
+				"Fire": "By Hand",
+				"Fletching Table": "Axe",
+				"Flower Pot": "By Hand",
+				"Flowers": "By Hand",
+				"Frogspawn": "Not Applicable",
+				"Fungi": "By Hand",
+				"Glow Lichen": "Shears",
+				"Grass": "Shears",
+				"Grass Block": "Shovel",
+				"Gravel": "Shovel",
+				"Hanging Roots": "Shears",
+				"Hanging Signs": "Axe",
+				"Hay Bale": "Hoe",
+				"Honey Block": "By Hand",
+				"Honeycomb Block": "None",
+				"Hyphae": "Axe",
+				"Jack o'Lantern": "Axe",
+				"Jigsaw Block": "Not Applicable",
+				"Jukebox": "Axe",
+				"Kelp": "By Hand",
+				"Ladder": "Axe",
+				"Lava": "Not Applicable",
+				"Leaves": "Shears or Hoe",
+				"Light Block": "Not Applicable",
+				"Lily Pad": "By Hand",
+				"Logs": "Axe",
+				"Loom": "Axe",
+				"Mangrove Propagule": "By Hand",
+				"Mangrove Roots": "Axe",
+				"Melon": "Axe",
+				"Moss Block": "Hoe",
+				"Moss Carpet": "Hoe",
+				"Mud": "Shovel",
+				"Muddy Mangrove Roots": "Shovel",
+				"Mushroom Blocks": "Axe",
+				"Mushrooms": "By Hand",
+				"Mycelium": "Shovel",
+				"Nether Portal": "Not Applicable",
+				"Nether Sprouts": "Shears",
+				"Nether Wart": "Hoe",
+				"Note Block": "Axe",
+				"Pink Petals": "Shears",
+				"Pitcher Plant": "By Hand",
+				"Planks": "Axe",
+				"Podzol": "Shovel",
+				"Powder Snow": "Shovel",
+				"Pressure Plates": {
+					"Acacia Pressure Plate<br>Bamboo Pressure Plate<br>Birch Pressure Plate<br>Cherry Pressure Plate<br>Crimson Pressure Plate<>brDark Oak Pressure Plate<br>Jungle Pressure Plate<br>Mangrove Pressure Plate<br>Oak Pressure Plate<br>Spruce Pressure Plate<br>Warped Pressure Plate": "Axe",
+					"Heavy Weighted Pressure Plate<br>Light Weighted Pressure Plate<br>Polished Blackstone Pressure Plate<br>Stone Pressure Plate": "Pickaxe"
+				},
+				"Pumpkin": "Axe",
+				"Red Sand": "Shovel",
+				"Redstone Comparator": "By Hand",
+				"Redstone Dust": "By Hand",
+				"Redstone Repeater": "By Hand",
+				"Redstone Torch": "By Hand",
+				"Reinforced Deepslate": "Not Applicable",
+				"Roots": "Shears",
+				"Sand": "Shovel",
+				"Saplings": "By Hand",
+				"Scaffolding": "By Hand",
+				"Sculk": "Hoe",
+				"Sculk Catalyst": "Hoe",
+				"Sculk Sensor": "Hoe",
+				"Sculk Shrieker": "Hoe",
+				"Sculk Vein": "Hoe",
+				"Sea Pickle": "By Hand",
+				"Seagrass": "Shears",
+				"Shroomlight": "Hoe",
+				"Signs": "Axe",
+				"Slabs": {
+					"Cobbled Deepslate<br>Polished Deepslate<br>Deepslate Brick<br>Deepslate Tile<br>Cut Copper<br>End Stone Brick<br>Stone Brick<br>Blackstone (and variants)<br>(Mossy) Cobblestone<br>(Red) Nether Brick<br>Petrified Oak<br>Purpur<br>(Smooth) Quartz<br>(Cut/Smooth) Sandstone<br>(Cut/Smooth) Red Sandstone<br>(Smooth) Stone<br>Mossy Stone Brick<br>(Polished) Andesite<br>(Polished) Diorite<br>(Polished) Granite<br>Prismarine (and variants)": "Pickaxe",
+					"Wooden": "Axe"
+				},
+				"Slime Block": "By Hand",
+				"Small Dripleaf": "By Hand",
+				"Smithing Table": "Axe",
+				"Snow": "Shovel",
+				"Snow Block": "Shovel",
+				"Soul Sand": "Shovel",
+				"Soul Soil": "Shovel",
+				"Sponge": "Hoe",
+				"Spore Blossom": "By Hand",
+				"Stairs": {
+					"Acacia Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Bamboo Mosaic Stairs<br>Cherry Stairs<br>Crimson Stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Oak Stairs<br>Spruce Stairs<br>Warped Stairs": "Axe",
+					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs<br>": "Pickaxe"
+				},
+				"Stems": "Axe",
+				"Structure Block": "Not Applicable",
+				"Sugar Cane": "By Hand",
+				"Suspicious Gravel": "Shovel",
+				"Suspicious Sand": "Shovel",
+				"Sweet Berry Bush": "By Hand",
+				"TNT": "By Hand",
+				"Target": "Hoe",
+				"Torch": "By Hand",
+				"Torchflower": "By Hand",
+				"Torchflower Crop": "Hoe",
+				"Trapdoors": {
+					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<>brDark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": "Axe",
+					"Iron Trapdoor": "Pickaxe"
+				},
+				"Trapped Chest": "Axe",
+				"Tripwire": "By Hand",
+				"Tripwire Hook": "Axe",
+				"Twisting Vines": "Shears",
+				"Vines": "Shears",
+				"Wart Blocks": "Hoe",
+				"Water": "Not Applicable",
+				"Weeping Vines": "Shears",
+				"Wood": "Axe",
+				"Wool": "Shears"
+			}
 		},
 		"is_opaque_full_cube": {
+			"property_name": "Is Opaque Full Cube",
+			"property_description": "",
 			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
@@ -7422,19 +7601,19 @@
 				"Structure Block": "Yes",
 				"Suspicious Gravel": "Yes",
 				"Suspicious Sand": "Yes",
+				"TNT": "Yes",
 				"Target": "Yes",
 				"Terracotta": "Yes",
-				"TNT": "Yes",
 				"Torchflower Crop": "No",
 				"Tuff": "Yes",
 				"Wart Blocks": "Yes",
 				"Wood": "Yes",
 				"Wool": "Yes"
-			},
-			"property_description": "",
-			"property_name": "Is Opaque Full Cube"
+			}
 		},
 		"kills_grass": {
+			"property_name": "Kills Grass",
+			"property_description": "Whether grass will die when placed underneath.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": {
@@ -7697,11 +7876,11 @@
 					}
 				},
 				"Weeping Vines": "No"
-			},
-			"property_description": "Whether grass will die when placed underneath.",
-			"property_name": "Kills Grass"
+			}
 		},
 		"luminance": {
+			"property_name": "Luminance",
+			"property_description": "How much light the block emits.",
 			"default_value": "No",
 			"entries": {
 				"Amethyst Cluster": {
@@ -7807,6 +7986,12 @@
 				"Light Block": {
 					"level: 0": 0,
 					"level: 1": 1,
+					"level: 10": 10,
+					"level: 11": 11,
+					"level: 12": 12,
+					"level: 13": 13,
+					"level: 14": 14,
+					"level: 15": 15,
 					"level: 2": 2,
 					"level: 3": 3,
 					"level: 4": 4,
@@ -7814,13 +7999,7 @@
 					"level: 6": 6,
 					"level: 7": 7,
 					"level: 8": 8,
-					"level: 9": 9,
-					"level: 10": 10,
-					"level: 11": 11,
-					"level: 12": 12,
-					"level: 13": 13,
-					"level: 14": 14,
-					"level: 15": 15
+					"level: 9": 9
 				},
 				"Magma Block": 3,
 				"Mushrooms": {
@@ -7880,11 +8059,11 @@
 				"Torchflower Crop": {
 					"age: 0<br>age: 1": 0
 				}
-			},
-			"property_description": "How much light the block emits.",
-			"property_name": "Luminance"
+			}
 		},
 		"map_color": {
+			"property_name": "Map Color",
+			"property_description": "The color of this block when viewed on a map. NONE is transparent, meaning it is simply ignored.",
 			"entries": {
 				"Activator Rail": "{{mapColor|NONE}}",
 				"Air": "{{mapColor|NONE}}",
@@ -8600,6 +8779,7 @@
 				"Suspicious Gravel": "{{mapColor|STONE}}",
 				"Suspicious Sand": "{{mapColor|SAND}}",
 				"Sweet Berry Bush": "{{mapColor|PLANT}}",
+				"TNT": "{{mapColor|FIRE}}",
 				"Target": "{{mapColor|QUARTZ}}",
 				"Terracotta": {
 					"Black Terracotta": "{{mapColor|TERRACOTTA_BLACK}}",
@@ -8621,7 +8801,6 @@
 					"Yellow Terracotta": "{{mapColor|TERRACOTTA_YELLOW}}"
 				},
 				"Tinted Glass": "{{mapColor|COLOR_GRAY}}",
-				"TNT": "{{mapColor|FIRE}}",
 				"Torch": "{{mapColor|NONE}}",
 				"Torchflower": "{{mapColor|PLANT}}",
 				"Torchflower Crop": "{{mapColor|PLANT}}",
@@ -8695,11 +8874,10 @@
 					"White Wool": "{{mapColor|SNOW}}",
 					"Yellow Wool": "{{mapColor|COLOR_YELLOW}}"
 				}
-			},
-			"property_description": "The color of this block when viewed on a map. NONE is transparent, meaning it is simply ignored.",
-			"property_name": "Map Color"
+			}
 		},
 		"material": {
+			"property_name": "Material (DEPRECATED IN 1.20; DEFAULT VALUE USED)",
 			"default_value": null,
 			"entries": {
 				"Activator Rail": "DECORATION",
@@ -8992,10 +9170,10 @@
 				"Structure Void": "STRUCTURE_VOID",
 				"Sugar Cane": "PLANT",
 				"Sweet Berry Bush": "PLANT",
+				"TNT": "TNT",
 				"Target": "SOLID_ORGANIC",
 				"Terracotta": "STONE",
 				"Tinted Glass": "GLASS",
-				"TNT": "TNT",
 				"Torch": "DECORATION",
 				"Trapdoors": {
 					"Crimson Trapdoor<br>Warped Trapdoor": "NETHER_WOOD",
@@ -9018,10 +9196,11 @@
 				"Weeping Vines": "PLANT",
 				"Wood": "WOOD",
 				"Wool": "WOOL"
-			},
-			"property_name": "Material (DEPRECATED IN 1.20; DEFAULT VALUE USED)"
+			}
 		},
 		"material_blocks_light": {
+			"property_name": "Material blocksLight() (DEPRECATED IN 1.20; DEFAULT VALUE USED)",
+			"property_description": "",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -9101,8 +9280,8 @@
 				"Structure Void": "No",
 				"Sugar Cane": "No",
 				"Sweet Berry Bush": "No",
-				"Tinted Glass": "No",
 				"TNT": "No",
+				"Tinted Glass": "No",
 				"Torch": "No",
 				"Tripwire": "No",
 				"Tripwire Hook": "No",
@@ -9110,11 +9289,11 @@
 				"Vines": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "",
-			"property_name": "Material blocksLight() (DEPRECATED IN 1.20; DEFAULT VALUE USED)"
+			}
 		},
 		"material_blocks_movement": {
+			"property_name": "Material blocksMovement() (DEPRECATED IN 1.20; DEFAULT VALUE USED)",
+			"property_description": "",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -9194,11 +9373,11 @@
 				"Vines": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "",
-			"property_name": "Material blocksMovement() (DEPRECATED IN 1.20; DEFAULT VALUE USED)"
+			}
 		},
 		"material_is_burnable": {
+			"property_name": "Material isBurnable() (DEPRECATED IN 1.20; DEFAULT VALUE USED)",
+			"property_description": "",
 			"default_value": "No",
 			"entries": {
 				"Bamboo": "Yes",
@@ -9276,20 +9455,20 @@
 				"Vines": "Yes",
 				"Wood": "Yes",
 				"Wool": "Yes"
-			},
-			"property_description": "",
-			"property_name": "Material isBurnable() (DEPRECATED IN 1.20; DEFAULT VALUE USED)"
+			}
 		},
 		"material_is_liquid": {
+			"property_name": "Material isLiquid() (DEPRECATED IN 1.20; DEFAULT VALUE USED)",
+			"property_description": "",
 			"default_value": "No",
 			"entries": {
 				"Lava": "Yes",
 				"Water": "Yes"
-			},
-			"property_description": "",
-			"property_name": "Material isLiquid() (DEPRECATED IN 1.20; DEFAULT VALUE USED)"
+			}
 		},
 		"material_is_replaceable": {
+			"property_name": "Material isReplaceable() (DEPRECATED IN 1.20; DEFAULT VALUE USED)",
+			"property_description": "",
 			"default_value": "No",
 			"entries": {
 				"Air": "Yes",
@@ -9312,11 +9491,11 @@
 				"Structure Void": "Yes",
 				"Vines": "Yes",
 				"Water": "Yes"
-			},
-			"property_description": "",
-			"property_name": "Material isReplaceable() (DEPRECATED IN 1.20; DEFAULT VALUE USED)"
+			}
 		},
 		"material_is_solid": {
+			"property_name": "Material isSolid() (DEPRECATED IN 1.20; DEFAULT VALUE USED)",
+			"property_description": "",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -9391,11 +9570,11 @@
 				"Vines": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "",
-			"property_name": "Material isSolid() (DEPRECATED IN 1.20; DEFAULT VALUE USED)"
+			}
 		},
 		"movable": {
+			"property_name": "Movable",
+			"property_description": "Whether it can be pushed by a piston, stops the piston from extending, or whether attempting to push it destroys the block.",
 			"default_value": "Yes",
 			"entries": {
 				"Amethyst Cluster": "Breaks",
@@ -9557,12 +9736,11 @@
 				"Vines": "Breaks",
 				"Water": "Breaks",
 				"Weeping Vines": "Breaks"
-			},
-			"property_description": "Whether it can be pushed by a piston, stops the piston from extending, or whether attempting to push it destroys the block.",
-			"property_name": "Movable"
+			}
 		},
 		"numerical_id": {
 			"property_name": "World Edit Numerical ID",
+			"default_value": "None",
 			"relative_gradient": true,
 			"entries": {
 				"Air": {
@@ -9593,15 +9771,21 @@
 					}
 				},
 				"Banners": {
+					"No Translation Key: white_wall_banner": {
+						"facing: east": "177:5",
+						"facing: north": "177:2",
+						"facing: south": "177:3",
+						"facing: west": "177:4"
+					},
 					"White Banner": {
 						"rotation: 0": "176:0",
+						"rotation: 1": "176:1",
 						"rotation: 10": "176:10",
 						"rotation: 11": "176:11",
 						"rotation: 12": "176:12",
 						"rotation: 13": "176:13",
 						"rotation: 14": "176:14",
 						"rotation: 15": "176:15",
-						"rotation: 1": "176:1",
 						"rotation: 2": "176:2",
 						"rotation: 3": "176:3",
 						"rotation: 4": "176:4",
@@ -9610,12 +9794,6 @@
 						"rotation: 7": "176:7",
 						"rotation: 8": "176:8",
 						"rotation: 9": "176:9"
-					},
-					"No Translation Key: white_wall_banner": {
-						"facing: east": "177:5",
-						"facing: north": "177:2",
-						"facing: south": "177:3",
-						"facing: west": "177:4"
 					}
 				},
 				"Barrier": "166:0",
@@ -9628,8 +9806,8 @@
 				"Block of Iron": "42:0",
 				"Block of Lapis Lazuli": "22:0",
 				"Block of Quartz": {
-					"Chiseled Quartz Block": "155:1",
 					"Block of Quartz": "155:0",
+					"Chiseled Quartz Block": "155:1",
 					"Quartz Pillar": {
 						"axis: x": [
 							"155:3",
@@ -9675,13 +9853,13 @@
 				"Bricks": "45:0",
 				"Cactus": {
 					"age: 0": "81:0",
+					"age: 1": "81:1",
 					"age: 10": "81:10",
 					"age: 11": "81:11",
 					"age: 12": "81:12",
 					"age: 13": "81:13",
 					"age: 14": "81:14",
 					"age: 15": "81:15",
-					"age: 1": "81:1",
 					"age: 2": "81:2",
 					"age: 3": "81:3",
 					"age: 4": "81:4",
@@ -9893,13 +10071,13 @@
 				"Daylight Detector": {
 					"inverted: false": {
 						"power: 0": "151:0",
+						"power: 1": "151:1",
 						"power: 10": "151:10",
 						"power: 11": "151:11",
 						"power: 12": "151:12",
 						"power: 13": "151:13",
 						"power: 14": "151:14",
 						"power: 15": "151:15",
-						"power: 1": "151:1",
 						"power: 2": "151:2",
 						"power: 3": "151:3",
 						"power: 4": "151:4",
@@ -9911,13 +10089,13 @@
 					},
 					"inverted: true": {
 						"power: 0": "178:0",
+						"power: 1": "178:1",
 						"power: 10": "178:10",
 						"power: 11": "178:11",
 						"power: 12": "178:12",
 						"power: 13": "178:13",
 						"power: 14": "178:14",
 						"power: 15": "178:15",
-						"power: 1": "178:1",
 						"power: 2": "178:2",
 						"power: 3": "178:3",
 						"power: 4": "178:4",
@@ -10231,6 +10409,10 @@
 						"10:0",
 						"11:0"
 					],
+					"level: 1": [
+						"10:1",
+						"11:1"
+					],
 					"level: 10": [
 						"10:10",
 						"11:10"
@@ -10254,10 +10436,6 @@
 					"level: 15": [
 						"10:15",
 						"11:15"
-					],
-					"level: 1": [
-						"10:1",
-						"11:1"
 					],
 					"level: 2": [
 						"10:2",
@@ -10394,13 +10572,13 @@
 				"Pressure Plates": {
 					"Heavy Weighted Pressure Plate": {
 						"power: 0": "148:0",
+						"power: 1": "148:1",
 						"power: 10": "148:10",
 						"power: 11": "148:11",
 						"power: 12": "148:12",
 						"power: 13": "148:13",
 						"power: 14": "148:14",
 						"power: 15": "148:15",
-						"power: 1": "148:1",
 						"power: 2": "148:2",
 						"power: 3": "148:3",
 						"power: 4": "148:4",
@@ -10412,13 +10590,13 @@
 					},
 					"Light Weighted Pressure Plate": {
 						"power: 0": "147:0",
+						"power: 1": "147:1",
 						"power: 10": "147:10",
 						"power: 11": "147:11",
 						"power: 12": "147:12",
 						"power: 13": "147:13",
 						"power: 14": "147:14",
 						"power: 15": "147:15",
-						"power: 1": "147:1",
 						"power: 2": "147:2",
 						"power: 3": "147:3",
 						"power: 4": "147:4",
@@ -10829,13 +11007,13 @@
 				"Structure Void": "217:0",
 				"Sugar Cane": {
 					"age: 0": "83:0",
+					"age: 1": "83:1",
 					"age: 10": "83:10",
 					"age: 11": "83:11",
 					"age: 12": "83:12",
 					"age: 13": "83:13",
 					"age: 14": "83:14",
 					"age: 15": "83:15",
-					"age: 1": "83:1",
 					"age: 2": "83:2",
 					"age: 3": "83:3",
 					"age: 4": "83:4",
@@ -10844,6 +11022,10 @@
 					"age: 7": "83:7",
 					"age: 8": "83:8",
 					"age: 9": "83:9"
+				},
+				"TNT": {
+					"unstable: false": "46:0",
+					"unstable: true": "46:1"
 				},
 				"Terracotta": {
 					"Black Terracotta": "159:15",
@@ -10864,10 +11046,6 @@
 					"White Terracotta": "159:0",
 					"Yellow Terracotta": "159:4"
 				},
-				"TNT": {
-					"unstable: false": "46:0",
-					"unstable: true": "46:1"
-				},
 				"Torch": {
 					"Torch": "50:5",
 					"Wall Torch": {
@@ -10885,6 +11063,10 @@
 						"level: 0": [
 							"8:0",
 							"9:0"
+						],
+						"level: 1": [
+							"8:1",
+							"9:1"
 						],
 						"level: 10": [
 							"8:10",
@@ -10909,10 +11091,6 @@
 						"level: 15": [
 							"8:15",
 							"9:15"
-						],
-						"level: 1": [
-							"8:1",
-							"9:1"
 						],
 						"level: 2": [
 							"8:2",
@@ -10966,10 +11144,11 @@
 					"White Wool": "35:0",
 					"Yellow Wool": "35:4"
 				}
-			},
-			"default_value": "None"
+			}
 		},
 		"obstructs_cactus": {
+			"property_name": "Obstructs Cactus",
+			"property_description": "Whether placing this block next to cactus destroys it.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -11048,13 +11227,12 @@
 				"Vines": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "Whether placing this block next to cactus destroys it.",
-			"property_name": "Obstructs Cactus"
+			}
 		},
 		"obstructs_tree_growth": {
 			"property_name": "Obstructs Tree Growth",
 			"property_description": "",
+			"default_value": "Yes",
 			"entries": {
 				"Air": "No",
 				"Dead Bush": "No",
@@ -11076,10 +11254,11 @@
 					"Bubble Column": "Yes",
 					"Water": "No"
 				}
-			},
-			"default_value": "Yes"
+			}
 		},
 		"opacity": {
+			"property_name": "Opacity",
+			"property_description": "How much light the block... blocks.",
 			"default_value": 15,
 			"entries": {
 				"Activator Rail": {
@@ -11379,11 +11558,11 @@
 				},
 				"Water": 1,
 				"Weeping Vines": 0
-			},
-			"property_description": "How much light the block... blocks.",
-			"property_name": "Opacity"
+			}
 		},
 		"opaque": {
+			"property_name": "Opaque",
+			"property_description": "Whether the block is visually opaque. Used solely in rendering.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -11497,12 +11676,12 @@
 				"Vines": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "Whether the block is visually opaque. Used solely in rendering.",
-			"property_name": "Opaque"
+			}
 		},
 		"placement_condition": {
+			"property_name": "Placement conditions",
 			"default_value": "No",
+			"relative_gradient": true,
 			"entries": {
 				"Activator Rail": ".top_face_has_rim()",
 				"Amethyst Cluster": ".isSideSolidFullSquare()",
@@ -11758,13 +11937,12 @@
 					".isOf(this.getPlant())",
 					".isSideSolidFullSquare()"
 				]
-			},
-			"property_name": "Placement conditions",
-			"relative_gradient": true
+			}
 		},
 		"raid_spawnable": {
 			"property_name": "Raid Spawnable",
 			"property_description": "Whether raids can spawn on this block.",
+			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
 				"Andesite": "Yes",
@@ -11862,16 +12040,16 @@
 				"Packed Mud": "Yes",
 				"Piston": {
 					"Moving Piston": "No",
+					"Piston Head": {
+						"facing: down<br>facing: east<br>facing: north<br>facing: south<br>facing: west": "No",
+						"facing: up": "Yes"
+					},
 					"Piston<br>Sticky Piston": {
 						"extended: false": "Yes",
 						"extended: true": {
 							"facing: down": "Yes",
 							"facing: east<br>facing: north<br>facing: south<br>facing: up<br>facing: west": "No"
 						}
-					},
-					"Piston Head": {
-						"facing: down<br>facing: east<br>facing: north<br>facing: south<br>facing: west": "No",
-						"facing: up": "Yes"
 					}
 				},
 				"Planks": "Yes",
@@ -11916,17 +12094,18 @@
 				"Structure Block": "Yes",
 				"Suspicious Gravel": "Yes",
 				"Suspicious Sand": "Yes",
+				"TNT": "Yes",
 				"Target": "Yes",
 				"Terracotta": "Yes",
-				"TNT": "Yes",
 				"Tuff": "Yes",
 				"Wart Blocks": "Yes",
 				"Wood": "Yes",
 				"Wool": "Yes"
-			},
-			"default_value": "No"
+			}
 		},
 		"redirects_redstone": {
+			"property_name": "Redirects Redstone Wire (North)",
+			"property_description": "This is true if the North side connects to/redirects adjacent redstone dust",
 			"default_value": "No",
 			"entries": {
 				"Block of Redstone": "Yes",
@@ -11955,11 +12134,11 @@
 				"Torchflower Crop": "No",
 				"Trapped Chest": "Yes",
 				"Tripwire Hook": "Yes"
-			},
-			"property_description": "This is true if the North side connects to/redirects adjacent redstone dust",
-			"property_name": "Redirects Redstone Wire (North)"
+			}
 		},
 		"replaceable": {
+			"property_name": "Replaceable",
+			"property_description": "",
 			"default_value": "No",
 			"entries": {
 				"Air": "Yes",
@@ -11978,11 +12157,81 @@
 				"Structure Void": "Yes",
 				"Vines": "Yes",
 				"Water": "Yes"
-			},
-			"property_description": "",
-			"property_name": "Replaceable"
+			}
+		},
+		"requires_silk_touch": {
+			"property_name": "Requires Silk Touch",
+			"property_description": "Whether this block requires a silk touch enchanted tool to drop as an item form.",
+			"default_value": "No",
+			"entries": {
+				"Air": "Not Applicable",
+				"Amethyst Cluster": "Yes",
+				"Barrier": "Not Applicable",
+				"Bedrock": "Yes",
+				"Bee Nest": "Yes",
+				"Beehive": "Yes",
+				"Blue Ice": "Yes",
+				"Bookshelf": "Yes",
+				"Budding Amethyst": "Not Applicable",
+				"Calibrated Sculk Sensor": "Yes",
+				"Campfire": "Yes",
+				"Chiseled Bookshelf": "Yes",
+				"Clay": "Yes",
+				"Coal Ore": "Yes",
+				"Cocoa": "Yes",
+				"Command Blocks": "Not Applicable",
+				"Copper Ore": "Yes",
+				"Coral Blocks": "Yes",
+				"Coral Fans": "Yes",
+				"Corals": "Yes",
+				"Diamond Ore": "Yes",
+				"Emerald Ore": "Yes",
+				"End Gateway": "Not Applicable",
+				"End Portal": "Not Applicable",
+				"End Portal Frame": "Not Applicable",
+				"Ender Chest": "Yes",
+				"Fire": "Not Applicable",
+				"Frosted Ice": "Not Applicable",
+				"Glass": "Yes",
+				"Glass Pane": "Yes",
+				"Glowstone": "Yes",
+				"Gold Ore": "Yes",
+				"Grass Block": "Yes",
+				"Ice": "Yes",
+				"Iron Ore": "Yes",
+				"Lapis Lazuli Ore": "Yes",
+				"Lava": "Not Applicable",
+				"Leaves": "Yes",
+				"Light Block": "Not Applicable",
+				"Melon": "Yes",
+				"Mushroom Blocks": "Yes",
+				"Mycelium": "Yes",
+				"Nether Gold Ore": "Yes",
+				"Nether Quartz Ore": "Yes",
+				"Nylium": "Yes",
+				"Packed Ice": "Yes",
+				"Podzol": "Yes",
+				"Reinforced Deepslate": "Not Applicable",
+				"Sculk": "Yes",
+				"Sculk Catalyst": "Yes",
+				"Sculk Sensor": "Yes",
+				"Sculk Shrieker": "Yes",
+				"Sculk Vein": "Yes",
+				"Sea Lantern": "Yes",
+				"Snow": "Yes",
+				"Snow Block": "Yes",
+				"Stained Glass": "Yes",
+				"Stained Glass Panes": "Yes",
+				"Stone": "Yes",
+				"Structure Block": "Not Applicable",
+				"Structure Void": "Not Applicable",
+				"Turtle Egg": "Yes",
+				"Water": "Not Applicable"
+			}
 		},
 		"sends_comparator_updates": {
+			"property_name": "Sends Comparator Updates",
+			"property_description": "Whether interactions with this block sends updates to comparators up to 2 blocks away (manhattan distance).",
 			"default_value": "No",
 			"entries": {
 				"Barrel": "Yes",
@@ -12012,12 +12261,12 @@
 				"Shulker Box": "Yes",
 				"Smoker": "Yes",
 				"Trapped Chest": "Yes"
-			},
-			"property_description": "Whether interactions with this block sends updates to comparators up to 2 blocks away (manhattan distance).",
-			"property_name": "Sends Comparator Updates"
+			}
 		},
 		"shape_update_from_environment": {
+			"property_name": "Shape Update From Environment (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
 			"default_value": "No",
+			"relative_gradient": true,
 			"entries": {
 				"Activator Rail": "On reaction",
 				"Bee Nest": "Other",
@@ -12068,12 +12317,12 @@
 					"Weather Tick"
 				],
 				"Workstations (CHECK)": "Other"
-			},
-			"property_name": "Shape Update From Environment (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
-			"relative_gradient": true
+			}
 		},
 		"shape_update_on_interaction": {
+			"property_name": "Shape Update On Interaction (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
 			"default_value": "No",
+			"relative_gradient": true,
 			"entries": {
 				"Anvil": "Limited",
 				"Barrel": "With hand",
@@ -12155,11 +12404,10 @@
 					"Non-stripped": "Once with item",
 					"Stripped": "No"
 				}
-			},
-			"property_name": "Shape Update On Interaction (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
-			"relative_gradient": true
+			}
 		},
 		"shape_update_when_powered": {
+			"property_name": "Shape Update When Powered",
 			"default_value": "No",
 			"entries": {
 				"Activator Rail": "Yes",
@@ -12180,10 +12428,11 @@
 				"Redstone Repeater": "Yes",
 				"Redstone Torch": "Yes",
 				"Trapdoors": "Yes"
-			},
-			"property_name": "Shape Update When Powered"
+			}
 		},
 		"side_face_has_collision": {
+			"property_name": "Side Face Has Collision (North)",
+			"property_description": "This is true if the north side has collision at the outer face (meaning it has a hard hitbox that aligns with the block grid).",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -12428,11 +12677,11 @@
 				},
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "This is true if the north side has collision at the outer face (meaning it has a hard hitbox that aligns with the block grid).",
-			"property_name": "Side Face Has Collision (North)"
+			}
 		},
 		"side_face_has_full_square": {
+			"property_name": "Side Face Has Full Square (North)",
+			"property_description": "This is true if the north face is a full square.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -12620,11 +12869,11 @@
 				"Walls": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "This is true if the north face is a full square.",
-			"property_name": "Side Face Has Full Square (North)"
+			}
 		},
 		"solid": {
+			"property_name": "(Legacy) Solid",
+			"property_description": "blockState.isSolid()",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -12704,11 +12953,11 @@
 				"Vines": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "blockState.isSolid()",
-			"property_name": "(Legacy) Solid"
+			}
 		},
 		"spawnable": {
+			"property_name": "Spawnable",
+			"property_description": "Whether mobs can spawn on this block.",
 			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
@@ -12862,18 +13111,18 @@
 				"Structure Block": "Yes",
 				"Suspicious Gravel": "Yes",
 				"Suspicious Sand": "Yes",
+				"TNT": "Yes",
 				"Target": "Yes",
 				"Terracotta": "Yes",
-				"TNT": "Yes",
 				"Tuff": "Yes",
 				"Wart Blocks": "All except piglins, ziglins and hoglins",
 				"Wood": "Yes",
 				"Wool": "Yes"
-			},
-			"property_description": "Whether mobs can spawn on this block.",
-			"property_name": "Spawnable"
+			}
 		},
 		"sticky": {
+			"property_name": "Sticky",
+			"property_description": "If the block can be pulled by a sticky piston or an adjacent slime/honey block.\nSlime and honey are listed as 'partially' as they are not sticky when pulled by one another.",
 			"default_value": "Yes",
 			"entries": {
 				"Amethyst Cluster": "No",
@@ -13015,11 +13264,11 @@
 				"Vines": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "If the block can be pulled by a sticky piston or an adjacent slime/honey block.\nSlime and honey are listed as 'partially' as they are not sticky when pulled by one another.",
-			"property_name": "Sticky"
+			}
 		},
 		"suffocates_mobs": {
+			"property_name": "Suffocates Mobs",
+			"property_description": "Whether a mob or player should suffocate in this block.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -13158,11 +13407,11 @@
 				"Walls": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "Whether a mob or player should suffocate in this block.",
-			"property_name": "Suffocates Mobs"
+			}
 		},
 		"supports_redstone_dust": {
+			"property_name": "Supports Redstone Dust",
+			"property_description": "Whether redstone dust (\"wire\") can be placed on top of this block.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -13314,11 +13563,11 @@
 				"Walls": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "Whether redstone dust (\"wire\") can be placed on top of this block.",
-			"property_name": "Supports Redstone Dust"
+			}
 		},
 		"survival_available": {
+			"property_name": "Survival Available",
+			"property_description": "Whether the block is available in normal survival gameplay.\nYes means the block is either obtainable as an item, or can easily be created anywhere in the world.\nUncreatable means the block cannot be created or obtained in conventional ways, but the block is still avalible in the world.\nNo means the block is exclusive to creative mode/cheats.",
 			"default_value": "Creatable",
 			"entries": {
 				"Barrier": "No",
@@ -13343,11 +13592,11 @@
 				"Spawner": "Uncreatable",
 				"Structure Block": "No",
 				"Structure Void": "No"
-			},
-			"property_description": "Whether the block is available in normal survival gameplay.\nYes means the block is either obtainable as an item, or can easily be created anywhere in the world.\nUncreatable means the block cannot be created or obtained in conventional ways, but the block is still avalible in the world.\nNo means the block is exclusive to creative mode/cheats.",
-			"property_name": "Survival Available"
+			}
 		},
 		"tag_acacia_logs": {
+			"property_name": "Tag: ACACIA_LOGS",
+			"property_description": "ACACIA_LOGS",
 			"default_value": "No",
 			"entries": {
 				"Logs": {
@@ -13359,30 +13608,30 @@
 					"Acacia Wood<br>Stripped Acacia Wood": "Yes",
 					"Birch Wood<br>Cherry Wood<br>Dark Oak Wood<br>Jungle Wood<br>Mangrove Wood<br>Oak Wood<br>Spruce Wood<br>Stripped Birch Wood<br>Stripped Cherry Wood<br>Stripped Dark Oak Wood<br>Stripped Jungle Wood<br>Stripped Mangrove Wood<br>Stripped Oak Wood<br>Stripped Spruce Wood": "No"
 				}
-			},
-			"property_description": "ACACIA_LOGS",
-			"property_name": "Tag: ACACIA_LOGS"
+			}
 		},
 		"tag_all_hanging_signs": {
+			"property_name": "Tag: ALL_HANGING_SIGNS",
+			"property_description": "ALL_HANGING_SIGNS",
 			"default_value": "No",
 			"entries": {
 				"Hanging Signs": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "ALL_HANGING_SIGNS",
-			"property_name": "Tag: ALL_HANGING_SIGNS"
+			}
 		},
 		"tag_all_signs": {
+			"property_name": "Tag: ALL_SIGNS",
+			"property_description": "ALL_SIGNS",
 			"default_value": "No",
 			"entries": {
 				"Hanging Signs": "Yes",
 				"Signs": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "ALL_SIGNS",
-			"property_name": "Tag: ALL_SIGNS"
+			}
 		},
 		"tag_ancient_city_replaceable": {
+			"property_name": "Tag: ANCIENT_CITY_REPLACEABLE",
+			"property_description": "ANCIENT_CITY_REPLACEABLE",
 			"default_value": "No",
 			"entries": {
 				"Cobbled Deepslate": {
@@ -13410,38 +13659,38 @@
 					"Black Wool<br>Blue Wool<br>Brown Wool<br>Cyan Wool<br>Green Wool<br>Light Blue Wool<br>Light Gray Wool<br>Lime Wool<br>Magenta Wool<br>Orange Wool<br>Pink Wool<br>Purple Wool<br>Red Wool<br>White Wool<br>Yellow Wool": "No",
 					"Gray Wool": "Yes"
 				}
-			},
-			"property_description": "ANCIENT_CITY_REPLACEABLE",
-			"property_name": "Tag: ANCIENT_CITY_REPLACEABLE"
+			}
 		},
 		"tag_animals_spawnable_on": {
+			"property_name": "Tag: ANIMALS_SPAWNABLE_ON",
+			"property_description": "ANIMALS_SPAWNABLE_ON",
 			"default_value": "No",
 			"entries": {
 				"Grass Block": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "ANIMALS_SPAWNABLE_ON",
-			"property_name": "Tag: ANIMALS_SPAWNABLE_ON"
+			}
 		},
 		"tag_anvil": {
+			"property_name": "Tag: ANVIL",
+			"property_description": "ANVIL",
 			"default_value": "No",
 			"entries": {
 				"Anvil": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "ANVIL",
-			"property_name": "Tag: ANVIL"
+			}
 		},
 		"tag_axolotls_spawnable_on": {
+			"property_name": "Tag: AXOLOTLS_SPAWNABLE_ON",
+			"property_description": "AXOLOTLS_SPAWNABLE_ON",
 			"default_value": "No",
 			"entries": {
 				"Clay": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "AXOLOTLS_SPAWNABLE_ON",
-			"property_name": "Tag: AXOLOTLS_SPAWNABLE_ON"
+			}
 		},
 		"tag_azalea_grows_on": {
+			"property_name": "Tag: AZALEA_GROWS_ON",
+			"property_description": "AZALEA_GROWS_ON",
 			"default_value": "No",
 			"entries": {
 				"Coarse Dirt": "Yes",
@@ -13459,11 +13708,11 @@
 				"Suspicious Sand": "Yes",
 				"Terracotta": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "AZALEA_GROWS_ON",
-			"property_name": "Tag: AZALEA_GROWS_ON"
+			}
 		},
 		"tag_azalea_root_replaceable": {
+			"property_name": "Tag: AZALEA_ROOT_REPLACEABLE",
+			"property_description": "AZALEA_ROOT_REPLACEABLE",
 			"default_value": "No",
 			"entries": {
 				"Andesite": {
@@ -13503,21 +13752,21 @@
 				"Terracotta": "Yes",
 				"Torchflower Crop": "No",
 				"Tuff": "Yes"
-			},
-			"property_description": "AZALEA_ROOT_REPLACEABLE",
-			"property_name": "Tag: AZALEA_ROOT_REPLACEABLE"
+			}
 		},
 		"tag_bamboo_blocks": {
+			"property_name": "Tag: BAMBOO_BLOCKS",
+			"property_description": "BAMBOO_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Block of Bamboo": "Yes",
 				"Block of Stripped Bamboo": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "BAMBOO_BLOCKS",
-			"property_name": "Tag: BAMBOO_BLOCKS"
+			}
 		},
 		"tag_bamboo_plantable_on": {
+			"property_name": "Tag: BAMBOO_PLANTABLE_ON",
+			"property_description": "BAMBOO_PLANTABLE_ON",
 			"default_value": "No",
 			"entries": {
 				"Bamboo": "Yes",
@@ -13535,20 +13784,20 @@
 				"Suspicious Gravel": "Yes",
 				"Suspicious Sand": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "BAMBOO_PLANTABLE_ON",
-			"property_name": "Tag: BAMBOO_PLANTABLE_ON"
+			}
 		},
 		"tag_banners": {
+			"property_name": "Tag: BANNERS",
+			"property_description": "BANNERS",
 			"default_value": "No",
 			"entries": {
 				"Banners": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "BANNERS",
-			"property_name": "Tag: BANNERS"
+			}
 		},
 		"tag_base_stone_nether": {
+			"property_name": "Tag: BASE_STONE_NETHER",
+			"property_description": "BASE_STONE_NETHER",
 			"default_value": "No",
 			"entries": {
 				"Basalt": {
@@ -13561,11 +13810,11 @@
 				},
 				"Netherrack": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "BASE_STONE_NETHER",
-			"property_name": "Tag: BASE_STONE_NETHER"
+			}
 		},
 		"tag_base_stone_overworld": {
+			"property_name": "Tag: BASE_STONE_OVERWORLD",
+			"property_description": "BASE_STONE_OVERWORLD",
 			"default_value": "No",
 			"entries": {
 				"Andesite": {
@@ -13590,11 +13839,11 @@
 				},
 				"Torchflower Crop": "No",
 				"Tuff": "Yes"
-			},
-			"property_description": "BASE_STONE_OVERWORLD",
-			"property_name": "Tag: BASE_STONE_OVERWORLD"
+			}
 		},
 		"tag_beacon_base_blocks": {
+			"property_name": "Tag: BEACON_BASE_BLOCKS",
+			"property_description": "BEACON_BASE_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Block of Diamond": "Yes",
@@ -13603,20 +13852,20 @@
 				"Block of Iron": "Yes",
 				"Block of Netherite": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "BEACON_BASE_BLOCKS",
-			"property_name": "Tag: BEACON_BASE_BLOCKS"
+			}
 		},
 		"tag_beds": {
+			"property_name": "Tag: BEDS",
+			"property_description": "BEDS",
 			"default_value": "No",
 			"entries": {
 				"Beds": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "BEDS",
-			"property_name": "Tag: BEDS"
+			}
 		},
 		"tag_bee_growables": {
+			"property_name": "Tag: BEE_GROWABLES",
+			"property_description": "BEE_GROWABLES",
 			"default_value": "No",
 			"entries": {
 				"Cave Vines": "Yes",
@@ -13627,21 +13876,21 @@
 				"Pitcher Crop": "Yes",
 				"Sweet Berry Bush": "Yes",
 				"Torchflower Crop": "Yes"
-			},
-			"property_description": "BEE_GROWABLES",
-			"property_name": "Tag: BEE_GROWABLES"
+			}
 		},
 		"tag_beehives": {
+			"property_name": "Tag: BEEHIVES",
+			"property_description": "BEEHIVES",
 			"default_value": "No",
 			"entries": {
 				"Bee Nest": "Yes",
 				"Beehive": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "BEEHIVES",
-			"property_name": "Tag: BEEHIVES"
+			}
 		},
 		"tag_big_dripleaf_placeable": {
+			"property_name": "Tag: BIG_DRIPLEAF_PLACEABLE",
+			"property_description": "BIG_DRIPLEAF_PLACEABLE",
 			"default_value": "No",
 			"entries": {
 				"Clay": "Yes",
@@ -13655,11 +13904,11 @@
 				"Mycelium": "Yes",
 				"Podzol": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "BIG_DRIPLEAF_PLACEABLE",
-			"property_name": "Tag: BIG_DRIPLEAF_PLACEABLE"
+			}
 		},
 		"tag_birch_logs": {
+			"property_name": "Tag: BIRCH_LOGS",
+			"property_description": "BIRCH_LOGS",
 			"default_value": "No",
 			"entries": {
 				"Logs": {
@@ -13671,29 +13920,29 @@
 					"Acacia Wood<br>Cherry Wood<br>Dark Oak Wood<br>Jungle Wood<br>Mangrove Wood<br>Oak Wood<br>Spruce Wood<br>Stripped Acacia Wood<br>Stripped Cherry Wood<br>Stripped Dark Oak Wood<br>Stripped Jungle Wood<br>Stripped Mangrove Wood<br>Stripped Oak Wood<br>Stripped Spruce Wood": "No",
 					"Birch Wood<br>Stripped Birch Wood": "Yes"
 				}
-			},
-			"property_description": "BIRCH_LOGS",
-			"property_name": "Tag: BIRCH_LOGS"
+			}
 		},
 		"tag_buttons": {
+			"property_name": "Tag: BUTTONS",
+			"property_description": "BUTTONS",
 			"default_value": "No",
 			"entries": {
 				"Buttons": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "BUTTONS",
-			"property_name": "Tag: BUTTONS"
+			}
 		},
 		"tag_campfires": {
+			"property_name": "Tag: CAMPFIRES",
+			"property_description": "CAMPFIRES",
 			"default_value": "No",
 			"entries": {
 				"Campfire": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CAMPFIRES",
-			"property_name": "Tag: CAMPFIRES"
+			}
 		},
 		"tag_candle_cakes": {
+			"property_name": "Tag: CANDLE_CAKES",
+			"property_description": "CANDLE_CAKES",
 			"default_value": "No",
 			"entries": {
 				"Cake": {
@@ -13701,38 +13950,38 @@
 					"Cake with Black Candle<br>Cake with Blue Candle<br>Cake with Brown Candle<br>Cake with Candle<br>Cake with Cyan Candle<br>Cake with Gray Candle<br>Cake with Green Candle<br>Cake with Light Blue Candle<br>Cake with Light Gray Candle<br>Cake with Lime Candle<br>Cake with Magenta Candle<br>Cake with Orange Candle<br>Cake with Pink Candle<br>Cake with Purple Candle<br>Cake with Red Candle<br>Cake with White Candle<br>Cake with Yellow Candle": "Yes"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CANDLE_CAKES",
-			"property_name": "Tag: CANDLE_CAKES"
+			}
 		},
 		"tag_candles": {
+			"property_name": "Tag: CANDLES",
+			"property_description": "CANDLES",
 			"default_value": "No",
 			"entries": {
 				"Candles": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CANDLES",
-			"property_name": "Tag: CANDLES"
+			}
 		},
 		"tag_cauldrons": {
+			"property_name": "Tag: CAULDRONS",
+			"property_description": "CAULDRONS",
 			"default_value": "No",
 			"entries": {
 				"Cauldron": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CAULDRONS",
-			"property_name": "Tag: CAULDRONS"
+			}
 		},
 		"tag_cave_vines": {
+			"property_name": "Tag: CAVE_VINES",
+			"property_description": "CAVE_VINES",
 			"default_value": "No",
 			"entries": {
 				"Cave Vines": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CAVE_VINES",
-			"property_name": "Tag: CAVE_VINES"
+			}
 		},
 		"tag_ceiling_hanging_signs": {
+			"property_name": "Tag: CEILING_HANGING_SIGNS",
+			"property_description": "CEILING_HANGING_SIGNS",
 			"default_value": "No",
 			"entries": {
 				"Hanging Signs": {
@@ -13740,11 +13989,11 @@
 					"Acacia Wall Hanging Sign<br>Bamboo Wall Hanging Sign<br>Birch Wall Hanging Sign<br>Cherry Wall Hanging Sign<br>Crimson Wall Hanging Sign<br>Dark Oak Wall Hanging Sign<br>Jungle Wall Hanging Sign<br>Mangrove Wall Hanging Sign<br>Oak Wall Hanging Sign<br>Spruce Wall Hanging Sign<br>Warped Wall Hanging Sign": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CEILING_HANGING_SIGNS",
-			"property_name": "Tag: CEILING_HANGING_SIGNS"
+			}
 		},
 		"tag_cherry_logs": {
+			"property_name": "Tag: CHERRY_LOGS",
+			"property_description": "CHERRY_LOGS",
 			"default_value": "No",
 			"entries": {
 				"Logs": {
@@ -13756,11 +14005,11 @@
 					"Acacia Wood<br>Birch Wood<br>Dark Oak Wood<br>Jungle Wood<br>Mangrove Wood<br>Oak Wood<br>Spruce Wood<br>Stripped Acacia Wood<br>Stripped Birch Wood<br>Stripped Dark Oak Wood<br>Stripped Jungle Wood<br>Stripped Mangrove Wood<br>Stripped Oak Wood<br>Stripped Spruce Wood": "No",
 					"Cherry Wood<br>Stripped Cherry Wood": "Yes"
 				}
-			},
-			"property_description": "CHERRY_LOGS",
-			"property_name": "Tag: CHERRY_LOGS"
+			}
 		},
 		"tag_climbable": {
+			"property_name": "Tag: CLIMBABLE",
+			"property_description": "CLIMBABLE",
 			"default_value": "No",
 			"entries": {
 				"Cave Vines": "Yes",
@@ -13770,20 +14019,20 @@
 				"Twisting Vines": "Yes",
 				"Vines": "Yes",
 				"Weeping Vines": "Yes"
-			},
-			"property_description": "CLIMBABLE",
-			"property_name": "Tag: CLIMBABLE"
+			}
 		},
 		"tag_coal_ores": {
+			"property_name": "Tag: COAL_ORES",
+			"property_description": "COAL_ORES",
 			"default_value": "No",
 			"entries": {
 				"Coal Ore": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "COAL_ORES",
-			"property_name": "Tag: COAL_ORES"
+			}
 		},
 		"tag_combination_step_sound_blocks": {
+			"property_name": "Tag: COMBINATION_STEP_SOUND_BLOCKS",
+			"property_description": "COMBINATION_STEP_SOUND_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Carpets": "Yes",
@@ -13792,11 +14041,11 @@
 				"Roots": "Yes",
 				"Snow": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "COMBINATION_STEP_SOUND_BLOCKS",
-			"property_name": "Tag: COMBINATION_STEP_SOUND_BLOCKS"
+			}
 		},
 		"tag_completes_find_tree_tutorial": {
+			"property_name": "Tag: COMPLETES_FIND_TREE_TUTORIAL",
+			"property_description": "COMPLETES_FIND_TREE_TUTORIAL",
 			"default_value": "No",
 			"entries": {
 				"Hyphae": "Yes",
@@ -13806,30 +14055,30 @@
 				"Torchflower Crop": "No",
 				"Wart Blocks": "Yes",
 				"Wood": "Yes"
-			},
-			"property_description": "COMPLETES_FIND_TREE_TUTORIAL",
-			"property_name": "Tag: COMPLETES_FIND_TREE_TUTORIAL"
+			}
 		},
 		"tag_convertable_to_mud": {
+			"property_name": "Tag: CONVERTABLE_TO_MUD",
+			"property_description": "CONVERTABLE_TO_MUD",
 			"default_value": "No",
 			"entries": {
 				"Coarse Dirt": "Yes",
 				"Dirt": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CONVERTABLE_TO_MUD",
-			"property_name": "Tag: CONVERTABLE_TO_MUD"
+			}
 		},
 		"tag_copper_ores": {
+			"property_name": "Tag: COPPER_ORES",
+			"property_description": "COPPER_ORES",
 			"default_value": "No",
 			"entries": {
 				"Copper Ore": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "COPPER_ORES",
-			"property_name": "Tag: COPPER_ORES"
+			}
 		},
 		"tag_coral_blocks": {
+			"property_name": "Tag: CORAL_BLOCKS",
+			"property_description": "CORAL_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Coral Blocks": {
@@ -13837,11 +14086,11 @@
 					"Dead Brain Coral Block<br>Dead Bubble Coral Block<br>Dead Fire Coral Block<br>Dead Horn Coral Block<br>Dead Tube Coral Block": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CORAL_BLOCKS",
-			"property_name": "Tag: CORAL_BLOCKS"
+			}
 		},
 		"tag_coral_plants": {
+			"property_name": "Tag: CORAL_PLANTS",
+			"property_description": "CORAL_PLANTS",
 			"default_value": "No",
 			"entries": {
 				"Corals": {
@@ -13849,11 +14098,11 @@
 					"Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral<br>Dead Tube Coral": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CORAL_PLANTS",
-			"property_name": "Tag: CORAL_PLANTS"
+			}
 		},
 		"tag_corals": {
+			"property_name": "Tag: CORALS",
+			"property_description": "CORALS",
 			"default_value": "No",
 			"entries": {
 				"Coral Fans": {
@@ -13865,11 +14114,11 @@
 					"Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral<br>Dead Tube Coral": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CORALS",
-			"property_name": "Tag: CORALS"
+			}
 		},
 		"tag_crimson_stems": {
+			"property_name": "Tag: CRIMSON_STEMS",
+			"property_description": "CRIMSON_STEMS",
 			"default_value": "No",
 			"entries": {
 				"Hyphae": {
@@ -13881,11 +14130,11 @@
 					"Stripped Warped Stem<br>Warped Stem": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CRIMSON_STEMS",
-			"property_name": "Tag: CRIMSON_STEMS"
+			}
 		},
 		"tag_crops": {
+			"property_name": "Tag: CROPS",
+			"property_description": "CROPS",
 			"default_value": "No",
 			"entries": {
 				"Crops": {
@@ -13894,31 +14143,31 @@
 				},
 				"Pitcher Crop": "Yes",
 				"Torchflower Crop": "Yes"
-			},
-			"property_description": "CROPS",
-			"property_name": "Tag: CROPS"
+			}
 		},
 		"tag_crystal_sound_blocks": {
+			"property_name": "Tag: CRYSTAL_SOUND_BLOCKS",
+			"property_description": "CRYSTAL_SOUND_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Block of Amethyst": "Yes",
 				"Budding Amethyst": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "CRYSTAL_SOUND_BLOCKS",
-			"property_name": "Tag: CRYSTAL_SOUND_BLOCKS"
+			}
 		},
 		"tag_dampens_vibrations": {
+			"property_name": "Tag: DAMPENS_VIBRATIONS",
+			"property_description": "DAMPENS_VIBRATIONS",
 			"default_value": "No",
 			"entries": {
 				"Carpets": "Yes",
 				"Torchflower Crop": "No",
 				"Wool": "Yes"
-			},
-			"property_description": "DAMPENS_VIBRATIONS",
-			"property_name": "Tag: DAMPENS_VIBRATIONS"
+			}
 		},
 		"tag_dark_oak_logs": {
+			"property_name": "Tag: DARK_OAK_LOGS",
+			"property_description": "DARK_OAK_LOGS",
 			"default_value": "No",
 			"entries": {
 				"Logs": {
@@ -13930,11 +14179,11 @@
 					"Acacia Wood<br>Birch Wood<br>Cherry Wood<br>Jungle Wood<br>Mangrove Wood<br>Oak Wood<br>Spruce Wood<br>Stripped Acacia Wood<br>Stripped Birch Wood<br>Stripped Cherry Wood<br>Stripped Jungle Wood<br>Stripped Mangrove Wood<br>Stripped Oak Wood<br>Stripped Spruce Wood": "No",
 					"Dark Oak Wood<br>Stripped Dark Oak Wood": "Yes"
 				}
-			},
-			"property_description": "DARK_OAK_LOGS",
-			"property_name": "Tag: DARK_OAK_LOGS"
+			}
 		},
 		"tag_dead_bush_may_place_on": {
+			"property_name": "Tag: DEAD_BUSH_MAY_PLACE_ON",
+			"property_description": "DEAD_BUSH_MAY_PLACE_ON",
 			"default_value": "No",
 			"entries": {
 				"Coarse Dirt": "Yes",
@@ -13950,11 +14199,11 @@
 				"Suspicious Sand": "Yes",
 				"Terracotta": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "DEAD_BUSH_MAY_PLACE_ON",
-			"property_name": "Tag: DEAD_BUSH_MAY_PLACE_ON"
+			}
 		},
 		"tag_deepslate_ore_replaceables": {
+			"property_name": "Tag: DEEPSLATE_ORE_REPLACEABLES",
+			"property_description": "DEEPSLATE_ORE_REPLACEABLES",
 			"default_value": "No",
 			"entries": {
 				"Deepslate": {
@@ -13963,20 +14212,20 @@
 				},
 				"Torchflower Crop": "No",
 				"Tuff": "Yes"
-			},
-			"property_description": "DEEPSLATE_ORE_REPLACEABLES",
-			"property_name": "Tag: DEEPSLATE_ORE_REPLACEABLES"
+			}
 		},
 		"tag_diamond_ores": {
+			"property_name": "Tag: DIAMOND_ORES",
+			"property_description": "DIAMOND_ORES",
 			"default_value": "No",
 			"entries": {
 				"Diamond Ore": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "DIAMOND_ORES",
-			"property_name": "Tag: DIAMOND_ORES"
+			}
 		},
 		"tag_dirt": {
+			"property_name": "Tag: DIRT",
+			"property_description": "DIRT",
 			"default_value": "No",
 			"entries": {
 				"Coarse Dirt": "Yes",
@@ -13988,20 +14237,20 @@
 				"Mycelium": "Yes",
 				"Podzol": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "DIRT",
-			"property_name": "Tag: DIRT"
+			}
 		},
 		"tag_doors": {
+			"property_name": "Tag: DOORS",
+			"property_description": "DOORS",
 			"default_value": "No",
 			"entries": {
 				"Doors": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "DOORS",
-			"property_name": "Tag: DOORS"
+			}
 		},
 		"tag_dragon_immune": {
+			"property_name": "Tag: DRAGON_IMMUNE",
+			"property_description": "DRAGON_IMMUNE",
 			"default_value": "No",
 			"entries": {
 				"Barrier": "Yes",
@@ -14023,21 +14272,21 @@
 				"Respawn Anchor": "Yes",
 				"Structure Block": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "DRAGON_IMMUNE",
-			"property_name": "Tag: DRAGON_IMMUNE"
+			}
 		},
 		"tag_dragon_transparent": {
+			"property_name": "Tag: DRAGON_TRANSPARENT",
+			"property_description": "DRAGON_TRANSPARENT",
 			"default_value": "No",
 			"entries": {
 				"Fire": "Yes",
 				"Light Block": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "DRAGON_TRANSPARENT",
-			"property_name": "Tag: DRAGON_TRANSPARENT"
+			}
 		},
 		"tag_dripstone_replaceable": {
+			"property_name": "Tag: DRIPSTONE_REPLACEABLE",
+			"property_description": "DRIPSTONE_REPLACEABLE",
 			"default_value": "No",
 			"entries": {
 				"Andesite": {
@@ -14062,29 +14311,29 @@
 				},
 				"Torchflower Crop": "No",
 				"Tuff": "Yes"
-			},
-			"property_description": "DRIPSTONE_REPLACEABLE",
-			"property_name": "Tag: DRIPSTONE_REPLACEABLE"
+			}
 		},
 		"tag_emerald_ores": {
+			"property_name": "Tag: EMERALD_ORES",
+			"property_description": "EMERALD_ORES",
 			"default_value": "No",
 			"entries": {
 				"Emerald Ore": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "EMERALD_ORES",
-			"property_name": "Tag: EMERALD_ORES"
+			}
 		},
 		"tag_enchantment_power_provider": {
+			"property_name": "Tag: ENCHANTMENT_POWER_PROVIDER",
+			"property_description": "ENCHANTMENT_POWER_PROVIDER",
 			"default_value": "No",
 			"entries": {
 				"Bookshelf": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "ENCHANTMENT_POWER_PROVIDER",
-			"property_name": "Tag: ENCHANTMENT_POWER_PROVIDER"
+			}
 		},
 		"tag_enchantment_power_transmitter": {
+			"property_name": "Tag: ENCHANTMENT_POWER_TRANSMITTER",
+			"property_description": "ENCHANTMENT_POWER_TRANSMITTER",
 			"default_value": "No",
 			"entries": {
 				"Air": "Yes",
@@ -14104,11 +14353,11 @@
 				"Torchflower Crop": "No",
 				"Vines": "Yes",
 				"Water": "Yes"
-			},
-			"property_description": "ENCHANTMENT_POWER_TRANSMITTER",
-			"property_name": "Tag: ENCHANTMENT_POWER_TRANSMITTER"
+			}
 		},
 		"tag_enderman_holdable": {
+			"property_name": "Tag: ENDERMAN_HOLDABLE",
+			"property_description": "ENDERMAN_HOLDABLE",
 			"default_value": "No",
 			"entries": {
 				"Cactus": "Yes",
@@ -14137,11 +14386,11 @@
 				"TNT": "Yes",
 				"Torchflower": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "ENDERMAN_HOLDABLE",
-			"property_name": "Tag: ENDERMAN_HOLDABLE"
+			}
 		},
 		"tag_fall_damage_resetting": {
+			"property_name": "Tag: FALL_DAMAGE_RESETTING",
+			"property_description": "FALL_DAMAGE_RESETTING",
 			"default_value": "No",
 			"entries": {
 				"Cave Vines": "Yes",
@@ -14153,11 +14402,11 @@
 				"Twisting Vines": "Yes",
 				"Vines": "Yes",
 				"Weeping Vines": "Yes"
-			},
-			"property_description": "FALL_DAMAGE_RESETTING",
-			"property_name": "Tag: FALL_DAMAGE_RESETTING"
+			}
 		},
 		"tag_features_cannot_replace": {
+			"property_name": "Tag: FEATURES_CANNOT_REPLACE",
+			"property_description": "FEATURES_CANNOT_REPLACE",
 			"default_value": "No",
 			"entries": {
 				"Bedrock": "Yes",
@@ -14166,47 +14415,47 @@
 				"Reinforced Deepslate": "Yes",
 				"Spawner": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "FEATURES_CANNOT_REPLACE",
-			"property_name": "Tag: FEATURES_CANNOT_REPLACE"
+			}
 		},
 		"tag_fence_gates": {
+			"property_name": "Tag: FENCE_GATES",
+			"property_description": "FENCE_GATES",
 			"default_value": "No",
 			"entries": {
 				"Fence Gates": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "FENCE_GATES",
-			"property_name": "Tag: FENCE_GATES"
+			}
 		},
 		"tag_fences": {
+			"property_name": "Tag: FENCES",
+			"property_description": "FENCES",
 			"default_value": "No",
 			"entries": {
 				"Fences": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "FENCES",
-			"property_name": "Tag: FENCES"
+			}
 		},
 		"tag_fire": {
+			"property_name": "Tag: FIRE",
+			"property_description": "FIRE",
 			"default_value": "No",
 			"entries": {
 				"Fire": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "FIRE",
-			"property_name": "Tag: FIRE"
+			}
 		},
 		"tag_flower_pots": {
+			"property_name": "Tag: FLOWER_POTS",
+			"property_description": "FLOWER_POTS",
 			"default_value": "No",
 			"entries": {
 				"Flower Pot": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "FLOWER_POTS",
-			"property_name": "Tag: FLOWER_POTS"
+			}
 		},
 		"tag_flowers": {
+			"property_name": "Tag: FLOWERS",
+			"property_description": "FLOWERS",
 			"default_value": "No",
 			"entries": {
 				"Azalea": {
@@ -14223,11 +14472,11 @@
 				"Pitcher Plant": "Yes",
 				"Torchflower": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "FLOWERS",
-			"property_name": "Tag: FLOWERS"
+			}
 		},
 		"tag_foxes_spawnable_on": {
+			"property_name": "Tag: FOXES_SPAWNABLE_ON",
+			"property_description": "FOXES_SPAWNABLE_ON",
 			"default_value": "No",
 			"entries": {
 				"Coarse Dirt": "Yes",
@@ -14236,11 +14485,11 @@
 				"Snow": "Yes",
 				"Snow Block": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "FOXES_SPAWNABLE_ON",
-			"property_name": "Tag: FOXES_SPAWNABLE_ON"
+			}
 		},
 		"tag_frog_prefer_jump_to": {
+			"property_name": "Tag: FROG_PREFER_JUMP_TO",
+			"property_description": "FROG_PREFER_JUMP_TO",
 			"default_value": "No",
 			"entries": {
 				"Big Dripleaf": {
@@ -14249,11 +14498,11 @@
 				},
 				"Lily Pad": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "FROG_PREFER_JUMP_TO",
-			"property_name": "Tag: FROG_PREFER_JUMP_TO"
+			}
 		},
 		"tag_frogs_spawnable_on": {
+			"property_name": "Tag: FROGS_SPAWNABLE_ON",
+			"property_description": "FROGS_SPAWNABLE_ON",
 			"default_value": "No",
 			"entries": {
 				"Grass Block": "Yes",
@@ -14261,11 +14510,11 @@
 				"Mud": "Yes",
 				"Muddy Mangrove Roots": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "FROGS_SPAWNABLE_ON",
-			"property_name": "Tag: FROGS_SPAWNABLE_ON"
+			}
 		},
 		"tag_geode_invalid_blocks": {
+			"property_name": "Tag: GEODE_INVALID_BLOCKS",
+			"property_description": "GEODE_INVALID_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Bedrock": "Yes",
@@ -14278,11 +14527,11 @@
 					"Bubble Column": "No",
 					"Water": "Yes"
 				}
-			},
-			"property_description": "GEODE_INVALID_BLOCKS",
-			"property_name": "Tag: GEODE_INVALID_BLOCKS"
+			}
 		},
 		"tag_goats_spawnable_on": {
+			"property_name": "Tag: GOATS_SPAWNABLE_ON",
+			"property_description": "GOATS_SPAWNABLE_ON",
 			"default_value": "No",
 			"entries": {
 				"Grass Block": "Yes",
@@ -14295,21 +14544,21 @@
 					"Stone": "Yes"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "GOATS_SPAWNABLE_ON",
-			"property_name": "Tag: GOATS_SPAWNABLE_ON"
+			}
 		},
 		"tag_gold_ores": {
+			"property_name": "Tag: GOLD_ORES",
+			"property_description": "GOLD_ORES",
 			"default_value": "No",
 			"entries": {
 				"Gold Ore": "Yes",
 				"Nether Gold Ore": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "GOLD_ORES",
-			"property_name": "Tag: GOLD_ORES"
+			}
 		},
 		"tag_guarded_by_piglins": {
+			"property_name": "Tag: GUARDED_BY_PIGLINS",
+			"property_description": "GUARDED_BY_PIGLINS",
 			"default_value": "No",
 			"entries": {
 				"Barrel": "Yes",
@@ -14323,11 +14572,11 @@
 				"Shulker Box": "Yes",
 				"Torchflower Crop": "No",
 				"Trapped Chest": "Yes"
-			},
-			"property_description": "GUARDED_BY_PIGLINS",
-			"property_name": "Tag: GUARDED_BY_PIGLINS"
+			}
 		},
 		"tag_hoglin_repellents": {
+			"property_name": "Tag: HOGLIN_REPELLENTS",
+			"property_description": "HOGLIN_REPELLENTS",
 			"default_value": "No",
 			"entries": {
 				"Flower Pot": {
@@ -14341,11 +14590,11 @@
 				"Nether Portal": "Yes",
 				"Respawn Anchor": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "HOGLIN_REPELLENTS",
-			"property_name": "Tag: HOGLIN_REPELLENTS"
+			}
 		},
 		"tag_ice": {
+			"property_name": "Tag: ICE",
+			"property_description": "ICE",
 			"default_value": "No",
 			"entries": {
 				"Blue Ice": "Yes",
@@ -14353,53 +14602,53 @@
 				"Ice": "Yes",
 				"Packed Ice": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "ICE",
-			"property_name": "Tag: ICE"
+			}
 		},
 		"tag_impermeable": {
+			"property_name": "Tag: IMPERMEABLE",
+			"property_description": "IMPERMEABLE",
 			"default_value": "No",
 			"entries": {
 				"Glass": "Yes",
 				"Stained Glass": "Yes",
 				"Tinted Glass": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "IMPERMEABLE",
-			"property_name": "Tag: IMPERMEABLE"
+			}
 		},
 		"tag_infiniburn_end": {
+			"property_name": "Tag: INFINIBURN_END",
+			"property_description": "INFINIBURN_END",
 			"default_value": "No",
 			"entries": {
 				"Bedrock": "Yes",
 				"Magma Block": "Yes",
 				"Netherrack": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "INFINIBURN_END",
-			"property_name": "Tag: INFINIBURN_END"
+			}
 		},
 		"tag_infiniburn_nether": {
+			"property_name": "Tag: INFINIBURN_NETHER",
+			"property_description": "INFINIBURN_NETHER",
 			"default_value": "No",
 			"entries": {
 				"Magma Block": "Yes",
 				"Netherrack": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "INFINIBURN_NETHER",
-			"property_name": "Tag: INFINIBURN_NETHER"
+			}
 		},
 		"tag_infiniburn_overworld": {
+			"property_name": "Tag: INFINIBURN_OVERWORLD",
+			"property_description": "INFINIBURN_OVERWORLD",
 			"default_value": "No",
 			"entries": {
 				"Magma Block": "Yes",
 				"Netherrack": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "INFINIBURN_OVERWORLD",
-			"property_name": "Tag: INFINIBURN_OVERWORLD"
+			}
 		},
 		"tag_inside_step_sound_blocks": {
+			"property_name": "Tag: INSIDE_STEP_SOUND_BLOCKS",
+			"property_description": "INSIDE_STEP_SOUND_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Amethyst Cluster": {
@@ -14412,30 +14661,30 @@
 				"Powder Snow": "Yes",
 				"Sculk Vein": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "INSIDE_STEP_SOUND_BLOCKS",
-			"property_name": "Tag: INSIDE_STEP_SOUND_BLOCKS"
+			}
 		},
 		"tag_invalid_spawn_inside": {
+			"property_name": "Tag: INVALID_SPAWN_INSIDE",
+			"property_description": "INVALID_SPAWN_INSIDE",
 			"default_value": "No",
 			"entries": {
 				"End Gateway": "Yes",
 				"End Portal": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "INVALID_SPAWN_INSIDE",
-			"property_name": "Tag: INVALID_SPAWN_INSIDE"
+			}
 		},
 		"tag_iron_ores": {
+			"property_name": "Tag: IRON_ORES",
+			"property_description": "IRON_ORES",
 			"default_value": "No",
 			"entries": {
 				"Iron Ore": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "IRON_ORES",
-			"property_name": "Tag: IRON_ORES"
+			}
 		},
 		"tag_jungle_logs": {
+			"property_name": "Tag: JUNGLE_LOGS",
+			"property_description": "JUNGLE_LOGS",
 			"default_value": "No",
 			"entries": {
 				"Logs": {
@@ -14447,20 +14696,20 @@
 					"Acacia Wood<br>Birch Wood<br>Cherry Wood<br>Dark Oak Wood<br>Mangrove Wood<br>Oak Wood<br>Spruce Wood<br>Stripped Acacia Wood<br>Stripped Birch Wood<br>Stripped Cherry Wood<br>Stripped Dark Oak Wood<br>Stripped Mangrove Wood<br>Stripped Oak Wood<br>Stripped Spruce Wood": "No",
 					"Jungle Wood<br>Stripped Jungle Wood": "Yes"
 				}
-			},
-			"property_description": "JUNGLE_LOGS",
-			"property_name": "Tag: JUNGLE_LOGS"
+			}
 		},
 		"tag_lapis_ores": {
+			"property_name": "Tag: LAPIS_ORES",
+			"property_description": "LAPIS_ORES",
 			"default_value": "No",
 			"entries": {
 				"Lapis Lazuli Ore": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "LAPIS_ORES",
-			"property_name": "Tag: LAPIS_ORES"
+			}
 		},
 		"tag_lava_pool_stone_cannot_replace": {
+			"property_name": "Tag: LAVA_POOL_STONE_CANNOT_REPLACE",
+			"property_description": "LAVA_POOL_STONE_CANNOT_REPLACE",
 			"default_value": "No",
 			"entries": {
 				"Bedrock": "Yes",
@@ -14474,20 +14723,20 @@
 				"Stems": "Yes",
 				"Torchflower Crop": "No",
 				"Wood": "Yes"
-			},
-			"property_description": "LAVA_POOL_STONE_CANNOT_REPLACE",
-			"property_name": "Tag: LAVA_POOL_STONE_CANNOT_REPLACE"
+			}
 		},
 		"tag_leaves": {
+			"property_name": "Tag: LEAVES",
+			"property_description": "LEAVES",
 			"default_value": "No",
 			"entries": {
 				"Leaves": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "LEAVES",
-			"property_name": "Tag: LEAVES"
+			}
 		},
 		"tag_logs": {
+			"property_name": "Tag: LOGS",
+			"property_description": "LOGS",
 			"default_value": "No",
 			"entries": {
 				"Hyphae": "Yes",
@@ -14495,21 +14744,21 @@
 				"Stems": "Yes",
 				"Torchflower Crop": "No",
 				"Wood": "Yes"
-			},
-			"property_description": "LOGS",
-			"property_name": "Tag: LOGS"
+			}
 		},
 		"tag_logs_that_burn": {
+			"property_name": "Tag: LOGS_THAT_BURN",
+			"property_description": "LOGS_THAT_BURN",
 			"default_value": "No",
 			"entries": {
 				"Logs": "Yes",
 				"Torchflower Crop": "No",
 				"Wood": "Yes"
-			},
-			"property_description": "LOGS_THAT_BURN",
-			"property_name": "Tag: LOGS_THAT_BURN"
+			}
 		},
 		"tag_lush_ground_replaceable": {
+			"property_name": "Tag: LUSH_GROUND_REPLACEABLE",
+			"property_description": "LUSH_GROUND_REPLACEABLE",
 			"default_value": "No",
 			"entries": {
 				"Andesite": {
@@ -14546,22 +14795,22 @@
 				},
 				"Torchflower Crop": "No",
 				"Tuff": "Yes"
-			},
-			"property_description": "LUSH_GROUND_REPLACEABLE",
-			"property_name": "Tag: LUSH_GROUND_REPLACEABLE"
+			}
 		},
 		"tag_maintains_farmland": {
+			"property_name": "Tag: MAINTAINS_FARMLAND",
+			"property_description": "MAINTAINS_FARMLAND",
 			"default_value": "No",
 			"entries": {
 				"Crops": "Yes",
 				"Pitcher Crop": "Yes",
 				"Torchflower": "Yes",
 				"Torchflower Crop": "Yes"
-			},
-			"property_description": "MAINTAINS_FARMLAND",
-			"property_name": "Tag: MAINTAINS_FARMLAND"
+			}
 		},
 		"tag_mangrove_logs": {
+			"property_name": "Tag: MANGROVE_LOGS",
+			"property_description": "MANGROVE_LOGS",
 			"default_value": "No",
 			"entries": {
 				"Logs": {
@@ -14573,11 +14822,11 @@
 					"Acacia Wood<br>Birch Wood<br>Cherry Wood<br>Dark Oak Wood<br>Jungle Wood<br>Oak Wood<br>Spruce Wood<br>Stripped Acacia Wood<br>Stripped Birch Wood<br>Stripped Cherry Wood<br>Stripped Dark Oak Wood<br>Stripped Jungle Wood<br>Stripped Oak Wood<br>Stripped Spruce Wood": "No",
 					"Mangrove Wood<br>Stripped Mangrove Wood": "Yes"
 				}
-			},
-			"property_description": "MANGROVE_LOGS",
-			"property_name": "Tag: MANGROVE_LOGS"
+			}
 		},
 		"tag_mangrove_logs_can_grow_through": {
+			"property_name": "Tag: MANGROVE_LOGS_CAN_GROW_THROUGH",
+			"property_description": "MANGROVE_LOGS_CAN_GROW_THROUGH",
 			"default_value": "No",
 			"entries": {
 				"Leaves": {
@@ -14595,11 +14844,11 @@
 				"Muddy Mangrove Roots": "Yes",
 				"Torchflower Crop": "No",
 				"Vines": "Yes"
-			},
-			"property_description": "MANGROVE_LOGS_CAN_GROW_THROUGH",
-			"property_name": "Tag: MANGROVE_LOGS_CAN_GROW_THROUGH"
+			}
 		},
 		"tag_mangrove_roots_can_grow_through": {
+			"property_name": "Tag: MANGROVE_ROOTS_CAN_GROW_THROUGH",
+			"property_description": "MANGROVE_ROOTS_CAN_GROW_THROUGH",
 			"default_value": "No",
 			"entries": {
 				"Mangrove Propagule": "Yes",
@@ -14610,11 +14859,11 @@
 				"Snow": "Yes",
 				"Torchflower Crop": "No",
 				"Vines": "Yes"
-			},
-			"property_description": "MANGROVE_ROOTS_CAN_GROW_THROUGH",
-			"property_name": "Tag: MANGROVE_ROOTS_CAN_GROW_THROUGH"
+			}
 		},
 		"tag_mineable_with_axe": {
+			"property_name": "Tag: MINEABLE_WITH_AXE",
+			"property_description": "MINEABLE_WITH_AXE",
 			"default_value": "No",
 			"entries": {
 				"Azalea": "Yes",
@@ -14712,11 +14961,11 @@
 				"Vines": "Yes",
 				"Weeping Vines": "Yes",
 				"Wood": "Yes"
-			},
-			"property_description": "MINEABLE_WITH_AXE",
-			"property_name": "Tag: MINEABLE_WITH_AXE"
+			}
 		},
 		"tag_mineable_with_hoe": {
+			"property_name": "Tag: MINEABLE_WITH_HOE",
+			"property_description": "MINEABLE_WITH_HOE",
 			"default_value": "No",
 			"entries": {
 				"Calibrated Sculk Sensor": "Yes",
@@ -14736,11 +14985,11 @@
 				"Target": "Yes",
 				"Torchflower Crop": "No",
 				"Wart Blocks": "Yes"
-			},
-			"property_description": "MINEABLE_WITH_HOE",
-			"property_name": "Tag: MINEABLE_WITH_HOE"
+			}
 		},
 		"tag_mineable_with_pickaxe": {
+			"property_name": "Tag: MINEABLE_WITH_PICKAXE",
+			"property_description": "MINEABLE_WITH_PICKAXE",
 			"default_value": "No",
 			"entries": {
 				"Activator Rail": "Yes",
@@ -14878,11 +15127,11 @@
 				},
 				"Tuff": "Yes",
 				"Walls": "Yes"
-			},
-			"property_description": "MINEABLE_WITH_PICKAXE",
-			"property_name": "Tag: MINEABLE_WITH_PICKAXE"
+			}
 		},
 		"tag_mineable_with_shovel": {
+			"property_name": "Tag: MINEABLE_WITH_SHOVEL",
+			"property_description": "MINEABLE_WITH_SHOVEL",
 			"default_value": "No",
 			"entries": {
 				"Clay": "Yes",
@@ -14906,20 +15155,20 @@
 				"Suspicious Gravel": "Yes",
 				"Suspicious Sand": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "MINEABLE_WITH_SHOVEL",
-			"property_name": "Tag: MINEABLE_WITH_SHOVEL"
+			}
 		},
 		"tag_mooshrooms_spawnable_on": {
+			"property_name": "Tag: MOOSHROOMS_SPAWNABLE_ON",
+			"property_description": "MOOSHROOMS_SPAWNABLE_ON",
 			"default_value": "No",
 			"entries": {
 				"Mycelium": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "MOOSHROOMS_SPAWNABLE_ON",
-			"property_name": "Tag: MOOSHROOMS_SPAWNABLE_ON"
+			}
 		},
 		"tag_moss_replaceable": {
+			"property_name": "Tag: MOSS_REPLACEABLE",
+			"property_description": "MOSS_REPLACEABLE",
 			"default_value": "No",
 			"entries": {
 				"Andesite": {
@@ -14953,22 +15202,22 @@
 				},
 				"Torchflower Crop": "No",
 				"Tuff": "Yes"
-			},
-			"property_description": "MOSS_REPLACEABLE",
-			"property_name": "Tag: MOSS_REPLACEABLE"
+			}
 		},
 		"tag_mushroom_grow_block": {
+			"property_name": "Tag: MUSHROOM_GROW_BLOCK",
+			"property_description": "MUSHROOM_GROW_BLOCK",
 			"default_value": "No",
 			"entries": {
 				"Mycelium": "Yes",
 				"Nylium": "Yes",
 				"Podzol": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "MUSHROOM_GROW_BLOCK",
-			"property_name": "Tag: MUSHROOM_GROW_BLOCK"
+			}
 		},
 		"tag_needs_diamond_tool": {
+			"property_name": "Tag: NEEDS_DIAMOND_TOOL",
+			"property_description": "NEEDS_DIAMOND_TOOL",
 			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
@@ -14977,11 +15226,11 @@
 				"Obsidian": "Yes",
 				"Respawn Anchor": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "NEEDS_DIAMOND_TOOL",
-			"property_name": "Tag: NEEDS_DIAMOND_TOOL"
+			}
 		},
 		"tag_needs_iron_tool": {
+			"property_name": "Tag: NEEDS_IRON_TOOL",
+			"property_description": "NEEDS_IRON_TOOL",
 			"default_value": "No",
 			"entries": {
 				"Block of Diamond": "Yes",
@@ -14993,11 +15242,11 @@
 				"Gold Ore": "Yes",
 				"Redstone Ore": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "NEEDS_IRON_TOOL",
-			"property_name": "Tag: NEEDS_IRON_TOOL"
+			}
 		},
 		"tag_needs_stone_tool": {
+			"property_name": "Tag: NEEDS_STONE_TOOL",
+			"property_description": "NEEDS_STONE_TOOL",
 			"default_value": "No",
 			"entries": {
 				"Block of Copper": "Yes",
@@ -15018,11 +15267,11 @@
 					"Cut Copper Stairs<br>Exposed Cut Copper Stairs<br>Oxidized Cut Copper Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "Yes"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "NEEDS_STONE_TOOL",
-			"property_name": "Tag: NEEDS_STONE_TOOL"
+			}
 		},
 		"tag_nether_carver_replaceables": {
+			"property_name": "Tag: NETHER_CARVER_REPLACEABLES",
+			"property_description": "NETHER_CARVER_REPLACEABLES",
 			"default_value": "No",
 			"entries": {
 				"Andesite": {
@@ -15068,20 +15317,20 @@
 				"Torchflower Crop": "No",
 				"Tuff": "Yes",
 				"Wart Blocks": "Yes"
-			},
-			"property_description": "NETHER_CARVER_REPLACEABLES",
-			"property_name": "Tag: NETHER_CARVER_REPLACEABLES"
+			}
 		},
 		"tag_nylium": {
+			"property_name": "Tag: NYLIUM",
+			"property_description": "NYLIUM",
 			"default_value": "No",
 			"entries": {
 				"Nylium": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "NYLIUM",
-			"property_name": "Tag: NYLIUM"
+			}
 		},
 		"tag_oak_logs": {
+			"property_name": "Tag: OAK_LOGS",
+			"property_description": "OAK_LOGS",
 			"default_value": "No",
 			"entries": {
 				"Logs": {
@@ -15093,20 +15342,20 @@
 					"Acacia Wood<br>Birch Wood<br>Cherry Wood<br>Dark Oak Wood<br>Jungle Wood<br>Mangrove Wood<br>Spruce Wood<br>Stripped Acacia Wood<br>Stripped Birch Wood<br>Stripped Cherry Wood<br>Stripped Dark Oak Wood<br>Stripped Jungle Wood<br>Stripped Mangrove Wood<br>Stripped Spruce Wood": "No",
 					"Oak Wood<br>Stripped Oak Wood": "Yes"
 				}
-			},
-			"property_description": "OAK_LOGS",
-			"property_name": "Tag: OAK_LOGS"
+			}
 		},
 		"tag_occludes_vibration_signals": {
+			"property_name": "Tag: OCCLUDES_VIBRATION_SIGNALS",
+			"property_description": "OCCLUDES_VIBRATION_SIGNALS",
 			"default_value": "No",
 			"entries": {
 				"Torchflower Crop": "No",
 				"Wool": "Yes"
-			},
-			"property_description": "OCCLUDES_VIBRATION_SIGNALS",
-			"property_name": "Tag: OCCLUDES_VIBRATION_SIGNALS"
+			}
 		},
 		"tag_overworld_carver_replaceables": {
+			"property_name": "Tag: OVERWORLD_CARVER_REPLACEABLES",
+			"property_description": "OVERWORLD_CARVER_REPLACEABLES",
 			"default_value": "No",
 			"entries": {
 				"Andesite": {
@@ -15164,11 +15413,11 @@
 					"Bubble Column": "No",
 					"Water": "Yes"
 				}
-			},
-			"property_description": "OVERWORLD_CARVER_REPLACEABLES",
-			"property_name": "Tag: OVERWORLD_CARVER_REPLACEABLES"
+			}
 		},
 		"tag_overworld_natural_logs": {
+			"property_name": "Tag: OVERWORLD_NATURAL_LOGS",
+			"property_description": "OVERWORLD_NATURAL_LOGS",
 			"default_value": "No",
 			"entries": {
 				"Logs": {
@@ -15176,11 +15425,11 @@
 					"Stripped Acacia Log<br>Stripped Birch Log<br>Stripped Cherry Log<br>Stripped Dark Oak Log<br>Stripped Jungle Log<br>Stripped Mangrove Log<br>Stripped Oak Log<br>Stripped Spruce Log": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "OVERWORLD_NATURAL_LOGS",
-			"property_name": "Tag: OVERWORLD_NATURAL_LOGS"
+			}
 		},
 		"tag_parrots_spawnable_on": {
+			"property_name": "Tag: PARROTS_SPAWNABLE_ON",
+			"property_description": "PARROTS_SPAWNABLE_ON",
 			"default_value": "No",
 			"entries": {
 				"Air": {
@@ -15194,11 +15443,11 @@
 				"Stems": "Yes",
 				"Torchflower Crop": "No",
 				"Wood": "Yes"
-			},
-			"property_description": "PARROTS_SPAWNABLE_ON",
-			"property_name": "Tag: PARROTS_SPAWNABLE_ON"
+			}
 		},
 		"tag_piglin_repellents": {
+			"property_name": "Tag: PIGLIN_REPELLENTS",
+			"property_description": "PIGLIN_REPELLENTS",
 			"default_value": "No",
 			"entries": {
 				"Campfire": {
@@ -15218,49 +15467,49 @@
 					"Torch<br>Wall Torch": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "PIGLIN_REPELLENTS",
-			"property_name": "Tag: PIGLIN_REPELLENTS"
+			}
 		},
 		"tag_planks": {
+			"property_name": "Tag: PLANKS",
+			"property_description": "PLANKS",
 			"default_value": "No",
 			"entries": {
 				"Planks": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "PLANKS",
-			"property_name": "Tag: PLANKS"
+			}
 		},
 		"tag_polar_bears_spawnable_on_alternate": {
+			"property_name": "Tag: POLAR_BEARS_SPAWNABLE_ON_ALTERNATE",
+			"property_description": "POLAR_BEARS_SPAWNABLE_ON_ALTERNATE",
 			"default_value": "No",
 			"entries": {
 				"Ice": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "POLAR_BEARS_SPAWNABLE_ON_ALTERNATE",
-			"property_name": "Tag: POLAR_BEARS_SPAWNABLE_ON_ALTERNATE"
+			}
 		},
 		"tag_portals": {
+			"property_name": "Tag: PORTALS",
+			"property_description": "PORTALS",
 			"default_value": "No",
 			"entries": {
 				"End Gateway": "Yes",
 				"End Portal": "Yes",
 				"Nether Portal": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "PORTALS",
-			"property_name": "Tag: PORTALS"
+			}
 		},
 		"tag_pressure_plates": {
+			"property_name": "Tag: PRESSURE_PLATES",
+			"property_description": "PRESSURE_PLATES",
 			"default_value": "No",
 			"entries": {
 				"Pressure Plates": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "PRESSURE_PLATES",
-			"property_name": "Tag: PRESSURE_PLATES"
+			}
 		},
 		"tag_prevent_mob_spawning_inside": {
+			"property_name": "Tag: PREVENT_MOB_SPAWNING_INSIDE",
+			"property_description": "PREVENT_MOB_SPAWNING_INSIDE",
 			"default_value": "No",
 			"entries": {
 				"Activator Rail": "Yes",
@@ -15268,11 +15517,11 @@
 				"Powered Rail": "Yes",
 				"Rail": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "PREVENT_MOB_SPAWNING_INSIDE",
-			"property_name": "Tag: PREVENT_MOB_SPAWNING_INSIDE"
+			}
 		},
 		"tag_rabbits_spawnable_on": {
+			"property_name": "Tag: RABBITS_SPAWNABLE_ON",
+			"property_description": "RABBITS_SPAWNABLE_ON",
 			"default_value": "No",
 			"entries": {
 				"Grass Block": "Yes",
@@ -15280,11 +15529,11 @@
 				"Snow": "Yes",
 				"Snow Block": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "RABBITS_SPAWNABLE_ON",
-			"property_name": "Tag: RABBITS_SPAWNABLE_ON"
+			}
 		},
 		"tag_rails": {
+			"property_name": "Tag: RAILS",
+			"property_description": "RAILS",
 			"default_value": "No",
 			"entries": {
 				"Activator Rail": "Yes",
@@ -15292,20 +15541,20 @@
 				"Powered Rail": "Yes",
 				"Rail": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "RAILS",
-			"property_name": "Tag: RAILS"
+			}
 		},
 		"tag_redstone_ores": {
+			"property_name": "Tag: REDSTONE_ORES",
+			"property_description": "REDSTONE_ORES",
 			"default_value": "No",
 			"entries": {
 				"Redstone Ore": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "REDSTONE_ORES",
-			"property_name": "Tag: REDSTONE_ORES"
+			}
 		},
 		"tag_replaceable": {
+			"property_name": "Tag: REPLACEABLE",
+			"property_description": "REPLACEABLE",
 			"default_value": "No",
 			"entries": {
 				"Air": "Yes",
@@ -15325,11 +15574,11 @@
 				"Torchflower Crop": "No",
 				"Vines": "Yes",
 				"Water": "Yes"
-			},
-			"property_description": "REPLACEABLE",
-			"property_name": "Tag: REPLACEABLE"
+			}
 		},
 		"tag_replaceable_by_trees": {
+			"property_name": "Tag: REPLACEABLE_BY_TREES",
+			"property_description": "REPLACEABLE_BY_TREES",
 			"default_value": "No",
 			"entries": {
 				"Dead Bush": "Yes",
@@ -15352,33 +15601,33 @@
 					"Bubble Column": "No",
 					"Water": "Yes"
 				}
-			},
-			"property_description": "REPLACEABLE_BY_TREES",
-			"property_name": "Tag: REPLACEABLE_BY_TREES"
+			}
 		},
 		"tag_sand": {
+			"property_name": "Tag: SAND",
+			"property_description": "SAND",
 			"default_value": "No",
 			"entries": {
 				"Red Sand": "Yes",
 				"Sand": "Yes",
 				"Suspicious Sand": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SAND",
-			"property_name": "Tag: SAND"
+			}
 		},
 		"tag_saplings": {
+			"property_name": "Tag: SAPLINGS",
+			"property_description": "SAPLINGS",
 			"default_value": "No",
 			"entries": {
 				"Azalea": "Yes",
 				"Mangrove Propagule": "Yes",
 				"Saplings": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SAPLINGS",
-			"property_name": "Tag: SAPLINGS"
+			}
 		},
 		"tag_sculk_replaceable": {
+			"property_name": "Tag: SCULK_REPLACEABLE",
+			"property_description": "SCULK_REPLACEABLE",
 			"default_value": "No",
 			"entries": {
 				"Andesite": {
@@ -15439,11 +15688,11 @@
 				"Terracotta": "Yes",
 				"Torchflower Crop": "No",
 				"Tuff": "Yes"
-			},
-			"property_description": "SCULK_REPLACEABLE",
-			"property_name": "Tag: SCULK_REPLACEABLE"
+			}
 		},
 		"tag_sculk_replaceable_world_gen": {
+			"property_name": "Tag: SCULK_REPLACEABLE_WORLD_GEN",
+			"property_description": "SCULK_REPLACEABLE_WORLD_GEN",
 			"default_value": "No",
 			"entries": {
 				"Andesite": {
@@ -15508,48 +15757,48 @@
 				"Terracotta": "Yes",
 				"Torchflower Crop": "No",
 				"Tuff": "Yes"
-			},
-			"property_description": "SCULK_REPLACEABLE_WORLD_GEN",
-			"property_name": "Tag: SCULK_REPLACEABLE_WORLD_GEN"
+			}
 		},
 		"tag_shulker_boxes": {
+			"property_name": "Tag: SHULKER_BOXES",
+			"property_description": "SHULKER_BOXES",
 			"default_value": "No",
 			"entries": {
 				"Shulker Box": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SHULKER_BOXES",
-			"property_name": "Tag: SHULKER_BOXES"
+			}
 		},
 		"tag_signs": {
+			"property_name": "Tag: SIGNS",
+			"property_description": "SIGNS",
 			"default_value": "No",
 			"entries": {
 				"Signs": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SIGNS",
-			"property_name": "Tag: SIGNS"
+			}
 		},
 		"tag_slabs": {
+			"property_name": "Tag: SLABS",
+			"property_description": "SLABS",
 			"default_value": "No",
 			"entries": {
 				"Slabs": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SLABS",
-			"property_name": "Tag: SLABS"
+			}
 		},
 		"tag_small_dripleaf_placeable": {
+			"property_name": "Tag: SMALL_DRIPLEAF_PLACEABLE",
+			"property_description": "SMALL_DRIPLEAF_PLACEABLE",
 			"default_value": "No",
 			"entries": {
 				"Clay": "Yes",
 				"Moss Block": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SMALL_DRIPLEAF_PLACEABLE",
-			"property_name": "Tag: SMALL_DRIPLEAF_PLACEABLE"
+			}
 		},
 		"tag_small_flowers": {
+			"property_name": "Tag: SMALL_FLOWERS",
+			"property_description": "SMALL_FLOWERS",
 			"default_value": "No",
 			"entries": {
 				"Flowers": {
@@ -15558,21 +15807,21 @@
 				},
 				"Torchflower": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SMALL_FLOWERS",
-			"property_name": "Tag: SMALL_FLOWERS"
+			}
 		},
 		"tag_smelts_to_glass": {
+			"property_name": "Tag: SMELTS_TO_GLASS",
+			"property_description": "SMELTS_TO_GLASS",
 			"default_value": "No",
 			"entries": {
 				"Red Sand": "Yes",
 				"Sand": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SMELTS_TO_GLASS",
-			"property_name": "Tag: SMELTS_TO_GLASS"
+			}
 		},
 		"tag_snaps_goat_horn": {
+			"property_name": "Tag: SNAPS_GOAT_HORN",
+			"property_description": "SNAPS_GOAT_HORN",
 			"default_value": "No",
 			"entries": {
 				"Coal Ore": {
@@ -15601,11 +15850,11 @@
 					"Stone": "Yes"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SNAPS_GOAT_HORN",
-			"property_name": "Tag: SNAPS_GOAT_HORN"
+			}
 		},
 		"tag_sniffer_diggable_block": {
+			"property_name": "Tag: SNIFFER_DIGGABLE_BLOCK",
+			"property_description": "SNIFFER_DIGGABLE_BLOCK",
 			"default_value": "No",
 			"entries": {
 				"Coarse Dirt": "Yes",
@@ -15616,73 +15865,73 @@
 				"Muddy Mangrove Roots": "Yes",
 				"Podzol": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SNIFFER_DIGGABLE_BLOCK",
-			"property_name": "Tag: SNIFFER_DIGGABLE_BLOCK"
+			}
 		},
 		"tag_sniffer_egg_hatch_boost": {
+			"property_name": "Tag: SNIFFER_EGG_HATCH_BOOST",
+			"property_description": "SNIFFER_EGG_HATCH_BOOST",
 			"default_value": "No",
 			"entries": {
 				"Moss Block": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SNIFFER_EGG_HATCH_BOOST",
-			"property_name": "Tag: SNIFFER_EGG_HATCH_BOOST"
+			}
 		},
 		"tag_snow": {
+			"property_name": "Tag: SNOW",
+			"property_description": "SNOW",
 			"default_value": "No",
 			"entries": {
 				"Powder Snow": "Yes",
 				"Snow": "Yes",
 				"Snow Block": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SNOW",
-			"property_name": "Tag: SNOW"
+			}
 		},
 		"tag_snow_layer_can_survive_on": {
+			"property_name": "Tag: SNOW_LAYER_CAN_SURVIVE_ON",
+			"property_description": "SNOW_LAYER_CAN_SURVIVE_ON",
 			"default_value": "No",
 			"entries": {
 				"Honey Block": "Yes",
 				"Mud": "Yes",
 				"Soul Sand": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SNOW_LAYER_CAN_SURVIVE_ON",
-			"property_name": "Tag: SNOW_LAYER_CAN_SURVIVE_ON"
+			}
 		},
 		"tag_snow_layer_cannot_survive_on": {
+			"property_name": "Tag: SNOW_LAYER_CANNOT_SURVIVE_ON",
+			"property_description": "SNOW_LAYER_CANNOT_SURVIVE_ON",
 			"default_value": "No",
 			"entries": {
 				"Barrier": "Yes",
 				"Ice": "Yes",
 				"Packed Ice": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SNOW_LAYER_CANNOT_SURVIVE_ON",
-			"property_name": "Tag: SNOW_LAYER_CANNOT_SURVIVE_ON"
+			}
 		},
 		"tag_soul_fire_base_blocks": {
+			"property_name": "Tag: SOUL_FIRE_BASE_BLOCKS",
+			"property_description": "SOUL_FIRE_BASE_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Soul Sand": "Yes",
 				"Soul Soil": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SOUL_FIRE_BASE_BLOCKS",
-			"property_name": "Tag: SOUL_FIRE_BASE_BLOCKS"
+			}
 		},
 		"tag_soul_speed_blocks": {
+			"property_name": "Tag: SOUL_SPEED_BLOCKS",
+			"property_description": "SOUL_SPEED_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Soul Sand": "Yes",
 				"Soul Soil": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "SOUL_SPEED_BLOCKS",
-			"property_name": "Tag: SOUL_SPEED_BLOCKS"
+			}
 		},
 		"tag_spruce_logs": {
+			"property_name": "Tag: SPRUCE_LOGS",
+			"property_description": "SPRUCE_LOGS",
 			"default_value": "No",
 			"entries": {
 				"Logs": {
@@ -15694,20 +15943,20 @@
 					"Acacia Wood<br>Birch Wood<br>Cherry Wood<br>Dark Oak Wood<br>Jungle Wood<br>Mangrove Wood<br>Oak Wood<br>Stripped Acacia Wood<br>Stripped Birch Wood<br>Stripped Cherry Wood<br>Stripped Dark Oak Wood<br>Stripped Jungle Wood<br>Stripped Mangrove Wood<br>Stripped Oak Wood": "No",
 					"Spruce Wood<br>Stripped Spruce Wood": "Yes"
 				}
-			},
-			"property_description": "SPRUCE_LOGS",
-			"property_name": "Tag: SPRUCE_LOGS"
+			}
 		},
 		"tag_stairs": {
+			"property_name": "Tag: STAIRS",
+			"property_description": "STAIRS",
 			"default_value": "No",
 			"entries": {
 				"Stairs": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "STAIRS",
-			"property_name": "Tag: STAIRS"
+			}
 		},
 		"tag_standing_signs": {
+			"property_name": "Tag: STANDING_SIGNS",
+			"property_description": "STANDING_SIGNS",
 			"default_value": "No",
 			"entries": {
 				"Signs": {
@@ -15715,11 +15964,11 @@
 					"Acacia Wall Sign<br>Bamboo Wall Sign<br>Birch Wall Sign<br>Cherry Wall Sign<br>Crimson Wall Sign<br>Dark Oak Wall Sign<br>Jungle Wall Sign<br>Mangrove Wall Sign<br>Oak Wall Sign<br>Spruce Wall Sign<br>Warped Wall Sign": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "STANDING_SIGNS",
-			"property_name": "Tag: STANDING_SIGNS"
+			}
 		},
 		"tag_stone_bricks": {
+			"property_name": "Tag: STONE_BRICKS",
+			"property_description": "STONE_BRICKS",
 			"default_value": "No",
 			"entries": {
 				"Stone Bricks": {
@@ -15727,11 +15976,11 @@
 					"Infested Chiseled Stone Bricks<br>Infested Cracked Stone Bricks<br>Infested Mossy Stone Bricks<br>Infested Stone Bricks": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "STONE_BRICKS",
-			"property_name": "Tag: STONE_BRICKS"
+			}
 		},
 		"tag_stone_buttons": {
+			"property_name": "Tag: STONE_BUTTONS",
+			"property_description": "STONE_BUTTONS",
 			"default_value": "No",
 			"entries": {
 				"Buttons": {
@@ -15739,11 +15988,11 @@
 					"Polished Blackstone Button<br>Stone Button": "Yes"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "STONE_BUTTONS",
-			"property_name": "Tag: STONE_BUTTONS"
+			}
 		},
 		"tag_stone_ore_replaceables": {
+			"property_name": "Tag: STONE_ORE_REPLACEABLES",
+			"property_description": "STONE_ORE_REPLACEABLES",
 			"default_value": "No",
 			"entries": {
 				"Andesite": {
@@ -15763,11 +16012,11 @@
 					"Stone": "Yes"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "STONE_ORE_REPLACEABLES",
-			"property_name": "Tag: STONE_ORE_REPLACEABLES"
+			}
 		},
 		"tag_stone_pressure_plates": {
+			"property_name": "Tag: STONE_PRESSURE_PLATES",
+			"property_description": "STONE_PRESSURE_PLATES",
 			"default_value": "No",
 			"entries": {
 				"Pressure Plates": {
@@ -15775,20 +16024,20 @@
 					"Polished Blackstone Pressure Plate<br>Stone Pressure Plate": "Yes"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "STONE_PRESSURE_PLATES",
-			"property_name": "Tag: STONE_PRESSURE_PLATES"
+			}
 		},
 		"tag_strider_warm_blocks": {
+			"property_name": "Tag: STRIDER_WARM_BLOCKS",
+			"property_description": "STRIDER_WARM_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Lava": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "STRIDER_WARM_BLOCKS",
-			"property_name": "Tag: STRIDER_WARM_BLOCKS"
+			}
 		},
 		"tag_sword_efficient": {
+			"property_name": "Tag: SWORD_EFFICIENT",
+			"property_description": "SWORD_EFFICIENT",
 			"default_value": "No",
 			"entries": {
 				"Azalea": "Yes",
@@ -15829,11 +16078,11 @@
 				"Twisting Vines": "Yes",
 				"Vines": "Yes",
 				"Weeping Vines": "Yes"
-			},
-			"property_description": "SWORD_EFFICIENT",
-			"property_name": "Tag: SWORD_EFFICIENT"
+			}
 		},
 		"tag_tall_flowers": {
+			"property_name": "Tag: TALL_FLOWERS",
+			"property_description": "TALL_FLOWERS",
 			"default_value": "No",
 			"entries": {
 				"Flowers": {
@@ -15842,38 +16091,38 @@
 				},
 				"Pitcher Plant": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "TALL_FLOWERS",
-			"property_name": "Tag: TALL_FLOWERS"
+			}
 		},
 		"tag_terracotta": {
+			"property_name": "Tag: TERRACOTTA",
+			"property_description": "TERRACOTTA",
 			"default_value": "No",
 			"entries": {
 				"Terracotta": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "TERRACOTTA",
-			"property_name": "Tag: TERRACOTTA"
+			}
 		},
 		"tag_trail_ruins_replaceable": {
+			"property_name": "Tag: TRAIL_RUINS_REPLACEABLE",
+			"property_description": "TRAIL_RUINS_REPLACEABLE",
 			"default_value": "No",
 			"entries": {
 				"Gravel": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "TRAIL_RUINS_REPLACEABLE",
-			"property_name": "Tag: TRAIL_RUINS_REPLACEABLE"
+			}
 		},
 		"tag_trapdoors": {
+			"property_name": "Tag: TRAPDOORS",
+			"property_description": "TRAPDOORS",
 			"default_value": "No",
 			"entries": {
 				"Torchflower Crop": "No",
 				"Trapdoors": "Yes"
-			},
-			"property_description": "TRAPDOORS",
-			"property_name": "Tag: TRAPDOORS"
+			}
 		},
 		"tag_underwater_bonemeals": {
+			"property_name": "Tag: UNDERWATER_BONEMEALS",
+			"property_description": "UNDERWATER_BONEMEALS",
 			"default_value": "No",
 			"entries": {
 				"Coral Fans": {
@@ -15889,39 +16138,39 @@
 					"Tall Seagrass": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "UNDERWATER_BONEMEALS",
-			"property_name": "Tag: UNDERWATER_BONEMEALS"
+			}
 		},
 		"tag_unstable_bottom_center": {
+			"property_name": "Tag: UNSTABLE_BOTTOM_CENTER",
+			"property_description": "UNSTABLE_BOTTOM_CENTER",
 			"default_value": "No",
 			"entries": {
 				"Fence Gates": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "UNSTABLE_BOTTOM_CENTER",
-			"property_name": "Tag: UNSTABLE_BOTTOM_CENTER"
+			}
 		},
 		"tag_valid_spawn": {
+			"property_name": "Tag: VALID_SPAWN",
+			"property_description": "VALID_SPAWN",
 			"default_value": "No",
 			"entries": {
 				"Grass Block": "Yes",
 				"Podzol": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "VALID_SPAWN",
-			"property_name": "Tag: VALID_SPAWN"
+			}
 		},
 		"tag_vibration_resonators": {
+			"property_name": "Tag: VIBRATION_RESONATORS",
+			"property_description": "VIBRATION_RESONATORS",
 			"default_value": "No",
 			"entries": {
 				"Block of Amethyst": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "VIBRATION_RESONATORS",
-			"property_name": "Tag: VIBRATION_RESONATORS"
+			}
 		},
 		"tag_wall_corals": {
+			"property_name": "Tag: WALL_CORALS",
+			"property_description": "WALL_CORALS",
 			"default_value": "No",
 			"entries": {
 				"Coral Fans": {
@@ -15929,11 +16178,11 @@
 					"Brain Coral Wall Fan<br>Bubble Coral Wall Fan<br>Fire Coral Wall Fan<br>Horn Coral Wall Fan<br>Tube Coral Wall Fan": "Yes"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WALL_CORALS",
-			"property_name": "Tag: WALL_CORALS"
+			}
 		},
 		"tag_wall_hanging_signs": {
+			"property_name": "Tag: WALL_HANGING_SIGNS",
+			"property_description": "WALL_HANGING_SIGNS",
 			"default_value": "No",
 			"entries": {
 				"Hanging Signs": {
@@ -15941,11 +16190,11 @@
 					"Acacia Wall Hanging Sign<br>Bamboo Wall Hanging Sign<br>Birch Wall Hanging Sign<br>Cherry Wall Hanging Sign<br>Crimson Wall Hanging Sign<br>Dark Oak Wall Hanging Sign<br>Jungle Wall Hanging Sign<br>Mangrove Wall Hanging Sign<br>Oak Wall Hanging Sign<br>Spruce Wall Hanging Sign<br>Warped Wall Hanging Sign": "Yes"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WALL_HANGING_SIGNS",
-			"property_name": "Tag: WALL_HANGING_SIGNS"
+			}
 		},
 		"tag_wall_post_override": {
+			"property_name": "Tag: WALL_POST_OVERRIDE",
+			"property_description": "WALL_POST_OVERRIDE",
 			"default_value": "No",
 			"entries": {
 				"Banners": "Yes",
@@ -15961,11 +16210,11 @@
 				},
 				"Torchflower Crop": "No",
 				"Tripwire": "Yes"
-			},
-			"property_description": "WALL_POST_OVERRIDE",
-			"property_name": "Tag: WALL_POST_OVERRIDE"
+			}
 		},
 		"tag_wall_signs": {
+			"property_name": "Tag: WALL_SIGNS",
+			"property_description": "WALL_SIGNS",
 			"default_value": "No",
 			"entries": {
 				"Signs": {
@@ -15973,20 +16222,20 @@
 					"Acacia Wall Sign<br>Bamboo Wall Sign<br>Birch Wall Sign<br>Cherry Wall Sign<br>Crimson Wall Sign<br>Dark Oak Wall Sign<br>Jungle Wall Sign<br>Mangrove Wall Sign<br>Oak Wall Sign<br>Spruce Wall Sign<br>Warped Wall Sign": "Yes"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WALL_SIGNS",
-			"property_name": "Tag: WALL_SIGNS"
+			}
 		},
 		"tag_walls": {
+			"property_name": "Tag: WALLS",
+			"property_description": "WALLS",
 			"default_value": "No",
 			"entries": {
 				"Torchflower Crop": "No",
 				"Walls": "Yes"
-			},
-			"property_description": "WALLS",
-			"property_name": "Tag: WALLS"
+			}
 		},
 		"tag_warped_stems": {
+			"property_name": "Tag: WARPED_STEMS",
+			"property_description": "WARPED_STEMS",
 			"default_value": "No",
 			"entries": {
 				"Hyphae": {
@@ -15998,20 +16247,20 @@
 					"Stripped Warped Stem<br>Warped Stem": "Yes"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WARPED_STEMS",
-			"property_name": "Tag: WARPED_STEMS"
+			}
 		},
 		"tag_wart_blocks": {
+			"property_name": "Tag: WART_BLOCKS",
+			"property_description": "WART_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Torchflower Crop": "No",
 				"Wart Blocks": "Yes"
-			},
-			"property_description": "WART_BLOCKS",
-			"property_name": "Tag: WART_BLOCKS"
+			}
 		},
 		"tag_wither_immune": {
+			"property_name": "Tag: WITHER_IMMUNE",
+			"property_description": "WITHER_IMMUNE",
 			"default_value": "No",
 			"entries": {
 				"Barrier": "Yes",
@@ -16029,32 +16278,32 @@
 				"Reinforced Deepslate": "Yes",
 				"Structure Block": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WITHER_IMMUNE",
-			"property_name": "Tag: WITHER_IMMUNE"
+			}
 		},
 		"tag_wither_summon_base_blocks": {
+			"property_name": "Tag: WITHER_SUMMON_BASE_BLOCKS",
+			"property_description": "WITHER_SUMMON_BASE_BLOCKS",
 			"default_value": "No",
 			"entries": {
 				"Soul Sand": "Yes",
 				"Soul Soil": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WITHER_SUMMON_BASE_BLOCKS",
-			"property_name": "Tag: WITHER_SUMMON_BASE_BLOCKS"
+			}
 		},
 		"tag_wolves_spawnable_on": {
+			"property_name": "Tag: WOLVES_SPAWNABLE_ON",
+			"property_description": "WOLVES_SPAWNABLE_ON",
 			"default_value": "No",
 			"entries": {
 				"Grass Block": "Yes",
 				"Snow": "Yes",
 				"Snow Block": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WOLVES_SPAWNABLE_ON",
-			"property_name": "Tag: WOLVES_SPAWNABLE_ON"
+			}
 		},
 		"tag_wooden_buttons": {
+			"property_name": "Tag: WOODEN_BUTTONS",
+			"property_description": "WOODEN_BUTTONS",
 			"default_value": "No",
 			"entries": {
 				"Buttons": {
@@ -16062,11 +16311,11 @@
 					"Polished Blackstone Button<br>Stone Button": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WOODEN_BUTTONS",
-			"property_name": "Tag: WOODEN_BUTTONS"
+			}
 		},
 		"tag_wooden_doors": {
+			"property_name": "Tag: WOODEN_DOORS",
+			"property_description": "WOODEN_DOORS",
 			"default_value": "No",
 			"entries": {
 				"Doors": {
@@ -16074,11 +16323,11 @@
 					"Iron Door": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WOODEN_DOORS",
-			"property_name": "Tag: WOODEN_DOORS"
+			}
 		},
 		"tag_wooden_fences": {
+			"property_name": "Tag: WOODEN_FENCES",
+			"property_description": "WOODEN_FENCES",
 			"default_value": "No",
 			"entries": {
 				"Fences": {
@@ -16086,11 +16335,11 @@
 					"Nether Brick Fence": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WOODEN_FENCES",
-			"property_name": "Tag: WOODEN_FENCES"
+			}
 		},
 		"tag_wooden_pressure_plates": {
+			"property_name": "Tag: WOODEN_PRESSURE_PLATES",
+			"property_description": "WOODEN_PRESSURE_PLATES",
 			"default_value": "No",
 			"entries": {
 				"Pressure Plates": {
@@ -16098,11 +16347,11 @@
 					"Heavy Weighted Pressure Plate<br>Light Weighted Pressure Plate<br>Polished Blackstone Pressure Plate<br>Stone Pressure Plate": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WOODEN_PRESSURE_PLATES",
-			"property_name": "Tag: WOODEN_PRESSURE_PLATES"
+			}
 		},
 		"tag_wooden_slabs": {
+			"property_name": "Tag: WOODEN_SLABS",
+			"property_description": "WOODEN_SLABS",
 			"default_value": "No",
 			"entries": {
 				"Slabs": {
@@ -16110,11 +16359,11 @@
 					"Andesite Slab<br>Bamboo Mosaic Slab<br>Blackstone Slab<br>Brick Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Mud Brick Slab<br>Nether Brick Slab<br>Oxidized Cut Copper Slab<br>Petrified Oak Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Stone Brick Slab<br>Stone Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WOODEN_SLABS",
-			"property_name": "Tag: WOODEN_SLABS"
+			}
 		},
 		"tag_wooden_stairs": {
+			"property_name": "Tag: WOODEN_STAIRS",
+			"property_description": "WOODEN_STAIRS",
 			"default_value": "No",
 			"entries": {
 				"Stairs": {
@@ -16122,11 +16371,11 @@
 					"Andesite Stairs<br>Bamboo Mosaic Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "No"
 				},
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WOODEN_STAIRS",
-			"property_name": "Tag: WOODEN_STAIRS"
+			}
 		},
 		"tag_wooden_trapdoors": {
+			"property_name": "Tag: WOODEN_TRAPDOORS",
+			"property_description": "WOODEN_TRAPDOORS",
 			"default_value": "No",
 			"entries": {
 				"Torchflower Crop": "No",
@@ -16134,29 +16383,29 @@
 					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<br>Dark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": "Yes",
 					"Iron Trapdoor": "No"
 				}
-			},
-			"property_description": "WOODEN_TRAPDOORS",
-			"property_name": "Tag: WOODEN_TRAPDOORS"
+			}
 		},
 		"tag_wool": {
+			"property_name": "Tag: WOOL",
+			"property_description": "WOOL",
 			"default_value": "No",
 			"entries": {
 				"Torchflower Crop": "No",
 				"Wool": "Yes"
-			},
-			"property_description": "WOOL",
-			"property_name": "Tag: WOOL"
+			}
 		},
 		"tag_wool_carpets": {
+			"property_name": "Tag: WOOL_CARPETS",
+			"property_description": "WOOL_CARPETS",
 			"default_value": "No",
 			"entries": {
 				"Carpets": "Yes",
 				"Torchflower Crop": "No"
-			},
-			"property_description": "WOOL_CARPETS",
-			"property_name": "Tag: WOOL_CARPETS"
+			}
 		},
 		"top_face_has_collision": {
+			"property_name": "Top Face Has Collision",
+			"property_description": "This is true if the top side has collision at the outer face (meaning it has a hard hitbox that aligns with the block grid).",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -16341,11 +16590,11 @@
 				},
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "This is true if the top side has collision at the outer face (meaning it has a hard hitbox that aligns with the block grid).",
-			"property_name": "Top Face Has Collision"
+			}
 		},
 		"top_face_has_full_square": {
+			"property_name": "Top Face Has Full Square",
+			"property_description": "This is true if the top face is a full square.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -16498,11 +16747,11 @@
 				"Walls": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "This is true if the top face is a full square.",
-			"property_name": "Top Face Has Full Square"
+			}
 		},
 		"top_face_has_rim": {
+			"property_name": "Top Face Has Rim",
+			"property_description": "This is true if the top face contains a 2 pixel wide ring going around its edge",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -16652,11 +16901,11 @@
 				"Walls": "No",
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "This is true if the top face contains a 2 pixel wide ring going around its edge",
-			"property_name": "Top Face Has Rim"
+			}
 		},
 		"top_face_has_small_square": {
+			"property_name": "Top Face Has Small Square",
+			"property_description": "This is true if the top face contains a square of length 2 at its center.",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -16855,11 +17104,10 @@
 				},
 				"Water": "No",
 				"Weeping Vines": "No"
-			},
-			"property_description": "This is true if the top face contains a square of length 2 at its center.",
-			"property_name": "Top Face Has Small Square"
+			}
 		},
 		"variants": {
+			"property_name": "Variants",
 			"default_value": null,
 			"entries": {
 				"Activator Rail": "Activator Rail",
@@ -17929,6 +18177,7 @@
 				"Suspicious Gravel": "Suspicious Gravel",
 				"Suspicious Sand": "Suspicious Sand",
 				"Sweet Berry Bush": "Sweet Berry Bush",
+				"TNT": "TNT",
 				"Target": "Target",
 				"Terracotta": [
 					"Black Terracotta",
@@ -17950,7 +18199,6 @@
 					"Yellow Terracotta"
 				],
 				"Tinted Glass": "Tinted Glass",
-				"TNT": "TNT",
 				"Torch": [
 					"Soul Torch",
 					"Soul Wall Torch",
@@ -18055,10 +18303,11 @@
 					"White Wool",
 					"Yellow Wool"
 				]
-			},
-			"property_name": "Variants"
+			}
 		},
 		"waterloggable": {
+			"property_name": "Waterloggable",
+			"property_description": "Whether this block can be waterlogged.",
 			"default_value": "No",
 			"entries": {
 				"Activator Rail": "Yes",
@@ -18108,12 +18357,13 @@
 				"Trapped Chest": "Yes",
 				"Walls": "Yes",
 				"Water": "Inherent"
-			},
-			"property_description": "Whether this block can be waterlogged.",
-			"property_name": "Waterloggable"
+			}
 		},
 		"width_all": {
+			"property_name": "Width (All)",
+			"property_description": "The block's side-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"default_value": 16,
+			"size_type": "pixel",
 			"entries": {
 				"Activator Rail": "Not Applicable",
 				"Air": "Not Applicable",
@@ -18338,7 +18588,10 @@
 				"End Gateway": "Not Applicable",
 				"End Portal": "Not Applicable",
 				"End Portal Frame": {
-					"With Eye": [16, 12],
+					"With Eye": [
+						16,
+						12
+					],
 					"Without Eye": 16
 				},
 				"End Rod": {
@@ -18642,13 +18895,13 @@
 				},
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
-			},
-			"property_description": "The block's side-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
-			"property_name": "Width (All)",
-			"size_type": "pixel"
+			}
 		},
 		"width_external": {
+			"property_name": "Width (External)",
+			"property_description": "The block's side-facing collision surfaces.\nDoes not include internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
 			"default_value": 16,
+			"size_type": "pixel",
 			"entries": {
 				"Activator Rail": "Not Applicable",
 				"Air": "Not Applicable",
@@ -18804,7 +19057,7 @@
 				"End Portal": "Not Applicable",
 				"End Portal Frame": {
 					"With Eye": {
-						"Base": 16, 
+						"Base": 16,
 						"Eye": 12
 					},
 					"Without Eye": 16
@@ -19007,10 +19260,7 @@
 				},
 				"Water": "Not Applicable",
 				"Weeping Vines": "Not Applicable"
-			},
-			"property_description": "The block's side-facing collision surfaces.\nDoes not include internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
-			"property_name": "Width (External)",
-			"size_type": "pixel"
+			}
 		},
 		"wiki_page": {
 			"property_name": "Wiki page",
@@ -19289,8 +19539,8 @@
 				"Stems": "https://minecraft.wiki/w/Log",
 				"Stone": {
 					"Infested Stone": "https://minecraft.wiki/w/Infested_Block",
-					"Stone": "https://minecraft.wiki/w/Stone",
-					"Smooth Stone": "https://minecraft.wiki/w/Smooth_Stone"
+					"Smooth Stone": "https://minecraft.wiki/w/Smooth_Stone",
+					"Stone": "https://minecraft.wiki/w/Stone"
 				},
 				"Stone Bricks": {
 					"Chiseled Stone Bricks<br>Cracked Stone Bricks<br>Mossy Stone Bricks<br>Stone Bricks": "https://minecraft.wiki/w/Stone_Bricks",
@@ -19303,10 +19553,10 @@
 				"Suspicious Gravel": "https://minecraft.wiki/w/Suspicious_Block",
 				"Suspicious Sand": "https://minecraft.wiki/w/Suspicious_Block",
 				"Sweet Berry Bush": "https://minecraft.wiki/w/Sweet_Berries",
+				"TNT": "https://minecraft.wiki/w/TNT",
 				"Target": "https://minecraft.wiki/w/Target",
 				"Terracotta": "https://minecraft.wiki/w/Terracotta",
 				"Tinted Glass": "https://minecraft.wiki/w/Tinted_Glass",
-				"TNT": "https://minecraft.wiki/w/TNT",
 				"Torch": "https://minecraft.wiki/w/Torch",
 				"Torchflower": "https://minecraft.wiki/w/Flower",
 				"Torchflower Crop": "https://minecraft.wiki/w/Torchflower_Seeds",
@@ -19330,6 +19580,8 @@
 			}
 		},
 		"wither_block_break_immune": {
+			"property_name": "Wither Block Break Immune",
+			"property_description": "Whether this block is immune to the wither's block breaking attack.",
 			"default_value": "No",
 			"entries": {
 				"Barrier": "Yes",
@@ -19348,12 +19600,13 @@
 				"Reinforced Deepslate": "Yes",
 				"Structure Block": "Yes",
 				"Water": "Yes"
-			},
-			"property_description": "Whether this block is immune to the wither's block breaking attack.",
-			"property_name": "Wither Block Break Immune"
+			}
 		},
 		"wither_skull_immune": {
+			"property_name": "Wither Skull Immune",
+			"property_description": "Whether this block is immune to the wither's skull attacks.",
 			"default_value": "No",
+			"relative_gradient": true,
 			"entries": {
 				"Ancient Debris": "Black skulls only",
 				"Andesite": "Black skulls only",
@@ -19465,273 +19718,24 @@
 					"Bubble Column": "No",
 					"Water": "Black skulls only"
 				}
-			},
-			"property_description": "Whether this block is immune to the wither's skull attacks.",
-			"property_name": "Wither Skull Immune",
-			"relative_gradient": true
-		},
-		"requires_silk_touch":{
-			"property_name":"Requires Silk Touch",
-			"property_description":"Whether this block requires a silk touch enchanted tool to drop as an item form.",
-			"default_value":"No",
-			"entries":{
-				"Air":"Not Applicable",
-				"Amethyst Cluster":"Yes",
-				"Barrier":"Not Applicable",
-				"Bee Nest":"Yes",
-				"Beehive":"Yes",
-				"Bedrock":"Yes",
-				"Blue Ice":"Yes",
-				"Bookshelf":"Yes",
-				"Coral Blocks":"Yes",
-				"Coral Fans":"Yes",
-				"Corals":"Yes",
-				"Command Blocks":"Not Applicable",
-				"Cocoa":"Yes",
-				"Calibrated Sculk Sensor":"Yes",
-				"Campfire":"Yes",
-				"Chiseled Bookshelf":"Yes",
-				"Clay":"Yes",
-				"Coal Ore":"Yes",
-				"Budding Amethyst":"Not Applicable",
-				"Copper Ore":"Yes",
-				"Diamond Ore":"Yes",
-				"Emerald Ore":"Yes",
-				"End Gateway":"Not Applicable",
-				"End Portal":"Not Applicable",
-				"End Portal Frame":"Not Applicable",
-				"Ender Chest":"Yes",
-				"Fire":"Not Applicable",
-				"Frosted Ice":"Not Applicable",
-				"Glass":"Yes",
-				"Glass Pane":"Yes",
-				"Glowstone":"Yes",
-				"Gold Ore":"Yes",
-				"Grass Block":"Yes",
-				"Ice":"Yes",
-				"Iron Ore":"Yes",
-				"Lapis Lazuli Ore":"Yes",
-				"Lava":"Not Applicable",
-				"Light Block":"Not Applicable",
-				"Leaves":"Yes",
-				"Melon":"Yes",
-				"Mushroom Blocks":"Yes",
-				"Mycelium":"Yes",
-				"Nether Gold Ore":"Yes",
-				"Nether Quartz Ore":"Yes",
-				"Nylium":"Yes",
-				"Packed Ice":"Yes",
-				"Podzol":"Yes",
-				"Reinforced Deepslate":"Not Applicable",
-				"Sculk":"Yes",
-				"Sculk Catalyst":"Yes",
-				"Sculk Sensor":"Yes",
-				"Sculk Shrieker":"Yes",
-				"Sculk Vein":"Yes",
-				"Sea Lantern":"Yes",
-				"Snow":"Yes",
-				"Snow Block":"Yes",
-				"Stained Glass":"Yes",
-				"Stained Glass Panes":"Yes",
-				"Stone":"Yes",
-				"Structure Block":"Not Applicable",
-				"Structure Void":"Not Applicable",
-				"Turtle Egg":"Yes",
-				"Water":"Not Applicable"
 			}
 		},
-		"intended_tool":{
-			"property_name":"Intended Tool",
-			"property_description":"What is the intended tool to use to interact with this block.",
-			"default_value":"Pickaxe",
-			"entries":{
-				"Air": "Not Applicable",
-				"Azalea":"By Hand",
-				"Bamboo":"Sword",
-				"Bamboo Block":"Axe",
-				"Bamboo Mosaic":"Axe",
-				"Banners":"Axe",
-				"Barrel":"Axe",
-				"Barrier":"Not Applicable",
-				"Bedrock":"Not Applicable",
-				"Beds":"Axe",
-				"Bee Nest":"Axe",
-				"Beehive":"Axe",
-				"Block of Bamboo":"Axe",
-				"Block of Stripped Bamboo":"Axe",
-				"Bookshelf":"Axe",
-				"Buttons":{
-					"Acacia Button<br>Bamboo Button<br>Birch Button<br>Cherry Button<br>Crimson Button<>brDark Oak Button<br>Jungle Button<br>Mangrove Button<br>Oak Button<br>Spruce Button<br>Warped Button": "Axe",
-					"Stone Button<br>Polished Blacstone Button": "Pickaxe"
-				},
-				"Cactus":"By Hand",
-				"Cake":"None",
-				"Calibrated Sculk Sensor":"Hoe",
-				"Campfire":"Axe",
-				"Carpets":"By Hand",
-				"Cartography Table":"Axe",
-				"Cave Vines":"Shears",
-				"Chest":"Axe",
-				"Chiseled Bookshelf":"Axe",
-				"Chorus Flower":"Axe",
-				"Chorus Plant":"Axe",
-				"Clay":"Shovel",
-				"Coarse Dirt":"Shovel",
-				"Cobweb":"Shears or Sword",
-				"Cocoa":"Axe",
-				"Command Blocks":"Not Applicable",
-				"Composter":"Axe",
-				"Concrete Powder":"Shovel",
-				"Coral Fans":"By Hand",
-				"Crafting Table":"Axe",
-				"Crops":"Hoe",
-				"Dead Bush":"Shears",
-				"Dirt":"Shovel",
-				"Dirt Path":"Shovel",
-				"Doors":{
-					"Acacia Door<br>Bamboo Door<br>Birch Door<br>Cherry Door<br>Crimson Door<>brDark Oak Door<br>Jungle Door<br>Mangrove Door<br>Oak Door<br>Spruce Door<br>Warped Door": "Axe",
-					"Iron Door": "Pickaxe"
-				},
-				"Dragon Egg":"By Hand",
-				"Dried Kelp Block":"Hoe",
-				"End Gateway":"Not Applicable",
-				"End Portal":"Not Applicable",
-				"End Portal Frame":"Not Applicable",
-				"End Rod":"By Hand",
-				"Farmland":"Shovel",
-				"Fence Gates":"Axe",
-				"Fences":"Axe",
-				"Fern":"By Hand",
-				"Fire":"By Hand",
-				"Fletching Table":"Axe",
-				"Flower Pot":"By Hand",
-				"Flowers":"By Hand",
-				"Frogspawn":"Not Applicable",
-				"Fungi":"By Hand",
-				"Glow Lichen":"Shears",
-				"Grass":"Shears",
-				"Grass Block":"Shovel",
-				"Gravel":"Shovel",
-				"Hanging Roots":"Shears",
-				"Hanging Signs":"Axe",
-				"Hay Bale":"Hoe",
-				"Honey Block":"By Hand",
-				"Honeycomb Block":"None",
-				"Hyphae":"Axe",
-				"Jack o'Lantern":"Axe",
-				"Jigsaw Block":"Not Applicable",
-				"Jukebox":"Axe",
-				"Kelp":"By Hand",
-				"Ladder":"Axe",
-				"Lava":"Not Applicable",
-				"Leaves":"Shears or Hoe",
-				"Light Block":"Not Applicable",
-				"Lily Pad":"By Hand",
-				"Logs":"Axe",
-				"Loom":"Axe",
-				"Mangrove Propagule":"By Hand",
-				"Mangrove Roots":"Axe",
-				"Melon":"Axe",
-				"Moss Block":"Hoe",
-				"Moss Carpet":"Hoe",
-				"Mud":"Shovel",
-				"Muddy Mangrove Roots":"Shovel",
-				"Mushroom Blocks":"Axe",
-				"Mushrooms":"By Hand",
-				"Mycelium":"Shovel",
-				"Nether Portal":"Not Applicable",
-				"Nether Sprouts":"Shears",
-				"Nether Wart":"Hoe",
-				"Note Block":"Axe",
-				"Pink Petals":"Shears",
-				"Pitcher Plant":"By Hand",
-				"Planks":"Axe",
-				"Podzol":"Shovel",
-				"Powder Snow":"Shovel",
-				"Pressure Plates":{
-					"Acacia Pressure Plate<br>Bamboo Pressure Plate<br>Birch Pressure Plate<br>Cherry Pressure Plate<br>Crimson Pressure Plate<>brDark Oak Pressure Plate<br>Jungle Pressure Plate<br>Mangrove Pressure Plate<br>Oak Pressure Plate<br>Spruce Pressure Plate<br>Warped Pressure Plate": "Axe",
-					"Heavy Weighted Pressure Plate<br>Light Weighted Pressure Plate<br>Polished Blackstone Pressure Plate<br>Stone Pressure Plate": "Pickaxe"
-				},
-				"Pumpkin":"Axe",
-				"Red Sand":"Shovel",
-				"Redstone Comparator":"By Hand",
-				"Redstone Dust":"By Hand",
-				"Redstone Repeater":"By Hand",
-				"Redstone Torch":"By Hand",
-				"Reinforced Deepslate":"Not Applicable",
-				"Roots":"Shears",
-				"Sand":"Shovel",
-				"Saplings":"By Hand",
-				"Scaffolding":"By Hand",
-				"Sculk":"Hoe",
-				"Sculk Catalyst":"Hoe",
-				"Sculk Sensor":"Hoe",
-				"Sculk Shrieker":"Hoe",
-				"Sculk Vein":"Hoe",
-				"Sea Pickle":"By Hand",
-				"Seagrass":"Shears",
-				"Shroomlight":"Hoe",
-				"Signs":"Axe",
-				"Slabs":{
-					"Wooden": "Axe",
-					"Cobbled Deepslate<br>Polished Deepslate<br>Deepslate Brick<br>Deepslate Tile<br>Cut Copper<br>End Stone Brick<br>Stone Brick<br>Blackstone (and variants)<br>(Mossy) Cobblestone<br>(Red) Nether Brick<br>Petrified Oak<br>Purpur<br>(Smooth) Quartz<br>(Cut/Smooth) Sandstone<br>(Cut/Smooth) Red Sandstone<br>(Smooth) Stone<br>Mossy Stone Brick<br>(Polished) Andesite<br>(Polished) Diorite<br>(Polished) Granite<br>Prismarine (and variants)": "Pickaxe"
-				},
-				"Slime Block":"By Hand",
-				"Small Dripleaf":"By Hand",
-				"Smithing Table":"Axe",
-				"Snow":"Shovel",
-				"Snow Block":"Shovel",
-				"Soul Sand":"Shovel",
-				"Soul Soil":"Shovel",
-				"Sponge":"Hoe",
-				"Spore Blossom":"By Hand",
-				"Stairs":{
-					"Acacia Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Bamboo Mosaic Stairs<br>Cherry Stairs<br>Crimson Stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Oak Stairs<br>Spruce Stairs<br>Warped Stairs": "Axe",
-					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs<br>": "Pickaxe"
-				},
-				"Stems":"Axe",
-				"Structure Block":"Not Applicable",
-				"Sugar Cane":"By Hand",
-				"Suspicious Gravel":"Shovel",
-				"Suspicious Sand":"Shovel",
-				"Sweet Berry Bush":"By Hand",
-				"Target":"Hoe",
-				"TNT":"By Hand",
-				"Torch":"By Hand",
-				"Torchflower":"By Hand",
-				"Torchflower Crop":"Hoe",
-				"Trapdoors":{
-					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<>brDark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": "Axe",
-					"Iron Trapdoor": "Pickaxe"
-				},
-				"Trapped Chest":"Axe",
-				"Tripwire":"By Hand",
-				"Tripwire Hook":"Axe",
-				"Twisting Vines":"Shears",
-				"Vines":"Shears",
-				"Wart Blocks":"Hoe",
-				"Water":"Not Applicable",
-				"Weeping Vines":"Shears",
-				"Wood":"Axe",
-				"Wool":"Shears"
-			}
-		},
-		"xp_dropped_when_mined":{
-			"property_name":"Xp Dropped When Mined",
-			"property_description":"The amount of experience points this block drops upon mining.",
-			"default_value":"None",
-			"entries":{
-				"Coal Ore":"0-2",
-				"Diamond Ore":"3-7",
-				"Emerald Ore":"3-7",
-				"Lapis Lazuli Ore":"2-5",
-				"Nether Gold Ore":"0-1",
-				"Nether Quartz Ore":"2-5",
-				"Spawner":"15–43",
-				"Sculk":"1",
-				"Sculk Catalyst":"5",
-				"Sculk Sensor":"5",
-				"Sculk Shrieker":"5"
+		"xp_dropped_when_mined": {
+			"property_name": "Xp Dropped When Mined",
+			"property_description": "The amount of experience points this block drops upon mining.",
+			"default_value": "None",
+			"entries": {
+				"Coal Ore": "0-2",
+				"Diamond Ore": "3-7",
+				"Emerald Ore": "3-7",
+				"Lapis Lazuli Ore": "2-5",
+				"Nether Gold Ore": "0-1",
+				"Nether Quartz Ore": "2-5",
+				"Sculk": "1",
+				"Sculk Catalyst": "5",
+				"Sculk Sensor": "5",
+				"Sculk Shrieker": "5",
+				"Spawner": "15–43"
 			}
 		}
 	}
