@@ -209,11 +209,34 @@ function headerOutputter(page, entry_header) {
 
         if (typeof data.properties[property_id].property_description !== 'undefined' && data.properties[property_id].property_description !== "") {
             append_data += /*html*/`<li class="dropdown-submenu">
-                                <a role="button" class="description-button">Description...</a>
-                                <ul class="dropdown-menu">
-                                    <p>${value_parser(data.properties[property_id].property_description)}</p>
-                                </ul>
-                            </li>`;
+                <a role="button" class="description-button">Description...</a>
+                <ul class="dropdown-menu">
+                    <p class="user-select-text">${value_parser(data.properties[property_id].property_description)}</p>
+                </ul>
+            </li>`;
+        }
+        if (typeof data.properties[property_id].definition !== 'undefined' && data.properties[property_id].definition !== "") {
+            append_data += /*html*/`<li class="dropdown-submenu">
+                <a role="button" class="description-button"><i class="fas fa-code"></i> Code definition...</a>
+                <ul class="dropdown-menu">
+                    <p class="user-select-all">
+                        ${data.properties[property_id].definition}
+                    </p>
+                    <p>
+                        <button 
+                            class="btn btn-default"
+                            onclick="navigator.clipboard.writeText('${data.properties[property_id].definition}')"
+                            >Copy reference <i class="fas fa-copy"></i>
+                        </button>
+                        <a
+                            class="btn btn-default"
+                            href="https://linkie.shedaniel.dev/mappings?namespace=mojang&search=${encodeURIComponent(data.properties[property_id].definition)}"
+                            target="_blank" rel="noopener noreferrer" title="Search for this code definition on Linkie"
+                            >Search on Linkie <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </p>
+                </ul>
+            </li>`;
         }
         append_data += /*html*/`<li class="divider"></li><div class="dropdown-scrollable">`;
 

@@ -512,6 +512,24 @@ th:first-child>*>* {
     display: none !important;
 }
 
+.user-select-all {
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+    -khtml-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+}
+
+.user-select-text {
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
 .icons {
     align-self: center;
 }
@@ -643,7 +661,7 @@ td .nested-table {
     white-space: nowrap
 }
 
-.nested-table > tbody > tr > td:last-child {
+.nested-table:not(.preview-table) > tbody > tr > td:last-child {
     width: 22px;
     /* text-align: right; */
     white-space: nowrap;
