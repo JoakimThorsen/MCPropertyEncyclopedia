@@ -98,16 +98,11 @@ function new_game(daily_game = false) {
     delete data.properties.binary_rep;
     delete data.properties.skyblock_obtainable;
     
-    delete data.properties.material;
     // delete data.properties.map_color;
     // delete data.properties.instrument;
     delete data.properties.numerical_id;
     
-    delete data.properties.instant_shape_updater;
-    delete data.properties.instant_block_updater;
-    delete data.properties.instant_updater;
-    delete data.properties.shape_update_on_interaction;
-    delete data.properties.shape_update_from_environment;
+    // deprecated
     delete data.properties.material;
     delete data.properties.material_is_liquid;
     delete data.properties.material_is_solid;
@@ -115,6 +110,13 @@ function new_game(daily_game = false) {
     delete data.properties.material_is_burnable;
     delete data.properties.material_is_replaceable;
     delete data.properties.material_blocks_light;
+    
+    // not updated to 1.20
+    delete data.properties.instant_shape_updater;
+    delete data.properties.instant_block_updater;
+    delete data.properties.instant_updater;
+    delete data.properties.shape_update_on_interaction;
+    delete data.properties.shape_update_from_environment;
     
     Object.keys(data.properties).forEach(key => {
         if(key.startsWith("tag_")) {
