@@ -585,6 +585,7 @@
 				"obstructs_tree_growth",
 				"instrument",
 				"connects_to_panes",
+				"connects_to_walls",
 				"kills_grass"
 			]
 		},
@@ -3917,8 +3918,204 @@
 				"Water": "No",
 				"Weeping Vines": "No"
 			},
-			"property_description": "Whether a glass pane block will connect to this block",
+			"property_description": "Whether a glass pane block to the north will connect to this block",
 			"property_name": "Connects To Panes (North)"
+		},
+		"connects_to_walls": {
+			"property_name": "Connects To Walls (North)",
+			"property_description": "Whether a wall block to the north will connect to this block.",
+			"entries": {
+				"Activator Rail": "No",
+				"Air": "No",
+				"Amethyst Cluster": "No",
+				"Anvil": "No",
+				"Azalea": "No",
+				"Bamboo": "No",
+				"Banners": "No",
+				"Barrier": "No",
+				"Beds": "No",
+				"Bell": "No",
+				"Big Dripleaf": "No",
+				"Brewing Stand": "No",
+				"Buttons": "No",
+				"Cactus": "No",
+				"Cake": "No",
+				"Calibrated Sculk Sensor": "No",
+				"Campfire": "No",
+				"Candles": "No",
+				"Carpets": "No",
+				"Cauldron": "No",
+				"Cave Vines": "No",
+				"Chain": "No",
+				"Chest": "No",
+				"Chorus Plant": "No",
+				"Cobweb": "No",
+				"Cocoa": "No",
+				"Conduit": "No",
+				"Coral Fans": "No",
+				"Corals": "No",
+				"Crops": "No",
+				"Daylight Detector": "No",
+				"Dead Bush": "No",
+				"Decorated Pot": "No",
+				"Detector Rail": "No",
+				"Dirt Path": "No",
+				"Doors": {
+					"facing: east": {
+						"hinge: left": {
+							"open: false": "No",
+							"open: true": "Yes"
+						},
+						"hinge: right": "No"
+					},
+					"facing: north": "No",
+					"facing: south": {
+						"open: false": "Yes",
+						"open: true": "No"
+					},
+					"facing: west": {
+						"hinge: left": "No",
+						"hinge: right": {
+							"open: false": "No",
+							"open: true": "Yes"
+						}
+					}
+				},
+				"Dragon Egg": "No",
+				"Enchanting Table": "No",
+				"End Gateway": "No",
+				"End Portal": "No",
+				"End Portal Frame": "No",
+				"End Rod": "No",
+				"Ender Chest": "No",
+				"Farmland": "No",
+				"Fence Gates": {
+					"facing: east<br>facing: west": "Yes",
+					"facing: north<br>facing: south": "No"
+				},
+				"Fences": "No",
+				"Fern": "No",
+				"Fire": "No",
+				"Flower Pot": "No",
+				"Flowers": "No",
+				"Frogspawn": "No",
+				"Fungi": "No",
+				"Glow Lichen": "No",
+				"Grass": "No",
+				"Grindstone": "No",
+				"Hanging Roots": "No",
+				"Hanging Signs": "No",
+				"Heads": "No",
+				"Honey Block": "No",
+				"Hopper": "No",
+				"Jack o'Lantern": "No",
+				"Kelp": "No",
+				"Ladder": {
+					"facing: east<br>facing: north<br>facing: west": "No",
+					"facing: south": "Yes"
+				},
+				"Lantern": "No",
+				"Lava": "No",
+				"Leaves": "No",
+				"Lectern": "No",
+				"Lever": "No",
+				"Light Block": "No",
+				"Lightning Rod": "No",
+				"Lily Pad": "No",
+				"Mangrove Propagule": "No",
+				"Melon": "No",
+				"Moss Carpet": "No",
+				"Mushrooms": "No",
+				"Nether Portal": "No",
+				"Nether Sprouts": "No",
+				"Nether Wart": "No",
+				"Pink Petals": "No",
+				"Piston": {
+					"Moving Piston": "No",
+					"Piston<br>Sticky Piston": {
+						"extended: false": "Yes",
+						"extended: true": {
+							"facing: down<br>facing: east<br>facing: north<br>facing: up<br>facing: west": "No",
+							"facing: south": "Yes"
+						}
+					},
+					"Piston Head": {
+						"facing: down<br>facing: east<br>facing: south<br>facing: up<br>facing: west": "No",
+						"facing: north": "Yes"
+					}
+				},
+				"Pitcher Crop": "No",
+				"Pitcher Plant": "No",
+				"Pointed Dripstone": "No",
+				"Powder Snow": "No",
+				"Powered Rail": "No",
+				"Pressure Plates": "No",
+				"Pumpkin": "No",
+				"Rail": "No",
+				"Redstone Comparator": "No",
+				"Redstone Dust": "No",
+				"Redstone Repeater": "No",
+				"Redstone Torch": "No",
+				"Roots": "No",
+				"Saplings": "No",
+				"Scaffolding": "No",
+				"Sculk Sensor": "No",
+				"Sculk Shrieker": "No",
+				"Sculk Vein": "No",
+				"Sea Pickle": "No",
+				"Seagrass": "No",
+				"Shulker Box": "No",
+				"Signs": "No",
+				"Slabs": {
+					"type: bottom<br>type: top": "No",
+					"type: double": "Yes"
+				},
+				"Small Dripleaf": "No",
+				"Sniffer Egg": "No",
+				"Snow": {
+					"layers: 1<br>layers: 2<br>layers: 3<br>layers: 4<br>layers: 5<br>layers: 6<br>layers: 7": "No",
+					"layers: 8": "Yes"
+				},
+				"Spore Blossom": "No",
+				"Stairs": {
+					"facing: east": {
+						"shape: inner_left": "Yes",
+						"shape: inner_right<br>shape: outer_left<br>shape: outer_right<br>shape: straight": "No"
+					},
+					"facing: north": {
+						"shape: inner_left<br>shape: inner_right<br>shape: straight": "Yes",
+						"shape: outer_left<br>shape: outer_right": "No"
+					},
+					"facing: south": "No",
+					"facing: west": {
+						"shape: inner_left<br>shape: outer_left<br>shape: outer_right<br>shape: straight": "No",
+						"shape: inner_right": "Yes"
+					}
+				},
+				"Stonecutter": "No",
+				"Structure Void": "No",
+				"Sugar Cane": "No",
+				"Sweet Berry Bush": "No",
+				"Torch": "No",
+				"Torchflower": "No",
+				"Torchflower Crop": "No",
+				"Trapdoors": {
+					"facing: east<br>facing: north<br>facing: west": "No",
+					"facing: south": {
+						"open: false": "No",
+						"open: true": "Yes"
+					}
+				},
+				"Trapped Chest": "No",
+				"Tripwire": "No",
+				"Tripwire Hook": "No",
+				"Turtle Egg": "No",
+				"Twisting Vines": "No",
+				"Vines": "No",
+				"Water": "No",
+				"Weeping Vines": "No"
+			},
+			"default_value": "Yes"
 		},
 		"dragon_immune": {
 			"default_value": "No",
@@ -19272,37 +19469,6 @@
 			"property_description": "Whether this block is immune to the wither's skull attacks.",
 			"property_name": "Wither Skull Immune",
 			"relative_gradient": true
-		},
-		"comparator2": {
-			"property_name": "Comparator2",
-			"default_value": "No",
-			"entries": {
-				"Barrel": "Yes",
-				"Bee Nest": "Yes",
-				"Beehive": "Yes",
-				"Blast Furnace": "Yes",
-				"Brewing Stand": "Yes",
-				"Cake": "Yes",
-				"Calibrated Sculk Sensor": "Yes",
-				"Cauldron": "Yes",
-				"Chest": "Yes",
-				"Chiseled Bookshelf": "Yes",
-				"Command Blocks": "Yes",
-				"Composter": "Yes",
-				"Detector Rail": "Yes",
-				"Dispenser": "Yes",
-				"Dropper": "Yes",
-				"End Portal Frame": "Yes",
-				"Furnace": "Yes",
-				"Hopper": "Yes",
-				"Jukebox": "Yes",
-				"Lectern": "Yes",
-				"Respawn Anchor": "Yes",
-				"Sculk Sensor": "Yes",
-				"Shulker Box": "Yes",
-				"Smoker": "Yes",
-				"Trapped Chest": "Yes"
-			}
 		},
 		"requires_silk_touch":{
 			"property_name":"Requires Silk Touch",
