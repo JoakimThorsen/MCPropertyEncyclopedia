@@ -709,7 +709,8 @@
 			]
 		},
 		{
-			"category": "\"Deprecated\" properties",
+			"category": "\"Legacy\" properties",
+			"description": "Not fully accurate to its name; remains from when materials were still used. Marked as deprecated in the code but still used extensively.",
 			"contents": [
 				"blocks_motion",
 				"solid"
@@ -1709,7 +1710,7 @@
 				"Weeping Vines": "No"
 			},
 			"property_description": "blockState.blocksMotion()",
-			"property_name": "(Deprecated) Blocks Motion"
+			"property_name": "(Legacy) Blocks Motion"
 		},
 		"blocks_skylight": {
 			"default_value": "Yes",
@@ -12508,7 +12509,7 @@
 				"Weeping Vines": "No"
 			},
 			"property_description": "blockState.isSolid()",
-			"property_name": "(Deprecated) Solid"
+			"property_name": "(Legacy) Solid"
 		},
 		"spawnable": {
 			"default_value": "No",

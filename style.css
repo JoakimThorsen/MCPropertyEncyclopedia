@@ -205,6 +205,15 @@ a:hover {
     margin: 0;
 }
 
+.select-category-description {
+    font-size: 14px;
+    font-style: italic;
+    padding: 10px 10px !important;
+    margin: 0;
+    color: var(--text-color);
+    background-color: var(--secondary-background-color);
+}
+
 .dropdown-actions {
     padding: 0 0 5px;
 }
@@ -452,7 +461,7 @@ th:first-child>*>* {
 
 .custom-submenu a:hover {
     text-decoration: none;
-    background: var(--secondary-background-color);
+    background: var(--hover-background-color);
 }
 
 .dot {

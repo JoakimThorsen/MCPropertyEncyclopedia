@@ -211,6 +211,9 @@ function display_selection() {
                         <i class="fas fa-folder-open"></i> ${entry.category}&hellip;
                     </a>
                     <ul class="custom-collapsible list-unstyled">
+                        ${typeof entry.description !== "undefined" && entry.description !== ""
+                            ? /*html*/`<li><p class="select-category-description selection-category">${entry.description}</p></li>`
+                            : ""}
                         ${selection_dropdown(entry.contents)}
                     </ul>
                 </li>
@@ -502,9 +505,12 @@ function parse_custom_url(value, fallback) {
         const split = value.split(';');
         const result = {};
         split.forEach(obj_str => {
-            obj_str = obj_str.substr(1, obj_str.length - 2);
-            const [key, ...val] = obj_str.split(':');
-            result[key] = parse_custom_url(val.join());
+            // obj_str = obj_str.substr(1, obj_str.length - 2);
+            // const [key, ...val] = obj_str.split(':');
+            // result[key] = parse_custom_url(val.join());
+
+            const [_, key, sign, val] = obj_str.match(/\((\w*)(:|!=|=)(.*)\)/);
+            result[key] = parse_custom_url(val);
         })
         return result;
     }
