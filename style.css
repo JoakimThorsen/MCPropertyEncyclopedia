@@ -613,6 +613,9 @@ th {
 .dot.RAW_IRON               { background-color: rgb(216, 175, 147) !important }
 .dot.GLOW_LICHEN            { background-color: rgb(127, 167, 150) !important }
 
+td.numeric-cell {
+    text-align: right;
+}
 
 .nested-table {
     margin-bottom: 0;

@@ -382,7 +382,7 @@ function get_data_cell_contents(entry, property_id, top_level = true) {
         return_data += "</tbody></table></td>";
 
     } else {
-        return_data = /*html*/`<td ${formatting_color(entry, property_id)}>${value_parser(entry)}</td>`;
+        return_data = /*html*/`<td class="${isNum(entry) && settings_obj.right_align_numbers ? "numeric-cell" : ""} ${formatting_color(entry, property_id, true)}">${value_parser(entry)}</td>`;
     }
     return return_data;
 }
