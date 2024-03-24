@@ -954,6 +954,7 @@
 		"blast_resistance": {
 			"property_name": "Blast Resistance",
 			"property_description": "Determines how likely this block is to break from exposure to an explosion",
+			"definition": "net.minecraft.world.level.block.Block#getExplosionResistance",
 			"default_value": 0,
 			"relative_gradient": true,
 			"entries": {
@@ -1626,7 +1627,8 @@
 		},
 		"blocks_motion": {
 			"property_name": "(Legacy) Blocks Motion",
-			"property_description": "blockState.blocksMotion()",
+			"property_description": "Not fully accurate to its name; remains from when materials were still used.</p><p>Marked as deprecated in the code but still used extensively.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#blocksMotion",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -1715,7 +1717,8 @@
 		},
 		"blocks_skylight": {
 			"property_name": "Blocks Skylight",
-			"property_description": "",
+			"property_description": "Whether this block... blocks... skylight.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#propagatesSkylightDown",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": {
@@ -2001,6 +2004,7 @@
 		"bottom_face_has_collision": {
 			"property_name": "Bottom Face Has Collision",
 			"property_description": "This is true if the bottom side has collision at the outer face (meaning it has a hard hitbox that aligns with the block grid).",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#getCollisionShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos)",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -2173,6 +2177,7 @@
 		"bottom_face_has_full_square": {
 			"property_name": "Bottom Face Has Full Square",
 			"property_description": "This is true if the bottom face is a full square.",
+			"definition": "net.minecraft.world.level.block.Block#isFaceFull",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -2312,6 +2317,7 @@
 		"bottom_face_has_small_square": {
 			"property_name": "Bottom Face Has Small Square",
 			"property_description": "This is true if the bottom face contains a square of length 2 at its center.",
+			"definition": "net.minecraft.world.level.block.Block#canSupportCenter",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -3583,7 +3589,7 @@
 		"conductive": {
 			"property_name": "Conductive",
 			"property_description": "Whether or not a redstone component can be powered through this block.",
-			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isRedstoneConductor",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase.isRedstoneConductor",
 			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
@@ -4151,6 +4157,7 @@
 		"emits_power": {
 			"property_name": "Emits Power",
 			"property_description": "Whether this block can emit redstone signals.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isSignalSource",
 			"default_value": "No",
 			"entries": {
 				"Block of Redstone": "Yes",
@@ -4177,6 +4184,7 @@
 		"exists_as_item": {
 			"property_name": "Exists As Item",
 			"property_description": "Whether this block has a direct item-equivalent.",
+			"definition": "net.minecraft.world.level.block.Block#asItem",
 			"default_value": "Yes",
 			"entries": {
 				"Air": "No",
@@ -4536,6 +4544,7 @@
 		"full_cube": {
 			"property_name": "Full Cube",
 			"property_description": "Whether the block has a normal cube shape and has full block collision on all sides.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isCollisionShapeFullBlock",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -5011,6 +5020,7 @@
 		"gets_random_ticked": {
 			"property_name": "Gets Random Ticked",
 			"property_description": "Whether the block gets affected by random ticks.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isRandomlyTicking",
 			"default_value": "No",
 			"entries": {
 				"Amethyst Cluster": "Yes",
@@ -5132,6 +5142,7 @@
 		"hardness": {
 			"property_name": "Hardness",
 			"property_description": "Determines how fast the block can be mined",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#getDestroySpeed",
 			"default_value": 0,
 			"relative_gradient": true,
 			"entries": {
@@ -6404,7 +6415,8 @@
 		},
 		"ignited_by_lava": {
 			"property_name": "Ignited By Lava",
-			"property_description": "",
+			"property_description": "Whether lava can set this block on fire.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#ignitedByLava",
 			"default_value": "No",
 			"entries": {
 				"Bamboo": "Yes",
@@ -7095,6 +7107,7 @@
 		"instrument": {
 			"property_name": "Instrument",
 			"property_description": "Which instrument a noteblock will play if this block is placed below it (or above, in the case of heads).",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#instrument",
 			"default_value": "HARP",
 			"relative_gradient": true,
 			"entries": {
@@ -7459,6 +7472,7 @@
 		"is_opaque_full_cube": {
 			"property_name": "Is Opaque Full Cube",
 			"property_description": "",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isSolidRender",
 			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
@@ -7614,6 +7628,7 @@
 		"kills_grass": {
 			"property_name": "Kills Grass",
 			"property_description": "Whether grass will die when placed underneath.",
+			"definition": "net.minecraft.world.level.block.SpreadingSnowyDirtBlock#canBeGrass",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": {
@@ -7881,6 +7896,7 @@
 		"luminance": {
 			"property_name": "Luminance",
 			"property_description": "How much light the block emits.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#getLightEmission",
 			"default_value": "No",
 			"entries": {
 				"Amethyst Cluster": {
@@ -11259,6 +11275,7 @@
 		"opacity": {
 			"property_name": "Opacity",
 			"property_description": "How much light the block... blocks.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#getLightBlock",
 			"default_value": 15,
 			"entries": {
 				"Activator Rail": {
@@ -11563,6 +11580,7 @@
 		"opaque": {
 			"property_name": "Opaque",
 			"property_description": "Whether the block is visually opaque. Used solely in rendering.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#canOcclude",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -12138,7 +12156,8 @@
 		},
 		"replaceable": {
 			"property_name": "Replaceable",
-			"property_description": "",
+			"property_description": "Determines whether a block placed or falling on this block will replace it rather than being placed against or on it.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#canBeReplaced()",
 			"default_value": "No",
 			"entries": {
 				"Air": "Yes",
@@ -12433,6 +12452,7 @@
 		"side_face_has_collision": {
 			"property_name": "Side Face Has Collision (North)",
 			"property_description": "This is true if the north side has collision at the outer face (meaning it has a hard hitbox that aligns with the block grid).",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#getCollisionShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos)",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -12682,6 +12702,7 @@
 		"side_face_has_full_square": {
 			"property_name": "Side Face Has Full Square (North)",
 			"property_description": "This is true if the north face is a full square.",
+			"definition": "net.minecraft.world.level.block.Block#isFaceFull",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -12873,7 +12894,8 @@
 		},
 		"solid": {
 			"property_name": "(Legacy) Solid",
-			"property_description": "blockState.isSolid()",
+			"property_description": "Not fully accurate to its name; remains from when materials were still used.</p><p>Marked as deprecated in the code but still used extensively.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isSolid",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -13269,6 +13291,7 @@
 		"suffocates_mobs": {
 			"property_name": "Suffocates Mobs",
 			"property_description": "Whether a mob or player should suffocate in this block.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase.isSuffocating",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -13412,6 +13435,7 @@
 		"supports_redstone_dust": {
 			"property_name": "Supports Redstone Dust",
 			"property_description": "Whether redstone dust (\"wire\") can be placed on top of this block.",
+			"definition": "net.minecraft.world.level.block.RedStoneWireBlock#canSurviveOn",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -16406,6 +16430,7 @@
 		"top_face_has_collision": {
 			"property_name": "Top Face Has Collision",
 			"property_description": "This is true if the top side has collision at the outer face (meaning it has a hard hitbox that aligns with the block grid).",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#getCollisionShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos)",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -16595,6 +16620,7 @@
 		"top_face_has_full_square": {
 			"property_name": "Top Face Has Full Square",
 			"property_description": "This is true if the top face is a full square.",
+			"definition": "net.minecraft.world.level.block.Block#isFaceFull",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -16752,6 +16778,7 @@
 		"top_face_has_rim": {
 			"property_name": "Top Face Has Rim",
 			"property_description": "This is true if the top face contains a 2 pixel wide ring going around its edge",
+			"definition": "net.minecraft.world.level.block.Block#canSupportRigidBlock",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -16906,6 +16933,7 @@
 		"top_face_has_small_square": {
 			"property_name": "Top Face Has Small Square",
 			"property_description": "This is true if the top face contains a square of length 2 at its center.",
+			"definition": "net.minecraft.world.level.block.Block#canSupportCenter",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
