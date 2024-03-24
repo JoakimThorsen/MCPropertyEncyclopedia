@@ -230,7 +230,7 @@ function headerOutputter(page, entry_header) {
                         </button>
                         <a
                             class="btn btn-default"
-                            href="https://linkie.shedaniel.dev/mappings?namespace=mojang&search=${encodeURIComponent(data.properties[property_id].definition)}"
+                            href="https://linkie.shedaniel.dev/mappings?namespace=mojang&search=${encodeURIComponent(data.properties[property_id].definition.split('(')[0])}"
                             target="_blank" rel="noopener noreferrer" title="Search for this code definition on Linkie"
                             >Search on Linkie <i class="fas fa-external-link-alt"></i>
                         </a>
