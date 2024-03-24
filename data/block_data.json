@@ -714,7 +714,8 @@
 			"description": "Not fully accurate to its name; remains from when materials were still used. Marked as deprecated in the code but still used extensively.",
 			"contents": [
 				"blocks_motion",
-				"solid"
+				"solid",
+				"liquid"
 			]
 		},
 		{
@@ -953,7 +954,7 @@
 		},
 		"blast_resistance": {
 			"property_name": "Blast Resistance",
-			"property_description": "Determines how likely this block is to break from exposure to an explosion",
+			"property_description": "Determines how likely this block is to break from exposure to an explosion.",
 			"definition": "net.minecraft.world.level.block.Block#getExplosionResistance",
 			"default_value": 0,
 			"relative_gradient": true,
@@ -1204,7 +1205,6 @@
 				"Target": 0.5,
 				"Terracotta": 4.2,
 				"Tinted Glass": 0.3,
-				"Torchflower Crop": 0,
 				"Trapdoors": {
 					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<br>Dark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": 3,
 					"Iron Trapdoor": 5
@@ -1227,7 +1227,8 @@
 		},
 		"block_entity": {
 			"property_name": "Block Entity",
-			"property_description": "Whether the block is a block entity (\"tile entity\"), and if so, whether it ticks.",
+			"property_description": "Whether this block has an associated block entity, and whether it's ticking or non-ticking.",
+			"definition": "",
 			"default_value": "No",
 			"relative_gradient": true,
 			"entries": {
@@ -1276,7 +1277,6 @@
 				"Structure Block": "Non-Ticking",
 				"Suspicious Gravel": "Non-Ticking",
 				"Suspicious Sand": "Non-Ticking",
-				"Torchflower Crop": "No",
 				"Trapped Chest": "Ticking"
 			}
 		},
@@ -1474,6 +1474,7 @@
 		"blocks_beacon_beam": {
 			"property_name": "Blocks Beacon Beam",
 			"property_description": "Whether placing this block above a beacon will prevent its beam from forming, or stop its current one.",
+			"definition": "",
 			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
@@ -1627,7 +1628,7 @@
 		},
 		"blocks_motion": {
 			"property_name": "(Legacy) Blocks Motion",
-			"property_description": "Not fully accurate to its name; remains from when materials were still used.</p><p>Marked as deprecated in the code but still used extensively.",
+			"property_description": "Not fully accurate to its name; remains from when materials were still used.\nMarked as deprecated in the code but still used extensively.",
 			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#blocksMotion",
 			"default_value": "Yes",
 			"entries": {
@@ -2177,7 +2178,7 @@
 		"bottom_face_has_full_square": {
 			"property_name": "Bottom Face Has Full Square",
 			"property_description": "This is true if the bottom face is a full square.",
-			"definition": "net.minecraft.world.level.block.Block#isFaceFull",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isFaceSturdy(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction)",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -2367,10 +2368,7 @@
 					"facing: down<br>facing: up": "Yes",
 					"facing: east<br>facing: north<br>facing: south<br>facing: west": "No"
 				},
-				"Fence Gates": {
-					"open: false": "Yes",
-					"open: true": "No"
-				},
+				"Fence Gates": "No",
 				"Fern": "No",
 				"Fire": "No",
 				"Flowers": "No",
@@ -2502,6 +2500,7 @@
 		"burn_odds": {
 			"property_name": "Burn Odds",
 			"property_description": "The higher the burn odds, the quicker a block burns away (when on fire). 0 means it is non-flammable.",
+			"definition": "net.minecraft.world.level.block.FireBlock#getBurnOdds",
 			"default_value": 0,
 			"entries": {
 				"Azalea": 60,
@@ -2591,7 +2590,6 @@
 				"TNT": 100,
 				"Target": 20,
 				"Torchflower": 100,
-				"Torchflower Crop": 0,
 				"Vines": 100,
 				"Wood": 5,
 				"Wool": 60
@@ -2600,6 +2598,7 @@
 		"collision_bottom_all": {
 			"property_name": "Collision Bottom (All)",
 			"property_description": "The block's downwards-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
+			"definition": "",
 			"default_value": 16,
 			"size_type": "pixel",
 			"entries": {
@@ -3589,7 +3588,7 @@
 		"conductive": {
 			"property_name": "Conductive",
 			"property_description": "Whether or not a redstone component can be powered through this block.",
-			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase.isRedstoneConductor",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isRedstoneConductor",
 			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
@@ -3727,7 +3726,6 @@
 				"Suspicious Sand": "Yes",
 				"Target": "Yes",
 				"Terracotta": "Yes",
-				"Torchflower Crop": "No",
 				"Tuff": "Yes",
 				"Wart Blocks": "Yes",
 				"Wood": "Yes",
@@ -3736,7 +3734,8 @@
 		},
 		"connects_to_panes": {
 			"property_name": "Connects To Panes (North)",
-			"property_description": "Whether a glass pane block to the north will connect to this block",
+			"property_description": "Whether a glass pane block to the north will connect to this block.",
+			"definition": "",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -3931,6 +3930,7 @@
 		"connects_to_walls": {
 			"property_name": "Connects To Walls (North)",
 			"property_description": "Whether a wall block to the north will connect to this block.",
+			"definition": "",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -4125,8 +4125,9 @@
 			}
 		},
 		"dragon_immune": {
-			"property_name": "Dragon immune",
+			"property_name": "Dragon Immune",
 			"property_description": "Whether this block is immune to The Ender Dragon flying through it.",
+			"definition": "",
 			"default_value": "No",
 			"entries": {
 				"Air": "Not Applicable",
@@ -4183,7 +4184,7 @@
 		},
 		"exists_as_item": {
 			"property_name": "Exists As Item",
-			"property_description": "Whether this block has a direct item-equivalent.",
+			"property_description": "Whether this block has a direct item equivalent.",
 			"definition": "net.minecraft.world.level.block.Block#asItem",
 			"default_value": "Yes",
 			"entries": {
@@ -4240,6 +4241,7 @@
 		"falling_block": {
 			"property_name": "Falling Block",
 			"property_description": "Whether the block can fall when unsupported (as a falling_block entity).",
+			"definition": "",
 			"default_value": "No",
 			"entries": {
 				"Anvil": "Yes",
@@ -4262,7 +4264,8 @@
 		},
 		"flammable": {
 			"property_name": "Flammable",
-			"property_description": "",
+			"property_description": "Whether the block can be destroyed by fire.",
+			"definition": "",
 			"default_value": "No",
 			"entries": {
 				"Azalea": "Yes",
@@ -4352,7 +4355,6 @@
 				"TNT": "Yes",
 				"Target": "Yes",
 				"Torchflower": "Yes",
-				"Torchflower Crop": "No",
 				"Vines": "Yes",
 				"Wood": "Yes",
 				"Wool": "Yes"
@@ -4361,6 +4363,7 @@
 		"fluid_render_type": {
 			"property_name": "Fluid Render Type",
 			"property_description": "",
+			"definition": "",
 			"default_value": "solid",
 			"entries": {
 				"Activator Rail": {
@@ -4690,6 +4693,7 @@
 		"generates_in_structures": {
 			"property_name": "Generates in Structures",
 			"property_description": "Based off of what blocks show up in the standard structure palletes. Does not include all complex structures.",
+			"definition": "",
 			"default_value": "No",
 			"entries": {
 				"Air": {
@@ -4963,6 +4967,7 @@
 		"gets_flushed": {
 			"property_name": "Gets Flushed",
 			"property_description": "Whether this block will get destroyed by flowing water or lava.",
+			"definition": "",
 			"default_value": "No",
 			"entries": {
 				"Air": "Yes",
@@ -5141,7 +5146,7 @@
 		},
 		"hardness": {
 			"property_name": "Hardness",
-			"property_description": "Determines how fast the block can be mined",
+			"property_description": "Determines how fast the block can be mined.",
 			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#getDestroySpeed",
 			"default_value": 0,
 			"relative_gradient": true,
@@ -5421,7 +5426,6 @@
 				"Target": 0.5,
 				"Terracotta": 1.25,
 				"Tinted Glass": 0.3,
-				"Torchflower Crop": 0,
 				"Trapdoors": {
 					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<br>Dark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": 3,
 					"Iron Trapdoor": 5
@@ -5446,6 +5450,7 @@
 		"has_collision": {
 			"property_name": "Has Collision",
 			"property_description": "Whether the block has any solid collision box.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#getCollisionShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos)",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -5566,6 +5571,7 @@
 		"height_all": {
 			"property_name": "Height (All)",
 			"property_description": "The block's upwards-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
+			"definition": "",
 			"default_value": 16,
 			"size_type": "pixel",
 			"entries": {
@@ -6318,6 +6324,7 @@
 		"ignite_odds": {
 			"property_name": "Ignite Odds",
 			"property_description": "The higher the ignite odds, the more likely a block is to catch fire (if it is able to spread there).",
+			"definition": "net.minecraft.world.level.block.FireBlock#getIgniteOdds(net.minecraft.world.level.block.state.BlockState)",
 			"default_value": 0,
 			"entries": {
 				"Azalea": 30,
@@ -6407,7 +6414,6 @@
 				"TNT": 15,
 				"Target": 15,
 				"Torchflower": 60,
-				"Torchflower Crop": 0,
 				"Vines": 15,
 				"Wood": 5,
 				"Wool": 30
@@ -6420,13 +6426,14 @@
 			"default_value": "No",
 			"entries": {
 				"Bamboo": "Yes",
-				"Bamboo Block": "Yes",
 				"Bamboo Mosaic": "Yes",
 				"Banners": "Yes",
 				"Barrel": "Yes",
 				"Beds": "Yes",
 				"Bee Nest": "Yes",
 				"Beehive": "Yes",
+				"Block of Bamboo": "Yes",
+				"Block of Stripped Bamboo": "Yes",
 				"Bookshelf": "Yes",
 				"Campfire": "Yes",
 				"Carpets": "Yes",
@@ -6492,7 +6499,6 @@
 					"Acacia Stairs<br>Bamboo Mosaic Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Cherry Stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Oak Stairs<br>Spruce Stairs": "Yes",
 					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Crimson Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Warped Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "No"
 				},
-				"Stripped Bamboo Block": "Yes",
 				"TNT": "Yes",
 				"Trapdoors": {
 					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Dark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor": "Yes",
@@ -6884,232 +6890,11 @@
 				"Wool": "No"
 			}
 		},
-		"instant_shape_updater": {
-			"property_name": "Instant Shape Updater (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
-			"property_description": "",
-			"default_value": "No",
-			"entries": {
-				"Amethyst Cluster": "Yes",
-				"Azalea": "Yes",
-				"Bamboo": {
-					"Bamboo": "No",
-					"Bamboo Shoot": "Yes"
-				},
-				"Banners": "Yes",
-				"Beds": "Yes",
-				"Bee Nest": "Yes",
-				"Beehive": "Yes",
-				"Bell": "Yes",
-				"Big Dripleaf": {
-					"Big Dripleaf": "Yes",
-					"Big Dripleaf Stem": "No"
-				},
-				"Buttons": "Yes",
-				"Cake": "Yes",
-				"Campfire": "Yes",
-				"Carpets": "Yes",
-				"Chest": "Yes",
-				"Cocoa": "Yes",
-				"Concrete Powder": "Yes",
-				"Coral Fans": "Yes",
-				"Corals": "Yes",
-				"Crops": "Yes",
-				"Dead Bush": "Yes",
-				"Doors": "Yes",
-				"Fence Gates": "Yes",
-				"Fences": "Yes",
-				"Fern": "Yes",
-				"Fire": "Yes",
-				"Flower Pot": "Yes",
-				"Flowers": "Yes",
-				"Frogspawn": "Yes",
-				"Fungi": "Yes",
-				"Glass Pane": "Yes",
-				"Glow Lichen": "Yes",
-				"Grass": "Yes",
-				"Grass Block": "Yes",
-				"Grindstone": "Yes",
-				"Hanging Roots": "Yes",
-				"Hanging Signs": "Yes",
-				"Iron Bars": "Yes",
-				"Ladder": "Yes",
-				"Lantern": "Yes",
-				"Lava": "Yes",
-				"Lever": "Yes",
-				"Lily Pad": "Yes",
-				"Mangrove Propagule": "Yes",
-				"Moss Carpet": "Yes",
-				"Mushroom Blocks": "Yes",
-				"Mushrooms": "Yes",
-				"Mycelium": "Yes",
-				"Nether Portal": "Yes",
-				"Nether Sprouts": "Yes",
-				"Nether Wart": "Yes",
-				"Note Block": "Yes",
-				"Pink Petals": "Yes",
-				"Piston": {
-					"Moving Piston<br>Piston<br>Sticky Piston": "No",
-					"Piston Head": "Yes"
-				},
-				"Podzol": "Yes",
-				"Pressure Plates": "Yes",
-				"Redstone Dust": "Yes",
-				"Redstone Repeater": "Yes",
-				"Redstone Torch": "Yes",
-				"Roots": "Yes",
-				"Saplings": "Yes",
-				"Sculk Vein": "Yes",
-				"Sea Pickle": "Yes",
-				"Seagrass": "Yes",
-				"Signs": "Yes",
-				"Snow": "Yes",
-				"Spore Blossom": "Yes",
-				"Stained Glass Panes": "Yes",
-				"Stairs": "Yes",
-				"Sweet Berry Bush": "Yes",
-				"Torch": "Yes",
-				"Torchflower": "Yes",
-				"Torchflower Crop": "Yes",
-				"Trapped Chest": "Yes",
-				"Tripwire": "Yes",
-				"Tripwire Hook": "Yes",
-				"Vines": "Yes",
-				"Walls": "Yes",
-				"Water": {
-					"Bubble Column": "No",
-					"Water": "Yes"
-				}
-			}
-		},
-		"instant_updater": {
-			"property_name": "Instant Updater (NOT UPDATED TO 1.20; DEFAULT VALUE USED)",
-			"property_description": "",
-			"default_value": "No",
-			"entries": {
-				"Activator Rail": "Yes",
-				"Amethyst Cluster": "Yes",
-				"Azalea": "Yes",
-				"Bamboo": {
-					"Bamboo": "No",
-					"Bamboo Shoot": "Yes"
-				},
-				"Banners": "Yes",
-				"Beds": "Yes",
-				"Bee Nest": "Yes",
-				"Beehive": "Yes",
-				"Bell": "Yes",
-				"Big Dripleaf": {
-					"Big Dripleaf": "Yes",
-					"Big Dripleaf Stem": "No"
-				},
-				"Buttons": "Yes",
-				"Cake": "Yes",
-				"Campfire": "Yes",
-				"Carpets": "Yes",
-				"Chest": "Yes",
-				"Cocoa": "Yes",
-				"Concrete Powder": "Yes",
-				"Coral Fans": "Yes",
-				"Corals": "Yes",
-				"Crops": "Yes",
-				"Dead Bush": "Yes",
-				"Detector Rail": "Yes",
-				"Dispenser": {
-					"triggered: false": "No",
-					"triggered: true": "Yes"
-				},
-				"Doors": "Yes",
-				"Dropper": {
-					"triggered: false": "No",
-					"triggered: true": "Yes"
-				},
-				"Fence Gates": "Yes",
-				"Fences": "Yes",
-				"Fern": "Yes",
-				"Fire": "Yes",
-				"Flower Pot": "Yes",
-				"Flowers": "Yes",
-				"Frogspawn": "Yes",
-				"Frosted Ice": "Yes",
-				"Fungi": "Yes",
-				"Glass Pane": "Yes",
-				"Glow Lichen": "Yes",
-				"Grass": "Yes",
-				"Grass Block": "Yes",
-				"Grindstone": "Yes",
-				"Hanging Roots": "Yes",
-				"Hanging Signs": "Yes",
-				"Hopper": "Yes",
-				"Iron Bars": "Yes",
-				"Ladder": "Yes",
-				"Lantern": "Yes",
-				"Lava": "Yes",
-				"Lever": "Yes",
-				"Lily Pad": "Yes",
-				"Mangrove Propagule": "Yes",
-				"Moss Carpet": "Yes",
-				"Mushroom Blocks": "Yes",
-				"Mushrooms": "Yes",
-				"Mycelium": "Yes",
-				"Nether Portal": "Yes",
-				"Nether Sprouts": "Yes",
-				"Nether Wart": "Yes",
-				"Note Block": "Yes",
-				"Pink Petals": "Yes",
-				"Piston": {
-					"Moving Piston<br>Piston<br>Sticky Piston": "No",
-					"Piston Head": "Yes"
-				},
-				"Podzol": "Yes",
-				"Powered Rail": "Yes",
-				"Pressure Plates": "Yes",
-				"Rail": "Yes",
-				"Redstone Comparator": "Yes",
-				"Redstone Dust": "Yes",
-				"Redstone Lamp": {
-					"lit: false": "Yes",
-					"lit: true": "No"
-				},
-				"Redstone Repeater": "Yes",
-				"Redstone Torch": "Yes",
-				"Roots": "Yes",
-				"Saplings": "Yes",
-				"Sculk Vein": "Yes",
-				"Sea Pickle": "Yes",
-				"Seagrass": "Yes",
-				"Signs": "Yes",
-				"Snow": "Yes",
-				"Sponge": {
-					"Sponge": "Yes",
-					"Wet Sponge": "No"
-				},
-				"Spore Blossom": "Yes",
-				"Stained Glass Panes": "Yes",
-				"Stairs": "Yes",
-				"Structure Block": "Yes",
-				"Sweet Berry Bush": "Yes",
-				"TNT": "Yes",
-				"Torch": "Yes",
-				"Torchflower": "Yes",
-				"Torchflower Crop": "Yes",
-				"Trapdoors": "Yes",
-				"Trapped Chest": "Yes",
-				"Tripwire": "Yes",
-				"Tripwire Hook": "Yes",
-				"Vines": "Yes",
-				"Walls": "Yes",
-				"Water": {
-					"Bubble Column": "No",
-					"Water": "Yes"
-				}
-			}
-		},
 		"instrument": {
 			"property_name": "Instrument",
-			"property_description": "Which instrument a noteblock will play if this block is placed below it (or above, in the case of heads).",
+			"property_description": "Which instrument a note block will play if placed above this block. This does not include mob heads.",
 			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#instrument",
 			"default_value": "HARP",
-			"relative_gradient": true,
 			"entries": {
 				"Andesite": "BASEDRUM",
 				"Bamboo Mosaic": "BASS",
@@ -7471,7 +7256,7 @@
 		},
 		"is_opaque_full_cube": {
 			"property_name": "Is Opaque Full Cube",
-			"property_description": "",
+			"property_description": "Whether the block is opaque and renders as a full cube. Note that this is not an AND of Opaque and Full Cube,\nas this uses the rendering shape and Full Cube uses the collision shape.",
 			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isSolidRender",
 			"default_value": "No",
 			"entries": {
@@ -7618,7 +7403,6 @@
 				"TNT": "Yes",
 				"Target": "Yes",
 				"Terracotta": "Yes",
-				"Torchflower Crop": "No",
 				"Tuff": "Yes",
 				"Wart Blocks": "Yes",
 				"Wood": "Yes",
@@ -7627,7 +7411,7 @@
 		},
 		"kills_grass": {
 			"property_name": "Kills Grass",
-			"property_description": "Whether grass will die when placed underneath.",
+			"property_description": "Whether grass will die when placed underneath this block.",
 			"definition": "net.minecraft.world.level.block.SpreadingSnowyDirtBlock#canBeGrass",
 			"default_value": "Yes",
 			"entries": {
@@ -7893,6 +7677,16 @@
 				"Weeping Vines": "No"
 			}
 		},
+		"liquid": {
+			"property_name": "(Legacy) Liquid",
+			"property_description": "Not fully accurate to its name; remains from when materials were still used.\nMarked as deprecated in the code but still used extensively.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#liquid",
+			"default_value": "No",
+			"entries": {
+				"Lava": "Yes",
+				"Water": "Yes"
+			}
+		},
 		"luminance": {
 			"property_name": "Luminance",
 			"property_description": "How much light the block emits.",
@@ -8071,18 +7865,15 @@
 				"Torch": {
 					"Soul Torch<br>Soul Wall Torch": 10,
 					"Torch<br>Wall Torch": 14
-				},
-				"Torchflower Crop": {
-					"age: 0<br>age: 1": 0
 				}
 			}
 		},
 		"map_color": {
 			"property_name": "Map Color",
-			"property_description": "The color of this block when viewed on a map. NONE is transparent, meaning it is simply ignored.",
+			"property_description": "The color of this block when viewed on a map. NONE is transparent, meaning it is simply ignored. Note that waterlogged blocks will have the map color of water.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#getMapColor",
+			"default_value": "{{mapColor|NONE}}",
 			"entries": {
-				"Activator Rail": "{{mapColor|NONE}}",
-				"Air": "{{mapColor|NONE}}",
 				"Amethyst Cluster": "{{mapColor|COLOR_PURPLE}}",
 				"Ancient Debris": "{{mapColor|COLOR_BLACK}}",
 				"Andesite": "{{mapColor|STONE}}",
@@ -8095,7 +7886,6 @@
 				"Bamboo Mosaic": "{{mapColor|COLOR_YELLOW}}",
 				"Banners": "{{mapColor|WOOD}}",
 				"Barrel": "{{mapColor|WOOD}}",
-				"Barrier": "{{mapColor|NONE}}",
 				"Basalt": "{{mapColor|COLOR_BLACK}}",
 				"Beacon": "{{mapColor|DIAMOND}}",
 				"Bedrock": "{{mapColor|STONE}}",
@@ -8201,9 +7991,7 @@
 				"Brewing Stand": "{{mapColor|METAL}}",
 				"Bricks": "{{mapColor|COLOR_RED}}",
 				"Budding Amethyst": "{{mapColor|COLOR_PURPLE}}",
-				"Buttons": "{{mapColor|NONE}}",
 				"Cactus": "{{mapColor|PLANT}}",
-				"Cake": "{{mapColor|NONE}}",
 				"Calcite": "{{mapColor|TERRACOTTA_WHITE}}",
 				"Calibrated Sculk Sensor": "{{mapColor|COLOR_CYAN}}",
 				"Campfire": "{{mapColor|PODZOL}}",
@@ -8247,7 +8035,6 @@
 				"Cartography Table": "{{mapColor|WOOD}}",
 				"Cauldron": "{{mapColor|STONE}}",
 				"Cave Vines": "{{mapColor|PLANT}}",
-				"Chain": "{{mapColor|NONE}}",
 				"Chest": "{{mapColor|WOOD}}",
 				"Chiseled Bookshelf": "{{mapColor|WOOD}}",
 				"Chorus Flower": "{{mapColor|COLOR_PURPLE}}",
@@ -8343,7 +8130,6 @@
 				"Dead Bush": "{{mapColor|WOOD}}",
 				"Decorated Pot": "{{mapColor|TERRACOTTA_RED}}",
 				"Deepslate": "{{mapColor|DEEPSLATE}}",
-				"Detector Rail": "{{mapColor|NONE}}",
 				"Diamond Ore": {
 					"Deepslate Diamond Ore": "{{mapColor|DEEPSLATE}}",
 					"Diamond Ore": "{{mapColor|STONE}}"
@@ -8378,7 +8164,6 @@
 				"End Gateway": "{{mapColor|COLOR_BLACK}}",
 				"End Portal": "{{mapColor|COLOR_BLACK}}",
 				"End Portal Frame": "{{mapColor|COLOR_GREEN}}",
-				"End Rod": "{{mapColor|NONE}}",
 				"End Stone": "{{mapColor|SAND}}",
 				"End Stone Bricks": "{{mapColor|SAND}}",
 				"Ender Chest": "{{mapColor|STONE}}",
@@ -8416,7 +8201,6 @@
 					"Soul Fire": "{{mapColor|COLOR_LIGHT_BLUE}}"
 				},
 				"Fletching Table": "{{mapColor|WOOD}}",
-				"Flower Pot": "{{mapColor|NONE}}",
 				"Flowers": "{{mapColor|PLANT}}",
 				"Froglights": {
 					"Ochre Froglight": "{{mapColor|SAND}}",
@@ -8431,8 +8215,6 @@
 				},
 				"Furnace": "{{mapColor|STONE}}",
 				"Gilded Blackstone": "{{mapColor|COLOR_BLACK}}",
-				"Glass": "{{mapColor|NONE}}",
-				"Glass Pane": "{{mapColor|NONE}}",
 				"Glazed Terracotta": {
 					"Black Glazed Terracotta": "{{mapColor|COLOR_BLACK}}",
 					"Blue Glazed Terracotta": "{{mapColor|COLOR_BLUE}}",
@@ -8477,7 +8259,6 @@
 					"Warped Hanging Sign<br>Warped Wall Hanging Sign": "{{mapColor|WARPED_STEM}}"
 				},
 				"Hay Bale": "{{mapColor|COLOR_YELLOW}}",
-				"Heads": "{{mapColor|NONE}}",
 				"Honey Block": "{{mapColor|COLOR_ORANGE}}",
 				"Honeycomb Block": "{{mapColor|COLOR_ORANGE}}",
 				"Hopper": "{{mapColor|STONE}}",
@@ -8486,7 +8267,6 @@
 					"Stripped Warped Hyphae<br>Warped Hyphae": "{{mapColor|WARPED_HYPHAE}}"
 				},
 				"Ice": "{{mapColor|ICE}}",
-				"Iron Bars": "{{mapColor|NONE}}",
 				"Iron Ore": {
 					"Deepslate Iron Ore": "{{mapColor|DEEPSLATE}}",
 					"Iron Ore": "{{mapColor|STONE}}"
@@ -8495,7 +8275,6 @@
 				"Jigsaw Block": "{{mapColor|COLOR_LIGHT_GRAY}}",
 				"Jukebox": "{{mapColor|DIRT}}",
 				"Kelp": "{{mapColor|WATER}}",
-				"Ladder": "{{mapColor|NONE}}",
 				"Lantern": "{{mapColor|METAL}}",
 				"Lapis Lazuli Ore": {
 					"Deepslate Lapis Lazuli Ore": "{{mapColor|DEEPSLATE}}",
@@ -8507,8 +8286,6 @@
 					"Cherry Leaves": "{{mapColor|COLOR_PINK}}"
 				},
 				"Lectern": "{{mapColor|WOOD}}",
-				"Lever": "{{mapColor|NONE}}",
-				"Light Block": "{{mapColor|NONE}}",
 				"Lightning Rod": "{{mapColor|COLOR_ORANGE}}",
 				"Lily Pad": "{{mapColor|PLANT}}",
 				"Lodestone": "{{mapColor|METAL}}",
@@ -8575,7 +8352,6 @@
 				"Mycelium": "{{mapColor|COLOR_PURPLE}}",
 				"Nether Bricks": "{{mapColor|NETHER}}",
 				"Nether Gold Ore": "{{mapColor|NETHER}}",
-				"Nether Portal": "{{mapColor|NONE}}",
 				"Nether Quartz Ore": "{{mapColor|NETHER}}",
 				"Nether Sprouts": "{{mapColor|COLOR_CYAN}}",
 				"Nether Wart": "{{mapColor|COLOR_RED}}",
@@ -8609,7 +8385,6 @@
 				"Podzol": "{{mapColor|PODZOL}}",
 				"Pointed Dripstone": "{{mapColor|TERRACOTTA_BROWN}}",
 				"Powder Snow": "{{mapColor|SNOW}}",
-				"Powered Rail": "{{mapColor|NONE}}",
 				"Pressure Plates": {
 					"Acacia Pressure Plate": "{{mapColor|COLOR_ORANGE}}",
 					"Bamboo Pressure Plate": "{{mapColor|COLOR_YELLOW}}",
@@ -8633,18 +8408,12 @@
 				},
 				"Pumpkin": "{{mapColor|COLOR_ORANGE}}",
 				"Purpur Block": "{{mapColor|COLOR_MAGENTA}}",
-				"Rail": "{{mapColor|NONE}}",
 				"Red Sand": "{{mapColor|COLOR_ORANGE}}",
 				"Red Sandstone": "{{mapColor|COLOR_ORANGE}}",
-				"Redstone Comparator": "{{mapColor|NONE}}",
-				"Redstone Dust": "{{mapColor|NONE}}",
-				"Redstone Lamp": "{{mapColor|NONE}}",
 				"Redstone Ore": {
 					"Deepslate Redstone Ore": "{{mapColor|DEEPSLATE}}",
 					"Redstone Ore": "{{mapColor|STONE}}"
 				},
-				"Redstone Repeater": "{{mapColor|NONE}}",
-				"Redstone Torch": "{{mapColor|NONE}}",
 				"Reinforced Deepslate": "{{mapColor|DEEPSLATE}}",
 				"Respawn Anchor": "{{mapColor|COLOR_BLACK}}",
 				"Roots": {
@@ -8752,7 +8521,6 @@
 					"White Stained Glass": "{{mapColor|SNOW}}",
 					"Yellow Stained Glass": "{{mapColor|COLOR_YELLOW}}"
 				},
-				"Stained Glass Panes": "{{mapColor|NONE}}",
 				"Stairs": {
 					"Acacia Stairs<br>Cut Copper Stairs<br>Red Sandstone Stairs<br>Smooth Red Sandstone Stairs<br>Waxed Cut Copper Stairs": "{{mapColor|COLOR_ORANGE}}",
 					"Andesite Stairs<br>Cobblestone Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Polished Andesite Stairs<br>Stone Brick Stairs<br>Stone Stairs": "{{mapColor|STONE}}",
@@ -8790,7 +8558,6 @@
 				},
 				"Stonecutter": "{{mapColor|STONE}}",
 				"Structure Block": "{{mapColor|COLOR_LIGHT_GRAY}}",
-				"Structure Void": "{{mapColor|NONE}}",
 				"Sugar Cane": "{{mapColor|PLANT}}",
 				"Suspicious Gravel": "{{mapColor|STONE}}",
 				"Suspicious Sand": "{{mapColor|SAND}}",
@@ -8817,7 +8584,6 @@
 					"Yellow Terracotta": "{{mapColor|TERRACOTTA_YELLOW}}"
 				},
 				"Tinted Glass": "{{mapColor|COLOR_GRAY}}",
-				"Torch": "{{mapColor|NONE}}",
 				"Torchflower": "{{mapColor|PLANT}}",
 				"Torchflower Crop": "{{mapColor|PLANT}}",
 				"Trapdoors": {
@@ -8835,8 +8601,6 @@
 					"Warped Trapdoor": "{{mapColor|WARPED_STEM}}"
 				},
 				"Trapped Chest": "{{mapColor|WOOD}}",
-				"Tripwire": "{{mapColor|NONE}}",
-				"Tripwire Hook": "{{mapColor|NONE}}",
 				"Tuff": "{{mapColor|TERRACOTTA_GRAY}}",
 				"Turtle Egg": "{{mapColor|SAND}}",
 				"Twisting Vines": "{{mapColor|COLOR_CYAN}}",
@@ -9590,7 +9354,8 @@
 		},
 		"movable": {
 			"property_name": "Movable",
-			"property_description": "Whether it can be pushed by a piston, stops the piston from extending, or whether attempting to push it destroys the block.",
+			"property_description": "Whether the block can be pushed by a piston, stops the piston from extending, or whether attempting to push it destroys the block.",
+			"definition": "",
 			"default_value": "Yes",
 			"entries": {
 				"Amethyst Cluster": "Breaks",
@@ -11165,6 +10930,7 @@
 		"obstructs_cactus": {
 			"property_name": "Obstructs Cactus",
 			"property_description": "Whether placing this block next to cactus destroys it.",
+			"definition": "",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -11248,6 +11014,7 @@
 		"obstructs_tree_growth": {
 			"property_name": "Obstructs Tree Growth",
 			"property_description": "",
+			"definition": "",
 			"default_value": "Yes",
 			"entries": {
 				"Air": "No",
@@ -11579,7 +11346,7 @@
 		},
 		"opaque": {
 			"property_name": "Opaque",
-			"property_description": "Whether the block is visually opaque. Used solely in rendering.",
+			"property_description": "Whether the block is visually opaque. Used in rendering and lighting calculations.",
 			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#canOcclude",
 			"default_value": "Yes",
 			"entries": {
@@ -11960,6 +11727,7 @@
 		"raid_spawnable": {
 			"property_name": "Raid Spawnable",
 			"property_description": "Whether raids can spawn on this block.",
+			"definition": "",
 			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
@@ -12123,7 +11891,8 @@
 		},
 		"redirects_redstone": {
 			"property_name": "Redirects Redstone Wire (North)",
-			"property_description": "This is true if the North side connects to/redirects adjacent redstone dust",
+			"property_description": "This is true if the North side connects to/redirects adjacent redstone dust.",
+			"definition": "",
 			"default_value": "No",
 			"entries": {
 				"Block of Redstone": "Yes",
@@ -12149,7 +11918,6 @@
 				"Redstone Torch": "Yes",
 				"Sculk Sensor": "Yes",
 				"Target": "Yes",
-				"Torchflower Crop": "No",
 				"Trapped Chest": "Yes",
 				"Tripwire Hook": "Yes"
 			}
@@ -12702,7 +12470,7 @@
 		"side_face_has_full_square": {
 			"property_name": "Side Face Has Full Square (North)",
 			"property_description": "This is true if the north face is a full square.",
-			"definition": "net.minecraft.world.level.block.Block#isFaceFull",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isFaceSturdy(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction)",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -12894,7 +12662,7 @@
 		},
 		"solid": {
 			"property_name": "(Legacy) Solid",
-			"property_description": "Not fully accurate to its name; remains from when materials were still used.</p><p>Marked as deprecated in the code but still used extensively.",
+			"property_description": "Not fully accurate to its name; remains from when materials were still used.\nMarked as deprecated in the code but still used extensively.",
 			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isSolid",
 			"default_value": "Yes",
 			"entries": {
@@ -12978,174 +12746,180 @@
 			}
 		},
 		"spawnable": {
-			"property_name": "Spawnable",
+			"property_name": "Spawnable On",
 			"property_description": "Whether mobs can spawn on this block.",
 			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isValidSpawn",
-			"default_value": "No",
+			"default_value": "Yes",
 			"entries": {
-				"Ancient Debris": "Yes",
-				"Andesite": "Yes",
-				"Azalea": "Yes",
-				"Bamboo Mosaic": "Yes",
-				"Barrel": "Yes",
-				"Basalt": "Yes",
-				"Bee Nest": "Yes",
-				"Beehive": "Yes",
-				"Blackstone": "Yes",
-				"Blast Furnace": "Yes",
-				"Block of Amethyst": "Yes",
-				"Block of Bamboo": "Yes",
-				"Block of Coal": "Yes",
-				"Block of Copper": "Yes",
-				"Block of Diamond": "Yes",
-				"Block of Emerald": "Yes",
-				"Block of Gold": "Yes",
-				"Block of Iron": "Yes",
-				"Block of Lapis Lazuli": "Yes",
-				"Block of Netherite": "Yes",
-				"Block of Quartz": "Yes",
-				"Block of Raw Copper": "Yes",
-				"Block of Raw Gold": "Yes",
-				"Block of Raw Iron": "Yes",
-				"Block of Redstone": "Yes",
-				"Block of Stripped Bamboo": "Yes",
-				"Blue Ice": "Yes",
-				"Bone Block": "Yes",
-				"Bookshelf": "Yes",
-				"Bricks": "Yes",
-				"Budding Amethyst": "Yes",
-				"Calcite": "Yes",
-				"Cartography Table": "Yes",
-				"Chiseled Bookshelf": "Yes",
-				"Chorus Flower": "Yes",
-				"Clay": "Yes",
-				"Coal Ore": "Yes",
-				"Coarse Dirt": "Yes",
-				"Cobbled Deepslate": "Yes",
-				"Cobblestone": "Yes",
-				"Command Blocks": "Yes",
-				"Concrete": "Yes",
-				"Concrete Powder": "Yes",
-				"Copper Ore": "Yes",
-				"Coral Blocks": "Yes",
-				"Crafting Table": "Yes",
-				"Crying Obsidian": "Yes",
-				"Deepslate": "Yes",
-				"Diamond Ore": "Yes",
-				"Diorite": "Yes",
-				"Dirt": "Yes",
-				"Dispenser": "Yes",
-				"Dried Kelp Block": "Yes",
-				"Dripstone Block": "Yes",
-				"Dropper": "Yes",
-				"Emerald Ore": "Yes",
-				"End Stone": "Yes",
-				"End Stone Bricks": "Yes",
-				"Fletching Table": "Yes",
-				"Froglights": "Yes",
+				"Activator Rail": "No",
+				"Air": "No",
+				"Amethyst Cluster": "No",
+				"Anvil": "No",
+				"Bamboo": "No",
+				"Banners": "No",
+				"Barrier": "No",
+				"Beacon": "No",
+				"Bedrock": "No",
+				"Beds": "No",
+				"Bell": "No",
+				"Big Dripleaf": "No",
+				"Brewing Stand": "No",
+				"Buttons": "No",
+				"Cactus": "No",
+				"Cake": "No",
+				"Calibrated Sculk Sensor": "No",
+				"Campfire": "No",
+				"Candles": "No",
+				"Carpets": "No",
+				"Cauldron": "No",
+				"Cave Vines": "No",
+				"Chain": "No",
+				"Chest": "No",
+				"Chorus Flower": "No",
+				"Chorus Plant": "No",
+				"Cobweb": "No",
+				"Cocoa": "No",
+				"Composter": "No",
+				"Conduit": "No",
+				"Coral Fans": "No",
+				"Corals": "No",
+				"Crops": "No",
+				"Daylight Detector": "No",
+				"Dead Bush": "No",
+				"Decorated Pot": "No",
+				"Detector Rail": "No",
+				"Dirt Path": "No",
+				"Doors": "No",
+				"Dragon Egg": "No",
+				"Enchanting Table": "No",
+				"End Gateway": "No",
+				"End Portal": "No",
+				"End Portal Frame": "No",
+				"End Rod": "No",
+				"Ender Chest": "No",
+				"Farmland": "No",
+				"Fence Gates": "No",
+				"Fences": "No",
+				"Fern": "No",
+				"Fire": "No",
+				"Flower Pot": "No",
+				"Flowers": "No",
+				"Froglights": "No",
+				"Frogspawn": "No",
 				"Frosted Ice": "Polar Bear Only",
-				"Furnace": "Yes",
-				"Gilded Blackstone": "Yes",
-				"Glazed Terracotta": "Yes",
-				"Gold Ore": "Yes",
-				"Granite": "Yes",
-				"Grass Block": "Yes",
-				"Gravel": "Yes",
-				"Hay Bale": "Yes",
-				"Honeycomb Block": "Yes",
-				"Hyphae": "Yes",
+				"Fungi": "No",
+				"Glass": "No",
+				"Glass Pane": "No",
+				"Glow Lichen": "No",
+				"Glowstone": "No",
+				"Grass": "No",
+				"Grindstone": "No",
+				"Hanging Roots": "No",
+				"Hanging Signs": "No",
+				"Heads": "No",
+				"Honey Block": "No",
+				"Hopper": "No",
 				"Ice": "Polar Bear Only",
-				"Iron Ore": "Yes",
-				"Jack o'Lantern": "Yes",
-				"Jigsaw Block": "Yes",
-				"Jukebox": "Yes",
-				"Lapis Lazuli Ore": "Yes",
+				"Iron Bars": "No",
+				"Kelp": "No",
+				"Ladder": "No",
+				"Lantern": "No",
+				"Lava": "No",
 				"Leaves": "Ocelots and Parrots Only",
-				"Lodestone": "Yes",
-				"Logs": "Yes",
-				"Loom": "Yes",
+				"Lectern": "No",
+				"Lever": "No",
+				"Light Block": "No",
+				"Lightning Rod": "No",
+				"Lily Pad": "No",
 				"Magma Block": "Fire-Immune Mobs Only",
-				"Mangrove Roots": "Yes",
-				"Melon": "Yes",
-				"Moss Block": "Yes",
-				"Mud": "Yes",
-				"Mud Bricks": "Yes",
-				"Muddy Mangrove Roots": "Yes",
-				"Mushroom Blocks": "Yes",
-				"Mycelium": "Yes",
-				"Nether Bricks": "Yes",
-				"Nether Gold Ore": "Yes",
-				"Nether Quartz Ore": "Yes",
-				"Netherrack": "Yes",
-				"Note Block": "Yes",
-				"Nylium": "Yes",
-				"Observer": "Yes",
-				"Obsidian": "Yes",
-				"Packed Ice": "Yes",
-				"Packed Mud": "Yes",
+				"Mangrove Propagule": "No",
+				"Moss Carpet": "No",
+				"Mushrooms": "No",
+				"Nether Portal": "No",
+				"Nether Sprouts": "No",
+				"Nether Wart": "No",
+				"Pink Petals": "No",
 				"Piston": {
-					"Base": {
-						"Downwards": "Yes",
-						"Upwards & Horizontal": "No"
+					"Moving Piston": "No",
+					"Piston Head": {
+						"facing: down<br>facing: east<br>facing: north<br>facing: south<br>facing: west": "No",
+						"facing: up": "Yes"
 					},
-					"Heads": {
-						"Downwards & Horizontal": "No",
-						"Upwards": "Yes"
-					},
-					"Retracted": "Yes"
+					"Piston<br>Sticky Piston": {
+						"extended: false": "Yes",
+						"extended: true": {
+							"facing: down": "Yes",
+							"facing: east<br>facing: north<br>facing: south<br>facing: up<br>facing: west": "No"
+						}
+					}
 				},
-				"Planks": "Yes",
-				"Podzol": "Yes",
-				"Prismarine": "Yes",
-				"Pumpkin": "Yes",
-				"Purpur Block": "Yes",
-				"Red Sand": "Yes",
-				"Red Sandstone": "Yes",
-				"Redstone Lamp": "Yes",
-				"Redstone Ore": "Yes",
-				"Reinforced Deepslate": "Yes",
-				"Sand": "Yes",
-				"Sandstone": "Yes",
-				"Sculk": "Yes",
-				"Sculk Catalyst": "Yes",
-				"Shulker Box": {
-					"Sideways When Opened": "No",
-					"When Vertical Or Closed": "Yes"
+				"Pitcher Crop": "No",
+				"Pitcher Plant": "No",
+				"Pointed Dripstone": "No",
+				"Powder Snow": "No",
+				"Powered Rail": "No",
+				"Pressure Plates": "No",
+				"Rail": "No",
+				"Redstone Comparator": "No",
+				"Redstone Dust": "No",
+				"Redstone Repeater": "No",
+				"Redstone Torch": "No",
+				"Respawn Anchor": {
+					"charges: 0<br>charges: 1<br>charges: 2<br>charges: 3": "Yes",
+					"charges: 4": "No"
 				},
+				"Roots": "No",
+				"Saplings": "No",
+				"Scaffolding": "No",
+				"Sculk Sensor": "No",
+				"Sculk Shrieker": "No",
+				"Sculk Vein": "No",
+				"Sea Lantern": "No",
+				"Sea Pickle": "No",
+				"Seagrass": "No",
+				"Shroomlight": "No",
+				"Signs": "No",
 				"Slabs": {
-					"Bottom": "No",
-					"Top Or Double": "Yes"
+					"type: bottom": "No",
+					"type: double<br>type: top": "Yes"
 				},
-				"Slime Block": "Yes",
-				"Smithing Table": "Yes",
-				"Smoker": "Yes",
-				"Snow Block": "Yes",
-				"Soul Sand": "Yes",
-				"Soul Soil": "Yes",
-				"Spawner": "Yes",
-				"Sponge": "Yes",
+				"Small Dripleaf": "No",
+				"Sniffer Egg": "No",
+				"Snow": {
+					"layers: 1<br>layers: 2<br>layers: 3<br>layers: 4<br>layers: 5<br>layers: 6<br>layers: 7": "No",
+					"layers: 8": "Yes"
+				},
+				"Spore Blossom": "No",
+				"Stained Glass": "No",
+				"Stained Glass Panes": "No",
 				"Stairs": {
-					"Bottom": "No",
-					"Top": "Yes"
+					"half: bottom": "No",
+					"half: top": "Yes"
 				},
-				"Stems": "Yes",
-				"Stone": "Yes",
-				"Stone Bricks": "Yes",
-				"Structure Block": "Yes",
-				"Suspicious Gravel": "Yes",
-				"Suspicious Sand": "Yes",
-				"TNT": "Yes",
-				"Target": "Yes",
-				"Terracotta": "Yes",
-				"Tuff": "Yes",
-				"Wart Blocks": "All except piglins, ziglins and hoglins",
-				"Wood": "Yes",
-				"Wool": "Yes"
+				"Stonecutter": "No",
+				"Structure Void": "No",
+				"Sugar Cane": "No",
+				"Sweet Berry Bush": "No",
+				"Tinted Glass": "No",
+				"Torch": "No",
+				"Torchflower": "No",
+				"Torchflower Crop": "No",
+				"Trapdoors": "No",
+				"Trapped Chest": "No",
+				"Tripwire": "No",
+				"Tripwire Hook": "No",
+				"Turtle Egg": "No",
+				"Twisting Vines": "No",
+				"Vines": "No",
+				"Walls": "No",
+				"Water": "No",
+				"Weeping Vines": "No"
 			}
 		},
 		"sticky": {
 			"property_name": "Sticky",
-			"property_description": "If the block can be pulled by a sticky piston or an adjacent slime/honey block.\nSlime and honey are listed as 'partially' as they are not sticky when pulled by one another.",
+			"property_description": "Whether the block can be pulled by a sticky piston or an adjacent slime/honey block.\nSlime and honey are listed as 'partially' as they are not sticky when pulled by one another.",
+			"definition": "",
 			"default_value": "Yes",
 			"entries": {
 				"Amethyst Cluster": "No",
@@ -16621,7 +16395,7 @@
 		"top_face_has_full_square": {
 			"property_name": "Top Face Has Full Square",
 			"property_description": "This is true if the top face is a full square.",
-			"definition": "net.minecraft.world.level.block.Block#isFaceFull",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isFaceSturdy(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction)",
 			"default_value": "Yes",
 			"entries": {
 				"Activator Rail": "No",
@@ -18334,9 +18108,147 @@
 				]
 			}
 		},
+		"water_forms_source_above": {
+			"property_name": "Water Forms Sources Above",
+			"property_description": "Whether water can form a source above this block.\nIf infinite lava is on, it will form sources above the same blocks, but above lava and not above water.",
+			"definition": "",
+			"default_value": "Yes",
+			"entries": {
+				"Activator Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Air": "No",
+				"Azalea": "No",
+				"Big Dripleaf": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Buttons": "No",
+				"Candles": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Carpets": "No",
+				"Cave Vines": "No",
+				"Chorus Flower": "No",
+				"Chorus Plant": "No",
+				"Cocoa": "No",
+				"Coral Fans": {
+					"Brain Coral Fan<br>Brain Coral Wall Fan<br>Bubble Coral Fan<br>Bubble Coral Wall Fan<br>Fire Coral Fan<br>Fire Coral Wall Fan<br>Horn Coral Fan<br>Horn Coral Wall Fan<br>Tube Coral Fan<br>Tube Coral Wall Fan": {
+						"waterlogged: false": "No",
+						"waterlogged: true": "Yes"
+					},
+					"Dead Brain Coral Fan<br>Dead Brain Coral Wall Fan<br>Dead Bubble Coral Fan<br>Dead Bubble Coral Wall Fan<br>Dead Fire Coral Fan<br>Dead Fire Coral Wall Fan<br>Dead Horn Coral Fan<br>Dead Horn Coral Wall Fan<br>Dead Tube Coral Fan<br>Dead Tube Coral Wall Fan": "Yes"
+				},
+				"Corals": {
+					"Brain Coral<br>Bubble Coral<br>Fire Coral<br>Horn Coral<br>Tube Coral": {
+						"waterlogged: false": "No",
+						"waterlogged: true": "Yes"
+					},
+					"Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral<br>Dead Tube Coral": "Yes"
+				},
+				"Crops": "No",
+				"Dead Bush": "No",
+				"Detector Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"End Gateway": "No",
+				"End Portal": "No",
+				"End Rod": "No",
+				"Fern": "No",
+				"Fire": "No",
+				"Flower Pot": "No",
+				"Flowers": "No",
+				"Frogspawn": "No",
+				"Fungi": "No",
+				"Glow Lichen": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Grass": "No",
+				"Hanging Roots": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Heads": "No",
+				"Ladder": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Lava": "No",
+				"Lever": "No",
+				"Light Block": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Lily Pad": "No",
+				"Mangrove Propagule": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Moss Carpet": "No",
+				"Mushrooms": "No",
+				"Nether Portal": "No",
+				"Nether Sprouts": "No",
+				"Nether Wart": "No",
+				"Pink Petals": "No",
+				"Pitcher Crop": "No",
+				"Pitcher Plant": "No",
+				"Powder Snow": "No",
+				"Powered Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Redstone Comparator": "No",
+				"Redstone Dust": "No",
+				"Redstone Repeater": "No",
+				"Redstone Torch": "No",
+				"Roots": "No",
+				"Saplings": "No",
+				"Scaffolding": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Sea Pickle": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Small Dripleaf": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Yes"
+				},
+				"Snow": "No",
+				"Spore Blossom": "No",
+				"Structure Void": "No",
+				"Sugar Cane": "No",
+				"Sweet Berry Bush": "No",
+				"Torch": "No",
+				"Torchflower": "No",
+				"Torchflower Crop": "No",
+				"Tripwire": "No",
+				"Tripwire Hook": "No",
+				"Twisting Vines": "No",
+				"Vines": "No",
+				"Water": {
+					"Bubble Column": "Yes",
+					"Water": {
+						"level: 0<br>level: 10<br>level: 11<br>level: 12<br>level: 13<br>level: 14<br>level: 15<br>level: 8<br>level: 9": "Yes",
+						"level: 1<br>level: 2<br>level: 3<br>level: 4<br>level: 5<br>level: 6<br>level: 7": "No"
+					}
+				},
+				"Weeping Vines": "No"
+			}
+		},
 		"waterloggable": {
 			"property_name": "Waterloggable",
 			"property_description": "Whether this block can be waterlogged.",
+			"definition": "",
 			"default_value": "No",
 			"entries": {
 				"Activator Rail": "Yes",
@@ -18381,7 +18293,6 @@
 				"Small Dripleaf": "Yes",
 				"Stained Glass Panes": "Yes",
 				"Stairs": "Yes",
-				"Torchflower Crop": "No",
 				"Trapdoors": "Yes",
 				"Trapped Chest": "Yes",
 				"Walls": "Yes",
@@ -18390,7 +18301,8 @@
 		},
 		"width_all": {
 			"property_name": "Width (All)",
-			"property_description": "The block's side-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
+			"property_description": "The block's sideways-facing collision surfaces.\nIncludes internal collisions.\nDefaults to pixel values, this can be converted in the settings.",
+			"definition": "",
 			"default_value": 16,
 			"size_type": "pixel",
 			"entries": {
@@ -19611,6 +19523,7 @@
 		"wither_block_break_immune": {
 			"property_name": "Wither Block Break Immune",
 			"property_description": "Whether this block is immune to the wither's block breaking attack.",
+			"definition": "",
 			"default_value": "No",
 			"entries": {
 				"Barrier": "Yes",
@@ -19633,138 +19546,285 @@
 		},
 		"wither_skull_immune": {
 			"property_name": "Wither Skull Immune",
-			"property_description": "Whether this block is immune to the wither's skull attacks.",
+			"property_description": "Whether this block is immune to the wither's skull attack.",
+			"definition": "",
 			"default_value": "No",
 			"relative_gradient": true,
 			"entries": {
-				"Ancient Debris": "Black skulls only",
-				"Andesite": "Black skulls only",
-				"Anvil": "Black skulls only",
+				"Activator Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Amethyst Cluster": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Ancient Debris": "Only to black skulls",
+				"Andesite": "Only to black skulls",
+				"Anvil": "Only to black skulls",
 				"Barrier": "Yes",
-				"Basalt": "Black skulls only",
+				"Basalt": "Only to black skulls",
 				"Bedrock": "Yes",
-				"Bell": "Black skulls only",
-				"Blackstone": "Black skulls only",
-				"Block of Coal": "Black skulls only",
-				"Block of Copper": "Black skulls only",
-				"Block of Diamond": "Black skulls only",
-				"Block of Emerald": "Black skulls only",
-				"Block of Gold": "Black skulls only",
-				"Block of Iron": "Black skulls only",
-				"Block of Netherite": "Black skulls only",
+				"Bell": "Only to black skulls",
+				"Big Dripleaf": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Blackstone": "Only to black skulls",
+				"Block of Coal": "Only to black skulls",
+				"Block of Copper": "Only to black skulls",
+				"Block of Diamond": "Only to black skulls",
+				"Block of Emerald": "Only to black skulls",
+				"Block of Gold": "Only to black skulls",
+				"Block of Iron": "Only to black skulls",
+				"Block of Netherite": "Only to black skulls",
 				"Block of Quartz": {
 					"Chiseled Quartz Block<br>Block of Quartz<br>Quartz Bricks<br>Quartz Pillar": "No",
-					"Smooth Quartz Block": "Black skulls only"
+					"Smooth Quartz Block": "Only to black skulls"
 				},
-				"Block of Raw Copper": "Black skulls only",
-				"Block of Raw Gold": "Black skulls only",
-				"Block of Raw Iron": "Black skulls only",
-				"Block of Redstone": "Black skulls only",
-				"Bricks": "Black skulls only",
-				"Chain": "Black skulls only",
-				"Cobbled Deepslate": "Black skulls only",
+				"Block of Raw Copper": "Only to black skulls",
+				"Block of Raw Gold": "Only to black skulls",
+				"Block of Raw Iron": "Only to black skulls",
+				"Block of Redstone": "Only to black skulls",
+				"Bricks": "Only to black skulls",
+				"Calibrated Sculk Sensor": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Campfire": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Candles": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Chain": "Only to black skulls",
+				"Chest": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Cobbled Deepslate": "Only to black skulls",
 				"Cobblestone": {
-					"Cobblestone<br>Mossy Cobblestone": "Black skulls only",
+					"Cobblestone<br>Mossy Cobblestone": "Only to black skulls",
 					"Infested Cobblestone": "No"
 				},
 				"Command Blocks": "Yes",
-				"Coral Blocks": "Black skulls only",
-				"Crying Obsidian": "Black skulls only",
+				"Conduit": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Coral Blocks": "Only to black skulls",
+				"Coral Fans": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Corals": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Crying Obsidian": "Only to black skulls",
+				"Decorated Pot": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
 				"Deepslate": {
-					"Deepslate": "Black skulls only",
+					"Deepslate": "Only to black skulls",
 					"Infested Deepslate": "No"
 				},
-				"Diorite": "Black skulls only",
+				"Detector Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Diorite": "Only to black skulls",
 				"Doors": {
 					"Acacia Door<br>Bamboo Door<br>Birch Door<br>Cherry Door<br>Crimson Door<br>Dark Oak Door<br>Jungle Door<br>Mangrove Door<br>Oak Door<br>Spruce Door<br>Warped Door": "No",
-					"Iron Door": "Black skulls only"
+					"Iron Door": "Only to black skulls"
 				},
-				"Dragon Egg": "Black skulls only",
-				"Enchanting Table": "Black skulls only",
+				"Dragon Egg": "Only to black skulls",
+				"Enchanting Table": "Only to black skulls",
 				"End Gateway": "Yes",
 				"End Portal": "Yes",
 				"End Portal Frame": "Yes",
-				"End Stone": "Black skulls only",
-				"End Stone Bricks": "Black skulls only",
-				"Ender Chest": "Black skulls only",
+				"End Stone": "Only to black skulls",
+				"End Stone Bricks": "Only to black skulls",
+				"Ender Chest": "Only to black skulls",
 				"Fences": {
-					"Acacia Fence<br>Bamboo Fence<br>Birch Fence<br>Cherry Fence<br>Crimson Fence<br>Dark Oak Fence<br>Jungle Fence<br>Mangrove Fence<br>Oak Fence<br>Spruce Fence<br>Warped Fence": "No",
-					"Nether Brick Fence": "Black skulls only"
+					"Acacia Fence<br>Bamboo Fence<br>Birch Fence<br>Cherry Fence<br>Crimson Fence<br>Dark Oak Fence<br>Jungle Fence<br>Mangrove Fence<br>Oak Fence<br>Spruce Fence<br>Warped Fence": {
+						"waterlogged: false": "No",
+						"waterlogged: true": "Only to black skulls"
+					},
+					"Nether Brick Fence": "Only to black skulls"
 				},
-				"Gilded Blackstone": "Black skulls only",
-				"Granite": "Black skulls only",
-				"Grindstone": "Black skulls only",
-				"Hopper": "Black skulls only",
-				"Iron Bars": "Black skulls only",
+				"Gilded Blackstone": "Only to black skulls",
+				"Glass Pane": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Glow Lichen": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Granite": "Only to black skulls",
+				"Grindstone": "Only to black skulls",
+				"Hanging Roots": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Hanging Signs": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Hopper": "Only to black skulls",
+				"Iron Bars": "Only to black skulls",
 				"Jigsaw Block": "Yes",
-				"Jukebox": "Black skulls only",
-				"Lava": "Black skulls only",
+				"Jukebox": "Only to black skulls",
+				"Kelp": "Only to black skulls",
+				"Ladder": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Lantern": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Lava": "Only to black skulls",
+				"Leaves": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
 				"Light Block": "Yes",
-				"Lightning Rod": "Black skulls only",
-				"Nether Bricks": "Black skulls only",
-				"Obsidian": "Black skulls only",
-				"Prismarine": "Black skulls only",
-				"Purpur Block": "Black skulls only",
+				"Lightning Rod": "Only to black skulls",
+				"Mangrove Propagule": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Mangrove Roots": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Nether Bricks": "Only to black skulls",
+				"Obsidian": "Only to black skulls",
+				"Pointed Dripstone": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Powered Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Prismarine": "Only to black skulls",
+				"Purpur Block": "Only to black skulls",
+				"Rail": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
 				"Red Sandstone": {
 					"Chiseled Red Sandstone<br>Cut Red Sandstone<br>Red Sandstone": "No",
-					"Smooth Red Sandstone": "Black skulls only"
+					"Smooth Red Sandstone": "Only to black skulls"
 				},
 				"Reinforced Deepslate": "Yes",
-				"Respawn Anchor": "Black skulls only",
+				"Respawn Anchor": "Only to black skulls",
 				"Sandstone": {
 					"Chiseled Sandstone<br>Cut Sandstone<br>Sandstone": "No",
-					"Smooth Sandstone": "Black skulls only"
+					"Smooth Sandstone": "Only to black skulls"
+				},
+				"Scaffolding": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Sculk Sensor": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Sculk Shrieker": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Sculk Vein": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Sea Pickle": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Seagrass": "Only to black skulls",
+				"Signs": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
 				},
 				"Slabs": {
-					"Acacia Slab<br>Bamboo Mosaic Slab<br>Bamboo Slab<br>Birch Slab<br>Cherry Slab<br>Crimson Slab<br>Dark Oak Slab<br>Jungle Slab<br>Mangrove Slab<br>Mud Brick Slab<br>Oak Slab<br>Spruce Slab<br>Warped Slab": "No",
-					"Andesite Slab<br>Blackstone Slab<br>Brick Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Nether Brick Slab<br>Oxidized Cut Copper Slab<br>Petrified Oak Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Stone Brick Slab<br>Stone Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "Black skulls only"
+					"Acacia Slab<br>Bamboo Mosaic Slab<br>Bamboo Slab<br>Birch Slab<br>Cherry Slab<br>Crimson Slab<br>Dark Oak Slab<br>Jungle Slab<br>Mangrove Slab<br>Mud Brick Slab<br>Oak Slab<br>Spruce Slab<br>Warped Slab": {
+						"waterlogged: false": "No",
+						"waterlogged: true": "Only to black skulls"
+					},
+					"Andesite Slab<br>Blackstone Slab<br>Brick Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Nether Brick Slab<br>Oxidized Cut Copper Slab<br>Petrified Oak Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Stone Brick Slab<br>Stone Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "Only to black skulls"
 				},
-				"Spawner": "Black skulls only",
+				"Small Dripleaf": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Spawner": "Only to black skulls",
+				"Stained Glass Panes": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
 				"Stairs": {
-					"Acacia Stairs<br>Bamboo Mosaic Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Cherry Stairs<br>Crimson Stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Mud Brick Stairs<br>Oak Stairs<br>Quartz Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Spruce Stairs<br>Warped Stairs": "No",
-					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Red Nether Brick Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "Black skulls only"
+					"Acacia Stairs<br>Bamboo Mosaic Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Cherry Stairs<br>Crimson Stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Mud Brick Stairs<br>Oak Stairs<br>Quartz Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Spruce Stairs<br>Warped Stairs": {
+						"waterlogged: false": "No",
+						"waterlogged: true": "Only to black skulls"
+					},
+					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Red Nether Brick Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "Only to black skulls"
 				},
 				"Stone": {
 					"Infested Stone": "No",
-					"Smooth Stone<br>Stone": "Black skulls only"
+					"Smooth Stone<br>Stone": "Only to black skulls"
 				},
 				"Stone Bricks": {
-					"Chiseled Stone Bricks<br>Cracked Stone Bricks<br>Mossy Stone Bricks<br>Stone Bricks": "Black skulls only",
+					"Chiseled Stone Bricks<br>Cracked Stone Bricks<br>Mossy Stone Bricks<br>Stone Bricks": "Only to black skulls",
 					"Infested Chiseled Stone Bricks<br>Infested Cracked Stone Bricks<br>Infested Mossy Stone Bricks<br>Infested Stone Bricks": "No"
 				},
 				"Structure Block": "Yes",
-				"Terracotta": "Black skulls only",
+				"Terracotta": "Only to black skulls",
 				"Trapdoors": {
-					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<br>Dark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": "No",
-					"Iron Trapdoor": "Black skulls only"
+					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<br>Dark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": {
+						"waterlogged: false": "No",
+						"waterlogged: true": "Only to black skulls"
+					},
+					"Iron Trapdoor": "Only to black skulls"
 				},
-				"Tuff": "Black skulls only",
+				"Trapped Chest": {
+					"waterlogged: false": "No",
+					"waterlogged: true": "Only to black skulls"
+				},
+				"Tuff": "Only to black skulls",
 				"Walls": {
-					"Andesite Wall<br>Blackstone Wall<br>Brick Wall<br>Cobbled Deepslate Wall<br>Cobblestone Wall<br>Deepslate Brick Wall<br>Deepslate Tile Wall<br>Diorite Wall<br>End Stone Brick Wall<br>Granite Wall<br>Mossy Cobblestone Wall<br>Mossy Stone Brick Wall<br>Nether Brick Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall<br>Polished Deepslate Wall<br>Prismarine Wall<br>Red Nether Brick Wall<br>Stone Brick Wall": "Black skulls only",
-					"Mud Brick Wall<br>Red Sandstone Wall<br>Sandstone Wall": "No"
+					"Andesite Wall<br>Blackstone Wall<br>Brick Wall<br>Cobbled Deepslate Wall<br>Cobblestone Wall<br>Deepslate Brick Wall<br>Deepslate Tile Wall<br>Diorite Wall<br>End Stone Brick Wall<br>Granite Wall<br>Mossy Cobblestone Wall<br>Mossy Stone Brick Wall<br>Nether Brick Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall<br>Polished Deepslate Wall<br>Prismarine Wall<br>Red Nether Brick Wall<br>Stone Brick Wall": "Only to black skulls",
+					"Mud Brick Wall<br>Red Sandstone Wall<br>Sandstone Wall": {
+						"waterlogged: false": "No",
+						"waterlogged: true": "Only to black skulls"
+					}
 				},
-				"Water": {
-					"Bubble Column": "No",
-					"Water": "Black skulls only"
+				"Water": "Only to black skulls"
+			},
+			"xp_dropped_when_mined": {
+				"property_name": "Xp Dropped When Mined",
+				"property_description": "The amount of experience points this block drops upon mining.",
+				"default_value": "None",
+				"entries": {
+					"Coal Ore": "0-2",
+					"Diamond Ore": "3-7",
+					"Emerald Ore": "3-7",
+					"Lapis Lazuli Ore": "2-5",
+					"Nether Gold Ore": "0-1",
+					"Nether Quartz Ore": "2-5",
+					"Sculk": "1",
+					"Sculk Catalyst": "5",
+					"Sculk Sensor": "5",
+					"Sculk Shrieker": "5",
+					"Spawner": "15-43"
 				}
-			}
-		},
-		"xp_dropped_when_mined": {
-			"property_name": "Xp Dropped When Mined",
-			"property_description": "The amount of experience points this block drops upon mining.",
-			"default_value": "None",
-			"entries": {
-				"Coal Ore": "0-2",
-				"Diamond Ore": "3-7",
-				"Emerald Ore": "3-7",
-				"Lapis Lazuli Ore": "2-5",
-				"Nether Gold Ore": "0-1",
-				"Nether Quartz Ore": "2-5",
-				"Sculk": "1",
-				"Sculk Catalyst": "5",
-				"Sculk Sensor": "5",
-				"Sculk Shrieker": "5",
-				"Spawner": "15–43"
 			}
 		}
 	}
