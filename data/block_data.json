@@ -12980,6 +12980,7 @@
 		"spawnable": {
 			"property_name": "Spawnable",
 			"property_description": "Whether mobs can spawn on this block.",
+			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isValidSpawn",
 			"default_value": "No",
 			"entries": {
 				"Ancient Debris": "Yes",
