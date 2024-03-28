@@ -11566,7 +11566,7 @@
 		},
 		"opaque": {
 			"property_name": "Opaque",
-			"property_description": "Whether the block is visually opaque. Used in rendering and lighting calculations.",
+			"property_description": "Whether the block is visually opaque.",
 			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#canOcclude",
 			"default_value": "Yes",
 			"entries": {
