@@ -185,6 +185,7 @@
 		"Melon",
 		"Moss Block",
 		"Moss Carpet",
+		"Moving Piston",
 		"Mud",
 		"Mud Bricks",
 		"Muddy Mangrove Roots",
@@ -455,6 +456,7 @@
 		"Melon": ["block-sprite3", -192, -576],
 		"Moss Block": ["block-sprite3", -496, -32],
 		"Moss Carpet": ["block-sprite3", -512, -32],
+		"Moving Piston": ["block-sprite3", -416, -608],
 		"Mud": ["block-sprite3", -96, -112],
 		"Mud Bricks": ["block-sprite3", -160, -112],
 		"Muddy Mangrove Roots": ["block-sprite3", -176, -112],
@@ -1115,6 +1117,7 @@
 				"Melon": 1,
 				"Moss Block": 0.1,
 				"Moss Carpet": 0.1,
+				"Moving Piston": 0,
 				"Mud": 0.5,
 				"Mud Bricks": 3,
 				"Muddy Mangrove Roots": 0.7,
@@ -1130,10 +1133,7 @@
 				"Obsidian": 1200,
 				"Packed Ice": 0.5,
 				"Packed Mud": 3,
-				"Piston": {
-					"Moving Piston": 0,
-					"Piston<br>Piston Head<br>Sticky Piston": 1.5
-				},
+				"Piston": 1.5,
 				"Planks": 3,
 				"Podzol": 0.5,
 				"Pointed Dripstone": 3,
@@ -1262,10 +1262,8 @@
 				"Jigsaw Block": "Non-Ticking",
 				"Jukebox": "Ticking",
 				"Lectern": "Non-Ticking",
-				"Piston": {
-					"Moving Piston": "Ticking",
-					"Piston<br>Piston Head<br>Sticky Piston": "No"
-				},
+				"Moving Piston": "Ticking",
+				"Piston": "No",
 				"Redstone Comparator": "Non-Ticking",
 				"Sculk Catalyst": "Ticking",
 				"Sculk Sensor": "Ticking",
@@ -1337,10 +1335,7 @@
 					"Item contents",
 					"Page the book is currently on"
 				],
-				"Piston": {
-					"Moving piston": "-Offset of the block,\n-Direction of movement,\n-ID (and data value, if applicable) of the moving block",
-					"Piston": "No"
-				},
+				"Moving Piston": "-Offset of the block,\n-Direction of movement,\n-ID (and data value, if applicable) of the moving block",
 				"Redstone Comparator": "Output strength",
 				"Sculk Catalyst": "Something",
 				"Sculk Sensor": "Something",
@@ -1557,6 +1552,7 @@
 				"Magma Block": "Yes",
 				"Melon": "Yes",
 				"Moss Block": "Yes",
+				"Moving Piston": "No",
 				"Mud": "Yes",
 				"Mud Bricks": "Yes",
 				"Muddy Mangrove Roots": "Yes",
@@ -1573,7 +1569,7 @@
 				"Packed Ice": "Yes",
 				"Packed Mud": "Yes",
 				"Piston": {
-					"Moving Piston<br>Piston Head": "No",
+					"Piston Head": "No",
 					"Piston<br>Sticky Piston": {
 						"extended: false": "Yes",
 						"extended: true": "No"
@@ -1863,13 +1859,14 @@
 					"waterlogged: true": "Yes"
 				},
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston<br>Piston Head": "No",
+					"Piston Head": "No",
 					"Piston<br>Sticky Piston": {
 						"extended: false": "Yes",
 						"extended: true": "No"
@@ -2086,13 +2083,13 @@
 					"facing: east<br>facing: north<br>facing: south<br>facing: west": "No"
 				},
 				"Mangrove Propagule": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": "Yes",
 					"Piston<br>Sticky Piston": {
 						"extended: false": "Yes",
@@ -2244,13 +2241,13 @@
 				"Lightning Rod": "No",
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down": "Yes",
 						"facing: east<br>facing: north<br>facing: south<br>facing: up<br>facing: west": "No"
@@ -2404,13 +2401,13 @@
 					"facing: east<br>facing: north<br>facing: south<br>facing: west": "No"
 				},
 				"Mangrove Propagule": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down<br>facing: up": "Yes",
 						"facing: east<br>facing: north<br>facing: south<br>facing: west": "No"
@@ -2857,6 +2854,7 @@
 				"Lily Pad": 16,
 				"Mangrove Propagule": "Not Applicable",
 				"Moss Carpet": 16,
+				"Moving Piston": "Not Applicable",
 				"Mushrooms": "Not Applicable",
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
@@ -3161,6 +3159,7 @@
 				"Lily Pad": 16,
 				"Mangrove Propagule": "Not Applicable",
 				"Moss Carpet": 16,
+				"Moving Piston": "Not Applicable",
 				"Mushrooms": "Not Applicable",
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
@@ -3835,13 +3834,13 @@
 				"Mangrove Propagule": "No",
 				"Melon": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down<br>facing: east<br>facing: south<br>facing: up<br>facing: west": "No",
 						"facing: north": "Yes"
@@ -4033,13 +4032,13 @@
 				"Mangrove Propagule": "No",
 				"Melon": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down<br>facing: east<br>facing: south<br>facing: up<br>facing: west": "No",
 						"facing: north": "Yes"
@@ -4144,11 +4143,8 @@
 				"Jigsaw Block": "Yes",
 				"Lava": "Yes",
 				"Light Block": "Yes",
+				"Moving Piston": "Yes",
 				"Obsidian": "Yes",
-				"Piston": {
-					"Moving Piston": "Yes",
-					"Piston<br>Piston Head<br>Sticky Piston": "No"
-				},
 				"Reinforced Deepslate": "Yes",
 				"Respawn Anchor": "Yes",
 				"Structure Block": "Yes",
@@ -4218,9 +4214,10 @@
 					"Kelp Plant": "No"
 				},
 				"Lava": "No",
+				"Moving Piston": "No",
 				"Nether Portal": "No",
 				"Piston": {
-					"Moving Piston<br>Piston Head": "No",
+					"Piston Head": "No",
 					"Piston<br>Sticky Piston": "Yes"
 				},
 				"Seagrass": {
@@ -4623,6 +4620,7 @@
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mud": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
@@ -4630,7 +4628,7 @@
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston<br>Piston Head": "No",
+					"Piston Head": "No",
 					"Piston<br>Sticky Piston": {
 						"extended: false": "Yes",
 						"extended: true": "No"
@@ -4851,6 +4849,7 @@
 				"Loom": "Yes",
 				"Magma Block": "Yes",
 				"Melon": "Yes",
+				"Moving Piston": "No",
 				"Mud": "Yes",
 				"Mud Bricks": "Yes",
 				"Mushrooms": "Yes",
@@ -4861,7 +4860,7 @@
 				"Packed Ice": "Yes",
 				"Packed Mud": "Yes",
 				"Piston": {
-					"Moving Piston<br>Piston": "No",
+					"Piston": "No",
 					"Piston Head<br>Sticky Piston": "Yes"
 				},
 				"Planks": {
@@ -5329,6 +5328,7 @@
 				"Melon": 1,
 				"Moss Block": 0.1,
 				"Moss Carpet": 0.1,
+				"Moving Piston": "∞",
 				"Mud": 0.5,
 				"Mud Bricks": 1.5,
 				"Muddy Mangrove Roots": 0.7,
@@ -5345,10 +5345,7 @@
 				"Obsidian": 50,
 				"Packed Ice": 0.5,
 				"Packed Mud": 1,
-				"Piston": {
-					"Moving Piston": "∞",
-					"Piston<br>Piston Head<br>Sticky Piston": 1.5
-				},
+				"Piston": 1.5,
 				"Planks": 2,
 				"Podzol": 0.5,
 				"Pointed Dripstone": 1.5,
@@ -5855,6 +5852,7 @@
 				"Lily Pad": 1.5,
 				"Mangrove Propagule": "Not Applicable",
 				"Moss Carpet": 1,
+				"Moving Piston": "Not Applicable",
 				"Mud": [
 					2,
 					4,
@@ -6210,6 +6208,7 @@
 				"Lily Pad": 1.5,
 				"Mangrove Propagule": "Not Applicable",
 				"Moss Carpet": 1,
+				"Moving Piston": "Not Applicable",
 				"Mud": 14,
 				"Mushrooms": "Not Applicable",
 				"Nether Portal": "Not Applicable",
@@ -6576,8 +6575,8 @@
 				"Lava": "Yes",
 				"Note Block": "Yes",
 				"Piston": {
-					"Moving Piston<br>Piston<br>Sticky Piston": "No",
-					"Piston Head": "Yes"
+					"Piston Head": "Yes",
+					"Piston<br>Sticky Piston": "No"
 				},
 				"Powered Rail": "Yes",
 				"Rail": "Yes",
@@ -6771,6 +6770,7 @@
 				"Melon": "With eff. V Diamond",
 				"Moss Block": "With eff. V Diamond",
 				"Moss Carpet": "With eff. V Diamond",
+				"Moving Piston": "Not Applicable",
 				"Mud": "With eff. V Diamond",
 				"Mud Bricks": "With Haste II",
 				"Muddy Mangrove Roots": "With eff. V Diamond",
@@ -6954,8 +6954,8 @@
 				"Note Block": "Yes",
 				"Pink Petals": "Yes",
 				"Piston": {
-					"Moving Piston<br>Piston<br>Sticky Piston": "No",
-					"Piston Head": "Yes"
+					"Piston Head": "Yes",
+					"Piston<br>Sticky Piston": "No"
 				},
 				"Podzol": "Yes",
 				"Pressure Plates": "Yes",
@@ -7063,8 +7063,8 @@
 				"Note Block": "Yes",
 				"Pink Petals": "Yes",
 				"Piston": {
-					"Moving Piston<br>Piston<br>Sticky Piston": "No",
-					"Piston Head": "Yes"
+					"Piston Head": "Yes",
+					"Piston<br>Sticky Piston": "No"
 				},
 				"Podzol": "Yes",
 				"Powered Rail": "Yes",
@@ -7577,7 +7577,7 @@
 				"Packed Ice": "Yes",
 				"Packed Mud": "Yes",
 				"Piston": {
-					"Moving Piston<br>Piston Head": "No",
+					"Piston Head": "No",
 					"Piston<br>Sticky Piston": {
 						"extended: false": "Yes",
 						"extended: true": "No"
@@ -7789,13 +7789,13 @@
 					"waterlogged: true": "Yes"
 				},
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down<br>facing: up": "Yes",
 						"facing: east<br>facing: north<br>facing: south<br>facing: west": "No"
@@ -8557,6 +8557,7 @@
 				"Melon": "{{mapColor|COLOR_LIGHT_GREEN}}",
 				"Moss Block": "{{mapColor|COLOR_GREEN}}",
 				"Moss Carpet": "{{mapColor|COLOR_GREEN}}",
+				"Moving Piston": "{{mapColor|STONE}}",
 				"Mud": "{{mapColor|TERRACOTTA_CYAN}}",
 				"Mud Bricks": "{{mapColor|TERRACOTTA_LIGHT_GRAY}}",
 				"Muddy Mangrove Roots": "{{mapColor|PODZOL}}",
@@ -9064,6 +9065,7 @@
 				"Melon": "GOURD",
 				"Moss Block": "MOSS_BLOCK",
 				"Moss Carpet": "PLANT",
+				"Moving Piston": "PISTON",
 				"Mud": "SOIL",
 				"Mud Bricks": "STONE",
 				"Muddy Mangrove Roots": "SOIL",
@@ -9671,6 +9673,7 @@
 				"Melon": "Breaks",
 				"Moss Block": "Breaks",
 				"Moss Carpet": "Breaks",
+				"Moving Piston": "No",
 				"Mushrooms": "Breaks",
 				"Nether Portal": "No",
 				"Nether Sprouts": "Breaks",
@@ -10506,6 +10509,32 @@
 				},
 				"Magma Block": "213:0",
 				"Melon": "103:0",
+				"Moving Piston": {
+					"facing: down": {
+						"type: normal": "36:0",
+						"type: sticky": "36:8"
+					},
+					"facing: east": {
+						"type: normal": "36:5",
+						"type: sticky": "36:13"
+					},
+					"facing: north": {
+						"type: normal": "36:2",
+						"type: sticky": "36:10"
+					},
+					"facing: south": {
+						"type: normal": "36:3",
+						"type: sticky": "36:11"
+					},
+					"facing: up": {
+						"type: normal": "36:1",
+						"type: sticky": "36:9"
+					},
+					"facing: west": {
+						"type: normal": "36:4",
+						"type: sticky": "36:12"
+					}
+				},
 				"Mushrooms": {
 					"Brown Mushroom": "39:0",
 					"Red Mushroom": "40:0"
@@ -10532,30 +10561,58 @@
 				"Obsidian": "49:0",
 				"Packed Ice": "174:0",
 				"Piston": {
-					"Moving Piston": {
-						"facing: down": {
-							"type: normal": "36:0",
-							"type: sticky": "36:8"
+					"Piston": {
+						"extended: false": {
+							"facing: down": "33:0",
+							"facing: east": "33:5",
+							"facing: north": "33:2",
+							"facing: south": "33:3",
+							"facing: up": "33:1",
+							"facing: west": "33:4"
 						},
-						"facing: east": {
-							"type: normal": "36:5",
-							"type: sticky": "36:13"
+						"extended: true": {
+							"facing: down": "33:8",
+							"facing: east": "33:13",
+							"facing: north": "33:10",
+							"facing: south": "33:11",
+							"facing: up": "33:9",
+							"facing: west": "33:12"
+						}
+					},
+					"Piston Head": {
+						"type: normal": {
+							"facing: down": "34:0",
+							"facing: east": "34:5",
+							"facing: north": "34:2",
+							"facing: south": "34:3",
+							"facing: up": "34:1",
+							"facing: west": "34:4"
 						},
-						"facing: north": {
-							"type: normal": "36:2",
-							"type: sticky": "36:10"
+						"type: sticky": {
+							"facing: down": "34:8",
+							"facing: east": "34:13",
+							"facing: north": "34:10",
+							"facing: south": "34:11",
+							"facing: up": "34:9",
+							"facing: west": "34:12"
+						}
+					},
+					"Sticky Piston": {
+						"extended: false": {
+							"facing: down": "29:0",
+							"facing: east": "29:5",
+							"facing: north": "29:2",
+							"facing: south": "29:3",
+							"facing: up": "29:1",
+							"facing: west": "29:4"
 						},
-						"facing: south": {
-							"type: normal": "36:3",
-							"type: sticky": "36:11"
-						},
-						"facing: up": {
-							"type: normal": "36:1",
-							"type: sticky": "36:9"
-						},
-						"facing: west": {
-							"type: normal": "36:4",
-							"type: sticky": "36:12"
+						"extended: true": {
+							"facing: down": "29:8",
+							"facing: east": "29:13",
+							"facing: north": "29:10",
+							"facing: south": "29:11",
+							"facing: up": "29:9",
+							"facing: west": "29:12"
 						}
 					}
 				},
@@ -11418,13 +11475,14 @@
 				},
 				"Mangrove Roots": 1,
 				"Moss Carpet": 0,
+				"Moving Piston": 0,
 				"Mushrooms": 0,
 				"Nether Portal": 0,
 				"Nether Sprouts": 0,
 				"Nether Wart": 0,
 				"Pink Petals": 0,
 				"Piston": {
-					"Moving Piston<br>Piston Head": 0,
+					"Piston Head": 0,
 					"Piston<br>Sticky Piston": {
 						"extended: false": 15,
 						"extended: true": 0
@@ -11634,15 +11692,12 @@
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
 				"Mangrove Roots": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
-				"Piston": {
-					"Moving Piston": "No",
-					"Piston<br>Piston Head<br>Sticky Piston": "Yes"
-				},
 				"Pitcher Crop": "No",
 				"Pitcher Plant": "No",
 				"Pointed Dripstone": "No",
@@ -12045,7 +12100,6 @@
 				"Packed Ice": "Yes",
 				"Packed Mud": "Yes",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down<br>facing: east<br>facing: north<br>facing: south<br>facing: west": "No",
 						"facing: up": "Yes"
@@ -12605,13 +12659,13 @@
 				},
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": "Yes",
 					"Piston<br>Sticky Piston": {
 						"extended: false": "Yes",
@@ -12789,13 +12843,13 @@
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down<br>facing: east<br>facing: south<br>facing: up<br>facing: west": "No",
 						"facing: north": "Yes"
@@ -13054,13 +13108,13 @@
 				"Magma Block": "Fire-Immune Mobs Only",
 				"Mangrove Propagule": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down<br>facing: east<br>facing: north<br>facing: south<br>facing: west": "No",
 						"facing: up": "Yes"
@@ -13226,6 +13280,7 @@
 				"Melon": "No",
 				"Moss Block": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
@@ -13364,13 +13419,14 @@
 				"Mangrove Propagule": "No",
 				"Mangrove Roots": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston<br>Piston Head": "No",
+					"Piston Head": "No",
 					"Piston<br>Sticky Piston": {
 						"extended: false": "Yes",
 						"extended: true": "No"
@@ -13505,13 +13561,13 @@
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down<br>facing: east<br>facing: north<br>facing: south<br>facing: west": "No",
 						"facing: up": "Yes"
@@ -14282,11 +14338,8 @@
 				"End Stone": "Yes",
 				"Iron Bars": "Yes",
 				"Jigsaw Block": "Yes",
+				"Moving Piston": "Yes",
 				"Obsidian": "Yes",
-				"Piston": {
-					"Moving Piston": "Yes",
-					"Piston<br>Piston Head<br>Sticky Piston": "No"
-				},
 				"Reinforced Deepslate": "Yes",
 				"Respawn Anchor": "Yes",
 				"Structure Block": "Yes",
@@ -15107,10 +15160,7 @@
 				"Obsidian": "Yes",
 				"Packed Ice": "Yes",
 				"Packed Mud": "Yes",
-				"Piston": {
-					"Moving Piston": "No",
-					"Piston<br>Piston Head<br>Sticky Piston": "Yes"
-				},
+				"Piston": "Yes",
 				"Pointed Dripstone": "Yes",
 				"Powered Rail": "Yes",
 				"Pressure Plates": {
@@ -16290,10 +16340,7 @@
 				"End Portal Frame": "Yes",
 				"Jigsaw Block": "Yes",
 				"Light Block": "Yes",
-				"Piston": {
-					"Moving Piston": "Yes",
-					"Piston<br>Piston Head<br>Sticky Piston": "No"
-				},
+				"Moving Piston": "Yes",
 				"Reinforced Deepslate": "Yes",
 				"Structure Block": "Yes",
 				"Torchflower Crop": "No"
@@ -16522,6 +16569,7 @@
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mud": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
@@ -16529,7 +16577,6 @@
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": "Yes",
 					"Piston<br>Sticky Piston": {
 						"extended: false": "Yes",
@@ -16691,13 +16738,13 @@
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down<br>facing: east<br>facing: north<br>facing: south<br>facing: west": "No",
 						"facing: up": "Yes"
@@ -16846,13 +16893,13 @@
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down<br>facing: east<br>facing: north<br>facing: south<br>facing: west": "No",
 						"facing: up": "Yes"
@@ -17031,13 +17078,13 @@
 				"Lily Pad": "No",
 				"Mangrove Propagule": "No",
 				"Moss Carpet": "No",
+				"Moving Piston": "No",
 				"Mushrooms": "No",
 				"Nether Portal": "No",
 				"Nether Sprouts": "No",
 				"Nether Wart": "No",
 				"Pink Petals": "No",
 				"Piston": {
-					"Moving Piston": "No",
 					"Piston Head": {
 						"facing: down<br>facing: up": "Yes",
 						"facing: east<br>facing: north<br>facing: south<br>facing: west": "No"
@@ -17819,6 +17866,7 @@
 				"Melon": "Melon",
 				"Moss Block": "Moss Block",
 				"Moss Carpet": "Moss Carpet",
+				"Moving Piston": "Moving Piston",
 				"Mud": "Mud",
 				"Mud Bricks": "Mud Bricks",
 				"Muddy Mangrove Roots": "Muddy Mangrove Roots",
@@ -17855,7 +17903,6 @@
 				"Packed Mud": "Packed Mud",
 				"Pink Petals": "Pink Petals",
 				"Piston": [
-					"Moving Piston",
 					"Piston",
 					"Piston Head",
 					"Sticky Piston"
@@ -18919,6 +18966,7 @@
 				"Lily Pad": 15,
 				"Mangrove Propagule": "Not Applicable",
 				"Moss Carpet": 16,
+				"Moving Piston": "Not Applicable",
 				"Mushrooms": "Not Applicable",
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
@@ -19322,6 +19370,7 @@
 				"Lily Pad": 15,
 				"Mangrove Propagule": "Not Applicable",
 				"Moss Carpet": 16,
+				"Moving Piston": "Not Applicable",
 				"Mushrooms": "Not Applicable",
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
@@ -19619,6 +19668,7 @@
 				"Melon": "https://minecraft.wiki/w/Melon",
 				"Moss Block": "https://minecraft.wiki/w/Moss_Block",
 				"Moss Carpet": "https://minecraft.wiki/w/Moss_Carpet",
+				"Moving Piston": "https://minecraft.wiki/w/Piston/Technical_components#Moving_piston",
 				"Mud": "https://minecraft.wiki/w/Mud",
 				"Mud Bricks": "https://minecraft.wiki/w/Mud_Bricks",
 				"Muddy Mangrove Roots": "https://minecraft.wiki/w/Muddy_Mangrove_Roots",
@@ -19755,10 +19805,7 @@
 				"Jigsaw Block": "Yes",
 				"Lava": "Yes",
 				"Light Block": "Yes",
-				"Piston": {
-					"Moving Piston": "Yes",
-					"Piston<br>Piston Head<br>Sticky Piston": "No"
-				},
+				"Moving Piston": "Yes",
 				"Reinforced Deepslate": "Yes",
 				"Structure Block": "Yes",
 				"Water": "Yes"
