@@ -6868,8 +6868,8 @@
 				"Terracotta": "With eff. V Gold",
 				"Tinted Glass": "No",
 				"Torch": "By Hand",
-				"Torchflower": "With eff. V Diamond",
-				"Torchflower Crop": "With eff. V Diamond",
+				"Torchflower": "By Hand",
+				"Torchflower Crop": "By Hand",
 				"Trapdoors": "No",
 				"Trapped Chest": "No",
 				"Tripwire": "By Hand",
@@ -6934,7 +6934,6 @@
 				"Glow Lichen": "Yes",
 				"Grass": "Yes",
 				"Grass Block": "Yes",
-				"Grindstone": "Yes",
 				"Hanging Roots": "Yes",
 				"Hanging Signs": "Yes",
 				"Iron Bars": "Yes",
@@ -7341,6 +7340,7 @@
 				"Composter": "Axe",
 				"Concrete Powder": "Shovel",
 				"Coral Fans": "By Hand",
+				"Corals": "By Hand",
 				"Crafting Table": "Axe",
 				"Crops": "Hoe",
 				"Dead Bush": "Shears",
@@ -7383,6 +7383,7 @@
 				"Ladder": "Axe",
 				"Lava": "Not Applicable",
 				"Leaves": "Shears or Hoe",
+				"Lectern": "Axe",
 				"Light Block": "Not Applicable",
 				"Lily Pad": "By Hand",
 				"Logs": "Axe",
@@ -11754,7 +11755,7 @@
 				"Banners": ".getMaterial().isSolid()",
 				"Bell": {
 					"Hanging": ".sideCoversSmallSquare()",
-					"Side & Floor": ".sideCoversSmallSquare()"
+					"Side & Floor": ".isSideSolidFullSquare()"
 				},
 				"Big Dripleaf": [
 					".isOf(Blocks.BIG_DRIPLEAF_STEM)",
@@ -11832,7 +11833,10 @@
 				],
 				"Hanging Roots": ".isSideSolidFullSquare()",
 				"Hanging Signs": {
-					"Ceiling": ".isSideSolidFullSquare()",
+					"Ceiling": [
+						".isSideSolidFullSquare()",
+						".isIn(BlockTags.ALL_HANGING_SIGNS)"
+					],
 					"Wall": [
 						".isSideSolidFullSquare()",
 						".isIn(BlockTags.WALL_SIGNS)"
@@ -11956,7 +11960,8 @@
 				"Sugar Cane": [
 					".isIn(BlockTags.DIRT)",
 					".isOf(Blocks.SAND)",
-					".isOf(Blocks.RED_SAND)"
+					".isOf(Blocks.RED_SAND)",
+					".isOf(this)"
 				],
 				"Sweet Berry Bush": [
 					".isIn(BlockTags.DIRT)",
@@ -12214,7 +12219,10 @@
 				"Nether Sprouts": "Yes",
 				"Roots": "Yes",
 				"Seagrass": "Yes",
-				"Snow": "Yes",
+				"Snow": {
+					"1 Layer": "Yes",
+					"2-8 Layers": "No"
+				},
 				"Structure Void": "Yes",
 				"Vines": "Yes",
 				"Water": "Yes"
@@ -12239,7 +12247,6 @@
 				"Chiseled Bookshelf": "Yes",
 				"Clay": "Yes",
 				"Coal Ore": "Yes",
-				"Cocoa": "Yes",
 				"Command Blocks": "Not Applicable",
 				"Copper Ore": "Yes",
 				"Coral Blocks": "Yes",
@@ -13216,10 +13223,12 @@
 				"Buttons": "No",
 				"Cactus": "No",
 				"Cake": "No",
+				"Calibrated Sculk Sensor": "No",
 				"Campfire": "No",
 				"Candles": "No",
 				"Cave Vines": "No",
 				"Chest": "No",
+				"Chiseled Bookshelf": "No",
 				"Chorus Flower": "No",
 				"Chorus Plant": "No",
 				"Cobweb": "No",
@@ -13260,6 +13269,7 @@
 				"Grass": "No",
 				"Grindstone": "No",
 				"Hanging Roots": "No",
+				"Hanging Signs": "No",
 				"Heads": "No",
 				"Honey Block": "Partially",
 				"Hopper": "No",
@@ -19353,8 +19363,8 @@
 					"Sides & Back": 16
 				},
 				"Lantern": {
-					"Body": 10,
-					"Top": 11
+					"Body": 11,
+					"Top": 10
 				},
 				"Lava": "Not Applicable",
 				"Lectern": {
