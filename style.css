@@ -33,7 +33,7 @@
         
         --background-image: url("assets/img/propertythingy_dark_compressed.jpg") no-repeat center center fixed;;
         --expand-btn-background-color: #333;
-        --about-background-color: rgba(0, 0, 0, 0.6);
+        --about-background-color: rgba(0, 0, 0, 0.8);
         --highlight-color: #880;
     }
 }
@@ -52,7 +52,7 @@
     
     --background-image: url("assets/img/propertythingy_dark_compressed.jpg") no-repeat center center fixed;;
     --expand-btn-background-color: #333;
-    --about-background-color: rgba(0, 0, 0, 0.6);
+    --about-background-color: rgba(0, 0, 0, 0.8);
     --highlight-color: #880;
 }
 
