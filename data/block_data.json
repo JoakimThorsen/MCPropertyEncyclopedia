@@ -7587,7 +7587,6 @@
 				"Air": "Not Applicable",
 				"Azalea": "By Hand",
 				"Bamboo": "Sword",
-				"Bamboo Block": "Axe",
 				"Bamboo Mosaic": "Axe",
 				"Banners": "Axe",
 				"Barrel": "Axe",
@@ -12871,8 +12870,7 @@
 				"Water": [
 					"On reaction",
 					"Weather Tick"
-				],
-				"Workstations (CHECK)": "Other"
+				]
 			}
 		},
 		"shape_update_on_interaction": {
