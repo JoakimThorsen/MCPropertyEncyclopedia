@@ -2988,10 +2988,26 @@
 				"Roots": "Not Applicable",
 				"Saplings": "Not Applicable",
 				"Scaffolding": {
-					"bottom: false": "Not Applicable",
-					"bottom: true": {
-						"distance: 0": "Not Applicable",
-						"distance: 1-7": 16
+					"When Above": {
+						"Descending": {
+							"bottom: false": "Not Applicable",
+							"bottom: true": {
+								"distance: 0": "Not Applicable",
+								"distance: 1-7": 16
+							}
+						},
+						"Not Descending": [
+							2,
+							16
+						]
+					},
+					"When below": "Not Applicable",
+					"When Inside": {
+						"bottom: false": "Not Applicable",
+						"bottom: true": {
+							"distance: 0": "Not Applicable",
+							"distance: 1-7": 16
+						}
 					}
 				},
 				"Sculk Vein": "Not Applicable",
@@ -3286,10 +3302,26 @@
 				"Roots": "Not Applicable",
 				"Saplings": "Not Applicable",
 				"Scaffolding": {
-					"bottom: false": "Not Applicable",
-					"bottom: true": {
-						"distance: 0": "Not Applicable",
-						"distance: 1-7": 16
+					"When Above": {
+						"Descending": {
+							"bottom: false": "Not Applicable",
+							"bottom: true": {
+								"distance: 0": "Not Applicable",
+								"distance: 1-7": 16
+							}
+						},
+						"Not Descending": [
+							2,
+							16
+						]
+					},
+					"When below": "Not Applicable",
+					"When Inside": {
+						"bottom: false": "Not Applicable",
+						"bottom: true": {
+							"distance: 0": "Not Applicable",
+							"distance: 1-7": 16
+						}
 					}
 				},
 				"Sculk Vein": "Not Applicable",
@@ -6158,6 +6190,26 @@
 				"Redstone Torch": "Not Applicable",
 				"Roots": "Not Applicable",
 				"Saplings": "Not Applicable",
+				"Scaffolding": {
+					"When Above": {
+						"Descending": {
+							"bottom: false": "Not Applicable",
+							"bottom: true": {
+								"distance: 0": "Not Applicable",
+								"distance: 1-7": 2
+							}
+						},
+						"Not Descending": 16
+					},
+					"When below": "Not Applicable",
+					"When Inside": {
+						"bottom: false": "Not Applicable",
+						"bottom: true": {
+							"distance: 0": "Not Applicable",
+							"distance: 1-7": 2
+						}
+					}
+				},
 				"Sculk Sensor": 8,
 				"Sculk Shrieker": 8,
 				"Sculk Vein": "Not Applicable",
@@ -6505,7 +6557,26 @@
 				"Redstone Torch": "Not Applicable",
 				"Roots": "Not Applicable",
 				"Saplings": "Not Applicable",
-				"Scaffolding": 16,
+				"Scaffolding": {
+					"When Above": {
+						"Descending": {
+							"bottom: false": "Not Applicable",
+							"bottom: true": {
+								"distance: 0": "Not Applicable",
+								"distance: 1-7": 2
+							}
+						},
+						"Not Descending": 16
+					},
+					"When below": "Not Applicable",
+					"When Inside": {
+						"bottom: false": "Not Applicable",
+						"bottom: true": {
+							"distance: 0": "Not Applicable",
+							"distance: 1-7": 2
+						}
+					}
+				},
 				"Sculk Sensor": 8,
 				"Sculk Shrieker": 8,
 				"Sculk Vein": "Not Applicable",
@@ -19906,10 +19977,26 @@
 				"Roots": "Not Applicable",
 				"Saplings": "Not Applicable",
 				"Scaffolding": {
-					"bottom: false": "Not Applicable",
-					"bottom: true": {
-						"distance: 0": "Not Applicable",
-						"distance: 1-7": 16
+					"When Above": {
+						"Descending": {
+							"bottom: false": "Not Applicable",
+							"bottom: true": {
+								"distance: 0": "Not Applicable",
+								"distance: 1-7": 16
+							}
+						},
+						"Not Descending": [
+							2,
+							16
+						]
+					},
+					"When below": "Not Applicable",
+					"When Inside": {
+						"bottom: false": "Not Applicable",
+						"bottom: true": {
+							"distance: 0": "Not Applicable",
+							"distance: 1-7": 16
+						}
 					}
 				},
 				"Sculk Vein": "Not Applicable",
@@ -20306,10 +20393,26 @@
 				"Roots": "Not Applicable",
 				"Saplings": "Not Applicable",
 				"Scaffolding": {
-					"bottom: false": "Not Applicable",
-					"bottom: true": {
-						"distance: 0": "Not Applicable",
-						"distance: 1-7": 16
+					"When Above": {
+						"Descending": {
+							"bottom: false": "Not Applicable",
+							"bottom: true": {
+								"distance: 0": "Not Applicable",
+								"distance: 1-7": 16
+							}
+						},
+						"Not Descending": [
+							2,
+							16
+						]
+					},
+					"When below": "Not Applicable",
+					"When Inside": {
+						"bottom: false": "Not Applicable",
+						"bottom: true": {
+							"distance: 0": "Not Applicable",
+							"distance: 1-7": 16
+						}
 					}
 				},
 				"Sculk Vein": "Not Applicable",
