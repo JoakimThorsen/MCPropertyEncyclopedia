@@ -1,4 +1,4 @@
-export { getFirstValue, getSortIndex, isNum, getAllValues, levDist, getClosestLevDistFromList };
+export { getFirstValue, getSortIndex, sortMixedList, isNum, getAllValues, levDist, getClosestLevDistFromList };
 
 function getFirstValue(value) {
     if (typeof value == 'object') {
@@ -8,20 +8,14 @@ function getFirstValue(value) {
     }
 }
 
-function sort_mixed_types(list) {
-    return list.sort(getSortIndex(a, b));
-}
+const sorting_collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'})
 
 function getSortIndex(a, b) {
-    if (isNum(a) && isNum(b)) {
-        return a - b;
-    } else if (isNum(b)) {
-        return -1;
-    } else if (isNum(a)) {
-        return 1;
-    } else {
-        return (a < b ? -1 : (a > b ? 1 : 0));
-    }
+	return sorting_collator.compare(a, b);
+}
+
+function sortMixedList(list) {
+	return list.sort(getSortIndex);
 }
 
 function isNum(val){

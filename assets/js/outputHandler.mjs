@@ -1,4 +1,5 @@
 export { headerOutputter, tableBodyGenerator };
+import { sortMixedList } from './dataUtilities.mjs';
 function headerOutputter(page, entry_header) {
     $('#output-table').find('thead>tr>th').remove();
 
@@ -244,7 +245,7 @@ function headerOutputter(page, entry_header) {
         if (filter_obj[property_id] !== undefined) {
             filter_obj[property_id] = [filter_obj[property_id]].flat();
         }
-        sort_mixed_types(value_list[property_id]).forEach(option => {
+        sortMixedList(value_list[property_id]).forEach(option => {
             const color = formatting_color(option, property_id, true);
             append_data += /*html*/`<li>
                     <a role="button" class="dropdown-option modify-filter" property="${property_id}" value="${option}">
@@ -393,7 +394,7 @@ function get_data_cell_contents(entry, property_id, top_level = true) {
             if(get_all_values(entry, true).join("  ").length <= 40) {
                 return_data += /*html*/`<table class="table table-bordered table-hover nested-table expandable preview-table ${settings_obj.expand_tables ? "display-none" : ""}">
                     <tbody>
-                        <tr>${get_nested_table_contents(sort_mixed_types(get_all_values(entry, true)), property_id, true)}</tr>
+                        <tr>${get_nested_table_contents(sortMixedList(get_all_values(entry, true)), property_id, true)}</tr>
                     </tbody>
                 </table>`;
             }

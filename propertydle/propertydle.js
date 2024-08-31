@@ -214,7 +214,7 @@ function new_game(daily_game = false) {
 
         filter_obj = {}
         // Option menu (usually a Filter menu)
-        sort_mixed_types(value_list[property_id]).forEach(option => {
+        sortMixedList(value_list[property_id]).forEach(option => {
             // var color = formatting_color(option, property_id, true);
             // TODO: gray for now. I want this to show the colors of all the ones that have been "revealed"/"exposed" or whatever
             if(property_id != 'map_color') {
@@ -381,7 +381,7 @@ function get_data_cell(latest_guess, entry, property_id, top_level = true) {
             if(get_all_values(entry, true).join("  ").length <= 40) {
                 return_data += /*html*/`<table class="table table-bordered table-hover nested-table expandable preview-table">
                     <tbody>
-                        <tr>${get_nested_table_contents(latest_guess, sort_mixed_types(get_all_values(entry, true)), property_id, true)}</tr>
+                        <tr>${get_nested_table_contents(latest_guess, sortMixedList(get_all_values(entry, true)), property_id, true)}</tr>
                     </tbody>
                 </table>`;
             }
@@ -425,7 +425,7 @@ function get_nested_table_contents(latest_guess, nested_data, property_name, hor
     }, "");
 }
 
-function sort_mixed_types(list) {
+function sortMixedList(list) {
     return list.sort((a, b) => {
         if (typeof a == 'number' && typeof b == 'number') {
             return a - b;

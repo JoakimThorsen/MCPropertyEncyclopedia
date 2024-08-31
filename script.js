@@ -414,20 +414,6 @@ function get_all_values(input, unique_only = false) {
     }
 }
 
-function sort_mixed_types(list) {
-    return list.sort((a, b) => {
-        if (isNum(a) && isNum(b)) {
-            return a - b;
-        } else if (isNum(b)) {
-            return -1;
-        } else if (isNum(a)) {
-            return 1;
-        } else {
-            return (a < b ? -1 : (a > b ? 1 : 0));
-        }
-    });
-}
-
 function scale(number, inMax, outMin, outMax) {
     // Minimum in value is assumed to be 0
     return Math.round(((number) * (outMax - outMin) / (inMax) + outMin) * 100) / 100;
