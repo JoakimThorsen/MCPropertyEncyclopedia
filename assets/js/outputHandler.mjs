@@ -12,7 +12,7 @@ function headerOutputter(page, entry_header) {
         property.size_factor = size_factor;
     }
 
-    // Add all unique values of a property to a list of possible values for said property (recursively so for objects)
+    // Add all unique values of a property to a list of possible values for said property
     Object.entries(data.properties)
         .filter(([property_name, _]) => selection_arr.includes(property_name))
         .forEach(([property_name, property]) => {
@@ -362,13 +362,13 @@ function headerOutputter(page, entry_header) {
 function tableBodyGenerator(output_data, page, search) {
     let append_string = "";
     output_data.forEach(entry => {
-        const sprite = data.sprites[entry[page]] ?? ["block-sprite", -240, -16]; // defaluts to the air sprite
         if (search) {
             entry[page] = highlightSearchString(entry[page], search)
             if(typeof entry.variants !== 'undefined') {
                 entry.variants = highlightSearchString(entry.variants, search)
             }
         }
+        const sprite = data.sprites[entry[page]] ?? ["block-sprite", -240, -16]; // defaluts to the air sprite
         append_string += /*html*/`
             <tr>
                 <td>

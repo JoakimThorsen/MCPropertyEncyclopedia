@@ -68,12 +68,10 @@ export function dataProcessor(data, selection_arr, sort_arr, filter_obj, search,
         });
 
         // Sort 
-        sort_properties.reverse().forEach(property_entry => {
-            let property = property_entry.property;
-            let reversed = property_entry.reversed;
-            split_data.sort((first, second) => {
-                let a = first[property];
-                let b = second[property];
+        sort_properties.reverse().forEach(({property: property_id, reversed}) => {
+            split_data.sort((first_row, second_row) => {
+                let a = first_row[property_id];
+                let b = second_row[property_id];
 
                 a = getFirstValue(a);
                 b = getFirstValue(b);
@@ -82,10 +80,6 @@ export function dataProcessor(data, selection_arr, sort_arr, filter_obj, search,
                 
                 return reversed ? -i : i;
                 
-                // return a.toString().localeCompare(b.toString(), undefined, {
-                //     numeric: true,
-                //     sensitivity: 'base'
-                // });
             });
         });
 
