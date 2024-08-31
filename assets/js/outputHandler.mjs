@@ -431,58 +431,57 @@ function get_nested_table_contents(nested_data, property_id, horizontal_arr = fa
 }
 
 function formatting_color(value, property_id, class_exists = false) {
-    let color = "";
-    // console.log(value, property_id);
+    if(typeof data.properties[property_id] == 'undefined') { // First column
+        return "";
+    }
 
     if (Object.hasOwn(data.conditional_formatting, value)) {
-        color = data.conditional_formatting[value];
+        let color = data.conditional_formatting[value];
         if (!class_exists) {
-            color = /*html*/`class="${color}"`;
+            color = `class="${color}"`;
         }
         return color;
     }
 
-    if (typeof data.properties[property_id] !== 'undefined' || isNum(value)) {
-        let hue, sat, lum;
-        let hslA, hslB;
-        let scale_value, max;
-        if (isNum(value)) {
-            scale_value = value;
-            if(localStorage.getItem("theme") == "light") {
-                hslA = [276, 55, 66];
-                hslB = [212, 100, 82];
-            } else {
-                hslA = [276, 41.25, 19.8];
-                hslB = [212, 75, 25];
-            }
-        } else if (typeof data.properties[property_id].relative_gradient == 'undefined') {
-            return "";
-        };
-        if(localStorage.getItem("theme") == "light") {
-            hslA ??= [223, 62, 68];
-            hslB ??= [159, 70, 82];
-        } else {
-            hslA ??= [223, 46.5, 20.4];
-            hslB ??= [159, 52.5, 25];
-        }
-        if (data.properties[property_id].relative_gradient) {
-            scale_value = value_list[property_id].indexOf(value.toString()) / value_list[property_id].length;
-            max = 1;
-        } else {
-            max = (data.properties[property_id].max ?? 17) * (data.properties[property_id].size_factor ?? 1);
-            if (scale_value >= max) {
-                [hue, sat, lum] = hslB;
-            }
-        }
-        // console.log(scale_value, max, value, property_name);
-        hue ??= scale(scale_value, max, hslA[0], hslB[0]);
-        sat ??= scale(scale_value, max, hslA[1], hslB[1]);
-        lum ??= scale(scale_value, max, hslA[2], hslB[2]);
+    if (!isNum(value) && !data.properties[property_id].relative_gradient) {
+        return "";
+    }
 
-        color = /*html*/`style="background-color: hsl(${hue},${sat}%,${lum}%)!important"`;
-        if (class_exists) {
-            color = '"' + color;
+    function getHSLValues(isLightTheme, isNumerical) {
+        if (isNumerical) {
+            return isLightTheme
+                ? { hslMin: [276, 55, 66], hslMax: [212, 100, 82] }
+                : { hslMin: [276, 41.25, 19.8], hslMax: [212, 75, 25] }
+        } else {
+            return isLightTheme
+                ? { hslMin: [223, 62, 68], hslMax: [159, 70, 82] }
+                : { hslMin: [223, 46.5, 20.4], hslMax: [159, 52.5, 25] }
         }
+    }
+
+    const { hslMin, hslMax } = getHSLValues(localStorage.getItem("theme") == "light", isNum(value));
+    
+    let scale_value, max;
+    if (data.properties[property_id].relative_gradient) {
+        scale_value = value_list[property_id].indexOf(value.toString()) / value_list[property_id].length;
+        max = 1;
+    } else {
+        scale_value = value;
+        max = (data.properties[property_id].max ?? 17) * (data.properties[property_id].size_factor ?? 1);
+    }
+    
+    let hue, sat, lum;
+    if (scale_value >= max) {
+        [hue, sat, lum] = hslMax;
+    } else {
+        hue = scale(scale_value, max, hslMin[0], hslMax[0]);
+        sat = scale(scale_value, max, hslMin[1], hslMax[1]);
+        lum = scale(scale_value, max, hslMin[2], hslMax[2]);
+    }
+
+    let color = `style="background-color: hsl(${hue},${sat}%,${lum}%)!important"`;
+    if (class_exists) {
+        color = '"' + color;
     }
     return color;
 }
@@ -493,6 +492,8 @@ function value_parser(value) {
         // Basic URL parsing:
         const url_regexp = /(https?:\/\/(\w*\.)+\w+\/?[^ ]*)/g;
         value = value.replace(url_regexp, `<a target="_blank" href="$1">$1</a>`);
+
+        // {{abc|arg1}}
         const curly_syntax_regex = /\{\{([^\}]+?)\}\}/g
         value = value.replace(curly_syntax_regex, curly_syntax_handler)
         
