@@ -11,6 +11,13 @@ function getFirstValue(value) {
 const sorting_collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'})
 
 function getSortIndex(a, b) {
+	if (isNum(a) && isNum(b)) {
+        return a - b;
+    } else if (isNum(b)) {
+        return -1;
+    } else if (isNum(a)) {
+        return 1;
+    }
 	return sorting_collator.compare(a, b);
 }
 

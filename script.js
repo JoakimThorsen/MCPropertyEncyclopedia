@@ -422,11 +422,6 @@ function scale(number, inMax, outMin, outMax) {
 function update_window_history(override_history = false) {
     let url = "";
 
-    // if(selection_arr != undefined)              url += "&selection=" + JSON.stringify(selection_arr);
-    // if(Object.keys(settings_obj).length > 0)    url += "&settings=" + JSON.stringify(settings_obj);
-    // if(Object.keys(filter_obj).length > 0)      url += "&filter=" + JSON.stringify(filter_obj);
-    // if(sort_arr.length > 0)                     url += "&sort=" + JSON.stringify(sort_arr);
-
     if (selection_arr !== undefined) {
         url += "&selection=" + serialize_custom_url(selection_arr);
     }
@@ -491,10 +486,6 @@ function parse_custom_url(value, fallback) {
         const split = value.split(';');
         const result = {};
         split.forEach(obj_str => {
-            // obj_str = obj_str.substr(1, obj_str.length - 2);
-            // const [key, ...val] = obj_str.split(':');
-            // result[key] = parse_custom_url(val.join());
-
             const [_, key, sign, val] = obj_str.match(/\((\w*)(:|!=|=)(.*)\)/);
             result[key] = parse_custom_url(val);
         })
