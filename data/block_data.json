@@ -5191,7 +5191,7 @@
 			"property_name": "Gets Destroyed by Lava",
 			"property_description": "Whether this block will get destroyed by flowing lava.",
 			"definition": "net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#isSolid",
-			"default_value": "Yes",
+			"default_value": "No",
 			"entries": {
 				"Activator Rail": "Yes",
 				"Air": "Yes",
