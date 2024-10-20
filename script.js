@@ -525,12 +525,12 @@ function deep_copy(obj) {
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
-    let scrollButton = document.getElementById("scrollButton");
-    if(scrollButton === null) return;
+    let scroll_button = document.getElementById("scrollButton");
+    if(scroll_button === null) return;
     if (document.documentElement.scrollTop > 20 && document.documentElement.scrollTop + document.documentElement.clientHeight < document.documentElement.scrollHeight) {
-        scrollButton.style.display = "block";
+        scroll_button.style.display = "block";
     } else {
-        scrollButton.style.display = "none";
+        scroll_button.style.display = "none";
     }
 }
 

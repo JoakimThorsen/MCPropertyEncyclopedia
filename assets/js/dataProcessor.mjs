@@ -25,12 +25,12 @@ export function data_processor(data, selection_arr, sort_arr, filter_obj, search
     });
 
     // Search filtering:
-    let variantsIsSelected = selection_arr.includes("variants");
+    let variants_is_selected = selection_arr.includes("variants");
     output_data = output_data.filter(row => {
         return Boolean(search.split('|').some(subsearch =>
             subsearch.split(' ').every(term =>
                 row[page].toLowerCase().includes(term.toLowerCase())
-                || (variantsIsSelected && get_all_values(row.variants).some(v => v.toLowerCase().includes(term.toLowerCase())))
+                || (variants_is_selected && get_all_values(row.variants).some(v => v.toLowerCase().includes(term.toLowerCase())))
             )
         ))
     })

@@ -43,12 +43,12 @@ function initialize_page() {
         let h = time / 60 / 60 | 0;
         let m = time / 60 % 60 | 0;
         let s = time % 60;
-        let countdownString = [
+        let countdown_string = [
             h.toString().padStart(2, "0"),
             m.toString().padStart(2, "0"),
             s.toString().padStart(2, "0")
         ].join(":");
-        document.getElementById("countdown").innerHTML = countdownString;
+        document.getElementById("countdown").innerHTML = countdown_string;
     }
 }
 
