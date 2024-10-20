@@ -117,7 +117,7 @@ input[type=search]::-webkit-search-cancel-button {
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li role="separator" class="horizontal-divider visible-xs"></li>
-            <li><a class="navbar-item" title="Toggle UI Theme" role="button" id="dark-mode-toggle" onclick="toggleTheme();display_headers_and_table()">
+            <li><a class="navbar-item" title="Toggle UI Theme" role="button" id="dark-mode-toggle" onclick="toggle_theme();display_headers_and_table()">
                 <img width="20" src="../assets/img/moon_sprite.png" class="display-none" />
                 <img width="20" src="../assets/img/sun_sprite.png" />
                     <span class="visible-xs-inline-block">Toggle light/dark mode</span>
@@ -215,7 +215,7 @@ input[type=search]::-webkit-search-cancel-button {
     <h2 id="countdown-text">Time until next daily propertydle: <span id="countdown"></span></h2>
 
   </div>
-  <button onclick="scrollToTop()" id="scrollButton" title="Go to top">
+  <button onclick="scroll_to_top()" id="scrollButton" title="Go to top">
     <i class="fas fa-angle-up"></i>
   </button>
 </div>

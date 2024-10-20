@@ -104,7 +104,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li role="separator" class="horizontal-divider visible-xs"></li>
-                <li><a class="navbar-item" title="Toggle UI Theme" role="button" id="dark-mode-toggle" onclick="toggleTheme();display_headers_and_table()">
+                <li><a class="navbar-item" title="Toggle UI Theme" role="button" id="dark-mode-toggle" onclick="toggle_theme();display_headers_and_table()">
                     <img width="20" src="assets/img/moon_sprite.png" class="display-none" />
                     <img width="20" src="assets/img/sun_sprite.png" />
                     <span class="visible-xs-inline-block">Toggle light/dark mode</span>
@@ -134,7 +134,7 @@
             <div class="panel panel-default popup-panel collapse in display-none shameless-self-promo">
                 <div class="panel-heading">
                     <i class="fab fa-discord"></i> Heads Up! <i class="fab fa-discord"></i>
-                    <a role="button" style="float:right; color:gray" onclick="$(this).parent().parent().collapse('hide'); stopPromo();">X</a>
+                    <a role="button" style="float:right; color:gray" onclick="$(this).parent().parent().collapse('hide'); stop_promo();">X</a>
                 </div>
                 <div class="panel-body">
                     This project now has a dedicated discord server! Head over to <a href="https://discord.gg/RUEVmTahYg">https://discord.gg/RUEVmTahYg</a> :)
@@ -305,7 +305,7 @@
             </table>
         </div>
     </div>
-    <button onclick="scrollToTop()" id="scrollButton" title="Go to top">
+    <button onclick="scroll_to_top()" id="scrollButton" title="Go to top">
         <i class="fas fa-angle-up"></i>
     </button>
 </div>

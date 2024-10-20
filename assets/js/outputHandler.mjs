@@ -1,6 +1,6 @@
-export { headerOutputter, tableBodyGenerator };
-import { sortMixedList } from './dataUtilities.mjs';
-function headerOutputter(page, entry_header) {
+export { header_outputter, table_body_generator };
+import { sort_mixed_list } from './dataUtilities.mjs';
+function header_outputter(page, entry_header) {
     $('#output-table').find('thead>tr>th').remove();
 
     for (const [_, property] of Object.entries(data.properties).filter(([e, _]) => selection_arr.includes(e))) {
@@ -23,7 +23,7 @@ function headerOutputter(page, entry_header) {
                 values = property.entries;
             }
             value_list[property_name] = get_all_values(values, true).map(val => {
-                if (isNum(val) && property.size_factor !== 1) {
+                if (is_num(val) && property.size_factor !== 1) {
                     val *= property.size_factor;
                 }
                 return String(val)
@@ -245,7 +245,7 @@ function headerOutputter(page, entry_header) {
         if (filter_obj[property_id] !== undefined) {
             filter_obj[property_id] = [filter_obj[property_id]].flat();
         }
-        sortMixedList(value_list[property_id]).forEach(option => {
+        sort_mixed_list(value_list[property_id]).forEach(option => {
             const color = formatting_color(option, property_id, true);
             append_data += /*html*/`<li>
                     <a role="button" class="dropdown-option modify-filter" property="${property_id}" value="${option}">
@@ -268,7 +268,7 @@ function headerOutputter(page, entry_header) {
         $(this).children().last().toggleClass("display-none")
 
         // Convert to double if applicable
-        // value = (isNum(value)) ? value * 1 : value;
+        // value = (is_num(value)) ? value * 1 : value;
         if (!Object.keys(filter_obj).includes(property)) {
             filter_obj[property] = [];
         }
@@ -329,7 +329,7 @@ function headerOutputter(page, entry_header) {
             delete filter_obj[property];
             $(this).parents('ul').find('.glyphicon').removeClass('display-none');
         } else {
-            filter_obj[property] = deepCopy(value_list[property]);
+            filter_obj[property] = deep_copy(value_list[property]);
             $(this).parents('ul').find('.glyphicon').addClass('display-none');
         }
 
@@ -359,13 +359,13 @@ function headerOutputter(page, entry_header) {
     });
 }
 
-function tableBodyGenerator(output_data, page, search) {
+function table_body_generator(output_data, page, search) {
     let append_string = "";
     output_data.forEach(entry => {
         if (search) {
-            entry[page] = highlightSearchString(entry[page], search)
+            entry[page] = highlight_search_string(entry[page], search)
             if(typeof entry.variants !== 'undefined') {
-                entry.variants = highlightSearchString(entry.variants, search)
+                entry.variants = highlight_search_string(entry.variants, search)
             }
         }
         const sprite = data.sprites[entry[page]] ?? ["block-sprite", -240, -16]; // defaluts to the air sprite
@@ -394,7 +394,7 @@ function get_data_cell_contents(entry, property_id, top_level = true) {
             if(get_all_values(entry, true).join("  ").length <= 40) {
                 return_data += /*html*/`<table class="table table-bordered table-hover nested-table expandable preview-table ${settings_obj.expand_tables ? "display-none" : ""}">
                     <tbody>
-                        <tr>${get_nested_table_contents(sortMixedList(get_all_values(entry, true)), property_id, true)}</tr>
+                        <tr>${get_nested_table_contents(sort_mixed_list(get_all_values(entry, true)), property_id, true)}</tr>
                     </tbody>
                 </table>`;
             }
@@ -408,7 +408,7 @@ function get_data_cell_contents(entry, property_id, top_level = true) {
         return_data += "</tbody></table></td>";
 
     } else {
-        return_data = /*html*/`<td class="${isNum(entry) && settings_obj.right_align_numbers ? "numeric-cell" : ""} ${formatting_color(entry, property_id, true)}">${value_parser(entry)}</td>`;
+        return_data = /*html*/`<td class="${is_num(entry) && settings_obj.right_align_numbers ? "numeric-cell" : ""} ${formatting_color(entry, property_id, true)}">${value_parser(entry)}</td>`;
     }
     return return_data;
 }
@@ -443,11 +443,11 @@ function formatting_color(value, property_id, class_exists = false) {
         return color;
     }
 
-    if (!isNum(value) && !data.properties[property_id].relative_gradient) {
+    if (!is_num(value) && !data.properties[property_id].relative_gradient) {
         return "";
     }
 
-    function getHSLValues(isLightTheme, isNumerical) {
+    function get_HSL_values(isLightTheme, isNumerical) {
         if (isNumerical) {
             return isLightTheme
                 ? { hslMin: [276, 55, 66], hslMax: [212, 100, 82] }
@@ -459,7 +459,7 @@ function formatting_color(value, property_id, class_exists = false) {
         }
     }
 
-    const { hslMin, hslMax } = getHSLValues(localStorage.getItem("theme") == "light", isNum(value));
+    const { hslMin, hslMax } = get_HSL_values(localStorage.getItem("theme") == "light", is_num(value));
     
     let scale_value, max;
     if (data.properties[property_id].relative_gradient) {
@@ -487,7 +487,7 @@ function formatting_color(value, property_id, class_exists = false) {
 }
 
 function value_parser(value) {
-    if(isNum(value)) return value;
+    if(is_num(value)) return value;
     if(typeof value === 'string') {
         // Basic URL parsing:
         const url_regexp = /(https?:\/\/(\w*\.)+\w+\/?[^ ]*)/g;

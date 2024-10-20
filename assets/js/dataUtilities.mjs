@@ -1,8 +1,8 @@
-export { getFirstValue, getSortIndex, sortMixedList, isNum, getAllValues, levDist, getClosestLevDistFromList };
+export { get_first_value, get_sort_index, sort_mixed_list, is_num, get_all_values, lev_dist, get_closest_lev_dist_from_list };
 
-function getFirstValue(value) {
+function get_first_value(value) {
     if (typeof value == 'object') {
-        return getFirstValue(Object.values(value)[0]);
+        return get_first_value(Object.values(value)[0]);
     } else {
         return value;
     }
@@ -10,31 +10,31 @@ function getFirstValue(value) {
 
 const sorting_collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'})
 
-function getSortIndex(a, b) {
-	if (isNum(a) && isNum(b)) {
+function get_sort_index(a, b) {
+	if (is_num(a) && is_num(b)) {
         return a - b;
-    } else if (isNum(b)) {
+    } else if (is_num(b)) {
         return -1;
-    } else if (isNum(a)) {
+    } else if (is_num(a)) {
         return 1;
     }
 	return sorting_collator.compare(a, b);
 }
 
-function sortMixedList(list) {
-	return list.sort(getSortIndex);
+function sort_mixed_list(list) {
+	return list.sort(get_sort_index);
 }
 
-function isNum(val){
+function is_num(val){
     if(val === "") return false;
     return !isNaN(val)
 }
 
-function getAllValues(input, unique_only = false) {
+function get_all_values(input, unique_only = false) {
     if (typeof input == 'object') {
         let return_arr = [];
         for (let value in input) {
-            return_arr = return_arr.concat(...getAllValues(input[value]));
+            return_arr = return_arr.concat(...get_all_values(input[value]));
         }
         if (unique_only) {
             return_arr = [...new Set(return_arr)]
@@ -46,7 +46,7 @@ function getAllValues(input, unique_only = false) {
 }
 
 // https://stackoverflow.com/a/11958496/13224225
-function levDist(s, t) {
+function lev_dist(s, t) {
 	var d = []; //2d matrix
 
 	// Step 1
@@ -97,7 +97,7 @@ function levDist(s, t) {
 	return d[n][m];
 }
 
-function getClosestLevDistFromList(word, list) {
-	return list.sort((a, b) => levDist(word, a) - levDist(word, b))[0]
+function get_closest_lev_dist_from_list(word, list) {
+	return list.sort((a, b) => lev_dist(word, a) - lev_dist(word, b))[0]
 }
 

@@ -3,16 +3,16 @@
 let data = {};
 const value_list = {};
 
-const urlParams = new URLSearchParams(window.location.search);
+const url_params = new URLSearchParams(window.location.search);
 
 let filter_obj;
 let sort_arr;
 let selection_arr;
 let settings_obj;
 
-filter_obj = parse_custom_url(urlParams.get("filter")) ?? {};
+filter_obj = parse_custom_url(url_params.get("filter")) ?? {};
 
-sort_arr = urlParams.get("sort")
+sort_arr = url_params.get("sort")
         ?.split(',')
         ?.map(prop => {
             let reversed = prop.charAt(0) === '!';
@@ -20,15 +20,15 @@ sort_arr = urlParams.get("sort")
         })
     ?? [];
 
-if (urlParams.has("selection")) {
-    selection_arr = [parse_custom_url(urlParams.get("selection")) || []].flat();
+if (url_params.has("selection")) {
+    selection_arr = [parse_custom_url(url_params.get("selection")) || []].flat();
 } else {
     selection_arr = null;
 }
 
-settings_obj = parse_custom_url(urlParams.get("settings")) ?? {};
+settings_obj = parse_custom_url(url_params.get("settings")) ?? {};
 
-let search = urlParams.get("search") ?? "";
+let search = url_params.get("search") ?? "";
 let page, entry_header, exportable_list, exportable_data;
 
 function load_data(filename) {
@@ -56,11 +56,11 @@ function load_data(filename) {
     });
 }
 
-let dataProcessor, headerOutputter, tableBodyGenerator, getClosestLevDistFromList;
+let data_processor, header_outputter, table_body_generator, get_closest_lev_dist_from_list;
 async function initialize_page() {
-    ({ dataProcessor } = await import('./assets/js/dataProcessor.mjs'));
-    ({ headerOutputter, tableBodyGenerator } = await import('./assets/js/outputHandler.mjs'));
-    ({ getClosestLevDistFromList } = await import('./assets/js/dataUtilities.mjs'));
+    ({ data_processor: data_processor } = await import('./assets/js/dataProcessor.mjs'));
+    ({ header_outputter: header_outputter, table_body_generator: table_body_generator } = await import('./assets/js/outputHandler.mjs'));
+    ({ get_closest_lev_dist_from_list: get_closest_lev_dist_from_list } = await import('./assets/js/dataUtilities.mjs'));
 
     if (!localStorage.getItem("MCProperty-discord-promoted")) {
         $(".shameless-self-promo").removeClass("display-none")
@@ -141,7 +141,7 @@ async function initialize_page() {
             "Invalid selection",
             `The selection you have specified [${selection_arr.join(', ')}] is invalid. The following properties were not recognized: <ul>`
                 + selection_arr.filter(prop => !Object.keys(data.properties).includes(prop)).map(unknown_prop => {
-                    const found_prop = getClosestLevDistFromList(unknown_prop, Object.keys(data.properties));
+                    const found_prop = get_closest_lev_dist_from_list(unknown_prop, Object.keys(data.properties));
                     return /*html*/`<li>'${unknown_prop}': Did you mean '${found_prop}'? <button class="btn btn-default found-prop-correction" unknown-property="${unknown_prop}" found-property="${found_prop}" style="text-decoration: underline">Yes</button> </li>`;
                 }).join('') +
             "</ul>"
@@ -308,7 +308,7 @@ function display_selection_search(_selection_search = selection_search) {
         $('.custom-collapsible').addClass('submenu-open');
     }
     $('#selection').children('li').each(function () {
-        if (matchesSearch(this, selection_search)) {
+        if (matches_search(this, selection_search)) {
             $(this).removeClass('display-none');
         } else {
             $(this).addClass('display-none');
@@ -316,11 +316,11 @@ function display_selection_search(_selection_search = selection_search) {
     });
 }
 
-function matchesSearch(element, selection_search) {
+function matches_search(element, selection_search) {
     if ($(element).hasClass('custom-submenu')) {
         let matches = false;
         $(element).children('ul').children('li').each(function () {
-            if (matchesSearch(this, selection_search)) {
+            if (matches_search(this, selection_search)) {
                 matches = true;
             }
         });
@@ -345,7 +345,7 @@ function matchesSearch(element, selection_search) {
 // This functions only handles headers, but calls display_results()
 function display_headers_and_table() {
 
-    headerOutputter(page, entry_header);
+    header_outputter(page, entry_header);
     
     display_results();
 }
@@ -355,7 +355,7 @@ function display_results() {
     $('#output-table').find('tbody>tr').remove();
 
     // Table data
-    let { output_data, exportable_list: _list, exportable_data: _data, entry_count } = dataProcessor(data, selection_arr.filter(prop => Object.keys(data.properties).includes(prop)), sort_arr, filter_obj, search, page);
+    let { output_data, exportable_list: _list, exportable_data: _data, entry_count } = data_processor(data, selection_arr.filter(prop => Object.keys(data.properties).includes(prop)), sort_arr, filter_obj, search, page);
 
     exportable_list = _list;
     exportable_data = _data;
@@ -363,7 +363,7 @@ function display_results() {
     $('#entry_count').html(entry_count);
 
     // Table outputting
-    let table_body_contents = tableBodyGenerator(output_data, page, search);
+    let table_body_contents = table_body_generator(output_data, page, search);
     $('#output-table').children('tbody').append(table_body_contents);
 
     // Toggle functionality of 'Expand' buttons 
@@ -501,12 +501,12 @@ function parse_custom_url(value, fallback) {
     return value
 }
 
-function deepCopy(obj) {
+function deep_copy(obj) {
     if (Array.isArray(obj)) {
         let result = [];
 
         for (let index in obj) {
-            result.push(deepCopy(obj[index]));
+            result.push(deep_copy(obj[index]));
         }
 
         return result;
@@ -514,7 +514,7 @@ function deepCopy(obj) {
         let result = {};
 
         for (let [key, value] of Object.entries(obj)) {
-            result[key] = deepCopy(value);
+            result[key] = deep_copy(value);
         }
 
         return result;
@@ -535,22 +535,22 @@ window.onscroll = function () {
 }
 
 // When the user clicks on the button, scroll to the top of the document
-function scrollToTop() {
+function scroll_to_top() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-function stopPromo(popup_type = "MCProperty-discord-promoted") {
+function stop_promo(popup_type = "MCProperty-discord-promoted") {
     localStorage.setItem(popup_type, true)
 }
 
-function highlightSearchString(input, search) {
+function highlight_search_string(input, search) {
     if(Array.isArray(input)) {
-        return input.map(v => highlightSearchString(v, search));
+        return input.map(v => highlight_search_string(v, search));
     }
     if(typeof input === 'object') {
         for (let key of Object.keys(input)) {
-            input[key] = highlightSearchString(input[key], search);
+            input[key] = highlight_search_string(input[key], search);
         }
         return input;
     }
@@ -564,7 +564,7 @@ function highlightSearchString(input, search) {
     return input;
 }
 
-function isNum(val){
+function is_num(val){
     if(val === "") return false;
     return !isNaN(val)
 }

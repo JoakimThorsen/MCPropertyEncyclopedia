@@ -156,7 +156,7 @@ function new_game(daily_game = false) {
     selection_arr = selection_arr.map(elem => [elem, random()]).sort((a, b) => a[1] - b[1]).map(elem => elem[0]);
 
     function unique_solutions(secret_block, selection_arr) {
-        var options_left = deepCopy(data.key_list);
+        var options_left = deep_copy(data.key_list);
         selection_arr.forEach(property_id => {
             var entries = data.properties[property_id].entries;
             var def = data.properties[property_id].default_value;
@@ -214,7 +214,7 @@ function new_game(daily_game = false) {
 
         filter_obj = {}
         // Option menu (usually a Filter menu)
-        sortMixedList(value_list[property_id]).forEach(option => {
+        sort_mixed_list(value_list[property_id]).forEach(option => {
             // var color = formatting_color(option, property_id, true);
             // TODO: gray for now. I want this to show the colors of all the ones that have been "revealed"/"exposed" or whatever
             if(property_id != 'map_color') {
@@ -350,12 +350,12 @@ function guess(latest_guess) {
         }, 500);
     }
 }
-function deepCopy(obj) {
+function deep_copy(obj) {
     if(Array.isArray(obj)) {
         let result = [];
         
         for(let index in obj) {            
-            result.push(deepCopy(obj[index]));
+            result.push(deep_copy(obj[index]));
         }
         
         return result;
@@ -363,7 +363,7 @@ function deepCopy(obj) {
         let result = {};
         
         for(let [key, value] of Object.entries(obj)) {
-            result[key] = deepCopy(value);
+            result[key] = deep_copy(value);
         }
         
         return result;
@@ -381,7 +381,7 @@ function get_data_cell(latest_guess, entry, property_id, top_level = true) {
             if(get_all_values(entry, true).join("  ").length <= 40) {
                 return_data += /*html*/`<table class="table table-bordered table-hover nested-table expandable preview-table">
                     <tbody>
-                        <tr>${get_nested_table_contents(latest_guess, sortMixedList(get_all_values(entry, true)), property_id, true)}</tr>
+                        <tr>${get_nested_table_contents(latest_guess, sort_mixed_list(get_all_values(entry, true)), property_id, true)}</tr>
                     </tbody>
                 </table>`;
             }
@@ -425,7 +425,7 @@ function get_nested_table_contents(latest_guess, nested_data, property_name, hor
     }, "");
 }
 
-function sortMixedList(list) {
+function sort_mixed_list(list) {
     return list.sort((a, b) => {
         if (typeof a == 'number' && typeof b == 'number') {
             return a - b;

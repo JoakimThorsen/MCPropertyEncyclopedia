@@ -1,6 +1,6 @@
-import { getFirstValue, getSortIndex, isNum } from './dataUtilities.mjs';
+import { get_first_value, get_sort_index, is_num } from './dataUtilities.mjs';
 
-export function dataProcessor(data, selection_arr, sort_arr, filter_obj, search, page, invert_filter = false) {
+export function data_processor(data, selection_arr, sort_arr, filter_obj, search, page, invert_filter = false) {
     let output_data = [];
     
     // Filtering and "pivoting" (from data to output_data)
@@ -50,7 +50,7 @@ export function dataProcessor(data, selection_arr, sort_arr, filter_obj, search,
         // Split
         let split_data = [];
         data.forEach(data_elm => {
-            let split_elements = [deepCopy(data_elm)];
+            let split_elements = [deep_copy(data_elm)];
 
             sort_properties.forEach(property_map => {
                 let property = property_map.property;
@@ -73,10 +73,10 @@ export function dataProcessor(data, selection_arr, sort_arr, filter_obj, search,
                 let a = first_row[property_id];
                 let b = second_row[property_id];
 
-                a = getFirstValue(a);
-                b = getFirstValue(b);
+                a = get_first_value(a);
+                b = get_first_value(b);
                 
-                let i = getSortIndex(a, b);
+                let i = get_sort_index(a, b);
                 
                 return reversed ? -i : i;
                 
@@ -160,7 +160,7 @@ function pivot_element(input_element, property, property_id, size_factor, filter
         }
     } else {
         input_element = input_element ?? property.default_value ?? "No default value has been assigned.";
-        if (isNum(input_element) && size_factor !== 1) {
+        if (is_num(input_element) && size_factor !== 1) {
             input_element *= size_factor;
         }
         if ((filter_obj[property_id] || []).includes(String(input_element)) ^ invert_filter) {
@@ -172,7 +172,7 @@ function pivot_element(input_element, property, property_id, size_factor, filter
 }
 
 function split(row, path, property, split_element_next) {
-    const row_copy = deepCopy(row);
+    const row_copy = deep_copy(row);
 
     let pointer = row_copy;
     path.forEach(key => {
@@ -181,7 +181,7 @@ function split(row, path, property, split_element_next) {
 
     if (typeof pointer[property] === 'object') {
         if (Array.isArray(pointer[property])) {
-            const pointer_copy = deepCopy(pointer);
+            const pointer_copy = deep_copy(pointer);
             for (let i = 0; i < pointer_copy[property].length; i++) {
                 pointer[property] = [pointer_copy[property][i]];
                 split(row_copy, path.concat(property), i, split_element_next);

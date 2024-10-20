@@ -9,7 +9,7 @@ if(localStorage.getItem('theme') === 'dark') {
     $('#dark-mode-toggle').children().toggleClass('display-none');
 }
 
-function toggleTheme() {
+function toggle_theme() {
     let theme;
     switch (localStorage.getItem('theme')) {
         case 'dark':
