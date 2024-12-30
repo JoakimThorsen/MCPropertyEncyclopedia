@@ -3405,19 +3405,19 @@
 				"Activator Rail": "Not Applicable",
 				"Air": "Not Applicable",
 				"Amethyst Cluster": {
-					"facing: up": {
-						"Small Bud": 3,
-						"Medium Bud": 4,
-						"Large Bud": 5,
-						"Cluster": 7
-					},
+					"facing: down": 16,
 					"facing: east<br>facing: north<br>facing: south<br>facing: west": {
-						"Small Bud": 12,
-						"Medium Bud": 13,
+						"Cluster": 13,
 						"Large Bud": 13,
-						"Cluster": 13
+						"Medium Bud": 13,
+						"Small Bud": 12
 					},
-					"facing: down": 16
+					"facing: up": {
+						"Cluster": 7,
+						"Large Bud": 5,
+						"Medium Bud": 4,
+						"Small Bud": 3
+					}
 				},
 				"Anvil": {
 					"Base": 16,
@@ -3582,6 +3582,7 @@
 				"Rail": "Not Applicable",
 				"Redstone Dust": "Not Applicable",
 				"Redstone Torch": "Not Applicable",
+				"Resin Clump": "Not Applicable",
 				"Roots": "Not Applicable",
 				"Saplings": "Not Applicable",
 				"Scaffolding": {
@@ -3626,9 +3627,8 @@
 				},
 				"Spore Blossom": "Not Applicable",
 				"Stairs": {
-					"Side": 16,
-					"Thin Part": 8,
-					"Wide Part": 16
+					"Side<br>Wide Part": 16,
+					"Thin Part": 8
 				},
 				"Structure Void": "Not Applicable",
 				"Sugar Cane": "Not Applicable",
@@ -4023,7 +4023,8 @@
 						"7s 46": 5,
 						"9s 42": 6
 					}
-				}
+				},
+				"Creaking Heart": "0-15"
 			}
 		},
 		"conductive": {
@@ -5567,7 +5568,70 @@
 				"Twisting Vines": "Yes",
 				"Vines": "Yes",
 				"Water": "Yes",
-				"Weeping Vines": "Yes"
+				"Weeping Vines": "Yes",
+				"Creaking Heart": "Value not yet defined.",
+				"Pale Hanging Moss": "Value not yet defined.",
+				"Pale Moss Block": "Value not yet defined.",
+				"Pale Moss Carpet": "Value not yet defined.",
+				"Resin Block": "Value not yet defined.",
+				"Resin Bricks": "Value not yet defined.",
+				"Resin Clump": "Value not yet defined.",
+				"Doors": {
+					"Acacia Door<br>Bamboo Door<br>Birch Door<br>Cherry Door<br>Copper Door<br>Crimson Door<br>Dark Oak Door<br>Exposed Copper Door<br>Iron Door<br>Jungle Door<br>Mangrove Door<br>Oak Door<br>Oxidized Copper Door<br>Spruce Door<br>Warped Door<br>Waxed Copper Door<br>Waxed Exposed Copper Door<br>Waxed Oxidized Copper Door<br>Waxed Weathered Copper Door<br>Weathered Copper Door": "No",
+					"Pale Oak Door": "Value not yet defined."
+				},
+				"Fence Gates": {
+					"Acacia Fence Gate<br>Bamboo Fence Gate<br>Birch Fence Gate<br>Cherry Fence Gate<br>Crimson Fence Gate<br>Dark Oak Fence Gate<br>Jungle Fence Gate<br>Mangrove Fence Gate<br>Oak Fence Gate<br>Spruce Fence Gate<br>Warped Fence Gate": "No",
+					"Pale Oak Fence Gate": "Value not yet defined."
+				},
+				"Fences": {
+					"Acacia Fence<br>Bamboo Fence<br>Birch Fence<br>Cherry Fence<br>Crimson Fence<br>Dark Oak Fence<br>Jungle Fence<br>Mangrove Fence<br>Nether Brick Fence<br>Oak Fence<br>Spruce Fence<br>Warped Fence": "No",
+					"Pale Oak Fence": "Value not yet defined."
+				},
+				"Hanging Signs": {
+					"Acacia Hanging Sign<br>Acacia Wall Hanging Sign<br>Bamboo Hanging Sign<br>Bamboo Wall Hanging Sign<br>Birch Hanging Sign<br>Birch Wall Hanging Sign<br>Cherry Hanging Sign<br>Cherry Wall Hanging Sign<br>Crimson Hanging Sign<br>Crimson Wall Hanging Sign<br>Dark Oak Hanging Sign<br>Dark Oak Wall Hanging Sign<br>Jungle Hanging Sign<br>Jungle Wall Hanging Sign<br>Mangrove Hanging Sign<br>Mangrove Wall Hanging Sign<br>Oak Hanging Sign<br>Oak Wall Hanging Sign<br>Spruce Hanging Sign<br>Spruce Wall Hanging Sign<br>Warped Hanging Sign<br>Warped Wall Hanging Sign": "No",
+					"Pale Oak Hanging Sign<br>Pale Oak Wall Hanging Sign": "Value not yet defined."
+				},
+				"Leaves": {
+					"Acacia Leaves<br>Azalea Leaves<br>Birch Leaves<br>Cherry Leaves<br>Dark Oak Leaves<br>Flowering Azalea Leaves<br>Jungle Leaves<br>Mangrove Leaves<br>Oak Leaves<br>Spruce Leaves": "No",
+					"Pale Oak Leaves": "Value not yet defined."
+				},
+				"Logs": {
+					"Acacia Log<br>Birch Log<br>Cherry Log<br>Dark Oak Log<br>Jungle Log<br>Mangrove Log<br>Oak Log<br>Spruce Log<br>Stripped Acacia Log<br>Stripped Birch Log<br>Stripped Cherry Log<br>Stripped Dark Oak Log<br>Stripped Jungle Log<br>Stripped Mangrove Log<br>Stripped Oak Log<br>Stripped Spruce Log": "No",
+					"Pale Oak Log<br>Stripped Pale Oak Log": "Value not yet defined."
+				},
+				"Planks": {
+					"Acacia Planks<br>Bamboo Planks<br>Birch Planks<br>Cherry Planks<br>Crimson Planks<br>Dark Oak Planks<br>Jungle Planks<br>Mangrove Planks<br>Oak Planks<br>Spruce Planks<br>Warped Planks": "No",
+					"Pale Oak Planks": "Value not yet defined."
+				},
+				"Pressure Plates": {
+					"Acacia Pressure Plate<br>Bamboo Pressure Plate<br>Birch Pressure Plate<br>Cherry Pressure Plate<br>Crimson Pressure Plate<br>Dark Oak Pressure Plate<br>Heavy Weighted Pressure Plate<br>Jungle Pressure Plate<br>Light Weighted Pressure Plate<br>Mangrove Pressure Plate<br>Oak Pressure Plate<br>Polished Blackstone Pressure Plate<br>Spruce Pressure Plate<br>Stone Pressure Plate<br>Warped Pressure Plate": "No",
+					"Pale Oak Pressure Plate": "Value not yet defined."
+				},
+				"Signs": {
+					"Acacia Sign<br>Acacia Wall Sign<br>Bamboo Sign<br>Bamboo Wall Sign<br>Birch Sign<br>Birch Wall Sign<br>Cherry Sign<br>Cherry Wall Sign<br>Crimson Sign<br>Crimson Wall Sign<br>Dark Oak Sign<br>Dark Oak Wall Sign<br>Jungle Sign<br>Jungle Wall Sign<br>Mangrove Sign<br>Mangrove Wall Sign<br>Oak Sign<br>Oak Wall Sign<br>Spruce Sign<br>Spruce Wall Sign<br>Warped Sign<br>Warped Wall Sign": "No",
+					"Pale Oak Sign<br>Pale Oak Wall Sign": "Value not yet defined."
+				},
+				"Slabs": {
+					"Acacia Slab<br>Andesite Slab<br>Bamboo Mosaic Slab<br>Bamboo Slab<br>Birch Slab<br>Blackstone Slab<br>Brick Slab<br>Cherry Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Crimson Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Oak Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Jungle Slab<br>Mangrove Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Mud Brick Slab<br>Nether Brick Slab<br>Oak Slab<br>Oxidized Cut Copper Slab<br>Petrified Oak Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Polished Tuff Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Spruce Slab<br>Stone Brick Slab<br>Stone Slab<br>Tuff Brick Slab<br>Tuff Slab<br>Warped Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "No",
+					"Pale Oak Slab<br>Resin Brick Slab": "Value not yet defined."
+				},
+				"Stairs": {
+					"Acacia Stairs<br>Andesite Stairs<br>Bamboo Mosaic Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cherry Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Crimson Stairs<br>Cut Copper Stairs<br>Dark Oak Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oak Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Polished Tuff Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Spruce Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Tuff Brick Stairs<br>Tuff Stairs<br>Warped Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "No",
+					"Pale Oak Stairs<br>Resin Brick Stairs": "Value not yet defined."
+				},
+				"Trapdoors": {
+					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Copper Trapdoor<br>Crimson Trapdoor<br>Dark Oak Trapdoor<br>Exposed Copper Trapdoor<br>Iron Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Oxidized Copper Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor<br>Waxed Copper Trapdoor<br>Waxed Exposed Copper Trapdoor<br>Waxed Oxidized Copper Trapdoor<br>Waxed Weathered Copper Trapdoor<br>Weathered Copper Trapdoor": "No",
+					"Pale Oak Trapdoor": "Value not yet defined."
+				},
+				"Walls": {
+					"Andesite Wall<br>Blackstone Wall<br>Brick Wall<br>Cobbled Deepslate Wall<br>Cobblestone Wall<br>Deepslate Brick Wall<br>Deepslate Tile Wall<br>Diorite Wall<br>End Stone Brick Wall<br>Granite Wall<br>Mossy Cobblestone Wall<br>Mossy Stone Brick Wall<br>Mud Brick Wall<br>Nether Brick Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall<br>Polished Deepslate Wall<br>Polished Tuff Wall<br>Prismarine Wall<br>Red Nether Brick Wall<br>Red Sandstone Wall<br>Sandstone Wall<br>Stone Brick Wall<br>Tuff Brick Wall<br>Tuff Wall": "No",
+					"Resin Brick Wall": "Value not yet defined."
+				},
+				"Wood": {
+					"Acacia Wood<br>Birch Wood<br>Cherry Wood<br>Dark Oak Wood<br>Jungle Wood<br>Mangrove Wood<br>Oak Wood<br>Spruce Wood<br>Stripped Acacia Wood<br>Stripped Birch Wood<br>Stripped Cherry Wood<br>Stripped Dark Oak Wood<br>Stripped Jungle Wood<br>Stripped Mangrove Wood<br>Stripped Oak Wood<br>Stripped Spruce Wood": "No",
+					"Pale Oak Wood<br>Stripped Pale Oak Wood": "Value not yet defined."
+				}
 			}
 		},
 		"gets_flushed": {
@@ -6721,19 +6785,19 @@
 				"Activator Rail": "Not Applicable",
 				"Air": "Not Applicable",
 				"Amethyst Cluster": {
-					"facing: up": {
-						"Small Bud": 3,
-						"Medium Bud": 4,
-						"Large Bud": 5,
-						"Cluster": 7
-					},
+					"facing: down": 16,
 					"facing: east<br>facing: north<br>facing: south<br>facing: west": {
-						"Small Bud": 12,
-						"Medium Bud": 13,
+						"Cluster": 13,
 						"Large Bud": 13,
-						"Cluster": 13
+						"Medium Bud": 13,
+						"Small Bud": 12
 					},
-					"facing: down": 16
+					"facing: up": {
+						"Cluster": 7,
+						"Large Bud": 5,
+						"Medium Bud": 4,
+						"Small Bud": 3
+					}
 				},
 				"Anvil": {
 					"Bottom Part": 4,
@@ -6864,8 +6928,8 @@
 				"Heavy Core": 8,
 				"Honey Block": 15,
 				"Hopper": {
-					"Rim": 16,
-					"Inside": 11
+					"Inside": 11,
+					"Rim": 16
 				},
 				"Iron Bars": 16,
 				"Kelp": "Not Applicable",
@@ -6900,6 +6964,7 @@
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
 				"Nether Wart": "Not Applicable",
+				"Pale Moss Carpet": 1,
 				"Pink Petals": "Not Applicable",
 				"Piston": {
 					"Base": {
@@ -6946,6 +7011,7 @@
 				"Redstone Dust": "Not Applicable",
 				"Redstone Repeater": 2,
 				"Redstone Torch": "Not Applicable",
+				"Resin Clump": "Not Applicable",
 				"Roots": "Not Applicable",
 				"Saplings": "Not Applicable",
 				"Scaffolding": {
@@ -7570,7 +7636,8 @@
 				"Signs": "With eff. V Diamond",
 				"Slabs": {
 					"Acacia Slab<br>Bamboo Mosaic Slab<br>Bamboo Slab<br>Birch Slab<br>Blackstone Slab<br>Brick Slab<br>Cherry Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Crimson Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Oak Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Jungle Slab<br>Mangrove Slab<br>Mossy Cobblestone Slab<br>Nether Brick Slab<br>Oak Slab<br>Oxidized Cut Copper Slab<br>Petrified Oak Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Spruce Slab<br>Stone Brick Slab<br>Stone Slab<br>Warped Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "No",
-					"Andesite Slab<br>Dark Prismarine Slab<br>Diorite Slab<br>Granite Slab<br>Mossy Stone Brick Slab<br>Mud Brick Slab<br>Polished Andesite Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Polished Tuff Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Tuff Brick Slab<br>Tuff Slab": "With Haste II"
+					"Andesite Slab<br>Dark Prismarine Slab<br>Diorite Slab<br>Granite Slab<br>Mossy Stone Brick Slab<br>Mud Brick Slab<br>Polished Andesite Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Polished Tuff Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Tuff Brick Slab<br>Tuff Slab": "With Haste II",
+					"Pale Oak Slab<br>Resin Brick Slab": "Value not yet defined."
 				},
 				"Slime Block": "By Hand",
 				"Small Dripleaf": "By Hand",
@@ -7589,7 +7656,8 @@
 				"Stairs": {
 					"Acacia Stairs<br>Bamboo Mosaic Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Brick Stairs<br>Cherry Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Crimson Stairs<br>Cut Copper Stairs<br>Dark Oak Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Mossy Cobblestone Stairs<br>Nether Brick Stairs<br>Oak Stairs<br>Oxidized Cut Copper Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Red Nether Brick Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Spruce Stairs<br>Warped Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "No",
 					"Andesite Stairs<br>Blackstone Stairs<br>Dark Prismarine Stairs<br>Diorite Stairs<br>Granite Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Polished Tuff Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Tuff Brick Stairs<br>Tuff Stairs": "With Haste II",
-					"Quartz Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs": "With eff. V Diamond"
+					"Quartz Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs": "With eff. V Diamond",
+					"Pale Oak Stairs<br>Resin Brick Stairs": "Value not yet defined."
 				},
 				"Stems": "No",
 				"Stone": "With Haste II",
@@ -7623,13 +7691,21 @@
 				"Walls": {
 					"Andesite Wall<br>Blackstone Wall<br>Diorite Wall<br>Granite Wall<br>Mossy Stone Brick Wall<br>Mud Brick Wall<br>Polished Blackstone Brick Wall<br>Polished Tuff Wall<br>Prismarine Wall<br>Stone Brick Wall<br>Tuff Brick Wall<br>Tuff Wall": "With Haste II",
 					"Brick Wall<br>Cobbled Deepslate Wall<br>Cobblestone Wall<br>Deepslate Brick Wall<br>Deepslate Tile Wall<br>End Stone Brick Wall<br>Mossy Cobblestone Wall<br>Nether Brick Wall<br>Polished Blackstone Wall<br>Polished Deepslate Wall<br>Red Nether Brick Wall": "No",
-					"Red Sandstone Wall<br>Sandstone Wall": "With eff. V Diamond"
+					"Red Sandstone Wall<br>Sandstone Wall": "With eff. V Diamond",
+					"Resin Brick Wall": "Value not yet defined."
 				},
 				"Wart Blocks": "With eff. V Diamond",
 				"Water": "Not Applicable",
 				"Weeping Vines": "By Hand",
 				"Wood": "No",
-				"Wool": "No"
+				"Wool": "No",
+				"Creaking Heart": "Value not yet defined.",
+				"Pale Hanging Moss": "Value not yet defined.",
+				"Pale Moss Block": "Value not yet defined.",
+				"Pale Moss Carpet": "Value not yet defined.",
+				"Resin Block": "Value not yet defined.",
+				"Resin Bricks": "Value not yet defined.",
+				"Resin Clump": "Value not yet defined."
 			}
 		},
 		"instant_shape_updater": {
@@ -7702,6 +7778,7 @@
 				"Redstone Dust": "Yes",
 				"Redstone Repeater": "Yes",
 				"Redstone Torch": "Yes",
+				"Resin Clump": "Yes",
 				"Roots": "Yes",
 				"Saplings": "Yes",
 				"Sculk Vein": "Yes",
@@ -7819,6 +7896,7 @@
 				},
 				"Redstone Repeater": "Yes",
 				"Redstone Torch": "Yes",
+				"Resin Clump": "Yes",
 				"Roots": "Yes",
 				"Saplings": "Yes",
 				"Sculk Vein": "Yes",
@@ -8071,7 +8149,7 @@
 				"Block of Stripped Bamboo": "Axe",
 				"Bookshelf": "Axe",
 				"Buttons": {
-					"Acacia Button<br>Bamboo Button<br>Birch Button<br>Cherry Button<br>Crimson Button<>brDark Oak Button<br>Jungle Button<br>Mangrove Button<br>Oak Button<br>Spruce Button<br>Warped Button": "Axe",
+					"Acacia Button<br>Bamboo Button<br>Birch Button<br>Cherry Button<br>Crimson Button<>brDark Oak Button<br>Jungle Button<br>Mangrove Button<br>Oak Button<br>Pale Oak Button<br>Spruce Button<br>Warped Button": "Axe",
 					"Stone Button<br>Polished Blacstone Button": "Pickaxe"
 				},
 				"Cactus": "By Hand",
@@ -8095,12 +8173,13 @@
 				"Coral Fans": "By Hand",
 				"Corals": "By Hand",
 				"Crafting Table": "Axe",
+				"Creaking Heart": "Axe",
 				"Crops": "Hoe",
 				"Dead Bush": "Shears",
 				"Dirt": "Shovel",
 				"Dirt Path": "Shovel",
 				"Doors": {
-					"Acacia Door<br>Bamboo Door<br>Birch Door<br>Cherry Door<br>Crimson Door<>brDark Oak Door<br>Jungle Door<br>Mangrove Door<br>Oak Door<br>Spruce Door<br>Warped Door": "Axe",
+					"Acacia Door<br>Bamboo Door<br>Birch Door<br>Cherry Door<br>Crimson Door<>brDark Oak Door<br>Jungle Door<br>Mangrove Door<br>Oak Door<br>Pale Oak Door<br>Spruce Door<br>Warped Door": "Axe",
 					"Iron Door": "Pickaxe"
 				},
 				"Dragon Egg": "By Hand",
@@ -8154,13 +8233,16 @@
 				"Nether Sprouts": "Shears",
 				"Nether Wart": "Hoe",
 				"Note Block": "Axe",
+				"Pale Hanging Moss": "By Hand",
+				"Pale Moss Block": "Hoe",
+				"Pale Moss Carpet": "Hoe",
 				"Pink Petals": "Shears",
 				"Pitcher Plant": "By Hand",
 				"Planks": "Axe",
 				"Podzol": "Shovel",
 				"Powder Snow": "Shovel",
 				"Pressure Plates": {
-					"Acacia Pressure Plate<br>Bamboo Pressure Plate<br>Birch Pressure Plate<br>Cherry Pressure Plate<br>Crimson Pressure Plate<>brDark Oak Pressure Plate<br>Jungle Pressure Plate<br>Mangrove Pressure Plate<br>Oak Pressure Plate<br>Spruce Pressure Plate<br>Warped Pressure Plate": "Axe",
+					"Acacia Pressure Plate<br>Bamboo Pressure Plate<br>Birch Pressure Plate<br>Cherry Pressure Plate<br>Crimson Pressure Plate<>brDark Oak Pressure Plate<br>Jungle Pressure Plate<br>Mangrove Pressure Plate<br>Oak Pressure Plate<br>Pale Oak Pressure Plate<br>Spruce Pressure Plate<br>Warped Pressure Plate": "Axe",
 					"Heavy Weighted Pressure Plate<br>Light Weighted Pressure Plate<br>Polished Blackstone Pressure Plate<br>Stone Pressure Plate": "Pickaxe"
 				},
 				"Pumpkin": "Axe",
@@ -8170,6 +8252,8 @@
 				"Redstone Repeater": "By Hand",
 				"Redstone Torch": "By Hand",
 				"Reinforced Deepslate": "Not Applicable",
+				"Resin Block": "None",
+				"Resin Clump": "By Hand",
 				"Roots": "Shears",
 				"Sand": "Shovel",
 				"Saplings": "By Hand",
@@ -8185,7 +8269,7 @@
 				"Shroomlight": "Hoe",
 				"Signs": "Axe",
 				"Slabs": {
-					"Cobbled Deepslate<br>Polished Deepslate<br>Deepslate Brick<br>Deepslate Tile<br>Cut Copper<br>End Stone Brick<br>Stone Brick<br>Blackstone (and variants)<br>(Mossy) Cobblestone<br>(Red) Nether Brick<br>Petrified Oak<br>Purpur<br>(Smooth) Quartz<br>(Cut/Smooth) Sandstone<br>(Cut/Smooth) Red Sandstone<br>(Smooth) Stone<br>Mossy Stone Brick<br>(Polished) Andesite<br>(Polished) Diorite<br>(Polished) Granite<br>Prismarine (and variants)<br>Polished Tuff Slab<br>Tuff Brick Slab<br>Tuff Slab": "Pickaxe",
+					"Cobbled Deepslate<br>Polished Deepslate<br>Deepslate Brick<br>Deepslate Tile<br>Cut Copper<br>End Stone Brick<br>Stone Brick<br>Blackstone (and variants)<br>(Mossy) Cobblestone<br>(Red) Nether Brick<br>Petrified Oak<br>Purpur<br>(Smooth) Quartz<br>(Cut/Smooth) Sandstone<br>(Cut/Smooth) Red Sandstone<br>(Smooth) Stone<br>Mossy Stone Brick<br>(Polished) Andesite<br>(Polished) Diorite<br>(Polished) Granite<br>Prismarine (and variants)<br>Polished Tuff Slab<br>Pale Oak Slab<br>Resin Brick Slab<br>Tuff Brick Slab<br>Tuff Slab": "Pickaxe",
 					"Wooden": "Axe"
 				},
 				"Slime Block": "By Hand",
@@ -8199,7 +8283,7 @@
 				"Spore Blossom": "By Hand",
 				"Stairs": {
 					"Acacia Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Bamboo Mosaic Stairs<br>Cherry Stairs<br>Crimson Stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Oak Stairs<br>Spruce Stairs<br>Warped Stairs": "Axe",
-					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs<br>Polished Tuff Stairs<br>Tuff Brick Stairs<br>Tuff Stairs": "Pickaxe"
+					"Andesite Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Cut Copper Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oxidized Cut Copper Stairs<br>Pale Oak Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Resin Brick Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs<br>Polished Tuff Stairs<br>Tuff Brick Stairs<br>Tuff Stairs": "Pickaxe"
 				},
 				"Stems": "Axe",
 				"Structure Block": "Not Applicable",
@@ -8214,7 +8298,7 @@
 				"Torchflower": "By Hand",
 				"Torchflower Crop": "Hoe",
 				"Trapdoors": {
-					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<>brDark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": "Axe",
+					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<>brDark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Pale Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": "Axe",
 					"Copper Trapdoor<br>Iron Trapdoor": "Pickaxe"
 				},
 				"Trapped Chest": "Axe",
@@ -11380,7 +11464,8 @@
 			"relative_gradient": true,
 			"entries": {
 				"Air": {
-					"Air": "0:0"
+					"Air": "0:0",
+					"Cave Air<br>Void Air": "None"
 				},
 				"Andesite": {
 					"Andesite": "1:5",
@@ -11407,6 +11492,7 @@
 					}
 				},
 				"Banners": {
+					"Black Banner<br>Blue Banner<br>Brown Banner<br>Cyan Banner<br>Gray Banner<br>Green Banner<br>Light Blue Banner<br>Light Gray Banner<br>Lime Banner<br>Magenta Banner<br>No Translation Key: black_wall_banner<br>No Translation Key: blue_wall_banner<br>No Translation Key: brown_wall_banner<br>No Translation Key: cyan_wall_banner<br>No Translation Key: gray_wall_banner<br>No Translation Key: green_wall_banner<br>No Translation Key: light_blue_wall_banner<br>No Translation Key: light_gray_wall_banner<br>No Translation Key: lime_wall_banner<br>No Translation Key: magenta_wall_banner<br>No Translation Key: orange_wall_banner<br>No Translation Key: pink_wall_banner<br>No Translation Key: purple_wall_banner<br>No Translation Key: red_wall_banner<br>No Translation Key: yellow_wall_banner<br>Orange Banner<br>Pink Banner<br>Purple Banner<br>Red Banner<br>Yellow Banner": "None",
 					"No Translation Key: white_wall_banner": {
 						"facing: east": "177:5",
 						"facing: north": "177:2",
@@ -11444,6 +11530,7 @@
 				"Block of Quartz": {
 					"Block of Quartz": "155:0",
 					"Chiseled Quartz Block": "155:1",
+					"Quartz Bricks": "None",
 					"Quartz Pillar": {
 						"axis: x": [
 							"155:3",
@@ -11514,7 +11601,8 @@
 						"bites: 4": "92:4",
 						"bites: 5": "92:5",
 						"bites: 6": "92:6"
-					}
+					},
+					"Cake with Black Candle<br>Cake with Blue Candle<br>Cake with Brown Candle<br>Cake with Candle<br>Cake with Cyan Candle<br>Cake with Gray Candle<br>Cake with Green Candle<br>Cake with Light Blue Candle<br>Cake with Light Gray Candle<br>Cake with Lime Candle<br>Cake with Magenta Candle<br>Cake with Orange Candle<br>Cake with Pink Candle<br>Cake with Purple Candle<br>Cake with Red Candle<br>Cake with White Candle<br>Cake with Yellow Candle": "None"
 				},
 				"Carpets": {
 					"Black Carpet": "171:15",
@@ -11544,7 +11632,8 @@
 				},
 				"Clay": "82:0",
 				"Coal Ore": {
-					"Coal Ore": "16:0"
+					"Coal Ore": "16:0",
+					"Deepslate Coal Ore": "None"
 				},
 				"Coarse Dirt": "3:1",
 				"Cobblestone": {
@@ -11647,6 +11736,7 @@
 				},
 				"Crafting Table": "58:0",
 				"Crops": {
+					"Attached Melon Stem<br>Attached Pumpkin Stem": "None",
 					"Beetroots": {
 						"age: 0": "207:0",
 						"age: 1": "207:1",
@@ -11747,6 +11837,7 @@
 					"32:0"
 				],
 				"Diamond Ore": {
+					"Deepslate Diamond Ore": "None",
 					"Diamond Ore": "56:0"
 				},
 				"Diorite": {
@@ -11754,10 +11845,12 @@
 					"Polished Diorite": "1:4"
 				},
 				"Dirt": {
-					"Dirt": "3:0"
+					"Dirt": "3:0",
+					"Rooted Dirt": "None"
 				},
 				"Dragon Egg": "122:0",
 				"Emerald Ore": {
+					"Deepslate Emerald Ore": "None",
 					"Emerald Ore": "129:0"
 				},
 				"Enchanting Table": "116:0",
@@ -11808,6 +11901,7 @@
 					"Flower Pot": "140:0",
 					"Potted Acacia Sapling": "140:12",
 					"Potted Allium": "140:15",
+					"Potted Azalea<br>Potted Azure Bluet<br>Potted Bamboo<br>Potted Cherry Sapling<br>Potted Closed Eyeblossom<br>Potted Cornflower<br>Potted Crimson Fungus<br>Potted Crimson Roots<br>Potted Flowering Azalea<br>Potted Lily of the Valley<br>Potted Mangrove Propagule<br>Potted Open Eyeblossom<br>Potted Orange Tulip<br>Potted Oxeye Daisy<br>Potted Pale Oak Sapling<br>Potted Pink Tulip<br>Potted Red Tulip<br>Potted Torchflower<br>Potted Warped Fungus<br>Potted Warped Roots<br>Potted White Tulip<br>Potted Wither Rose": "None",
 					"Potted Birch Sapling": "140:5",
 					"Potted Blue Orchid": "140:14",
 					"Potted Brown Mushroom": "140:8",
@@ -11826,6 +11920,7 @@
 					"Allium": "38:2",
 					"Azure Bluet": "38:3",
 					"Blue Orchid": "38:1",
+					"Closed Eyeblossom<br>Cornflower<br>Lily of the Valley<br>Open Eyeblossom<br>Wither Rose": "None",
 					"Dandelion": "37:0",
 					"Lilac": {
 						"half: lower": "175:1",
@@ -11975,6 +12070,7 @@
 				},
 				"Glowstone": "89:0",
 				"Gold Ore": {
+					"Deepslate Gold Ore": "None",
 					"Gold Ore": "14:0"
 				},
 				"Granite": {
@@ -11991,6 +12087,7 @@
 					"axis: z": "170:8"
 				},
 				"Heads": {
+					"Creeper Head<br>Creeper Wall Head<br>Dragon Head<br>Dragon Wall Head<br>Piglin Head<br>Piglin Wall Head<br>Player Head<br>Player Wall Head<br>Wither Skeleton Skull<br>Wither Skeleton Wall Skull<br>Zombie Head<br>Zombie Wall Head": "None",
 					"Skeleton Skull": {
 						"rotation: 0": "144:0",
 						"rotation: 12": "144:9",
@@ -12018,6 +12115,7 @@
 				},
 				"Ice": "79:0",
 				"Iron Ore": {
+					"Deepslate Iron Ore": "None",
 					"Iron Ore": "15:0"
 				},
 				"Jack o'Lantern": {
@@ -12031,6 +12129,7 @@
 					"has_record: true": "84:1"
 				},
 				"Lapis Lazuli Ore": {
+					"Deepslate Lapis Lazuli Ore": "None",
 					"Lapis Lazuli Ore": "21:0"
 				},
 				"Lava": {
@@ -12111,6 +12210,7 @@
 						"axis: y": "17:2",
 						"axis: z": "17:10"
 					},
+					"Cherry Log<br>Mangrove Log<br>Pale Oak Log<br>Stripped Acacia Log<br>Stripped Birch Log<br>Stripped Cherry Log<br>Stripped Dark Oak Log<br>Stripped Jungle Log<br>Stripped Mangrove Log<br>Stripped Oak Log<br>Stripped Pale Oak Log<br>Stripped Spruce Log": "None",
 					"Dark Oak Log": {
 						"axis: x": "162:5",
 						"axis: y": "162:1",
@@ -12168,6 +12268,7 @@
 					"snowy: false": "110:0"
 				},
 				"Nether Bricks": {
+					"Chiseled Nether Bricks<br>Cracked Nether Bricks": "None",
 					"Nether Bricks": "112:0",
 					"Red Nether Bricks": "215:0"
 				},
@@ -12243,6 +12344,7 @@
 				},
 				"Planks": {
 					"Acacia Planks": "5:4",
+					"Bamboo Planks<br>Cherry Planks<br>Crimson Planks<br>Mangrove Planks<br>Pale Oak Planks<br>Warped Planks": "None",
 					"Birch Planks": "5:2",
 					"Dark Oak Planks": "5:5",
 					"Jungle Planks": "5:3",
@@ -12253,6 +12355,7 @@
 					"snowy: false": "3:2"
 				},
 				"Pressure Plates": {
+					"Acacia Pressure Plate<br>Bamboo Pressure Plate<br>Birch Pressure Plate<br>Cherry Pressure Plate<br>Crimson Pressure Plate<br>Dark Oak Pressure Plate<br>Jungle Pressure Plate<br>Mangrove Pressure Plate<br>Pale Oak Pressure Plate<br>Polished Blackstone Pressure Plate<br>Spruce Pressure Plate<br>Warped Pressure Plate": "None",
 					"Heavy Weighted Pressure Plate": {
 						"power: 0": "148:0",
 						"power: 1": "148:1",
@@ -12309,7 +12412,8 @@
 						"facing: north": "86:2",
 						"facing: south": "86:0",
 						"facing: west": "86:1"
-					}
+					},
+					"Pumpkin": "None"
 				},
 				"Purpur Block": {
 					"Purpur Block": "201:0",
@@ -12331,6 +12435,7 @@
 					"lit: true": "124:0"
 				},
 				"Redstone Ore": {
+					"Deepslate Redstone Ore": "None",
 					"Redstone Ore": {
 						"lit: false": "73:0",
 						"lit: true": "74:0"
@@ -12482,6 +12587,7 @@
 						"stage: 0": "6:2",
 						"stage: 1": "6:10"
 					},
+					"Cherry Sapling<br>Pale Oak Sapling": "None",
 					"Dark Oak Sapling": {
 						"stage: 0": "6:5",
 						"stage: 1": "6:13"
@@ -12614,6 +12720,7 @@
 						"facing: up": "233:1",
 						"facing: west": "233:4"
 					},
+					"Shulker Box": "None",
 					"White Shulker Box": {
 						"facing: down": "219:0",
 						"facing: east": "219:5",
@@ -12707,14 +12814,10 @@
 					"age: 8": "83:8",
 					"age: 9": "83:9"
 				},
-				"TNT": {
-					"unstable: false": "46:0",
-					"unstable: true": "46:1"
-				},
 				"Tall Grass": {
-                    "half: lower": "175:2",
-                    "half: upper": "175:10"
-                },
+					"half: lower": "175:2",
+					"half: upper": "175:10"
+				},
 				"Terracotta": {
 					"Black Terracotta": "159:15",
 					"Blue Terracotta": "159:11",
@@ -12734,7 +12837,12 @@
 					"White Terracotta": "159:0",
 					"Yellow Terracotta": "159:4"
 				},
+				"TNT": {
+					"unstable: false": "46:0",
+					"unstable: true": "46:1"
+				},
 				"Torch": {
+					"Soul Torch<br>Soul Wall Torch": "None",
 					"Torch": "50:5",
 					"Wall Torch": {
 						"facing: east": "50:1",
@@ -12744,9 +12852,11 @@
 					}
 				},
 				"Wart Blocks": {
-					"Nether Wart Block": "214:0"
+					"Nether Wart Block": "214:0",
+					"Warped Wart Block": "None"
 				},
 				"Water": {
+					"Bubble Column": "None",
 					"Water": {
 						"level: 0": [
 							"8:0",
@@ -13961,6 +14071,7 @@
 					"Floor": ".sideCoversSmallSquare()",
 					"Wall": ".isSideSolidFullSquare()"
 				},
+				"Resin Clump": "Value not yet defined.",
 				"Roots": [
 					".isIn(BlockTags.NYLIUM)",
 					".isOf(Blocks.SOUL_SOIL)",
@@ -14337,6 +14448,7 @@
 				"Coral Blocks": "Yes",
 				"Coral Fans": "Yes",
 				"Corals": "Yes",
+				"Creaking Heart": "Yes",
 				"Diamond Ore": "Yes",
 				"Emerald Ore": "Yes",
 				"End Gateway": "Not Applicable",
@@ -14363,6 +14475,7 @@
 				"Nether Quartz Ore": "Yes",
 				"Nylium": "Yes",
 				"Packed Ice": "Yes",
+				"Pale Hanging Moss": "Yes",
 				"Podzol": "Yes",
 				"Reinforced Deepslate": "Not Applicable",
 				"Sculk": "Yes",
@@ -14401,6 +14514,7 @@
 				"Command Blocks": "Yes",
 				"Composter": "Yes",
 				"Crafter": "Yes",
+				"Creaking Heart": "Yes",
 				"Detector Rail": "Yes",
 				"Dispenser": "Yes",
 				"Dropper": "Yes",
@@ -14434,6 +14548,7 @@
 				},
 				"Composter": "On reaction",
 				"Concrete Powder": "On reaction",
+				"Creaking Heart": "On reaction",
 				"Crops": {
 					"Beetroots<br>Crops<br>Potatoes<br>Wheat": "No",
 					"Melon Stem<br>Pumpkin Stem": "On reaction"
@@ -14529,6 +14644,7 @@
 				},
 				"Mycelium": "Once with item",
 				"Note Block": "With hand",
+				"Pale Moss Carpet": "With item",
 				"Podzol": "Once with item",
 				"Pressure Plates": "Touching entity",
 				"Pumpkin": "Once with item",
@@ -14542,6 +14658,7 @@
 					"Touching entity"
 				],
 				"Redstone Repeater": "With hand",
+				"Resin Clump": "With item",
 				"Respawn Anchor": "Limited with item",
 				"Saplings": "With item",
 				"Short Grass": "Once with item",
@@ -15823,7 +15940,7 @@
 				"Light Block": "No",
 				"Reinforced Deepslate": "Uncreatable",
 				"Slabs": {
-					"Acacia Slab<br>Andesite Slab<br>Bamboo Mosaic Slab<br>Bamboo Slab<br>Birch Slab<br>Blackstone Slab<br>Brick Slab<br>Cherry Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Crimson Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Oak Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Jungle Slab<br>Mangrove Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Mud Brick Slab<br>Nether Brick Slab<br>Oak Slab<br>Oxidized Cut Copper Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Polished Tuff Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Spruce Slab<br>Stone Brick Slab<br>Stone Slab<br>Tuff Brick Slab<br>Tuff Slab<br>Warped Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "Creatable",
+					"Acacia Slab<br>Andesite Slab<br>Bamboo Mosaic Slab<br>Bamboo Slab<br>Birch Slab<br>Blackstone Slab<br>Brick Slab<br>Cherry Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Crimson Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Oak Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Jungle Slab<br>Mangrove Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Mud Brick Slab<br>Nether Brick Slab<br>Oak Slab<br>Oxidized Cut Copper Slab<br>Pale Oak Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Polished Tuff Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Resin Brick Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Spruce Slab<br>Stone Brick Slab<br>Stone Slab<br>Tuff Brick Slab<br>Tuff Slab<br>Warped Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "Creatable",
 					"Petrified Oak Slab": "No"
 				},
 				"Spawner": "Uncreatable",
@@ -21245,16 +21362,16 @@
 				"Amethyst Cluster": {
 					"Back": 16,
 					"Front": {
-						"Small Bud": 3,
-						"Medium Bud": 4,
+						"Cluster": 7,
 						"Large Bud": 5,
-						"Cluster": 7
+						"Medium Bud": 4,
+						"Small Bud": 3
 					},
 					"Side & Vertical": {
-						"Small Bud": 12,
-						"Medium Bud": 13,
+						"Cluster": 13,
 						"Large Bud": 13,
-						"Cluster": 13
+						"Medium Bud": 13,
+						"Small Bud": 12
 					}
 				},
 				"Anvil": {
@@ -21413,8 +21530,8 @@
 					"Side": 9.5
 				},
 				"Chest": {
-					"Outside": 15,
-					"Inside of double chest": 16
+					"Inside of double chest": 16,
+					"Outside": 15
 				},
 				"Chorus Plant": {
 					"Connected Back": 3,
@@ -21633,6 +21750,7 @@
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
 				"Nether Wart": "Not Applicable",
+				"Pale Hanging Moss": "Not Applicable",
 				"Pink Petals": "Not Applicable",
 				"Piston": {
 					"Piston Head": {
@@ -21650,6 +21768,7 @@
 						]
 					},
 					"Piston<br>Sticky Piston": {
+						"extended: false": 16,
 						"extended: true": {
 							"Back": [
 								8,
@@ -21668,8 +21787,7 @@
 								16
 							],
 							"Vertical": 16
-						},
-						"extended: false": 16
+						}
 					}
 				},
 				"Pitcher Crop": {
@@ -21768,15 +21886,15 @@
 					"Front When Opened": 3
 				},
 				"Trapped Chest": {
-					"Outside": 15,
-					"Inside of double chest": 16
+					"Inside of double chest": 16,
+					"Outside": 15
 				},
 				"Tripwire": "Not Applicable",
 				"Tripwire Hook": "Not Applicable",
 				"Turtle Egg": {
 					"eggs: 1": {
-						"South<br>East": 13,
-						"North<br>West": 12
+						"North<br>West": 12,
+						"South<br>East": 13
 					},
 					"eggs: 2-4": 15
 				},
@@ -21806,16 +21924,16 @@
 				"Amethyst Cluster": {
 					"Back": 16,
 					"Front": {
-						"Small Bud": 3,
-						"Medium Bud": 4,
+						"Cluster": 7,
 						"Large Bud": 5,
-						"Cluster": 7
+						"Medium Bud": 4,
+						"Small Bud": 3
 					},
 					"Side & Vertical": {
-						"Small Bud": 12,
-						"Medium Bud": 13,
+						"Cluster": 13,
 						"Large Bud": 13,
-						"Cluster": 13
+						"Medium Bud": 13,
+						"Small Bud": 12
 					}
 				},
 				"Anvil": {
@@ -21915,8 +22033,8 @@
 					"Side": 9.5
 				},
 				"Chest": {
-					"Outside": 15,
-					"Inside of double chest": 16
+					"Inside of double chest": 16,
+					"Outside": 15
 				},
 				"Chorus Plant": {
 					"Connected Front": 16,
@@ -22068,6 +22186,7 @@
 				"Nether Portal": "Not Applicable",
 				"Nether Sprouts": "Not Applicable",
 				"Nether Wart": "Not Applicable",
+				"Pale Hanging Moss": "Not Applicable",
 				"Pink Petals": "Not Applicable",
 				"Piston": {
 					"Base": {
@@ -22158,9 +22277,8 @@
 					"Main Body": 9
 				},
 				"Stairs": {
-					"Side": 16,
-					"Thin Part": 8,
-					"Wide Part": 16
+					"Side<br>Wide Part": 16,
+					"Thin Part": 8
 				},
 				"Stonecutter": 16,
 				"Structure Void": "Not Applicable",
@@ -22175,8 +22293,8 @@
 					"Front When Opened": 3
 				},
 				"Trapped Chest": {
-					"Outside": 15,
-					"Inside of double chest": 16
+					"Inside of double chest": 16,
+					"Outside": 15
 				},
 				"Tripwire": "Not Applicable",
 				"Tripwire Hook": "Not Applicable",
@@ -22217,7 +22335,10 @@
 				},
 				"Bamboo": "https://minecraft.wiki/w/Bamboo",
 				"Bamboo Mosaic": "https://minecraft.wiki/w/Bamboo_Mosaic",
-				"Banners": "https://minecraft.wiki/w/Banner",
+				"Banners": {
+					"Black Banner<br>Blue Banner<br>Brown Banner<br>Cyan Banner<br>Gray Banner<br>Green Banner<br>Light Blue Banner<br>Light Gray Banner<br>Lime Banner<br>Magenta Banner<br>Orange Banner<br>Pink Banner<br>Purple Banner<br>Red Banner<br>White Banner<br>Yellow Banner": "https://minecraft.wiki/w/Banner",
+					"black_wall_banner<br>blue_wall_banner<br>brown_wall_banner<br>cyan_wall_banner<br>gray_wall_banner<br>green_wall_banner<br>light_blue_wall_banner<br>light_gray_wall_banner<br>lime_wall_banner<br>magenta_wall_banner<br>orange_wall_banner<br>pink_wall_banner<br>purple_wall_banner<br>red_wall_banner<br>white_wall_banner<br>yellow_wall_banner": -1
+				},
 				"Barrel": "https://minecraft.wiki/w/Barrel",
 				"Barrier": "https://minecraft.wiki/w/Barrier",
 				"Basalt": {
@@ -22272,7 +22393,7 @@
 				"Bricks": "https://minecraft.wiki/w/Bricks",
 				"Budding Amethyst": "https://minecraft.wiki/w/Budding_Amethyst",
 				"Buttons": {
-					"Acacia Button<br>Bamboo Button<br>Birch Button<br>Cherry Button<br>Crimson Button<br>Dark Oak Button<br>Jungle Button<br>Mangrove Button<br>Oak Button<br>Spruce Button<br>Warped Button": "https://minecraft.wiki/w/Wooden_Button",
+					"Acacia Button<br>Bamboo Button<br>Birch Button<br>Cherry Button<br>Crimson Button<br>Dark Oak Button<br>Jungle Button<br>Mangrove Button<br>Oak Button<br>Pale Oak Button<br>Spruce Button<br>Warped Button": "https://minecraft.wiki/w/Wooden_Button",
 					"Polished Blackstone Button": "https://minecraft.wiki/w/Polished_Blackstone_Button",
 					"Stone Button": "https://minecraft.wiki/w/Stone_Button"
 				},
@@ -22338,6 +22459,7 @@
 				},
 				"Crafter": "https://minecraft.wiki/w/Crafter",
 				"Crafting Table": "https://minecraft.wiki/w/Crafting_Table",
+				"Creaking Heart": "https://minecraft.wiki/w/Creaking_Heart",
 				"Crops": {
 					"Attached Melon Stem<br>Melon Stem": "https://minecraft.wiki/w/Melon_Seeds",
 					"Attached Pumpkin Stem<br>Pumpkin Stem": "https://minecraft.wiki/w/Pumpkin_Seeds",
@@ -22367,8 +22489,8 @@
 				"Dirt Path": "https://minecraft.wiki/w/Dirt_Path",
 				"Dispenser": "https://minecraft.wiki/w/Dispenser",
 				"Doors": {
-					"Acacia Door<br>Bamboo Door<br>Birch Door<br>Cherry Door<br>Crimson Door<br>Dark Oak Door<br>Jungle Door<br>Mangrove Door<br>Oak Door<br>Spruce Door<br>Warped Door": "https://minecraft.wiki/w/Wooden_Door",
-					"Copper Door<br>Exposed Copper Door<br>Oxidized Copper Door<br>Weathered Copper Door<br>Waxed Copper Door<br>Waxed Exposed Copper Door<br>Waxed Oxidized Copper Door<br>Waxed Weathered Copper Door": "https://minecraft.wiki/w/Copper_Door",
+					"Acacia Door<br>Bamboo Door<br>Birch Door<br>Cherry Door<br>Crimson Door<br>Dark Oak Door<br>Jungle Door<br>Mangrove Door<br>Oak Door<br>Pale Oak Door<br>Spruce Door<br>Warped Door": "https://minecraft.wiki/w/Wooden_Door",
+					"Copper Door<br>Exposed Copper Door<br>Oxidized Copper Door<br>Waxed Copper Door<br>Waxed Exposed Copper Door<br>Waxed Oxidized Copper Door<br>Waxed Weathered Copper Door<br>Weathered Copper Door": "https://minecraft.wiki/w/Copper_Door",
 					"Iron Door": "https://minecraft.wiki/w/Iron_Door"
 				},
 				"Dragon Egg": "https://minecraft.wiki/w/Dragon_Egg",
@@ -22387,7 +22509,7 @@
 				"Farmland": "https://minecraft.wiki/w/Farmland",
 				"Fence Gates": "https://minecraft.wiki/w/Fence_Gate",
 				"Fences": {
-					"Acacia Fence<br>Bamboo Fence<br>Birch Fence<br>Cherry Fence<br>Crimson Fence<br>Dark Oak Fence<br>Jungle Fence<br>Mangrove Fence<br>Oak Fence<br>Spruce Fence<br>Warped Fence": "https://minecraft.wiki/w/Wooden_Fence",
+					"Acacia Fence<br>Bamboo Fence<br>Birch Fence<br>Cherry Fence<br>Crimson Fence<br>Dark Oak Fence<br>Jungle Fence<br>Mangrove Fence<br>Oak Fence<br>Pale Oak Fence<br>Spruce Fence<br>Warped Fence": "https://minecraft.wiki/w/Wooden_Fence",
 					"Nether Brick Fence": "https://minecraft.wiki/w/Nether_Brick_Fence"
 				},
 				"Fern": {
@@ -22404,6 +22526,7 @@
 					"Allium": "https://minecraft.wiki/w/Allium",
 					"Azure Bluet": "https://minecraft.wiki/w/Azure_Bluet",
 					"Blue Orchid": "https://minecraft.wiki/w/Blue_Orchid",
+					"Closed Eyeblossom<br>Open Eyeblossom": "https://minecraft.wiki/w/Eyeblossom",
 					"Cornflower": "https://minecraft.wiki/w/Cornflower",
 					"Dandelion": "https://minecraft.wiki/w/Dandelion",
 					"Lilac": "https://minecraft.wiki/w/Lilac",
@@ -22436,10 +22559,7 @@
 				"Gravel": "https://minecraft.wiki/w/Gravel",
 				"Grindstone": "https://minecraft.wiki/w/Grindstone",
 				"Hanging Roots": "https://minecraft.wiki/w/Hanging_Roots",
-				"Hanging Signs": {
-					"Acacia Hanging Sign<br>Bamboo Hanging Sign<br>Birch Hanging Sign<br>Cherry Hanging Sign<br>Crimson Hanging Sign<br>Dark Oak Hanging Sign<br>Jungle Hanging Sign<br>Mangrove Hanging Sign<br>Oak Hanging Sign<br>Spruce Hanging Sign<br>Warped Hanging Sign": "https://minecraft.wiki/w/Hanging_Sign",
-					"Acacia Wall Hanging Sign<br>Bamboo Wall Hanging Sign<br>Birch Wall Hanging Sign<br>Cherry Wall Hanging Sign<br>Crimson Wall Hanging Sign<br>Dark Oak Wall Hanging Sign<br>Jungle Wall Hanging Sign<br>Mangrove Wall Hanging Sign<br>Oak Wall Hanging Sign<br>Spruce Wall Hanging Sign<br>Warped Wall Hanging Sign": -1
-				},
+				"Hanging Signs": "https://minecraft.wiki/w/Hanging_Sign",
 				"Hay Bale": "https://minecraft.wiki/w/Hay_Bale",
 				"Heads": {
 					"Creeper Head<br>Creeper Wall Head": "https://minecraft.wiki/w/Creeper_Head",
@@ -22480,8 +22600,8 @@
 				"Lily Pad": "https://minecraft.wiki/w/Lily_Pad",
 				"Lodestone": "https://minecraft.wiki/w/Lodestone",
 				"Logs": {
-					"Acacia Log<br>Birch Log<br>Cherry Log<br>Dark Oak Log<br>Jungle Log<br>Mangrove Log<br>Oak Log<br>Spruce Log": "https://minecraft.wiki/w/Log",
-					"Stripped Acacia Log<br>Stripped Birch Log<br>Stripped Cherry Log<br>Stripped Dark Oak Log<br>Stripped Jungle Log<br>Stripped Mangrove Log<br>Stripped Oak Log<br>Stripped Spruce Log": "https://minecraft.wiki/w/Stripped_Log"
+					"Acacia Log<br>Birch Log<br>Cherry Log<br>Dark Oak Log<br>Jungle Log<br>Mangrove Log<br>Oak Log<br>Pale Oak Log<br>Spruce Log": "https://minecraft.wiki/w/Log",
+					"Stripped Acacia Log<br>Stripped Birch Log<br>Stripped Cherry Log<br>Stripped Dark Oak Log<br>Stripped Jungle Log<br>Stripped Mangrove Log<br>Stripped Oak Log<br>Stripped Pale Oak Log<br>Stripped Spruce Log": "https://minecraft.wiki/w/Stripped_Log"
 				},
 				"Loom": "https://minecraft.wiki/w/Loom",
 				"Magma Block": "https://minecraft.wiki/w/Magma_Block",
@@ -22515,6 +22635,9 @@
 				"Obsidian": "https://minecraft.wiki/w/Obsidian",
 				"Packed Ice": "https://minecraft.wiki/w/Packed_Ice",
 				"Packed Mud": "https://minecraft.wiki/w/Packed_Mud",
+				"Pale Hanging Moss": "https://minecraft.wiki/w/Pale_Hanging_Moss",
+				"Pale Moss Block": "https://minecraft.wiki/w/Pale_Moss_Block",
+				"Pale Moss Carpet": "https://minecraft.wiki/w/Pale_Moss_Carpet",
 				"Pink Petals": "https://minecraft.wiki/w/Pink_Petals",
 				"Piston": {
 					"Piston": "https://minecraft.wiki/w/Piston",
@@ -22530,7 +22653,7 @@
 				"Powder Snow": "https://minecraft.wiki/w/Powder_Snow",
 				"Powered Rail": "https://minecraft.wiki/w/Powered_Rail",
 				"Pressure Plates": {
-					"Acacia Pressure Plate<br>Bamboo Pressure Plate<br>Birch Pressure Plate<br>Cherry Pressure Plate<br>Crimson Pressure Plate<br>Dark Oak Pressure Plate<br>Jungle Pressure Plate<br>Mangrove Pressure Plate<br>Oak Pressure Plate<br>Spruce Pressure Plate<br>Warped Pressure Plate": "https://minecraft.wiki/w/Wooden_Pressure_Plate",
+					"Acacia Pressure Plate<br>Bamboo Pressure Plate<br>Birch Pressure Plate<br>Cherry Pressure Plate<br>Crimson Pressure Plate<br>Dark Oak Pressure Plate<br>Jungle Pressure Plate<br>Mangrove Pressure Plate<br>Oak Pressure Plate<br>Pale Oak Pressure Plate<br>Spruce Pressure Plate<br>Warped Pressure Plate": "https://minecraft.wiki/w/Wooden_Pressure_Plate",
 					"Heavy Weighted Pressure Plate": "https://minecraft.wiki/w/Heavy_Weighted_Pressure_Plate",
 					"Light Weighted Pressure Plate": "https://minecraft.wiki/w/Light_Weighted_Pressure_Plate",
 					"Polished Blackstone Pressure Plate": "https://minecraft.wiki/w/Polished_Blackstone_Pressure_Plate",
@@ -22564,6 +22687,12 @@
 				"Redstone Repeater": "https://minecraft.wiki/w/Redstone_Repeater",
 				"Redstone Torch": "https://minecraft.wiki/w/Redstone_Torch",
 				"Reinforced Deepslate": "https://minecraft.wiki/w/Reinforced_Deepslate",
+				"Resin Block": "https://minecraft.wiki/w/Block_of_Resin",
+				"Resin Bricks": {
+					"Chiseled Resin Bricks": "https://minecraft.wiki/w/Chiseled_Resin_Bricks",
+					"Resin Bricks": "https://minecraft.wiki/w/Resin_Bricks"
+				},
+				"Resin Clump": "https://minecraft.wiki/w/Resin_Clump",
 				"Respawn Anchor": "https://minecraft.wiki/w/Respawn_Anchor",
 				"Roots": {
 					"Crimson Roots": "https://minecraft.wiki/w/Crimson_Roots",
@@ -22591,7 +22720,7 @@
 				"Shulker Box": "https://minecraft.wiki/w/Shulker_Box",
 				"Signs": "https://minecraft.wiki/w/Sign",
 				"Slabs": {
-					"Acacia Slab<br>Bamboo Slab<br>Birch Slab<br>Cherry Slab<br>Crimson Slab<br>Dark Oak Slab<br>Jungle Slab<br>Mangrove Slab<br>Oak Slab<br>Spruce Slab<br>Warped Slab": "https://minecraft.wiki/w/Wooden_Slab",
+					"Acacia Slab<br>Bamboo Slab<br>Birch Slab<br>Cherry Slab<br>Crimson Slab<br>Dark Oak Slab<br>Jungle Slab<br>Mangrove Slab<br>Oak Slab<br>Pale Oak Slab<br>Spruce Slab<br>Warped Slab": "https://minecraft.wiki/w/Wooden_Slab",
 					"Andesite Slab": "https://minecraft.wiki/w/Andesite_Slab",
 					"Bamboo Mosaic Slab": "https://minecraft.wiki/w/Bamboo_Mosaic_Slab",
 					"Blackstone Slab": "https://minecraft.wiki/w/Blackstone_Slab",
@@ -22625,6 +22754,7 @@
 					"Quartz Slab": "https://minecraft.wiki/w/Quartz_Slab",
 					"Red Nether Brick Slab": "https://minecraft.wiki/w/Red_Nether_Brick_Slab",
 					"Red Sandstone Slab": "https://minecraft.wiki/w/Red_Sandstone_Slab",
+					"Resin Brick Slab": "https://minecraft.wiki/w/Resin_Brick_Slab",
 					"Sandstone Slab": "https://minecraft.wiki/w/Sandstone_Slab",
 					"Smooth Quartz Slab": "https://minecraft.wiki/w/Smooth_Quartz_Slab",
 					"Smooth Red Sandstone Slab": "https://minecraft.wiki/w/Smooth_Red_Sandstone_Slab",
@@ -22650,7 +22780,7 @@
 				"Stained Glass": "https://minecraft.wiki/w/Stained_Glass",
 				"Stained Glass Panes": "https://minecraft.wiki/w/Stained_Glass_Pane",
 				"Stairs": {
-					"Acacia Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Cherry Stairs<br>Crimson Stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Oak Stairs<br>Spruce Stairs<br>Warped Stairs": "https://minecraft.wiki/w/Wooden_Stairs",
+					"Acacia Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Cherry Stairs<br>Crimson Stairs<br>Dark Oak Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Oak Stairs<br>Pale Oak Stairs<br>Spruce Stairs<br>Warped Stairs": "https://minecraft.wiki/w/Wooden_Stairs",
 					"Andesite Stairs": "https://minecraft.wiki/w/Andesite_Stairs",
 					"Bamboo Mosaic Stairs": "https://minecraft.wiki/w/Bamboo_Mosaic_Stairs",
 					"Blackstone Stairs": "https://minecraft.wiki/w/Blackstone_Stairs",
@@ -22681,6 +22811,7 @@
 					"Quartz Stairs": "https://minecraft.wiki/w/Quartz_Stairs",
 					"Red Nether Brick Stairs": "https://minecraft.wiki/w/Red_Nether_Brick_Stairs",
 					"Red Sandstone Stairs": "https://minecraft.wiki/w/Red_Sandstone_Stairs",
+					"Resin Brick Stairs": "https://minecraft.wiki/w/Resin_Brick_Stairs",
 					"Sandstone Stairs": "https://minecraft.wiki/w/Sandstone_Stairs",
 					"Smooth Quartz Stairs": "https://minecraft.wiki/w/Smooth_Quartz_Stairs",
 					"Smooth Red Sandstone Stairs": "https://minecraft.wiki/w/Smooth_Red_Sandstone_Stairs",
@@ -22713,7 +22844,6 @@
 				"Suspicious Gravel": "https://minecraft.wiki/w/Suspicious_Gravel",
 				"Suspicious Sand": "https://minecraft.wiki/w/Suspicious_Sand",
 				"Sweet Berry Bush": "https://minecraft.wiki/w/Sweet_Berries",
-				"TNT": "https://minecraft.wiki/w/TNT",
 				"Tall Grass": "https://minecraft.wiki/w/Tall_Grass",
 				"Target": "https://minecraft.wiki/w/Target",
 				"Terracotta": {
@@ -22721,6 +22851,7 @@
 					"Terracotta": "https://minecraft.wiki/w/Terracotta"
 				},
 				"Tinted Glass": "https://minecraft.wiki/w/Tinted_Glass",
+				"TNT": "https://minecraft.wiki/w/TNT",
 				"Torch": {
 					"Soul Torch<br>Soul Wall Torch": "https://minecraft.wiki/w/Soul_Torch",
 					"Torch<br>Wall Torch": "https://minecraft.wiki/w/Torch"
@@ -22728,8 +22859,8 @@
 				"Torchflower": "https://minecraft.wiki/w/Torchflower",
 				"Torchflower Crop": "https://minecraft.wiki/w/Torchflower_Seeds",
 				"Trapdoors": {
-					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<br>Dark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": "https://minecraft.wiki/w/Wooden_Trapdoor",
-					"Copper Trapdoor<br>Exposed Copper Trapdoor<br>Oxidized Copper Trapdoor<br>Waxed Copper Trapdoor<br>Weathered Copper Trapdoor<br>Waxed Exposed Copper Trapdoor<br>Waxed Oxidized Copper Trapdoor<br>Waxed Weathered Copper Trapdoor": "https://minecraft.wiki/w/Copper_Trapdoor",
+					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Crimson Trapdoor<br>Dark Oak Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Pale Oak Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor": "https://minecraft.wiki/w/Wooden_Trapdoor",
+					"Copper Trapdoor<br>Exposed Copper Trapdoor<br>Oxidized Copper Trapdoor<br>Waxed Copper Trapdoor<br>Waxed Exposed Copper Trapdoor<br>Waxed Oxidized Copper Trapdoor<br>Waxed Weathered Copper Trapdoor<br>Weathered Copper Trapdoor": "https://minecraft.wiki/w/Copper_Trapdoor",
 					"Iron Trapdoor": "https://minecraft.wiki/w/Iron_Trapdoor"
 				},
 				"Trapped Chest": "https://minecraft.wiki/w/Trapped_Chest",
@@ -22764,6 +22895,7 @@
 					"Prismarine Wall": "https://minecraft.wiki/w/Prismarine_Wall",
 					"Red Nether Brick Wall": "https://minecraft.wiki/w/Red_Nether_Brick_Wall",
 					"Red Sandstone Wall": "https://minecraft.wiki/w/Red_Sandstone_Wall",
+					"Resin Brick Wall": "https://minecraft.wiki/w/Resin_Brick_Wall",
 					"Sandstone Wall": "https://minecraft.wiki/w/Sandstone_Wall",
 					"Stone Brick Wall": "https://minecraft.wiki/w/Stone_Brick_Wall",
 					"Tuff Brick Wall": "https://minecraft.wiki/w/Tuff_Brick_Wall",
@@ -22779,8 +22911,8 @@
 				},
 				"Weeping Vines": "https://minecraft.wiki/w/Weeping_Vines",
 				"Wood": {
-					"Acacia Wood<br>Birch Wood<br>Cherry Wood<br>Dark Oak Wood<br>Jungle Wood<br>Mangrove Wood<br>Oak Wood<br>Spruce Wood": "https://minecraft.wiki/w/Wood",
-					"Stripped Acacia Wood<br>Stripped Birch Wood<br>Stripped Cherry Wood<br>Stripped Dark Oak Wood<br>Stripped Jungle Wood<br>Stripped Mangrove Wood<br>Stripped Oak Wood<br>Stripped Spruce Wood": "https://minecraft.wiki/w/Stripped_Wood"
+					"Acacia Wood<br>Birch Wood<br>Cherry Wood<br>Dark Oak Wood<br>Jungle Wood<br>Mangrove Wood<br>Oak Wood<br>Pale Oak Wood<br>Spruce Wood": "https://minecraft.wiki/w/Wood",
+					"Stripped Acacia Wood<br>Stripped Birch Wood<br>Stripped Cherry Wood<br>Stripped Dark Oak Wood<br>Stripped Jungle Wood<br>Stripped Mangrove Wood<br>Stripped Oak Wood<br>Stripped Pale Oak Wood<br>Stripped Spruce Wood": "https://minecraft.wiki/w/Stripped_Wood"
 				},
 				"Wool": "https://minecraft.wiki/w/Wool"
 			}
@@ -23092,6 +23224,7 @@
 			"default_value": "None",
 			"entries": {
 				"Coal Ore": "0-2",
+				"Creaking Heart": "20-24",
 				"Diamond Ore": "3-7",
 				"Emerald Ore": "3-7",
 				"Lapis Lazuli Ore": "2-5",
