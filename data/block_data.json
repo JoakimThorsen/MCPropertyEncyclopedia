@@ -2938,19 +2938,19 @@
 				"Activator Rail": "Not Applicable",
 				"Air": "Not Applicable",
 				"Amethyst Cluster": {
-					"facing: up": {
-						"Small Bud": 3,
-						"Medium Bud": 4,
-						"Large Bud": 5,
-						"Cluster": 7
-					},
+					"facing: down": 16,
 					"facing: east<br>facing: north<br>facing: south<br>facing: west": {
-						"Small Bud": 12,
-						"Medium Bud": 13,
+						"Cluster": 13,
 						"Large Bud": 13,
-						"Cluster": 13
+						"Medium Bud": 13,
+						"Small Bud": 12
 					},
-					"facing: down": 16
+					"facing: up": {
+						"Cluster": 7,
+						"Large Bud": 5,
+						"Medium Bud": 4,
+						"Small Bud": 3
+					}
 				},
 				"Anvil": [
 					4,
@@ -3674,20 +3674,20 @@
 				"Barrel": {
 					"0": 0,
 					"1": 1,
+					"1s 60": 2,
+					"3s 55": 3,
+					"5s 51": 4,
+					"7s 46": 5,
+					"9s 42": 6,
 					"11s 37": 7,
 					"13s 32": 8,
 					"15s 28": 9,
 					"17s 23": 10,
 					"19s 19": 11,
-					"1s 60": 2,
 					"21s 14": 12,
 					"23s 10": 13,
 					"25s 5": 14,
-					"27s": 15,
-					"3s 55": 3,
-					"5s 51": 4,
-					"7s 46": 5,
-					"9s 42": 6
+					"27s": 15
 				},
 				"Bee Nest": {
 					"honey_level: 0": 0,
@@ -3712,10 +3712,10 @@
 					"28": 3,
 					"42": 4,
 					"55": 5,
+					"1s 5": 6,
 					"1s 19": 7,
 					"1s 32": 8,
 					"1s 46": 9,
-					"1s 5": 6,
 					"1s 60": 10,
 					"2s 10": 11,
 					"2s 23": 12,
@@ -3728,8 +3728,8 @@
 					"1": 1,
 					"23": 2,
 					"46": 3,
-					"1s 28": 5,
 					"1s 5": 4,
+					"1s 28": 5,
 					"1s 51": 6,
 					"2s 10": 7,
 					"2s 32": 8,
@@ -3764,6 +3764,8 @@
 					"Double": {
 						"0": 0,
 						"1": 1,
+						"3s 55": 2,
+						"7s 46": 3,
 						"11s 37": 4,
 						"15s 28": 5,
 						"19s 19": 6,
@@ -3772,30 +3774,28 @@
 						"30s 55": 9,
 						"34s 46": 10,
 						"38s 37": 11,
-						"3s 55": 2,
 						"42s 28": 12,
 						"46s 19": 13,
 						"50s 10": 14,
-						"54s": 15,
-						"7s 46": 3
+						"54s": 15
 					},
 					"Single": {
 						"0": 0,
 						"1": 1,
+						"1s 60": 2,
+						"3s 55": 3,
+						"5s 51": 4,
+						"7s 46": 5,
+						"9s 42": 6,
 						"11s 37": 7,
 						"13s 32": 8,
 						"15s 28": 9,
 						"17s 23": 10,
 						"19s 19": 11,
-						"1s 60": 2,
 						"21s 14": 12,
 						"23s 10": 13,
 						"25s 5": 14,
-						"27s": 15,
-						"3s 55": 3,
-						"5s 51": 4,
-						"7s 46": 5,
-						"9s 42": 6
+						"27s": 15
 					}
 				},
 				"Chiseled Bookshelf": "0-6",
@@ -3825,7 +3825,7 @@
 					"8 Slots": 8,
 					"9 Slots": 9
 				},
-				"Detector Rail": "0-15",
+				"Creaking Heart": "0-15",
 				"Decorated Pot": {
 					"0": 0,
 					"1": 1,
@@ -3844,6 +3844,7 @@
 					"60": 14,
 					"1s": 15
 				},
+				"Detector Rail": "0-15",
 				"Dispenser": {
 					"0": 0,
 					"1": 1,
@@ -3857,8 +3858,8 @@
 					"5s 10": 9,
 					"5s 51": 10,
 					"6s 28": 11,
-					"7s 46": 13,
 					"7s 5": 12,
+					"7s 46": 13,
 					"8s 23": 14,
 					"9s": 15
 				},
@@ -3875,8 +3876,8 @@
 					"5s 10": 9,
 					"5s 51": 10,
 					"6s 28": 11,
-					"7s 46": 13,
 					"7s 5": 12,
+					"7s 46": 13,
 					"8s 23": 14,
 					"9s": 15
 				},
@@ -3891,10 +3892,10 @@
 					"28": 3,
 					"42": 4,
 					"55": 5,
+					"1s 5": 6,
 					"1s 19": 7,
 					"1s 32": 8,
 					"1s 46": 9,
-					"1s 5": 6,
 					"1s 60": 10,
 					"2s 10": 11,
 					"2s 23": 12,
@@ -3907,8 +3908,8 @@
 					"1": 1,
 					"23": 2,
 					"46": 3,
-					"1s 28": 5,
 					"1s 5": 4,
+					"1s 28": 5,
 					"1s 51": 6,
 					"2s 10": 7,
 					"2s 32": 8,
@@ -3921,18 +3922,18 @@
 					"5s": 15
 				},
 				"Jukebox": {
+					"\"5\"": 15,
 					"\"11\"": 11,
 					"\"13\"": 1,
-					"\"5\"": 15,
-					"No disc": 0,
-					"Otherside": 14,
-					"Pigstep": 13,
 					"blocks": 3,
 					"cat": 2,
 					"chirp": 4,
 					"far": 5,
 					"mall": 6,
 					"mellohi": 7,
+					"No disc": 0,
+					"Otherside": 14,
+					"Pigstep": 13,
 					"stal": 8,
 					"strad": 9,
 					"wait": 12,
@@ -3953,20 +3954,20 @@
 				"Shulker Box": {
 					"0": 0,
 					"1": 1,
+					"1s 60": 2,
+					"3s 55": 3,
+					"5s 51": 4,
+					"7s 46": 5,
+					"9s 42": 6,
 					"11s 37": 7,
 					"13s 32": 8,
 					"15s 28": 9,
 					"17s 23": 10,
 					"19s 19": 11,
-					"1s 60": 2,
 					"21s 14": 12,
 					"23s 10": 13,
 					"25s 5": 14,
-					"27s": 15,
-					"3s 55": 3,
-					"5s 51": 4,
-					"7s 46": 5,
-					"9s 42": 6
+					"27s": 15
 				},
 				"Smoker": {
 					"0": 0,
@@ -3975,10 +3976,10 @@
 					"28": 3,
 					"42": 4,
 					"55": 5,
+					"1s 5": 6,
 					"1s 19": 7,
 					"1s 32": 8,
 					"1s 46": 9,
-					"1s 5": 6,
 					"1s 60": 10,
 					"2s 10": 11,
 					"2s 23": 12,
@@ -3990,6 +3991,8 @@
 					"Double": {
 						"0": 0,
 						"1": 1,
+						"3s 55": 2,
+						"7s 46": 3,
 						"11s 37": 4,
 						"15s 28": 5,
 						"19s 19": 6,
@@ -3998,33 +4001,30 @@
 						"30s 55": 9,
 						"34s 46": 10,
 						"38s 37": 11,
-						"3s 55": 2,
 						"42s 28": 12,
 						"46s 19": 13,
 						"50s 10": 14,
-						"54s": 15,
-						"7s 46": 3
+						"54s": 15
 					},
 					"Single": {
 						"0": 0,
 						"1": 1,
+						"1s 60": 2,
+						"3s 55": 3,
+						"5s 51": 4,
+						"7s 46": 5,
+						"9s 42": 6,
 						"11s 37": 7,
 						"13s 32": 8,
 						"15s 28": 9,
 						"17s 23": 10,
 						"19s 19": 11,
-						"1s 60": 2,
 						"21s 14": 12,
 						"23s 10": 13,
 						"25s 5": 14,
-						"27s": 15,
-						"3s 55": 3,
-						"5s 51": 4,
-						"7s 46": 5,
-						"9s 42": 6
+						"27s": 15
 					}
-				},
-				"Creaking Heart": "0-15"
+				}
 			}
 		},
 		"conductive": {
@@ -5509,77 +5509,17 @@
 					"Brain Coral<br>Bubble Coral<br>Fire Coral<br>Horn Coral<br>Tube Coral": "Yes",
 					"Dead Brain Coral<br>Dead Bubble Coral<br>Dead Fire Coral<br>Dead Horn Coral<br>Dead Tube Coral": "No"
 				},
+				"Creaking Heart": "Value not yet defined.",
 				"Crops": "Yes",
 				"Dead Bush": "Yes",
 				"Detector Rail": "Yes",
-				"End Gateway": "Yes",
-				"End Portal": "Yes",
-				"End Rod": "Yes",
-				"Fern": "Yes",
-				"Fire": "Yes",
-				"Flower Pot": "Yes",
-				"Flowers": "Yes",
-				"Frogspawn": "Yes",
-				"Fungi": "Yes",
-				"Glow Lichen": "Yes",
-				"Hanging Roots": "Yes",
-				"Heads": "Yes",
-				"Heavy Core": "Yes",
-				"Kelp": "Yes",
-				"Ladder": "Yes",
-				"Lava": "Yes",
-				"Lever": "Yes",
-				"Light Block": "Yes",
-				"Lily Pad": "Yes",
-				"Mangrove Propagule": "Yes",
-				"Moss Carpet": "Yes",
-				"Mushrooms": "Yes",
-				"Nether Portal": "Yes",
-				"Nether Sprouts": "Yes",
-				"Nether Wart": "Yes",
-				"Pink Petals": "Yes",
-				"Pitcher Crop": "Yes",
-				"Pitcher Plant": "Yes",
-				"Powder Snow": "Yes",
-				"Powered Rail": "Yes",
-				"Rail": "Yes",
-				"Redstone Comparator": "Yes",
-				"Redstone Dust": "Yes",
-				"Redstone Repeater": "Yes",
-				"Redstone Torch": "Yes",
-				"Roots": "Yes",
-				"Saplings": "Yes",
-				"Scaffolding": "Yes",
-				"Sea Pickle": "Yes",
-				"Seagrass": "Yes",
-				"Short Grass": "Yes",
-				"Small Dripleaf": "Yes",
-				"Snow": "Yes",
-				"Spore Blossom": "Yes",
-				"Structure Void": "Yes",
-				"Sugar Cane": "Yes",
-				"Sweet Berry Bush": "Yes",
-				"Tall Grass": "Yes",
-				"Torch": "Yes",
-				"Torchflower Crop": "Yes",
-				"Torchflower": "Yes",
-				"Tripwire Hook": "Yes",
-				"Tripwire": "Yes",
-				"Twisting Vines": "Yes",
-				"Vines": "Yes",
-				"Water": "Yes",
-				"Weeping Vines": "Yes",
-				"Creaking Heart": "Value not yet defined.",
-				"Pale Hanging Moss": "Value not yet defined.",
-				"Pale Moss Block": "Value not yet defined.",
-				"Pale Moss Carpet": "Value not yet defined.",
-				"Resin Block": "Value not yet defined.",
-				"Resin Bricks": "Value not yet defined.",
-				"Resin Clump": "Value not yet defined.",
 				"Doors": {
 					"Acacia Door<br>Bamboo Door<br>Birch Door<br>Cherry Door<br>Copper Door<br>Crimson Door<br>Dark Oak Door<br>Exposed Copper Door<br>Iron Door<br>Jungle Door<br>Mangrove Door<br>Oak Door<br>Oxidized Copper Door<br>Spruce Door<br>Warped Door<br>Waxed Copper Door<br>Waxed Exposed Copper Door<br>Waxed Oxidized Copper Door<br>Waxed Weathered Copper Door<br>Weathered Copper Door": "No",
 					"Pale Oak Door": "Value not yet defined."
 				},
+				"End Gateway": "Yes",
+				"End Portal": "Yes",
+				"End Rod": "Yes",
 				"Fence Gates": {
 					"Acacia Fence Gate<br>Bamboo Fence Gate<br>Birch Fence Gate<br>Cherry Fence Gate<br>Crimson Fence Gate<br>Dark Oak Fence Gate<br>Jungle Fence Gate<br>Mangrove Fence Gate<br>Oak Fence Gate<br>Spruce Fence Gate<br>Warped Fence Gate": "No",
 					"Pale Oak Fence Gate": "Value not yet defined."
@@ -5588,26 +5528,70 @@
 					"Acacia Fence<br>Bamboo Fence<br>Birch Fence<br>Cherry Fence<br>Crimson Fence<br>Dark Oak Fence<br>Jungle Fence<br>Mangrove Fence<br>Nether Brick Fence<br>Oak Fence<br>Spruce Fence<br>Warped Fence": "No",
 					"Pale Oak Fence": "Value not yet defined."
 				},
+				"Fern": "Yes",
+				"Fire": "Yes",
+				"Flower Pot": "Yes",
+				"Flowers": "Yes",
+				"Frogspawn": "Yes",
+				"Fungi": "Yes",
+				"Glow Lichen": "Yes",
+				"Hanging Roots": "Yes",
 				"Hanging Signs": {
 					"Acacia Hanging Sign<br>Acacia Wall Hanging Sign<br>Bamboo Hanging Sign<br>Bamboo Wall Hanging Sign<br>Birch Hanging Sign<br>Birch Wall Hanging Sign<br>Cherry Hanging Sign<br>Cherry Wall Hanging Sign<br>Crimson Hanging Sign<br>Crimson Wall Hanging Sign<br>Dark Oak Hanging Sign<br>Dark Oak Wall Hanging Sign<br>Jungle Hanging Sign<br>Jungle Wall Hanging Sign<br>Mangrove Hanging Sign<br>Mangrove Wall Hanging Sign<br>Oak Hanging Sign<br>Oak Wall Hanging Sign<br>Spruce Hanging Sign<br>Spruce Wall Hanging Sign<br>Warped Hanging Sign<br>Warped Wall Hanging Sign": "No",
 					"Pale Oak Hanging Sign<br>Pale Oak Wall Hanging Sign": "Value not yet defined."
 				},
+				"Heads": "Yes",
+				"Heavy Core": "Yes",
+				"Kelp": "Yes",
+				"Ladder": "Yes",
+				"Lava": "Yes",
 				"Leaves": {
 					"Acacia Leaves<br>Azalea Leaves<br>Birch Leaves<br>Cherry Leaves<br>Dark Oak Leaves<br>Flowering Azalea Leaves<br>Jungle Leaves<br>Mangrove Leaves<br>Oak Leaves<br>Spruce Leaves": "No",
 					"Pale Oak Leaves": "Value not yet defined."
 				},
+				"Lever": "Yes",
+				"Light Block": "Yes",
+				"Lily Pad": "Yes",
 				"Logs": {
 					"Acacia Log<br>Birch Log<br>Cherry Log<br>Dark Oak Log<br>Jungle Log<br>Mangrove Log<br>Oak Log<br>Spruce Log<br>Stripped Acacia Log<br>Stripped Birch Log<br>Stripped Cherry Log<br>Stripped Dark Oak Log<br>Stripped Jungle Log<br>Stripped Mangrove Log<br>Stripped Oak Log<br>Stripped Spruce Log": "No",
 					"Pale Oak Log<br>Stripped Pale Oak Log": "Value not yet defined."
 				},
+				"Mangrove Propagule": "Yes",
+				"Moss Carpet": "Yes",
+				"Mushrooms": "Yes",
+				"Nether Portal": "Yes",
+				"Nether Sprouts": "Yes",
+				"Nether Wart": "Yes",
+				"Pale Hanging Moss": "Value not yet defined.",
+				"Pale Moss Block": "Value not yet defined.",
+				"Pale Moss Carpet": "Value not yet defined.",
+				"Pink Petals": "Yes",
+				"Pitcher Crop": "Yes",
+				"Pitcher Plant": "Yes",
 				"Planks": {
 					"Acacia Planks<br>Bamboo Planks<br>Birch Planks<br>Cherry Planks<br>Crimson Planks<br>Dark Oak Planks<br>Jungle Planks<br>Mangrove Planks<br>Oak Planks<br>Spruce Planks<br>Warped Planks": "No",
 					"Pale Oak Planks": "Value not yet defined."
 				},
+				"Powder Snow": "Yes",
+				"Powered Rail": "Yes",
 				"Pressure Plates": {
 					"Acacia Pressure Plate<br>Bamboo Pressure Plate<br>Birch Pressure Plate<br>Cherry Pressure Plate<br>Crimson Pressure Plate<br>Dark Oak Pressure Plate<br>Heavy Weighted Pressure Plate<br>Jungle Pressure Plate<br>Light Weighted Pressure Plate<br>Mangrove Pressure Plate<br>Oak Pressure Plate<br>Polished Blackstone Pressure Plate<br>Spruce Pressure Plate<br>Stone Pressure Plate<br>Warped Pressure Plate": "No",
 					"Pale Oak Pressure Plate": "Value not yet defined."
 				},
+				"Rail": "Yes",
+				"Redstone Comparator": "Yes",
+				"Redstone Dust": "Yes",
+				"Redstone Repeater": "Yes",
+				"Redstone Torch": "Yes",
+				"Resin Block": "Value not yet defined.",
+				"Resin Bricks": "Value not yet defined.",
+				"Resin Clump": "Value not yet defined.",
+				"Roots": "Yes",
+				"Saplings": "Yes",
+				"Scaffolding": "Yes",
+				"Sea Pickle": "Yes",
+				"Seagrass": "Yes",
+				"Short Grass": "Yes",
 				"Signs": {
 					"Acacia Sign<br>Acacia Wall Sign<br>Bamboo Sign<br>Bamboo Wall Sign<br>Birch Sign<br>Birch Wall Sign<br>Cherry Sign<br>Cherry Wall Sign<br>Crimson Sign<br>Crimson Wall Sign<br>Dark Oak Sign<br>Dark Oak Wall Sign<br>Jungle Sign<br>Jungle Wall Sign<br>Mangrove Sign<br>Mangrove Wall Sign<br>Oak Sign<br>Oak Wall Sign<br>Spruce Sign<br>Spruce Wall Sign<br>Warped Sign<br>Warped Wall Sign": "No",
 					"Pale Oak Sign<br>Pale Oak Wall Sign": "Value not yet defined."
@@ -5616,18 +5600,34 @@
 					"Acacia Slab<br>Andesite Slab<br>Bamboo Mosaic Slab<br>Bamboo Slab<br>Birch Slab<br>Blackstone Slab<br>Brick Slab<br>Cherry Slab<br>Cobbled Deepslate Slab<br>Cobblestone Slab<br>Crimson Slab<br>Cut Copper Slab<br>Cut Red Sandstone Slab<br>Cut Sandstone Slab<br>Dark Oak Slab<br>Dark Prismarine Slab<br>Deepslate Brick Slab<br>Deepslate Tile Slab<br>Diorite Slab<br>End Stone Brick Slab<br>Exposed Cut Copper Slab<br>Granite Slab<br>Jungle Slab<br>Mangrove Slab<br>Mossy Cobblestone Slab<br>Mossy Stone Brick Slab<br>Mud Brick Slab<br>Nether Brick Slab<br>Oak Slab<br>Oxidized Cut Copper Slab<br>Petrified Oak Slab<br>Polished Andesite Slab<br>Polished Blackstone Brick Slab<br>Polished Blackstone Slab<br>Polished Deepslate Slab<br>Polished Diorite Slab<br>Polished Granite Slab<br>Polished Tuff Slab<br>Prismarine Brick Slab<br>Prismarine Slab<br>Purpur Slab<br>Quartz Slab<br>Red Nether Brick Slab<br>Red Sandstone Slab<br>Sandstone Slab<br>Smooth Quartz Slab<br>Smooth Red Sandstone Slab<br>Smooth Sandstone Slab<br>Smooth Stone Slab<br>Spruce Slab<br>Stone Brick Slab<br>Stone Slab<br>Tuff Brick Slab<br>Tuff Slab<br>Warped Slab<br>Waxed Cut Copper Slab<br>Waxed Exposed Cut Copper Slab<br>Waxed Oxidized Cut Copper Slab<br>Waxed Weathered Cut Copper Slab<br>Weathered Cut Copper Slab": "No",
 					"Pale Oak Slab<br>Resin Brick Slab": "Value not yet defined."
 				},
+				"Small Dripleaf": "Yes",
+				"Snow": "Yes",
+				"Spore Blossom": "Yes",
 				"Stairs": {
 					"Acacia Stairs<br>Andesite Stairs<br>Bamboo Mosaic Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Blackstone Stairs<br>Brick Stairs<br>Cherry Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Crimson Stairs<br>Cut Copper Stairs<br>Dark Oak Stairs<br>Dark Prismarine Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>Diorite Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Granite Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Mossy Cobblestone Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Nether Brick Stairs<br>Oak Stairs<br>Oxidized Cut Copper Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Polished Tuff Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Quartz Stairs<br>Red Nether Brick Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Spruce Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Tuff Brick Stairs<br>Tuff Stairs<br>Warped Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "No",
 					"Pale Oak Stairs<br>Resin Brick Stairs": "Value not yet defined."
 				},
+				"Structure Void": "Yes",
+				"Sugar Cane": "Yes",
+				"Sweet Berry Bush": "Yes",
+				"Tall Grass": "Yes",
+				"Torch": "Yes",
+				"Torchflower": "Yes",
+				"Torchflower Crop": "Yes",
 				"Trapdoors": {
 					"Acacia Trapdoor<br>Bamboo Trapdoor<br>Birch Trapdoor<br>Cherry Trapdoor<br>Copper Trapdoor<br>Crimson Trapdoor<br>Dark Oak Trapdoor<br>Exposed Copper Trapdoor<br>Iron Trapdoor<br>Jungle Trapdoor<br>Mangrove Trapdoor<br>Oak Trapdoor<br>Oxidized Copper Trapdoor<br>Spruce Trapdoor<br>Warped Trapdoor<br>Waxed Copper Trapdoor<br>Waxed Exposed Copper Trapdoor<br>Waxed Oxidized Copper Trapdoor<br>Waxed Weathered Copper Trapdoor<br>Weathered Copper Trapdoor": "No",
 					"Pale Oak Trapdoor": "Value not yet defined."
 				},
+				"Tripwire": "Yes",
+				"Tripwire Hook": "Yes",
+				"Twisting Vines": "Yes",
+				"Vines": "Yes",
 				"Walls": {
 					"Andesite Wall<br>Blackstone Wall<br>Brick Wall<br>Cobbled Deepslate Wall<br>Cobblestone Wall<br>Deepslate Brick Wall<br>Deepslate Tile Wall<br>Diorite Wall<br>End Stone Brick Wall<br>Granite Wall<br>Mossy Cobblestone Wall<br>Mossy Stone Brick Wall<br>Mud Brick Wall<br>Nether Brick Wall<br>Polished Blackstone Brick Wall<br>Polished Blackstone Wall<br>Polished Deepslate Wall<br>Polished Tuff Wall<br>Prismarine Wall<br>Red Nether Brick Wall<br>Red Sandstone Wall<br>Sandstone Wall<br>Stone Brick Wall<br>Tuff Brick Wall<br>Tuff Wall": "No",
 					"Resin Brick Wall": "Value not yet defined."
 				},
+				"Water": "Yes",
+				"Weeping Vines": "Yes",
 				"Wood": {
 					"Acacia Wood<br>Birch Wood<br>Cherry Wood<br>Dark Oak Wood<br>Jungle Wood<br>Mangrove Wood<br>Oak Wood<br>Spruce Wood<br>Stripped Acacia Wood<br>Stripped Birch Wood<br>Stripped Cherry Wood<br>Stripped Dark Oak Wood<br>Stripped Jungle Wood<br>Stripped Mangrove Wood<br>Stripped Oak Wood<br>Stripped Spruce Wood": "No",
 					"Pale Oak Wood<br>Stripped Pale Oak Wood": "Value not yet defined."
@@ -6285,19 +6285,19 @@
 				"Activator Rail": "Not Applicable",
 				"Air": "Not Applicable",
 				"Amethyst Cluster": {
-					"facing: up": {
-						"Small Bud": 3,
-						"Medium Bud": 4,
-						"Large Bud": 5,
-						"Cluster": 7
-					},
+					"facing: down": 16,
 					"facing: east<br>facing: north<br>facing: south<br>facing: west": {
-						"Small Bud": 12,
-						"Medium Bud": 13,
+						"Cluster": 13,
 						"Large Bud": 13,
-						"Cluster": 13
+						"Medium Bud": 13,
+						"Small Bud": 12
 					},
-					"facing: down": 16
+					"facing: up": {
+						"Cluster": 7,
+						"Large Bud": 5,
+						"Medium Bud": 4,
+						"Small Bud": 3
+					}
 				},
 				"Anvil": [
 					4,
@@ -7487,6 +7487,7 @@
 				"Corals": "By Hand",
 				"Crafter": "With Haste II",
 				"Crafting Table": "No",
+				"Creaking Heart": "Value not yet defined.",
 				"Crops": "By Hand",
 				"Crying Obsidian": "No",
 				"Daylight Detector": "With eff. V Diamond",
@@ -7592,6 +7593,9 @@
 				"Obsidian": "No",
 				"Packed Ice": "With eff. V Diamond",
 				"Packed Mud": "With eff. V Diamond",
+				"Pale Hanging Moss": "Value not yet defined.",
+				"Pale Moss Block": "Value not yet defined.",
+				"Pale Moss Carpet": "Value not yet defined.",
 				"Pink Petals": "By Hand",
 				"Piston": "With Haste II",
 				"Pitcher Crop": "By Hand",
@@ -7616,6 +7620,9 @@
 				"Redstone Repeater": "By Hand",
 				"Redstone Torch": "By Hand",
 				"Reinforced Deepslate": "No",
+				"Resin Block": "Value not yet defined.",
+				"Resin Bricks": "Value not yet defined.",
+				"Resin Clump": "Value not yet defined.",
 				"Respawn Anchor": "No",
 				"Roots": "By Hand",
 				"Sand": "With eff. V Diamond",
@@ -7656,8 +7663,8 @@
 				"Stairs": {
 					"Acacia Stairs<br>Bamboo Mosaic Stairs<br>Bamboo Stairs<br>Birch Stairs<br>Brick Stairs<br>Cherry Stairs<br>Cobbled Deepslate Stairs<br>Cobblestone Stairs<br>Crimson Stairs<br>Cut Copper Stairs<br>Dark Oak Stairs<br>Deepslate Brick Stairs<br>Deepslate Tile Stairs<br>End Stone Brick Stairs<br>Exposed Cut Copper Stairs<br>Jungle Stairs<br>Mangrove Stairs<br>Mossy Cobblestone Stairs<br>Nether Brick Stairs<br>Oak Stairs<br>Oxidized Cut Copper Stairs<br>Polished Blackstone Stairs<br>Polished Deepslate Stairs<br>Red Nether Brick Stairs<br>Smooth Quartz Stairs<br>Smooth Red Sandstone Stairs<br>Smooth Sandstone Stairs<br>Spruce Stairs<br>Warped Stairs<br>Waxed Cut Copper Stairs<br>Waxed Exposed Cut Copper Stairs<br>Waxed Oxidized Cut Copper Stairs<br>Waxed Weathered Cut Copper Stairs<br>Weathered Cut Copper Stairs": "No",
 					"Andesite Stairs<br>Blackstone Stairs<br>Dark Prismarine Stairs<br>Diorite Stairs<br>Granite Stairs<br>Mossy Stone Brick Stairs<br>Mud Brick Stairs<br>Polished Andesite Stairs<br>Polished Blackstone Brick Stairs<br>Polished Diorite Stairs<br>Polished Granite Stairs<br>Polished Tuff Stairs<br>Prismarine Brick Stairs<br>Prismarine Stairs<br>Purpur Stairs<br>Stone Brick Stairs<br>Stone Stairs<br>Tuff Brick Stairs<br>Tuff Stairs": "With Haste II",
-					"Quartz Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs": "With eff. V Diamond",
-					"Pale Oak Stairs<br>Resin Brick Stairs": "Value not yet defined."
+					"Pale Oak Stairs<br>Resin Brick Stairs": "Value not yet defined.",
+					"Quartz Stairs<br>Red Sandstone Stairs<br>Sandstone Stairs": "With eff. V Diamond"
 				},
 				"Stems": "No",
 				"Stone": "With Haste II",
@@ -7669,11 +7676,11 @@
 				"Suspicious Gravel": "With eff. V Diamond",
 				"Suspicious Sand": "With eff. V Diamond",
 				"Sweet Berry Bush": "By Hand",
-				"TNT": "By Hand",
 				"Tall Grass": "By Hand",
 				"Target": "With eff. V Diamond",
 				"Terracotta": "With eff. V Gold",
 				"Tinted Glass": "No",
+				"TNT": "By Hand",
 				"Torch": "By Hand",
 				"Torchflower": "By Hand",
 				"Torchflower Crop": "By Hand",
@@ -7698,14 +7705,7 @@
 				"Water": "Not Applicable",
 				"Weeping Vines": "By Hand",
 				"Wood": "No",
-				"Wool": "No",
-				"Creaking Heart": "Value not yet defined.",
-				"Pale Hanging Moss": "Value not yet defined.",
-				"Pale Moss Block": "Value not yet defined.",
-				"Pale Moss Carpet": "Value not yet defined.",
-				"Resin Block": "Value not yet defined.",
-				"Resin Bricks": "Value not yet defined.",
-				"Resin Clump": "Value not yet defined."
+				"Wool": "No"
 			}
 		},
 		"instant_shape_updater": {
@@ -7914,8 +7914,8 @@
 				"Stairs": "Yes",
 				"Structure Block": "Yes",
 				"Sweet Berry Bush": "Yes",
-				"TNT": "Yes",
 				"Tall Grass": "Yes",
+				"TNT": "Yes",
 				"Torch": "Yes",
 				"Torchflower": "Yes",
 				"Torchflower Crop": "Yes",
@@ -8291,9 +8291,9 @@
 				"Suspicious Gravel": "Shovel",
 				"Suspicious Sand": "Shovel",
 				"Sweet Berry Bush": "By Hand",
-				"TNT": "By Hand",
 				"Tall Grass": "Shears",
 				"Target": "Hoe",
+				"TNT": "By Hand",
 				"Torch": "By Hand",
 				"Torchflower": "By Hand",
 				"Torchflower Crop": "Hoe",
@@ -10348,11 +10348,11 @@
 				"Suspicious Gravel": "Not Applicable",
 				"Suspicious Sand": "Not Applicable",
 				"Sweet Berry Bush": "PLANT",
-				"TNT": "TNT",
 				"Tall Grass": "REPLACEABLE_PLANT",
 				"Target": "SOLID_ORGANIC",
 				"Terracotta": "STONE",
 				"Tinted Glass": "GLASS",
+				"TNT": "TNT",
 				"Torch": "DECORATION",
 				"Torchflower": "Not Applicable",
 				"Torchflower Crop": "Not Applicable",
@@ -10529,9 +10529,9 @@
 				"Suspicious Gravel": "Not Applicable",
 				"Suspicious Sand": "Not Applicable",
 				"Sweet Berry Bush": "No",
-				"TNT": "No",
 				"Tall Grass": "No",
 				"Tinted Glass": "No",
+				"TNT": "No",
 				"Torch": "No",
 				"Torchflower": "Not Applicable",
 				"Torchflower Crop": "Not Applicable",
@@ -10852,8 +10852,8 @@
 				},
 				"Suspicious Gravel": "Not Applicable",
 				"Suspicious Sand": "Not Applicable",
-				"TNT": "Yes",
 				"Tall Grass": "Yes",
+				"TNT": "Yes",
 				"Torchflower": "Not Applicable",
 				"Torchflower Crop": "Not Applicable",
 				"Trapdoors": {
@@ -11502,12 +11502,6 @@
 					"White Banner": {
 						"rotation: 0": "176:0",
 						"rotation: 1": "176:1",
-						"rotation: 10": "176:10",
-						"rotation: 11": "176:11",
-						"rotation: 12": "176:12",
-						"rotation: 13": "176:13",
-						"rotation: 14": "176:14",
-						"rotation: 15": "176:15",
 						"rotation: 2": "176:2",
 						"rotation: 3": "176:3",
 						"rotation: 4": "176:4",
@@ -11515,7 +11509,13 @@
 						"rotation: 6": "176:6",
 						"rotation: 7": "176:7",
 						"rotation: 8": "176:8",
-						"rotation: 9": "176:9"
+						"rotation: 9": "176:9",
+						"rotation: 10": "176:10",
+						"rotation: 11": "176:11",
+						"rotation: 12": "176:12",
+						"rotation: 13": "176:13",
+						"rotation: 14": "176:14",
+						"rotation: 15": "176:15"
 					}
 				},
 				"Barrier": "166:0",
@@ -11577,12 +11577,6 @@
 				"Cactus": {
 					"age: 0": "81:0",
 					"age: 1": "81:1",
-					"age: 10": "81:10",
-					"age: 11": "81:11",
-					"age: 12": "81:12",
-					"age: 13": "81:13",
-					"age: 14": "81:14",
-					"age: 15": "81:15",
 					"age: 2": "81:2",
 					"age: 3": "81:3",
 					"age: 4": "81:4",
@@ -11590,7 +11584,13 @@
 					"age: 6": "81:6",
 					"age: 7": "81:7",
 					"age: 8": "81:8",
-					"age: 9": "81:9"
+					"age: 9": "81:9",
+					"age: 10": "81:10",
+					"age: 11": "81:11",
+					"age: 12": "81:12",
+					"age: 13": "81:13",
+					"age: 14": "81:14",
+					"age: 15": "81:15"
 				},
 				"Cake": {
 					"Cake": {
@@ -11798,12 +11798,6 @@
 					"inverted: false": {
 						"power: 0": "151:0",
 						"power: 1": "151:1",
-						"power: 10": "151:10",
-						"power: 11": "151:11",
-						"power: 12": "151:12",
-						"power: 13": "151:13",
-						"power: 14": "151:14",
-						"power: 15": "151:15",
 						"power: 2": "151:2",
 						"power: 3": "151:3",
 						"power: 4": "151:4",
@@ -11811,17 +11805,17 @@
 						"power: 6": "151:6",
 						"power: 7": "151:7",
 						"power: 8": "151:8",
-						"power: 9": "151:9"
+						"power: 9": "151:9",
+						"power: 10": "151:10",
+						"power: 11": "151:11",
+						"power: 12": "151:12",
+						"power: 13": "151:13",
+						"power: 14": "151:14",
+						"power: 15": "151:15"
 					},
 					"inverted: true": {
 						"power: 0": "178:0",
 						"power: 1": "178:1",
-						"power: 10": "178:10",
-						"power: 11": "178:11",
-						"power: 12": "178:12",
-						"power: 13": "178:13",
-						"power: 14": "178:14",
-						"power: 15": "178:15",
 						"power: 2": "178:2",
 						"power: 3": "178:3",
 						"power: 4": "178:4",
@@ -11829,7 +11823,13 @@
 						"power: 6": "178:6",
 						"power: 7": "178:7",
 						"power: 8": "178:8",
-						"power: 9": "178:9"
+						"power: 9": "178:9",
+						"power: 10": "178:10",
+						"power: 11": "178:11",
+						"power: 12": "178:12",
+						"power: 13": "178:13",
+						"power: 14": "178:14",
+						"power: 15": "178:15"
 					}
 				},
 				"Dead Bush": [
@@ -12090,9 +12090,9 @@
 					"Creeper Head<br>Creeper Wall Head<br>Dragon Head<br>Dragon Wall Head<br>Piglin Head<br>Piglin Wall Head<br>Player Head<br>Player Wall Head<br>Wither Skeleton Skull<br>Wither Skeleton Wall Skull<br>Zombie Head<br>Zombie Wall Head": "None",
 					"Skeleton Skull": {
 						"rotation: 0": "144:0",
-						"rotation: 12": "144:9",
 						"rotation: 4": "144:1",
-						"rotation: 8": "144:8"
+						"rotation: 8": "144:8",
+						"rotation: 12": "144:9"
 					},
 					"Skeleton Wall Skull": {
 						"facing: east": [
@@ -12141,30 +12141,6 @@
 						"10:1",
 						"11:1"
 					],
-					"level: 10": [
-						"10:10",
-						"11:10"
-					],
-					"level: 11": [
-						"10:11",
-						"11:11"
-					],
-					"level: 12": [
-						"10:12",
-						"11:12"
-					],
-					"level: 13": [
-						"10:13",
-						"11:13"
-					],
-					"level: 14": [
-						"10:14",
-						"11:14"
-					],
-					"level: 15": [
-						"10:15",
-						"11:15"
-					],
 					"level: 2": [
 						"10:2",
 						"11:2"
@@ -12196,6 +12172,30 @@
 					"level: 9": [
 						"10:9",
 						"11:9"
+					],
+					"level: 10": [
+						"10:10",
+						"11:10"
+					],
+					"level: 11": [
+						"10:11",
+						"11:11"
+					],
+					"level: 12": [
+						"10:12",
+						"11:12"
+					],
+					"level: 13": [
+						"10:13",
+						"11:13"
+					],
+					"level: 14": [
+						"10:14",
+						"11:14"
+					],
+					"level: 15": [
+						"10:15",
+						"11:15"
 					]
 				},
 				"Lily Pad": "111:0",
@@ -12359,12 +12359,6 @@
 					"Heavy Weighted Pressure Plate": {
 						"power: 0": "148:0",
 						"power: 1": "148:1",
-						"power: 10": "148:10",
-						"power: 11": "148:11",
-						"power: 12": "148:12",
-						"power: 13": "148:13",
-						"power: 14": "148:14",
-						"power: 15": "148:15",
 						"power: 2": "148:2",
 						"power: 3": "148:3",
 						"power: 4": "148:4",
@@ -12372,17 +12366,17 @@
 						"power: 6": "148:6",
 						"power: 7": "148:7",
 						"power: 8": "148:8",
-						"power: 9": "148:9"
+						"power: 9": "148:9",
+						"power: 10": "148:10",
+						"power: 11": "148:11",
+						"power: 12": "148:12",
+						"power: 13": "148:13",
+						"power: 14": "148:14",
+						"power: 15": "148:15"
 					},
 					"Light Weighted Pressure Plate": {
 						"power: 0": "147:0",
 						"power: 1": "147:1",
-						"power: 10": "147:10",
-						"power: 11": "147:11",
-						"power: 12": "147:12",
-						"power: 13": "147:13",
-						"power: 14": "147:14",
-						"power: 15": "147:15",
 						"power: 2": "147:2",
 						"power: 3": "147:3",
 						"power: 4": "147:4",
@@ -12390,7 +12384,13 @@
 						"power: 6": "147:6",
 						"power: 7": "147:7",
 						"power: 8": "147:8",
-						"power: 9": "147:9"
+						"power: 9": "147:9",
+						"power: 10": "147:10",
+						"power: 11": "147:11",
+						"power: 12": "147:12",
+						"power: 13": "147:13",
+						"power: 14": "147:14",
+						"power: 15": "147:15"
 					},
 					"Oak Pressure Plate": {
 						"powered: false": "72:0",
@@ -12799,12 +12799,6 @@
 				"Sugar Cane": {
 					"age: 0": "83:0",
 					"age: 1": "83:1",
-					"age: 10": "83:10",
-					"age: 11": "83:11",
-					"age: 12": "83:12",
-					"age: 13": "83:13",
-					"age: 14": "83:14",
-					"age: 15": "83:15",
 					"age: 2": "83:2",
 					"age: 3": "83:3",
 					"age: 4": "83:4",
@@ -12812,7 +12806,13 @@
 					"age: 6": "83:6",
 					"age: 7": "83:7",
 					"age: 8": "83:8",
-					"age: 9": "83:9"
+					"age: 9": "83:9",
+					"age: 10": "83:10",
+					"age: 11": "83:11",
+					"age: 12": "83:12",
+					"age: 13": "83:13",
+					"age: 14": "83:14",
+					"age: 15": "83:15"
 				},
 				"Tall Grass": {
 					"half: lower": "175:2",
@@ -12866,30 +12866,6 @@
 							"8:1",
 							"9:1"
 						],
-						"level: 10": [
-							"8:10",
-							"9:10"
-						],
-						"level: 11": [
-							"8:11",
-							"9:11"
-						],
-						"level: 12": [
-							"8:12",
-							"9:12"
-						],
-						"level: 13": [
-							"8:13",
-							"9:13"
-						],
-						"level: 14": [
-							"8:14",
-							"9:14"
-						],
-						"level: 15": [
-							"8:15",
-							"9:15"
-						],
 						"level: 2": [
 							"8:2",
 							"9:2"
@@ -12921,6 +12897,30 @@
 						"level: 9": [
 							"8:9",
 							"9:9"
+						],
+						"level: 10": [
+							"8:10",
+							"9:10"
+						],
+						"level: 11": [
+							"8:11",
+							"9:11"
+						],
+						"level: 12": [
+							"8:12",
+							"9:12"
+						],
+						"level: 13": [
+							"8:13",
+							"9:13"
+						],
+						"level: 14": [
+							"8:14",
+							"9:14"
+						],
+						"level: 15": [
+							"8:15",
+							"9:15"
 						]
 					}
 				},
