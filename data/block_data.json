@@ -3813,6 +3813,10 @@
 					"level: 7": 7,
 					"level: 8": 8
 				},
+				"Copper Bulb": {
+					"lit: false": 0,
+					"lit: true": 15
+				},
 				"Crafter": {
 					"0 Slots": 0,
 					"1 Slots": 1,
@@ -8215,6 +8219,7 @@
 				"Lava": "Not Applicable",
 				"Leaves": "Shears or Hoe",
 				"Lectern": "Axe",
+				"Lever": "None",
 				"Light Block": "Not Applicable",
 				"Lily Pad": "By Hand",
 				"Logs": "Axe",
@@ -14432,7 +14437,7 @@
 				"Air": "Not Applicable",
 				"Amethyst Cluster": "Yes",
 				"Barrier": "Not Applicable",
-				"Bedrock": "Yes",
+				"Bedrock": "Not Applicable",
 				"Bee Nest": "Yes",
 				"Beehive": "Yes",
 				"Blue Ice": "Yes",
@@ -14477,6 +14482,7 @@
 				"Packed Ice": "Yes",
 				"Pale Hanging Moss": "Yes",
 				"Podzol": "Yes",
+				"Redstone Ore": "Not Applicable",
 				"Reinforced Deepslate": "Not Applicable",
 				"Sculk": "Yes",
 				"Sculk Catalyst": "Yes",
@@ -14513,8 +14519,10 @@
 				"Chiseled Bookshelf": "Yes",
 				"Command Blocks": "Yes",
 				"Composter": "Yes",
+				"Copper Bulb": "Yes",
 				"Crafter": "Yes",
 				"Creaking Heart": "Yes",
+				"Decorated Pot": "Yes",
 				"Detector Rail": "Yes",
 				"Dispenser": "Yes",
 				"Dropper": "Yes",
