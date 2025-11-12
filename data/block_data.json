@@ -4152,6 +4152,10 @@
 				"Sea Pickle": "No",
 				"Seagrass": "No",
 				"Short Grass": "No",
+				"Shulker Box": {
+					"Closed": "Yes",
+					"Open": "No"
+				},
 				"Signs": "No",
 				"Slabs": {
 					"type: bottom<br>type: top": "No",
