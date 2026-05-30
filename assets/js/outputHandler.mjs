@@ -382,7 +382,7 @@ function table_body_generator(output_data, page, search) {
                 <td>
                 ${is_legacy_sprite ? 
                     /*html*/`<span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span>` :
-                    /*html*/`<img src="/assets/sprites/${sprite}" decoding="async" loading="lazy" width="16" height="16" class="mw-file-element" data-file-width="16" data-file-height="16">`
+                    /*html*/`<img src="./assets/sprites/${sprite}" decoding="async" loading="lazy" width="16" height="16" class="mw-file-element" data-file-width="16" data-file-height="16">`
                 }
                 </td>`;
         for (let [property_id, value] of Object.entries(entry)) {
