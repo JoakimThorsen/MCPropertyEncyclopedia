@@ -138,6 +138,7 @@
 		"Zombified Piglin"
 	],
 	"sprites": {
+		"_legacy": true,
 		"Area Effect Cloud": ["entity-sprite", -112, -576],
 		"Armor Stand": ["entity-sprite", -144, -128],
 		"Arrow": ["entity-sprite", -64, -48],

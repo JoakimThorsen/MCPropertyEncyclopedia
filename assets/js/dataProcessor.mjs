@@ -148,6 +148,9 @@ function pivot_element(input_element, property, property_id, size_factor, filter
         } else {
             const output_obj = {};
             Object.keys(input_element).forEach(variant => {
+                if (variant.startsWith("_")) {
+                    return;
+                }
                 const value = pivot_element(input_element[variant], property, property_id, size_factor, filter_obj, invert_filter);
                 if (value !== undefined) {
                     output_obj[variant] = value;

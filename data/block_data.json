@@ -313,6 +313,7 @@
 		"Wool"
 	],
 	"sprites": {
+		"_legacy": true,
 		"Activator Rail": ["block-sprite3", -624, -576],
 		"Air": ["block-sprite3", -624, 0],
 		"Amethyst Cluster": ["block-sprite3", -112, 0],
@@ -8324,8 +8325,8 @@
 				"Wool": "Shears"
 			}
 		},
-		"iron_golem_spawnable": {
-			"property_name": "Iron Golem Spawnable",
+		"iron_golem_spawnable_on": {
+			"property_name": "Iron Golem Spawnable On",
 			"property_description": "Whether iron golems can spawn on this block.",
 			"definition": "",
 			"default_value": "Yes",

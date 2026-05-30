@@ -360,9 +360,16 @@ function header_outputter(page, entry_header) {
 }
 
 function table_body_generator(output_data, page, search) {
+    const is_legacy_sprite = data.sprites["_legacy"] || false;
+
     let append_string = "";
     output_data.forEach(entry => {
-        const sprite = data.sprites[entry[page]] ?? ["block-sprite", -240, -16]; // defaluts to the air sprite
+        let sprite;
+        if (is_legacy_sprite) {
+            sprite = data.sprites[entry[page]] ?? ["block-sprite", -240, -16]; // defaluts to the air sprite
+        } else {
+            sprite = data.sprites[entry[page]] ?? "BlockSprite_air.png"; // defaluts to the air sprite
+        }
         if (search) {
             entry[page] = highlight_search_string(entry[page], search)
             if(typeof entry.variants !== 'undefined') {
@@ -372,7 +379,10 @@ function table_body_generator(output_data, page, search) {
         append_string += /*html*/`
             <tr>
                 <td>
-                    <span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span>
+                ${is_legacy_sprite ? 
+                    /*html*/`<span class="sprite ${sprite[0]}" style="background-position:${sprite[1]}px ${sprite[2]}px"></span>` :
+                    /*html*/`<img src="/assets/sprites/${sprite}" decoding="async" loading="lazy" width="16" height="16" class="mw-file-element" data-file-width="16" data-file-height="16">`
+                }
                 </td>`;
         for (let [property_id, value] of Object.entries(entry)) {
             append_string += get_data_cell_contents(value, property_id);

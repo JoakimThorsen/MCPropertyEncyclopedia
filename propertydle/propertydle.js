@@ -474,6 +474,7 @@ function get_all_values(input, unique_only = false) {
     if (typeof input == 'object') {
         var return_arr = [];
         for (let value in input) {
+			if (value.startsWith("_")) continue
             return_arr = return_arr.concat(...get_all_values(input[value]));
         }
         if(unique_only) {

@@ -272,6 +272,7 @@
 		"Yellow Shulker Box"
 	],
 	"sprites": {
+		"_legacy": true,
 		"Acacia Door": [
 			"block-sprite2",
 			-48,
