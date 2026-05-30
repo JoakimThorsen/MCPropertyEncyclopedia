@@ -228,7 +228,7 @@ function display_selection() {
                         class="dropdown-option select-option ${isSelected ? 'selected' : ''}" 
                         property="${entry}"
                     >
-                        ${(data.properties[entry] || {property_name: `Missing property: ${entry}`}).property_name}
+                        ${(data.properties[entry] || {property_name: `[Missing property: ${entry}]`}).property_name}
                         <span>
                             <span class="glyphicon glyphicon-ok selected-check" style="margin: 0 3px;"></span>
                             

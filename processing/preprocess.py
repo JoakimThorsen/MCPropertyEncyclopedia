@@ -1,5 +1,6 @@
 import json
 from argparse import ArgumentParser, FileType
+from collections import defaultdict
 from typing import Any
 
 
@@ -48,18 +49,52 @@ def preprocess_mixed_val(entry_val: str | int | float | bool | list[Any] | dict[
         
         # sort list of attributes within the states of each block alphabetically
         new_states_dict = {}
-        for state_name, state_val in entry_val.items():
-            state_name: str
-            state_name = ", ".join(sorted(state_name.split(", ")))
+        for state_attributes, value in entry_val.items():
+            state_attributes = ", ".join(sorted(state_attributes.split(", ")))
 
             # preprocess each value within a multi-state entry:
-            state_val = preprocess_mixed_val(state_val)
+            value = preprocess_mixed_val(value)
 
-            new_states_dict[state_name] = state_val
+            new_states_dict[state_attributes] = value
         entry_val = new_states_dict
 
         # sort the list of states
         entry_val = dict(sorted(entry_val.items()))
+
+        # Create nested single-key dicts of attributes for the tree structure
+        def merge(attributes: list[str], value, tree: dict):
+            if not len(attributes):
+                return value
+            attr = attributes.pop(0)
+            inner_tree = tree.get(attr, {})
+            tree[attr] = merge(attributes, value, inner_tree)
+            return tree
+
+        def remove_redundant(tree):
+            if isinstance(tree, dict):
+                unique_subtrees = defaultdict(list)
+                for attribute, subtree in tree.items():
+                    unique_subtrees[json.dumps(subtree)].append(attribute)
+
+                if len(unique_subtrees) == 1:
+                    first_subtree = next(iter(tree.values()))
+                    return remove_redundant(first_subtree)
+
+                new_tree = {}
+                for attributes in unique_subtrees.values():
+                    new_tree["<br>".join(attributes)] = remove_redundant(tree[attributes[0]])
+            
+                return new_tree
+            return tree
+
+        # assemble the actual attribute-tree
+        tree: dict = {}
+        for state_attributes, value in entry_val.items():
+            attributes_list = state_attributes.split(", ")
+            tree = merge(attributes_list, value, tree)
+        tree = remove_redundant(tree)
+        entry_val = tree
+
 
         return entry_val
     
@@ -98,7 +133,12 @@ def main(input_file, output_file, old_output_file):
         "key_list": [*sorted(property_data["translated_name"]["entries"].values())],
         "sprites": old_data["sprites"],
         "property_structure": [
-            *sorted([key for key in property_data.keys() if key not in old_data["properties"].keys()]),
+            {
+                "category": "New Properties",
+                "contents": [
+                    *sorted([key for key in property_data.keys() if key not in old_data["properties"].keys()]),
+                ],
+            },
             *old_data.get("property_structure", [])
         ],
         "default_selection": old_data.get("default_selection", []),
