@@ -327,10 +327,10 @@ function header_outputter(page, entry_header) {
 
         if (filter_obj[property] && value_list[property].every(e => filter_obj[property].includes(e))) {
             delete filter_obj[property];
-            $(this).parents('ul').find('.glyphicon').removeClass('display-none');
+            $(this).parents('ul').find('.glyphicon-ok').removeClass('display-none');
         } else {
             filter_obj[property] = deep_copy(value_list[property]);
-            $(this).parents('ul').find('.glyphicon').addClass('display-none');
+            $(this).parents('ul').find('.glyphicon-ok').addClass('display-none');
         }
 
         update_window_history();
@@ -351,6 +351,7 @@ function header_outputter(page, entry_header) {
 
     $('.description-button').click(function (e) {
         e.stopPropagation();
+        let parent = $(this).parent();
         $(this).parent().toggleClass('open')
     });
     

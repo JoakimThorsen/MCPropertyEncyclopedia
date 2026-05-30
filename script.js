@@ -225,13 +225,21 @@ function display_selection() {
                 <li>
                     <a 
                         role="button" 
-                        class="dropdown-option select-option${isSelected ? ' selected' : ''}" 
+                        class="dropdown-option select-option ${isSelected ? 'selected' : ''}" 
                         property="${entry}"
                     >
                         ${(data.properties[entry] || {property_name: `Missing property: ${entry}`}).property_name}
-                        <span class="glyphicon glyphicon-ok" style="${isSelected ? 'display:inline-block' : 'display:none'}">
+                        <span>
+                            <span class="glyphicon glyphicon-ok selected-check" style="margin: 0 3px;"></span>
+                            
+                            ${data.properties[entry]?.property_description
+                                ? /*html*/`<span class="expand-property-description" role="button"><i class="fa-regular fa-circle-question"></i></span>`
+                                : ""}
                         </span>
                     </a>
+                    ${data.properties[entry]?.property_description
+                        ? /*html*/`<li><p class="select-option-description">${data.properties[entry]?.property_description}</p></li>`
+                        : ""}
                 </li>
             `;
         }
@@ -278,7 +286,6 @@ function display_selection() {
         } else {
             selection_arr.push(value);
         }
-        $(this).children().toggle();
         $(this).toggleClass('selected');
 
         $('.selection-category').removeClass('selected');
@@ -287,6 +294,11 @@ function display_selection() {
         update_window_history();
         display_headers_and_table();
     });
+
+    $(".expand-property-description").click(function (e) {
+        e.stopPropagation();
+        $(this).parents().eq(2).next().toggleClass('open')
+    })
 
 }
 let selection_search = "";
