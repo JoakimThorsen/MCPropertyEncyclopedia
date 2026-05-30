@@ -80,12 +80,12 @@ async def main(data_file, types, download_sprites, output_directory):
         print("Unmatched:", normalized_name, "-", ", ".join(closest[:3]))
     print(f"Unmatched count: {len(unmatched)}")
 
-    # with open(f"{output_directory}\\..\\sprites.json", "w") as fp:
-    #     json.dump({
-    #         entry_name:filename.split("?")[0]
-    #         for entry_name, filename
-    #         in found_files.items()
-    #     }, fp, indent="\t")
+    with open(".\\sprites.json", "w") as fp:
+        json.dump({
+            entry_name:filename.split("?")[0]
+            for entry_name, filename
+            in found_files.items()
+        }, fp, indent="\t")
 
 
 def match_filename(normalized_name: str, sprite_aliases: dict[str, list[str]]):

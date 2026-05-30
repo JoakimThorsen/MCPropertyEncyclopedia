@@ -1138,1352 +1138,1122 @@
 		"Zombie Head"
 	],
 	"sprites": {
-		"_legacy": true,
-		"Activator Rail": [
-			"block-sprite3",
-			-624,
-			-576
-		],
-		"Air": [
-			"block-sprite3",
-			-624,
-			0
-		],
-		"Amethyst Cluster": [
-			"block-sprite3",
-			-112,
-			0
-		],
-		"Ancient Debris": [
-			"block-sprite3",
-			-512,
-			-688
-		],
-		"Andesite": [
-			"block-sprite3",
-			-688,
-			-400
-		],
-		"Anvil": [
-			"block-sprite3",
-			-576,
-			-496
-		],
-		"Azalea": [
-			"block-sprite3",
-			-608,
-			-32
-		],
-		"Bamboo": [
-			"block-sprite3",
-			-32,
-			-336
-		],
-		"Bamboo Mosaic": [
-			"block-sprite3",
-			-240,
-			-128
-		],
-		"Banners": [
-			"block-sprite3",
-			-336,
-			0
-		],
-		"Barrel": [
-			"block-sprite3",
-			-48,
-			-336
-		],
-		"Barrier": [
-			"block-sprite3",
-			-304,
-			-608
-		],
-		"Basalt": [
-			"block-sprite3",
-			-704,
-			-688
-		],
-		"Beacon": [
-			"block-sprite3",
-			-464,
-			-608
-		],
-		"Bedrock": [
-			"block-sprite3",
-			-704,
-			-400
-		],
-		"Beds": [
-			"block-sprite3",
-			-512,
-			-512
-		],
-		"Bee Nest": [
-			"block-sprite3",
-			-704,
-			-624
-		],
-		"Beehive": [
-			"block-sprite3",
-			-624,
-			-624
-		],
-		"Bell": [
-			"block-sprite3",
-			-528,
-			-400
-		],
-		"Big Dripleaf": [
-			"block-sprite3",
-			-624,
-			-32
-		],
-		"Blackstone": [
-			"block-sprite3",
-			-592,
-			-720
-		],
-		"Blast Furnace": [
-			"block-sprite3",
-			-96,
-			-336
-		],
-		"Block of Amethyst": [
-			"block-sprite3",
-			-80,
-			0
-		],
-		"Block of Bamboo": [
-			"block-sprite3",
-			-176,
-			-144
-		],
-		"Block of Coal": [
-			"block-sprite3",
-			-64,
-			-464
-		],
-		"Block of Copper": [
-			"block-sprite3",
-			-128,
-			0
-		],
-		"Block of Diamond": [
-			"block-sprite3",
-			-80,
-			-464
-		],
-		"Block of Emerald": [
-			"block-sprite3",
-			-96,
-			-464
-		],
-		"Block of Gold": [
-			"block-sprite3",
-			-112,
-			-464
-		],
-		"Block of Iron": [
-			"block-sprite3",
-			-128,
-			-464
-		],
-		"Block of Lapis Lazuli": [
-			"block-sprite3",
-			-144,
-			-464
-		],
-		"Block of Netherite": [
-			"block-sprite3",
-			-544,
-			-688
-		],
-		"Block of Quartz": [
-			"block-sprite3",
-			-432,
-			-496
-		],
-		"Block of Raw Copper": [
-			"block-sprite3",
-			-592,
-			-64
-		],
-		"Block of Raw Gold": [
-			"block-sprite3",
-			-608,
-			-64
-		],
-		"Block of Raw Iron": [
-			"block-sprite3",
-			-624,
-			-64
-		],
-		"Block of Redstone": [
-			"block-sprite3",
-			-160,
-			-464
-		],
-		"Block of Stripped Bamboo": [
-			"block-sprite3",
-			-352,
-			-144
-		],
-		"Blue Ice": [
-			"block-sprite3",
-			-384,
-			-256
-		],
-		"Bone Block": [
-			"block-sprite3",
-			-720,
-			-400
-		],
-		"Bookshelf": [
-			"block-sprite3",
-			-272,
-			-464
-		],
-		"Brewing Stand": [
-			"block-sprite3",
-			-640,
-			-496
-		],
-		"Bricks": [
-			"block-sprite3",
-			-288,
-			-464
-		],
-		"Budding Amethyst": [
-			"block-sprite3",
-			-144,
-			0
-		],
-		"Buttons": [
-			"block-sprite3",
-			-304,
-			-96
-		],
-		"Cactus": [
-			"block-sprite3",
-			-432,
-			-464
-		],
-		"Cake": [
-			"block-sprite3",
-			-192,
-			-608
-		],
-		"Calcite": [
-			"block-sprite3",
-			-160,
-			0
-		],
-		"Calibrated Sculk Sensor": [
-			"block-sprite3",
-			-608,
-			-160
-		],
-		"Campfire": [
-			"block-sprite3",
-			0,
-			-400
-		],
-		"Candles": [
-			"block-sprite3",
-			-368,
-			-16
-		],
-		"Carpets": [
-			"block-sprite3",
-			-608,
-			-352
-		],
-		"Cartography Table": [
-			"block-sprite3",
-			-144,
-			-336
-		],
-		"Cauldron": [
-			"block-sprite3",
-			-688,
-			-496
-		],
-		"Cave Vines": [
-			"block-sprite3",
-			-400,
-			-32
-		],
-		"Chain": [
-			"block-sprite3",
-			-80,
-			-736
-		],
-		"Chest": [
-			"block-sprite3",
-			-720,
-			-32
-		],
-		"Chiseled Bookshelf": [
-			"block-sprite3",
-			-368,
-			-128
-		],
-		"Chorus Flower": [
-			"block-sprite3",
-			-16,
-			-576
-		],
-		"Chorus Plant": [
-			"block-sprite3",
-			-48,
-			-576
-		],
-		"Clay": [
-			"block-sprite3",
-			-336,
-			-432
-		],
-		"Coal Ore": [
-			"block-sprite3",
-			-704,
-			-448
-		],
-		"Coarse Dirt": [
-			"block-sprite3",
-			-752,
-			-144
-		],
-		"Cobbled Deepslate": [
-			"block-sprite3",
-			-608,
-			-48
-		],
-		"Cobblestone": [
-			"block-sprite3",
-			-32,
-			-416
-		],
-		"Cobweb": [
-			"block-sprite3",
-			-48,
-			-416
-		],
-		"Cocoa": [
-			"block-sprite3",
-			-64,
-			-576
-		],
-		"Command Blocks": [
-			"block-sprite3",
-			-656,
-			-576
-		],
-		"Composter": [
-			"block-sprite3",
-			-16,
-			-400
-		],
-		"Concrete": [
-			"block-sprite3",
-			-288,
-			-352
-		],
-		"Concrete Powder": [
-			"block-sprite3",
-			-304,
-			-352
-		],
-		"Conduit": [
-			"block-sprite3",
-			-400,
-			-256
-		],
-		"Copper Ore": [
-			"block-sprite3",
-			-176,
-			0
-		],
-		"Coral Blocks": [
-			"block-sprite3",
-			-32,
-			-192
-		],
-		"Coral Fans": [
-			"block-sprite3",
-			-592,
-			-400
-		],
-		"Corals": [
-			"block-sprite3",
-			-560,
-			-352
-		],
-		"Crafting Table": [
-			"block-sprite3",
-			0,
-			-512
-		],
-		"Crops": [
-			"block-sprite3",
-			-448,
-			-576
-		],
-		"Crying Obsidian": [
-			"block-sprite3",
-			-64,
-			-720
-		],
-		"Daylight Detector": [
-			"block-sprite3",
-			-528,
-			-16
-		],
-		"Dead Bush": [
-			"block-sprite3",
-			-16,
-			-560
-		],
-		"Decorated Pot": [
-			"block-sprite3",
-			-672,
-			-160
-		],
-		"Deepslate": [
-			"block-sprite3",
-			-528,
-			-48
-		],
-		"Detector Rail": [
-			"block-sprite3",
-			-128,
-			-592
-		],
-		"Diamond Ore": [
-			"block-sprite3",
-			-720,
-			-448
-		],
-		"Diorite": [
-			"block-sprite3",
-			-96,
-			-416
-		],
-		"Dirt": [
-			"block-sprite3",
-			-32,
-			0
-		],
-		"Dirt Path": [
-			"block-sprite3",
-			-272,
-			-160
-		],
-		"Dispenser": [
-			"block-sprite3",
-			-256,
-			-464
-		],
-		"Doors": [
-			"block-sprite3",
-			-576,
-			-432
-		],
-		"Dragon Egg": [
-			"block-sprite3",
-			-112,
-			-80
-		],
-		"Dried Kelp Block": [
-			"block-sprite3",
-			-400,
-			-144
-		],
-		"Dripstone Block": [
-			"block-sprite3",
-			-496,
-			-16
-		],
-		"Dropper": [
-			"block-sprite3",
-			-576,
-			-464
-		],
-		"Emerald Ore": [
-			"block-sprite3",
-			-736,
-			-448
-		],
-		"Enchanting Table": [
-			"block-sprite3",
-			-96,
-			-512
-		],
-		"End Gateway": [
-			"block-sprite3",
-			-752,
-			-32
-		],
-		"End Portal": [
-			"block-sprite3",
-			-752,
-			-32
-		],
-		"End Portal Frame": [
-			"block-sprite3",
-			-320,
-			-608
-		],
-		"End Rod": [
-			"block-sprite3",
-			-208,
-			-608
-		],
-		"End Stone": [
-			"block-sprite3",
-			-128,
-			-416
-		],
-		"End Stone Bricks": [
-			"block-sprite3",
-			-144,
-			-480
-		],
-		"Ender Chest": [
-			"block-sprite3",
-			-160,
-			-512
-		],
-		"Farmland": [
-			"block-sprite3",
-			-112,
-			-576
-		],
-		"Fence Gates": [
-			"block-sprite3",
-			-672,
-			-576
-		],
-		"Fences": [
-			"block-sprite3",
-			-704,
-			-464
-		],
-		"Fern": [
-			"block-sprite3",
-			-32,
-			-560
-		],
-		"Fire": [
-			"block-sprite3",
-			-688,
-			-16
-		],
-		"Fletching Table": [
-			"block-sprite3",
-			-192,
-			-336
-		],
-		"Flower Pot": [
-			"block-sprite3",
-			-192,
-			-448
-		],
-		"Flowers": [
-			"block-sprite3",
-			-208,
-			-560
-		],
-		"Froglights": [
-			"block-sprite3",
-			-96,
-			-128
-		],
-		"Frogspawn": [
-			"block-sprite3",
-			-688,
-			-80
-		],
-		"Frosted Ice": [
-			"block-sprite3",
-			-144,
-			-416
-		],
-		"Fungi": [
-			"block-sprite3",
-			-176,
-			-720
-		],
-		"Furnace": [
-			"block-sprite3",
-			-400,
-			-464
-		],
-		"Gilded Blackstone": [
-			"block-sprite3",
-			-752,
-			-720
-		],
-		"Glass": [
-			"block-sprite3",
-			-416,
-			-496
-		],
-		"Glass Pane": [
-			"block-sprite3",
-			-448,
-			-64
-		],
-		"Glazed Terracotta": [
-			"block-sprite3",
-			-432,
-			-128
-		],
-		"Glow Lichen": [
-			"block-sprite3",
-			-336,
-			-32
-		],
-		"Glowstone": [
-			"block-sprite3",
-			-160,
-			-416
-		],
-		"Gold Ore": [
-			"block-sprite3",
-			-752,
-			-448
-		],
-		"Granite": [
-			"block-sprite3",
-			-176,
-			-416
-		],
-		"Grass Block": [
-			"block-sprite3",
-			-192,
-			-416
-		],
-		"Gravel": [
-			"block-sprite3",
-			-208,
-			-416
-		],
-		"Grindstone": [
-			"block-sprite3",
-			-496,
-			-336
-		],
-		"Hanging Roots": [
-			"block-sprite3",
-			-448,
-			-32
-		],
-		"Hanging Signs": [
-			"block-sprite3",
-			-144,
-			-144
-		],
-		"Hay Bale": [
-			"block-sprite3",
-			-144,
-			-576
-		],
-		"Heads": [
-			"block-sprite3",
-			-224,
-			-608
-		],
-		"Honey Block": [
-			"block-sprite3",
-			-672,
-			-640
-		],
-		"Honeycomb Block": [
-			"block-sprite3",
-			-704,
-			-640
-		],
-		"Hopper": [
-			"block-sprite3",
-			-176,
-			-592
-		],
-		"Hyphae": [
-			"block-sprite3",
-			-128,
-			-720
-		],
-		"Ice": [
-			"block-sprite3",
-			-224,
-			-416
-		],
-		"Iron Bars": [
-			"block-sprite3",
-			-224,
-			-448
-		],
-		"Iron Ore": [
-			"block-sprite3",
-			0,
-			-464
-		],
-		"Jack o'Lantern": [
-			"block-sprite3",
-			-176,
-			-576
-		],
-		"Jigsaw Block": [
-			"block-sprite3",
-			-48,
-			-384
-		],
-		"Jukebox": [
-			"block-sprite3",
-			-208,
-			-512
-		],
-		"Kelp": [
-			"block-sprite3",
-			-704,
-			-176
-		],
-		"Ladder": [
-			"block-sprite3",
-			-240,
-			-448
-		],
-		"Lantern": [
-			"block-sprite3",
-			-32,
-			-384
-		],
-		"Lapis Lazuli Ore": [
-			"block-sprite3",
-			-16,
-			-464
-		],
-		"Lava": [
-			"block-sprite3",
-			-720,
-			-16
-		],
-		"Leaves": [
-			"block-sprite3",
-			0,
-			-624
-		],
-		"Lectern": [
-			"block-sprite3",
-			-560,
-			-336
-		],
-		"Lever": [
-			"block-sprite3",
-			-288,
-			-592
-		],
-		"Light Block": [
-			"block-sprite3",
-			-208,
-			-688
-		],
-		"Lightning Rod": [
-			"block-sprite3",
-			-256,
-			0
-		],
-		"Lily Pad": [
-			"block-sprite3",
-			-80,
-			-560
-		],
-		"Lodestone": [
-			"block-sprite3",
-			-544,
-			-720
-		],
-		"Logs": [
-			"block-sprite3",
-			-352,
-			-416
-		],
-		"Loom": [
-			"block-sprite3",
-			-416,
-			-336
-		],
-		"Magma Block": [
-			"block-sprite3",
-			-240,
-			-416
-		],
-		"Mangrove Propagule": [
-			"block-sprite3",
-			-640,
-			-96
-		],
-		"Mangrove Roots": [
-			"block-sprite3",
-			-656,
-			-96
-		],
-		"Melon": [
-			"block-sprite3",
-			-192,
-			-576
-		],
-		"Moss Block": [
-			"block-sprite3",
-			-496,
-			-32
-		],
-		"Moss Carpet": [
-			"block-sprite3",
-			-512,
-			-32
-		],
-		"Moving Piston": [
-			"block-sprite3",
-			-416,
-			-608
-		],
-		"Mud": [
-			"block-sprite3",
-			-96,
-			-112
-		],
-		"Mud Bricks": [
-			"block-sprite3",
-			-160,
-			-112
-		],
-		"Muddy Mangrove Roots": [
-			"block-sprite3",
-			-176,
-			-112
-		],
-		"Mushroom Blocks": [
-			"block-sprite3",
-			-592,
-			-560
-		],
-		"Mushrooms": [
-			"block-sprite3",
-			-240,
-			-576
-		],
-		"Mycelium": [
-			"block-sprite3",
-			-272,
-			-416
-		],
-		"Nether Bricks": [
-			"block-sprite3",
-			-192,
-			-480
-		],
-		"Nether Gold Ore": [
-			"block-sprite3",
-			-528,
-			-720
-		],
-		"Nether Portal": [
-			"block-sprite3",
-			-704,
-			0
-		],
-		"Nether Quartz Ore": [
-			"block-sprite3",
-			-32,
-			-464
-		],
-		"Nether Sprouts": [
-			"block-sprite3",
-			-576,
-			-704
-		],
-		"Nether Wart": [
-			"block-sprite3",
-			-256,
-			-576
-		],
-		"Netherrack": [
-			"block-sprite3",
-			-304,
-			-416
-		],
-		"Note Block": [
-			"block-sprite3",
-			-224,
-			-512
-		],
-		"Nylium": [
-			"block-sprite3",
-			-656,
-			-688
-		],
-		"Observer": [
-			"block-sprite3",
-			-304,
-			-512
-		],
-		"Obsidian": [
-			"block-sprite3",
-			-320,
-			-416
-		],
-		"Packed Ice": [
-			"block-sprite3",
-			-336,
-			-416
-		],
-		"Packed Mud": [
-			"block-sprite3",
-			-224,
-			-112
-		],
-		"Pink Petals": [
-			"block-sprite3",
-			-288,
-			-160
-		],
-		"Piston": [
-			"block-sprite3",
-			-416,
-			-592
-		],
-		"Pitcher Crop": [
-			"block-sprite3",
-			-48,
-			-176
-		],
-		"Pitcher Plant": [
-			"block-sprite3",
-			-112,
-			-176
-		],
-		"Planks": [
-			"block-sprite3",
-			-80,
-			-480
-		],
-		"Podzol": [
-			"block-sprite3",
-			-256,
-			-128
-		],
-		"Pointed Dripstone": [
-			"block-sprite3",
-			-512,
-			-16
-		],
-		"Powder Snow": [
-			"block-sprite3",
-			-64,
-			0
-		],
-		"Powered Rail": [
-			"block-sprite3",
-			-560,
-			-592
-		],
-		"Pressure Plates": [
-			"block-sprite3",
-			-688,
-			-576
-		],
-		"Prismarine": [
-			"block-sprite3",
-			-384,
-			-416
-		],
-		"Pumpkin": [
-			"block-sprite3",
-			-368,
-			-576
-		],
-		"Purpur Block": [
-			"block-sprite3",
-			-592,
-			-464
-		],
-		"Rail": [
-			"block-sprite3",
-			-608,
-			-592
-		],
-		"Red Sand": [
-			"block-sprite3",
-			-400,
-			-416
-		],
-		"Red Sandstone": [
-			"block-sprite3",
-			-432,
-			-416
-		],
-		"Redstone Comparator": [
-			"block-sprite3",
-			-704,
-			-592
-		],
-		"Redstone Dust": [
-			"block-sprite3",
-			-80,
-			-80
-		],
-		"Redstone Lamp": [
-			"block-sprite3",
-			-736,
-			-592
-		],
-		"Redstone Ore": [
-			"block-sprite3",
-			-48,
-			-464
-		],
-		"Redstone Repeater": [
-			"block-sprite3",
-			-752,
-			-592
-		],
-		"Redstone Torch": [
-			"block-sprite3",
-			-16,
-			-608
-		],
-		"Reinforced Deepslate": [
-			"block-sprite3",
-			-560,
-			-96
-		],
-		"Respawn Anchor": [
-			"block-sprite3",
-			-224,
-			-720
-		],
-		"Roots": [
-			"block-sprite3",
-			-560,
-			-704
-		],
-		"Sand": [
-			"block-sprite3",
-			-464,
-			-416
-		],
-		"Sandstone": [
-			"block-sprite3",
-			-496,
-			-416
-		],
-		"Saplings": [
-			"block-sprite3",
-			-640,
-			-608
-		],
-		"Scaffolding": [
-			"block-sprite3",
-			-624,
-			-336
-		],
-		"Sculk": [
-			"block-sprite3",
-			-544,
-			-80
-		],
-		"Sculk Catalyst": [
-			"block-sprite3",
-			-576,
-			-80
-		],
-		"Sculk Sensor": [
-			"block-sprite3",
-			-576,
-			-32
-		],
-		"Sculk Shrieker": [
-			"block-sprite3",
-			-624,
-			-80
-		],
-		"Sculk Vein": [
-			"block-sprite3",
-			-672,
-			-80
-		],
-		"Sea Lantern": [
-			"block-sprite3",
-			0,
-			-160
-		],
-		"Sea Pickle": [
-			"block-sprite3",
-			-496,
-			-256
-		],
-		"Seagrass": [
-			"block-sprite3",
-			-432,
-			-144
-		],
-		"Short Grass": [
-			"block-sprite3",
-			-48,
-			-560
-		],
-		"Shroomlight": [
-			"block-sprite3",
-			-736,
-			-688
-		],
-		"Shulker Box": [
-			"block-sprite3",
-			-224,
-			-192
-		],
-		"Signs": [
-			"block-sprite3",
-			-320,
-			-16
-		],
-		"Slabs": [
-			"block-sprite3",
-			-80,
-			-656
-		],
-		"Slime Block": [
-			"block-sprite3",
-			-656,
-			-464
-		],
-		"Small Dripleaf": [
-			"block-sprite3",
-			-672,
-			-32
-		],
-		"Smithing Table": [
-			"block-sprite3",
-			-240,
-			-336
-		],
-		"Smoker": [
-			"block-sprite3",
-			-288,
-			-336
-		],
-		"Sniffer Egg": [
-			"block-sprite3",
-			-688,
-			-160
-		],
-		"Snow": [
-			"block-sprite3",
-			-560,
-			-416
-		],
-		"Snow Block": [
-			"block-sprite3",
-			-544,
-			-416
-		],
-		"Soul Sand": [
-			"block-sprite3",
-			-592,
-			-416
-		],
-		"Soul Soil": [
-			"block-sprite3",
-			-752,
-			-688
-		],
-		"Spawner": [
-			"block-sprite3",
-			-240,
-			-608
-		],
-		"Sponge": [
-			"block-sprite3",
-			-384,
-			-512
-		],
-		"Spore Blossom": [
-			"block-sprite3",
-			-688,
-			-32
-		],
-		"Stained Glass": [
-			"block-sprite3",
-			-400,
-			-496
-		],
-		"Stained Glass Panes": [
-			"block-sprite3",
-			-624,
-			-384
-		],
-		"Stairs": [
-			"block-sprite3",
-			-624,
-			-480
-		],
-		"Stems": [
-			"block-sprite3",
-			-128,
-			-720
-		],
-		"Stone": [
-			"block-sprite3",
-			-672,
-			-400
-		],
-		"Stone Bricks": [
-			"block-sprite3",
-			-176,
-			-480
-		],
-		"Stonecutter": [
-			"block-sprite3",
-			-368,
-			-336
-		],
-		"Structure Block": [
-			"block-sprite3",
-			-192,
-			-400
-		],
-		"Structure Void": [
-			"block-sprite3",
-			-432,
-			-608
-		],
-		"Sugar Cane": [
-			"block-sprite3",
-			-432,
-			-576
-		],
-		"Suspicious Gravel": [
-			"block-sprite3",
-			-592,
-			-160
-		],
-		"Suspicious Sand": [
-			"block-sprite3",
-			-688,
-			-144
-		],
-		"Sweet Berry Bush": [
-			"block-sprite3",
-			-704,
-			-384
-		],
-		"Target": [
-			"block-sprite3",
-			-32,
-			-720
-		],
-		"Terracotta": [
-			"block-sprite3",
-			-528,
-			-432
-		],
-		"Tinted Glass": [
-			"block-sprite3",
-			-400,
-			0
-		],
-		"TNT": [
-			"block-sprite3",
-			-432,
-			-512
-		],
-		"Torch": [
-			"block-sprite3",
-			-480,
-			-512
-		],
-		"Torchflower": [
-			"block-sprite3",
-			-304,
-			-160
-		],
-		"Torchflower Crop": [
-			"block-sprite3",
-			-480,
-			-160
-		],
-		"Trapdoors": [
-			"block-sprite3",
-			-704,
-			-576
-		],
-		"Trapped Chest": [
-			"block-sprite3",
-			-640,
-			-80
-		],
-		"Tripwire": [
-			"block-sprite3",
-			-288,
-			-64
-		],
-		"Tripwire Hook": [
-			"block-sprite3",
-			-160,
-			-608
-		],
-		"Tuff": [
-			"block-sprite3",
-			-352,
-			0
-		],
-		"Turtle Egg": [
-			"block-sprite3",
-			-80,
-			-272
-		],
-		"Twisting Vines": [
-			"block-sprite3",
-			-160,
-			-720
-		],
-		"Vines": [
-			"block-sprite3",
-			-128,
-			-560
-		],
-		"Walls": [
-			"block-sprite3",
-			-592,
-			-384
-		],
-		"Wart Blocks": [
-			"block-sprite3",
-			-688,
-			-688
-		],
-		"Water": [
-			"block-sprite3",
-			-736,
-			-16
-		],
-		"Weeping Vines": [
-			"block-sprite3",
-			-592,
-			-688
-		],
-		"Wood": [
-			"block-sprite3",
-			-352,
-			-416
-		],
-		"Wool": [
-			"block-sprite3",
-			-624,
-			-352
-		]
+		"Acacia Button": "BlockSprite_acacia-button.png",
+		"Acacia Door": "BlockSprite_acacia-door.png",
+		"Acacia Fence": "BlockSprite_acacia-fence.png",
+		"Acacia Fence Gate": "BlockSprite_acacia-fence-gate.png",
+		"Acacia Hanging Sign": "BlockSprite_acacia-hanging-sign.png",
+		"Acacia Leaves": "BlockSprite_acacia-leaves.png",
+		"Acacia Log": "BlockSprite_acacia-log.png",
+		"Acacia Planks": "BlockSprite_acacia-planks.png",
+		"Acacia Pressure Plate": "BlockSprite_acacia-pressure-plate.png",
+		"Acacia Sapling": "BlockSprite_acacia-sapling.png",
+		"Acacia Shelf": "BlockSprite_acacia-shelf-front.png",
+		"Acacia Sign": "BlockSprite_acacia-sign.png",
+		"Acacia Slab": "BlockSprite_acacia-slab.png",
+		"Acacia Stairs": "BlockSprite_acacia-stairs.png",
+		"Acacia Trapdoor": "BlockSprite_acacia-trapdoor.png",
+		"Acacia Wood": "BlockSprite_acacia-log.png",
+		"Activator Rail": "BlockSprite_activator-rail.png",
+		"Air": "BlockSprite_air.png",
+		"Allium": "BlockSprite_allium.png",
+		"Amethyst Cluster": "BlockSprite_amethyst-cluster.png",
+		"Ancient Debris": "BlockSprite_ancient-debris.png",
+		"Andesite": "BlockSprite_andesite.png",
+		"Andesite Slab": "BlockSprite_andesite-slab.png",
+		"Andesite Stairs": "BlockSprite_andesite-stairs.png",
+		"Andesite Wall": "BlockSprite_andesite-wall.png",
+		"Anvil": "BlockSprite_anvil.png",
+		"Attached Melon Stem": "BlockSprite_attached-melon-stem.png",
+		"Attached Pumpkin Stem": "BlockSprite_attached-pumpkin-stem.png",
+		"Azalea": "BlockSprite_azalea.png",
+		"Azalea Leaves": "BlockSprite_azalea-leaves.png",
+		"Azure Bluet": "BlockSprite_azure-bluet.png",
+		"Bamboo": "BlockSprite_bamboo.png",
+		"Bamboo Button": "BlockSprite_bamboo-button.png",
+		"Bamboo Door": "BlockSprite_bamboo-door.png",
+		"Bamboo Fence": "BlockSprite_bamboo-fence.png",
+		"Bamboo Fence Gate": "BlockSprite_bamboo-fence-gate.png",
+		"Bamboo Hanging Sign": "BlockSprite_bamboo-hanging-sign.png",
+		"Bamboo Mosaic": "BlockSprite_bamboo-mosaic.png",
+		"Bamboo Mosaic Slab": "BlockSprite_bamboo-mosaic-slab.png",
+		"Bamboo Mosaic Stairs": "BlockSprite_bamboo-mosaic-stairs.png",
+		"Bamboo Planks": "BlockSprite_bamboo-planks.png",
+		"Bamboo Pressure Plate": "BlockSprite_bamboo-pressure-plate.png",
+		"Bamboo Shelf": "BlockSprite_bamboo-shelf-front.png",
+		"Bamboo Shoot": "BlockSprite_bamboo-sapling.png",
+		"Bamboo Sign": "BlockSprite_bamboo-sign.png",
+		"Bamboo Slab": "BlockSprite_bamboo-slab.png",
+		"Bamboo Stairs": "BlockSprite_bamboo-stairs.png",
+		"Bamboo Trapdoor": "BlockSprite_bamboo-trapdoor.png",
+		"Barrel": "BlockSprite_barrel.png",
+		"Barrier": "BlockSprite_barrier.png",
+		"Basalt": "BlockSprite_basalt.png",
+		"Beacon": "BlockSprite_beacon.png",
+		"Bedrock": "BlockSprite_bedrock.png",
+		"Bee Nest": "BlockSprite_bee-nest.png",
+		"Beehive": "BlockSprite_beehive.png",
+		"Beetroots": "BlockSprite_beetroots.png",
+		"Bell": "BlockSprite_bell.png",
+		"Big Dripleaf": "BlockSprite_big-dripleaf.png",
+		"Big Dripleaf Stem": "BlockSprite_big-dripleaf-stem.png",
+		"Birch Button": "BlockSprite_birch-button.png",
+		"Birch Door": "BlockSprite_birch-door.png",
+		"Birch Fence": "BlockSprite_birch-fence.png",
+		"Birch Fence Gate": "BlockSprite_birch-fence-gate.png",
+		"Birch Hanging Sign": "BlockSprite_birch-hanging-sign.png",
+		"Birch Leaves": "BlockSprite_birch-leaves.png",
+		"Birch Log": "BlockSprite_birch-log.png",
+		"Birch Planks": "BlockSprite_birch-planks.png",
+		"Birch Pressure Plate": "BlockSprite_birch-pressure-plate.png",
+		"Birch Sapling": "BlockSprite_birch-sapling.png",
+		"Birch Shelf": "BlockSprite_birch-shelf-front.png",
+		"Birch Sign": "BlockSprite_birch-sign.png",
+		"Birch Slab": "BlockSprite_birch-slab.png",
+		"Birch Stairs": "BlockSprite_birch-stairs.png",
+		"Birch Trapdoor": "BlockSprite_birch-trapdoor.png",
+		"Birch Wood": "BlockSprite_birch-log.png",
+		"Black Banner": "BlockSprite_black-banner.png",
+		"Black Bed": "BlockSprite_black-bed.png",
+		"Black Candle": "BlockSprite_black-candle.png",
+		"Black Carpet": "BlockSprite_black-carpet.png",
+		"Black Concrete": "BlockSprite_black-concrete.png",
+		"Black Concrete Powder": "BlockSprite_black-concrete-powder.png",
+		"Black Glazed Terracotta": "BlockSprite_black-glazed-terracotta.png",
+		"Black Shulker Box": "BlockSprite_black-shulker-box.png",
+		"Black Stained Glass": "BlockSprite_black-stained-glass.png",
+		"Black Stained Glass Pane": "BlockSprite_black-stained-glass-pane.png",
+		"Black Terracotta": "BlockSprite_black-terracotta.png",
+		"Black Wool": "BlockSprite_black-wool.png",
+		"Blackstone": "BlockSprite_blackstone.png",
+		"Blackstone Slab": "BlockSprite_blackstone-slab.png",
+		"Blackstone Stairs": "BlockSprite_blackstone-stairs.png",
+		"Blackstone Wall": "BlockSprite_blackstone-wall.png",
+		"Blast Furnace": "BlockSprite_blast-furnace.png",
+		"Block of Amethyst": "BlockSprite_block-of-amethyst.png",
+		"Block of Bamboo": "BlockSprite_block-of-bamboo.png",
+		"Block of Coal": "BlockSprite_block-of-coal.png",
+		"Block of Copper": "BlockSprite_block-of-copper.png",
+		"Block of Diamond": "BlockSprite_block-of-diamond.png",
+		"Block of Emerald": "BlockSprite_block-of-emerald.png",
+		"Block of Gold": "BlockSprite_block-of-gold.png",
+		"Block of Iron": "BlockSprite_block-of-iron.png",
+		"Block of Lapis Lazuli": "BlockSprite_block-of-lapis-lazuli.png",
+		"Block of Netherite": "BlockSprite_block-of-netherite.png",
+		"Block of Quartz": "BlockSprite_block-of-quartz.png",
+		"Block of Raw Copper": "BlockSprite_block-of-raw-copper.png",
+		"Block of Raw Gold": "BlockSprite_block-of-raw-gold.png",
+		"Block of Raw Iron": "BlockSprite_block-of-raw-iron.png",
+		"Block of Redstone": "BlockSprite_block-of-redstone.png",
+		"Block of Resin": "BlockSprite_block-of-resin.png",
+		"Block of Stripped Bamboo": "BlockSprite_block-of-stripped-bamboo.png",
+		"Blue Banner": "BlockSprite_blue-banner.png",
+		"Blue Bed": "BlockSprite_blue-bed.png",
+		"Blue Candle": "BlockSprite_blue-candle.png",
+		"Blue Carpet": "BlockSprite_blue-carpet.png",
+		"Blue Concrete": "BlockSprite_blue-concrete.png",
+		"Blue Concrete Powder": "BlockSprite_blue-concrete-powder.png",
+		"Blue Glazed Terracotta": "BlockSprite_blue-glazed-terracotta.png",
+		"Blue Ice": "BlockSprite_blue-ice.png",
+		"Blue Orchid": "BlockSprite_blue-orchid.png",
+		"Blue Shulker Box": "BlockSprite_blue-shulker-box.png",
+		"Blue Stained Glass": "BlockSprite_blue-stained-glass.png",
+		"Blue Stained Glass Pane": "BlockSprite_blue-stained-glass-pane.png",
+		"Blue Terracotta": "BlockSprite_blue-terracotta.png",
+		"Blue Wool": "BlockSprite_blue-wool.png",
+		"Bone Block": "BlockSprite_bone-block.png",
+		"Bookshelf": "BlockSprite_bookshelf.png",
+		"Brain Coral": "BlockSprite_brain-coral.png",
+		"Brain Coral Block": "BlockSprite_brain-coral-block.png",
+		"Brain Coral Fan": "BlockSprite_brain-coral-fan.png",
+		"Brain Coral Wall Fan": "BlockSprite_brain-coral-fan.png",
+		"Brewing Stand": "BlockSprite_brewing-stand.png",
+		"Brick Slab": "BlockSprite_brick-slab.png",
+		"Brick Stairs": "BlockSprite_brick-stairs.png",
+		"Brick Wall": "BlockSprite_brick-wall.png",
+		"Bricks": "BlockSprite_bricks.png",
+		"Brown Banner": "BlockSprite_brown-banner.png",
+		"Brown Bed": "BlockSprite_brown-bed.png",
+		"Brown Candle": "BlockSprite_brown-candle.png",
+		"Brown Carpet": "BlockSprite_brown-carpet.png",
+		"Brown Concrete": "BlockSprite_brown-concrete.png",
+		"Brown Concrete Powder": "BlockSprite_brown-concrete-powder.png",
+		"Brown Glazed Terracotta": "BlockSprite_brown-glazed-terracotta.png",
+		"Brown Mushroom": "BlockSprite_brown-mushroom.png",
+		"Brown Mushroom Block": "BlockSprite_brown-mushroom-block.png",
+		"Brown Shulker Box": "BlockSprite_brown-shulker-box.png",
+		"Brown Stained Glass": "BlockSprite_brown-stained-glass.png",
+		"Brown Stained Glass Pane": "BlockSprite_brown-stained-glass-pane.png",
+		"Brown Terracotta": "BlockSprite_brown-terracotta.png",
+		"Brown Wool": "BlockSprite_brown-wool.png",
+		"Bubble Column": "BlockSprite_bubble-column.png",
+		"Bubble Coral": "BlockSprite_bubble-coral.png",
+		"Bubble Coral Block": "BlockSprite_bubble-coral-block.png",
+		"Bubble Coral Fan": "BlockSprite_bubble-coral-fan.png",
+		"Bubble Coral Wall Fan": "BlockSprite_bubble-coral-fan.png",
+		"Budding Amethyst": "BlockSprite_budding-amethyst.png",
+		"Bush": "BlockSprite_bush.png",
+		"Cactus": "BlockSprite_cactus.png",
+		"Cactus Flower": "BlockSprite_cactus-flower.png",
+		"Cake": "BlockSprite_cake.png",
+		"Cake with Black Candle": "BlockSprite_black-candle-cake.png",
+		"Cake with Blue Candle": "BlockSprite_blue-candle-cake.png",
+		"Cake with Brown Candle": "BlockSprite_brown-candle-cake.png",
+		"Cake with Candle": "BlockSprite_cake-with-candle.png",
+		"Cake with Cyan Candle": "BlockSprite_cake-with-cyan-candle.png",
+		"Cake with Gray Candle": "BlockSprite_cake-with-gray-candle.png",
+		"Cake with Green Candle": "BlockSprite_cake-with-green-candle.png",
+		"Cake with Light Blue Candle": "BlockSprite_cake-with-light-blue-candle.png",
+		"Cake with Light Gray Candle": "BlockSprite_cake-with-light-gray-candle.png",
+		"Cake with Lime Candle": "BlockSprite_cake-with-lime-candle.png",
+		"Cake with Magenta Candle": "BlockSprite_cake-with-magenta-candle.png",
+		"Cake with Orange Candle": "BlockSprite_cake-with-orange-candle.png",
+		"Cake with Pink Candle": "BlockSprite_cake-with-pink-candle.png",
+		"Cake with Purple Candle": "BlockSprite_cake-with-purple-candle.png",
+		"Cake with Red Candle": "BlockSprite_cake-with-red-candle.png",
+		"Cake with White Candle": "BlockSprite_cake-with-white-candle.png",
+		"Cake with Yellow Candle": "BlockSprite_cake-with-yellow-candle.png",
+		"Calcite": "BlockSprite_calcite.png",
+		"Calibrated Sculk Sensor": "BlockSprite_calibrated-sculk-sensor.png",
+		"Campfire": "BlockSprite_campfire.png",
+		"Candle": "BlockSprite_candle.png",
+		"Carrots": "BlockSprite_carrots.png",
+		"Cartography Table": "BlockSprite_cartography-table.png",
+		"Carved Pumpkin": "BlockSprite_carved-pumpkin.png",
+		"Cauldron": "BlockSprite_cauldron.png",
+		"Cave Air": "BlockSprite_air.png",
+		"Cave Vines": "BlockSprite_cave-vines.png",
+		"Cave Vines Plant": "BlockSprite_cave-vines-plant.png",
+		"Chain Command Block": "BlockSprite_chain-command-block.png",
+		"Cherry Button": "BlockSprite_cherry-button.png",
+		"Cherry Door": "BlockSprite_cherry-door.png",
+		"Cherry Fence": "BlockSprite_cherry-fence.png",
+		"Cherry Fence Gate": "BlockSprite_cherry-fence-gate.png",
+		"Cherry Hanging Sign": "BlockSprite_cherry-hanging-sign.png",
+		"Cherry Leaves": "BlockSprite_cherry-leaves.png",
+		"Cherry Log": "BlockSprite_cherry-log.png",
+		"Cherry Planks": "BlockSprite_cherry-planks.png",
+		"Cherry Pressure Plate": "BlockSprite_cherry-pressure-plate.png",
+		"Cherry Sapling": "BlockSprite_cherry-sapling.png",
+		"Cherry Shelf": "BlockSprite_cherry-shelf-front.png",
+		"Cherry Sign": "BlockSprite_cherry-sign.png",
+		"Cherry Slab": "BlockSprite_cherry-slab.png",
+		"Cherry Stairs": "BlockSprite_cherry-stairs.png",
+		"Cherry Trapdoor": "BlockSprite_cherry-trapdoor.png",
+		"Cherry Wood": "BlockSprite_cherry-log.png",
+		"Chest": "BlockSprite_chest.png",
+		"Chipped Anvil": "BlockSprite_chipped-anvil.png",
+		"Chiseled Bookshelf": "BlockSprite_chiseled-bookshelf.png",
+		"Chiseled Copper": "BlockSprite_chiseled-copper.png",
+		"Chiseled Deepslate": "BlockSprite_chiseled-deepslate.png",
+		"Chiseled Nether Bricks": "BlockSprite_chiseled-nether-bricks.png",
+		"Chiseled Polished Blackstone": "BlockSprite_chiseled-polished-blackstone.png",
+		"Chiseled Quartz Block": "BlockSprite_chiseled-quartz-block.png",
+		"Chiseled Red Sandstone": "BlockSprite_chiseled-red-sandstone.png",
+		"Chiseled Resin Bricks": "BlockSprite_chiseled-resin-bricks.png",
+		"Chiseled Sandstone": "BlockSprite_chiseled-sandstone.png",
+		"Chiseled Stone Bricks": "BlockSprite_chiseled-stone-bricks.png",
+		"Chiseled Tuff": "BlockSprite_chiseled-tuff.png",
+		"Chiseled Tuff Bricks": "BlockSprite_chiseled-tuff-bricks.png",
+		"Chorus Flower": "BlockSprite_chorus-flower.png",
+		"Chorus Plant": "BlockSprite_chorus-plant.png",
+		"Clay": "BlockSprite_clay.png",
+		"Closed Eyeblossom": "BlockSprite_closed-eyeblossom.png",
+		"Coal Ore": "BlockSprite_coal-ore.png",
+		"Coarse Dirt": "BlockSprite_coarse-dirt.png",
+		"Cobbled Deepslate": "BlockSprite_cobbled-deepslate.png",
+		"Cobbled Deepslate Slab": "BlockSprite_cobbled-deepslate-slab.png",
+		"Cobbled Deepslate Stairs": "BlockSprite_cobbled-deepslate-stairs.png",
+		"Cobbled Deepslate Wall": "BlockSprite_cobbled-deepslate-wall.png",
+		"Cobblestone": "BlockSprite_cobblestone.png",
+		"Cobblestone Slab": "BlockSprite_cobblestone-slab.png",
+		"Cobblestone Stairs": "BlockSprite_cobblestone-stairs.png",
+		"Cobblestone Wall": "BlockSprite_cobblestone-wall.png",
+		"Cobweb": "BlockSprite_cobweb.png",
+		"Cocoa": "BlockSprite_cocoa.png",
+		"Command Block": "BlockSprite_command-block.png",
+		"Composter": "BlockSprite_composter.png",
+		"Conduit": "BlockSprite_conduit.png",
+		"Copper Bars": "BlockSprite_copper-bars.png",
+		"Copper Bulb": "BlockSprite_copper-bulb.png",
+		"Copper Chain": "BlockSprite_copper-chain.png",
+		"Copper Chest": "BlockSprite_copper-chest.png",
+		"Copper Door": "BlockSprite_copper-door.png",
+		"Copper Golem Statue": "BlockSprite_copper-golem-statue.png",
+		"Copper Grate": "BlockSprite_copper-grate.png",
+		"Copper Lantern": "BlockSprite_copper-lantern.png",
+		"Copper Ore": "BlockSprite_copper-ore.png",
+		"Copper Trapdoor": "BlockSprite_copper-trapdoor.png",
+		"Cornflower": "BlockSprite_cornflower.png",
+		"Cracked Deepslate Bricks": "BlockSprite_cracked-deepslate-bricks.png",
+		"Cracked Deepslate Tiles": "BlockSprite_cracked-deepslate-tiles.png",
+		"Cracked Nether Bricks": "BlockSprite_cracked-nether-bricks.png",
+		"Cracked Polished Blackstone Bricks": "BlockSprite_cracked-polished-blackstone-bricks.png",
+		"Cracked Stone Bricks": "BlockSprite_cracked-stone-bricks.png",
+		"Crafter": "BlockSprite_crafter.png",
+		"Crafting Table": "BlockSprite_crafting-table.png",
+		"Creaking Heart": "BlockSprite_creaking-heart.png",
+		"Creeper Head": "BlockSprite_creeper-head.png",
+		"Crimson Button": "BlockSprite_crimson-button.png",
+		"Crimson Door": "BlockSprite_crimson-door.png",
+		"Crimson Fence": "BlockSprite_crimson-fence.png",
+		"Crimson Fence Gate": "BlockSprite_crimson-fence-gate.png",
+		"Crimson Fungus": "BlockSprite_crimson-fungi.png",
+		"Crimson Hanging Sign": "BlockSprite_crimson-hanging-sign.png",
+		"Crimson Hyphae": "BlockSprite_crimson-hyphae.png",
+		"Crimson Nylium": "BlockSprite_crimson-nylium.png",
+		"Crimson Planks": "BlockSprite_crimson-planks.png",
+		"Crimson Pressure Plate": "BlockSprite_crimson-pressure-plate.png",
+		"Crimson Roots": "BlockSprite_crimson-roots.png",
+		"Crimson Shelf": "BlockSprite_crimson-shelf-front.png",
+		"Crimson Sign": "BlockSprite_crimson-sign.png",
+		"Crimson Slab": "BlockSprite_crimson-slab.png",
+		"Crimson Stairs": "BlockSprite_crimson-stairs.png",
+		"Crimson Stem": "BlockSprite_crimson-hyphae.png",
+		"Crimson Trapdoor": "BlockSprite_crimson-trapdoor.png",
+		"Crying Obsidian": "BlockSprite_crying-obsidian.png",
+		"Cut Copper": "BlockSprite_cut-copper.png",
+		"Cut Copper Slab": "BlockSprite_cut-copper-slab.png",
+		"Cut Copper Stairs": "BlockSprite_cut-copper-stairs.png",
+		"Cut Red Sandstone": "BlockSprite_cut-red-sandstone.png",
+		"Cut Red Sandstone Slab": "BlockSprite_cut-red-sandstone-slab.png",
+		"Cut Sandstone": "BlockSprite_cut-sandstone.png",
+		"Cut Sandstone Slab": "BlockSprite_cut-sandstone-slab.png",
+		"Cyan Banner": "BlockSprite_cyan-banner.png",
+		"Cyan Bed": "BlockSprite_cyan-bed.png",
+		"Cyan Candle": "BlockSprite_cyan-candle.png",
+		"Cyan Carpet": "BlockSprite_cyan-carpet.png",
+		"Cyan Concrete": "BlockSprite_cyan-concrete.png",
+		"Cyan Concrete Powder": "BlockSprite_cyan-concrete-powder.png",
+		"Cyan Glazed Terracotta": "BlockSprite_cyan-glazed-terracotta.png",
+		"Cyan Shulker Box": "BlockSprite_cyan-shulker-box.png",
+		"Cyan Stained Glass": "BlockSprite_cyan-stained-glass.png",
+		"Cyan Stained Glass Pane": "BlockSprite_cyan-stained-glass-pane.png",
+		"Cyan Terracotta": "BlockSprite_cyan-terracotta.png",
+		"Cyan Wool": "BlockSprite_cyan-wool.png",
+		"Damaged Anvil": "BlockSprite_damaged-anvil.png",
+		"Dandelion": "BlockSprite_dandelion.png",
+		"Dark Oak Button": "BlockSprite_dark-oak-button.png",
+		"Dark Oak Door": "BlockSprite_dark-oak-door.png",
+		"Dark Oak Fence": "BlockSprite_dark-oak-fence.png",
+		"Dark Oak Fence Gate": "BlockSprite_dark-oak-fence-gate.png",
+		"Dark Oak Hanging Sign": "BlockSprite_dark-oak-hanging-sign.png",
+		"Dark Oak Leaves": "BlockSprite_oak-leaves.png",
+		"Dark Oak Log": "BlockSprite_dark-oak-log.png",
+		"Dark Oak Planks": "BlockSprite_dark-oak-planks.png",
+		"Dark Oak Pressure Plate": "BlockSprite_dark-oak-pressure-plate.png",
+		"Dark Oak Sapling": "BlockSprite_dark-oak-sapling.png",
+		"Dark Oak Shelf": "BlockSprite_dark-oak-shelf-front.png",
+		"Dark Oak Sign": "BlockSprite_dark-oak-sign.png",
+		"Dark Oak Slab": "BlockSprite_dark-oak-slab.png",
+		"Dark Oak Stairs": "BlockSprite_dark-oak-stairs.png",
+		"Dark Oak Trapdoor": "BlockSprite_dark-oak-trapdoor.png",
+		"Dark Oak Wood": "BlockSprite_dark-oak-log.png",
+		"Dark Prismarine": "BlockSprite_dark-prismarine.png",
+		"Dark Prismarine Slab": "BlockSprite_dark-prismarine-slab.png",
+		"Dark Prismarine Stairs": "BlockSprite_dark-prismarine-stairs.png",
+		"Daylight Detector": "BlockSprite_daylight-detector.png",
+		"Dead Brain Coral": "BlockSprite_dead-brain-coral.png",
+		"Dead Brain Coral Block": "BlockSprite_dead-brain-coral-block.png",
+		"Dead Brain Coral Fan": "BlockSprite_dead-brain-coral-fan.png",
+		"Dead Brain Coral Wall Fan": "BlockSprite_dead-brain-coral-fan.png",
+		"Dead Bubble Coral": "BlockSprite_dead-bubble-coral.png",
+		"Dead Bubble Coral Block": "BlockSprite_dead-bubble-coral-block.png",
+		"Dead Bubble Coral Fan": "BlockSprite_dead-bubble-coral-fan.png",
+		"Dead Bubble Coral Wall Fan": "BlockSprite_dead-bubble-coral-fan.png",
+		"Dead Bush": "BlockSprite_dead-bush.png",
+		"Dead Fire Coral": "BlockSprite_dead-fire-coral.png",
+		"Dead Fire Coral Block": "BlockSprite_dead-fire-coral-block.png",
+		"Dead Fire Coral Fan": "BlockSprite_dead-fire-coral-fan.png",
+		"Dead Fire Coral Wall Fan": "BlockSprite_dead-fire-coral-fan.png",
+		"Dead Horn Coral": "BlockSprite_dead-horn-coral.png",
+		"Dead Horn Coral Block": "BlockSprite_dead-horn-coral-block.png",
+		"Dead Horn Coral Fan": "BlockSprite_dead-horn-coral-fan.png",
+		"Dead Horn Coral Wall Fan": "BlockSprite_dead-horn-coral-fan.png",
+		"Dead Tube Coral": "BlockSprite_dead-tube-coral.png",
+		"Dead Tube Coral Block": "BlockSprite_dead-tube-coral-block.png",
+		"Dead Tube Coral Fan": "BlockSprite_dead-tube-coral-fan.png",
+		"Dead Tube Coral Wall Fan": "BlockSprite_dead-tube-coral-fan.png",
+		"Decorated Pot": "BlockSprite_decorated-pot.png",
+		"Deepslate": "BlockSprite_deepslate.png",
+		"Deepslate Brick Slab": "BlockSprite_deepslate-brick-slab.png",
+		"Deepslate Brick Stairs": "BlockSprite_deepslate-brick-stairs.png",
+		"Deepslate Brick Wall": "BlockSprite_deepslate-brick-wall.png",
+		"Deepslate Bricks": "BlockSprite_deepslate-bricks.png",
+		"Deepslate Coal Ore": "BlockSprite_deepslate-coal-ore.png",
+		"Deepslate Copper Ore": "BlockSprite_deepslate-copper-ore.png",
+		"Deepslate Diamond Ore": "BlockSprite_deepslate-diamond-ore.png",
+		"Deepslate Emerald Ore": "BlockSprite_deepslate-emerald-ore.png",
+		"Deepslate Gold Ore": "BlockSprite_deepslate-gold-ore.png",
+		"Deepslate Iron Ore": "BlockSprite_deepslate-iron-ore.png",
+		"Deepslate Lapis Lazuli Ore": "BlockSprite_deepslate-lapis-lazuli-ore.png",
+		"Deepslate Redstone Ore": "BlockSprite_deepslate-redstone-ore.png",
+		"Deepslate Tile Slab": "BlockSprite_deepslate-tile-slab.png",
+		"Deepslate Tile Stairs": "BlockSprite_deepslate-tile-stairs.png",
+		"Deepslate Tile Wall": "BlockSprite_deepslate-tile-wall.png",
+		"Deepslate Tiles": "BlockSprite_deepslate-tiles.png",
+		"Detector Rail": "BlockSprite_detector-rail.png",
+		"Diamond Ore": "BlockSprite_diamond-ore.png",
+		"Diorite": "BlockSprite_diorite.png",
+		"Diorite Slab": "BlockSprite_diorite-slab.png",
+		"Diorite Stairs": "BlockSprite_diorite-stairs.png",
+		"Diorite Wall": "BlockSprite_diorite-wall.png",
+		"Dirt": "BlockSprite_dirt.png",
+		"Dirt Path": "BlockSprite_dirt-path.png",
+		"Dispenser": "BlockSprite_dispenser.png",
+		"Dragon Egg": "BlockSprite_dragon-egg.png",
+		"Dragon Head": "BlockSprite_dragon-head.png",
+		"Dried Ghast": "BlockSprite_dried-ghast-state-1-front.png",
+		"Dried Kelp Block": "BlockSprite_dried-kelp-block.png",
+		"Dripstone Block": "BlockSprite_dripstone-block.png",
+		"Dropper": "BlockSprite_dropper.png",
+		"Emerald Ore": "BlockSprite_emerald-ore.png",
+		"Enchanting Table": "BlockSprite_enchanting-table.png",
+		"End Gateway": "BlockSprite_end-gateway.png",
+		"End Portal": "BlockSprite_end-portal.png",
+		"End Portal Frame": "BlockSprite_end-portal-frame.png",
+		"End Rod": "BlockSprite_end-rod.png",
+		"End Stone": "BlockSprite_end-stone.png",
+		"End Stone Brick Slab": "BlockSprite_end-stone-brick-slab.png",
+		"End Stone Brick Stairs": "BlockSprite_end-stone-brick-stairs.png",
+		"End Stone Brick Wall": "BlockSprite_end-stone-brick-wall.png",
+		"End Stone Bricks": "BlockSprite_end-stone-bricks.png",
+		"Ender Chest": "BlockSprite_ender-chest.png",
+		"Exposed Chiseled Copper": "BlockSprite_exposed-chiseled-copper.png",
+		"Exposed Copper": "BlockSprite_exposed-copper.png",
+		"Exposed Copper Bars": "BlockSprite_exposed-copper-bars.png",
+		"Exposed Copper Bulb": "BlockSprite_exposed-copper-bulb.png",
+		"Exposed Copper Chain": "BlockSprite_exposed-copper-chain.png",
+		"Exposed Copper Chest": "BlockSprite_exposed-copper-chest.png",
+		"Exposed Copper Door": "BlockSprite_exposed-copper-door.png",
+		"Exposed Copper Golem Statue": "BlockSprite_exposed-copper-golem-statue.png",
+		"Exposed Copper Grate": "BlockSprite_exposed-copper-grate.png",
+		"Exposed Copper Lantern": "BlockSprite_exposed-copper-lantern.png",
+		"Exposed Copper Trapdoor": "BlockSprite_exposed-copper-trapdoor.png",
+		"Exposed Cut Copper": "BlockSprite_exposed-cut-copper.png",
+		"Exposed Cut Copper Slab": "BlockSprite_exposed-cut-copper-slab.png",
+		"Exposed Cut Copper Stairs": "BlockSprite_exposed-cut-copper-stairs.png",
+		"Exposed Lightning Rod": "BlockSprite_exposed-lightning-rod.png",
+		"Farmland": "BlockSprite_farmland.png",
+		"Fern": "BlockSprite_fern.png",
+		"Fire": "BlockSprite_fire.png",
+		"Fire Coral": "BlockSprite_fire-coral.png",
+		"Fire Coral Block": "BlockSprite_fire-coral-block.png",
+		"Fire Coral Fan": "BlockSprite_fire-coral-fan.png",
+		"Fire Coral Wall Fan": "BlockSprite_fire-coral-fan.png",
+		"Firefly Bush": "BlockSprite_firefly-bush.png",
+		"Fletching Table": "BlockSprite_fletching-table.png",
+		"Flower Pot": "BlockSprite_flower-pot.png",
+		"Flowering Azalea": "BlockSprite_flowering-azalea.png",
+		"Flowering Azalea Leaves": "BlockSprite_flowering-azalea-leaves.png",
+		"Frogspawn": "BlockSprite_frogspawn.png",
+		"Frosted Ice": "BlockSprite_frosted-ice.png",
+		"Furnace": "BlockSprite_furnace.png",
+		"Gilded Blackstone": "BlockSprite_gilded-blackstone.png",
+		"Glass": "BlockSprite_glass.png",
+		"Glass Pane": "BlockSprite_glass-pane.png",
+		"Glow Lichen": "BlockSprite_glow-lichen.png",
+		"Glowstone": "BlockSprite_glowstone.png",
+		"Gold Ore": "BlockSprite_gold-ore.png",
+		"Golden Dandelion": "BlockSprite_golden-dandelion.png",
+		"Granite": "BlockSprite_granite.png",
+		"Granite Slab": "BlockSprite_granite-slab.png",
+		"Granite Stairs": "BlockSprite_granite-stairs.png",
+		"Granite Wall": "BlockSprite_granite-wall.png",
+		"Grass Block": "BlockSprite_grass-block.png",
+		"Gravel": "BlockSprite_gravel.png",
+		"Gray Banner": "BlockSprite_gray-banner.png",
+		"Gray Bed": "BlockSprite_gray-bed.png",
+		"Gray Candle": "BlockSprite_gray-candle.png",
+		"Gray Carpet": "BlockSprite_gray-carpet.png",
+		"Gray Concrete": "BlockSprite_gray-concrete.png",
+		"Gray Concrete Powder": "BlockSprite_gray-concrete-powder.png",
+		"Gray Glazed Terracotta": "BlockSprite_gray-glazed-terracotta.png",
+		"Gray Shulker Box": "BlockSprite_gray-shulker-box.png",
+		"Gray Stained Glass": "BlockSprite_gray-stained-glass.png",
+		"Gray Stained Glass Pane": "BlockSprite_gray-stained-glass-pane.png",
+		"Gray Terracotta": "BlockSprite_gray-terracotta.png",
+		"Gray Wool": "BlockSprite_gray-wool.png",
+		"Green Banner": "BlockSprite_green-banner.png",
+		"Green Bed": "BlockSprite_green-bed.png",
+		"Green Candle": "BlockSprite_green-candle.png",
+		"Green Carpet": "BlockSprite_green-carpet.png",
+		"Green Concrete": "BlockSprite_green-concrete.png",
+		"Green Concrete Powder": "BlockSprite_green-concrete-powder.png",
+		"Green Glazed Terracotta": "BlockSprite_green-glazed-terracotta.png",
+		"Green Shulker Box": "BlockSprite_green-shulker-box.png",
+		"Green Stained Glass": "BlockSprite_green-stained-glass.png",
+		"Green Stained Glass Pane": "BlockSprite_green-stained-glass-pane.png",
+		"Green Terracotta": "BlockSprite_green-terracotta.png",
+		"Green Wool": "BlockSprite_green-wool.png",
+		"Grindstone": "BlockSprite_grindstone.png",
+		"Hanging Roots": "BlockSprite_hanging-roots.png",
+		"Hay Bale": "BlockSprite_hay-bale.png",
+		"Heavy Core": "BlockSprite_heavy-core.png",
+		"Heavy Weighted Pressure Plate": "BlockSprite_heavy-weighted-pressure-plate.png",
+		"Honey Block": "BlockSprite_honey-block.png",
+		"Honeycomb Block": "BlockSprite_honeycomb-block.png",
+		"Hopper": "BlockSprite_hopper.png",
+		"Horn Coral": "BlockSprite_horn-coral.png",
+		"Horn Coral Block": "BlockSprite_horn-coral-block.png",
+		"Horn Coral Fan": "BlockSprite_horn-coral-fan.png",
+		"Horn Coral Wall Fan": "BlockSprite_horn-coral-fan.png",
+		"Ice": "BlockSprite_ice.png",
+		"Infested Chiseled Stone Bricks": "BlockSprite_infested-chiseled-stone-bricks.png",
+		"Infested Cobblestone": "BlockSprite_infested-cobblestone.png",
+		"Infested Cracked Stone Bricks": "BlockSprite_infested-cracked-stone-bricks.png",
+		"Infested Deepslate": "BlockSprite_infested-deepslate.png",
+		"Infested Mossy Stone Bricks": "BlockSprite_infested-mossy-stone-bricks.png",
+		"Infested Stone": "BlockSprite_infested-stone.png",
+		"Infested Stone Bricks": "BlockSprite_infested-stone-bricks.png",
+		"Iron Bars": "BlockSprite_iron-bars.png",
+		"Iron Chain": "BlockSprite_iron-chain.png",
+		"Iron Door": "BlockSprite_iron-door.png",
+		"Iron Ore": "BlockSprite_iron-ore.png",
+		"Iron Trapdoor": "BlockSprite_iron-trapdoor.png",
+		"Jack o'Lantern": "BlockSprite_jack-o%27lantern.png",
+		"Jigsaw Block": "BlockSprite_jigsaw.png",
+		"Jukebox": "BlockSprite_jukebox.png",
+		"Jungle Button": "BlockSprite_jungle-button.png",
+		"Jungle Door": "BlockSprite_jungle-door.png",
+		"Jungle Fence": "BlockSprite_jungle-fence.png",
+		"Jungle Fence Gate": "BlockSprite_jungle-fence-gate.png",
+		"Jungle Hanging Sign": "BlockSprite_jungle-hanging-sign.png",
+		"Jungle Leaves": "BlockSprite_jungle-leaves.png",
+		"Jungle Log": "BlockSprite_jungle-log.png",
+		"Jungle Planks": "BlockSprite_jungle-planks.png",
+		"Jungle Pressure Plate": "BlockSprite_jungle-pressure-plate.png",
+		"Jungle Sapling": "BlockSprite_jungle-sapling.png",
+		"Jungle Shelf": "BlockSprite_jungle-shelf-front.png",
+		"Jungle Sign": "BlockSprite_jungle-sign.png",
+		"Jungle Slab": "BlockSprite_jungle-slab.png",
+		"Jungle Stairs": "BlockSprite_jungle-stairs.png",
+		"Jungle Trapdoor": "BlockSprite_jungle-trapdoor.png",
+		"Jungle Wood": "BlockSprite_jungle-log.png",
+		"Kelp": "BlockSprite_kelp.png",
+		"Kelp Plant": "BlockSprite_kelp-plant.png",
+		"Ladder": "BlockSprite_ladder.png",
+		"Lantern": "BlockSprite_lantern.png",
+		"Lapis Lazuli Ore": "BlockSprite_lapis-lazuli-ore.png",
+		"Large Amethyst Bud": "BlockSprite_amethyst-bud.png",
+		"Large Fern": "BlockSprite_large-fern.png",
+		"Lava": "BlockSprite_lava.png",
+		"Lava Cauldron": "BlockSprite_lava-cauldron.png",
+		"Leaf Litter": "BlockSprite_leaf-litter.png",
+		"Lectern": "BlockSprite_lectern.png",
+		"Lever": "BlockSprite_lever.png",
+		"Light": "BlockSprite_light.png",
+		"Light Blue Banner": "BlockSprite_light-blue-banner.png",
+		"Light Blue Bed": "BlockSprite_light-blue-bed.png",
+		"Light Blue Candle": "BlockSprite_light-blue-candle.png",
+		"Light Blue Carpet": "BlockSprite_light-blue-carpet.png",
+		"Light Blue Concrete": "BlockSprite_light-blue-concrete.png",
+		"Light Blue Concrete Powder": "BlockSprite_light-blue-concrete-powder.png",
+		"Light Blue Glazed Terracotta": "BlockSprite_light-blue-glazed-terracotta.png",
+		"Light Blue Shulker Box": "BlockSprite_light-blue-shulker-box.png",
+		"Light Blue Stained Glass": "BlockSprite_light-blue-stained-glass.png",
+		"Light Blue Stained Glass Pane": "BlockSprite_light-blue-stained-glass-pane.png",
+		"Light Blue Terracotta": "BlockSprite_light-blue-terracotta.png",
+		"Light Blue Wool": "BlockSprite_light-blue-wool.png",
+		"Light Gray Banner": "BlockSprite_light-gray-banner.png",
+		"Light Gray Bed": "BlockSprite_light-gray-bed.png",
+		"Light Gray Candle": "BlockSprite_light-gray-candle.png",
+		"Light Gray Carpet": "BlockSprite_light-gray-carpet.png",
+		"Light Gray Concrete": "BlockSprite_light-gray-concrete.png",
+		"Light Gray Concrete Powder": "BlockSprite_light-gray-concrete-powder.png",
+		"Light Gray Glazed Terracotta": "BlockSprite_light-gray-glazed-terracotta.png",
+		"Light Gray Shulker Box": "BlockSprite_light-gray-shulker-box.png",
+		"Light Gray Stained Glass": "BlockSprite_light-gray-stained-glass.png",
+		"Light Gray Stained Glass Pane": "BlockSprite_light-gray-stained-glass-pane.png",
+		"Light Gray Terracotta": "BlockSprite_light-gray-terracotta.png",
+		"Light Gray Wool": "BlockSprite_light-gray-wool.png",
+		"Light Weighted Pressure Plate": "BlockSprite_light-weighted-pressure-plate.png",
+		"Lightning Rod": "BlockSprite_lightning-rod.png",
+		"Lilac": "BlockSprite_lilac.png",
+		"Lily Pad": "BlockSprite_lily-pad.png",
+		"Lily of the Valley": "BlockSprite_lily-of-the-valley.png",
+		"Lime Banner": "BlockSprite_lime-banner.png",
+		"Lime Bed": "BlockSprite_lime-bed.png",
+		"Lime Candle": "BlockSprite_lime-candle.png",
+		"Lime Carpet": "BlockSprite_lime-carpet.png",
+		"Lime Concrete": "BlockSprite_lime-concrete.png",
+		"Lime Concrete Powder": "BlockSprite_lime-concrete-powder.png",
+		"Lime Glazed Terracotta": "BlockSprite_lime-glazed-terracotta.png",
+		"Lime Shulker Box": "BlockSprite_lime-shulker-box.png",
+		"Lime Stained Glass": "BlockSprite_lime-stained-glass.png",
+		"Lime Stained Glass Pane": "BlockSprite_lime-stained-glass-pane.png",
+		"Lime Terracotta": "BlockSprite_lime-terracotta.png",
+		"Lime Wool": "BlockSprite_lime-wool.png",
+		"Lodestone": "BlockSprite_lodestone.png",
+		"Loom": "BlockSprite_loom.png",
+		"Magenta Banner": "BlockSprite_magenta-banner.png",
+		"Magenta Bed": "BlockSprite_magenta-bed.png",
+		"Magenta Candle": "BlockSprite_magenta-candle.png",
+		"Magenta Carpet": "BlockSprite_magenta-carpet.png",
+		"Magenta Concrete": "BlockSprite_magenta-concrete.png",
+		"Magenta Concrete Powder": "BlockSprite_magenta-concrete-powder.png",
+		"Magenta Glazed Terracotta": "BlockSprite_magenta-glazed-terracotta.png",
+		"Magenta Shulker Box": "BlockSprite_magenta-shulker-box.png",
+		"Magenta Stained Glass": "BlockSprite_magenta-stained-glass.png",
+		"Magenta Stained Glass Pane": "BlockSprite_magenta-stained-glass-pane.png",
+		"Magenta Terracotta": "BlockSprite_magenta-terracotta.png",
+		"Magenta Wool": "BlockSprite_magenta-wool.png",
+		"Magma Block": "BlockSprite_magma-block.png",
+		"Mangrove Button": "BlockSprite_mangrove-button.png",
+		"Mangrove Door": "BlockSprite_mangrove-door.png",
+		"Mangrove Fence": "BlockSprite_mangrove-fence.png",
+		"Mangrove Fence Gate": "BlockSprite_mangrove-fence-gate.png",
+		"Mangrove Hanging Sign": "BlockSprite_mangrove-hanging-sign.png",
+		"Mangrove Leaves": "BlockSprite_mangrove-leaves.png",
+		"Mangrove Log": "BlockSprite_mangrove-log.png",
+		"Mangrove Planks": "BlockSprite_mangrove-planks.png",
+		"Mangrove Pressure Plate": "BlockSprite_mangrove-pressure-plate.png",
+		"Mangrove Propagule": "BlockSprite_mangrove-propagule.png",
+		"Mangrove Roots": "BlockSprite_mangrove-roots.png",
+		"Mangrove Shelf": "BlockSprite_mangrove-shelf-front.png",
+		"Mangrove Sign": "BlockSprite_mangrove-sign.png",
+		"Mangrove Slab": "BlockSprite_mangrove-slab.png",
+		"Mangrove Stairs": "BlockSprite_mangrove-stairs.png",
+		"Mangrove Trapdoor": "BlockSprite_mangrove-trapdoor.png",
+		"Mangrove Wood": "BlockSprite_mangrove-log.png",
+		"Medium Amethyst Bud": "BlockSprite_medium-amethyst-bud.png",
+		"Melon": "BlockSprite_melon.png",
+		"Melon Stem": "BlockSprite_melon-stem.png",
+		"Monster Spawner": "BlockSprite_monster-spawner.png",
+		"Moss Block": "BlockSprite_moss-block.png",
+		"Moss Carpet": "BlockSprite_moss-carpet.png",
+		"Mossy Cobblestone": "BlockSprite_mossy-cobblestone.png",
+		"Mossy Cobblestone Slab": "BlockSprite_mossy-cobblestone-slab.png",
+		"Mossy Cobblestone Stairs": "BlockSprite_mossy-cobblestone-stairs.png",
+		"Mossy Cobblestone Wall": "BlockSprite_mossy-cobblestone-wall.png",
+		"Mossy Stone Brick Slab": "BlockSprite_mossy-stone-brick-slab.png",
+		"Mossy Stone Brick Stairs": "BlockSprite_mossy-stone-brick-stairs.png",
+		"Mossy Stone Brick Wall": "BlockSprite_mossy-stone-brick-wall.png",
+		"Mossy Stone Bricks": "BlockSprite_mossy-stone-bricks.png",
+		"Moving Piston": "BlockSprite_moving-piston.png",
+		"Mud": "BlockSprite_mud.png",
+		"Mud Brick Slab": "BlockSprite_mud-brick-slab.png",
+		"Mud Brick Stairs": "BlockSprite_mud-brick-stairs.png",
+		"Mud Brick Wall": "BlockSprite_mud-brick-wall.png",
+		"Mud Bricks": "BlockSprite_mud-bricks.png",
+		"Muddy Mangrove Roots": "BlockSprite_muddy-mangrove-roots.png",
+		"Mushroom Stem": "BlockSprite_mushroom-stem.png",
+		"Mycelium": "BlockSprite_mycelium.png",
+		"Nether Brick Fence": "BlockSprite_nether-brick-fence.png",
+		"Nether Brick Slab": "BlockSprite_nether-brick-slab.png",
+		"Nether Brick Stairs": "BlockSprite_nether-brick-stairs.png",
+		"Nether Brick Wall": "BlockSprite_nether-brick-wall.png",
+		"Nether Bricks": "BlockSprite_nether-bricks.png",
+		"Nether Gold Ore": "BlockSprite_nether-gold-ore.png",
+		"Nether Portal": "BlockSprite_nether-portal.png",
+		"Nether Quartz Ore": "BlockSprite_nether-quartz-ore.png",
+		"Nether Sprouts": "BlockSprite_nether-sprouts.png",
+		"Nether Wart": "BlockSprite_nether-wart.png",
+		"Nether Wart Block": "BlockSprite_nether-wart-block.png",
+		"Netherrack": "BlockSprite_netherrack.png",
+		"Note Block": "BlockSprite_jukebox-side.png",
+		"Oak Button": "BlockSprite_oak-button.png",
+		"Oak Door": "BlockSprite_oak-door.png",
+		"Oak Fence": "BlockSprite_oak-fence.png",
+		"Oak Fence Gate": "BlockSprite_oak-fence-gate.png",
+		"Oak Hanging Sign": "BlockSprite_oak-hanging-sign.png",
+		"Oak Leaves": "BlockSprite_oak-leaves.png",
+		"Oak Log": "BlockSprite_oak-log.png",
+		"Oak Planks": "BlockSprite_oak-planks.png",
+		"Oak Pressure Plate": "BlockSprite_oak-pressure-plate.png",
+		"Oak Sapling": "BlockSprite_oak-sapling.png",
+		"Oak Shelf": "BlockSprite_oak-shelf-front.png",
+		"Oak Sign": "BlockSprite_oak-sign.png",
+		"Oak Slab": "BlockSprite_oak-slab.png",
+		"Oak Stairs": "BlockSprite_oak-stairs.png",
+		"Oak Trapdoor": "BlockSprite_oak-trapdoor.png",
+		"Oak Wood": "BlockSprite_oak-log.png",
+		"Observer": "BlockSprite_observer.png",
+		"Obsidian": "BlockSprite_obsidian.png",
+		"Ochre Froglight": "BlockSprite_ochre-froglight.png",
+		"Open Eyeblossom": "BlockSprite_open-eyeblossom.png",
+		"Orange Banner": "BlockSprite_orange-banner.png",
+		"Orange Bed": "BlockSprite_orange-bed.png",
+		"Orange Candle": "BlockSprite_orange-candle.png",
+		"Orange Carpet": "BlockSprite_orange-carpet.png",
+		"Orange Concrete": "BlockSprite_orange-concrete.png",
+		"Orange Concrete Powder": "BlockSprite_orange-concrete-powder.png",
+		"Orange Glazed Terracotta": "BlockSprite_orange-glazed-terracotta.png",
+		"Orange Shulker Box": "BlockSprite_orange-shulker-box.png",
+		"Orange Stained Glass": "BlockSprite_orange-stained-glass.png",
+		"Orange Stained Glass Pane": "BlockSprite_orange-stained-glass-pane.png",
+		"Orange Terracotta": "BlockSprite_orange-terracotta.png",
+		"Orange Tulip": "BlockSprite_orange-tulip.png",
+		"Orange Wool": "BlockSprite_orange-wool.png",
+		"Oxeye Daisy": "BlockSprite_oxeye-daisy.png",
+		"Oxidized Chiseled Copper": "BlockSprite_oxidized-chiseled-copper.png",
+		"Oxidized Copper": "BlockSprite_oxidized-copper.png",
+		"Oxidized Copper Bars": "BlockSprite_oxidized-copper-bars.png",
+		"Oxidized Copper Bulb": "BlockSprite_oxidized-copper-bulb.png",
+		"Oxidized Copper Chain": "BlockSprite_oxidized-copper-chain.png",
+		"Oxidized Copper Chest": "BlockSprite_oxidized-copper-chest.png",
+		"Oxidized Copper Door": "BlockSprite_oxidized-copper-door.png",
+		"Oxidized Copper Golem Statue": "BlockSprite_oxidized-copper-golem-statue.png",
+		"Oxidized Copper Grate": "BlockSprite_oxidized-copper-grate.png",
+		"Oxidized Copper Lantern": "BlockSprite_oxidized-copper-lantern.png",
+		"Oxidized Copper Trapdoor": "BlockSprite_oxidized-copper-trapdoor.png",
+		"Oxidized Cut Copper": "BlockSprite_oxidized-cut-copper.png",
+		"Oxidized Cut Copper Slab": "BlockSprite_oxidized-cut-copper-slab.png",
+		"Oxidized Cut Copper Stairs": "BlockSprite_oxidized-cut-copper-stairs.png",
+		"Oxidized Lightning Rod": "BlockSprite_oxidized-lightning-rod.png",
+		"Packed Ice": "BlockSprite_packed-ice.png",
+		"Packed Mud": "BlockSprite_packed-mud.png",
+		"Pale Hanging Moss": "BlockSprite_pale-hanging-moss.png",
+		"Pale Moss Block": "BlockSprite_pale-moss-block.png",
+		"Pale Moss Carpet": "BlockSprite_pale-moss-carpet.png",
+		"Pale Oak Button": "BlockSprite_pale-oak-button.png",
+		"Pale Oak Door": "BlockSprite_pale-oak-door.png",
+		"Pale Oak Fence": "BlockSprite_pale-oak-fence.png",
+		"Pale Oak Fence Gate": "BlockSprite_pale-oak-fence-gate.png",
+		"Pale Oak Hanging Sign": "BlockSprite_pale-oak-hanging-sign.png",
+		"Pale Oak Leaves": "BlockSprite_pale-oak-leaves.png",
+		"Pale Oak Log": "BlockSprite_pale-oak-log.png",
+		"Pale Oak Planks": "BlockSprite_pale-oak-planks.png",
+		"Pale Oak Pressure Plate": "BlockSprite_pale-oak-pressure-plate.png",
+		"Pale Oak Sapling": "BlockSprite_pale-oak-sapling.png",
+		"Pale Oak Shelf": "BlockSprite_pale-oak-shelf-front.png",
+		"Pale Oak Sign": "BlockSprite_pale-oak-sign.png",
+		"Pale Oak Slab": "BlockSprite_pale-oak-slab.png",
+		"Pale Oak Stairs": "BlockSprite_pale-oak-stairs.png",
+		"Pale Oak Trapdoor": "BlockSprite_pale-oak-trapdoor.png",
+		"Pale Oak Wood": "BlockSprite_pale-oak-log.png",
+		"Pearlescent Froglight": "BlockSprite_pearlescent-froglight.png",
+		"Peony": "BlockSprite_peony.png",
+		"Petrified Oak Slab": "BlockSprite_oak-slab.png",
+		"Piglin Head": "BlockSprite_piglin-head.png",
+		"Pink Banner": "BlockSprite_pink-banner.png",
+		"Pink Bed": "BlockSprite_pink-bed.png",
+		"Pink Candle": "BlockSprite_pink-candle.png",
+		"Pink Carpet": "BlockSprite_pink-carpet.png",
+		"Pink Concrete": "BlockSprite_pink-concrete.png",
+		"Pink Concrete Powder": "BlockSprite_pink-concrete-powder.png",
+		"Pink Glazed Terracotta": "BlockSprite_pink-glazed-terracotta.png",
+		"Pink Petals": "BlockSprite_pink-petals.png",
+		"Pink Shulker Box": "BlockSprite_pink-shulker-box.png",
+		"Pink Stained Glass": "BlockSprite_pink-stained-glass.png",
+		"Pink Stained Glass Pane": "BlockSprite_pink-stained-glass-pane.png",
+		"Pink Terracotta": "BlockSprite_pink-terracotta.png",
+		"Pink Tulip": "BlockSprite_pink-tulip.png",
+		"Pink Wool": "BlockSprite_pink-wool.png",
+		"Piston": "BlockSprite_piston.png",
+		"Piston Head": "BlockSprite_piston-arm-collision.png",
+		"Pitcher Crop": "BlockSprite_pitcher-crop.png",
+		"Pitcher Plant": "BlockSprite_pitcher-plant.png",
+		"Player Head": "BlockSprite_player-head.png",
+		"Podzol": "BlockSprite_podzol.png",
+		"Pointed Dripstone": "BlockSprite_pointed-dripstone.png",
+		"Polished Andesite": "BlockSprite_polished-andesite.png",
+		"Polished Andesite Slab": "BlockSprite_polished-andesite-slab.png",
+		"Polished Andesite Stairs": "BlockSprite_polished-andesite-stairs.png",
+		"Polished Basalt": "BlockSprite_polished-basalt.png",
+		"Polished Blackstone": "BlockSprite_polished-blackstone.png",
+		"Polished Blackstone Brick Slab": "BlockSprite_polished-blackstone-brick-slab.png",
+		"Polished Blackstone Brick Stairs": "BlockSprite_polished-blackstone-brick-stairs.png",
+		"Polished Blackstone Brick Wall": "BlockSprite_polished-blackstone-brick-wall.png",
+		"Polished Blackstone Bricks": "BlockSprite_polished-blackstone-bricks.png",
+		"Polished Blackstone Button": "BlockSprite_polished-blackstone-button.png",
+		"Polished Blackstone Pressure Plate": "BlockSprite_polished-blackstone-pressure-plate.png",
+		"Polished Blackstone Slab": "BlockSprite_polished-blackstone-slab.png",
+		"Polished Blackstone Stairs": "BlockSprite_polished-blackstone-stairs.png",
+		"Polished Blackstone Wall": "BlockSprite_polished-blackstone-wall.png",
+		"Polished Deepslate": "BlockSprite_polished-deepslate.png",
+		"Polished Deepslate Slab": "BlockSprite_polished-deepslate-slab.png",
+		"Polished Deepslate Stairs": "BlockSprite_polished-deepslate-stairs.png",
+		"Polished Deepslate Wall": "BlockSprite_polished-deepslate-wall.png",
+		"Polished Diorite": "BlockSprite_polished-diorite.png",
+		"Polished Diorite Slab": "BlockSprite_polished-diorite-slab.png",
+		"Polished Diorite Stairs": "BlockSprite_polished-diorite-stairs.png",
+		"Polished Granite": "BlockSprite_polished-granite.png",
+		"Polished Granite Slab": "BlockSprite_polished-granite-slab.png",
+		"Polished Granite Stairs": "BlockSprite_polished-granite-stairs.png",
+		"Polished Tuff": "BlockSprite_polished-tuff.png",
+		"Polished Tuff Slab": "BlockSprite_polished-tuff-slab.png",
+		"Polished Tuff Stairs": "BlockSprite_polished-tuff-stairs.png",
+		"Polished Tuff Wall": "BlockSprite_polished-tuff-wall.png",
+		"Poppy": "BlockSprite_poppy.png",
+		"Potatoes": "BlockSprite_potatoes.png",
+		"Potted Acacia Sapling": "BlockSprite_potted-acacia-sapling.png",
+		"Potted Allium": "BlockSprite_potted-allium.png",
+		"Potted Azalea": "BlockSprite_potted-azalea-bush.png",
+		"Potted Azure Bluet": "BlockSprite_potted-azure-bluet.png",
+		"Potted Bamboo": "BlockSprite_potted-bamboo.png",
+		"Potted Birch Sapling": "BlockSprite_potted-birch-sapling.png",
+		"Potted Blue Orchid": "BlockSprite_potted-blue-orchid.png",
+		"Potted Brown Mushroom": "BlockSprite_potted-brown-mushroom.png",
+		"Potted Cactus": "BlockSprite_potted-cactus.png",
+		"Potted Cherry Sapling": "BlockSprite_potted-cherry-sapling.png",
+		"Potted Closed Eyeblossom": "BlockSprite_potted-closed-eyeblossom.png",
+		"Potted Cornflower": "BlockSprite_potted-cornflower.png",
+		"Potted Crimson Fungus": "BlockSprite_potted-crimson-fungi.png",
+		"Potted Crimson Roots": "BlockSprite_potted-crimson-roots.png",
+		"Potted Dandelion": "BlockSprite_potted-dandelion.png",
+		"Potted Dark Oak Sapling": "BlockSprite_potted-dark-oak-sapling.png",
+		"Potted Dead Bush": "BlockSprite_potted-dead-bush.png",
+		"Potted Fern": "BlockSprite_potted-fern.png",
+		"Potted Flowering Azalea": "BlockSprite_potted-flowering-azalea-bush.png",
+		"Potted Golden Dandelion": "BlockSprite_potted-golden-dandelion.png",
+		"Potted Jungle Sapling": "BlockSprite_potted-jungle-sapling.png",
+		"Potted Lily of the Valley": "BlockSprite_potted-lily-of-the-valley.png",
+		"Potted Mangrove Propagule": "BlockSprite_potted-mangrove-propagule.png",
+		"Potted Oak Sapling": "BlockSprite_potted-oak-sapling.png",
+		"Potted Open Eyeblossom": "BlockSprite_potted-open-eyeblossom.png",
+		"Potted Orange Tulip": "BlockSprite_potted-orange-tulip.png",
+		"Potted Oxeye Daisy": "BlockSprite_potted-oxeye-daisy.png",
+		"Potted Pale Oak Sapling": "BlockSprite_potted-pale-oak-sapling.png",
+		"Potted Pink Tulip": "BlockSprite_potted-pink-tulip.png",
+		"Potted Poppy": "BlockSprite_potted-poppy.png",
+		"Potted Red Mushroom": "BlockSprite_potted-red-mushroom.png",
+		"Potted Red Tulip": "BlockSprite_potted-red-tulip.png",
+		"Potted Spruce Sapling": "BlockSprite_potted-spruce-sapling.png",
+		"Potted Torchflower": "BlockSprite_potted-torchflower.png",
+		"Potted Warped Fungus": "BlockSprite_potted-warped-fungi.png",
+		"Potted Warped Roots": "BlockSprite_potted-warped-roots.png",
+		"Potted White Tulip": "BlockSprite_potted-white-tulip.png",
+		"Potted Wither Rose": "BlockSprite_potted-wither-rose.png",
+		"Powder Snow": "BlockSprite_powder-snow.png",
+		"Powder Snow Cauldron": "BlockSprite_powder-snow-cauldron.png",
+		"Powered Rail": "BlockSprite_powered-rail.png",
+		"Prismarine": "BlockSprite_prismarine.png",
+		"Prismarine Brick Slab": "BlockSprite_prismarine-brick-slab.png",
+		"Prismarine Brick Stairs": "BlockSprite_prismarine-brick-stairs.png",
+		"Prismarine Bricks": "BlockSprite_prismarine-bricks.png",
+		"Prismarine Slab": "BlockSprite_prismarine-slab.png",
+		"Prismarine Stairs": "BlockSprite_prismarine-stairs.png",
+		"Prismarine Wall": "BlockSprite_prismarine-wall.png",
+		"Pumpkin": "BlockSprite_pumpkin.png",
+		"Pumpkin Stem": "BlockSprite_pumpkin-stem.png",
+		"Purple Banner": "BlockSprite_purple-banner.png",
+		"Purple Bed": "BlockSprite_purple-bed.png",
+		"Purple Candle": "BlockSprite_purple-candle.png",
+		"Purple Carpet": "BlockSprite_purple-carpet.png",
+		"Purple Concrete": "BlockSprite_purple-concrete.png",
+		"Purple Concrete Powder": "BlockSprite_purple-concrete-powder.png",
+		"Purple Glazed Terracotta": "BlockSprite_purple-glazed-terracotta.png",
+		"Purple Shulker Box": "BlockSprite_purple-shulker-box.png",
+		"Purple Stained Glass": "BlockSprite_purple-stained-glass.png",
+		"Purple Stained Glass Pane": "BlockSprite_purple-stained-glass-pane.png",
+		"Purple Terracotta": "BlockSprite_purple-terracotta.png",
+		"Purple Wool": "BlockSprite_purple-wool.png",
+		"Purpur Block": "BlockSprite_purpur-block.png",
+		"Purpur Pillar": "BlockSprite_purpur-pillar.png",
+		"Purpur Slab": "BlockSprite_purpur-slab.png",
+		"Purpur Stairs": "BlockSprite_purpur-stairs.png",
+		"Quartz Bricks": "BlockSprite_quartz-bricks.png",
+		"Quartz Pillar": "BlockSprite_quartz-pillar.png",
+		"Quartz Slab": "BlockSprite_quartz-slab.png",
+		"Quartz Stairs": "BlockSprite_quartz-stairs.png",
+		"Rail": "BlockSprite_rail.png",
+		"Red Banner": "BlockSprite_red-banner.png",
+		"Red Bed": "BlockSprite_red-bed.png",
+		"Red Candle": "BlockSprite_red-candle.png",
+		"Red Carpet": "BlockSprite_red-carpet.png",
+		"Red Concrete": "BlockSprite_red-concrete.png",
+		"Red Concrete Powder": "BlockSprite_red-concrete-powder.png",
+		"Red Glazed Terracotta": "BlockSprite_red-glazed-terracotta.png",
+		"Red Mushroom": "BlockSprite_red-mushroom.png",
+		"Red Mushroom Block": "BlockSprite_red-mushroom-block.png",
+		"Red Nether Brick Slab": "BlockSprite_red-nether-brick-slab.png",
+		"Red Nether Brick Stairs": "BlockSprite_red-nether-brick-stairs.png",
+		"Red Nether Brick Wall": "BlockSprite_red-nether-brick-wall.png",
+		"Red Nether Bricks": "BlockSprite_red-nether-bricks.png",
+		"Red Sand": "BlockSprite_red-sand.png",
+		"Red Sandstone": "BlockSprite_red-sandstone.png",
+		"Red Sandstone Slab": "BlockSprite_red-sandstone-slab.png",
+		"Red Sandstone Stairs": "BlockSprite_red-sandstone-stairs.png",
+		"Red Sandstone Wall": "BlockSprite_red-sandstone-wall.png",
+		"Red Shulker Box": "BlockSprite_red-shulker-box.png",
+		"Red Stained Glass": "BlockSprite_red-stained-glass.png",
+		"Red Stained Glass Pane": "BlockSprite_red-stained-glass-pane.png",
+		"Red Terracotta": "BlockSprite_red-terracotta.png",
+		"Red Tulip": "BlockSprite_red-tulip.png",
+		"Red Wool": "BlockSprite_red-wool.png",
+		"Redstone Comparator": "BlockSprite_redstone-comparator.png",
+		"Redstone Lamp": "BlockSprite_redstone-lamp.png",
+		"Redstone Ore": "BlockSprite_redstone-ore.png",
+		"Redstone Repeater": "BlockSprite_redstone-repeater.png",
+		"Redstone Torch": "BlockSprite_redstone-torch.png",
+		"Redstone Wire": "BlockSprite_redstone-dust.png",
+		"Reinforced Deepslate": "BlockSprite_reinforced-deepslate.png",
+		"Repeating Command Block": "BlockSprite_repeating-command-block.png",
+		"Resin Brick Slab": "BlockSprite_resin-brick-slab.png",
+		"Resin Brick Stairs": "BlockSprite_resin-brick-stairs.png",
+		"Resin Brick Wall": "BlockSprite_resin-brick-wall.png",
+		"Resin Bricks": "BlockSprite_resin-bricks.png",
+		"Resin Clump": "BlockSprite_resin-clump.png",
+		"Respawn Anchor": "BlockSprite_respawn-anchor.png",
+		"Rooted Dirt": "BlockSprite_rooted-dirt.png",
+		"Rose Bush": "BlockSprite_rose-bush.png",
+		"Sand": "BlockSprite_sand.png",
+		"Sandstone": "BlockSprite_sandstone.png",
+		"Sandstone Slab": "BlockSprite_sandstone-slab.png",
+		"Sandstone Stairs": "BlockSprite_sandstone-stairs.png",
+		"Sandstone Wall": "BlockSprite_sandstone-wall.png",
+		"Scaffolding": "BlockSprite_scaffolding.png",
+		"Sculk": "BlockSprite_sculk.png",
+		"Sculk Catalyst": "BlockSprite_sculk-catalyst.png",
+		"Sculk Sensor": "BlockSprite_sculk-sensor.png",
+		"Sculk Shrieker": "BlockSprite_sculk-shrieker.png",
+		"Sculk Vein": "BlockSprite_sculk-vein.png",
+		"Sea Lantern": "BlockSprite_sea-lantern.png",
+		"Sea Pickle": "BlockSprite_sea-pickle.png",
+		"Seagrass": "BlockSprite_seagrass.png",
+		"Short Dry Grass": "BlockSprite_short-dry-grass.png",
+		"Short Grass": "BlockSprite_short-grass.png",
+		"Shroomlight": "BlockSprite_shroomlight.png",
+		"Shulker Box": "BlockSprite_shulker-box.png",
+		"Skeleton Skull": "BlockSprite_skeleton-skull.png",
+		"Slime Block": "BlockSprite_slime-block.png",
+		"Small Amethyst Bud": "BlockSprite_small-amethyst-bud.png",
+		"Small Dripleaf": "BlockSprite_small-dripleaf.png",
+		"Smithing Table": "BlockSprite_smithing-table.png",
+		"Smoker": "BlockSprite_smoker.png",
+		"Smooth Basalt": "BlockSprite_smooth-basalt.png",
+		"Smooth Quartz Block": "BlockSprite_smooth-quartz-block.png",
+		"Smooth Quartz Slab": "BlockSprite_smooth-quartz-slab.png",
+		"Smooth Quartz Stairs": "BlockSprite_smooth-quartz-stairs.png",
+		"Smooth Red Sandstone": "BlockSprite_smooth-red-sandstone.png",
+		"Smooth Red Sandstone Slab": "BlockSprite_smooth-red-sandstone-slab.png",
+		"Smooth Red Sandstone Stairs": "BlockSprite_smooth-red-sandstone-stairs.png",
+		"Smooth Sandstone": "BlockSprite_smooth-sandstone.png",
+		"Smooth Sandstone Slab": "BlockSprite_smooth-sandstone-slab.png",
+		"Smooth Sandstone Stairs": "BlockSprite_smooth-sandstone-stairs.png",
+		"Smooth Stone": "BlockSprite_smooth-stone.png",
+		"Smooth Stone Slab": "BlockSprite_smooth-stone-slab.png",
+		"Sniffer Egg": "BlockSprite_sniffer-egg.png",
+		"Snow": "BlockSprite_snow.png",
+		"Snow Block": "BlockSprite_snow-block.png",
+		"Soul Campfire": "BlockSprite_soul-campfire.png",
+		"Soul Fire": "BlockSprite_soul-fire.png",
+		"Soul Lantern": "BlockSprite_soul-lantern.png",
+		"Soul Sand": "BlockSprite_soul-sand.png",
+		"Soul Soil": "BlockSprite_soul-soil.png",
+		"Soul Torch": "BlockSprite_soul-torch.png",
+		"Sponge": "BlockSprite_sponge.png",
+		"Spore Blossom": "BlockSprite_spore-blossom.png",
+		"Spruce Button": "BlockSprite_spruce-button.png",
+		"Spruce Door": "BlockSprite_spruce-door.png",
+		"Spruce Fence": "BlockSprite_spruce-fence.png",
+		"Spruce Fence Gate": "BlockSprite_spruce-fence-gate.png",
+		"Spruce Hanging Sign": "BlockSprite_spruce-hanging-sign.png",
+		"Spruce Leaves": "BlockSprite_spruce-leaves.png",
+		"Spruce Log": "BlockSprite_spruce-log.png",
+		"Spruce Planks": "BlockSprite_spruce-planks.png",
+		"Spruce Pressure Plate": "BlockSprite_spruce-pressure-plate.png",
+		"Spruce Sapling": "BlockSprite_spruce-sapling.png",
+		"Spruce Shelf": "BlockSprite_spruce-shelf-front.png",
+		"Spruce Sign": "BlockSprite_spruce-sign.png",
+		"Spruce Slab": "BlockSprite_spruce-slab.png",
+		"Spruce Stairs": "BlockSprite_spruce-stairs.png",
+		"Spruce Trapdoor": "BlockSprite_spruce-trapdoor.png",
+		"Spruce Wood": "BlockSprite_spruce-log.png",
+		"Sticky Piston": "BlockSprite_sticky-piston.png",
+		"Stone": "BlockSprite_stone.png",
+		"Stone Brick Slab": "BlockSprite_stone-brick-slab.png",
+		"Stone Brick Stairs": "BlockSprite_stone-brick-stairs.png",
+		"Stone Brick Wall": "BlockSprite_stone-brick-wall.png",
+		"Stone Bricks": "BlockSprite_stone-bricks.png",
+		"Stone Button": "BlockSprite_stone-button.png",
+		"Stone Pressure Plate": "BlockSprite_stone-pressure-plate.png",
+		"Stone Slab": "BlockSprite_stone-slab.png",
+		"Stone Stairs": "BlockSprite_stone-stairs.png",
+		"Stonecutter": "BlockSprite_stonecutter.png",
+		"Stripped Acacia Log": "BlockSprite_stripped-acacia-log.png",
+		"Stripped Acacia Wood": "BlockSprite_stripped-acacia-log.png",
+		"Stripped Birch Log": "BlockSprite_stripped-birch-log.png",
+		"Stripped Birch Wood": "BlockSprite_stripped-birch-log.png",
+		"Stripped Cherry Log": "BlockSprite_stripped-cherry-log.png",
+		"Stripped Cherry Wood": "BlockSprite_stripped-cherry-log.png",
+		"Stripped Crimson Hyphae": "BlockSprite_stripped-crimson-hyphae.png",
+		"Stripped Crimson Stem": "BlockSprite_stripped-crimson-hyphae.png",
+		"Stripped Dark Oak Log": "BlockSprite_stripped-dark-oak-log.png",
+		"Stripped Dark Oak Wood": "BlockSprite_stripped-dark-oak-log.png",
+		"Stripped Jungle Log": "BlockSprite_stripped-jungle-log.png",
+		"Stripped Jungle Wood": "BlockSprite_stripped-jungle-log.png",
+		"Stripped Mangrove Log": "BlockSprite_stripped-mangrove-log.png",
+		"Stripped Mangrove Wood": "BlockSprite_stripped-mangrove-log.png",
+		"Stripped Oak Log": "BlockSprite_stripped-oak-log.png",
+		"Stripped Oak Wood": "BlockSprite_stripped-oak-log.png",
+		"Stripped Pale Oak Log": "BlockSprite_stripped-pale-oak-log.png",
+		"Stripped Pale Oak Wood": "BlockSprite_stripped-pale-oak-log.png",
+		"Stripped Spruce Log": "BlockSprite_stripped-spruce-log.png",
+		"Stripped Spruce Wood": "BlockSprite_stripped-spruce-log.png",
+		"Stripped Warped Hyphae": "BlockSprite_stripped-warped-hyphae.png",
+		"Stripped Warped Stem": "BlockSprite_stripped-warped-hyphae.png",
+		"Structure Block": "BlockSprite_structure-block.png",
+		"Structure Void": "BlockSprite_structure-void.png",
+		"Sugar Cane": "BlockSprite_sugar-cane.png",
+		"Sunflower": "BlockSprite_sunflower.png",
+		"Suspicious Gravel": "BlockSprite_suspicious-gravel.png",
+		"Suspicious Sand": "BlockSprite_suspicious-sand.png",
+		"Sweet Berry Bush": "BlockSprite_sweet-berry-bush.png",
+		"TNT": "BlockSprite_tnt.png",
+		"Tall Dry Grass": "BlockSprite_tall-dry-grass.png",
+		"Tall Grass": "BlockSprite_tall-grass.png",
+		"Tall Seagrass": "BlockSprite_tall-seagrass.png",
+		"Target": "BlockSprite_target-block.png",
+		"Terracotta": "BlockSprite_terracotta.png",
+		"Test Block": "BlockSprite_test-block-start.png",
+		"Test Instance Block": "BlockSprite_test-instance-block.png",
+		"Tinted Glass": "BlockSprite_tinted-glass.png",
+		"Torch": "BlockSprite_torch.png",
+		"Torchflower": "BlockSprite_torchflower.png",
+		"Torchflower Crop": "BlockSprite_torchflower-crop-1.png",
+		"Trapped Chest": "BlockSprite_trapped-chest.png",
+		"Trial Spawner": "BlockSprite_trial-spawner.png",
+		"Tripwire": "BlockSprite_tripwire.png",
+		"Tripwire Hook": "BlockSprite_tripwire-hook.png",
+		"Tube Coral": "BlockSprite_tube-coral.png",
+		"Tube Coral Block": "BlockSprite_tube-coral-block.png",
+		"Tube Coral Fan": "BlockSprite_tube-coral-fan.png",
+		"Tube Coral Wall Fan": "BlockSprite_tube-coral-fan.png",
+		"Tuff": "BlockSprite_tuff.png",
+		"Tuff Brick Slab": "BlockSprite_tuff-brick-slab.png",
+		"Tuff Brick Stairs": "BlockSprite_tuff-brick-stairs.png",
+		"Tuff Brick Wall": "BlockSprite_tuff-brick-wall.png",
+		"Tuff Bricks": "BlockSprite_tuff-bricks.png",
+		"Tuff Slab": "BlockSprite_tuff-slab.png",
+		"Tuff Stairs": "BlockSprite_tuff-stairs.png",
+		"Tuff Wall": "BlockSprite_tuff-wall.png",
+		"Turtle Egg": "BlockSprite_turtle-egg.png",
+		"Twisting Vines": "BlockSprite_twisting-vines.png",
+		"Twisting Vines Plant": "BlockSprite_twisting-vines-plant.png",
+		"Vault": "BlockSprite_vault.png",
+		"Verdant Froglight": "BlockSprite_verdant-froglight.png",
+		"Vines": "BlockSprite_vines.png",
+		"Void Air": "BlockSprite_air.png",
+		"Warped Button": "BlockSprite_warped-button.png",
+		"Warped Door": "BlockSprite_warped-door.png",
+		"Warped Fence": "BlockSprite_warped-fence.png",
+		"Warped Fence Gate": "BlockSprite_warped-fence-gate.png",
+		"Warped Fungus": "BlockSprite_warped-fungi.png",
+		"Warped Hanging Sign": "BlockSprite_warped-hanging-sign.png",
+		"Warped Hyphae": "BlockSprite_warped-hyphae.png",
+		"Warped Nylium": "BlockSprite_warped-nylium.png",
+		"Warped Planks": "BlockSprite_warped-planks.png",
+		"Warped Pressure Plate": "BlockSprite_warped-pressure-plate.png",
+		"Warped Roots": "BlockSprite_warped-roots.png",
+		"Warped Shelf": "BlockSprite_warped-shelf-front.png",
+		"Warped Sign": "BlockSprite_warped-sign.png",
+		"Warped Slab": "BlockSprite_warped-slab.png",
+		"Warped Stairs": "BlockSprite_warped-stairs.png",
+		"Warped Stem": "BlockSprite_warped-hyphae.png",
+		"Warped Trapdoor": "BlockSprite_warped-trapdoor.png",
+		"Warped Wart Block": "BlockSprite_warped-wart-block.png",
+		"Water": "BlockSprite_stationary-water.png",
+		"Water Cauldron": "BlockSprite_water-cauldron.png",
+		"Waxed Block of Copper": "BlockSprite_block-of-copper.png",
+		"Waxed Chiseled Copper": "BlockSprite_chiseled-copper.png",
+		"Waxed Copper Bars": "BlockSprite_copper-bars.png",
+		"Waxed Copper Bulb": "BlockSprite_copper-bulb.png",
+		"Waxed Copper Chain": "BlockSprite_copper-chain.png",
+		"Waxed Copper Chest": "BlockSprite_copper-chest.png",
+		"Waxed Copper Door": "BlockSprite_copper-door.png",
+		"Waxed Copper Golem Statue": "BlockSprite_copper-golem-statue.png",
+		"Waxed Copper Grate": "BlockSprite_copper-grate.png",
+		"Waxed Copper Lantern": "BlockSprite_copper-lantern.png",
+		"Waxed Copper Trapdoor": "BlockSprite_copper-trapdoor.png",
+		"Waxed Cut Copper": "BlockSprite_cut-copper.png",
+		"Waxed Cut Copper Slab": "BlockSprite_cut-copper-slab.png",
+		"Waxed Cut Copper Stairs": "BlockSprite_cut-copper-stairs.png",
+		"Waxed Exposed Chiseled Copper": "BlockSprite_exposed-chiseled-copper.png",
+		"Waxed Exposed Copper": "BlockSprite_exposed-copper.png",
+		"Waxed Exposed Copper Bars": "BlockSprite_exposed-copper-bars.png",
+		"Waxed Exposed Copper Bulb": "BlockSprite_exposed-copper-bulb.png",
+		"Waxed Exposed Copper Chain": "BlockSprite_exposed-copper-chain.png",
+		"Waxed Exposed Copper Chest": "BlockSprite_exposed-copper-chest.png",
+		"Waxed Exposed Copper Door": "BlockSprite_exposed-copper-door.png",
+		"Waxed Exposed Copper Golem Statue": "BlockSprite_exposed-copper-golem-statue.png",
+		"Waxed Exposed Copper Grate": "BlockSprite_exposed-copper-grate.png",
+		"Waxed Exposed Copper Lantern": "BlockSprite_exposed-copper-lantern.png",
+		"Waxed Exposed Copper Trapdoor": "BlockSprite_exposed-copper-trapdoor.png",
+		"Waxed Exposed Cut Copper": "BlockSprite_exposed-cut-copper.png",
+		"Waxed Exposed Cut Copper Slab": "BlockSprite_exposed-cut-copper-slab.png",
+		"Waxed Exposed Cut Copper Stairs": "BlockSprite_exposed-cut-copper-stairs.png",
+		"Waxed Exposed Lightning Rod": "BlockSprite_exposed-lightning-rod.png",
+		"Waxed Lightning Rod": "BlockSprite_lightning-rod.png",
+		"Waxed Oxidized Chiseled Copper": "BlockSprite_oxidized-chiseled-copper.png",
+		"Waxed Oxidized Copper": "BlockSprite_oxidized-copper.png",
+		"Waxed Oxidized Copper Bars": "BlockSprite_oxidized-copper-bars.png",
+		"Waxed Oxidized Copper Bulb": "BlockSprite_oxidized-copper-bulb.png",
+		"Waxed Oxidized Copper Chain": "BlockSprite_oxidized-copper-chain.png",
+		"Waxed Oxidized Copper Chest": "BlockSprite_oxidized-copper-chest.png",
+		"Waxed Oxidized Copper Door": "BlockSprite_oxidized-copper-door.png",
+		"Waxed Oxidized Copper Golem Statue": "BlockSprite_oxidized-copper-golem-statue.png",
+		"Waxed Oxidized Copper Grate": "BlockSprite_oxidized-copper-grate.png",
+		"Waxed Oxidized Copper Lantern": "BlockSprite_oxidized-copper-lantern.png",
+		"Waxed Oxidized Copper Trapdoor": "BlockSprite_oxidized-copper-trapdoor.png",
+		"Waxed Oxidized Cut Copper": "BlockSprite_oxidized-cut-copper.png",
+		"Waxed Oxidized Cut Copper Slab": "BlockSprite_oxidized-cut-copper-slab.png",
+		"Waxed Oxidized Cut Copper Stairs": "BlockSprite_oxidized-cut-copper-stairs.png",
+		"Waxed Oxidized Lightning Rod": "BlockSprite_oxidized-lightning-rod.png",
+		"Waxed Weathered Chiseled Copper": "BlockSprite_weathered-chiseled-copper.png",
+		"Waxed Weathered Copper": "BlockSprite_weathered-copper.png",
+		"Waxed Weathered Copper Bars": "BlockSprite_weathered-copper-bars.png",
+		"Waxed Weathered Copper Bulb": "BlockSprite_weathered-copper-bulb.png",
+		"Waxed Weathered Copper Chain": "BlockSprite_weathered-copper-chain.png",
+		"Waxed Weathered Copper Chest": "BlockSprite_weathered-copper-chest.png",
+		"Waxed Weathered Copper Door": "BlockSprite_weathered-copper-door.png",
+		"Waxed Weathered Copper Golem Statue": "BlockSprite_weathered-copper-golem-statue.png",
+		"Waxed Weathered Copper Grate": "BlockSprite_weathered-copper-grate.png",
+		"Waxed Weathered Copper Lantern": "BlockSprite_weathered-copper-lantern.png",
+		"Waxed Weathered Copper Trapdoor": "BlockSprite_weathered-copper-trapdoor.png",
+		"Waxed Weathered Cut Copper": "BlockSprite_weathered-cut-copper.png",
+		"Waxed Weathered Cut Copper Slab": "BlockSprite_weathered-cut-copper-slab.png",
+		"Waxed Weathered Cut Copper Stairs": "BlockSprite_weathered-cut-copper-stairs.png",
+		"Waxed Weathered Lightning Rod": "BlockSprite_weathered-lightning-rod.png",
+		"Weathered Chiseled Copper": "BlockSprite_weathered-chiseled-copper.png",
+		"Weathered Copper": "BlockSprite_weathered-copper.png",
+		"Weathered Copper Bars": "BlockSprite_weathered-copper-bars.png",
+		"Weathered Copper Bulb": "BlockSprite_weathered-copper-bulb.png",
+		"Weathered Copper Chain": "BlockSprite_weathered-copper-chain.png",
+		"Weathered Copper Chest": "BlockSprite_weathered-copper-chest.png",
+		"Weathered Copper Door": "BlockSprite_weathered-copper-door.png",
+		"Weathered Copper Golem Statue": "BlockSprite_weathered-copper-golem-statue.png",
+		"Weathered Copper Grate": "BlockSprite_weathered-copper-grate.png",
+		"Weathered Copper Lantern": "BlockSprite_weathered-copper-lantern.png",
+		"Weathered Copper Trapdoor": "BlockSprite_weathered-copper-trapdoor.png",
+		"Weathered Cut Copper": "BlockSprite_weathered-cut-copper.png",
+		"Weathered Cut Copper Slab": "BlockSprite_weathered-cut-copper-slab.png",
+		"Weathered Cut Copper Stairs": "BlockSprite_weathered-cut-copper-stairs.png",
+		"Weathered Lightning Rod": "BlockSprite_weathered-lightning-rod.png",
+		"Weeping Vines": "BlockSprite_weeping-vines.png",
+		"Weeping Vines Plant": "BlockSprite_weeping-vines-plant.png",
+		"Wet Sponge": "BlockSprite_wet-sponge.png",
+		"Wheat Crops": "BlockSprite_wheat-crops.png",
+		"White Banner": "BlockSprite_white-banner.png",
+		"White Bed": "BlockSprite_white-bed.png",
+		"White Candle": "BlockSprite_white-candle.png",
+		"White Carpet": "BlockSprite_white-carpet.png",
+		"White Concrete": "BlockSprite_white-concrete.png",
+		"White Concrete Powder": "BlockSprite_white-concrete-powder.png",
+		"White Glazed Terracotta": "BlockSprite_white-glazed-terracotta.png",
+		"White Shulker Box": "BlockSprite_white-shulker-box.png",
+		"White Stained Glass": "BlockSprite_white-stained-glass.png",
+		"White Stained Glass Pane": "BlockSprite_white-stained-glass-pane.png",
+		"White Terracotta": "BlockSprite_white-terracotta.png",
+		"White Tulip": "BlockSprite_white-tulip.png",
+		"White Wool": "BlockSprite_white-wool.png",
+		"Wildflowers": "BlockSprite_wildflowers.png",
+		"Wither Rose": "BlockSprite_wither-rose.png",
+		"Wither Skeleton Skull": "BlockSprite_wither-skeleton-skull.png",
+		"Yellow Banner": "BlockSprite_yellow-banner.png",
+		"Yellow Bed": "BlockSprite_yellow-bed.png",
+		"Yellow Candle": "BlockSprite_yellow-candle.png",
+		"Yellow Carpet": "BlockSprite_yellow-carpet.png",
+		"Yellow Concrete": "BlockSprite_yellow-concrete.png",
+		"Yellow Concrete Powder": "BlockSprite_yellow-concrete-powder.png",
+		"Yellow Glazed Terracotta": "BlockSprite_yellow-glazed-terracotta.png",
+		"Yellow Shulker Box": "BlockSprite_yellow-shulker-box.png",
+		"Yellow Stained Glass": "BlockSprite_yellow-stained-glass.png",
+		"Yellow Stained Glass Pane": "BlockSprite_yellow-stained-glass-pane.png",
+		"Yellow Terracotta": "BlockSprite_yellow-terracotta.png",
+		"Yellow Wool": "BlockSprite_yellow-wool.png",
+		"Zombie Head": "BlockSprite_zombie-head.png"
 	},
 	"property_structure": [
 		{
@@ -2751,40 +2521,27 @@
 				"tag_bamboo_blocks",
 				"tag_bamboo_plantable_on",
 				"tag_banners",
-				"tag_bars",
 				"tag_base_stone_nether",
 				"tag_base_stone_overworld",
 				"tag_beacon_base_blocks",
 				"tag_beds",
 				"tag_bee_growables",
 				"tag_beehives",
-				"tag_beneath_bamboo_podzol_replaceable",
-				"tag_beneath_tree_podzol_replaceable",
 				"tag_big_dripleaf_placeable",
 				"tag_birch_logs",
 				"tag_buttons",
-				"tag_camels_spawnable_on",
 				"tag_campfires",
-				"tag_can_glide_through",
 				"tag_candle_cakes",
 				"tag_candles",
-				"tag_cannot_replace_below_tree_trunk",
-				"tag_cannot_support_kelp",
-				"tag_cannot_support_seagrass",
-				"tag_cannot_support_snow_layer",
 				"tag_cauldrons",
 				"tag_cave_vines",
 				"tag_ceiling_hanging_signs",
-				"tag_chains",
 				"tag_cherry_logs",
 				"tag_climbable",
 				"tag_coal_ores",
 				"tag_combination_step_sound_blocks",
 				"tag_completes_find_tree_tutorial",
 				"tag_convertable_to_mud",
-				"tag_copper",
-				"tag_copper_chests",
-				"tag_copper_golem_statues",
 				"tag_copper_ores",
 				"tag_coral_blocks",
 				"tag_coral_plants",
@@ -2802,10 +2559,7 @@
 				"tag_dragon_immune",
 				"tag_dragon_transparent",
 				"tag_dripstone_replaceable",
-				"tag_edible_for_sheep",
 				"tag_emerald_ores",
-				"tag_enables_bubble_column_drag_down",
-				"tag_enables_bubble_column_push_up",
 				"tag_enchantment_power_provider",
 				"tag_enchantment_power_transmitter",
 				"tag_enderman_holdable",
@@ -2816,24 +2570,16 @@
 				"tag_fire",
 				"tag_flower_pots",
 				"tag_flowers",
-				"tag_forest_rock_can_place_on",
 				"tag_foxes_spawnable_on",
 				"tag_frog_prefer_jump_to",
 				"tag_frogs_spawnable_on",
 				"tag_geode_invalid_blocks",
 				"tag_goats_spawnable_on",
 				"tag_gold_ores",
-				"tag_grass_blocks",
-				"tag_grows_crops",
 				"tag_guarded_by_piglins",
-				"tag_happy_ghast_avoids",
 				"tag_hoglin_repellents",
-				"tag_huge_brown_mushroom_can_place_on",
-				"tag_huge_red_mushroom_can_place_on",
 				"tag_ice",
-				"tag_ice_spike_replaceable",
 				"tag_impermeable",
-				"tag_incorrect_for_copper_tool",
 				"tag_infiniburn_end",
 				"tag_infiniburn_nether",
 				"tag_infiniburn_overworld",
@@ -2841,11 +2587,9 @@
 				"tag_invalid_spawn_inside",
 				"tag_iron_ores",
 				"tag_jungle_logs",
-				"tag_lanterns",
 				"tag_lapis_ores",
 				"tag_lava_pool_stone_cannot_replace",
 				"tag_leaves",
-				"tag_lightning_rods",
 				"tag_logs",
 				"tag_logs_that_burn",
 				"tag_lush_ground_replaceable",
@@ -2858,9 +2602,7 @@
 				"tag_mineable_with_pickaxe",
 				"tag_mineable_with_shovel",
 				"tag_mooshrooms_spawnable_on",
-				"tag_moss_blocks",
 				"tag_moss_replaceable",
-				"tag_mud",
 				"tag_mushroom_grow_block",
 				"tag_needs_diamond_tool",
 				"tag_needs_iron_tool",
@@ -2869,7 +2611,6 @@
 				"tag_nylium",
 				"tag_oak_logs",
 				"tag_occludes_vibration_signals",
-				"tag_overrides_mushroom_light_requirement",
 				"tag_overworld_carver_replaceables",
 				"tag_overworld_natural_logs",
 				"tag_parrots_spawnable_on",
@@ -2879,12 +2620,10 @@
 				"tag_portals",
 				"tag_pressure_plates",
 				"tag_prevent_mob_spawning_inside",
-				"tag_prevents_nearby_leaf_decay",
 				"tag_rabbits_spawnable_on",
 				"tag_rails",
 				"tag_redstone_ores",
 				"tag_replaceable",
-				"tag_replaceable_by_mushrooms",
 				"tag_replaceable_by_trees",
 				"tag_sand",
 				"tag_saplings",
@@ -2912,48 +2651,11 @@
 				"tag_stone_ore_replaceables",
 				"tag_stone_pressure_plates",
 				"tag_strider_warm_blocks",
-				"tag_substrate_overworld",
-				"tag_support_override_cactus_flower",
-				"tag_support_override_snow_layer",
-				"tag_supports_azalea",
-				"tag_supports_bamboo",
-				"tag_supports_big_dripleaf",
-				"tag_supports_cactus",
-				"tag_supports_chorus_flower",
-				"tag_supports_chorus_plant",
-				"tag_supports_cocoa",
-				"tag_supports_crimson_fungus",
-				"tag_supports_crimson_roots",
-				"tag_supports_crops",
-				"tag_supports_dry_vegetation",
-				"tag_supports_frogspawn",
-				"tag_supports_hanging_mangrove_propagule",
-				"tag_supports_lily_pad",
-				"tag_supports_mangrove_propagule",
-				"tag_supports_melon_stem",
-				"tag_supports_melon_stem_fruit",
-				"tag_supports_nether_sprouts",
-				"tag_supports_nether_wart",
-				"tag_supports_pumpkin_stem",
-				"tag_supports_pumpkin_stem_fruit",
-				"tag_supports_small_dripleaf",
-				"tag_supports_stem_crops",
-				"tag_supports_stem_fruit",
-				"tag_supports_sugar_cane",
-				"tag_supports_sugar_cane_adjacently",
-				"tag_supports_vegetation",
-				"tag_supports_warped_fungus",
-				"tag_supports_warped_roots",
-				"tag_supports_wither_rose",
 				"tag_sword_efficient",
-				"tag_sword_instantly_mines",
 				"tag_tall_flowers",
 				"tag_terracotta",
 				"tag_trail_ruins_replaceable",
 				"tag_trapdoors",
-				"tag_triggers_ambient_desert_dry_vegetation_block_sounds",
-				"tag_triggers_ambient_desert_sand_block_sounds",
-				"tag_triggers_ambient_dried_ghast_block_sounds",
 				"tag_underwater_bonemeals",
 				"tag_unstable_bottom_center",
 				"tag_valid_spawn",
@@ -2972,12 +2674,11 @@
 				"tag_wooden_doors",
 				"tag_wooden_fences",
 				"tag_wooden_pressure_plates",
-				"tag_wooden_shelves",
 				"tag_wooden_slabs",
 				"tag_wooden_stairs",
 				"tag_wooden_trapdoors",
 				"tag_wool",
-				"tag_wool_carpet"
+				"tag_wool_carpets"
 			]
 		}
 	],

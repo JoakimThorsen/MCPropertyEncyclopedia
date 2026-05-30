@@ -123,6 +123,11 @@ def main(input_file, output_file, old_output_file):
     
     property_data = preprocess(property_data)
 
+    # temp. these scripts should instead be connected.
+    with open("sprites.json") as fp:
+        sprites = json.load(fp)
+    # endof temp
+
     output = {
         "conditional_formatting": {
             **old_data["conditional_formatting"],
@@ -131,7 +136,7 @@ def main(input_file, output_file, old_output_file):
             "None": "cf-invalid",
         },
         "key_list": [*sorted(property_data["translated_name"]["entries"].values())],
-        "sprites": old_data["sprites"],
+        "sprites": sprites,
         "property_structure": [
             {
                 "category": "New Properties",
