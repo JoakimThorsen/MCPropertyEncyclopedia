@@ -10,7 +10,7 @@ def preprocess(dump: dict):
         print("No name translations present...")
     else:
         print("Translating names")
-        mapping = dump["translated_name"]["entries"]
+        mapping = dump["translated_name"]["entries"].copy()
         for prop in dump.values():
             for untranslated_key in prop["entries"].copy().keys():
                 translated_name = mapping.get(untranslated_key, dump["translated_name"].get("default_value", f"untranslated name: {untranslated_key}"))
