@@ -2683,14 +2683,10 @@
 		}
 	],
 	"default_selection": [
-		"variants",
 		"conductive",
 		"movable",
 		"blast_resistance",
-		"instant_mineable",
 		"luminance",
-		"height_external",
-		"width_external",
 		"full_cube",
 		"spawnable"
 	],

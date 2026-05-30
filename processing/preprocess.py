@@ -18,7 +18,7 @@ def preprocess(dump: dict):
                 assert isinstance(translated_name, str), f"Translated name was not valid: {translated_name}"
                 prop["entries"][translated_name] = prop["entries"].pop(untranslated_key)
 
-
+    print("Processing properties")
     # process the values within each property
     for prop in dump.values():
         entries: dict[str, str|int|float|bool|list[Any]|dict[str, Any]] = prop["entries"]
@@ -128,6 +128,7 @@ def main(input_file, output_file, old_output_file):
         sprites = json.load(fp)
     # endof temp
 
+    print("Reconstructing data file")
     output = {
         "conditional_formatting": {
             **old_data["conditional_formatting"],
@@ -146,7 +147,7 @@ def main(input_file, output_file, old_output_file):
             },
             *old_data.get("property_structure", [])
         ],
-        "default_selection": old_data.get("default_selection", []),
+        "default_selection": [prop for prop in old_data.get("default_selection", []) if prop in property_data],
         "properties": property_data,
     }
     
@@ -160,3 +161,4 @@ if __name__ == "__main__":
     parser.add_argument("-p", "--previous-file", type=FileType('r'))
     args = parser.parse_args()
     main(args.input, args.output, args.previous_file)
+    print("Done")
