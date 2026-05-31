@@ -23,7 +23,7 @@ async def download_file(file: str, session: aiohttp.ClientSession, output_direct
 SPRITE_AND_SPRITEDOC_NAMES = re.compile(r'<img src="/images/([^"]*?\.png\?\w{5})" decoding="async" loading="lazy" width="16" height="16" class="mw-file-element" data-file-width="16" data-file-height="16" ?/?></a></span></div><ul class="spritedoc-names">((?:<li class="spritedoc-name"><code(?: class="spritedoc-deprecated")?><a class="text" href="https://minecraft.wiki/w/File:[^"]+?\.png\?redirect=no">(?:[^<>]+?)</a></code></li>)+)')
 NAME_FROM_SPRITEDOC_NAMES = re.compile(r'<a class="text" href="https://minecraft.wiki/w/File:[^"]+?\.png\?redirect=no">([^<>]+?)</a>')
 
-async def main(data_file, types, download_sprites, output_directory):
+async def main(entry_list: list[str], types: list[str], download_sprites: bool, output_directory: str):
     sprite_aliases: dict[str, list[str]] = {}
     for type in types:
         
@@ -42,22 +42,18 @@ async def main(data_file, types, download_sprites, output_directory):
         # print([match for match in matches if len(match) > 3])
     print("Total aliases found:", len(sprite_aliases))
 
-    data = json.load(data_file)
-
-    entries = data["key_list"]
-
     found_files = {}
     unmatched = []
-    for entry_name in entries:
+    for entry_name in entry_list:
         normalized_name = entry_name.replace(" ", "-").lower()
         if filename := match_filename(normalized_name, sprite_aliases):
             found_files[entry_name] = filename
         else:
             unmatched.append(normalized_name)
 
-    print(f"Found file count: {len(found_files)}")
+    print(f"Matched file count: {len(found_files)}")
     if download_sprites:
-        print("Downloading found files")
+        print("- Downloading found files")
         async with aiohttp.ClientSession() as session:
             await os.makedirs(output_directory, exist_ok=True)
             file_list = await os.listdir(output_directory)
@@ -67,7 +63,9 @@ async def main(data_file, types, download_sprites, output_directory):
                     for file in found_files.values()
                     if strip_filename(file) not in file_list
                 ))
-            print("Done")
+            print("Done downloading files")
+    else:
+        print("- Not downloading files")
 
     for normalized_name in unmatched:
         closest = [
@@ -78,14 +76,13 @@ async def main(data_file, types, download_sprites, output_directory):
                 )
             )]
         print("Unmatched:", normalized_name, "-", ", ".join(closest[:3]))
-    print(f"Unmatched count: {len(unmatched)}")
+    print(f"Unmatched sprites count: {len(unmatched)}")
 
-    with open(".\\sprites.json", "w") as fp:
-        json.dump({
-            entry_name:filename.split("?")[0]
-            for entry_name, filename
-            in found_files.items()
-        }, fp, indent="\t")
+    return {
+        entry_name:strip_filename(filename)
+        for entry_name, filename
+        in found_files.items()
+    }
 
 
 def match_filename(normalized_name: str, sprite_aliases: dict[str, list[str]]):
@@ -112,4 +109,5 @@ if __name__ == "__main__":
     # parser.add_argument("-m", "--move-sprites", action='store_true')
     parser.add_argument("-o", "--output-dir", type=str, default=None)
     args = parser.parse_args()
-    asyncio.run(main(args.json_data_file, args.types, args.download_sprites, args.output_dir))
+    entry_list = json.load(args.json_data_file)["key_list"]
+    asyncio.run(main(entry_list, args.types, args.download_sprites, args.output_dir))

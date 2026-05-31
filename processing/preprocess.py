@@ -1,29 +1,35 @@
 import json
 from argparse import ArgumentParser, FileType
-from collections import defaultdict
+from collections import defaultdict, Counter
 from typing import Any
 
+import asyncio
 
-def preprocess(dump: dict):
+import sprites
 
-    # remap names from namespaced block id to english translated names
-    if "translated_name" not in dump.keys():
+# EXAMPLE USAGE:
+# `python preprocess.py -i ..\outputs\output_blockstate.json -o ..\data\block_data_experimental.json -p ..\data\block_data.json -t block`
+
+def preprocess(property_data: dict):
+
+    # remap names from namespaced entry id to english translated names
+    if "translated_name" not in property_data.keys():
         print("No name translations present...")
     else:
         print("Translating names")
-        mapping = dump["translated_name"]["entries"].copy()
-        for prop in dump.values():
+        mapping = property_data["translated_name"]["entries"].copy()
+        for prop in property_data.values():
             for untranslated_key in prop["entries"].copy().keys():
-                translated_name = mapping.get(untranslated_key, dump["translated_name"].get("default_value", f"untranslated name: {untranslated_key}"))
+                translated_name = mapping.get(untranslated_key, property_data["translated_name"].get("default_value", f"untranslated name: {untranslated_key}"))
                 assert isinstance(translated_name, str), f"Translated name was not valid: {translated_name}"
                 prop["entries"][translated_name] = prop["entries"].pop(untranslated_key)
 
-    print("Processing properties")
+    print(f"Processing {len(property_data)} properties")
     # process the values within each property
-    for prop in dump.values():
+    for prop in property_data.values():
         entries: dict[str, str|int|float|bool|list[Any]|dict[str, Any]] = prop["entries"]
 
-        default_val = prop.get("default_value")
+        default_val = prop.get("default_value") # or Counter(prop["entries"].values()).most_common(1)[0][0]
         if default_val is not None:
             # delete entries that match the default value
             # for entry_key, e_val in entries.copy().items():
@@ -41,15 +47,24 @@ def preprocess(dump: dict):
         entries = dict(sorted(entries.items()))
 
         prop["entries"] = entries
-
-    return dump
+    
+    return property_data
 
 def preprocess_mixed_val(entry_val: str | int | float | bool | list[Any] | dict[str, Any]):
+    if isinstance(entry_val, list):
+        return [*sorted(preprocess_mixed_val(value) for value in entry_val)]
+
+    if isinstance(entry_val, bool):
+        if entry_val:
+            return "Yes"
+        else:
+            return "No"
+
     if isinstance(entry_val, dict): # means it has multiple states
-        
-        # sort list of attributes within the states of each block alphabetically
+
         new_states_dict = {}
         for state_attributes, value in entry_val.items():
+            # sort list of attributes within the states of each entry alphabetically
             state_attributes = ", ".join(sorted(state_attributes.split(", ")))
 
             # preprocess each value within a multi-state entry:
@@ -61,55 +76,56 @@ def preprocess_mixed_val(entry_val: str | int | float | bool | list[Any] | dict[
         # sort the list of states
         entry_val = dict(sorted(entry_val.items()))
 
-        # Create nested single-key dicts of attributes for the tree structure
-        def merge(attributes: list[str], value, tree: dict):
-            if not len(attributes):
-                return value
-            attr = attributes.pop(0)
-            inner_tree = tree.get(attr, {})
-            tree[attr] = merge(attributes, value, inner_tree)
-            return tree
-
-        def remove_redundant(tree):
-            if isinstance(tree, dict):
-                unique_subtrees = defaultdict(list)
-                for attribute, subtree in tree.items():
-                    unique_subtrees[json.dumps(subtree)].append(attribute)
-
-                if len(unique_subtrees) == 1:
-                    first_subtree = next(iter(tree.values()))
-                    return remove_redundant(first_subtree)
-
-                new_tree = {}
-                for attributes in unique_subtrees.values():
-                    new_tree["<br>".join(attributes)] = remove_redundant(tree[attributes[0]])
-            
-                return new_tree
-            return tree
-
-        # assemble the actual attribute-tree
+        # Assemble the tree-structure of attributes by splitting the flattened state strings and merging
         tree: dict = {}
         for state_attributes, value in entry_val.items():
             attributes_list = state_attributes.split(", ")
             tree = merge(attributes_list, value, tree)
-        tree = remove_redundant(tree)
+        # Simplify the resulting tree by iterating through all sub-trees and removing unneeded attributes
+        tree = simplify_redundant_branches(tree)
         entry_val = tree
 
-
         return entry_val
-    
-    if isinstance(entry_val, list):
-        return [*sorted(preprocess_mixed_val(value) for value in entry_val)]
 
-    if isinstance(entry_val, bool):
-        if entry_val:
-            return "Yes"
-        else:
-            return "No"
-    
     return entry_val
 
-def main(input_file, output_file, old_output_file):
+def merge(attributes: list[str], value, tree: dict):
+    """
+    Traverses a list of keys in order to merge multiple state-combinations into one tree
+    """
+    if not len(attributes):
+        return value
+    attr = attributes.pop(0)
+    inner_tree = tree.get(attr, {})
+    tree[attr] = merge(attributes, value, inner_tree)
+    return tree
+
+def simplify_redundant_branches(tree: dict | Any):
+    """
+    Remove redundant attributes at each level of the tree by comparing the json.dumps-representation of
+    all the values for a given attribute, removing any redundant layers and joining together the values
+    that contain identical sub-trees.
+
+    Relies on previous attribute-sorting to ensure it's comparing equivalent attributes
+    """
+    if isinstance(tree, dict):
+        unique_subtrees = defaultdict(list)
+        for attribute, subtree in tree.items():
+            unique_subtrees[json.dumps(subtree)].append(attribute)
+
+        if len(unique_subtrees) == 1:
+            first_subtree = next(iter(tree.values()))
+            return simplify_redundant_branches(first_subtree)
+
+        new_tree = {}
+        for attributes in unique_subtrees.values():
+            new_tree["<br>".join(attributes)] = simplify_redundant_branches(tree[attributes[0]])
+    
+        return new_tree
+    return tree
+
+def main(input_file, output_file, old_output_file, sprite_types):
+    print("Reading input file")
     property_data = json.load(input_file)
     if old_output_file:
         old_data = json.load(old_output_file)
@@ -120,13 +136,14 @@ def main(input_file, output_file, old_output_file):
             "property_structure": [],
             "properties": {},
         }
-    
+
     property_data = preprocess(property_data)
 
-    # temp. these scripts should instead be connected.
-    with open("sprites.json") as fp:
-        sprites = json.load(fp)
-    # endof temp
+    key_list = [*sorted(property_data["translated_name"]["entries"].values())]
+
+    print("Fetching sprites")
+    loop = asyncio.new_event_loop()
+    sprites_mapping = loop.run_until_complete(sprites.main(key_list, sprite_types, False, None))
 
     print("Reconstructing data file")
     output = {
@@ -136,8 +153,8 @@ def main(input_file, output_file, old_output_file):
             "true": "cf-yes",
             "None": "cf-invalid",
         },
-        "key_list": [*sorted(property_data["translated_name"]["entries"].values())],
-        "sprites": sprites,
+        "key_list": key_list,
+        "sprites": sprites_mapping,
         "property_structure": [
             {
                 "category": "New Properties",
@@ -158,7 +175,8 @@ if __name__ == "__main__":
     parser = ArgumentParser()
     parser.add_argument("-i", "--input", type=FileType('r'))
     parser.add_argument("-o", "--output", type=FileType('w'))
+    parser.add_argument("-t", "--get-sprites-from-types", type=str, choices=("block", "entity", "item", "biome"), nargs="+")
     parser.add_argument("-p", "--previous-file", type=FileType('r'))
     args = parser.parse_args()
-    main(args.input, args.output, args.previous_file)
-    print("Done")
+    main(args.input, args.output, args.previous_file, args.get_sprites_from_types)
+    print("Done!")

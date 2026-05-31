@@ -2,3 +2,4 @@
 .vscode
 dev
 outputs
+__pycache__
