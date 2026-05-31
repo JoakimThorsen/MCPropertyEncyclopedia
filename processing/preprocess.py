@@ -89,6 +89,7 @@ def preprocess_mixed_val(entry_val: str | int | float | bool | list[Any] | dict[
 
     return entry_val
 
+
 def merge(attributes: list[str], value, tree: dict):
     """
     Traverses a list of keys in order to merge multiple state-combinations into one tree
@@ -110,6 +111,7 @@ def simplify_redundant_branches(tree: dict | Any):
     """
     if isinstance(tree, dict):
         unique_subtrees = defaultdict(list)
+
         for attribute, subtree in tree.items():
             unique_subtrees[json.dumps(subtree)].append(attribute)
 
@@ -123,6 +125,51 @@ def simplify_redundant_branches(tree: dict | Any):
     
         return new_tree
     return tree
+
+# As an example, for the Opacity property of Slabs, the `merge` and `simplify_redundant_branches` steps would look like:
+#     raw data: {
+#         "type: bottom, waterlogged: false": 0,
+#         "type: bottom, waterlogged: true": 1,
+#         "type: double, waterlogged: false": 15
+#         "type: double, waterlogged: true": 15,
+#         "type: top, waterlogged: false": 0,
+#         "type: top, waterlogged: true": 1,
+#     }
+#     merged: {
+#         "type: bottom": {
+#             waterlogged: false": 0,
+#             waterlogged: true": 1,
+#         },
+#         "type: double": {
+#             waterlogged: false": 15
+#             waterlogged: true": 15,
+#         },
+#         "type: top": {
+#             waterlogged: false": 0,
+#             waterlogged: true": 1,
+#         }
+#     }
+#     first simplify_redundant_branches pass: {
+#         "{\"waterlogged: false\": 0,\"waterlogged: true\": 1}": ["type: bottom", "type: top"],
+#         "{\"waterlogged: false\": 15,\"waterlogged: true\": 15}": ["type: double"]
+#     } -> "bottom" and "top" attributes have identical sub-tree representations, joined
+#     
+#         "type: bottom/top" sub-pass: {
+#             0: ["waterlogged: false"],
+#             1: ["waterlogged: true"]
+#         } -> distinct, kept as-is
+#     
+#         "type: double" sub-pass: {
+#             15: ["waterlogged: false", "waterlogged: true"]
+#         } -> attribute is redundant in this sub-tree, removed entirely
+#     
+#     result: {
+#         "type: bottom<br>type: top": {
+#             "waterlogged: false": 0,
+#             "waterlogged: true": 1
+#         },
+#         "type: double": 15
+#     }
 
 def main(input_file, output_file, old_output_file, sprite_types):
     print("Reading input file")
