@@ -57,13 +57,15 @@ async def main(entry_list: list[str], types: list[str], download_sprites: bool, 
         async with aiohttp.ClientSession() as session:
             await os.makedirs(output_directory, exist_ok=True)
             file_list = await os.listdir(output_directory)
+            new_files = [file
+                    for file in found_files.values()
+                    if strip_filename(file) not in file_list]
             await asyncio.gather(
                 *(
                     download_file(file, session, output_directory)
-                    for file in found_files.values()
-                    if strip_filename(file) not in file_list
+                    for file in new_files
                 ))
-            print("Done downloading files")
+            print(f"- Done downloading {len(new_files)} new files")
     else:
         print("- Not downloading files")
 
@@ -98,7 +100,7 @@ def match_filename(normalized_name: str, sprite_aliases: dict[str, list[str]]):
         if normalized_name in aliases:
             return file
 
-def strip_filename(file):
+def strip_filename(file: str):
     return file.split('?')[0].split('/')[-1]
 
 if __name__ == "__main__":

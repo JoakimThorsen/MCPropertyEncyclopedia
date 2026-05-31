@@ -1,6 +1,8 @@
 import json
+import time
 from argparse import ArgumentParser, FileType
 from collections import defaultdict, Counter
+from io import BufferedReader, BufferedWriter
 from typing import Any
 
 import asyncio
@@ -8,7 +10,7 @@ import asyncio
 import sprites
 
 # EXAMPLE USAGE:
-# `python preprocess.py -i ..\outputs\output_blockstate.json -o ..\data\block_data_experimental.json -p ..\data\block_data.json -t block`
+# `python preprocess.py -i ..\outputs\output_blockstate.json -o ..\data\block_data_experimental.json -p ..\data\block_data.json -t block -d ..\assets\sprites`
 
 def preprocess(property_data: dict):
 
@@ -38,7 +40,6 @@ def preprocess(property_data: dict):
 
             # Preprocess the default value
             prop["default_value"] = preprocess_mixed_val(default_val)
-            
 
         # process each value:
         for entry_key, entry_val in entries.items():
@@ -90,7 +91,7 @@ def preprocess_mixed_val(entry_val: str | int | float | bool | list[Any] | dict[
     return entry_val
 
 
-def merge(attributes: list[str], value, tree: dict):
+def merge(attributes: list[str], value: Any, tree: dict):
     """
     Traverses a list of keys in order to merge multiple state-combinations into one tree
     """
@@ -171,7 +172,13 @@ def simplify_redundant_branches(tree: dict | Any):
 #         "type: double": 15
 #     }
 
-def main(input_file, output_file, old_output_file, sprite_types):
+def main(
+    input_file: BufferedReader, 
+    output_file: BufferedWriter, 
+    old_output_file: BufferedReader, 
+    sprite_types: list[str], 
+    download_sprites_to_folder: str
+):
     print("Reading input file")
     property_data = json.load(input_file)
     if old_output_file:
@@ -186,11 +193,18 @@ def main(input_file, output_file, old_output_file, sprite_types):
 
     property_data = preprocess(property_data)
 
-    key_list = [*sorted(property_data["translated_name"]["entries"].values())]
+    key_list = [*sorted(property_data["block_id"]["entries"].keys())]
 
     print("Fetching sprites")
     loop = asyncio.new_event_loop()
-    sprites_mapping = loop.run_until_complete(sprites.main(key_list, sprite_types, False, None))
+    sprites_mapping = loop.run_until_complete(
+        sprites.main(
+            entry_list=key_list,
+            types=sprite_types,
+            download_sprites=bool(download_sprites_to_folder),
+            output_directory=download_sprites_to_folder
+        )
+    )
 
     print("Reconstructing data file")
     output = {
@@ -219,11 +233,15 @@ def main(input_file, output_file, old_output_file, sprite_types):
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     parser = ArgumentParser()
     parser.add_argument("-i", "--input", type=FileType('r'))
     parser.add_argument("-o", "--output", type=FileType('w'))
     parser.add_argument("-t", "--get-sprites-from-types", type=str, choices=("block", "entity", "item", "biome"), nargs="+")
+    parser.add_argument("-d", "--download-sprites-to-dir", type=str)
     parser.add_argument("-p", "--previous-file", type=FileType('r'))
     args = parser.parse_args()
-    main(args.input, args.output, args.previous_file, args.get_sprites_from_types)
-    print("Done!")
+
+    main(args.input, args.output, args.previous_file, args.get_sprites_from_types, args.download_sprites_to_dir)
+
+    print(f"Done! Execution took {time.time()-start_time:.3}s")
