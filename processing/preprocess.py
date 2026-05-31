@@ -22,8 +22,19 @@ def preprocess(property_data: dict):
         mapping = property_data["translated_name"]["entries"].copy()
         for prop in property_data.values():
             for untranslated_key in prop["entries"].copy().keys():
-                translated_name = mapping.get(untranslated_key, property_data["translated_name"].get("default_value", f"untranslated name: {untranslated_key}"))
-                assert isinstance(translated_name, str), f"Translated name was not valid: {translated_name}"
+                
+                translated_name = (
+                    mapping.get(untranslated_key)
+                    or property_data["translated_name"].get("default_value")
+                    or f"untranslated name: {untranslated_key}"
+                )
+                
+                # Wall-mounted blocks (signs, hanging signs, torches, banners, coral fans, skulls)
+                # don't have distinct translation keys, so we convert the minecraft:acacia_wall_sign
+                # to "Acacia Wall Sign" manually, in order to prevent name collisions
+                if "wall" in untranslated_key and not untranslated_key.endswith("wall"):
+                    translated_name = normalize_name_from_identifier(untranslated_key)
+                
                 prop["entries"][translated_name] = prop["entries"].pop(untranslated_key)
 
     print(f"Processing {len(property_data)} properties")
@@ -50,6 +61,15 @@ def preprocess(property_data: dict):
         prop["entries"] = entries
     
     return property_data
+
+def normalize_name_from_identifier(identifier):
+    return (
+        identifier
+        .split("minecraft:")[-1]
+        .replace("_", " ")
+        .title()
+        .replace(" Of ",  " of ")
+        .replace(" The ", " the "))
 
 def preprocess_mixed_val(entry_val: str | int | float | bool | list[Any] | dict[str, Any]):
     if isinstance(entry_val, list):

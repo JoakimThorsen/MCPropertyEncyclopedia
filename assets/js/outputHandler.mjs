@@ -369,7 +369,7 @@ function table_body_generator(output_data, page, search) {
         if (is_legacy_sprite) {
             sprite = data.sprites[entry[page]] ?? ["block-sprite", -240, -16]; // defaluts to the air sprite
         } else {
-            sprite = data.sprites[entry[page]] ?? "BlockSprite_air.png"; // defaluts to the air sprite
+            sprite = data.sprites[entry[page]] ?? "BlockSprite_air.png";
         }
         if (search) {
             entry[page] = highlight_search_string(entry[page], search)
